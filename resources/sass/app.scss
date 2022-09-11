@@ -6,3 +6,48 @@
 
 // Bootstrap 今回はbootstrapを使わないのでここでコメントして機能を使えないようにする。
 //@import "~bootstrap/scss/bootstrap";
+
+//==========================================================================
+// Foundation
+// ==========================================================================
+
+@import "foundation/_reset"; //真っ新な状態にする
+@import "foundation/_base"; //baseファイル
+
+// ==========================================================================
+// Layout
+// ==========================================================================
+
+@import "layout/_footer";
+@import "layout/_header";
+@import "layout/_main";
+@import "layout/_sidebar";
+
+// -----------------------------------------------------------------
+// Object-Component
+// -----------------------------------------------------------------
+
+@import "object/component/_button";
+@import "object/component/_dialog";
+@import "object/component/_grid";
+@import "object/component/_media";
+
+// -----------------------------------------------------------------
+// Object-Project
+// -----------------------------------------------------------------
+
+@import "object/project/_articles";
+@import "object/project/_comments";
+@import "object/project/_gallery";
+@import "object/project/_profile";
+
+// -----------------------------------------------------------------
+// Object-Utility
+// -----------------------------------------------------------------
+
+@import "object/utility/_align";
+@import "object/utility/_clearfix";
+@import "object/utility/_margin";
+@import "object/utility/_position";
+@import "object/utility/_size";
+@import "object/utility/_text";
