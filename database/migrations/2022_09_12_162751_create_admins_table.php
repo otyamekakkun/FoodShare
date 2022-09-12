@@ -14,8 +14,20 @@ class CreateAdminsTable extends Migration
     public function up()
     {
         Schema::create('admins', function (Blueprint $table) {
-            $table->id();
+            $table->increments('staff_id');
+            $table->string('staff_password','255');
+            $table->string('staff_email','255');
+            $table->string('convinience_store','255');
+            $table->string('convinience_store_branch','255');
+        //  9/12時点 $table->id('prefectures');
+          //  $table->int('address_1');
+          //メモintはないらしい
+          
+
+//sがつくかつかないかで意味が全然変わってくる
             $table->timestamps();
+            //timestamp はcreate_atとupdate_at以外でtimestampを使いたいときにする。
+          //  $table->timestamp('updated_at');
         });
     }
 
