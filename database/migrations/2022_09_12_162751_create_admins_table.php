@@ -19,6 +19,7 @@ class CreateAdminsTable extends Migration
             $table->string('staff_email','255');
             $table->string('convinience_store','255');
             $table->string('convinience_store_branch','255');
+            $table->rememberToken();
         //  9/12時点 $table->id('prefectures');
           //  $table->int('address_1');
           //メモintはないらしい
