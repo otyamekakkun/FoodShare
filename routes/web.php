@@ -20,4 +20,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//drills/newはあくまでも実験的要素が絡んでいるので終わったら必ず消去すること
 Route::get('/drills/new',[App\Http\Controllers\DrillsController::class, 'new'])->name('drills.new');
+
+Route::get('/haiki/top_display',[App\Http\Controllers\HaikiController::class, 'top_display'])->name('haiki.top_display');
+
