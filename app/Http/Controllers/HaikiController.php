@@ -24,11 +24,33 @@ class HaikiController extends Controller
         return view('haiki_shopper.shopper_productdetail_display');
     }
 
+//スタッフが扱う画面集
+    public function staff_mypage_display(){
+        return view('haiki_staff.staff_mypage_display');
+    }
 
+//スタッフが扱うプロフィール編集画面
+    public function staff_profile_display(){
+        return view('haiki_staff.staff_profile_display');
+    }
+//出品された商品を出品するページ
+    public function staff_exhibitproduct_display(){
+        return view('haiki_staff.staff_exhibitproduct_display');
+    }
 
+//購入された商品一覧を見るページ
+    public function staff_buyproduct_display(){
+        return view('haiki_staff.staff_buyproduct_display');
+    }
+//コンビニ側 商品を編集するページ
+public function staff_productedit_display(){
+    return view('haiki_staff.staff_productedit_display');
+}
 
-
-
+//コンビニ側商品を出品したものを見るページ
+public function staff_exhibitproduct_list_display(){
+    return view('haiki_staff.staff_exhibitproduct_list_display');
+}
 
 
 
