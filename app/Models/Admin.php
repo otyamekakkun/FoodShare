@@ -2,20 +2,20 @@
 
 namespace App\Models;
 
-//use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Notifications\Notifiable; //←メールを送信できるようにするために記述
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable; //メールが送信できるようにする
 
-
-class Admin extends Model
+class Admin extends Authenticatable
 {
-    //use HasFactory;
     use Notifiable;
+
     protected $guard = 'admin';
-    protected $fillable =[
-        'name','email','password',
+
+    protected $fillable = [
+        'name', 'email', 'password',
     ];
-    protected $hidden =[
-        'password','remember_token',
+
+    protected $hidden = [
+        'password', 'remember_token',
     ];
 }
