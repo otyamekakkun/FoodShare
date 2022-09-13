@@ -11,24 +11,25 @@ class CreateAdminsTable extends Migration
      *
      * @return void
      */
+
+     /**
+      * コンビニスタッフのテーブル
+      * 1 スタッフのid
+      * 2 スタッフのパスワード
+      * 3 スタッフのemailアドレス
+      * 4 コンビニの種類の名前（ローソンとか、セブンイレブンみたいな）
+      * 5 支店名 (主に地名が入る 渋谷とか新宿とかなど)
+      * 6 timestamp
+      */
     public function up()
     {
         Schema::create('admins', function (Blueprint $table) {
-            $table->increments('staff_id');
-            $table->string('staff_password','255');
-            $table->string('staff_email','255');
-            $table->string('convinience_store','255');
-            $table->string('convinience_store_branch','255');
-            $table->rememberToken();
-        //  9/12時点 $table->id('prefectures');
-          //  $table->int('address_1');
-          //メモintはないらしい
-          
-
-//sがつくかつかないかで意味が全然変わってくる
-            $table->timestamps();
-            //timestamp はcreate_atとupdate_at以外でtimestampを使いたいときにする。
-          //  $table->timestamp('updated_at');
+            $table->increments('staff_id');                    //...........1
+            $table->string('staff_password','255');            //...........2
+            $table->string('staff_email','255');               //...........3
+            $table->string('convinience_store','255');         //...........4
+            $table->string('convinience_store_branch','255');  //...........5
+            $table->timestamps();                              //...........6 
         });
     }
 
@@ -39,6 +40,13 @@ class CreateAdminsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('admins');
+        Schema::dropIfExists('admins',function (Blueprint $table) {
+            $table->increments('staff_id');
+            $table->string('staff_password','255');
+            $table->string('staff_email','255');
+            $table->string('convinience_store','255');
+            $table->string('convinience_store_branch','255');
+            $table->timestamps();
+        });
     }
 }
