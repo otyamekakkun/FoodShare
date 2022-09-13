@@ -22,8 +22,29 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 //drills/newはあくまでも実験的要素が絡んでいるので終わったら必ず消去すること
 Route::get('/drills/new',[App\Http\Controllers\DrillsController::class, 'new'])->name('drills.new');
+//画面を表示するための処理ここから開始
 //⬇️TOPページを表示するためのもの
-Route::get('/haiki/shopper_mypage',[App\Http\Controllers\HaikiController::class, 'shopper_mypage_display'])->name('haiki shopper.shopper_mypage_display');
+Route::get('/haiki/shopper_mypage',[App\Http\Controllers\HaikiController::class, 'shopper_mypage_display'])->name('haiki_shopper.shopper_mypage_display');
+Route::get('/haiki/shopper_profile',[App\Http\Controllers\HaikiController::class, 'shopper_profile_display'])->name('haiki_shopper.shopper_profile_display');
+Route::get('/haiki/shopper_productlist',[App\Http\Controllers\HaikiController::class, 'shopper_productlist_display'])->name('haiki_shopper.shopper_productlist_display');
+Route::get('/haiki/shopper_productdetail',[App\Http\Controllers\HaikiController::class, 'shopper_productdetail_display'])->name('haiki_shopper.shopper_productdetail_display');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // ここから追加
 Route::get('/login/admin', [App\Http\Controllers\Auth\LoginController::class, 'showAdminLoginForm']);
