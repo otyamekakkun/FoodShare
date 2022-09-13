@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 
 class HaikiController extends Controller
 {
-    //
-    public function top_display(){
-        return view('haiki.top_display');
+    //画面を表示するための処理
+    public function shopper_mypage_display(){
+        return view('haiki.shopper_mypage_display');
     }
 }
