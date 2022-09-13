@@ -6,51 +6,57 @@ use Illuminate\Http\Request;
 
 class HaikiController extends Controller
 {
-    //画面を表示するための処理
-    //1 shopper_mypage
+/** 画面を表示するためのメソッド集団
+ * 1(利用客)マイページ表示用
+ * 2(利用客)プロフィール編集画面表示用
+ * 3(利用客)商品一覧表示用
+ * 4(利用客)商品詳細表示用
+ * 5(コンビニ)マイページ表示用
+ * 6(コンビニ)コンビニプロフィール編集表示用
+ * 7(コンビニ)商品を出品する画面
+ * 8(コンビニ)購入された商品一覧を表示するもの
+ * 9(コンビニ)出品する商品を編集するもの
+ * 10(コンビニ)出品した商品を一覧する表示
+ */
     public function shopper_mypage_display(){
         return view('haiki_shopper.shopper_mypage_display');
-    }
-    //2 shopper_profile
+    } //.............................................................1
+
     public function shopper_profile_display(){
         return view('haiki_shopper.shopper_profile_display');
-    }
-//3 shopper_producr_list
+    } //.............................................................2
+
     public function shopper_productlist_display(){
         return view('haiki_shopper.shopper_productlist_display');
-    }
+    } //.............................................................3
 
     public function shopper_productdetail_display(){
         return view('haiki_shopper.shopper_productdetail_display');
-    }
+    } //.............................................................4
 
-//スタッフが扱う画面集
     public function staff_mypage_display(){
         return view('haiki_staff.staff_mypage_display');
-    }
+    } //.............................................................5
 
-//スタッフが扱うプロフィール編集画面
     public function staff_profile_display(){
         return view('haiki_staff.staff_profile_display');
-    }
-//出品された商品を出品するページ
+    } //.............................................................6
+
     public function staff_exhibitproduct_display(){
         return view('haiki_staff.staff_exhibitproduct_display');
-    }
+    } //.............................................................7
 
-//購入された商品一覧を見るページ
     public function staff_buyproduct_display(){
         return view('haiki_staff.staff_buyproduct_display');
-    }
-//コンビニ側 商品を編集するページ
-public function staff_productedit_display(){
-    return view('haiki_staff.staff_productedit_display');
-}
+    } //.............................................................8
 
-//コンビニ側商品を出品したものを見るページ
-public function staff_exhibitproduct_list_display(){
+    public function staff_productedit_display(){
+    return view('haiki_staff.staff_productedit_display');
+    } //.............................................................9
+
+    public function staff_exhibitproduct_list_display(){
     return view('haiki_staff.staff_exhibitproduct_list_display');
-}
+    } //.............................................................10
 
 
 
