@@ -11,11 +11,19 @@ class CreatePrefecturesTable extends Migration
      *
      * @return void
      */
+
+    /**
+     *都道府県テーブル 概要
+     * 1都道府県のID
+     * 2都道府県の名前
+     * 3タイムスタンプ
+     */
     public function up()
     {
         Schema::create('prefectures', function (Blueprint $table) {
-            $table->increments('prefectures');
-            $table->timestamps();
+            $table->increments('prefectures');      //..............................1
+            $table->string('prefectures_name',8);   //..............................2
+            $table->timestamps();                   //..............................3
         });
     }
 
@@ -26,6 +34,10 @@ class CreatePrefecturesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('prefectures');
+        Schema::dropIfExists('prefectures',function (Blueprint $table) {
+            $table->increments('prefectures');
+            $table->string('prefectures_name',8);
+            $table->timestamps();
+        });
     }
 }
