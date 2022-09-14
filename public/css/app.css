@@ -1,4 +1,91 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
+@charset "UTF-8";
+/*
+ここのファイルで全てのsassファイルを読み込もんでpublic/css/app.cssに書き直す
+*/
+/*
+* //_variables.scssの仕様
+* /variables.scssでは このファイルで変数の設定とmixinを行う。
+* 
+*
+* 1. レスポンシブを用いる際の画面の範囲設計の変数まとめ。
+* 2.
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*/
+.color_main {
+  color: #0075c2;
+}
+
+.bg_main {
+  background: #0075c2;
+}
+
+.color_sub {
+  color: #a0d8ef;
+}
+
+.bg_sub {
+  background: #a0d8ef;
+}
+
+.color_text {
+  color: #333;
+}
+
+.bg_text {
+  background: #333;
+}
+
+/*
+* 1. レスポンシブ対応の関数。414px以下になると反応する。
+*/
+body {
+  background: #a0d8ef;
+}
+
+/*
+* 1 真っ新な状態にする
+* 2 haiki shareファイル全体を担うsass
+*/
 footer {
   padding: 20px;
 }
+
+/*
+* 1 footerを作るsassのファイルを読み込む 
+* 2 headerを作るsassのファイルを読み込む
+* 3 _mainファイルを作る（改訂あり)
+* 4 _sidebarファイルを作る
+*/
+/*
+* 1 今後も使い回しそうなbuttonデザインを作るファイル 
+* 2 今後も使い回しそうなアラートを作るファイル
+* 3 今後も使い回しそうなgridファイル
+* 4 今後も使い回しそうなmedia (消去する可能性高い)
+*/
+/*
+* かなりの可能性で書き換える可能性があるので9/1４時点ではここまでにしとく
+*
+*/
+/*
+* かなりの可能性で書き換える可能性があるので9/1４時点ではここまでにしとく
+*
+*
+*/

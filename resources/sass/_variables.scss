@@ -1,2 +1,68 @@
-//app接続ok
-$bg-color: red;
+/*
+* //_variables.scssの仕様
+* /variables.scssでは このファイルで変数の設定とmixinを行う。
+* 
+*
+* 1. レスポンシブを用いる際の画面の範囲設計の変数まとめ。
+* 2.
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*/
+//ここにマップ型変数を記述する
+$colors: (
+    main: #0075c2,
+    sub: #a0d8ef,
+    text: #333,
+);
+
+$spaces: (
+    a: 10px,
+    b: 20px,
+);
+//map型ここで名前を変更する。
+@each $colorName, $color in $colors {
+    //.color_変数名 のclassを生成
+    .color_#{$colorName} {
+        color: $color;
+    }
+    //.bg_変数名 のclassを生成
+    .bg_#{$colorName} {
+        background: $color;
+    }
+}
+//マップ型は呼び出す時、map-getと書かないといけないので
+@function color($colorName) {
+    @return map-get($colors, $colorName);
+}
+
+//===========================
+// mixin
+//============================
+/*
+* 1. レスポンシブ対応の関数。414px以下になると反応する。
+*/
+@mixin mq($breakpoint: sm) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+} //.......................................................1
+
+body {
+    background: color(sub);
+}
