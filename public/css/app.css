@@ -4,60 +4,21 @@
 ここのファイルで全てのsassファイルを読み込もんでpublic/css/app.cssに書き直す
 */
 /*
-* //_variables.scssの仕様
-* /variables.scssでは このファイルで変数の設定とmixinを行う。
-* 
-*
-* 1. レスポンシブを用いる際の画面の範囲設計の変数まとめ。
-* 2.
-*
-*
-*
-*
-*
-*
-*
-*
-*
-*
-*
-*
-*
-*
-*
-*
-*
-*
+*実験的なコード
+*$btn-colorsに名前と値をしているする。
+*@each分で全てのものが呼び出される。
+*あとはhtmlでクラス指定を行えばできる。
 */
-.color_main {
-  color: #0075c2;
+.c-btn_primary {
+  background-color: #337ab7;
 }
 
-.bg_main {
-  background: #0075c2;
+.c-btn_secondary {
+  background-color: #5cb85c;
 }
 
-.color_sub {
-  color: #a0d8ef;
-}
-
-.bg_sub {
-  background: #a0d8ef;
-}
-
-.color_text {
-  color: #333;
-}
-
-.bg_text {
-  background: #333;
-}
-
-/*
-* 1. レスポンシブ対応の関数。414px以下になると反応する。
-*/
-body {
-  background: #a0d8ef;
+.c-btn_tertiary {
+  background-color: #f0ad4e;
 }
 
 /*

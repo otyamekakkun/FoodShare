@@ -58,8 +58,31 @@
         <p>買い物をご利用されるお客様（haiki share関係者以外）の方々は
             TOP画面の買い物を始めるをクリックしてご利用ください。
         </p>
+        <h1 class="bg_text">俺の名前はevil</h1>
     </div>
 </section>
+
+
+
+
+<section>
+    <div class="c-form">
+        <h1 class="c-form__name">私の名前はほの座右衛門</h1>
+    </div>
+</section>
+
+
+<button class="btn" type="button">ボタン</button>
+<button class="btn c-btn_primary" type="button">ボタン</button>
+<button class="btn c-btn_secondary" type="button">ボタン</button>
+<button class="btn btn-tertiary" type="button">ボタン</button>
+
+
+
+
+
+
+
 @endsection
 
 
