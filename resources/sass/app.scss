@@ -1,3 +1,7 @@
+/*
+ここのファイルで全てのsassファイルを読み込もんでpublic/css/app.cssに書き直す
+*/
+
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Nunito");
 
@@ -7,35 +11,52 @@
 // Bootstrap 今回はbootstrapを使わないのでここでコメントして機能を使えないようにする。
 //@import "~bootstrap/scss/bootstrap";
 
-//==========================================================================
+//========================================================
 // Foundation
-// ==========================================================================
+// =======================================================
+/*
+* 1 真っ新な状態にする
+* 2 haiki shareファイル全体を担うsass
+*/
 
-@import "foundation/_reset"; //真っ新な状態にする
-@import "foundation/_base"; //baseファイル
+@import "foundation/_reset"; //....................1
+@import "foundation/_base"; //....................2
 
-// ==========================================================================
+// ========================================================
 // Layout
-// ==========================================================================
-
-@import "layout/_footer";
-@import "layout/_header";
-@import "layout/_main";
-@import "layout/_sidebar";
+// ========================================================
+/*
+* 1 footerを作るsassのファイルを読み込む 
+* 2 headerを作るsassのファイルを読み込む
+* 3 _mainファイルを作る（改訂あり)
+* 4 _sidebarファイルを作る
+*/
+@import "layout/_footer"; //....................1
+@import "layout/_header"; //....................2
+@import "layout/_main"; //....................3
+@import "layout/_sidebar"; //....................4
 
 // -----------------------------------------------------------------
 // Object-Component
 // -----------------------------------------------------------------
-
-@import "object/component/_button";
-@import "object/component/_dialog";
-@import "object/component/_grid";
-@import "object/component/_media";
+/*
+* 1 今後も使い回しそうなbuttonデザインを作るファイル 
+* 2 今後も使い回しそうなアラートを作るファイル
+* 3 今後も使い回しそうなgridファイル
+* 4 今後も使い回しそうなmedia (消去する可能性高い)
+*/
+@import "object/component/_button"; //....................1
+@import "object/component/_dialog"; //....................2
+@import "object/component/_grid"; //....................3
+@import "object/component/_media"; //....................4
 
 // -----------------------------------------------------------------
 // Object-Project
 // -----------------------------------------------------------------
-
+/*
+* かなりの可能性で書き換える可能性があるので9/1４時点ではここまでにしとく
+*
+*/
 @import "object/project/_articles";
 @import "object/project/_comments";
 @import "object/project/_gallery";
@@ -44,7 +65,11 @@
 // -----------------------------------------------------------------
 // Object-Utility
 // -----------------------------------------------------------------
-
+/*
+* かなりの可能性で書き換える可能性があるので9/1４時点ではここまでにしとく
+*
+*
+*/
 @import "object/utility/_align";
 @import "object/utility/_clearfix";
 @import "object/utility/_margin";
