@@ -75,6 +75,7 @@ body {
 */
 
 // ここから,responsiveデザインを対応するためのコード
+//414px以下の時にレスポンシブに切り替わる使用にする。s
 $breakpoints: (
     "sm": "screen and (max-width: 414px)",
 ) !default;

@@ -65,19 +65,6 @@
 
 
 
-<section>
-    <div class="c-form">
-        <h1 class="c-form__name">私の名前はほの座右衛門</h1>
-    </div>
-</section>
-
-
-<button class="btn" type="button">ボタン</button>
-<button class="btn c-btn_primary" type="button">ボタン</button>
-<button class="btn c-btn_secondary" type="button">ボタン</button>
-<button class="btn btn-tertiary" type="button">ボタン</button>
-
-
 
 
 

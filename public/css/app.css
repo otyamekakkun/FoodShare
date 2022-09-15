@@ -1,8 +1,8 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);
 @charset "UTF-8";
 /*
 ここのファイルで全てのsassファイルを読み込もんでpublic/css/app.cssに書き直す
 */
+@import url("https://fonts.googleapis.com/css?family=Nunito");
 /*
 *実験的なコード1つ目
 *$btn-colorsに名前と値をしているする。
