@@ -3,13 +3,9 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
         <title>haiki share TOP画面</title>
-
     </head>
     <body>
-        
-
         @extends('layouts.app')
 @section('content')
 @php
@@ -47,10 +43,9 @@
         </p>
         {{-- 買い物を始めるというボタンが押されたら表示される機能を作る --}}
 
-        <button>ログインして買い物を楽しむ</button><br/>
+        <button>ログインして買い物を楽しむ</button>
         <button>ユーザー登録して買い物をする</button>
     </div>
-
     <div>
         <p>ここからパーツB</p>
         <button>haiki share関係者ログイン</button><br/>
@@ -61,29 +56,6 @@
         <h1 class="bg_text">俺の名前はevil</h1>
     </div>
 </section>
-
-
-
-
-
-
-
-
 @endsection
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
 </body>
 </html>
