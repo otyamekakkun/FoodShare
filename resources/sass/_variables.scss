@@ -63,15 +63,30 @@ $colors: (
 
 @function color($colorName) {
     @return map-get($colors, $colorName);
-} /*
+}
+
+/*
+使用
 body {
     //font-size: map-get($sizes, sss);
     //map-get関数でキーを指定することができる
     size(sss);
 }
 */
+
+// ここから,responsiveデザインを対応するためのコード
+$breakpoints: (
+    "sm": "screen and (max-width: 414px)",
+) !default;
+
+@mixin mq($breakpoint: sm) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
 body {
-    margin: space(x);
-    font-size: space(2l);
-    background: color("top-title");
+    background: red;
+    @include mq() {
+        background: color("footer");
+    }
 }

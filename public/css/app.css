@@ -97,6 +97,7 @@
 }
 
 /*
+使用
 body {
     //font-size: map-get($sizes, sss);
     //map-get関数でキーを指定することができる
@@ -104,8 +105,12 @@ body {
 }
 */
 body {
-  font-size: 40px;
-  background: #d69c3f;
+  background: red;
+}
+@media screen and (max-width: 414px) {
+  body {
+    background: #d69e10;
+  }
 }
 
 /*
