@@ -1,9 +1,6 @@
 /*
-*実験的なコード1つ目
-*$btn-colorsに名前と値をしているする。
-*@each分で全てのものが呼び出される。
-*あとはhtmlでクラス指定を行えばできる。
-*いれこ構造は出来なさそう。。。
+*_varables.scssのファイル
+*主に変数や関数を置くところのファイルにする
 */
 
 /*
@@ -83,11 +80,5 @@ $breakpoints: (
 @mixin mq($breakpoint: sm) {
     @media #{map-get($breakpoints, $breakpoint)} {
         @content;
-    }
-}
-body {
-    background: red;
-    @include mq() {
-        background: color("footer");
     }
 }
