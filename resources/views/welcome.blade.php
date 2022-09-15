@@ -12,6 +12,16 @@
 4
 5
 
+ログイン画面使用
+1.お客のログイン画面
+パスワードとemailが入力されてバリデーションがうまくいけば、userのmypageに遷移することができる
+2.新規お客様ユーザー登録ペーじ
+メールアドレスとパスワードとパスワードリマインドを施せば画面が遷移する
+遷移先の画面はmypage
+3.管理者用ログインページ
+
+
+
 --}}
 
 
@@ -80,6 +90,16 @@
     </div>
 </section>
 @endsection
+
+
+
+
+{{--  
+<a href="{{route('haiki_shopper.staff_mypage_display')}}">本当の登録画面っへs</a>
+--}}
+<a href="{{route('admin-register')}}">管理者用のログインページ</a> 
+{{-- <a href="{{route('adminLogin')}}">管理者用のログインページ</a>  --}}
+
 </body>
 </html>
 {{-- 
