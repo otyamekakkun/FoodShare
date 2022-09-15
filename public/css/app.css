@@ -4,21 +4,108 @@
 ここのファイルで全てのsassファイルを読み込もんでpublic/css/app.cssに書き直す
 */
 /*
-*実験的なコード
+*実験的なコード1つ目
 *$btn-colorsに名前と値をしているする。
 *@each分で全てのものが呼び出される。
 *あとはhtmlでクラス指定を行えばできる。
+*いれこ構造は出来なさそう。。。
 */
-.c-btn_primary {
-  background-color: #337ab7;
+/*
+*このコードは用いる。
+*$sizesは
+*余白とりの大きさやfontsizeの大きさを指定するときに用いる。
+*@each文と@function関数でmap関数を呼び出す際にmap-getと書く必要性がないように記述する。(他の変数も同様な処理ができるように書き換えた。
+*/
+.space_sssss {
+  size: 2px;
 }
 
-.c-btn_secondary {
-  background-color: #5cb85c;
+.space_ssss {
+  size: 3px;
 }
 
-.c-btn_tertiary {
-  background-color: #f0ad4e;
+.space_sss {
+  size: 5px;
+}
+
+.space_ss {
+  size: 10px;
+}
+
+.space_s {
+  size: 15px;
+}
+
+.space_m {
+  size: 20px;
+}
+
+.space_l {
+  size: 25px;
+}
+
+.space_xl {
+  size: 30px;
+}
+
+.space_xxl {
+  size: 35px;
+}
+
+.space_2l {
+  size: 40px;
+}
+
+.space_3l {
+  size: 45px;
+}
+
+.space_4l {
+  size: 50px;
+}
+
+.color_background {
+  color: #fff7cc;
+}
+
+.color_formbackground {
+  color: #faf9f5;
+}
+
+.color_header {
+  color: #174113;
+}
+
+.color_footer {
+  color: #d69e10;
+}
+
+.color_top-title {
+  color: #d69c3f;
+}
+
+.color_sentence {
+  color: #707070;
+}
+
+.color_othersentence {
+  color: white;
+}
+
+.color_changedbotton1 {
+  color: #f29502;
+}
+
+/*
+body {
+    //font-size: map-get($sizes, sss);
+    //map-get関数でキーを指定することができる
+    size(sss);
+}
+*/
+body {
+  font-size: 40px;
+  background: #d69c3f;
 }
 
 /*

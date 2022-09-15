@@ -1,17 +1,77 @@
 /*
-*実験的なコード
+*実験的なコード1つ目
 *$btn-colorsに名前と値をしているする。
 *@each分で全てのものが呼び出される。
 *あとはhtmlでクラス指定を行えばできる。
+*いれこ構造は出来なさそう。。。
 */
 
-$btn-colors: (
-    "primary": #337ab7,
-    "secondary": #5cb85c,
-    "tertiary": #f0ad4e,
+/*
+*このコードは用いる。
+*$sizesは
+*余白とりの大きさやfontsizeの大きさを指定するときに用いる。
+*@each文と@function関数でmap関数を呼び出す際にmap-getと書く必要性がないように記述する。(他の変数も同様な処理ができるように書き換えた。
+*/
+$sizes: (
+    sssss: 2px,
+    ssss: 3px,
+    sss: 5px,
+    ss: 10px,
+    s: 15px,
+    m: 20px,
+    l: 25px,
+    xl: 30px,
+    xxl: 35px,
+    2l: 40px,
+    3l: 45px,
+    4l: 50px,
 );
-@each $key, $value in $btn-colors {
-    .c-btn_#{$key} {
-        background-color: $value;
+
+$colors: (
+    "background": #fff7cc,
+    //ok ホームページの外枠の背景色に用いる
+    "formbackground": #faf9f5,
+    // ok formgroundの背景色に用いる。
+    "header": #174113,
+    //ok headerの背景色に用いる
+    "footer": #d69e10,
+    //ok footeの背景色に用いる
+    "top-title": #d69c3f,
+    //ok top-titleのhaikishareの文字に使う。
+    "sentence": #707070,
+    //textに用いる文書の色
+    "othersentence": white,
+    //必要はないと思うがボタン等やheader等などの色は白にしたいのでそれも指定する。
+    "changedbotton1": #f29502,
+    //購入をキャンセルする。削除する以外のボタンでボタンに触れたら、この色に変える。
+);
+@each $sizeName, $size in $sizes {
+    .space_#{$sizeName} {
+        size: $size;
     }
+}
+
+@each $colorName, $color in $colors {
+    .color_#{$colorName} {
+        color: $color;
+    }
+}
+
+@function space($sizeName) {
+    @return map-get($sizes, $sizeName);
+}
+
+@function color($colorName) {
+    @return map-get($colors, $colorName);
+} /*
+body {
+    //font-size: map-get($sizes, sss);
+    //map-get関数でキーを指定することができる
+    size(sss);
+}
+*/
+body {
+    margin: space(x);
+    font-size: space(2l);
+    background: color("top-title");
 }
