@@ -62,7 +62,11 @@ $colors: (
     @return map-get($colors, $colorName);
 }
 
+//googlefont
+//@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200&display=swap");
+//という感じでgooglefontの@import文のところをコピペして読み込む
 /*
+
 使用
 body {
     //font-size: map-get($sizes, sss);
@@ -70,6 +74,29 @@ body {
     size(sss);
 }
 */
+//
+//このgooglefontはheader部分のhaikishareのところに割り当てる。
+/*
+* googlefont割り当て。
+* 1.haiki shareのヘッダー部分ぶぶんの文字に用いる。
+* 2.
+*
+*
+*/
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"); //.......1
+
+//使うつかう時にfont-family: "Cairo", sans-serif;と入力してやる。
+/*
+body {
+    font-family: "Cairo", sans-serif;
+    font-size: 60px;
+}
+*/
+body {
+    font-family: "Permanent Marker", cursive;
+    font-size: 60px;
+    font-weight: bold;
+}
 
 // ここから,responsiveデザインを対応するためのコード
 //414px以下の時にレスポンシブに切り替わる使用にする。s

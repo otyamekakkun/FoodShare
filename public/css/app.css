@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
+@import url(https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap);
 @charset "UTF-8";
 /*
 ここのファイルで全てのsassファイルを読み込もんでpublic/css/app.cssに書き直す
@@ -94,6 +95,7 @@
 }
 
 /*
+
 使用
 body {
     //font-size: map-get($sizes, sss);
@@ -101,6 +103,25 @@ body {
     size(sss);
 }
 */
+/*
+* googlefont割り当て。
+* 1.haiki shareのヘッダー部分ぶぶんの文字に用いる。
+* 2.
+*
+*
+*/
+/*
+body {
+    font-family: "Cairo", sans-serif;
+    font-size: 60px;
+}
+*/
+body {
+  font-family: "Permanent Marker", cursive;
+  font-size: 60px;
+  font-weight: bold;
+}
+
 /*
 * 1 真っ新な状態にする
 * 2 haiki shareファイル全体を担うsass
