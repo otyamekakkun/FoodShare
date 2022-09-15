@@ -17,7 +17,9 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    public const HOME = '/home';
+    public const HOME = '/haiki/shopper_mypage';
+    //public const HOME = 'home';
+
 
     /**
      * The controller namespace for the application.

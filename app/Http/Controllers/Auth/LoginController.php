@@ -42,6 +42,13 @@ class LoginController extends Controller
         $this->middleware('guest:admin')->except('logout');
     }
 
+/*staffのmypageにredirectさせたい
+*/
+
+
+
+
+
     /**
      * 管理者ログイン用
      */
