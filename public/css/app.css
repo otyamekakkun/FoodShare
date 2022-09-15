@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
 @import url(https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200&display=swap);
 @charset "UTF-8";
 /*
 ここのファイルで全てのsassファイルを読み込もんでpublic/css/app.cssに書き直す
@@ -105,10 +106,9 @@ body {
 */
 /*
 * googlefont割り当て。
-* 1.haiki shareのヘッダー部分ぶぶんの文字に用いる。
-* 2.
-*
-*
+* 1.haiki shareのヘッダー部分の文字に用いる。(scssで記述する際、 font-family: "Permanent Marker", cursive;
+* と呼び込む。
+* 2.デフォルトの文字。
 */
 /*
 body {
@@ -117,7 +117,7 @@ body {
 }
 */
 body {
-  font-family: "Permanent Marker", cursive;
+  font-family: "Noto Serif TC", serif;
   font-size: 60px;
   font-weight: bold;
 }
