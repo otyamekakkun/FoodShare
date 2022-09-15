@@ -98,7 +98,7 @@
 <a href="{{route('haiki_shopper.staff_mypage_display')}}">本当の登録画面っへs</a>
 --}}
 <a href="{{route('admin-register')}}">管理者用のログインページ</a> 
-{{-- <a href="{{route('adminLogin')}}">管理者用のログインページ</a>  --}}
+ <a href="{{route('admin-home')}}">管理者用</a>  
 
 </body>
 </html>
