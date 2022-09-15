@@ -369,6 +369,20 @@ th {
 }
 
 /*
+基本的なファイル全体のdefault的なデザインを記述する
+*/
+html,
+body {
+  width: 100%;
+  background: #fff7cc;
+  color: #707070;
+  line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+}
+
+/*
 * 1 footerを作るsassのファイルを読み込む 
 * 2 headerを作るsassのファイルを読み込む
 * 3 _mainファイルを作る（改訂あり)
