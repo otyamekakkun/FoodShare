@@ -35,17 +35,57 @@
 1.ボタンをクリックしたらモーダルを出す機能をつけたい。（そのモーダルから、あなたは本当に
 利用者ですか？スタッフですか？と言うコメントを出してモーダル上から画面遷移をさせる。
  --}}
-
-
-
+ @extends('layouts.app')
+ @section('content')
 <body>
-    <p>
-        利用客のプロフィール編集ページです
-    </p>
+<header>
+    {{-- 共通箇所１s --}}
+    <nav>
+        <ul>
+            <li>
+                {{-- ログアウト機能を代入してやる--}}
+                <form action="{{ route('logout') }}" method="post">
+                @csrf
+                <input type="submit" value="ログアウト">
+              </form>
+            </li>
+            <a href="{{route('haiki_shopper.shopper_mypage_display')}}"><button>マイページ</a></button>
+            <li>
+        </ul>
+    </nav>
+</header>
+<aside>
+    <p>使用写真を挿入したい「トップページに出てくる写真を挿入したい」</p>
+</aside>
+
+
+{{-- boxを作るdivタグにしたい --}}
+
+<section>
+<div>
+    <div>
+<form>
+    @csrf
+    <h3>???様 プロフィール編集</h3>
+    <input action="post" type="text" name="" placeholder="メールアドレス編集">
+    <input action="post" type="text" name="" placeholder="パスワード編集">
+    <input action="post" type="text" name="" placeholder="パスワード再入力">
+<input type="submit" value="内容を変更する">
+
+</form>
+    </div>
+</div>
+</section>
+
+<aside>
+    <p>使用写真を挿入したい「トップページに出てくる写真を挿入したい」</p>
+</aside>
+
+<footer>
+  <p>© 2022 taguchi kakuto</p>
+</footer>
+
 </body>
 
-<form action="{{ route('logout') }}" method="post">
-    @csrf
-    <input type="submit" value="ログアウト">
-  </form>
 
+@endsection
