@@ -49,29 +49,27 @@
 <div class="l-header">
     <h1 class="l-header__title">haiki share</h1>
     <nav>
-        <div class="l-header_nav">
+        <div class="l-header__flex">
         <ul>
             <li>
+                <div class="l-header__nav">
                 {{-- ログアウト機能を代入してやる--}}
                 <form action="{{ route('logout') }}" method="post">
                 @csrf
                 <input type="submit" value="ログアウト">
               </form>
+              <div>
             </li>
+            <div class="l-header__mypagebottom">
             <a href="{{route('haiki_shopper.shopper_mypage_display')}}"><button>マイページ</a></button>
+            <div>
             <li>
         </ul>
-        </div>
+    </div>
+        
     </nav>
 </div>
 </header>
-
-
-
-
-
-
-
 
 <aside>
     <p>使用写真を挿入したい「トップページに出てくる写真を挿入したい」</p>
