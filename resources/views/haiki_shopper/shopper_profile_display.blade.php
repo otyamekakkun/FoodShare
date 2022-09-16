@@ -61,6 +61,7 @@
               </form>
               <div>
             </li>
+            <li>
             <div class="l-header__mypagebottom">
             <a href="{{route('haiki_shopper.shopper_mypage_display')}}"><button>マイページ</a></button>
             <div>
@@ -98,13 +99,12 @@
     <p>使用写真を挿入したい「トップページに出てくる写真を挿入したい」</p>
 </aside>
 
-<footer class="l-incomplete">
-  <p>© 2022 taguchi kakuto</p>
-</footer>
 
 </body>
+
 <div id=app>
 <example-component></example-component>
+<footer-component></footer-component>
 </div>
 
 @endsection
