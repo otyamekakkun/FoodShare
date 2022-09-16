@@ -10,14 +10,8 @@
                 <div class="card-body">
                     @isset($authgroup)
                     <form method="POST" action="{{ url("register/$authgroup") }}">
-<p>ここで管理者用のログインページの記述を書くのかな？と言うところただし今回の使用では同じなのでこの辺で止めることにする</p>
-
-
-
-
-
-
-                    @else
+<h1>コンビニスタッフユーザー登録</h1>
+ @else
                     <form method="POST" action="{{ route('register') }}">
                     @endisset
                         @csrf
@@ -71,6 +65,35 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
+{{-- ここから管理者用のユーザー登録ページ --}}
+                        @isset($authgroup)
+                        <form method="POST" action="{{ url("register/$authgroup") }}">
+    @csrf
+<p>勤めているコンビニの会社</p>
+<input type="text" placeholder="勤めているコンビニの会社を記述してください">
+
+<p>支店名記入欄</p>
+<input type="text" placeholder="支店名記入欄">
+
+<p>住所</p>
+<input type="text" placeholder="住所記入欄">
+
+
+
+                            @endisset
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">

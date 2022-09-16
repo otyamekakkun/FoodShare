@@ -15,17 +15,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 @extends('layouts.app')
 
 @section('content')
@@ -37,6 +26,8 @@
 
                 <div class="card-body">
                     @isset($authgroup)
+                    <p>コンビニスタッフログインページ</p>
+                    <p>利用者は普通のログインページで記述してください</p>
                     <form method="POST" action="{{ url("login/$authgroup") }}">
                     @else
                     <form method="POST" action="{{ route('login') }}">
