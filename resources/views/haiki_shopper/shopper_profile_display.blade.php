@@ -49,14 +49,15 @@
 <div class="l-header">
     <h1 class="l-header__title">haiki share</h1>
     <nav>
-        <div class="l-header__flex">
         <ul>
             <li>
                 <div class="l-header__nav">
                 {{-- ログアウト機能を代入してやる--}}
                 <form action="{{ route('logout') }}" method="post">
                 @csrf
+                <button class="l-header__nav__button">
                 <input type="submit" value="ログアウト">
+            </button>
               </form>
               <div>
             </li>
@@ -65,7 +66,6 @@
             <div>
             <li>
         </ul>
-    </div>
         
     </nav>
 </div>

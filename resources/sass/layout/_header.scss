@@ -1,3 +1,7 @@
+//=====================================
+// header (のファイルに適用）
+//=====================================
+
 .l-header {
     display: flex;
     align-items: justify-content;
@@ -16,17 +20,37 @@
         right: 200px;
         top: size(4l);
         align-items: center;
-        background: red;
+        background: #174113;
         border: size(ssss) solid;
         border-radius: size(ssss);
         text-align: center;
+        color: white;
+        &__button {
+            //inline要素に変更する
+            display: inline;
+            border: none;
+            //  border-radius: size(ssss);
+            font-family: "Noto Serif TC", serif;
+            font-size: size(s);
+        }
     }
     &__mypagebottom {
+        //inline要素に変更する
+        display: inline;
         position: absolute;
         right: 80px;
         top: size(4l);
         text-align: center;
         border: size(ssss) solid;
         border-radius: size(ssss);
+        color: white;
     }
 }
+
+//=========================================
+// headerのファイルに適用
+//========================================
+
+//==========================================
+// headerのファイルに適用
+// ======================================

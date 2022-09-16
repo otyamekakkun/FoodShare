@@ -427,18 +427,27 @@ img {
   right: 200px;
   top: 50px;
   align-items: center;
-  background: red;
+  background: #174113;
   border: 3px solid;
   border-radius: 3px;
   text-align: center;
+  color: white;
+}
+.l-header__nav__button {
+  display: inline;
+  border: none;
+  font-family: "Noto Serif TC", serif;
+  font-size: 15px;
 }
 .l-header__mypagebottom {
+  display: inline;
   position: absolute;
   right: 80px;
   top: 50px;
   text-align: center;
   border: 3px solid;
   border-radius: 3px;
+  color: white;
 }
 
 /*
