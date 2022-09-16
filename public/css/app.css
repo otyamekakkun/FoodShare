@@ -438,6 +438,15 @@ img {
   border: none;
   font-family: "Noto Serif TC", serif;
   font-size: 15px;
+  box-shadow: 3px #b8b8b8;
+  transition: all 0.5s;
+}
+.l-header__nav__button:hover {
+  cursor: pointer;
+  background: #b2d142;
+  box-shadow: 1px 1px 1px 1px orange;
+  transform: translateY(-1px);
+  border: none;
 }
 .l-header__mypagebottom {
   display: inline;
@@ -448,6 +457,13 @@ img {
   border: 3px solid;
   border-radius: 3px;
   color: white;
+  transition: all 2s;
+}
+.l-header__mypagebottom:hover {
+  cursor: pointer;
+  background: #b2d142;
+  box-shadow: 1px 1px 1px 1px orange;
+  border: none;
 }
 
 /*
