@@ -112,7 +112,7 @@ haiki shareのトップ画面を作成しする。
         <h1 class="bg_text">俺の名前はevil</h1>
     </div>
 </section>
-@endsection
+<example-component></example-component>
 
 
 
@@ -123,9 +123,12 @@ haiki shareのトップ画面を作成しする。
 <a href="{{route('admin-register')}}">管理者用のログインページ</a> 
  <a href="{{route('admin-home')}}">管理者用</a>  
 
+
 </body>
 </html>
-{{-- 
+    
+    @endsection
+
     
     
     
@@ -135,6 +138,3 @@ haiki shareのトップ画面を作成しする。
     
     
     
-    
-    
-    --}}

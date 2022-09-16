@@ -3,7 +3,9 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Example Componentですよ</div>
+                    <div class="card-header">
+                        Example Componだ vue fileの読み込むできてている？
+                    </div>
 
                     <div class="card-body">I'm an example component.</div>
                 </div>

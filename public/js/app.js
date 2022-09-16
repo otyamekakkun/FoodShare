@@ -5354,7 +5354,7 @@ var staticRenderFns = [function () {
     staticClass: "card"
   }, [_c("div", {
     staticClass: "card-header"
-  }, [_vm._v("Example Componentですよ")]), _vm._v(" "), _c("div", {
+  }, [_vm._v("\n                    Example Componだ vue fileの読み込むできてている？\n                ")]), _vm._v(" "), _c("div", {
     staticClass: "card-body"
   }, [_vm._v("I'm an example component.")])])])])]);
 }];
@@ -5397,7 +5397,6 @@ Vue.component("example-component", (__webpack_require__(/*! ./components/Example
 var app = new Vue({
   el: "#app"
 });
-s;
 
 /***/ }),
 

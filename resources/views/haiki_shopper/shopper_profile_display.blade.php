@@ -56,7 +56,7 @@
                 <form action="{{ route('logout') }}" method="post">
                 @csrf
                 <button class="l-header__nav__button">
-                <input type="submit" value="ログアウト">
+                <input class="" type="submit" value="ログアウト">
             </button>
               </form>
               <div>
@@ -98,11 +98,13 @@
     <p>使用写真を挿入したい「トップページに出てくる写真を挿入したい」</p>
 </aside>
 
-<footer>
+<footer class="l-incomplete">
   <p>© 2022 taguchi kakuto</p>
 </footer>
 
 </body>
-
+<div id=app>
+<example-component></example-component>
+</div>
 
 @endsection

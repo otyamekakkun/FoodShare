@@ -1,3 +1,8 @@
+/* レスポンシブ対応は660px以下になったときに対策する
+ハンバーガーメニューを作成してそこからresponsive対応する。
+
+*/
+
 //=====================================
 // header (のファイルに適用）
 //=====================================
@@ -35,16 +40,17 @@
             font-family: "Noto Serif TC", serif;
             font-size: size(s);
             box-shadow: 3px #b8b8b8;
-            transition: all 0.5s;
+            transition: all 1.2s;
         }
         &__button:hover {
             cursor: pointer;
             background: #b2d142;
             box-shadow: 1px 1px 1px 1px orange;
-            transform: translateY(-1px);
+            transform: translateY(-2px);
             border: none;
         }
     }
+
     &__mypagebottom {
         //inline要素に変更する
         display: inline;
@@ -55,14 +61,13 @@
         border: size(ssss) solid;
         border-radius: size(ssss);
         color: white;
-        transition: all 2s;
+        transition: all 1.2s;
     }
     &__mypagebottom:hover {
         cursor: pointer;
         background: #b2d142;
         box-shadow: 1px 1px 1px 1px orange;
-        //  transform: translateY(-1px);
-        border: none;
+        transform: translateY(-2px);
     }
 }
 

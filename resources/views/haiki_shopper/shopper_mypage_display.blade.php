@@ -35,6 +35,8 @@
 1.ボタンをクリックしたらモーダルを出す機能をつけたい。（そのモーダルから、あなたは本当に
 利用者ですか？スタッフですか？と言うコメントを出してモーダル上から画面遷移をさせる。
 --}}
+@extends('layouts.app')
+@section('content')
 
 <p>
     haiki share shopper mypageへようこそ
@@ -48,7 +50,9 @@
     この記述の仕方だと画面は確かに遷移するがボタンを押した瞬間に画面遷移することができない
     
     --}}
-
+<example-component></example-component>
 
 <a href="{{route('haiki_shopper.shopper_profile_display')}}"><button>frf</a></button>
 </body>
+    
+@endsection
