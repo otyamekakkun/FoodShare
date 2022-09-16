@@ -35,7 +35,7 @@
 1.ボタンをクリックしたらモーダルを出す機能をつけたい。（そのモーダルから、あなたは本当に
 利用者ですか？スタッフですか？と言うコメントを出してモーダル上から画面遷移をさせる。
  --}}
- @extends('layouts.app')
+ @extends('layouts.app2')
  @section('content')
 <body>
 <header>
