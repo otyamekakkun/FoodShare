@@ -54,7 +54,7 @@ $colors: (
     }
 }
 
-@function space($sizeName) {
+@function size($sizeName) {
     @return map-get($sizes, $sizeName);
 }
 

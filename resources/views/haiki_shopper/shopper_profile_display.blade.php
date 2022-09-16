@@ -38,9 +38,18 @@
  @extends('layouts.app2')
  @section('content')
 <body>
+        {{-- 共通箇所１s --}}
 <header>
-    {{-- 共通箇所１s --}}
+    {{-- 
+        １ヘッダー部分の場所取り
+        ２ haiki shareの場所取り、fontsize 配色
+        ３ nav要素の場所取り, botanみたいな形にしたい。（切り抜いて配色みたいな感じ） fontsize 配色
+        
+        --}}
+<div class="l-header">
+    <h1 class="l-header__title">haiki share</h1>
     <nav>
+        <div class="l-header_nav">
         <ul>
             <li>
                 {{-- ログアウト機能を代入してやる--}}
@@ -52,8 +61,18 @@
             <a href="{{route('haiki_shopper.shopper_mypage_display')}}"><button>マイページ</a></button>
             <li>
         </ul>
+        </div>
     </nav>
+</div>
 </header>
+
+
+
+
+
+
+
+
 <aside>
     <p>使用写真を挿入したい「トップページに出てくる写真を挿入したい」</p>
 </aside>

@@ -408,6 +408,20 @@ img {
 * 3 _mainファイルを作る（改訂あり)
 * 4 _sidebarファイルを作る
 */
+.l-header {
+  display: flex;
+  align-items: center;
+  background: #174113;
+  width: 100%;
+  height: 10%;
+}
+.l-header__title {
+  font-family: "Permanent Marker", cursive;
+  font-size: 50px;
+  color: white;
+  padding: 20px;
+}
+
 /*
 * 1 今後も使い回しそうなbuttonデザインを作るファイル 
 * 2 今後も使い回しそうなアラートを作るファイル
