@@ -117,29 +117,29 @@ body {
 /*
 基本的なファイル全体のdefault的なデザインを記述する
 */
-/*
 html,
 body {
-    width: 100%;
-    background: color("background");
-    color: color("sentence");
-    line-height: 1.6;
-    text-size-adjust: 100%;
-    //↑スマホを横向きにしても文字が大きくならないようにする
-    font-family: "Noto Serif TC", serif;
-    letter-spacing: 0.25em;
-    -webkit-font-smoothing: antialiased;
-    //↑文字の滲みを防ぐ用
+  width: 100%;
+  background: #fff7cc;
+  color: #707070;
+  line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+  font-family: "Noto Serif TC", serif;
+  letter-spacing: 0.25em;
+  -webkit-font-smoothing: antialiased;
 }
+
 a {
-    text-decoration: none;
-    //↑下線部を消す用。
+  text-decoration: none;
 }
+
 img {
-    width: 100%;
-    vertical-align: bottom;
+  width: 100%;
+  vertical-align: bottom;
 }
-*/
+
 /*
 * 1 footerを作るsassのファイルを読み込む 
 * 2 headerを作るsassのファイルを読み込む

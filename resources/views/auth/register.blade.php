@@ -10,6 +10,13 @@
                 <div class="card-body">
                     @isset($authgroup)
                     <form method="POST" action="{{ url("register/$authgroup") }}">
+<p>ここで管理者用のログインページの記述を書くのかな？と言うところただし今回の使用では同じなのでこの辺で止めることにする</p>
+
+
+
+
+
+
                     @else
                     <form method="POST" action="{{ route('register') }}">
                     @endisset

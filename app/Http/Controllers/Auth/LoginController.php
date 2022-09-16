@@ -74,8 +74,10 @@ class LoginController extends Controller
             return $this->sendLockoutResponse($request);
         }
 
-        if (Auth::guard('admin')->attempt(['email' => $request->email, 'password' => $request->password], $request->get('remember'))) {
-            return redirect()->intended('/admin');
+        if (Auth::guard('admin')->attempt(['email' => $request->email, 'password' => $request->password],
+         $request->get('remember'))) {
+            //ここのredirect先をコンビニスタッフのマイページに飛ばせるようにする
+            return redirect('/admin')->intended('/admin');
         }
 
         // If the login attempt was unsuccessful we will increment the number of attempts
