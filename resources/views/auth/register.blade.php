@@ -77,23 +77,7 @@
 
 <p>住所</p>
 <input type="text" placeholder="住所記入欄">
-
-
-
                             @endisset
-
-
-
-
-
-
-
-
-
-
-
-
-
 
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
