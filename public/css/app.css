@@ -397,10 +397,11 @@ a {
   text-decoration: none;
 }
 
-img {
+.img {
   width: 10%;
-  height: 980px;
+  height: auto;
   vertical-align: bottom;
+  background: url("/img/top.jpg") no-repeat 5px 40%;
 }
 
 /*
@@ -500,6 +501,10 @@ img {
   background: #b2d142;
   box-shadow: 1px 1px 1px 1px orange;
   transform: translateY(-2px);
+}
+
+.l-main {
+  display: flex;
 }
 
 /*

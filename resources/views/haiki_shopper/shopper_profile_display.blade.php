@@ -72,14 +72,13 @@
 </div>
 </header>
 
-<aside>
-    <img src="{{asset('img/top.jpg')}}">
-</aside>
-
+<main>
+    <div class="l-main">
+<div></div>
 
 {{-- boxを作るdivタグにしたい --}}
 <section>
-<div>
+<div class="img">
     <div>
 <form>
     @csrf
@@ -94,10 +93,9 @@
 </div>
 </section>
 
-<aside>
-    <img src="{{asset('img/top.jpg')}}">
-</aside>
-
+<div class="img"></div>
+</div>
+</main>
 </body>
 
 <div id=app>
