@@ -73,23 +73,21 @@
 </header>
 
 <main>
-    <div class="l-main">
-<div></div>
 
 {{-- boxを作るdivタグにしたい --}}
 <section>
-<div class="img">
-    <div>
 <form>
     @csrf
-    <h3>???様 プロフィール編集</h3>
-    <input action="post" type="text" name="" placeholder="メールアドレス編集">
-    <input action="post" type="text" name="" placeholder="パスワード編集">
-    <input action="post" type="text" name="" placeholder="パスワード再入力">
-<input type="submit" value="内容を変更する">
-
-</form>
+    <div class="c-formshopperprofile">
+    <h3 class="c-formshopperprofile__title">お客様 プロフィール編集</h3>
+    <div class="c-formshopperprofile__te">
+    <input class="c-formshopperprofile__text" action="post" type="text" name="" placeholder="メールアドレス編集">
+    <input class="c-formshopperprofile__text" action="post" type="text" name="" placeholder="パスワード編集">
+    <input class="c-formshopperprofile__text" action="post" type="text" name="" placeholder="パスワード再入力">
     </div>
+<input type="submit" class="c-formshopperprofile__sub" value="変更する">
+</div>
+</form>
 </div>
 </section>
 
