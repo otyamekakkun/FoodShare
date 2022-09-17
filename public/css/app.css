@@ -512,13 +512,14 @@ a {
 
 .c-formshopperprofile {
   margin: auto;
-  padding: 30px;
+  padding: 35px;
   text-align: center;
   background: #faf9f5;
   font-family: "Noto Serif TC", serif;
   font-size: 35px;
   width: 50%;
-  height: 600px;
+  height: 550px;
+  line-height: 65px;
 }
 .c-formshopperprofile__te {
   justify-content: center;
@@ -532,9 +533,12 @@ a {
 .c-formshopperprofile__sub {
   background: #174113;
   border: none;
-  width: 50%;
+  width: 20%;
   font-size: 35px;
   border-radius: 10px;
+  position: fixed;
+  right: 300px;
+  margin: 50px 50px;
 }
 
 /*

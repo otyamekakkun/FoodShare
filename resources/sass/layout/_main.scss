@@ -1,13 +1,14 @@
 //接続ok
 .c-formshopperprofile{
     margin:auto;
-    padding:size(xl);
+    padding:size(xxl);
     text-align:center;
     background:color("formbackground");
     font-family:"Noto Serif TC", serif;
     font-size:size(xxl);
     width:50%;
-    height:600px;
+    height:550px;
+    line-height:65px;
 &__te{
     //display:flex;
     justify-content: center;
@@ -31,9 +32,13 @@
     background:#174113;
     border:none;
     //margin:10px 10px 10px;
-    width:50%;
+    width:20%;
     font-size:35px;
     border-radius:size(ss);
+    position:fixed;
+    right:300px;
+    margin:50px 50px;
+    
 
 }
 }
