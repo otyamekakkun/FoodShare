@@ -87,7 +87,16 @@
     </nav>
 </div>
 </header>
+<aside>
+    <img src="{{asset('img/top.jpg')}}">
+</aside>
+
+
 <h1>商品の詳細情報です</h1>
+<aside>
+    <img src="{{asset('img/top.jpg')}}">
+</aside>
+
 <div id="app">
 <footer-component></footer-component>
 </div>

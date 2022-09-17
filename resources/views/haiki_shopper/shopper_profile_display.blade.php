@@ -73,12 +73,11 @@
 </header>
 
 <aside>
-    <p>使用写真を挿入したい「トップページに出てくる写真を挿入したい」</p>
+    <img src="{{asset('img/top.jpg')}}">
 </aside>
 
 
 {{-- boxを作るdivタグにしたい --}}
-
 <section>
 <div>
     <div>
@@ -96,10 +95,8 @@
 </section>
 
 <aside>
-    <p>使用写真を挿入したい「トップページに出てくる写真を挿入したい」</p>
-
+    <img src="{{asset('img/top.jpg')}}">
 </aside>
-
 
 </body>
 
