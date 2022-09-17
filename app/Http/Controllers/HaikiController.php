@@ -58,7 +58,10 @@ class HaikiController extends Controller
     return view('haiki_staff.staff_exhibitproduct_list_display');
     } //.............................................................10
 
-
+    public function staff_productlist_display(){
+        return view('haiki_staff.staff_productlist_display');
+        } //.............................................................10
+    
 
 
 

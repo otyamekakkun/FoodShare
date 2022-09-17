@@ -35,7 +35,7 @@
 </div>
 </header>
 <h1>
-    コンビニ側が出品した商品の一覧のページです
+    コンビニ側でも商品一覧を写す機能を作ります
 </h1>
 <div id="app">
 <footer-component></footer-component>

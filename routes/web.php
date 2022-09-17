@@ -36,6 +36,7 @@ Route::get('/drills/new',[App\Http\Controllers\DrillsController::class, 'new'])-
  * 8(コンビニ)購入された商品一覧を表示するもの
  * 9(コンビニ)出品する商品を編集するもの
  * 10(コンビニ)出品した商品を一覧する表示
+ * 11(コンビニ)コンビニ側でも今出回っている商品の一覧を項目するもの(購入はできないように設定する)
  */
 //利用客を表示するもの
 Route::get('/haiki/shopper_mypage',[App\Http\Controllers\HaikiController::class, 'shopper_mypage_display'])->name('haiki_shopper.shopper_mypage_display');                           //1
@@ -50,6 +51,7 @@ Route::get('/haiki/staff_exhibitproduct',[App\Http\Controllers\HaikiController::
 Route::get('/haiki/staff_buyproduct',[App\Http\Controllers\HaikiController::class, 'staff_buyproduct_display'])->name('haiki_shopper.staff_buyproduct_display');                     //8
 Route::get('/haiki/staff_productedit',[App\Http\Controllers\HaikiController::class, 'staff_productedit_display'])->name('haiki_shopper.staff_productedit_display');                  //9
 Route::get('/haiki/staff_exhibitproductlist',[App\Http\Controllers\HaikiController::class, 'staff_exhibitproduct_list_display'])->name('haiki_shopper.staff_exhibitproduct_list_display'); //10
+Route::get('/haiki/staff_productlist',[App\Http\Controllers\HaikiController::class, 'staff_productlist_display'])->name('haiki_shopper.staff_productlist_display'); //11
 
 // ここから追加
 Route::get('/login/admin', [App\Http\Controllers\Auth\LoginController::class, 'showAdminLoginForm']);
