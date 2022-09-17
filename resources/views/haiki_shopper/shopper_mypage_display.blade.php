@@ -35,24 +35,59 @@
 1.ボタンをクリックしたらモーダルを出す機能をつけたい。（そのモーダルから、あなたは本当に
 利用者ですか？スタッフですか？と言うコメントを出してモーダル上から画面遷移をさせる。
 --}}
-@extends('layouts.app')
-@section('content')
+ @extends('layouts.app2')
+ @section('content')
+<body>
+        {{-- 共通箇所１s --}}
+<header>
+    {{-- 
+        １ヘッダー部分の場所取り
+        ２ haiki shareの場所取り、fontsize 配色
+        ３ nav要素の場所取り, botanみたいな形にしたい。（切り抜いて配色みたいな感じ） fontsize 配色
+        
+        --}}
+<div class="l-header">
+    <h1 class="l-header__title">haiki share</h1>
+    <nav>
+        <ul>
+            <li>
+                <div class="l-header__nav">
+                {{-- ログアウト機能を代入してやる--}}
+                <form action="{{ route('logout') }}" method="post">
+                @csrf
+                <button class="l-header__nav__button">
+                <input class="" type="submit" value="ログアウト">
+            </button>
+              </form>
+              <div>
+            </li>
+            <li>
+                {{-- 
+            <div class="l-header__mypagebottom">
+            <a href="{{route('haiki_shopper.shopper_mypage_display')}}"><button>マイページ</a></button>
+            <div>
+                --}}
+            <li>
+        </ul>
+        
+    </nav>
+</div>
+</header>
 
-<p>
-    haiki share shopper mypageへようこそ
-</p>
 
-    <form action="{{ route('logout') }}" method="post">
-        @csrf
-        <input type="submit" value="ログアウト">
-      </form>
-{{-- 
-    この記述の仕方だと画面は確かに遷移するがボタンを押した瞬間に画面遷移することができない
-    
-    --}}
-<example-component></example-component>
 
-<a href="{{route('haiki_shopper.shopper_profile_display')}}"><button>frf</a></button>
+{{-- boxを作るdivタグにしたい --}}
+
+<a href="{{route('haiki_shopper.shopper_profile_display')}}"><button>プロフィール編集画面に移動する</a></button>
+
+
+
 </body>
-    
+
+<div id=app>
+    {{-- incompletefooter-componentはfooterをレウアウトしてくれるもの。ただしページ量が少ないときにfooter
+        エリアが最下部にならないように定義したもの --}}
+<incompletefooter-component></incompletefooter-component>
+</div>
+
 @endsection

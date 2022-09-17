@@ -97,14 +97,16 @@
 
 <aside>
     <p>使用写真を挿入したい「トップページに出てくる写真を挿入したい」</p>
+
 </aside>
 
 
 </body>
 
 <div id=app>
-<example-component></example-component>
-<footer-component></footer-component>
+    {{-- incompletefooter-componentはfooterをレウアウトしてくれるもの。ただしページ量が少ないときにfooter
+        エリアが最下部にならないように定義したもの --}}
+<incompletefooter-component></incompletefooter-component>
 </div>
 
 @endsection
