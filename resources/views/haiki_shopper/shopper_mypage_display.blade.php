@@ -40,12 +40,8 @@
 <body>
         {{-- 共通箇所１s --}}
 <header>
-    {{-- 
-        １ヘッダー部分の場所取り
-        ２ haiki shareの場所取り、fontsize 配色
-        ３ nav要素の場所取り, botanみたいな形にしたい。（切り抜いて配色みたいな感じ） fontsize 配色
         
-        --}}
+        {{-- ヘッダー部分 --}}
 <div class="l-header">
     <h1 class="l-header__title">haiki share</h1>
     <nav>
@@ -61,15 +57,7 @@
               </form>
               <div>
             </li>
-            <li>
-                {{-- 
-            <div class="l-header__mypagebottom">
-            <a href="{{route('haiki_shopper.shopper_mypage_display')}}"><button>マイページ</a></button>
-            <div>
-                --}}
-            <li>
-        </ul>
-        
+        </ul>  
     </nav>
 </div>
 </header>
@@ -79,8 +67,13 @@
 {{-- boxを作るdivタグにしたい --}}
 
 <a href="{{route('haiki_shopper.shopper_profile_display')}}"><button>プロフィール編集画面に移動する</a></button>
+<a href="{{route('haiki_shopper.shopper_productlist_display')}}"><button>商品一覧に移動する</a></button>
 
-
+<h1>
+    購入した商品。
+</h1>
+<a href="{{route('haiki_shopper.shopper_productdetail_display')}}"><button>商品の詳細をみる</a></button>
+<button>購入をキャンセルする</button>
 
 </body>
 
