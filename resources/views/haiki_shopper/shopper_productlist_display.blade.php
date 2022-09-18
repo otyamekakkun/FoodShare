@@ -84,8 +84,40 @@
      </nav>
  </div>
  </header>
- <h1>流通している商品一覧ページです「ご利用者専用」
- </h1>
+
+
+
+{{-- ここはvueコンポーザの出番かも --}}
+
+ <h1>流通している商品一覧ページです「ご利用者専用」</h1>
+<p>検索結果　？件</p>
+<input type="radio" name="a" value="c">出品されたコンビニの商品名
+<input type="radio" name="b" value="d">賞味期限が切れていない商品
+<select name="pets" id="pet-select">
+    <option value="価格">価格の並び替え</option>
+    <option value="dog">価格の高い順に並び替える</option>
+    <option value="cat">価格の低い順に並び替える</option>
+</select>
+{{-- ここはvueコンポーザの出番 終了 
+    vueコンポーネントにまとめて、sassのボタンのところでレイアウトする。
+    --}}
+
+<div>
+    <p>
+        データベースから写真を取得する
+    </p>
+    <p>商品名：闇の弁当</p>
+    <p>都道府県</p>
+    <p>価格:200円</p>
+
+</div>
+
+
+
+
+
+
+
  <div id="app">
  <footer-component></footer-component>
  </div>

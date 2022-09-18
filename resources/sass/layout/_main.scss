@@ -29,6 +29,12 @@
     position:fixed;
     right:25%;
     margin:50px 50px;
+    transition: all 1.2s;
+
+}
+&__sub:hover{
+    cursor: pointer;
+    background: #b2d142;
 }
 }
 
