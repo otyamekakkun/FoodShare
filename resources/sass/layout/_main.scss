@@ -10,20 +10,11 @@
     height:550px;
     line-height:65px;
 &__te{
-    //display:flex;
     justify-content: center;
-    //text-align:center;
- //  align-items: center;
-  // display:inline;
-  // margin:auto;
-   //text-align:center;
-   //padding:40px
    margin:size(xl);  
 }
 
 &__text{
-    //display:flex;
-    //margin:auto;
     background:white;
     margin:20px 20px 20px ;
     border:none;
@@ -31,14 +22,15 @@
 &__sub{
     background:#174113;
     border:none;
-    //margin:10px 10px 10px;
-    width:20%;
-    font-size:35px;
+    color:white;
+    width:12%;
+    font-size:size(m);
     border-radius:size(ss);
     position:fixed;
-    right:300px;
+    right:25%;
     margin:50px 50px;
-    
+}
+}
 
-}
-}
+//変更すると言う文字がずれたら　レスポンシブ対応をとる。
+//980pxからレスポンシブ対応をする
