@@ -27,6 +27,7 @@ class RestappController extends Controller
     public function create()
     {
         //
+        return view('rest.create');
 
     }
 
@@ -50,8 +51,11 @@ class RestappController extends Controller
      */
     public function show($id)
     {
-        //
-
+        
+                //idでも指定したければこのコードを記述する
+                $item = Restdata::find($id);
+                return $item->toArray();
+    
     }
 
     /**
@@ -62,7 +66,9 @@ class RestappController extends Controller
      */
     public function edit($id)
     {
-        //
+        //idでも指定で着ればいいので
+        $item = Restdata::find($id);
+        return $item->toArray();
     }
 
     /**
