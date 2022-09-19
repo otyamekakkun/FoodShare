@@ -1,8 +1,9 @@
+@extends('layouts.app2')
+@section('content')
+
 <p>
     スタッフのマイページに遷移しました
 </p>
-@extends('layouts.app2')
-@section('content')
 
 <body>
 <header>

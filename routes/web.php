@@ -56,12 +56,13 @@ Route::get('/haiki/staff_exhibitproductlist',[App\Http\Controllers\HaikiControll
 Route::get('/haiki/staff_productlist',[App\Http\Controllers\HaikiController::class, 'staff_productlist_display'])->name('haiki_shopper.staff_productlist_display'); //11
 
 // ここから追加
+
 Route::get('/login/admin', [App\Http\Controllers\Auth\LoginController::class, 'showAdminLoginForm']);
 Route::get('/register/admin', [App\Http\Controllers\Auth\RegisterController::class, 'showAdminRegisterForm']);
 Route::post('/login/admin', [App\Http\Controllers\Auth\LoginController::class, 'adminLogin']);
 Route::post('/register/admin', [App\Http\Controllers\Auth\RegisterController::class, 'registerAdmin'])->name('admin-register');
 Route::view('/admin', 'admin')->middleware('auth:admin')->name('admin-home');
 
-
 //実験
 Route::Resource('rest',RestappController::class);
+

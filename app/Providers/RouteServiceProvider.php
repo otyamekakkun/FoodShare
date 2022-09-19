@@ -18,6 +18,7 @@ class RouteServiceProvider extends ServiceProvider
      * @var string
      */
     public const HOME = '/haiki/shopper_mypage';
+   // public const ADMIN_HOME ='/haiki/staff_mypage';
     //public const HOME = 'home';
 
 
