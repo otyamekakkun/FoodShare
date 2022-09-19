@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Restdata;
 use Illuminate\Http\Request;
 
 class RestappController extends Controller
@@ -13,7 +14,9 @@ class RestappController extends Controller
      */
     public function index()
     {
-        //
+        //ここに結果を返すポイ
+        $items = Restdata::all();
+        return $items->toArray();
     }
 
     /**
@@ -24,6 +27,7 @@ class RestappController extends Controller
     public function create()
     {
         //
+
     }
 
     /**
@@ -35,6 +39,7 @@ class RestappController extends Controller
     public function store(Request $request)
     {
         //
+
     }
 
     /**
@@ -46,6 +51,7 @@ class RestappController extends Controller
     public function show($id)
     {
         //
+
     }
 
     /**
@@ -69,6 +75,7 @@ class RestappController extends Controller
     public function update(Request $request, $id)
     {
         //
+
     }
 
     /**
