@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app2')
 
 @section('content')
     
@@ -27,7 +27,7 @@
     
     </th>
     <td>
-        <input type="submit" name="url" value="send">
+        <input type="submit"  value="send">
     </td>
 </tr>
 
