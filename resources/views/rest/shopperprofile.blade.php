@@ -1,6 +1,6 @@
-{{-- @extends('layouts.app2') --}}
-
-{{-- @section('content') --}}
+{{-- 
+    header部分　保守性が高くなるように修正する箇所を１箇所にまとめた。
+    --}}
 <section>
     <form>
         @csrf
@@ -19,4 +19,3 @@
     
 
 
-{{-- @endsection --}}
