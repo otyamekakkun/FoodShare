@@ -55,7 +55,6 @@
 @section('content')
 
 <body>
-<header>
     {{-- 
         １ヘッダー部分の場所取り
         ２ haiki shareの場所取り、fontsize 配色
@@ -66,10 +65,6 @@
 <header>
     @include('rest.header')
 </header>
-
-
-
-
 
 <aside>
     <img src="{{asset('img/top.jpg')}}">
