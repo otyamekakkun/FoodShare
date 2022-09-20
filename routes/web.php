@@ -64,5 +64,5 @@ Route::post('/register/admin', [App\Http\Controllers\Auth\RegisterController::cl
 Route::view('/admin', 'admin')->middleware('auth:admin')->name('admin-home');
 
 //実験
-Route::Resource('rest',RestappController::class);
+// Route::Resource('rest',RestappController::class);
 
