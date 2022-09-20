@@ -39,17 +39,11 @@
  @section('content')
 <body>
         {{-- 共通箇所１s --}}
-<header>
-    {{-- 
-        １ヘッダー部分の場所取り
-        ２ haiki shareの場所取り、fontsize 配色
-        ３ nav要素の場所取り, botanみたいな形にしたい。（切り抜いて配色みたいな感じ） fontsize 配色
-        
-        --}}
-        @include('rest.header')
-</header>
-
-<main>
+        <header>
+            @include('rest.shopper.header') 
+            </header>
+            
+    <main>
 
 {{-- boxを作るdivタグにしたい --}}
 {{--下のコードはrest化したフォームページ。  --}}

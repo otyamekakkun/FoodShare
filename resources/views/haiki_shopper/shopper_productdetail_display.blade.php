@@ -62,10 +62,11 @@
         
         --}}
 
-<header>
-    @include('rest.header')
-</header>
-
+        <header>
+            @include('rest.shopper.header') 
+            </header>
+            
+                
 <aside>
     <img src="{{asset('img/top.jpg')}}">
 </aside>

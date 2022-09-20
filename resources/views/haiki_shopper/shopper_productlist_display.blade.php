@@ -53,10 +53,10 @@
  
  <body>
     <header>
-        @include('rest.header')
-    </header>
-    
-    
+        @include('rest.shopper.header') 
+        </header>
+        
+        
 
 {{-- ここはvueコンポーザの出番かも --}}
 

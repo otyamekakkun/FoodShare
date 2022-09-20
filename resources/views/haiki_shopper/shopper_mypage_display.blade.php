@@ -35,10 +35,10 @@
 1.ボタンをクリックしたらモーダルを出す機能をつけたい。（そのモーダルから、あなたは本当に
 利用者ですか？スタッフですか？と言うコメントを出してモーダル上から画面遷移をさせる。
 --}}
-{{-- @extends('layouts.app2') --}}
+@extends('layouts.app2') 
 
 
-{{-- @section('content') --}}
+ @section('content') 
 <body>
         {{-- 共通箇所１s --}}
 <header>
@@ -67,7 +67,7 @@
 </div>
 </header>
 --}}
-@include('rest.header')
+@include('rest.shopper.header') 
 </header>
 {{-- <h1>rest</h1> --}}
 
@@ -82,7 +82,6 @@
 <a href="{{route('haiki_shopper.shopper_productdetail_display')}}"><button>商品の詳細をみる</a></button>
 <button>購入をキャンセルする</button>
 <h1>日本一早いどけざ</h1>
-@include('rest.create')
 </body>
 
 <div id=app>
@@ -90,6 +89,6 @@
         エリアが最下部にならないように定義したもの --}}
 <incompletefooter-component></incompletefooter-component>
 </div>
-{{-- @endsection --}}
+@endsection 
 
 
