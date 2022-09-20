@@ -51,12 +51,14 @@
  @extends('layouts.app2')
  @section('content')
  
+
  <body>
     <header>
         @include('rest.shopper.header') 
         </header>
         
         
+        @include('item.create')
 
 {{-- ここはvueコンポーザの出番かも プラスここはsassのコンポーネント部分なぜならコンビニ側も使用するから--}}
 

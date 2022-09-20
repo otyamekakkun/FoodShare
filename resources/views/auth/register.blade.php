@@ -1,6 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">{{ isset($authgroup) ? ucwords($authgroup) : ""}} {{ __('Register') }}</div>
+
+                <div class="card-body">
+
                 {{ isset($authgroup) ? ucwords($authgroup) : ""}} {{ __('Register') }}
                 @include('rest.other.otherheader')
                 <p> お客様ユーザー登録ページ</p>

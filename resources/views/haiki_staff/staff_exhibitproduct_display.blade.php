@@ -15,6 +15,15 @@
 <h1>
     商品を出品する画面
 </h1>
+
+
+
+@include('item.create')
+
+
+
+
+
 <div id="app">
 <footer-component></footer-component>
 </div>

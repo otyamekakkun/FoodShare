@@ -53,7 +53,7 @@
 
 @extends('layouts.app2')
 @section('content')
-
+@include('item.create')
 <body>
     {{-- 
         １ヘッダー部分の場所取り

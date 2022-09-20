@@ -2,8 +2,11 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Http\RedirectResponse;
+//use Illuminate\Http\RedirectResponse;
 use App\Http\Controllers\RestappController;
+//use App\Http\Controllers\ItemController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -63,6 +66,9 @@ Route::post('/login/admin', [App\Http\Controllers\Auth\LoginController::class, '
 Route::post('/register/admin', [App\Http\Controllers\Auth\RegisterController::class, 'registerAdmin'])->name('admin-register');
 Route::view('/admin', 'admin')->middleware('auth:admin')->name('admin-home');
 
-//実験
-// Route::Resource('rest',RestappController::class);
 
+ Route::Resource('rest',RestappController::class);
+//実験
+Route::get('/item/index', [App\Http\Controllers\ItemController::class, 'index'])->name('item.index');
+Route::get('/create', [App\Http\Controllers\ItemController::class, 'create'])->name('item.create');
+Route::post('/store', [App\Http\Controllers\ItemController::class, 'store'])->name('item.store');
