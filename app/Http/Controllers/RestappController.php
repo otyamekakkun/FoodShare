@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Restdata;
 use Illuminate\Http\Request;
 
+
+//restcontroller実装のコントローラ
 class RestappController extends Controller
 {
     /**
