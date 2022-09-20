@@ -44,13 +44,16 @@
 <header>
         
         {{-- ヘッダー部分 --}}
+        {{-- 
 <div class="l-header">
     <h1 class="l-header__title">haiki share</h1>
     <nav>
         <ul>
             <li>
                 <div class="l-header__nav">
+                    --}}
                 {{-- ログアウト機能を代入してやる--}}
+                 {{-- 
                 <form action="{{ route('logout') }}" method="post">
                 @csrf
                 <button class="l-header__nav__button">
@@ -62,6 +65,9 @@
         </ul>  
     </nav>
 </div>
+</header>
+--}}
+@include('rest.header')
 </header>
 {{-- <h1>rest</h1> --}}
 

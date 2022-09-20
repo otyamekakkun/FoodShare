@@ -16,8 +16,10 @@
             <div class="l-header__mypagebottom">
             <a href="{{route('haiki_shopper.shopper_mypage_display')}}"><button>マイページ</a></button>
             <div>
+
             <li>
         </ul>
         
     </nav>
 </div>
+{{-- マイページのところは高さがいかれているから揃える必要性があるかも --}}
