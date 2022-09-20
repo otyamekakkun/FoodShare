@@ -16,6 +16,22 @@
                     @endif
 
                     You are logged in as 管理者!forjpofjropj
+
+
+
+                    <form action="{{ route('logout') }}" method="post">
+                        @csrf
+                        <button class="l-header__nav__button">
+                        <input class="" type="submit" value="ログアウト">
+                    </button>
+                      </form>
+        
+
+
+
+
+
+
                 </div>
             </div>
         </div>
