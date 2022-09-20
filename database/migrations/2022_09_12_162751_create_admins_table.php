@@ -24,12 +24,14 @@ class CreateAdminsTable extends Migration
     public function up()
     {
         Schema::create('admins', function (Blueprint $table) {
-            $table->increments('staff_id');                    //...........1
-            $table->string('staff_password','255');            //...........2
-            $table->string('staff_email','255');               //...........3
-            $table->string('convinience_store','255');         //...........4
-            $table->string('convinience_store_branch','255');  //...........5
-            $table->timestamps();                              //...........6 
+            $table->increments('id');
+            $table->string('name');
+            $table->string('email')->unique();
+            $table->string('password');
+            $table->boolean('is_super')->default(false);
+            $table->rememberToken();
+            $table->timestamps();
+            $table->softDeletes();        
         });
     }
 
