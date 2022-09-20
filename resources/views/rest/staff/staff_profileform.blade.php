@@ -3,7 +3,7 @@
     restファイル コンビニ側のプロフィール編集画面おフォームページ
     --}}
     <section>
-        <form>
+        <form class="l-form">
             @csrf
             <div class="l-formstaffprofile">
             <h3 class="l-formstaffprofile__title">コンビニ情報編集画面</h3>
@@ -14,10 +14,8 @@
             <input class="l-formstaffprofile__text" action="post" type="password" name="" placeholder="コンビニ名">
             <input class="l-formstaffprofile__text" action="post" type="password" name="" placeholder="支店名">
             <input class="l-formstaffprofile__text" action="post" type="password" name="" placeholder="住所">
-
-
-            </div>
-        <input type="submit" class="c-formstaffprofile__sub" value="変更する">
+            <input type="submit" class="l-formstaffprofile__sub" value="変更する">
+    
         </div>
         </form>
         </div>

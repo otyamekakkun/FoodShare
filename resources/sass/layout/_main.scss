@@ -26,7 +26,7 @@
         width: 12%;
         font-size: size(m);
         border-radius: size(ss);
-        position: fixed;
+        position: absolute;
         right: 25%;
         margin: 50px 50px;
         transition: all 1.2s;
@@ -44,6 +44,10 @@
 //===========================
 
 //接続ok
+.l-form {
+    margin: size(l);
+}
+
 .l-formstaffprofile {
     margin: auto;
     padding: size(xxl);
@@ -52,7 +56,7 @@
     font-family: "Noto Serif TC", serif;
     font-size: size(xxl);
     width: 50%;
-    height: 550px;
+    height: 900px;
     line-height: 65px;
     &__te {
         justify-content: center;
@@ -71,9 +75,9 @@
         width: 12%;
         font-size: size(m);
         border-radius: size(ss);
-        position: fixed;
+        position: absolute;
         right: 25%;
-        margin: 50px 50px;
+        margin: 180px 65px;
         transition: all 1.2s;
     }
     &__sub:hover {

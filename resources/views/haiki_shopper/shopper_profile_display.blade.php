@@ -50,7 +50,7 @@
 <div id=app>
     {{-- incompletefooter-componentはfooterをレウアウトしてくれるもの。ただしページ量が少ないときにfooter
         エリアが最下部にならないように定義したもの --}}
-        <footer-component></footer-component>
+        <incompletefooter-component></incompleteooter-component>
 
 </div>
 

@@ -537,7 +537,7 @@ a {
   width: 12%;
   font-size: 20px;
   border-radius: 10px;
-  position: fixed;
+  position: absolute;
   right: 25%;
   margin: 50px 50px;
   transition: all 1.2s;
@@ -545,6 +545,10 @@ a {
 .c-formshopperprofile__sub:hover {
   cursor: pointer;
   background: #b2d142;
+}
+
+.l-form {
+  margin: 25px;
 }
 
 .l-formstaffprofile {
@@ -555,7 +559,7 @@ a {
   font-family: "Noto Serif TC", serif;
   font-size: 35px;
   width: 50%;
-  height: 550px;
+  height: 900px;
   line-height: 65px;
 }
 .l-formstaffprofile__te {
@@ -574,9 +578,9 @@ a {
   width: 12%;
   font-size: 20px;
   border-radius: 10px;
-  position: fixed;
+  position: absolute;
   right: 25%;
-  margin: 50px 50px;
+  margin: 180px 65px;
   transition: all 1.2s;
 }
 .l-formstaffprofile__sub:hover {

@@ -59,9 +59,6 @@
         @include('rest.staff.header')
     </header>
 @include('rest.staff.staff_profileform')
-<h1>
-    コンビニについての編集画面を写すもの
-</h1>
 <div id="app">
 <footer-component></footer-component>
 </div>
