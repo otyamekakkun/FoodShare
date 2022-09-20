@@ -1,42 +1,45 @@
- 
 @extends('layouts.app2')
-
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">管理者 {{ __('Dashboard') }}</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in as 管理者!forjpofjropj
 
 
-
-                    <form action="{{ route('logout') }}" method="post">
-                        @csrf
-                        <button class="l-header__nav__button">
-                        <input class="" type="submit" value="ログアウト">
-                    </button>
-                      </form>
+<body>
+<header>
+    {{-- 
+        １ヘッダー部分の場所取り
+        ２ haiki shareの場所取り、fontsize 配色
+        ３ nav要素の場所取り, botanみたいな形にしたい。（切り抜いて配色みたいな感じ） fontsize 配色
         
-
-
-
-
-
-
-                </div>
-            </div>
-        </div>
-    </div>
+        --}}
+<div class="l-header">
+    <h1 class="l-header__title">haiki share</h1>
+    <nav>
+        <ul>
+            <li>
+                <div class="l-header__nav">
+                {{-- ログアウト機能を代入してやる--}}
+                <form action="{{ route('logout') }}" method="post">
+                @csrf
+                <button class="l-header__nav__button">
+                <input class="" type="submit" value="ログアウト">
+            </button>
+              </form>
+              <div>
+            </li>
+            <li>
+            <div class="l-header__mypagebottom">
+            <a href="{{route('haiki_shopper.staff_mypage_display')}}"><button>マイページ</a></button>
+            <div>
+            <li>
+        </ul>
+        
+    </nav>
 </div>
+</header>
+<h1>
+    コンビニ側のマイページがログインされた
+</h1>
+<div id="app">
+<footer-component></footer-component>
+</div>
+</body>
 @endsection
-
-

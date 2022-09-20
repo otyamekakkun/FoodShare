@@ -62,7 +62,6 @@ Route::get('/register/admin', [App\Http\Controllers\Auth\RegisterController::cla
 Route::post('/login/admin', [App\Http\Controllers\Auth\LoginController::class, 'adminLogin']);
 Route::post('/register/admin', [App\Http\Controllers\Auth\RegisterController::class, 'registerAdmin'])->name('admin-register');
 Route::view('/admin', 'admin')->middleware('auth:admin')->name('admin-home');
-Route::view('/haiki/staff_mypage', 'admin')->middleware('auth:admin')->name('admin-home');
 
 //実験
 Route::Resource('rest',RestappController::class);
