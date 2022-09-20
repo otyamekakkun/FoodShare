@@ -1,13 +1,15 @@
 @extends('layouts.app2')
 
 @section('content')
-    
+    {{-- 
+        データベースが絡む処理はここに記述するのかな
+        --}}
 <form action="/rest" method="post">
 <table>
     @csrf
     <tr>
         <th>
-            message:
+            コンチャーすレトルトともう島σーーーーすmessage:
         </th>
         <td>
             <input type="text" name="message" value="{{old('message')}}">

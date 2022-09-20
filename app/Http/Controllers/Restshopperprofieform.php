@@ -2,13 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Restdata;
 use Illuminate\Http\Request;
 
-
-//restcontroller実装のコントローラ
-//実験用のフォーム入力でーたを作成する
-class RestappController extends Controller
+class Restshopperprofieform extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,9 +13,10 @@ class RestappController extends Controller
      */
     public function index()
     {
-        //ここに結果を返すポイ
-        $items = Restdata::all();
-        return $items->toArray();
+        
+        //$items = Restdata::all();
+        //return $items->toArray();
+
     }
 
     /**
@@ -30,8 +27,7 @@ class RestappController extends Controller
     public function create()
     {
         //
-        return view('rest.create');
-
+        return view('rest.shopperprofile');
     }
 
     /**
@@ -42,13 +38,7 @@ class RestappController extends Controller
      */
     public function store(Request $request)
     {
-        //恐らくここのファイルでreturn先を決めるので画面一つにつき restファイルの
-        $restdata = new Restdata;
-        $form = $request->all();
-        unset($form['_token']);
-        $restdata->fill($form)->save();
-        return redirect('/rest');
-
+        //
     }
 
     /**
@@ -59,11 +49,7 @@ class RestappController extends Controller
      */
     public function show($id)
     {
-        
-                //idでも指定したければこのコードを記述する
-                $item = Restdata::find($id);
-                return $item->toArray();
-    
+        //
     }
 
     /**
@@ -74,9 +60,7 @@ class RestappController extends Controller
      */
     public function edit($id)
     {
-        //idでも指定で着ればいいので
-        $item = Restdata::find($id);
-        return $item->toArray();
+        //
     }
 
     /**
@@ -89,7 +73,6 @@ class RestappController extends Controller
     public function update(Request $request, $id)
     {
         //
-
     }
 
     /**
