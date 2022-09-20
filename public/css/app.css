@@ -547,6 +547,43 @@ a {
   background: #b2d142;
 }
 
+.l-formstaffprofile {
+  margin: auto;
+  padding: 35px;
+  text-align: center;
+  background: #faf9f5;
+  font-family: "Noto Serif TC", serif;
+  font-size: 35px;
+  width: 50%;
+  height: 550px;
+  line-height: 65px;
+}
+.l-formstaffprofile__te {
+  justify-content: center;
+  margin: 30px;
+}
+.l-formstaffprofile__text {
+  background: white;
+  margin: 20px 20px 20px;
+  border: none;
+}
+.l-formstaffprofile__sub {
+  background: #174113;
+  border: none;
+  color: white;
+  width: 12%;
+  font-size: 20px;
+  border-radius: 10px;
+  position: fixed;
+  right: 25%;
+  margin: 50px 50px;
+  transition: all 1.2s;
+}
+.l-formstaffprofile__sub:hover {
+  cursor: pointer;
+  background: #b2d142;
+}
+
 /*
 * 1 今後も使い回しそうなbuttonデザインを作るファイル 
 * 2 今後も使い回しそうなアラートを作るファイル

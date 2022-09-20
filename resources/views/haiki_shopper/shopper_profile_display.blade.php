@@ -38,24 +38,20 @@
  @extends('layouts.app2')
  @section('content')
 <body>
-        {{-- 共通箇所１s --}}
         <header>
             @include('rest.shopper.header') 
             </header>
-            
     <main>
-
 {{-- boxを作るdivタグにしたい --}}
 {{--下のコードはrest化したフォームページ。  --}}
-@include('rest.shopperprofile')
-
+@include('rest.shopper.shopperprofile')
 </main>
 </body>
-
 <div id=app>
     {{-- incompletefooter-componentはfooterをレウアウトしてくれるもの。ただしページ量が少ないときにfooter
         エリアが最下部にならないように定義したもの --}}
-<incompletefooter-component></incompletefooter-component>
+        <footer-component></footer-component>
+
 </div>
 
 @endsection
