@@ -2,8 +2,8 @@
 
 @section('content')
                 {{ isset($authgroup) ? ucwords($authgroup) : ""}} {{ __('Register') }}
-@include('rest.shopper.header')
-                    <p> お客様ユーザー登録ページ</p>
+                @include('rest.other.otherheader')
+                <p> お客様ユーザー登録ページ</p>
                     @isset($authgroup)
                     <form method="POST" action="{{ url("register/$authgroup") }}">
 <h1>コンビニスタッフユーザー登録</h1>

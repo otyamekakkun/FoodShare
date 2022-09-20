@@ -14,6 +14,8 @@
 @extends('layouts.app')
 
 @section('content')
+@include('rest.other.otherheader')
+
                 <div class="card-header">{{ isset($authgroup) ? ucwords($authgroup) : ""}} {{ __('Login') }}</div>
 
                 <div class="">

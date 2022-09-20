@@ -64,6 +64,10 @@ haiki shareのトップ画面を作成しする。
     <body>
         @extends('layouts.app')
 @section('content')
+
+
+
+@include('rest.other.otherheader')
 @php
 //一言メモ logの出力先は/storage/logs/laravel.logで見れる
     logger('トップページに遷移しました')
