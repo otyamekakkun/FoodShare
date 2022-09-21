@@ -46,8 +46,9 @@ haiki shareのトップ画面を作成しする。
 
 
 --}}
-@extends('layouts.app2')
+@extends('layouts.app3')
 @section('content')
+
 
 <body>
 <header>
@@ -93,21 +94,30 @@ haiki shareのトップ画面を作成しする。
         <h1 class="bg_text">俺の名前はevil</h1>
     </div>
 </section>
-<example-component></example-component>
+
+<div>
+    <h1>コンビニの買い物を始める</h1>
+    <a class="" href="{{ route('login') }}">{{ __('Login') }}</a>
+    {{-- <a class="nav-link" href="{{ route("$authgroup-register") }}">{{ __('Register') }}</a> --}}
+    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+
+
+
+</div>
 
 
 
 
-{{--  
-<a href="{{route('haiki_shopper.staff_mypage_display')}}">本当の登録画面っへs</a>
---}}
+
+
+<div>
+<h1>コンビニスタッフとして始める</h1>
 <a href="{{route('admin-register')}}">管理者用のログインページ</a> 
  <a href="{{route('admin-home')}}">管理者用</a>  
-
+</div>
 
 </body>
 </html>
-    
     @endsection
 
 

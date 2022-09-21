@@ -11,7 +11,7 @@
 //管理者画面とユーザー登録画面
 --}}
 
-@extends('layouts.app')
+@extends('layouts.app3')
 
 @section('content')
 @include('rest.other.otherheader')
