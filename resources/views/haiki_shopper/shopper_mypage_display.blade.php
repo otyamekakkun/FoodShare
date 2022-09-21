@@ -40,40 +40,9 @@
 
  @section('content') 
 <body>
-        {{-- 共通箇所１s --}}
 <header>
-        
-        {{-- ヘッダー部分 --}}
-        {{-- 
-<div class="l-header">
-    <h1 class="l-header__title">haiki share</h1>
-    <nav>
-        <ul>
-            <li>
-                <div class="l-header__nav">
-                    --}}
-                {{-- ログアウト機能を代入してやる--}}
-                 {{-- 
-                <form action="{{ route('logout') }}" method="post">
-                @csrf
-                <button class="l-header__nav__button">
-                <input class="" type="submit" value="ログアウト">
-            </button>
-              </form>
-              <div>
-            </li>
-        </ul>  
-    </nav>
-</div>
-</header>
---}}
 @include('rest.shopper.header') 
 </header>
-{{-- <h1>rest</h1> --}}
-
-{{-- boxを作るdivタグにしたい --}}
-
-
 </body>
 
 <main>
@@ -94,23 +63,7 @@
     <a href="{{route('haiki_shopper.shopper_profile_display')}}"><button>利用者プロフィール編集画面</a></button>
     </div>
     </div>
-    
-
-    
-    
-    
     </main>
-    
-    
-
-
-
-
-
-
-
-
-
 <div id=app>
     {{-- incompletefooter-componentはfooterをレウアウトしてくれるもの。ただしページ量が少ないときにfooter
         エリアが最下部にならないように定義したもの --}}
