@@ -58,42 +58,15 @@ haiki shareのトップ画面を作成しする。
 <main>
     <section>
 <div>
-    ここで写真を挿入するのかなぁ
 </div>
 
 <h1>haiki share</h1>
 <h3>環境と安さの相乗効果</h3>
 
-<button>買い物を始める「i1」</button>
-{{-- brタグはcssで改行し直す　処理が遅れる可能性があるので --}}
-<br/> 
-<button>コンビニ関係者スタート
-    *お客様は上記の買い物を始めるボタンから
-    お入りください
-</button>
-</section>
-</main>
+<aside>
+    <img src="{{asset('img/top.jpg')}}">
+</aside>
 
-<section>
-    <div>
-        <p>ここからパーツAデフォルトは表示させ得ない!買い物を始めるというボタンが押されたら
-            表示する
-        </p>
-        {{-- 買い物を始めるというボタンが押されたら表示される機能を作る --}}
-
-        <button>ログインして買い物を楽しむ</button>
-        <button>ユーザー登録して買い物をする</button>
-    </div>
-    <div>
-        <p>ここからパーツB</p>
-        <button>haiki share関係者ログイン</button><br/>
-        <button>haiki share関係者ユーザ登録</button>
-        <p>買い物をご利用されるお客様（haiki share関係者以外）の方々は
-            TOP画面の買い物を始めるをクリックしてご利用ください。
-        </p>
-        <h1 class="bg_text">俺の名前はevil</h1>
-    </div>
-</section>
 
 <div>
     <h1>コンビニの買い物を始める</h1>
@@ -103,9 +76,10 @@ haiki shareのトップ画面を作成しする。
 
 
 <div>
-<h1>コンビニスタッフとして始める</h1>
-<a href="{{route('admin-register')}}">管理者用のログインページ</a> 
- <a href="{{route('admin-home')}}">管理者用</a>  
+<h1>コンビニスタッフとして</h1>
+<button><a href="{{route('admin-register')}}">ログインする</a> </button>
+ <button><a href="{{route('admin-home')}}">ユーザー登録する</a> </button> 
+ <p>お客様がご利用される場合は上のお客様ログイン、またはお客様ユーザー登録からお入りください。</p>
 </div>
 
 </body>
