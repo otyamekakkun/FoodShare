@@ -54,30 +54,30 @@
 @extends('layouts.app2')
 @section('content')
 <body>
-    {{-- 
-        １ヘッダー部分の場所取り
-        ２ haiki shareの場所取り、fontsize 配色
-        ３ nav要素の場所取り, botanみたいな形にしたい。（切り抜いて配色みたいな感じ） fontsize 配色
-        
-        --}}
-
         <header>
             @include('rest.shopper.header') 
             </header>
-            
-                
-<aside>
-    <img src="{{asset('img/top.jpg')}}">
-</aside>
-
-
 <h1>商品の詳細情報です</h1>
-<aside>
-    <img src="{{asset('img/top.jpg')}}">
-</aside>
+
+<div class="l-productdetail">
+    ここで全体図をつける
+<div class="l-productdetail__area">
+<div class="l-productdetail__area__photo">
+    ここで写真を入れる欄を作ろうかな
+</div>
+
+<div class="l-productdetail__area__menu">
+    ここでメニューバー見たいな感じをつけようかな
+    <button>購入する</button>
+    <button>購入をキャンセルする</button>
+</div>
+</div>
+</div>  
+{{-- 全体を決めるもの --}}
+
 
 <div id="app">
-<footer-component></footer-component>
+<incompletefooter-component></incompletefooter-component>
 </div>
 </body>
 @endsection
