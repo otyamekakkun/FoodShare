@@ -146,3 +146,24 @@
         }
     }
 }
+//====================================
+//利用者の商品一覧
+//====================================
+
+.a {
+    background: white;
+    width: 90%;
+    height: 700px;
+    margin: 30px;
+}
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px;
+}
+.b {
+    background: red;
+    width: 29%;
+    height: 120px;
+    margin: 15px;
+}
