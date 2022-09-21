@@ -46,29 +46,14 @@ haiki shareのトップ画面を作成しする。
 
 
 --}}
-
-
-
-
-
-
-
-
-        @extends('layouts.app')
+@extends('layouts.app2')
 @section('content')
 
-
-
-@include('rest.other.otherheader')
-@php
-//一言メモ logの出力先は/storage/logs/laravel.logで見れる
-    logger('トップページに遷移しました')
-    @endphp
-
-{{-- パーツA部分 --}}
+<body>
 <header>
-    <h1>haiki share</h1>
+    @include('rest.other.otherheader')
 </header>
+{{-- パーツA部分 --}}
 <main>
     <section>
 <div>
@@ -124,6 +109,14 @@ haiki shareのトップ画面を作成しする。
 </html>
     
     @endsection
+
+
+{{-- 
+@php
+//一言メモ logの出力先は/storage/logs/laravel.logで見れる
+    logger('トップページに遷移しました')
+    @endphp
+ --}}
 
     
     

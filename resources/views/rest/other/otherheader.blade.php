@@ -8,6 +8,4 @@
 
 <div class="l-header">
     <h1 class="l-header__title">haiki share</h1>
-                <div class="l-header__nav">
-                </div>
 </div>
