@@ -13,6 +13,7 @@
     
 <h1>
     コンビニ側でも商品一覧を写す機能を作ります
+    おそらく機能として廃止になるかな
 </h1>
 <div id="app">
 <footer-component></footer-component>
