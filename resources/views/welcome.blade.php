@@ -77,8 +77,9 @@ haiki shareのトップ画面を作成しする。
 
 <div>
 <h1>コンビニスタッフとして</h1>
-<button><a href="{{route('admin-register')}}">ログインする</a> </button>
- <button><a href="{{route('admin-home')}}">ユーザー登録する</a> </button> 
+ <button><a href="{{route('admin-home')}}">ログインする</a> </button> 
+ <button><a href="{{route('admin-register')}}">ユーザー登録する</a> </button>
+
  <p>お客様がご利用される場合は上のお客様ログイン、またはお客様ユーザー登録からお入りください。</p>
 </div>
 
