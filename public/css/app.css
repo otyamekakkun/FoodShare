@@ -530,22 +530,6 @@ a {
   margin: 20px 20px 20px;
   border: none;
 }
-.c-formshopperprofile__sub {
-  background: #174113;
-  border: none;
-  color: white;
-  width: 12%;
-  font-size: 20px;
-  border-radius: 10px;
-  position: absolute;
-  right: 25%;
-  margin: 50px 50px;
-  transition: all 1.2s;
-}
-.c-formshopperprofile__sub:hover {
-  cursor: pointer;
-  background: #b2d142;
-}
 
 .l-form {
   margin: 25px;
@@ -594,6 +578,24 @@ a {
 * 3 今後も使い回しそうなgridファイル
 * 4 今後も使い回しそうなmedia (消去する可能性高い)
 */
+.c-formshopperprofile__sub {
+  background: #174113;
+  border: none;
+  color: white;
+  width: 12%;
+  font-size: 20px;
+  border-radius: 10px;
+  position: absolute;
+  right: 25%;
+  margin: 50px 50px;
+  transition: all 1.2s;
+}
+
+.c-formshopperprofile__sub:hover {
+  cursor: pointer;
+  background: #b2d142;
+}
+
 /*
 * かなりの可能性で書き換える可能性があるので9/1４時点ではここまでにしとく
 *

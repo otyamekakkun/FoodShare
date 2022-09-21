@@ -19,24 +19,7 @@
         margin: 20px 20px 20px;
         border: none;
     }
-    &__sub {
-        background: #174113;
-        border: none;
-        color: white;
-        width: 12%;
-        font-size: size(m);
-        border-radius: size(ss);
-        position: absolute;
-        right: 25%;
-        margin: 50px 50px;
-        transition: all 1.2s;
-    }
-    &__sub:hover {
-        cursor: pointer;
-        background: #b2d142;
-    }
 }
-
 //変更すると言う文字がずれたら　レスポンシブ対応をとる。
 //980pxからレスポンシブ対応をする
 //========================

@@ -1,2 +1,19 @@
 //接続ok
 //変数使えるかどうかの確認ok
+
+.c-formshopperprofile__sub {
+    background: #174113;
+    border: none;
+    color: white;
+    width: 12%;
+    font-size: size(m);
+    border-radius: size(ss);
+    position: absolute;
+    right: 25%;
+    margin: 50px 50px;
+    transition: all 1.2s;
+}
+.c-formshopperprofile__sub:hover {
+    cursor: pointer;
+    background: #b2d142;
+}
