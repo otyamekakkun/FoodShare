@@ -73,21 +73,48 @@
 
 {{-- boxを作るdivタグにしたい --}}
 
-<a href="{{route('haiki_shopper.shopper_profile_display')}}"><button>プロフィール編集画面に移動する</a></button>
-<a href="{{route('haiki_shopper.shopper_productlist_display')}}"><button>商品一覧に移動する</a></button>
 
-<h1>
-    購入した商品。
-</h1>
-<a href="{{route('haiki_shopper.shopper_productdetail_display')}}"><button>商品の詳細をみる</a></button>
-<button>購入をキャンセルする</button>
-<h1>日本一早いどけざ</h1>
 </body>
+
+<main>
+    <div class="l-shoppermypage">
+    <div class="l-shoppermypage__exhibitarea">
+    <h1>自分のコンビニが出品した商品</h1>
+    <button><a href="{{route('haiki_shopper.staff_productedit_display')}}"><button>出品した商品一覧を表示</a></button>
+    <h1>ご購入された商品一覧</h1>
+    <a href="{{route('haiki_shopper.shopper_productlist_display')}}"><button>商品一覧に移動する</a></button>
+<h1>商品の画像</h1>
+    <a href="{{route('haiki_shopper.shopper_productdetail_display')}}"><button>商品の詳細をみる</a></button>
+<button>購入をキャンセルする</button>
+
+    </div>
+    
+    <div class="l-staffmypage__side">
+    <p>メニュー</p>
+    <a href="{{route('haiki_shopper.shopper_profile_display')}}"><button>利用者プロフィール編集画面</a></button>
+    </div>
+    </div>
+    
+
+    
+    
+    
+    </main>
+    
+    
+
+
+
+
+
+
+
+
 
 <div id=app>
     {{-- incompletefooter-componentはfooterをレウアウトしてくれるもの。ただしページ量が少ないときにfooter
         エリアが最下部にならないように定義したもの --}}
-<incompletefooter-component></incompletefooter-component>
+<footer-component></footer-component>
 </div>
 @endsection 
 
