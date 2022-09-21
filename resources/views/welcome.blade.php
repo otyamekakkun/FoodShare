@@ -97,17 +97,9 @@ haiki shareのトップ画面を作成しする。
 
 <div>
     <h1>コンビニの買い物を始める</h1>
-    <a class="" href="{{ route('login') }}">{{ __('Login') }}</a>
-    {{-- <a class="nav-link" href="{{ route("$authgroup-register") }}">{{ __('Register') }}</a> --}}
-    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-
-
-
+    <button><a class="" href="{{ route('login') }}">お客様ログイン</a></button>
+   <button><a class="nav-link" href="{{ route('register') }}">お客様ユーザー登録</a></button> 
 </div>
-
-
-
-
 
 
 <div>
