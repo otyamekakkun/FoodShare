@@ -1,10 +1,9 @@
 @extends('layouts.app2')
 @section('content')
 
-<p>
-    スタッフのマイページに遷移しました
-</p>
-
+<h1>
+    haiki share スタッフ専用ページへようこそ！！
+</h1>
 <body>
 <header>
     {{-- 

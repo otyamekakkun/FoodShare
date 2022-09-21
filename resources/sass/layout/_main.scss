@@ -75,3 +75,28 @@
 
 //変更すると言う文字がずれたら　レスポンシブ対応をとる。
 //980pxからレスポンシブ対応をする
+//==========================
+.dis {
+    display: flex;
+}
+
+.a {
+    width: 65%;
+    height: 300px;
+    background: red;
+    margin: 20px;
+}
+.b {
+    width: 25%;
+    height: 300px;
+    margin: 20px;
+
+    background: green;
+}
+.c {
+    width: 65%;
+    height: 300px;
+    margin: 20px;
+
+    background: cyan;
+}

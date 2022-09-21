@@ -572,6 +572,31 @@ a {
   background: #b2d142;
 }
 
+.dis {
+  display: flex;
+}
+
+.a {
+  width: 65%;
+  height: 300px;
+  background: red;
+  margin: 20px;
+}
+
+.b {
+  width: 25%;
+  height: 300px;
+  margin: 20px;
+  background: green;
+}
+
+.c {
+  width: 65%;
+  height: 300px;
+  margin: 20px;
+  background: cyan;
+}
+
 /*
 * 1 今後も使い回しそうなbuttonデザインを作るファイル 
 * 2 今後も使い回しそうなアラートを作るファイル
