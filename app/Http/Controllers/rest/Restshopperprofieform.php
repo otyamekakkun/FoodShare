@@ -38,7 +38,7 @@ class Restshopperprofieform extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //Restshopperprofieformに新しいデータを追加する（今回は編集機能だから必要なさそう）
     }
 
     /**
@@ -49,7 +49,7 @@ class Restshopperprofieform extends Controller
      */
     public function show($id)
     {
-        //
+        //データベースのレコードを表示する。デフォルト状態で、文章を入れるなら入れても良さそう
     }
 
     /**
@@ -60,7 +60,7 @@ class Restshopperprofieform extends Controller
      */
     public function edit($id)
     {
-        //
+        //データベースのデータを更新する
     }
 
     /**
@@ -72,7 +72,7 @@ class Restshopperprofieform extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        //データベースのデータを更新する
     }
 
     /**
@@ -83,6 +83,6 @@ class Restshopperprofieform extends Controller
      */
     public function destroy($id)
     {
-        //
+        //データベースのデータを削除処理する
     }
 }
