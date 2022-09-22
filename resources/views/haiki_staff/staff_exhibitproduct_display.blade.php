@@ -18,7 +18,6 @@
 
 <div class="a">
     商品を出品する画面全体
-</div>
 <div class="b">
     出品したい商品を入れてください
 </div>
@@ -30,6 +29,11 @@
 </div>
 <div class="e">
     賞味期限 カレンダー形式で入力させる
+</div>
+<div class="f">
+    <input action="" type="submit" value="商品を登録し直す">
+</div>
+{{-- 全体を括るdiv --}}
 </div>
 
 

@@ -652,6 +652,32 @@ a {
   margin: 15px;
 }
 
+.a {
+  background: white;
+  margin: auto;
+  width: 80%;
+  height: 700px;
+}
+
+.b {
+  background: red;
+  padding: 30px;
+  width: 40%;
+  height: 200px;
+}
+
+.c {
+  background: #b2d142;
+}
+
+.d {
+  background: cyan;
+}
+
+.e {
+  background: green;
+}
+
 .l-staffmypage__side {
   width: 25%;
   height: 500px;

@@ -50,7 +50,6 @@ Route::get('/haiki/shopper_productlist',[App\Http\Controllers\HaikiController::c
 Route::get('/haiki/shopper_productdetail',[App\Http\Controllers\HaikiController::class, 'shopper_productdetail_display'])->name('haiki_shopper.shopper_productdetail_display');      //4
 
 //haiki shareのご利用スタッフが利用するもの
-Route::get('/haiki/staff_mypage',[App\Http\Controllers\HaikiController::class, 'staff_mypage_display'])->name('haiki_shopper.staff_mypage_display');                                 //5
 Route::get('/haiki/staff_profile',[App\Http\Controllers\HaikiController::class, 'staff_profile_display'])->name('haiki_shopper.staff_profile_display');                              //6
 Route::get('/haiki/staff_exhibitproduct',[App\Http\Controllers\HaikiController::class, 'staff_exhibitproduct_display'])->name('haiki_shopper.staff_exhibitproduct_display');         //7
 Route::get('/haiki/staff_buyproduct',[App\Http\Controllers\HaikiController::class, 'staff_buyproduct_display'])->name('haiki_shopper.staff_buyproduct_display');                     //8
