@@ -147,21 +147,21 @@
     }
 }
 //====================================
-//利用者の商品一覧
+//利用者の商品一覧(shopper_productlist)
 //====================================
 
-.a {
+.l-shopperproductlist {
     background: white;
     width: 90%;
     height: 700px;
     margin: 30px;
 }
-.flex {
+.l-shopperproductlist__area {
     display: flex;
     flex-wrap: wrap;
     margin: 30px;
 }
-.b {
+.l-shopperproductlist__area__photo {
     background: red;
     width: 29%;
     height: 120px;

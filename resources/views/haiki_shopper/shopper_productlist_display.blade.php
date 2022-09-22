@@ -79,29 +79,29 @@
     vueコンポーネントにまとめて、sassのボタンのところでレイアウトする。
     --}}
     
-<div class="a">
+<div class="l-shopperproductlist">
 画面全体を覆うもの
-<div class="flex">
+<div class="l-shopperproductlist__area">
 
-<div class="b">
+<div class="l-shopperproductlist__area__photo">
 写真を挿入する部分1
 <p>商品に関する情報</p>
 </div>
-<div class="b">
+<div class="l-shopperproductlist__area__photo">
     写真を挿入する部分2
     </div>
     
-    <div class="b">
+    <div class="l-shopperproductlist__area__photo">
         写真を挿入する部分2
         </div>
 
-        <div class="b">
+        <div class="l-shopperproductlist__area__photo">
             写真を挿入する部分2
             </div>
-            <div class="b">
+            <div class="l-shopperproductlist__area__photo">
                 写真を挿入する部分2
                 </div>
-                <div class="b">
+                <div class="l-shopperproductlist__area__photo">
                     写真を挿入する部分2
                     </div>
                                     
