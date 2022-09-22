@@ -11,15 +11,18 @@
 
                 {{ isset($authgroup) ? ucwords($authgroup) : ""}} {{ __('Register') }}
                 @include('rest.other.otherheader')
+                {{-- この部分は関係ない --}}
                 <p> お客様ユーザー登録ページ</p>
                     @isset($authgroup)
                     <form method="POST" action="{{ url("register/$authgroup") }}">
 <h1>コンビニスタッフユーザー登録</h1>
  @else
+ {{-- この部分は関係ない --}}
                     <form method="POST" action="{{ route('register') }}">
                     @endisset
                         @csrf
                             <label for="name">{{ __('Name') }}</label>
+                             {{-- {{}} --}}
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
                                 @error('name')
@@ -56,13 +59,13 @@
                         <form method="POST" action="{{ url("register/$authgroup") }}">
     @csrf
 <p>勤めているコンビニの会社</p>
-<input type="text" placeholder="勤めているコンビニの会社を記述してください">
+<input type="text" placeholder="勤めているコンビニの会社を記述してください" name="convinience_name">
 
 <p>支店名記入欄</p>
-<input type="text" placeholder="支店名記入欄">
+<input type="text" placeholder="支店名記入欄" name="convinience_branch">
 
 <p>住所</p>
-<input type="text" placeholder="住所記入欄">
+<input type="text" placeholder="住所記入欄" name="adress">
                             @endisset
 
                                 <button type="submit" class="btn btn-primary">

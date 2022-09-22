@@ -87,9 +87,6 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:admins'],
             'password' => ['required', 'string', 'min:6', 'confirmed'],
-            'convinience_name'=>['required'],
-            'convinience_branch'=>['required'],
-            'adress'=>['required']
         ]);
     }
 
@@ -121,6 +118,10 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'convinience_name'=>$data['convinience_name'],
+            'convinience_branch'=>$data["convinience_branch"],
+            'adress'=>$data["adress"]
+
         ]);
     }
 
