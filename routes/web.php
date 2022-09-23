@@ -44,6 +44,12 @@ Route::get('/drills/new',[App\Http\Controllers\DrillsController::class, 'new'])-
  * 11(コンビニ)コンビニ側でも今出回っている商品の一覧を項目するもの(購入はできないように設定する)
  */
 //利用客を表示するもの
+/*
+
+
+ログインしている状態でないと開発が進むことができない場合は上記のrouteを使うこと。
+
+
 Route::get('/haiki/shopper_mypage',[App\Http\Controllers\HaikiController::class, 'shopper_mypage_display'])->name('haiki_shopper.shopper_mypage_display')->middleware('auth:admin');                           //1
 Route::get('/haiki/shopper_profile',[App\Http\Controllers\HaikiController::class, 'shopper_profile_display'])->name('haiki_shopper.shopper_profile_display')->middleware('auth:admin');                        //2
 Route::get('/haiki/shopper_productlist',[App\Http\Controllers\HaikiController::class, 'shopper_productlist_display'])->name('haiki_shopper.shopper_productlist_display')->middleware('auth:admin');            //3
@@ -56,6 +62,46 @@ Route::get('/haiki/staff_buyproduct',[App\Http\Controllers\HaikiController::clas
 Route::get('/haiki/staff_productedit',[App\Http\Controllers\HaikiController::class, 'staff_productedit_display'])->name('haiki_shopper.staff_productedit_display')->middleware('auth:admin');                  //9
 Route::get('/haiki/staff_exhibitproductlist',[App\Http\Controllers\HaikiController::class, 'staff_exhibitproduct_list_display'])->name('haiki_shopper.staff_exhibitproduct_list_display')->middleware('auth:admin'); //10
 Route::get('/haiki/staff_productlist',[App\Http\Controllers\HaikiController::class, 'staff_productlist_display'])->name('haiki_shopper.staff_productlist_display')->middleware('auth:admin'); //11
+*/
+// ここから追加
+
+//それ以外なら下記の項目を使うこと
+Route::get('/login/admin', [App\Http\Controllers\Auth\LoginController::class, 'showAdminLoginForm']);
+Route::get('/register/admin', [App\Http\Controllers\Auth\RegisterController::class, 'showAdminRegisterForm']);
+Route::post('/login/admin', [App\Http\Controllers\Auth\LoginController::class, 'adminLogin']);
+Route::post('/register/admin', [App\Http\Controllers\Auth\RegisterController::class, 'registerAdmin'])->name('admin-register');
+Route::view('/admin', 'admin')->middleware('auth:admin')->name('admin-home');
+
+
+
+Route::get('/haiki/shopper_mypage',[App\Http\Controllers\HaikiController::class, 'shopper_mypage_display'])->name('haiki_shopper.shopper_mypage_display');                           //1
+Route::get('/haiki/shopper_profile',[App\Http\Controllers\HaikiController::class, 'shopper_profile_display'])->name('haiki_shopper.shopper_profile_display');                        //2
+Route::get('/haiki/shopper_productlist',[App\Http\Controllers\HaikiController::class, 'shopper_productlist_display'])->name('haiki_shopper.shopper_productlist_display');            //3
+Route::get('/haiki/shopper_productdetail',[App\Http\Controllers\HaikiController::class, 'shopper_productdetail_display'])->name('haiki_shopper.shopper_productdetail_display');      //4
+
+//haiki shareのご利用スタッフが利用するもの
+Route::get('/haiki/staff_profile',[App\Http\Controllers\HaikiController::class, 'staff_profile_display'])->name('haiki_shopper.staff_profile_display');                              //6
+Route::get('/haiki/staff_exhibitproduct',[App\Http\Controllers\HaikiController::class, 'staff_exhibitproduct_display'])->name('haiki_shopper.staff_exhibitproduct_display');         //7
+Route::get('/haiki/staff_buyproduct',[App\Http\Controllers\HaikiController::class, 'staff_buyproduct_display'])->name('haiki_shopper.staff_buyproduct_display');                     //8
+Route::get('/haiki/staff_productedit',[App\Http\Controllers\HaikiController::class, 'staff_productedit_display'])->name('haiki_shopper.staff_productedit_display');                  //9
+Route::get('/haiki/staff_exhibitproductlist',[App\Http\Controllers\HaikiController::class, 'staff_exhibitproduct_list_display'])->name('haiki_shopper.staff_exhibitproduct_list_display'); //10
+Route::get('/haiki/staff_productlist',[App\Http\Controllers\HaikiController::class, 'staff_productlist_display'])->name('haiki_shopper.staff_productlist_display'); //11
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // ここから追加
 
@@ -64,6 +110,19 @@ Route::get('/register/admin', [App\Http\Controllers\Auth\RegisterController::cla
 Route::post('/login/admin', [App\Http\Controllers\Auth\LoginController::class, 'adminLogin']);
 Route::post('/register/admin', [App\Http\Controllers\Auth\RegisterController::class, 'registerAdmin'])->name('admin-register');
 Route::view('/admin', 'admin')->middleware('auth:admin')->name('admin-home');
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
  Route::Resource('rest',RestappController::class);
