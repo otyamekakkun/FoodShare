@@ -34,6 +34,7 @@ $request->validate([
     'password'=>'required|min:6',
 
 ]);
+return view('haiki_shopper.shopper_mypage_display');
 
 }
 
