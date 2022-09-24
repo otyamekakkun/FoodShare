@@ -107,7 +107,8 @@ Route::post('/register/admin', [App\Http\Controllers\Auth\RegisterController::cl
 Route::view('/admin', 'admin')->middleware('auth:admin')->name('admin-home');
 
  Route::Resource('rest',RestappController::class);
-//実験
+
+//商品の写真を入力するものデータベース
 Route::get('/item/index', [App\Http\Controllers\ItemController::class, 'index'])->name('item.index');
 Route::get('/create', [App\Http\Controllers\ItemController::class, 'create'])->name('item.create');
 Route::post('/store', [App\Http\Controllers\ItemController::class, 'store'])->name('item.store');

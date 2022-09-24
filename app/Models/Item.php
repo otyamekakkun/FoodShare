@@ -12,6 +12,6 @@ class Item extends Model
     protected $table = 'items';
 
     protected $fillable = [
-        'img_path',
+        'item_name','img_path','best_by_date','bought'
     ];
 }

@@ -15,7 +15,7 @@ class ItemController extends Controller
      */
     public function index()
     {
-        //
+        //Itemのモデルを読み込む
         $items = Item::get();
         return view('item.index', compact('items'));
     }

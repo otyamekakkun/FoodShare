@@ -15,10 +15,10 @@ class CreateItemsTable extends Migration
     {
         Schema::create('items', function (Blueprint $table) {
             $table->increments('id');
-            //$table->string('item_name');
+            $table->string('item_name');
             $table->string('img_path');
-           // $table->date('best_by_date');
-           // $table->boolean('bought')->default(0);
+            $table->date('best_by_date');
+            $table->boolean('bought')->default(0);
 
 
             $table->timestamps();
