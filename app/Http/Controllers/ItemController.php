@@ -58,7 +58,7 @@ class ItemController extends Controller
             }
     
             //　リダイレクト
-            return redirect()->route('haiki_shopper.staff_mypage_display');
+            return redirect()->route('admin-home');
         }
     }
 
