@@ -88,16 +88,9 @@ Route::get('/haiki/staff_exhibitproductlist',[App\Http\Controllers\HaikiControll
 Route::get('/haiki/staff_productlist',[App\Http\Controllers\HaikiController::class, 'staff_productlist_display'])->name('haiki_shopper.staff_productlist_display'); //11
 
 
-
-
-
-
-
-
-
-
-
-
+//form入力チェック用のroute
+//shopper_profileのフォームを入力する
+Route::post('/haiki/shopper_profile',[App\Http\Controllers\HaikiController::class, 'shopper_profile_display'])->name('haiki_shopper.shopper_profile_display');
 
 
 
@@ -110,20 +103,6 @@ Route::get('/register/admin', [App\Http\Controllers\Auth\RegisterController::cla
 Route::post('/login/admin', [App\Http\Controllers\Auth\LoginController::class, 'adminLogin']);
 Route::post('/register/admin', [App\Http\Controllers\Auth\RegisterController::class, 'registerAdmin'])->name('admin-register');
 Route::view('/admin', 'admin')->middleware('auth:admin')->name('admin-home');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
  Route::Resource('rest',RestappController::class);
 //実験

@@ -21,10 +21,25 @@ class HaikiController extends Controller
     public function shopper_mypage_display(){
         return view('haiki_shopper.shopper_mypage_display');
     } //.............................................................1
-
+// shopper_profile_displayのルーティング設定
     public function shopper_profile_display(){
         return view('haiki_shopper.shopper_profile_display');
     } //.............................................................2
+public function edit(Request $request)
+{
+$request->validate([
+    //入力ネームと同じものを対応させる
+
+]);
+}
+
+
+
+
+
+
+
+
 
     public function shopper_productlist_display(){
         return view('haiki_shopper.shopper_productlist_display');
