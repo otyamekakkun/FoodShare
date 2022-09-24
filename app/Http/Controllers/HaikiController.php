@@ -25,16 +25,17 @@ class HaikiController extends Controller
     public function shopper_profile_display(){
         return view('haiki_shopper.shopper_profile_display');
     } //.............................................................2
-public function edit(Request $request)
+public function shopper_profile_edit(Request $request)
 {
 $request->validate([
     //入力ネームと同じものを対応させる
+    //後で詳しく設定する（今は最低限）
+    'email'=>'required',
+    'password'=>'required|min:6',
 
 ]);
+
 }
-
-
-
 
 
 

@@ -90,7 +90,7 @@ Route::get('/haiki/staff_productlist',[App\Http\Controllers\HaikiController::cla
 
 //form入力チェック用のroute
 //shopper_profileのフォームを入力する
-Route::post('/haiki/shopper_profile',[App\Http\Controllers\HaikiController::class, 'shopper_profile_display'])->name('haiki_shopper.shopper_profile_display');
+Route::post('/haiki/shopper_profile',[App\Http\Controllers\HaikiController::class, 'shopper_profile_edit'])->name('haiki_shopperprofile_edit');
 
 
 
