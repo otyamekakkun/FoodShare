@@ -32,8 +32,9 @@ public function shopper_profile_edit(Request $request)
 $request->validate([
     //入力ネームと同じものを対応させる
     //後で詳しく設定する（今は最低限）
-    'email'=>'required',
+    'email'=>'required|min:5',
     'password'=>'required|min:6',
+    'password2'=>'required|min:6|same:password',
 
 ]);
 return view('haiki_shopper.shopper_mypage_display');
@@ -62,7 +63,7 @@ return view('haiki_shopper.shopper_mypage_display');
 $request->validate([
     //入力ネームと同じものを対応させる
     //後で詳しく設定する（今は最低限）
-    'email'=>'required',
+    'email'=>'required|string|min:8',
     'password'=>'required|min:6',
     'convinience_name'=>'required',
     'convinience_branch'=>'required',

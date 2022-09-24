@@ -17,6 +17,7 @@ class CreateItemsTable extends Migration
             $table->increments('id');
             $table->string('item_name');
             $table->string('img_path');
+            $table->integer('place');
             $table->date('best_by_date');
             $table->boolean('bought')->default(0);
 
