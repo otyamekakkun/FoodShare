@@ -21,6 +21,8 @@ class HaikiController extends Controller
     public function shopper_mypage_display(){
         return view('haiki_shopper.shopper_mypage_display');
     } //.............................................................1
+
+
 // shopper_profile_displayのルーティング設定
     public function shopper_profile_display(){
         return view('haiki_shopper.shopper_profile_display');
@@ -37,12 +39,7 @@ $request->validate([
 return view('haiki_shopper.shopper_mypage_display');
 
 }
-
-
-
-
-
-
+//shopper_profileの内容ここまで。
     public function shopper_productlist_display(){
         return view('haiki_shopper.shopper_productlist_display');
     } //.............................................................3
@@ -55,9 +52,31 @@ return view('haiki_shopper.shopper_mypage_display');
         return view('haiki_staff.staff_mypage_display');
     } //.............................................................5
 
+//staffのprofileのdisplay
     public function staff_profile_display(){
         return view('haiki_staff.staff_profile_display');
-    } //.............................................................6
+    } 
+
+    public function staff_profile_edit(Request $request)
+{
+$request->validate([
+    //入力ネームと同じものを対応させる
+    //後で詳しく設定する（今は最低限）
+    'email'=>'required',
+    'password'=>'required|min:6',
+    'convinience_name'=>'required',
+    'convinience_branch'=>'required',
+    'adress'=>'required'
+
+]);
+return view('admin');
+
+}
+
+    
+    //.............................................................6
+
+//staffのprofileのdisplayここまで
 
     public function staff_exhibitproduct_display(){
         return view('haiki_staff.staff_exhibitproduct_display');
