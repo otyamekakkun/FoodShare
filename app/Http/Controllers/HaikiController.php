@@ -105,6 +105,7 @@ public function create_exhibitproduct(Request $request){
 //ここにバリデーションの内容を記述する
 
        'img_path' => 'required|file|image|mimes:png,jpeg',
+       'price'=>'required',
     ]);
 // モデルを使って、DBに登録する値をセット
 $product = new products;
@@ -112,7 +113,6 @@ $product->fill($request->all())->save();
 
 // 画像フォームでリクエストした画像を取得
 $img = $request->file('img_path');
-
 // 画像情報がセットされていれば、保存処理を実行
 // storage > public > img配下に画像が保存される
 $path = $img->store('img','public');
@@ -120,9 +120,9 @@ $path = $img->store('img','public');
 // DBに登録する処理 
 
 products::create([
-'product_name'=>$product,
+'product_name'=>$product->product_name,
 'img_path' => $path,
-'place'=>$product->place,
+'price'=>$product->price,
 'best_by_date'=>$product->best_by_date,
 ]
 );
@@ -137,10 +137,10 @@ products::create([
 
 // リダイレクトする
 // その時にsessionフラッシュにメッセージを入れる
-return redirect('/drills/new')->with('flash_message', __('Registered.'));
+return redirect('admin')->with('flash_message', __('Registered.'));
 
 }
-
+//ここまで
 
 
 
@@ -151,14 +151,5 @@ return redirect('/drills/new')->with('flash_message', __('Registered.'));
     public function staff_productlist_display(){
         return view('haiki_staff.staff_productlist_display');
         } //.............................................................10
-    
-
-
-
-
-
-
-
-
     //画面を表示するための処理ここまで
 }
