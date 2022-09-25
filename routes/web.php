@@ -77,32 +77,46 @@ Route::view('/admin', 'admin')->middleware('auth:admin')->name('admin-home');
 
 
 
-Route::get('/haiki/shopper_mypage',[App\Http\Controllers\HaikiController::class, 'shopper_mypage_display'])->name('haiki_shopper.shopper_mypage_display');                           //1これは自分専用のページにしたい
+Route::get('/haiki/shopper_mypage',[App\Http\Controllers\HaikiController::class, 'shopper_mypage_display'])->name('haiki_shopper.shopper_mypage_display');                        
+   //1これは自分専用のページにしたい
+   //==================================================================--
+   // shopper_profileのフォーム入力のpost送信
 Route::get('/haiki/shopper_profile',[App\Http\Controllers\HaikiController::class, 'shopper_profile_display'])->name('haiki_shopper.shopper_profile_display');                        //2これは自分専用のページにしたい
+//form入力チェック用のroute
+//shopper_profileのフォームを入力する
+Route::post('/haiki/shopper_profile',[App\Http\Controllers\HaikiController::class, 'shopper_profile_edit'])->name('haiki_shopperprofile_edit');
+//=========================================================================================================
+
 Route::get('/haiki/shopper_productlist',[App\Http\Controllers\HaikiController::class, 'shopper_productlist_display'])->name('haiki_shopper.shopper_productlist_display');            //3
 Route::get('/haiki/shopper_productdetail',[App\Http\Controllers\HaikiController::class, 'shopper_productdetail_display'])->name('haiki_shopper.shopper_productdetail_display');      //4
 
 //haiki shareのご利用スタッフが利用するもの
-Route::get('/haiki/staff_profile',[App\Http\Controllers\HaikiController::class, 'staff_profile_display'])->name('haiki_shopper.staff_profile_display');                              //6
-Route::get('/haiki/staff_exhibitproduct',[App\Http\Controllers\HaikiController::class, 'staff_exhibitproduct_display'])->name('haiki_shopper.staff_exhibitproduct_display');         //7
+Route::get('/haiki/staff_profile',[App\Http\Controllers\HaikiController::class, 'staff_profile_display'])->name('haiki_shopper.staff_profile_display');    
+
+
+/*
+*商品出品をするホームページのルート
+*
+*
+*/
+Route::get('/haiki/staff_exhibitproduct',[App\Http\Controllers\HaikiController::class, 'staff_exhibitproduct_display'])->name('haiki_shopper.staff_exhibitproduct_display');         
+//商品を出品するホームページ制作ここまで。
 Route::get('/haiki/staff_buyproduct',[App\Http\Controllers\HaikiController::class, 'staff_buyproduct_display'])->name('haiki_shopper.staff_buyproduct_display');                     //8
 Route::get('/haiki/staff_productedit',[App\Http\Controllers\HaikiController::class, 'staff_productedit_display'])->name('haiki_shopper.staff_productedit_display');                  //9
 Route::get('/haiki/staff_exhibitproductlist',[App\Http\Controllers\HaikiController::class, 'staff_exhibitproduct_list_display'])->name('haiki_shopper.staff_exhibitproduct_list_display'); //10
 Route::get('/haiki/staff_productlist',[App\Http\Controllers\HaikiController::class, 'staff_productlist_display'])->name('haiki_shopper.staff_productlist_display'); //11
 
 
-//form入力チェック用のroute
-//shopper_profileのフォームを入力する
-Route::post('/haiki/shopper_profile',[App\Http\Controllers\HaikiController::class, 'shopper_profile_edit'])->name('haiki_shopperprofile_edit');
 
 //form入力チェック用のroute
 //staff_profileのフォームを入力する
 Route::post('/haiki/staff_profile',[App\Http\Controllers\HaikiController::class, 'staff_profile_edit'])->name('haiki_staffprofile_edit');
 
+//
+
 
 
 // ここから追加
-
 Route::get('/login/admin', [App\Http\Controllers\Auth\LoginController::class, 'showAdminLoginForm']);
 Route::get('/register/admin', [App\Http\Controllers\Auth\RegisterController::class, 'showAdminRegisterForm']);
 Route::post('/login/admin', [App\Http\Controllers\Auth\LoginController::class, 'adminLogin']);
