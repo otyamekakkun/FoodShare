@@ -31,37 +31,46 @@ class DrillsController extends Controller
             //'problem8' => 'string|max:255',
             //'problem9' => 'string|max:255',
         ]);
+   // 画像フォームでリクエストした画像を取得
+   $img = $request->file('img_path');
+   /*
+   if(!empty($img)){
+    $filename = $img->getClientOriginalName();
+    $file_path = public_path('img_uploaded/Drill');
+    $move = $img->move($file_path, $filename);   }
+    else{
+        $filename = null;
+    }
+*/
+// 画像情報がセットされていれば、保存処理を実行
+    // storage > public > img配下に画像が保存される
+    $path = $img->store('img','public');
 
 
 
  // モデルを使って、DBに登録する値をセット
  $drill = new Drill;
- $drill->fill($request->all())->save();
+ //$drill->fill($request->all())->save();
 
 
-   // 画像フォームでリクエストした画像を取得
-   $img = $request->file('img_path');
-
-// 画像情報がセットされていれば、保存処理を実行
-    // storage > public > img配下に画像が保存される
-    $path = $img->store('img','public');
 
  // DBに登録する処理 
  
 
  // １つ１つ入れるか
- /*
+ 
        $drill->title = $request->title;
         $drill->category_name = $request->category_name;
         $drill->problem0 = $request->problem0;
         $drill->problem1 = $request->problem1;
         $drill->problem2 = $request->problem2;
 
-        //$drill->img_path = $request->$path;
+        $drill->img_path = $path;
         $drill->place = $request->place;
         $drill->best_by_date = $request->best_by_date;
-*/
+        $drill->save();
 
+/*
 Drill::create([
     'title'=>$drill->title,
     'category_name'=>$drill->category_name,
@@ -73,7 +82,7 @@ Drill::create([
     'best_by_date'=>$drill->best_by_date,
 ]
 );
-
+*/
 
 
       //  $drill->save();
