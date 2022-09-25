@@ -18,8 +18,6 @@ class CreateRestdataTable extends Migration
             $table->string('message');
             $table->string('url');
             $table->timestamps();
-
-
         });
     }
 

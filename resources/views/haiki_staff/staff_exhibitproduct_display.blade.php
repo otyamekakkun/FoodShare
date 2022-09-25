@@ -36,9 +36,102 @@
 {{-- 全体を括るdiv --}}
 </div>
 
+{{-- 
+    formのname属性はレコード名と同じ（マイグレーションと同じにすると楽に処理ができる
+    
+    
+    --}}
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">{{ __('Drill Register') }}</div>
+
+                    <div class="card-body">
+
+{{--  --}}
+                        <form method="POST" action="{{ route('create.exhibit') }}" enctype="multipart/form-data">
+                            @csrf
 
 
-@include('item.create')
+                            <div class="form-group row">
+                                <label for="problem2" class="col-md-4 col-form-label text-md-right">商品名</label>
+
+                                <div class="col-md-6">
+                                    <input id="problem2" type="text" class="form-control @error('problem2') is-invalid @enderror" name="problem2" value="{{ old('problem2') }}" autocomplete="problem0" autofocus>
+
+                                    @error('problem2')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="img_path" class="col-md-4 col-form-label text-md-right">写真を入れる</label>
+
+                                <div class="col-md-6">
+                                    <input id="img_path" type="file" class="form-control @error('img_path') is-invalid @enderror" name="img_path" value="{{ old('problem2') }}" autocomplete="problem0" autofocus>
+
+                                    @error('img_path')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            
+                            <div class="form-group row">
+                                <label for="prace" class="col-md-4 col-form-label text-md-right">金額を入れる</label>
+
+                                <div class="col-md-6">
+                                    <input id="img_path" type="number" class="form-control @error('place') is-invalid @enderror" name="place" value="{{ old('problem2') }}" autocomplete="problem0" autofocus>
+
+                                    @error('place')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="best_by_date" class="col-md-4 col-form-label text-md-right">賞味期限を入れる</label>
+
+                                <div class="col-md-6">
+                                    <input id="img_path" type="date" class="form-control @error('best_by_date') is-invalid @enderror" name="best_by_date" value="{{ old('best_by_date') }}" autocomplete="problem0" autofocus>
+
+                                    @error('img_path')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                            </div>
+
+
+
+
+
+                            <div class="form-group row mb-0">
+                                <div class="col-md-6 offset-md-4">
+                                    <button type="submit" class="btn btn-primary">
+                                        商品を出品する
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{{-- 実験的な要素をここで絡めとく --}}
+
+
 
 
 

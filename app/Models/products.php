@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class products extends Model
 {
     use HasFactory;
+    protected $table ='products';
+
+    //練習
+    //別に過剰していても入っていれば登録することができる
+    protected $fillable =  ['product_name','img_path','price', 'best_by_date',];
+
+
+
 }

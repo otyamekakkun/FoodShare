@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\products;
 use Illuminate\Http\Request;
 
 class HaikiController extends Controller
@@ -91,9 +92,61 @@ return view('admin');
     return view('haiki_staff.staff_productedit_display');
     } //.............................................................9
 
+//========================================================================    
+//ここから商品ホームページの一覧の流れを記述する
+//========================================================================    
+
     public function staff_exhibitproduct_list_display(){
     return view('haiki_staff.staff_exhibitproduct_list_display');
-    } //.............................................................10
+    } 
+// ここからdrillの内容をコピペする
+public function create_exhibitproduct(Request $request){
+    $request->validate([
+//ここにバリデーションの内容を記述する
+
+       'img_path' => 'required|file|image|mimes:png,jpeg',
+    ]);
+// モデルを使って、DBに登録する値をセット
+$product = new products;
+$product->fill($request->all())->save();
+
+// 画像フォームでリクエストした画像を取得
+$img = $request->file('img_path');
+
+// 画像情報がセットされていれば、保存処理を実行
+// storage > public > img配下に画像が保存される
+$path = $img->store('img','public');
+
+// DBに登録する処理 
+
+products::create([
+'product_name'=>$product,
+'img_path' => $path,
+'place'=>$product->place,
+'best_by_date'=>$product->best_by_date,
+]
+);
+
+
+
+  //  $drill->save();
+//今回は画像の機能が入っているから一つ一つの実装かもしれない
+// fillを使って一気にいれるか
+// $fillableを使っていないと変なデータが入り込んだ場合に勝手にDBが更新されてしまうので注意！
+//$drill->fill($request->all())->save();
+
+// リダイレクトする
+// その時にsessionフラッシュにメッセージを入れる
+return redirect('/drills/new')->with('flash_message', __('Registered.'));
+
+}
+
+
+
+
+
+    //商品を出品する画面のコントローラの内容
+    //.............................................................10
 
     public function staff_productlist_display(){
         return view('haiki_staff.staff_productlist_display');
