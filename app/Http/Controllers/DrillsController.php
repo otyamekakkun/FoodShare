@@ -34,21 +34,42 @@ class DrillsController extends Controller
  // モデルを使って、DBに登録する値をセット
  $drill = new Drill;
 
+ // 画像フォームでリクエストした画像を取得
+ $img = $request->file('img_path');
+ // storage > public > img配下に画像が保存される
+ $path = $img->store('img','public');
+ // DBに登録する処理 
+ 
+ $drill->fill($request->all())->save();
 
  // １つ１つ入れるか
+ /*
        $drill->title = $request->title;
         $drill->category_name = $request->category_name;
         $drill->problem0 = $request->problem0;
         $drill->problem1 = $request->problem1;
         $drill->problem2 = $request->problem2;
-        $drill->img_path = $request->img_path;
+
+        //$drill->img_path = $request->$path;
         $drill->place = $request->place;
         $drill->best_by_date = $request->best_by_date;
+*/
+
+Drill::create([
+    'title'=>$drill->title,
+    'category_name'=>$drill->category_name,
+    'problem0'=>$drill->problem0,
+    'problem1'=>$drill->problem1,
+    'problem2'=>$drill->problem2,
+    'img_path' => $path,
+    'place'=>$drill->place,
+    'best_by_date'=>$drill->best_by_date,
+]
+);
 
 
 
-
-        $drill->save();
+      //  $drill->save();
 //今回は画像の機能が入っているから一つ一つの実装かもしれない
  // fillを使って一気にいれるか
  // $fillableを使っていないと変なデータが入り込んだ場合に勝手にDBが更新されてしまうので注意！
