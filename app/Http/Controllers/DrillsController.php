@@ -20,7 +20,7 @@ class DrillsController extends Controller
             'problem0' => 'required|string|max:255',
             'problem1' => 'string|max:255',
             'problem2' => 'string|max:255',
-           'img_path' => 'string|max:255',
+           'img_path' => 'required',
             //'problem4' => 'string|max:255',
             //'problem5' => 'string|max:255',
             //'problem6' => 'string|max:255',
@@ -30,6 +30,7 @@ class DrillsController extends Controller
         ]);
  // モデルを使って、DBに登録する値をセット
  $drill = new Drill;
+
 
  // １つ１つ入れるか
 //        $drill->title = $request->title;
