@@ -101,6 +101,35 @@
                                     @enderror
                                 </div>
                             </div>
+                            
+                            <div class="form-group row">
+                                <label for="place" class="col-md-4 col-form-label text-md-right">{{ __('Problem').'金額を入れる' }}</label>
+
+                                <div class="col-md-6">
+                                    <input id="img_path" type="number" class="form-control @error('place') is-invalid @enderror" name="place" value="{{ old('problem2') }}" autocomplete="problem0" autofocus>
+
+                                    @error('place')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="best_by_date" class="col-md-4 col-form-label text-md-right">{{ __('Problem').'写真を入れる' }}</label>
+
+                                <div class="col-md-6">
+                                    <input id="img_path" type="date" class="form-control @error('best_by_date') is-invalid @enderror" name="best_by_date" value="{{ old('best_by_date') }}" autocomplete="problem0" autofocus>
+
+                                    @error('img_path')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                            </div>
+
 
 
 

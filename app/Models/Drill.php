@@ -13,7 +13,7 @@ class Drill extends Model
     //練習
     //別に過剰していても入っていれば登録することができる
     protected $fillable =  ['title', 'category_name', 'problem0', 
-    'problem1', 'problem2','img_path', 'problem3', 'problem4', 'problem5', 'problem6',
+    'problem1', 'problem2','img_path','place','best_by_date', 'problem3', 'problem4', 'problem5', 'problem6',
      'problem7', 'problem8', 'problem9'];
 
 }
