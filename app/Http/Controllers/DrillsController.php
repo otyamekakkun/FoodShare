@@ -49,7 +49,7 @@ class DrillsController extends Controller
 //登録したものを表示する機能を導入する
 public function index(){
     $drills = Drill::all();
-    return view('drills.index',['drills'=>$drills]);
+    return view('drills.index',['drills'=>$drills]); //drills.indexに値を渡している
 }
 
 
