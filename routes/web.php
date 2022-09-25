@@ -29,6 +29,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 //drills/newはあくまでも実験的要素が絡んでいるので終わったら必ず消去すること
 Route::get('/drills/new',[App\Http\Controllers\DrillsController::class, 'new'])->name('drills.new');
 Route::post('/drills',[App\Http\Controllers\DrillsController::class, 'create'])->name('drills.create');
+Route::get('/drills/index',[App\Http\Controllers\DrillsController::class, 'index'])->name('drills.index');
+
 //画面を表示するための処理ここから開始
 
 /**
