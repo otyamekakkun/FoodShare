@@ -108,8 +108,6 @@ public function create_exhibitproduct(Request $request){
        'price'=>'required',
     ]);
 // モデルを使って、DBに登録する値をセット
-$product = new products;
-$product->fill($request->all())->save();
 
 // 画像フォームでリクエストした画像を取得
 $img = $request->file('img_path');
@@ -118,7 +116,8 @@ $img = $request->file('img_path');
 $path = $img->store('img','public');
 
 // DBに登録する処理 
-
+$product = new products;
+/*
 products::create([
 'product_name'=>$product->product_name,
 'img_path' => $path,
@@ -126,7 +125,12 @@ products::create([
 'best_by_date'=>$product->best_by_date,
 ]
 );
-
+*/
+$product->product_name = $request->product_name;
+$product->img_path=$path;
+$product->price = $request->price;
+$product->best_by_date = $request->best_by_date;
+$product->save();
 
 
   //  $drill->save();

@@ -68,7 +68,7 @@ class DrillsController extends Controller
         $drill->img_path = $path;
         $drill->place = $request->place;
         $drill->best_by_date = $request->best_by_date;
-        $drill->save();
+        $drill->save();//今回は丁寧に代入する方式をとる。
 
 /*
 Drill::create([
