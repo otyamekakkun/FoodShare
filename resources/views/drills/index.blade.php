@@ -12,7 +12,9 @@
                 <div class="card-body">
                     <h3 class="card-title">{{ $drill->title }}</h3>
                     <h3 class="card-title">{{ $drill->category_name }}</h3>
-                     <h3 class="card-title">{{ $drill->img_path }}</h3> 
+                     {{-- <h3 class="card-title">{{ $drill->img_path }}</h3>  --}}
+                     <img src="{{ Storage::url($drill->img_path) }}" width="25%">
+
                     <h3 class="card-title">{{ $drill->place }}</h3>
                     <h3 class="card-title">{{ $drill->best_by_date }}</h3>
 
