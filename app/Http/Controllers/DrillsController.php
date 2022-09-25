@@ -27,6 +27,21 @@ class DrillsController extends Controller
             'problem8' => 'string|max:255',
             'problem9' => 'string|max:255',
         ]);
+ // モデルを使って、DBに登録する値をセット
+ $drill = new Drill;
 
-    }
+ // １つ１つ入れるか
+//        $drill->title = $request->title;
+//        $drill->category_name = $request->category_name;
+//        $drill->save();
+
+ // fillを使って一気にいれるか
+ // $fillableを使っていないと変なデータが入り込んだ場合に勝手にDBが更新されてしまうので注意！
+ $drill->fill($request->all())->save();
+
+ // リダイレクトする
+ // その時にsessionフラッシュにメッセージを入れる
+ return redirect('/drills/new')->with('flash_message', __('Registered.'));
+ 
+}
 }
