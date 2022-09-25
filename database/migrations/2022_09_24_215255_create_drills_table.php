@@ -20,14 +20,15 @@ class CreateDrillsTable extends Migration
             $table->string('problem0');
             $table->string('problem1');
             $table->string('problem2');
-            $table->string('problem3');
-            $table->string('problem4');
-            $table->string('problem5');
-            $table->string('problem6');
-            $table->string('problem7');
-            $table->string('problem8');
-            $table->string('problem9');
-            $table->timestamps();
+            //文字を入れることは成功した。写真を導出する実験
+            $table->string('img_path');
+          //  $table->string('problem4');
+           // $table->string('problem5');
+           // $table->string('problem6');
+            //$table->string('problem7');
+            //$table->string('problem8');
+           // $table->string('problem9');
+           $table->timestamps();
         });
     }
 

@@ -2,8 +2,9 @@
 //実験的要素も絡めている。提出する際は必ず消去することを忘れない。
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use LDAP\Result;
+use App\Models\Drill;
+use Illuminate\Http\Request;
 
 class DrillsController extends Controller
 {
@@ -19,13 +20,13 @@ class DrillsController extends Controller
             'problem0' => 'required|string|max:255',
             'problem1' => 'string|max:255',
             'problem2' => 'string|max:255',
-            'problem3' => 'string|max:255',
-            'problem4' => 'string|max:255',
-            'problem5' => 'string|max:255',
-            'problem6' => 'string|max:255',
-            'problem7' => 'string|max:255',
-            'problem8' => 'string|max:255',
-            'problem9' => 'string|max:255',
+           'img_path' => 'string|max:255',
+            //'problem4' => 'string|max:255',
+            //'problem5' => 'string|max:255',
+            //'problem6' => 'string|max:255',
+            //'problem7' => 'string|max:255',
+            //'problem8' => 'string|max:255',
+            //'problem9' => 'string|max:255',
         ]);
  // モデルを使って、DBに登録する値をセット
  $drill = new Drill;
