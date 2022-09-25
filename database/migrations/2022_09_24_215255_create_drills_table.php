@@ -22,6 +22,10 @@ class CreateDrillsTable extends Migration
             $table->string('problem2');
             //文字を入れることは成功した。写真を導出する実験
             $table->string('img_path');
+            $table->integer('place');
+            $table->date('best_by_date');
+            $table->boolean('bought')->default(0);
+
           //  $table->string('problem4');
            // $table->string('problem5');
            // $table->string('problem6');
