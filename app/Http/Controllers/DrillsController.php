@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use LDAP\Result;
 use App\Models\Drill;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
+
+//パスを追加する
 
 class DrillsController extends Controller
 {
@@ -33,14 +36,18 @@ class DrillsController extends Controller
 
  // モデルを使って、DBに登録する値をセット
  $drill = new Drill;
+ $drill->fill($request->all())->save();
 
- // 画像フォームでリクエストした画像を取得
- $img = $request->file('img_path');
- // storage > public > img配下に画像が保存される
- $path = $img->store('img','public');
+
+   // 画像フォームでリクエストした画像を取得
+   $img = $request->file('img_path');
+
+// 画像情報がセットされていれば、保存処理を実行
+    // storage > public > img配下に画像が保存される
+    $path = $img->store('img','public');
+
  // DBに登録する処理 
  
- $drill->fill($request->all())->save();
 
  // １つ１つ入れるか
  /*
