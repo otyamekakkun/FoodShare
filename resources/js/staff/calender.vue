@@ -7,17 +7,17 @@
 <template>
     <div>
         <h1>カレンダーコンポーネント読み取れているかな</h1>
-        <form>
-            <label for="best_by_date" class="">賞味期限を入れる</label>
-
-            <input
-                id="best_by_date"
-                type="date"
-                class="best_by_date"
-                name="best_by_date"
-                autocomplete=""
-                autofocus
-            />
-        </form>
+        input type="date" v-model="startData" :min="new
+        Date().toISOString().split('T')[0]" onkeydown="return false">
+        <p>〜</p>
+        <input
+            type="date"
+            v-model="endData"
+            :min="new Date().toISOString().split('T')[0]"
+            onkeydown="return false"
+            name="best_by_date"
+        />
+        Markup
     </div>
 </template>
+<script></script>

@@ -48,7 +48,7 @@
                 <strong>{{ $message }}</strong>
             </span>
             @enderror
-            
+            {{-- 
         <label for="best_by_date" class="">賞味期限を入れる</label>
 
             <input id="best_by_date" type="date" class=" @error('best_by_date') is-invalid @enderror" name="best_by_date" value="{{ old('best_by_date') }}" autocomplete="problem0" autofocus>
@@ -58,10 +58,10 @@
                 <strong>{{ $message }}</strong>
             </span>
             @enderror
+ --}}
 
 
-
-{{-- <calender-component></calender-component> --}}
+ <calender-component></calender-component>
 
 
 
