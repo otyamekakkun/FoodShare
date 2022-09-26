@@ -12,7 +12,6 @@
             @include('rest.staff.header')
         </header>
         <div id="app">
-
 <h1>
     商品を出品する
 </h1>
@@ -28,12 +27,9 @@
                     <strong>{{ $message }}</strong>
                 @enderror
     
-    {{--  --}}
 <h1>出品したい商品の名前を入れてください</h1>    
         <label for="problem2" class="">商品名</label>
-
             <input id="" type="text" class="form-control @error('problem2') is-invalid @enderror" name="product_name" value="{{ old('product_name') }}" autocomplete="problem0" autofocus>
-
             @error('product_name')
             <span class="" role="alert">
                 <strong>{{ $message }}</strong>
@@ -48,34 +44,15 @@
                 <strong>{{ $message }}</strong>
             </span>
             @enderror
-            {{-- 
-        <label for="best_by_date" class="">賞味期限を入れる</label>
 
-            <input id="best_by_date" type="date" class=" @error('best_by_date') is-invalid @enderror" name="best_by_date" value="{{ old('best_by_date') }}" autocomplete="problem0" autofocus>
-
-            @error('img_path')
-            <span class="invalid-feedback" role="alert">
-                <strong>{{ $message }}</strong>
-            </span>
-            @enderror
- --}}
-
-
+{{-- 賞味期限の入力はjsを使用。デフォルトだと現在日時より前の日付も記入できるから --}}
  <calender-component></calender-component>
-
-
-
 <button type="submit" class="btn btn-primary">
     商品を出品する
 </button>
 {{-- 全体を括るdiv --}}
 
-{{-- 
-    formのname属性はレコード名と同じ（マイグレーションと同じにすると楽に処理ができる
-    
-    
-    --}}
-                        </form>
+</form>
 <footer-component></footer-component>
 </div> 
 {{-- 上のdivはコンポーネントを囲むdiv --}}
