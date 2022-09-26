@@ -11,6 +11,8 @@
         <header>
             @include('rest.staff.header')
         </header>
+        <div id="app">
+
 <h1>
     商品を出品する
 </h1>
@@ -46,6 +48,7 @@
                 <strong>{{ $message }}</strong>
             </span>
             @enderror
+            
         <label for="best_by_date" class="">賞味期限を入れる</label>
 
             <input id="best_by_date" type="date" class=" @error('best_by_date') is-invalid @enderror" name="best_by_date" value="{{ old('best_by_date') }}" autocomplete="problem0" autofocus>
@@ -55,6 +58,11 @@
                 <strong>{{ $message }}</strong>
             </span>
             @enderror
+
+
+
+{{-- <calender-component></calender-component> --}}
+
 
 
 <button type="submit" class="btn btn-primary">
@@ -68,8 +76,10 @@
     
     --}}
                         </form>
-<div id="app">
 <footer-component></footer-component>
+</div> 
+{{-- 上のdivはコンポーネントを囲むdiv --}}
+
 </div>
 </body>
 @endsection
