@@ -1,13 +1,12 @@
 @extends('layouts.app2')
 @section('content')
+{{-- (画面における説明)
+    商品を出品する画面
+    データベース機能
+    --}}
 
 <body>
-    {{-- 
-        １ヘッダー部分の場所取り
-        ２ haiki shareの場所取り、fontsize 配色
-        ３ nav要素の場所取り, botanみたいな形にしたい。（切り抜いて配色みたいな感じ） fontsize 配色
-        
-        --}}
+    {{-- ヘッダー部分 --}}
         <header>
             @include('rest.staff.header')
         </header>
@@ -15,11 +14,10 @@
 <h1>
     商品を出品する
 </h1>
+{{-- form画面ここから --}}
 <form method="POST" action="{{ route('create.exhibit') }}" enctype="multipart/form-data">
     @csrf
-
 <div class="a">
-    商品を出品する画面全体
     <div class="aa">
         商品の名前を入力するところ
     </div>
@@ -108,21 +106,10 @@
     
     
     --}}
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">{{ __('Drill Register') }}</div>
 
-                    <div class="card-body">
                                 </div>
                             </div>
                         </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
 {{-- 実験的な要素をここで絡めとく --}}
