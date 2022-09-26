@@ -115,12 +115,6 @@
                     <div class="card-header">{{ __('Drill Register') }}</div>
 
                     <div class="card-body">
-
-{{--  --}}
-          
-
-
-
                                 </div>
                             </div>
                         </form>
