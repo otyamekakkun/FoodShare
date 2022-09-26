@@ -5,7 +5,7 @@
     <h2>{{ __('Drill List') }}</h2>
     <div class="row">
 {{-- $drillsを$drillの名前に置き換える --}}
-        @foreach ($drills as $drill)
+       @foreach ($drills as $drill)
 
         <div class="col-sm-6">
             <div class="card">

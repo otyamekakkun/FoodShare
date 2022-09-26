@@ -105,13 +105,43 @@ public function index(){
     //これはページネーション入っていない
 }
 */
-
+/*
 public function index(){
     //$drills=Drill::all();
 
     //$drills = DB::table('drills')->paginate(5)
     return view('drills.index', [
-        'drills' => DB::table('drills','created_at')->paginate(5)
+        'drills' => DB::table('drills','updated_at')->paginate(5)
     ]);
 }
+*/
+public function index(){
+    //$drills=Drill::all();
+
+    //$drills = DB::table('drills')->paginate(5)
+    return view('drills.index', [
+        'drills' => DB::table('drills','updated_at')->paginate(5)
+    ]);
+}
+
+
+
+/*
+public  function index(){
+
+    $drills = Drill::latest('created_at')->get();
+    return view('drills.index',['drills'=>$drills]); //drills.indexに値を渡している
+//並び替えはできているがではページ
+
+}
+*/
+/*
+public  function index(){
+
+    $drills = Drill::latest('created_at')->get()->where()->paginate(5);
+    return view('drills.index',['drills'=>$drills]); //drills.indexに値を渡している
+//並び替えはできているがではページ
+
+}
+*/
 }
