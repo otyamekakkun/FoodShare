@@ -49,10 +49,18 @@ return view('haiki_shopper.shopper_mypage_display');
     public function shopper_productdetail_display(){
         return view('haiki_shopper.shopper_productdetail_display');
     } //.............................................................4
-
+//===========================================================
+//staff_mypage_display
+//===========================================================
     public function staff_mypage_display(){
         return view('haiki_staff.staff_mypage_display');
-    } //.............................................................5
+    } 
+    //ページネーションを実装する
+    
+    
+    
+    
+    //.............................................................5
 
 //staffのprofileのdisplay
     public function staff_profile_display(){

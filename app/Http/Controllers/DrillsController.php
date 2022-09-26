@@ -6,6 +6,7 @@ use LDAP\Result;
 use App\Models\Drill;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\DB;
 
 //パスを追加する
 
@@ -97,12 +98,18 @@ Drill::create([
  
 }
 //登録したものを表示する機能を導入する
+/*
 public function index(){
     $drills = Drill::all();
     return view('drills.index',['drills'=>$drills]); //drills.indexに値を渡している
+    //これはページネーション入っていない
 }
+*/
 
-
-
-
+public function index(){
+    //$drills=Drill::all();
+    return view('drills.index', [
+        'drills' => DB::table('drills')->paginate(5)
+    ]);
+}
 }
