@@ -17,12 +17,25 @@
 {{-- form画面ここから --}}
 <form method="POST" action="{{ route('create.exhibit') }}" enctype="multipart/form-data">
     @csrf
-<div class="a">
-    <div class="aa">
-        商品の名前を入力するところ
-    </div>
-<div class="b">
-    出品したい商品を入れてください
+
+    <div class="c">
+        出品したい商品を入れてください
+        <div class="form-group row">
+            <label for="img_path" class="col-md-4 col-form-label text-md-right">写真を入れる</label>
+    
+            <div class="col-md-6">
+                <input id="img_path" type="file" class="form-control @error('img_path') is-invalid @enderror" name="img_path" value="{{ old('problem2') }}" autocomplete="problem0" autofocus>
+    
+                @error('img_path')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+                @enderror
+            </div>
+        </div>
+    
+    {{--  --}}
+<h1>出品したい商品の名前を入れてください</h1>    
     <div class="form-group row">
         <label for="problem2" class="col-md-4 col-form-label text-md-right">商品名</label>
 
@@ -36,25 +49,10 @@
             @enderror
         </div>
     </div>
+{{--  --}}
 
-
-</div>
-<div class="c">
-    出品したい商品を入れてください
-    <div class="form-group row">
-        <label for="img_path" class="col-md-4 col-form-label text-md-right">写真を入れる</label>
-
-        <div class="col-md-6">
-            <input id="img_path" type="file" class="form-control @error('img_path') is-invalid @enderror" name="img_path" value="{{ old('problem2') }}" autocomplete="problem0" autofocus>
-
-            @error('img_path')
-            <span class="invalid-feedback" role="alert">
-                <strong>{{ $message }}</strong>
-            </span>
-            @enderror
-        </div>
-    </div>
-    
+{{--  --}}
+    {{--  --}}
 
 </div>
 <div class="d">
@@ -110,16 +108,6 @@
                                 </div>
                             </div>
                         </form>
-
-
-{{-- 実験的な要素をここで絡めとく --}}
-
-
-
-
-
-
-
 <div id="app">
 <footer-component></footer-component>
 </div>
