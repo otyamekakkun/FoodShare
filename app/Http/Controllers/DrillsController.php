@@ -108,8 +108,10 @@ public function index(){
 
 public function index(){
     //$drills=Drill::all();
+
+    //$drills = DB::table('drills')->paginate(5)
     return view('drills.index', [
-        'drills' => DB::table('drills')->paginate(5)
+        'drills' => DB::table('drills','created_at')->paginate(5)
     ]);
 }
 }
