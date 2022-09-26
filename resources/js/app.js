@@ -31,6 +31,8 @@ Vue.component(
 
 // カレンダーvueのコンポーネント
 Vue.component("calender-component", require("./staff/calender.vue").default);
+//実験用のコンポーネント
+Vue.component("drills-component", require("./drills/drills.vue").default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

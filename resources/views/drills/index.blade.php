@@ -28,6 +28,18 @@
 {{-- 実験１は終了 --}}
         @endforeach
 
+<div id="app">
+    <drills-component></drills-component>
+</div>
+
+
+
+
+
+
+
+
+
     </div>
 </div>
 
