@@ -1,6 +1,5 @@
 @extends('layouts.app')
 @section('content')
-{{--  
 <div class="container">
     <h2>{{ __('Drill List') }}</h2>
     <div class="row">
@@ -11,8 +10,7 @@
                 <div class="card-body">
                     <h3 class="card-title">{{ $drill->title }}</h3>
                     <h3 class="card-title">{{ $drill->category_name }}</h3>
-                     {{-- <h3 class="card-title">{{ $drill->img_path }}</h3>  --}}
-                     {{-- 
+                     <h3 class="card-title">{{ $drill->img_path }}</h3> 
                      <img src="{{ Storage::url($drill->img_path) }}" width="25%">
 
                     <h3 class="card-title">{{ $drill->place }}</h3>
@@ -24,7 +22,6 @@
                 </div>
             </div>
         </div>
-        --}}
 {{-- 実験１はとりあえずデータを出してみる --}}
 {{-- 実験１は終了 --}}
 {{--  --}}
