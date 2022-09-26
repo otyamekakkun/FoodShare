@@ -34,30 +34,13 @@ class DrillsController extends Controller
         ]);
    // 画像フォームでリクエストした画像を取得
    $img = $request->file('img_path');
-   /*
-   if(!empty($img)){
-    $filename = $img->getClientOriginalName();
-    $file_path = public_path('img_uploaded/Drill');
-    $move = $img->move($file_path, $filename);   }
-    else{
-        $filename = null;
-    }
-*/
 // 画像情報がセットされていれば、保存処理を実行
     // storage > public > img配下に画像が保存される
     $path = $img->store('img','public');
-
-
-
  // モデルを使って、DBに登録する値をセット
  $drill = new Drill;
  //$drill->fill($request->all())->save();
-
-
-
  // DBに登録する処理 
- 
-
  // １つ１つ入れるか
  
        $drill->title = $request->title;
@@ -71,6 +54,12 @@ class DrillsController extends Controller
         $drill->best_by_date = $request->best_by_date;
         $drill->save();//今回は丁寧に代入する方式をとる。
 
+
+
+
+
+
+        
 /*
 Drill::create([
     'title'=>$drill->title,
@@ -115,6 +104,7 @@ public function index(){
     ]);
 }
 */
+/*
 public function index(){
     //$drills=Drill::all();
 
@@ -122,6 +112,11 @@ public function index(){
     return view('drills.index', [
         'drills' => DB::table('drills','updated_at')->paginate(5)
     ]);
+}
+*/
+public function index(Request $request){
+    $drill = Drill::all();
+    return response()->json($drill);
 }
 
 
