@@ -5313,12 +5313,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      title: []
+    };
+  },
   mounted: function mounted() {
+    var _this = this;
+
     var url = "/drills/ind";
+    /*
+    コンソールで表現する
     axios.get(url).then(function (response) {
-      var drills = response.data;
-      console.log(drills);
+        var drills = response.data;
+        console.log(drills);
+    });
+    */
+
+    axios__WEBPACK_IMPORTED_MODULE_0___default().get(url).then(function (response) {
+      return _this.title = response.data;
     });
   }
 });
@@ -5341,7 +5358,7 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("table");
+  return _c("div", [_vm._v("\n    " + _vm._s(_vm.title) + "\n")]);
 };
 
 var staticRenderFns = [];
@@ -40505,6 +40522,18 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 				}
 /******/ 			}
 /******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
 /******/ 		};
 /******/ 	})();
 /******/ 	
