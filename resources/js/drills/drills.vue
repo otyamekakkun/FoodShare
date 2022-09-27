@@ -9,6 +9,17 @@
             <td v-text="use.best_by_date"></td>
 
             <!-- <td><img :src="use.img_path" /></td> -->
+            <!-- </tr> -->
+            <!--  -->
+        </tr>
+
+        <tr v-for="use2 in xuses">
+            <td v-text="use2.problem2"></td>
+            <td v-text="use2.category_name"></td>
+            <!-- <td v-text="use2.place"></td> -->
+            <!-- <td v-text="use2.best_by_date"></td> -->
+
+            <!-- <td><img :src="use.img_path" /></td> -->
         </tr>
     </div>
 </template>
@@ -21,12 +32,14 @@ export default {
         {
             return {
                 uses: [],
+                xuses: [],
                 //img_path: {},
             };
         }
     },
     mounted() {
         var url = "/drills/ind";
+        var url2 = "/drills/inde";
         /*
     コンソールで表現する
         axios.get(url).then(function (response) {
@@ -35,6 +48,7 @@ export default {
         });
         */
         axios.get(url).then((response) => (this.uses = response.data));
+        axios.get(url2).then((response) => (this.xuses = response.data));
     },
 };
 </script>
@@ -42,7 +56,7 @@ export default {
     データベース関連で実験したいこと
 1.並び替えて表示することができるか？
 2.ページネーションが実装できるか？
-3.booleanフラグ　今回はplaceでいい。を見て色々と処理を変えることができるか？
+3.booleanフラグ今回はplaceでいい。を見て色々と処理を変えることができるか？
 4.最新5件を表示する
 5.ログイン情報もきちんと取得できるかどうかを確かめる
 6.絞りこむだから並び替えるという意味ではなさそう。

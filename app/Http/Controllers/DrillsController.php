@@ -119,6 +119,12 @@ public function ind(Request $request){
     $drill = Drill::all();
     return response()->json($drill);
 }
+
+public function inde(Request $request){
+    $drill = Drill::all();
+    return response()->json($drill);
+}
+
 /*
 public function index(){
     //$drills=Drill::all();

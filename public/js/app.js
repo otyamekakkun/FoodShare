@@ -5320,7 +5320,8 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     {
       return {
-        uses: [] //img_path: {},
+        uses: [],
+        xuses: [] //img_path: {},
 
       };
     }
@@ -5329,6 +5330,7 @@ __webpack_require__.r(__webpack_exports__);
     var _this = this;
 
     var url = "/drills/ind";
+    var url2 = "/drills/inde";
     /*
     コンソールで表現する
     axios.get(url).then(function (response) {
@@ -5339,6 +5341,9 @@ __webpack_require__.r(__webpack_exports__);
 
     axios__WEBPACK_IMPORTED_MODULE_0___default().get(url).then(function (response) {
       return _this.uses = response.data;
+    });
+    axios__WEBPACK_IMPORTED_MODULE_0___default().get(url2).then(function (response) {
+      return _this.xuses = response.data;
     });
   }
 });
@@ -5361,7 +5366,7 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", _vm._l(_vm.uses, function (use) {
+  return _c("div", [_vm._l(_vm.uses, function (use) {
     return _c("tr", [_c("td", {
       domProps: {
         textContent: _vm._s(use.problem2)
@@ -5379,7 +5384,17 @@ var render = function render() {
         textContent: _vm._s(use.best_by_date)
       }
     })]);
-  }), 0);
+  }), _vm._v(" "), _vm._l(_vm.xuses, function (use2) {
+    return _c("tr", [_c("td", {
+      domProps: {
+        textContent: _vm._s(use2.problem2)
+      }
+    }), _vm._v(" "), _c("td", {
+      domProps: {
+        textContent: _vm._s(use2.category_name)
+      }
+    })]);
+  })], 2);
 };
 
 var staticRenderFns = [];
