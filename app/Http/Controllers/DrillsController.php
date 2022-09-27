@@ -119,7 +119,7 @@ public function ind(Request $request){
     $drill = Drill::all();
     return response()->json($drill);
 }
-
+/*
 public function index(){
     //$drills=Drill::all();
 
@@ -128,6 +128,18 @@ public function index(){
         'drills' => DB::table('drills','updated_at')->paginate(5)
     ]);
 }
+*/
+//マイページに表示するものの一つはこれが正解かな。
+//ただし自分が出品したやつにしないといけない
+public function index(){
+    $drills = Drill::orderBy('id','desc')->simplePaginate(5);
+    return view('drills.index',['drills'=>$drills]);
+}
+
+
+
+
+
 
 
 /*
