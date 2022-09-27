@@ -57,7 +57,8 @@
         @include('rest.shopper.header') 
         </header>
         
-        
+        <div id="app">
+            <productlist-component></productlist-component>
 
 {{-- ここはvueコンポーザの出番かも プラスここはsassのコンポーネント部分なぜならコンビニ側も使用するから--}}
 
@@ -120,7 +121,6 @@
 
 
 
- <div id="app">
  <footer-component></footer-component>
  </div>
  </body>

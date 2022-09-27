@@ -31,10 +31,13 @@ Vue.component(
 
 // カレンダーvueのコンポーネント
 Vue.component("calender-component", require("./staff/calender.vue").default);
+Vue.component(
+    "productlist-component",
+    require("./staff/productlist.vue").default
+);
+
 //実験用のコンポーネント
 Vue.component("drills-component", require("./drills/drills.vue").default);
-
-//商品一覧のコンポーネント
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
