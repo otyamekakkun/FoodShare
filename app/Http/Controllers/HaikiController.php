@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class HaikiController extends Controller
 {
-/** 画面を表示するためのメソッド集団
+/** それぞれのページの概要。
  * 1(利用客)マイページ表示用
  * 2(利用客)プロフィール編集画面表示用
  * 3(利用客)商品一覧表示用
@@ -19,15 +19,23 @@ class HaikiController extends Controller
  * 9(コンビニ)出品する商品を編集するもの
  * 10(コンビニ)出品した商品を一覧する表示
  */
+
+ //.................................................................1shoepper_mypage
+ //画面表示
     public function shopper_mypage_display(){
         return view('haiki_shopper.shopper_mypage_display');
-    } //.............................................................1
+    } 
+    //自分が購入したものを最新5件で表示する。
+    //.............................................................1終了
 
 
-// shopper_profile_displayのルーティング設定
+//....................................................................2shopper_profile_display
+//画面表示
     public function shopper_profile_display(){
         return view('haiki_shopper.shopper_profile_display');
-    } //.............................................................2
+    } 
+//.....................................................................2終了
+//....................................................................3.shopper_profile_edit
 public function shopper_profile_edit(Request $request)
 {
 $request->validate([
@@ -41,7 +49,9 @@ $request->validate([
 return view('haiki_shopper.shopper_mypage_display');
 
 }
-//shopper_profileの内容ここまで。
+//......................................................................3終了
+
+
     public function shopper_productlist_display(){
         return view('haiki_shopper.shopper_productlist_display');
     } //.............................................................3
@@ -61,7 +71,7 @@ return view('haiki_shopper.shopper_mypage_display');
     
     
     //.............................................................5
-
+//..................................................................9staff_profile_display
 //staffのprofileのdisplay
     public function staff_profile_display(){
         return view('haiki_staff.staff_profile_display');
@@ -107,58 +117,37 @@ return view('admin');
     public function staff_exhibitproduct_list_display(){
     return view('haiki_staff.staff_exhibitproduct_list_display');
     } 
-// ここからdrillの内容をコピペする
-public function create_exhibitproduct(Request $request){
-    $request->validate([
-//ここにバリデーションの内容を記述する
 
+//====================================================================
+//(create_exhibitproductで商品を出品する画面を作る)  12
+//====================================================================
+
+public function create_exhibitproduct(Request $request){
+    //入力するときにバリデーションチェックを設ける
+    $request->validate([
        'img_path' => 'required|file|image|mimes:png,jpeg',
        'price'=>'required',
     ]);
-// モデルを使って、DBに登録する値をセット
-
-// 画像フォームでリクエストした画像を取得
-$img = $request->file('img_path');
-// 画像情報がセットされていれば、保存処理を実行
-// storage > public > img配下に画像が保存される
-$path = $img->store('img','public');
-
-// DBに登録する処理 
-$product = new products;
-/*
-products::create([
-'product_name'=>$product->product_name,
-'img_path' => $path,
-'price'=>$product->price,
-'best_by_date'=>$product->best_by_date,
-]
-);
+/* 
+create_exhibitproductのpost送信を行うためのデータベースの処理。
+1.storage > public > img配下に画像が保存されるように処理をする。
+2.今回は一つ一つデータベースに値を登録する処理を記述。
+3.登録されたらコンビニmypageに遷移される。同時に登録されました~みたいなメッセージを出す。
 */
+$img = $request->file('img_path');
+$path = $img->store('img','public');//1
+
+$product = new products;
 $product->product_name = $request->product_name;
 $product->img_path=$path;
 $product->price = $request->price;
 $product->best_by_date = $request->best_by_date;
-$product->save();
+$product->save();//2
 
-
-  //  $drill->save();
-//今回は画像の機能が入っているから一つ一つの実装かもしれない
-// fillを使って一気にいれるか
-// $fillableを使っていないと変なデータが入り込んだ場合に勝手にDBが更新されてしまうので注意！
-//$drill->fill($request->all())->save();
-
-// リダイレクトする
-// その時にsessionフラッシュにメッセージを入れる
-return redirect('admin')->with('flash_message', __('Registered.'));
+return redirect('admin')->with('flash_message', __('Registered.'));//3
 
 }
-//ここまで
-
-
-
-
-    //商品を出品する画面のコントローラの内容
-    //.............................................................10
+ //.............................................................終了12
 
     public function staff_productlist_display(){
         return view('haiki_staff.staff_productlist_display');
