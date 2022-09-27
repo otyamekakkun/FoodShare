@@ -45,6 +45,7 @@
 </header>
 </body>
 <h1>
+    {{$my_user->name}}様
     haiki shareへようこそ！！
 </h1>
 <main>

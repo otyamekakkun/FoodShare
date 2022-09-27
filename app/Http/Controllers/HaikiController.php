@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\products;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class HaikiController extends Controller
 {
@@ -24,7 +27,9 @@ class HaikiController extends Controller
  //==================================================================
  //画面表示
     public function shopper_mypage_display(){
-        return view('haiki_shopper.shopper_mypage_display');
+        $id = Auth::id();
+        $user = DB::table('users')->find($id);
+        return view('haiki_shopper.shopper_mypage_display',['my_user'=>$user]);
     } 
     /*
     自分が購入したものを表示する
