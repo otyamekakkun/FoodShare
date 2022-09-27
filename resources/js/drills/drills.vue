@@ -1,6 +1,8 @@
 <template>
     <div>
-        {{ title }}
+        <tr v-for="use in uses">
+            <td v-text="use.title"></td>
+        </tr>
     </div>
 </template>
 
@@ -10,7 +12,7 @@ import axios from "axios";
 export default {
     data() {
         return {
-            title: [],
+            uses: [],
         };
     },
     mounted() {
@@ -22,7 +24,7 @@ export default {
             console.log(drills);
         });
         */
-        axios.get(url).then((response) => (this.title = response.data));
+        axios.get(url).then((response) => (this.uses = response.data));
     },
 };
 </script>

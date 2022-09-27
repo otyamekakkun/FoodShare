@@ -5319,7 +5319,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      title: []
+      uses: []
     };
   },
   mounted: function mounted() {
@@ -5335,7 +5335,7 @@ __webpack_require__.r(__webpack_exports__);
     */
 
     axios__WEBPACK_IMPORTED_MODULE_0___default().get(url).then(function (response) {
-      return _this.title = response.data;
+      return _this.uses = response.data;
     });
   }
 });
@@ -5358,7 +5358,13 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", [_vm._v("\n    " + _vm._s(_vm.title) + "\n")]);
+  return _c("div", _vm._l(_vm.uses, function (use) {
+    return _c("tr", [_c("td", {
+      domProps: {
+        textContent: _vm._s(use.title)
+      }
+    })]);
+  }), 0);
 };
 
 var staticRenderFns = [];
