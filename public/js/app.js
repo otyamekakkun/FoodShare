@@ -5318,9 +5318,12 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
-    return {
-      uses: []
-    };
+    {
+      return {
+        uses: [] //img_path: {},
+
+      };
+    }
   },
   mounted: function mounted() {
     var _this = this;
@@ -5361,7 +5364,19 @@ var render = function render() {
   return _c("div", _vm._l(_vm.uses, function (use) {
     return _c("tr", [_c("td", {
       domProps: {
-        textContent: _vm._s(use.title)
+        textContent: _vm._s(use.problem2)
+      }
+    }), _vm._v(" "), _c("td", {
+      domProps: {
+        textContent: _vm._s(use.category_name)
+      }
+    }), _vm._v(" "), _c("td", {
+      domProps: {
+        textContent: _vm._s(use.place)
+      }
+    }), _vm._v(" "), _c("td", {
+      domProps: {
+        textContent: _vm._s(use.best_by_date)
       }
     })]);
   }), 0);

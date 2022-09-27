@@ -8584,6 +8584,11 @@
     "@vue/compiler-sfc" "2.7.10"
     "csstype" "^3.1.0"
 
+"vuejs-paginate@^2.1.0":
+  "integrity" "sha512-gnwyXlmCiDOu9MLWxN5UJ4PGijKGNOMpHG8ujsrynCzTJljn/rp7Jq0WiDGDAMi5/u0AHuYIHhced+tUW4jblA=="
+  "resolved" "https://registry.npmjs.org/vuejs-paginate/-/vuejs-paginate-2.1.0.tgz"
+  "version" "2.1.0"
+
 "vuetify@^2.6.10":
   "integrity" "sha512-fgUeRDDCwYkwu6WGEEKGe7IdfzOsXJCZGrqkn1pcS2ycuoDL8mR2/dejH5iFNnBY6MnsT365PAGn0J+9otjfQg=="
   "resolved" "https://registry.npmjs.org/vuetify/-/vuetify-2.6.10.tgz"
