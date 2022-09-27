@@ -5315,7 +5315,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   mounted: function mounted() {
-    var url = "/drills/index";
+    var url = "/drills/ind";
     axios.get(url).then(function (response) {
       var drills = response.data;
       console.log(drills);
@@ -5341,7 +5341,7 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("h1", [_vm._v("drillsコンポーネント導入しました")]);
+  return _c("table");
 };
 
 var staticRenderFns = [];

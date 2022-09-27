@@ -1,12 +1,14 @@
 <template>
-    <h1>drillsコンポーネント導入しました</h1>
-    <!-- @{{ drills }} -->
+    <table>
+        <!-- <tr v-for="drill in drills"></tr> -->
+        <!-- <td v-text="drills.title"></td> -->
+    </table>
 </template>
 
 <script>
 export default {
     mounted() {
-        var url = "/drills/index";
+        var url = "/drills/ind";
         axios.get(url).then(function (response) {
             var drills = response.data;
             console.log(drills);
