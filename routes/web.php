@@ -133,3 +133,16 @@ Route::view('/admin', 'admin')->middleware('auth:admin')->name('admin-home');
 Route::get('/item/index', [App\Http\Controllers\ItemController::class, 'index'])->name('item.index');
 Route::get('/create', [App\Http\Controllers\ItemController::class, 'create'])->name('item.create');
 Route::post('/store', [App\Http\Controllers\ItemController::class, 'store'])->name('item.store');
+
+
+
+
+
+//json形式でデータベースを取得したときに格納しとく場所
+//ここ後にセキュリティ対策をしないと大変なことになりそう（パスワードダダ漏れになるし。）
+//例えばこのurlをグチャグチャにする。
+Route::get('/drills/index1',[App\Http\Controllers\HaikiController::class, 'index1'])->name('drills.index1');
+Route::get('/drills/index2',[App\Http\Controllers\HaikiController::class, 'index2'])->name('drills.index2');
+
+
+

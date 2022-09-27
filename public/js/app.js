@@ -5532,7 +5532,8 @@ Vue.component("footer-component", (__webpack_require__(/*! ./footercomponents/Fo
 
 Vue.component("calender-component", (__webpack_require__(/*! ./staff/calender.vue */ "./resources/js/staff/calender.vue")["default"])); //実験用のコンポーネント
 
-Vue.component("drills-component", (__webpack_require__(/*! ./drills/drills.vue */ "./resources/js/drills/drills.vue")["default"]));
+Vue.component("drills-component", (__webpack_require__(/*! ./drills/drills.vue */ "./resources/js/drills/drills.vue")["default"])); //商品一覧のコンポーネント
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

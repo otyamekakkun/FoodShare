@@ -180,4 +180,33 @@ return redirect('admin')->with('flash_message', __('Registered.'));//3
         return view('haiki_staff.staff_productlist_display');
         } //.............................................................10
     //画面を表示するための処理ここまで
+
+
+
+
+//================================================
+//json形式でファイルを保存するためのコントローラ
+//================================================
+//これがjson形式で値を渡す方法
+public function index1(Request $request){
+    $drill = products::all();
+    return response()->json($drill);
 }
+
+public function index2(Request $request){
+    $drill = products::all();
+    return response()->json($drill);
+}
+
+
+
+
+
+
+
+
+
+
+}
+
+
