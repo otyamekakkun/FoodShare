@@ -114,11 +114,20 @@ public function index(){
     ]);
 }
 */
-public function index(Request $request){
+//これがjson形式で値を渡す方法
+public function ind(Request $request){
     $drill = Drill::all();
     return response()->json($drill);
 }
 
+public function index(){
+    //$drills=Drill::all();
+
+    //$drills = DB::table('drills')->paginate(5)
+    return view('drills.index', [
+        'drills' => DB::table('drills','updated_at')->paginate(5)
+    ]);
+}
 
 
 /*
