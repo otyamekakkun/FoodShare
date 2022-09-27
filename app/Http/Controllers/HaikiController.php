@@ -19,23 +19,34 @@ class HaikiController extends Controller
  * 9(コンビニ)出品する商品を編集するもの
  * 10(コンビニ)出品した商品を一覧する表示
  */
-
- //.................................................................1shoepper_mypage
+//===================================================================
+ //shoepper_mypage 1
+ //==================================================================
  //画面表示
     public function shopper_mypage_display(){
         return view('haiki_shopper.shopper_mypage_display');
     } 
-    //自分が購入したものを最新5件で表示する。
-    //.............................................................1終了
+    /*
+    自分が購入したものを表示する
+    今回は自分が購入したものを新しい順に記述する処理を施す。
+    */
+//===========================================================1終了
 
 
-//....................................................................2shopper_profile_display
+
+//===================================================================
+//shopper_profile_display 2
+//===================================================================
 //画面表示
     public function shopper_profile_display(){
         return view('haiki_shopper.shopper_profile_display');
     } 
-//.....................................................................2終了
-//....................................................................3.shopper_profile_edit
+//========================================================2終了
+
+//===================================================================
+//3.shopper_profile_edit
+//===================================================================
+
 public function shopper_profile_edit(Request $request)
 {
 $request->validate([
@@ -49,7 +60,7 @@ $request->validate([
 return view('haiki_shopper.shopper_mypage_display');
 
 }
-//......................................................................3終了
+//==============================================================3終了
 
 
     public function shopper_productlist_display(){
@@ -65,17 +76,28 @@ return view('haiki_shopper.shopper_mypage_display');
     public function staff_mypage_display(){
         return view('haiki_staff.staff_mypage_display');
     } 
-    //ページネーションを実装する
+    /*
+    データベースの処理を行う。
+    今回は商品を出品したもの最新5件。自分が出品して購入されたもの最新5件を記述する。
+    1.
+    2.
+    */
     
     
     
-    
-    //.............................................................5
+//========================================================5終了
 //..................................................................9staff_profile_display
 //staffのprofileのdisplay
     public function staff_profile_display(){
         return view('haiki_staff.staff_profile_display');
     } 
+
+
+
+
+
+
+
 
     public function staff_profile_edit(Request $request)
 {

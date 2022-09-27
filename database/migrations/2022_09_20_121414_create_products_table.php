@@ -19,6 +19,8 @@ class CreateProductsTable extends Migration
             $table->string('img_path');//画像を入れるもの
             $table->integer('price');//価格を入力するためのもの
             $table->date('best_by_date');//賞味期限を記述するためのもの
+            $table->boolean('bought')->default(false);//購入されたかどうかをチェックする
+
            $table->timestamps();
 
         });
