@@ -5377,7 +5377,8 @@ import product from "./component/product.vue";
     {
       //データは言わば変数みたいなもの色々なところで使い回せる
       return {
-        products: [],
+        products: {},
+        // products_prace: [(products) => prace],
         fuji: 10,
         kakuto: 30,
         //賞味期限が切れているかどうかをチェック。(切れている商品があったら非表示にすること)
@@ -5406,9 +5407,20 @@ import product from "./component/product.vue";
   },
   methods: {
     countUp: function countUp() {
-      return this.fuji;
+      return this.products[0]["product_name"];
+    },
+    countdown: function countdown() {
+      return this.products[1]["price"];
     }
   },
+
+  /*
+  methods: {
+      countdown: function () {
+          return this.products[{ product_id: 1 }];
+      },
+  },
+  */
   //json形式でデータベースの値を取得する。
   //親から子にコンポーネントを渡す必要があるのでデータベースの値を子に渡す必要がある。
   mounted: function mounted() {
@@ -5560,13 +5572,7 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", [_c("p", [_vm._v(_vm._s(_vm.countUp()))]), _vm._v(" "), _vm._l(_vm.products, function (product) {
-    return _c("tr", [_c("td", {
-      domProps: {
-        textContent: _vm._s(product.price)
-      }
-    }), _vm._v(" "), product.price ? _c("h1") : _vm._e()]);
-  })], 2);
+  return _c("div", [_c("p", [_vm._v(_vm._s(_vm.countUp()))]), _vm._v(" "), _c("p", [_vm._v(_vm._s(_vm.countdown()))])]);
 };
 
 var staticRenderFns = [];

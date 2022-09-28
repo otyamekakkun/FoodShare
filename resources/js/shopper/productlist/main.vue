@@ -7,10 +7,13 @@
 <template>
     <div>
         <p>{{ countUp() }}</p>
-        <tr v-for="product in products">
+        <p>{{ countdown() }}</p>
+        <!-- 
+        <div v-for="product in products">
             <td v-text="product.price"></td>
             <h1 v-if="product.price"></h1>
-        </tr>
+        </div>
+             -->
     </div>
     <!-- <div>{{ countUp }}</div> -->
 </template>
@@ -28,7 +31,8 @@ export default {
         {
             //データは言わば変数みたいなもの色々なところで使い回せる
             return {
-                products: [],
+                products: {},
+                // products_prace: [(products) => prace],
                 fuji: 10,
                 kakuto: 30,
 
@@ -65,10 +69,20 @@ export default {
     },
     methods: {
         countUp: function () {
-            return this.fuji;
+            return this.products[0]["product_name"];
+        },
+        countdown: function () {
+            return this.products[1]["price"];
         },
     },
 
+    /*
+    methods: {
+        countdown: function () {
+            return this.products[{ product_id: 1 }];
+        },
+    },
+*/
     //json形式でデータベースの値を取得する。
     //親から子にコンポーネントを渡す必要があるのでデータベースの値を子に渡す必要がある。
     mounted() {
@@ -79,5 +93,75 @@ export default {
 </script>
 <!-- 
 親は属性でデータを子に渡して、子はpropsで受け取る
+
+ -->
+<!-- 
+//=========
+//実験１
+//==========
+    methods: {
+        countUp: function () {
+            const a = this.products + "好きです";
+            return a;
+        },
+    },
+[object object]好きですという表記になった。
+
+//=====================
+//実験２
+//====================
+
+    methods: {
+        countUp: function () {
+            console.log(this.products);
+        },
+    },
+
+コンソール形式で導出されるようになった
+//============================
+//実験３ 
+//==============================
+
+一部抜粋
+    data: function () {
+        {
+            //データは言わば変数みたいなもの色々なところで使い回せる
+            return {
+                products: ["price"],
+
+ミス
+//========================
+//実験４
+//===================
+
+    methods: {
+        countUp: function () {
+            return this.products;
+        },
+    },
+全権表示される
+
+
+//=================
+//実験5
+//===============
+    methods: {
+        countUp: function () {
+            return this.products[0];
+        },
+    },
+配列形式みたいだと予想したらすごいうまくいった。
+//================-
+//実験6
+..====================
+
+    methods: {
+        countUp: function () {
+            return this.products[0]["product_name"];
+        },
+    },
+文字列の取得の仕方はこれでいける。数字は行けなさそう
+できる
+
 
  -->
