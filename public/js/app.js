@@ -5513,10 +5513,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     {
+      //データは言わば変数みたいなもの色々なところで使い回せる
       return {
         products: [],
         fuji: 10,
-        kakuto: 30
+        kakuto: 30,
+        //賞味期限が切れているかどうかをチェック。(切れている商品があったら非表示にすること)
+        check1: true,
+        //価格の絞り込み
+        //100円以下
+        check2: true,
+        //200円以下
+        sampleB: true //500円以下
+        //1000円以下
+        //それ以上
+        //出品しているコンビニのある都道府県を実装すること
+
       };
     }
   },
@@ -5527,6 +5539,11 @@ __webpack_require__.r(__webpack_exports__);
     productheader: _component_product_header_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
     productlist: _component_product_list_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
     product: _component_product_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
+  },
+  methods: {
+    countUp: function countUp() {
+      this.fuji += 1;
+    }
   },
   //json形式でデータベースの値を取得する。
   //親から子にコンポーネントを渡す必要があるのでデータベースの値を子に渡す必要がある。
@@ -5838,19 +5855,13 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", {
-    staticClass: "app"
-  }, [_c("product", {
-    attrs: {
-      val: "これはpropsでデータを渡されたものです"
-    }
-  }), _vm._v(" "), _vm._l(_vm.products, function (product) {
-    return _c("tr", [_c("product", {
-      attrs: {
-        valb: "produts"
+  return _c("div", [_c("p", [_vm._v(_vm._s(_vm.fuji))]), _vm._v(" "), _vm._l(_vm.products, function (product) {
+    return _c("tr", [_c("td", {
+      domProps: {
+        textContent: _vm._s(product.price)
       }
-    })], 1);
-  }), _vm._v(" "), _c("p")], 2);
+    }), _vm._v(" "), product.price ? _c("h1") : _vm._e(), _vm._v(" "), _vm.sampleB ? _c("h1", [_vm._v("v-else-if")]) : _vm._e(), _vm._v(" "), _c("div", [_vm._v(_vm._s(_vm.countUp))])]);
+  })], 2);
 };
 
 var staticRenderFns = [];
