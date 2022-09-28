@@ -1,8 +1,12 @@
 <template>
     <div>
         <!-- <h1>{{ a }}</h1> -->
-        <h1>{{ "fuji" }}</h1>
+        <h1>{{ fuji }}</h1>
         <p>僕の名前はおっぱい星人です</p>
+        <!-- propsで、データをもらうとこうなる -->
+        <p>{{ val }}</p>
+        <p>{{ vala }}</p>
+        <!-- <td v-text="product.vala"></td> -->
     </div>
 </template>
 <script>
@@ -18,12 +22,13 @@ export default {
     },
 };*/
 export default {
-    props: ["product.price,fuji"],
+    props: ["val", "vala"],
 
     data: function () {
         {
             return {
-                a: product.price,
+                //a: product.price,
+                fuji: 10,
             };
         }
     },

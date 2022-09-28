@@ -6,10 +6,13 @@
 <!--  -->
 <template>
     <div class="app">
-        <product></product>
+        <!-- <product></product> -->
+        <product val="これはpropsでデータを渡されたものです"></product>
         <tr v-for="product in products">
-            <td v-text="product.price"></td>
+            <!-- <td v-text="product.price"></td> -->
+            <product valb="produts"></product>
         </tr>
+        <p></p>
     </div>
 </template>
 <script>
@@ -25,8 +28,8 @@ export default {
         {
             return {
                 products: [],
-                //img_path: {},
                 fuji: 10,
+                kakuto: 30,
             };
         }
     },
@@ -46,3 +49,7 @@ export default {
     },
 };
 </script>
+<!-- 
+親は属性でデータを子に渡して、子はpropsで受け取る
+
+ -->

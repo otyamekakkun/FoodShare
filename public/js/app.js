@@ -5473,11 +5473,12 @@ export default {
     },
 };*/
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ["product.price,fuji"],
+  props: ["val", "vala"],
   data: function data() {
     {
       return {
-        a: product.price
+        //a: product.price,
+        fuji: 10
       };
     }
   } //実験として情報を受け取る練習からする。
@@ -5514,8 +5515,8 @@ __webpack_require__.r(__webpack_exports__);
     {
       return {
         products: [],
-        //img_path: {},
-        fuji: 10
+        fuji: 10,
+        kakuto: 30
       };
     }
   },
@@ -5812,7 +5813,7 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", [_c("h1", [_vm._v(_vm._s("fuji"))]), _vm._v(" "), _c("p", [_vm._v("僕の名前はおっぱい星人です")])]);
+  return _c("div", [_c("h1", [_vm._v(_vm._s(_vm.fuji))]), _vm._v(" "), _c("p", [_vm._v("僕の名前はおっぱい星人です")]), _vm._v(" "), _c("p", [_vm._v(_vm._s(_vm.val))]), _vm._v(" "), _c("p", [_vm._v(_vm._s(_vm.vala))])]);
 };
 
 var staticRenderFns = [];
@@ -5839,13 +5840,17 @@ var render = function render() {
 
   return _c("div", {
     staticClass: "app"
-  }, [_c("product"), _vm._v(" "), _vm._l(_vm.products, function (product) {
-    return _c("tr", [_c("td", {
-      domProps: {
-        textContent: _vm._s(product.price)
+  }, [_c("product", {
+    attrs: {
+      val: "これはpropsでデータを渡されたものです"
+    }
+  }), _vm._v(" "), _vm._l(_vm.products, function (product) {
+    return _c("tr", [_c("product", {
+      attrs: {
+        valb: "produts"
       }
-    })]);
-  })], 2);
+    })], 1);
+  }), _vm._v(" "), _c("p")], 2);
 };
 
 var staticRenderFns = [];
