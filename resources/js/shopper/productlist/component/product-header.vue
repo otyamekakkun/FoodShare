@@ -35,6 +35,7 @@
 export default {
     data: function () {
         return {
+            //count check1 check2 orderという値をもらって親からもらって使う。
             props: ["count", "check1", "check2", "order"],
         };
     },

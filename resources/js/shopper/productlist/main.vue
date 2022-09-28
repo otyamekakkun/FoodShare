@@ -1,7 +1,6 @@
 <!-- 
-    ここでjson形式で情報を取得したい。
+    ここでjson形式で情報を取得したい。これをもとに表示していきたいのでおそらく違う可能性がある
  -->
-<template></template>
 <script>
 import productheader from "./component/product-header.vue";
 import productlist from "./component/product-list.vue";
@@ -63,6 +62,18 @@ export default {
                     productlist: productlist,
                     product: product,
                 },
+                    mounted() {
+        var url = "/drills/index2";
+        /*
+    コンソールで表現する
+        axios.get(url).then(function (response) {
+            var drills = response.data;
+            console.log(drills);
+        });
+        */
+        axios.get(url).then((response) => (this.uses = response.data));
+    },
+
             };
         }
     },

@@ -24,7 +24,6 @@ class CreateDrillsTable extends Migration
             $table->string('img_path');
             $table->integer('place');
             $table->date('best_by_date');
-            $table->boolean('is_super')->default(false);
 
             //$table->boolean('bought')->default(0);
 

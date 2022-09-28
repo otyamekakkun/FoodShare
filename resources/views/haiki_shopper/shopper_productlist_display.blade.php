@@ -58,10 +58,15 @@
         </header>
         
         <div id="app">
-            <productlist-component></productlist-component>
+<productlist-component><productlist-component>
+ <footer-component></footer-component>
+ </div>
+ </body>
+ @endsection
+
 
 {{-- ここはvueコンポーザの出番かも プラスここはsassのコンポーネント部分なぜならコンビニ側も使用するから--}}
-
+{{-- 
  <h1>流通している商品一覧ページです「ご利用者専用」</h1>
  <p>アンダーセン</p>
 
@@ -76,9 +81,6 @@
 </div>
 
 </select>
-{{-- ここはvueコンポーザの出番 終了 
-    vueコンポーネントにまとめて、sassのボタンのところでレイアウトする。
-    --}}
     
 <div class="l-shopperproductlist">
 画面全体を覆うもの
@@ -108,20 +110,9 @@
                                     
 
 </div>  
+ --}}
 {{-- flexのdiv --}}
-</div>
+
+{{-- </div> --}}
 {{-- ここまでがメインのところ --}}
 
-<section>
-<div class="d">
-    <h1>ここでページネーションを記述する</h1>
-</div>
-</section>
-
-
-
-
- <footer-component></footer-component>
- </div>
- </body>
- @endsection

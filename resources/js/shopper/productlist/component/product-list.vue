@@ -1,4 +1,7 @@
-<  template>
+
+
+<template>
+  <div>
   <div class="container">
     <h1 class="title">商品一覧</h1>
     <!--検索欄-->
@@ -22,6 +25,7 @@
       </product>
     </div>
   </div>`
+</div>
 </template> `
 
 <script>

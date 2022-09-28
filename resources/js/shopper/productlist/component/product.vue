@@ -1,4 +1,4 @@
-<  template>
+<template>
   <div class="product">
     <div class="product__body">
       <template v-if="item.isSale">
@@ -13,10 +13,12 @@
         <div class="product__shipping">送料無料</div>
       </template>
       <template v-else>
+        <div>
         <div class="product__shipping">+送料<span>{{$filters.number_format(item.shipping)}}</span>円</div>
+      </div>
       </template>
-    </div>
   </div>`
+</div>
 </template> `
 <script>
 export default {
