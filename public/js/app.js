@@ -5350,6 +5350,198 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/shopper/productlist/component/product-header.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/shopper/productlist/component/product-header.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      props: ["count", "check1", "check2", "order"]
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/shopper/productlist/component/product-list.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/shopper/productlist/component/product-list.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      // セール対象のチェック（true：有り、false：無し）
+      check1: false,
+      // 送料無料のチェック（true：有り、false：無し）
+      check2: false,
+      // ソート順（0：未選択、1：標準、2：安い順）
+      order: 0
+    };
+  },
+  methods: {
+    // 「並び替え」の選択値が変わったとき呼び出されるメソッド
+    orderChanged: function orderChanged(order) {
+      // 現在の選択値を新しい選択値で上書きする
+      this.order = order;
+    }
+  },
+  computed: {
+    // 検索条件で絞り込んだリストを返す算出プロパティ
+    filteredList: function filteredList() {
+      // コンポーネントのインスタンスを取得
+      var vm = this; // 商品の絞り込み
+
+      var filteredList = this.list.filter(function (item) {
+        // 表示判定（true：表示する、false：表示しない）
+        var show = true; // 検索条件：セール対象チェックあり
+
+        if (vm.check1) {
+          // セール対象外の商品なら表示対象外
+          if (!item.isSale) {
+            show = false;
+          }
+        } // 検索条件：送料無料チェックあり
+
+
+        if (vm.check2) {
+          // 送料がかかる商品なら表示対象外
+          if (item.shipping !== 0) {
+            show = false;
+          }
+        } // 表示判定を返す
+
+
+        return show;
+      }); // 商品の並べ替え
+
+      filteredList.sort(function (a, b) {
+        //「標準」が選択されている場合
+        if (vm.order === 1) {
+          // 元のlistと同じ順番なので何もしない
+          return 0;
+        } //「安い順」が選択されている場合
+        else if (vm.order === 2) {
+          // 価格が安い順にソート
+          return a.price - b.price;
+        }
+      }); // 商品リストを返す
+
+      return filteredList;
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/shopper/productlist/component/product.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/shopper/productlist/component/product.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      props: ['item']
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/shopper/productlist/main.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/shopper/productlist/main.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _component_product_header_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./component/product-header.vue */ "./resources/js/shopper/productlist/component/product-header.vue");
+/* harmony import */ var _component_product_list_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./component/product-list.vue */ "./resources/js/shopper/productlist/component/product-list.vue");
+/* harmony import */ var _component_product_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./component/product.vue */ "./resources/js/shopper/productlist/component/product.vue");
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    {
+      return {
+        //実験として情報を受け取る練習からする。
+        //これはjson形式で値を取得しないといけないもの
+        list: [{
+          name: "Michael<br>スマホケース",
+          price: 1980,
+          image: "images/01.jpg",
+          shipping: 0,
+          isSale: true
+        }, {
+          name: "Raphael<br>スマホケース",
+          price: 3980,
+          image: "images/02.jpg",
+          shipping: 0,
+          isSale: true
+        }, {
+          name: "Gabriel<br>スマホケース",
+          price: 2980,
+          image: "images/03.jpg",
+          shipping: 240,
+          isSale: true
+        }, {
+          name: "Uriel<br>スマホケース",
+          price: 1580,
+          image: "images/04.jpg",
+          shipping: 0,
+          isSale: true
+        }, {
+          name: "Ariel<br>スマホケース",
+          price: 2580,
+          image: "images/05.jpg",
+          shipping: 0,
+          isSale: false
+        }, {
+          name: "Azrael<br>スマホケース",
+          price: 1280,
+          image: "images/06.jpg",
+          shipping: 0,
+          isSale: false
+        }],
+        //子コンポーネントを登録するここのデータはほぼ確定している。
+        components: {
+          productheader: _component_product_header_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+          productlist: _component_product_list_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
+          product: _component_product_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
+        }
+      };
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/drills/drills.vue?vue&type=template&id=b25ab63e&":
 /*!********************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/drills/drills.vue?vue&type=template&id=b25ab63e& ***!
@@ -5471,6 +5663,110 @@ render._withStripped = true;
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/shopper/productlist/component/product-header.vue?vue&type=template&id=7a18e0e5&":
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/shopper/productlist/component/product-header.vue?vue&type=template&id=7a18e0e5& ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function render() {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("div", {
+    staticClass: "search"
+  }, [_c("div", {
+    staticClass: "search__result"
+  }, [_vm._v("\n        検索結果 "), _c("span", {
+    staticClass: "search__count"
+  }, [_vm._v(_vm._s(_vm.count) + "件")])]), _vm._v(" "), _c("div", {
+    staticClass: "search__condition"
+  }, [_c("input", {
+    attrs: {
+      type: "checkbox"
+    },
+    domProps: {
+      checked: _vm.check1
+    },
+    on: {
+      change: function change($event) {
+        return _vm.$emit("check1Changed");
+      }
+    }
+  }), _vm._v("\n        セール対象\n        "), _c("input", {
+    attrs: {
+      type: "checkbox"
+    },
+    domProps: {
+      checked: _vm.check2
+    },
+    on: {
+      change: function change($event) {
+        return _vm.$emit("check2Changed");
+      }
+    }
+  }), _vm._v("\n        送料無料\n        "), _c("select", {
+    staticClass: "search__order",
+    domProps: {
+      value: _vm.order
+    },
+    on: {
+      change: function change($event) {
+        _vm.$emit("orderChanged", parseInt($event.target.value));
+      }
+    }
+  }, [_c("option", {
+    attrs: {
+      value: "0"
+    }
+  }, [_vm._v("---並べ替え---")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "1"
+    }
+  }, [_vm._v("標準")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "2"
+    }
+  }, [_vm._v("安い順")])])])]);
+};
+
+var staticRenderFns = [];
+render._withStripped = true;
+
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/shopper/productlist/main.vue?vue&type=template&id=c291bfbe&":
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/shopper/productlist/main.vue?vue&type=template&id=c291bfbe& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function render() {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("div");
+};
+
+var staticRenderFns = [];
+render._withStripped = true;
+
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/staff/calender.vue?vue&type=template&id=66955f87&":
 /*!*********************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/staff/calender.vue?vue&type=template&id=66955f87& ***!
@@ -5494,31 +5790,6 @@ var render = function render() {
       name: "best_by_date"
     }
   })], 1);
-};
-
-var staticRenderFns = [];
-render._withStripped = true;
-
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/staff/productlist.vue?vue&type=template&id=c226e860&":
-/*!************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/staff/productlist.vue?vue&type=template&id=c226e860& ***!
-  \************************************************************************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* binding */ render),
-/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
-/* harmony export */ });
-var render = function render() {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("h1", [_vm._v("今日あh")]);
 };
 
 var staticRenderFns = [];
@@ -5555,8 +5826,9 @@ window.Vue = (__webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js
 Vue.component("incompletefooter-component", (__webpack_require__(/*! ./footercomponents/incompleteFooterComponent.vue */ "./resources/js/footercomponents/incompleteFooterComponent.vue")["default"]));
 Vue.component("footer-component", (__webpack_require__(/*! ./footercomponents/FooterComponent.vue */ "./resources/js/footercomponents/FooterComponent.vue")["default"])); // カレンダーvueのコンポーネント
 
-Vue.component("calender-component", (__webpack_require__(/*! ./staff/calender.vue */ "./resources/js/staff/calender.vue")["default"]));
-Vue.component("productlist-component", (__webpack_require__(/*! ./staff/productlist.vue */ "./resources/js/staff/productlist.vue")["default"])); //実験用のコンポーネント
+Vue.component("calender-component", (__webpack_require__(/*! ./staff/calender.vue */ "./resources/js/staff/calender.vue")["default"])); //商品一覧のコンポーネント
+
+Vue.component("productlist-component", (__webpack_require__(/*! ./shopper/productlist/main.vue */ "./resources/js/shopper/productlist/main.vue")["default"])); //実験用のコンポーネント
 
 Vue.component("drills-component", (__webpack_require__(/*! ./drills/drills.vue */ "./resources/js/drills/drills.vue")["default"]));
 /**
@@ -28384,6 +28656,172 @@ component.options.__file = "resources/js/footercomponents/incompleteFooterCompon
 
 /***/ }),
 
+/***/ "./resources/js/shopper/productlist/component/product-header.vue":
+/*!***********************************************************************!*\
+  !*** ./resources/js/shopper/productlist/component/product-header.vue ***!
+  \***********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _product_header_vue_vue_type_template_id_7a18e0e5___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./product-header.vue?vue&type=template&id=7a18e0e5& */ "./resources/js/shopper/productlist/component/product-header.vue?vue&type=template&id=7a18e0e5&");
+/* harmony import */ var _product_header_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./product-header.vue?vue&type=script&lang=js& */ "./resources/js/shopper/productlist/component/product-header.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _product_header_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _product_header_vue_vue_type_template_id_7a18e0e5___WEBPACK_IMPORTED_MODULE_0__.render,
+  _product_header_vue_vue_type_template_id_7a18e0e5___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/shopper/productlist/component/product-header.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/shopper/productlist/component/product-list.vue":
+/*!*********************************************************************!*\
+  !*** ./resources/js/shopper/productlist/component/product-list.vue ***!
+  \*********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _product_list_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./product-list.vue?vue&type=script&lang=js& */ "./resources/js/shopper/productlist/component/product-list.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _product_list_vue_vue_type_custom_index_0_blockType_div_class_container__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./product-list.vue?vue&type=custom&index=0&blockType=div&class=container */ "./resources/js/shopper/productlist/component/product-list.vue?vue&type=custom&index=0&blockType=div&class=container");
+/* harmony import */ var _product_list_vue_vue_type_custom_index_0_blockType_div_class_container__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_product_list_vue_vue_type_custom_index_0_blockType_div_class_container__WEBPACK_IMPORTED_MODULE_2__);
+var render, staticRenderFns
+;
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
+  _product_list_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"],
+  render,
+  staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* custom blocks */
+;
+if (typeof (_product_list_vue_vue_type_custom_index_0_blockType_div_class_container__WEBPACK_IMPORTED_MODULE_2___default()) === 'function') _product_list_vue_vue_type_custom_index_0_blockType_div_class_container__WEBPACK_IMPORTED_MODULE_2___default()(component)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/shopper/productlist/component/product-list.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/shopper/productlist/component/product.vue":
+/*!****************************************************************!*\
+  !*** ./resources/js/shopper/productlist/component/product.vue ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _product_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./product.vue?vue&type=script&lang=js& */ "./resources/js/shopper/productlist/component/product.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _product_vue_vue_type_custom_index_0_blockType_div_class_product__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./product.vue?vue&type=custom&index=0&blockType=div&class=product */ "./resources/js/shopper/productlist/component/product.vue?vue&type=custom&index=0&blockType=div&class=product");
+/* harmony import */ var _product_vue_vue_type_custom_index_0_blockType_div_class_product__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_product_vue_vue_type_custom_index_0_blockType_div_class_product__WEBPACK_IMPORTED_MODULE_2__);
+var render, staticRenderFns
+;
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
+  _product_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"],
+  render,
+  staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* custom blocks */
+;
+if (typeof (_product_vue_vue_type_custom_index_0_blockType_div_class_product__WEBPACK_IMPORTED_MODULE_2___default()) === 'function') _product_vue_vue_type_custom_index_0_blockType_div_class_product__WEBPACK_IMPORTED_MODULE_2___default()(component)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/shopper/productlist/component/product.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/shopper/productlist/main.vue":
+/*!***************************************************!*\
+  !*** ./resources/js/shopper/productlist/main.vue ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _main_vue_vue_type_template_id_c291bfbe___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main.vue?vue&type=template&id=c291bfbe& */ "./resources/js/shopper/productlist/main.vue?vue&type=template&id=c291bfbe&");
+/* harmony import */ var _main_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./main.vue?vue&type=script&lang=js& */ "./resources/js/shopper/productlist/main.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _main_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _main_vue_vue_type_template_id_c291bfbe___WEBPACK_IMPORTED_MODULE_0__.render,
+  _main_vue_vue_type_template_id_c291bfbe___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/shopper/productlist/main.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/staff/calender.vue":
 /*!*****************************************!*\
   !*** ./resources/js/staff/calender.vue ***!
@@ -28421,43 +28859,6 @@ component.options.__file = "resources/js/staff/calender.vue"
 
 /***/ }),
 
-/***/ "./resources/js/staff/productlist.vue":
-/*!********************************************!*\
-  !*** ./resources/js/staff/productlist.vue ***!
-  \********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _productlist_vue_vue_type_template_id_c226e860___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./productlist.vue?vue&type=template&id=c226e860& */ "./resources/js/staff/productlist.vue?vue&type=template&id=c226e860&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-var script = {}
-
-
-/* normalize component */
-;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
-  script,
-  _productlist_vue_vue_type_template_id_c226e860___WEBPACK_IMPORTED_MODULE_0__.render,
-  _productlist_vue_vue_type_template_id_c226e860___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/staff/productlist.vue"
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
-
-/***/ }),
-
 /***/ "./resources/js/drills/drills.vue?vue&type=script&lang=js&":
 /*!*****************************************************************!*\
   !*** ./resources/js/drills/drills.vue?vue&type=script&lang=js& ***!
@@ -28471,6 +28872,70 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_drills_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./drills.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/drills/drills.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_drills_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/shopper/productlist/component/product-header.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************!*\
+  !*** ./resources/js/shopper/productlist/component/product-header.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_product_header_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./product-header.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/shopper/productlist/component/product-header.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_product_header_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/shopper/productlist/component/product-list.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************!*\
+  !*** ./resources/js/shopper/productlist/component/product-list.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_product_list_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./product-list.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/shopper/productlist/component/product-list.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_product_list_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/shopper/productlist/component/product.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************!*\
+  !*** ./resources/js/shopper/productlist/component/product.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_product_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./product.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/shopper/productlist/component/product.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_product_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/shopper/productlist/main.vue?vue&type=script&lang=js&":
+/*!****************************************************************************!*\
+  !*** ./resources/js/shopper/productlist/main.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_main_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./main.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/shopper/productlist/main.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_main_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
@@ -28525,6 +28990,40 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/shopper/productlist/component/product-header.vue?vue&type=template&id=7a18e0e5&":
+/*!******************************************************************************************************!*\
+  !*** ./resources/js/shopper/productlist/component/product-header.vue?vue&type=template&id=7a18e0e5& ***!
+  \******************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_product_header_vue_vue_type_template_id_7a18e0e5___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_product_header_vue_vue_type_template_id_7a18e0e5___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_product_header_vue_vue_type_template_id_7a18e0e5___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./product-header.vue?vue&type=template&id=7a18e0e5& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/shopper/productlist/component/product-header.vue?vue&type=template&id=7a18e0e5&");
+
+
+/***/ }),
+
+/***/ "./resources/js/shopper/productlist/main.vue?vue&type=template&id=c291bfbe&":
+/*!**********************************************************************************!*\
+  !*** ./resources/js/shopper/productlist/main.vue?vue&type=template&id=c291bfbe& ***!
+  \**********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_main_vue_vue_type_template_id_c291bfbe___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_main_vue_vue_type_template_id_c291bfbe___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_main_vue_vue_type_template_id_c291bfbe___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./main.vue?vue&type=template&id=c291bfbe& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/shopper/productlist/main.vue?vue&type=template&id=c291bfbe&");
+
+
+/***/ }),
+
 /***/ "./resources/js/staff/calender.vue?vue&type=template&id=66955f87&":
 /*!************************************************************************!*\
   !*** ./resources/js/staff/calender.vue?vue&type=template&id=66955f87& ***!
@@ -28542,19 +29041,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/staff/productlist.vue?vue&type=template&id=c226e860&":
-/*!***************************************************************************!*\
-  !*** ./resources/js/staff/productlist.vue?vue&type=template&id=c226e860& ***!
-  \***************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ "./resources/js/shopper/productlist/component/product-list.vue?vue&type=custom&index=0&blockType=div&class=container":
+/*!***************************************************************************************************************************!*\
+  !*** ./resources/js/shopper/productlist/component/product-list.vue?vue&type=custom&index=0&blockType=div&class=container ***!
+  \***************************************************************************************************************************/
+/***/ (() => {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_productlist_vue_vue_type_template_id_c226e860___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_productlist_vue_vue_type_template_id_c226e860___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
-/* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_productlist_vue_vue_type_template_id_c226e860___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./productlist.vue?vue&type=template&id=c226e860& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/staff/productlist.vue?vue&type=template&id=c226e860&");
+
+
+/***/ }),
+
+/***/ "./resources/js/shopper/productlist/component/product.vue?vue&type=custom&index=0&blockType=div&class=product":
+/*!********************************************************************************************************************!*\
+  !*** ./resources/js/shopper/productlist/component/product.vue?vue&type=custom&index=0&blockType=div&class=product ***!
+  \********************************************************************************************************************/
+/***/ (() => {
+
 
 
 /***/ }),

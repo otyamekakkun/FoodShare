@@ -31,11 +31,11 @@ Vue.component(
 
 // カレンダーvueのコンポーネント
 Vue.component("calender-component", require("./staff/calender.vue").default);
+//商品一覧のコンポーネント
 Vue.component(
     "productlist-component",
-    require("./staff/productlist.vue").default
+    require("./shopper/productlist/main.vue").default
 );
-
 //実験用のコンポーネント
 Vue.component("drills-component", require("./drills/drills.vue").default);
 
