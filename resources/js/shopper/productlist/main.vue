@@ -6,22 +6,22 @@
 <!--  -->
 <template>
     <div>
-        <p>{{ fuji }}</p>
+        <p>{{ countUp() }}</p>
         <tr v-for="product in products">
             <td v-text="product.price"></td>
             <h1 v-if="product.price"></h1>
-            <h1 v-if="sampleB">v-else-if</h1>
-            <div>{{ countUp }}</div>
         </tr>
     </div>
+    <!-- <div>{{ countUp }}</div> -->
 </template>
 <script>
 import axios from "axios";
+/*
 import productheader from "./component/product-header.vue";
 import productlist from "./component/product-list.vue";
 
 import product from "./component/product.vue";
-
+*/
 //ここでエラーが発生していたコンポーネント自体読み取れていないということなのでここは読み取れている。
 export default {
     data: function () {
@@ -57,13 +57,15 @@ export default {
     //これはjson形式で値を取得しないといけないもの
     //子コンポーネントを登録するここのデータはほぼ確定している。
     components: {
+        /*
         productheader: productheader,
         productlist: productlist,
         product: product,
+        */
     },
     methods: {
         countUp: function () {
-            this.fuji += 1;
+            return this.fuji;
         },
     },
 
