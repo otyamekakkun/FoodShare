@@ -141,8 +141,8 @@ Route::post('/store', [App\Http\Controllers\ItemController::class, 'store'])->na
 //json形式でデータベースを取得したときに格納しとく場所
 //ここ後にセキュリティ対策をしないと大変なことになりそう（パスワードダダ漏れになるし。）
 //例えばこのurlをグチャグチャにする。
-Route::get('/drills/index1',[App\Http\Controllers\HaikiController::class, 'index1'])->name('drills.index1');
-Route::get('/drills/index2',[App\Http\Controllers\HaikiController::class, 'index2'])->name('drills.index2');
+Route::get('/haiki/index1',[App\Http\Controllers\HaikiController::class, 'index1'])->name('drills.index1');
+Route::get('/haiki/index2',[App\Http\Controllers\HaikiController::class, 'index2'])->name('drills.index2');
 
 
 
