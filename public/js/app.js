@@ -5460,12 +5460,30 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//import productHeaderVue from "./product-header.vue";
+
+/*
+export default {
+    props: ["product.price"],
+    data: function () {
+        return;
+        {
+            a: product.prices;
+        }
+    },
+};*/
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ["product.price,fuji"],
   data: function data() {
-    return {
-      props: ["item"]
-    };
-  }
+    {
+      return {
+        a: product.price
+      };
+    }
+  } //実験として情報を受け取る練習からする。
+  //これはjson形式で値を取得しないといけないもの
+  //子コンポーネントを登録するここのデータはほぼ確定している。
+
 });
 
 /***/ }),
@@ -5495,8 +5513,9 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     {
       return {
-        products: [] //img_path: {},
-
+        products: [],
+        //img_path: {},
+        fuji: 10
       };
     }
   },
@@ -5793,32 +5812,7 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", {
-    staticClass: "product"
-  }, [_c("div", {
-    staticClass: "product__body"
-  }, [_vm.item.isSale ? [_c("div", {
-    staticClass: "product__status"
-  }, [_vm._v("SALE")])] : _vm._e(), _vm._v(" "), _c("img", {
-    staticClass: "product__image",
-    attrs: {
-      src: _vm.item.image,
-      alt: ""
-    }
-  })], 2), _vm._v(" "), _c("div", {
-    staticClass: "product__detail"
-  }, [_c("div", {
-    staticClass: "product__name",
-    domProps: {
-      innerHTML: _vm._s(_vm.item.name)
-    }
-  }), _vm._v(" "), _c("div", {
-    staticClass: "product__price"
-  }, [_c("span", [_vm._v(_vm._s(_vm.$filters.number_format(_vm.item.price)))]), _vm._v("円（税込）\n        ")]), _vm._v(" "), _vm.item.shipping === 0 ? [_c("div", {
-    staticClass: "product__shipping"
-  }, [_vm._v("送料無料")])] : [_c("div", [_c("div", {
-    staticClass: "product__shipping"
-  }, [_vm._v("\n                    +送料"), _c("span", [_vm._v(_vm._s(_vm.$filters.number_format(_vm.item.shipping)))]), _vm._v("円\n                ")])])]], 2), _vm._v("\n    `\n")]);
+  return _c("div", [_c("h1", [_vm._v(_vm._s("fuji"))]), _vm._v(" "), _c("p", [_vm._v("僕の名前はおっぱい星人です")])]);
 };
 
 var staticRenderFns = [];
@@ -5843,13 +5837,15 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", _vm._l(_vm.products, function (product) {
+  return _c("div", {
+    staticClass: "app"
+  }, [_c("product"), _vm._v(" "), _vm._l(_vm.products, function (product) {
     return _c("tr", [_c("td", {
       domProps: {
         textContent: _vm._s(product.price)
       }
     })]);
-  }), 0);
+  })], 2);
 };
 
 var staticRenderFns = [];

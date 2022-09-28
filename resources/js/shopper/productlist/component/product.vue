@@ -1,41 +1,34 @@
 <template>
-    <div class="product">
-        <div class="product__body">
-            <template v-if="item.isSale">
-                <div class="product__status">SALE</div>
-            </template>
-            <img class="product__image" v-bind:src="item.image" alt="" />
-        </div>
-        <div class="product__detail">
-            <div class="product__name" v-html="item.name"></div>
-            <div class="product__price">
-                <span>{{ $filters.number_format(item.price) }}</span
-                >円（税込）
-            </div>
-            <template v-if="item.shipping === 0">
-                <div class="product__shipping">送料無料</div>
-            </template>
-            <template v-else>
-                <div>
-                    <div class="product__shipping">
-                        +送料<span>{{
-                            $filters.number_format(item.shipping)
-                        }}</span
-                        >円
-                    </div>
-                </div>
-            </template>
-        </div>
-        `
+    <div>
+        <!-- <h1>{{ a }}</h1> -->
+        <h1>{{ "fuji" }}</h1>
+        <p>僕の名前はおっぱい星人です</p>
     </div>
 </template>
-`
 <script>
+//import productHeaderVue from "./product-header.vue";
+/*
 export default {
+    props: ["product.price"],
     data: function () {
-        return {
-            props: ["item"],
-        };
+        return;
+        {
+            a: product.prices;
+        }
     },
+};*/
+export default {
+    props: ["product.price,fuji"],
+
+    data: function () {
+        {
+            return {
+                a: product.price,
+            };
+        }
+    },
+    //実験として情報を受け取る練習からする。
+    //これはjson形式で値を取得しないといけないもの
+    //子コンポーネントを登録するここのデータはほぼ確定している。
 };
 </script>

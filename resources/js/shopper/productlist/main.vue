@@ -1,9 +1,12 @@
 <!-- 
     ここでjson形式で情報を取得したい。これをもとに表示していきたいのでおそらく違う可能性がある
  -->
+<!-- usesの値はvueで使う処理なので自室なんでも良い -->
+
+<!--  -->
 <template>
-    <div>
-        <!-- usesの値はvueで使う処理なので自室なんでも良い -->
+    <div class="app">
+        <product></product>
         <tr v-for="product in products">
             <td v-text="product.price"></td>
         </tr>
@@ -11,7 +14,6 @@
 </template>
 <script>
 import axios from "axios";
-
 import productheader from "./component/product-header.vue";
 import productlist from "./component/product-list.vue";
 
@@ -24,6 +26,7 @@ export default {
             return {
                 products: [],
                 //img_path: {},
+                fuji: 10,
             };
         }
     },
