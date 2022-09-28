@@ -11,11 +11,12 @@
 </template>
 <script>
 import axios from "axios";
-/*
+
 import productheader from "./component/product-header.vue";
 import productlist from "./component/product-list.vue";
+
 import product from "./component/product.vue";
-*/
+
 //ここでエラーが発生していたコンポーネント自体読み取れていないということなのでここは読み取れている。
 export default {
     data: function () {
@@ -28,14 +29,12 @@ export default {
     },
     //実験として情報を受け取る練習からする。
     //これはjson形式で値を取得しないといけないもの
-    /*
-                //子コンポーネントを登録するここのデータはほぼ確定している。
-                components: {
-                    productheader: productheader,
-                    productlist: productlist,
-                    product: product,
-                },
-*/
+    //子コンポーネントを登録するここのデータはほぼ確定している。
+    components: {
+        productheader: productheader,
+        productlist: productlist,
+        product: product,
+    },
     //json形式でデータベースの値を取得する。
     //親から子にコンポーネントを渡す必要があるのでデータベースの値を子に渡す必要がある。
     mounted() {
