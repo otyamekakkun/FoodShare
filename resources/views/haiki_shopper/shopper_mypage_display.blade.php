@@ -47,12 +47,17 @@
 <h1>
     {{$my_user->name}}様
     haiki shareへようこそ！！
+
 </h1>
+<a class="btn_tw" href="https://twitter.com/intent/tweet?text=ここを記述するとtwitter内ですでに文が打ち込まれる;" target="_blank_" rel="nofollow"><i class="fab fa-twitter fa-fw"></i> この商品をシェアする</a>
+
 <main>
+
     <div class="l-shoppermypage">
     <div class="l-shoppermypage__exhibitarea">
     <h1>ご購入された商品一覧</h1>
     <a href="{{route('haiki_shopper.shopper_productlist_display')}}"><button>商品一覧に移動する</a></button>
+
 <h1>商品の画像</h1>
     <a href="{{route('haiki_shopper.shopper_productdetail_display')}}"><button>商品の詳細をみる</a></button>
 <button>購入をキャンセルする</button>
