@@ -207,6 +207,17 @@ public function index2(Request $request){
     return response()->json($drill);
 }
 
+//==================================
+//商品リストの取得をjson形式にしたもの
+//=================================
+public function productjson(){
+
+    //$drills = Drill::all();
+    //return view('drills.index',['drills'=>$drills]); //drills.indexに値を渡している
+    $id = Auth::guard('admin')->id();
+    $product = products::where("admin_id",$id)->get();
+return response()->json($product);
+} 
 
 
 

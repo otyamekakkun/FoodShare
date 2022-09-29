@@ -34,6 +34,7 @@
 
 
 <p>{{$product->product_name}}</p>
+<p>価格:{{$product->price}}</p>
 @endforeach
 
 

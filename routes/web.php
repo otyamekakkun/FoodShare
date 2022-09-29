@@ -143,6 +143,7 @@ Route::post('/store', [App\Http\Controllers\ItemController::class, 'store'])->na
 //例えばこのurlをグチャグチャにする。
 Route::get('/haiki/index1',[App\Http\Controllers\HaikiController::class, 'index1'])->name('drills.index1');
 Route::get('/haiki/index2',[App\Http\Controllers\HaikiController::class, 'index2'])->name('drills.index2');
+Route::get('/haiki/index3',[App\Http\Controllers\HaikiController::class, 'productjson'])->name('product.json');
 
 
 
