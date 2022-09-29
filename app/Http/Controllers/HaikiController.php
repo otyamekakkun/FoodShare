@@ -164,8 +164,11 @@ create_exhibitproductのpost送信を行うためのデータベースの処理�
 $img = $request->file('img_path');
 $path = $img->store('img','public');//1
 
+$id = Auth::guard('admin')->id();
+
 $product = new products;
 $product->product_name = $request->product_name;
+$product->admin_id = $id;
 $product->img_path=$path;
 $product->price = $request->price;
 $product->best_by_date = $request->best_by_date;

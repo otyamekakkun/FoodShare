@@ -62,7 +62,7 @@ class LoginController extends Controller
     {
         $this->validate($request, [
             'email'   => 'required|email',
-            'password' => 'required|min:8'
+            'password' => 'required|min:6'
         ]);
 
         // If the class is using the ThrottlesLogins trait, we can automatically throttle
