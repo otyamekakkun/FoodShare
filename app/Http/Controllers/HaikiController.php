@@ -138,11 +138,16 @@ return view('admin');
     } //.............................................................9
 
 //========================================================================    
-//ここから商品ホームページの一覧の流れを記述する
+//コンビニスタッフが商品を出品したものをリスト化するもの
 //========================================================================    
 
     public function staff_exhibitproduct_list_display(){
-    return view('haiki_staff.staff_exhibitproduct_list_display');
+
+        //$drills = Drill::all();
+        //return view('drills.index',['drills'=>$drills]); //drills.indexに値を渡している
+        $id = Auth::guard('admin')->id();
+        $product = products::where("admin_id",$id)->get();
+    return view('haiki_staff.staff_exhibitproduct_list_display',['products'=>$product]);
     } 
 
 //====================================================================
@@ -164,11 +169,12 @@ create_exhibitproductのpost送信を行うためのデータベースの処理�
 $img = $request->file('img_path');
 $path = $img->store('img','public');//1
 
+//$idは管理者ログインのidを取得する
 $id = Auth::guard('admin')->id();
 
 $product = new products;
 $product->product_name = $request->product_name;
-$product->admin_id = $id;
+$product->admin_id = $id;//現在ログインしているコンビニユーザー情報のidをこの中に入れる
 $product->img_path=$path;
 $product->price = $request->price;
 $product->best_by_date = $request->best_by_date;
