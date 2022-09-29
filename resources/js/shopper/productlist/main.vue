@@ -8,6 +8,8 @@
     <div>
         <p>{{ countUp() }}</p>
         <p>{{ countdown() }}</p>
+        <product val="これ"></product>
+
         <!-- 
         <div v-for="product in products">
             <td v-text="product.price"></td>
@@ -22,9 +24,9 @@ import axios from "axios";
 /*
 import productheader from "./component/product-header.vue";
 import productlist from "./component/product-list.vue";
+*/
 
 import product from "./component/product.vue";
-*/
 //ここでエラーが発生していたコンポーネント自体読み取れていないということなのでここは読み取れている。
 export default {
     data: function () {
@@ -61,11 +63,9 @@ export default {
     //これはjson形式で値を取得しないといけないもの
     //子コンポーネントを登録するここのデータはほぼ確定している。
     components: {
-        /*
-        productheader: productheader,
-        productlist: productlist,
+        //productheader: productheader,
+        // productlist: productlist,
         product: product,
-        */
     },
     methods: {
         countUp: function () {

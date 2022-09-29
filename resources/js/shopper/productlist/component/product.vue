@@ -22,13 +22,13 @@ export default {
     },
 };*/
 export default {
-    props: ["val", "vala"],
+    props: ["val"],
 
     data: function () {
         {
             return {
                 //a: product.price,
-                fuji: 10,
+                kakuto: 10,
             };
         }
     },
