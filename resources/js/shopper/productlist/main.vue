@@ -5,19 +5,58 @@
 
 <!--  -->
 <template>
-    <div>
+    <div id="app">
+        <!-- 
         <p>{{ countUp() }}</p>
         <p>{{ countdown() }}</p>
         <product val="これ"></product>
 
-        <!-- 
         <div v-for="product in products">
             <td v-text="product.price"></td>
             <h1 v-if="product.price"></h1>
         </div>
-             -->
     </div>
-    <!-- <div>{{ countUp }}</div> -->
+-->
+        <!-- <div>{{ countUp }}</div> -->
+        <h1>商品一覧</h1>
+        <div class="search">
+            検索結果
+            <span class="">?件</span>
+        </div>
+        <div class="">
+            <!-- ここにcheckboxを忍ばせる 
+            概要として
+            賞味期限
+            価格
+            出品しているコンビニの都道府県と絞りこむ。
+            -->
+            <!-- 価格について -->
+            <select class="">
+                <option value="0">価格の範囲を指定する</option>
+                <option value="1">100円以下を表示する</option>
+                <option value="2">500円以下を表示する</option>
+                <option value="3">1000円以下を表示する</option>
+            </select>
+            <!-- 賞味期限が有効期限いないかどうかを確かめる -->
+            <input
+                type="checkbox"
+                v-model="check1"
+            />賞味期限以内の商品を表示する
+            <!-- 都道府県の情報を取得する -->
+
+            <select class="">
+                <option value="0">出品している都道府県を絞りこむ</option>
+                <option value="1">北海道</option>
+                <option value="2">青森</option>
+                <option value="3">岩手</option>
+                <!-- おそら狗でーたべーすの中に情報を取得すると思う。 -->
+            </select>
+        </div>
+
+        <!-- ここまでが商品の検索するheader部分に当たる。 -->
+
+        <!-- ここで色々なものを表示するための記述する -->
+    </div>
 </template>
 <script>
 import axios from "axios";
@@ -68,6 +107,10 @@ export default {
         product: product,
     },
     methods: {
+        //json形式で値を取得する方法
+        all: function () {
+            return this.products;
+        },
         countUp: function () {
             return this.products[0]["product_name"];
         },
@@ -96,51 +139,7 @@ export default {
 
  -->
 <!-- 
-//=========
-//実験１
-//==========
-    methods: {
-        countUp: function () {
-            const a = this.products + "好きです";
-            return a;
-        },
-    },
-[object object]好きですという表記になった。
-
-//=====================
-//実験２
-//====================
-
-    methods: {
-        countUp: function () {
-            console.log(this.products);
-        },
-    },
-
-コンソール形式で導出されるようになった
-//============================
-//実験３ 
-//==============================
-
-一部抜粋
-    data: function () {
-        {
-            //データは言わば変数みたいなもの色々なところで使い回せる
-            return {
-                products: ["price"],
-
-ミス
-//========================
-//実験４
-//===================
-
-    methods: {
-        countUp: function () {
-            return this.products;
-        },
-    },
-全権表示される
-
+s
 
 //=================
 //実験5

@@ -5444,6 +5444,10 @@ import productlist from "./component/product-list.vue";
     product: _component_product_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   methods: {
+    //json形式で値を取得する方法
+    all: function all() {
+      return this.products;
+    },
     countUp: function countUp() {
       return this.products[0]["product_name"];
     },
@@ -5635,14 +5639,96 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", [_c("p", [_vm._v(_vm._s(_vm.countUp()))]), _vm._v(" "), _c("p", [_vm._v(_vm._s(_vm.countdown()))]), _vm._v(" "), _c("product", {
+  return _c("div", {
     attrs: {
-      val: "これ"
+      id: "app"
     }
-  })], 1);
+  }, [_c("h1", [_vm._v("商品一覧")]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c("div", {}, [_vm._m(1), _vm._v(" "), _c("input", {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: _vm.check1,
+      expression: "check1"
+    }],
+    attrs: {
+      type: "checkbox"
+    },
+    domProps: {
+      checked: Array.isArray(_vm.check1) ? _vm._i(_vm.check1, null) > -1 : _vm.check1
+    },
+    on: {
+      change: function change($event) {
+        var $$a = _vm.check1,
+            $$el = $event.target,
+            $$c = $$el.checked ? true : false;
+
+        if (Array.isArray($$a)) {
+          var $$v = null,
+              $$i = _vm._i($$a, $$v);
+
+          if ($$el.checked) {
+            $$i < 0 && (_vm.check1 = $$a.concat([$$v]));
+          } else {
+            $$i > -1 && (_vm.check1 = $$a.slice(0, $$i).concat($$a.slice($$i + 1)));
+          }
+        } else {
+          _vm.check1 = $$c;
+        }
+      }
+    }
+  }), _vm._v("賞味期限以内の商品を表示する\n            "), _vm._v(" "), _vm._m(2)])]);
 };
 
-var staticRenderFns = [];
+var staticRenderFns = [function () {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("div", {
+    staticClass: "search"
+  }, [_vm._v("\n            検索結果\n            "), _c("span", {}, [_vm._v("?件")])]);
+}, function () {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("select", {}, [_c("option", {
+    attrs: {
+      value: "0"
+    }
+  }, [_vm._v("価格の範囲を指定する")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "1"
+    }
+  }, [_vm._v("100円以下を表示する")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "2"
+    }
+  }, [_vm._v("500円以下を表示する")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "3"
+    }
+  }, [_vm._v("1000円以下を表示する")])]);
+}, function () {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("select", {}, [_c("option", {
+    attrs: {
+      value: "0"
+    }
+  }, [_vm._v("出品している都道府県を絞りこむ")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "1"
+    }
+  }, [_vm._v("北海道")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "2"
+    }
+  }, [_vm._v("青森")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "3"
+    }
+  }, [_vm._v("岩手")])]);
+}];
 render._withStripped = true;
 
 
