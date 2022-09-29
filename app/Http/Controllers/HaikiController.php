@@ -184,12 +184,7 @@ return redirect('admin')->with('flash_message', __('Registered.'));//3
 
 }
  //.............................................................終了12
-
-    public function staff_productlist_display(){
-        return view('haiki_staff.staff_productlist_display');
-        } //.............................................................10
     //画面を表示するための処理ここまで
-
 
 
 

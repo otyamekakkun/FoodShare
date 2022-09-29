@@ -108,17 +108,12 @@ Route::post('create_exhibitproduct',[App\Http\Controllers\HaikiController::class
 Route::get('/haiki/staff_buyproduct',[App\Http\Controllers\HaikiController::class, 'staff_buyproduct_display'])->name('haiki_shopper.staff_buyproduct_display');                     //8
 Route::get('/haiki/staff_productedit',[App\Http\Controllers\HaikiController::class, 'staff_productedit_display'])->name('haiki_shopper.staff_productedit_display');                  //9
 Route::get('/haiki/staff_exhibitproductlist',[App\Http\Controllers\HaikiController::class, 'staff_exhibitproduct_list_display'])->name('haiki_shopper.staff_exhibitproduct_list_display'); //10
-Route::get('/haiki/staff_productlist',[App\Http\Controllers\HaikiController::class, 'staff_productlist_display'])->name('haiki_shopper.staff_productlist_display'); //11
 
 
 
 //form入力チェック用のroute
 //staff_profileのフォームを入力する
 Route::post('/haiki/staff_profile',[App\Http\Controllers\HaikiController::class, 'staff_profile_edit'])->name('haiki_staffprofile_edit');
-
-//
-
-
 
 // ここから追加
 Route::get('/login/admin', [App\Http\Controllers\Auth\LoginController::class, 'showAdminLoginForm']);

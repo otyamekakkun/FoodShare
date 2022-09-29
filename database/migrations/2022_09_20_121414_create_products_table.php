@@ -16,7 +16,8 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->bigIncrements('product_id');//商品ID
-            $table->integer('admin_id');
+            $table->integer('admin_id');//管理者ID
+            $table->integer('user_id');//ユーザーID
             $table->string('product_name');//商品の名前を入力するためのもの
             $table->string('img_path');//画像を入れるもの
             $table->integer('price');//価格を入力するためのもの

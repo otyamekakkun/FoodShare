@@ -12,7 +12,7 @@ class products extends Model
 
     //練習
     //別に過剰していても入っていれば登録することができる
-    protected $fillable =  ['product_name','admin_id','img_path','price', 'best_by_date'];
+    protected $fillable =  ['product_name','admin_id','user_id','img_path','price', 'best_by_date','bought'];
 
 
 
