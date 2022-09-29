@@ -16,7 +16,29 @@
     right: 25%;
     margin: 50px 50px;
     transition: all 1.2s;
+    /*
+    @include mql() {
+        width: 30%;
+        margin: auto;
+    }
+    */
+    @include mqxl() {
+        width: 15%;
+        margin: auto;
+        //レスポンシブ対策960px以下にボタンを対応
+    }
+
+    @include mql() {
+        width: 20%;
+        margin: auto;
+    }
+
+    @include mq() {
+        width: 30%;
+        margin: auto;
+    }
 }
+
 .c-formshopperprofile__sub:hover {
     cursor: pointer;
     background: #b2d142;

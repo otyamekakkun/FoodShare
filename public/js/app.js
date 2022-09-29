@@ -5417,19 +5417,15 @@ import productlist from "./component/product-list.vue";
     {
       //データは言わば変数みたいなもの色々なところで使い回せる
       return {
-        products: {},
-        // products_prace: [(products) => prace],
-        fuji: 10,
-        kakuto: 30,
+        //ここでの処理はチェックボタンが押されているかどうかの言わばスイッチみたいに役割を持たせる。
+        check1: false,
+        check2: false,
+        check3: false,
+        //データベースの情報を取得
+        products: {} // products_prace: [(products) => prace],
+        //価格の絞り込みを行う。
+        //ソート順(0:未選択,1:100円以下を絞りこむ,2:500円以下を絞り込む、3:1000円以下を絞りこむ)
         //賞味期限が切れているかどうかをチェック。(切れている商品があったら非表示にすること)
-        check1: true,
-        //価格の絞り込み
-        //100円以下
-        check2: true,
-        //200円以下
-        sampleB: true //500円以下
-        //1000円以下
-        //それ以上
         //出品しているコンビニのある都道府県を実装すること
 
       };
@@ -5445,14 +5441,40 @@ import productlist from "./component/product-list.vue";
   },
   methods: {
     //json形式で値を取得する方法
-    all: function all() {
-      return this.products;
-    },
-    countUp: function countUp() {
-      return this.products[0]["product_name"];
-    },
-    countdown: function countdown() {
-      return this.products[1]["price"];
+
+    /*
+    今回準備するメソッド
+    1.検索条件で絞り込んだリストを返すもの.
+    2.価格によって条件を絞り込む。(段々と制限を緩くする感じ)
+    3.現在時刻と比較して賞味期限が切れているかどうかを確かめる関数。
+    4.都道府県の条件を絞り込む関数を作る。
+    何夜間やでおそらく一つの処理ですみそう
+    */
+    //2
+
+    /*
+    ここから処理を記述するs
+    */
+    search: function search() {
+      //コンポーネントのインスタンスを取得
+      //filterメソッドを使うのかな
+      //検索条件1
+
+      /*
+      const app = product
+      */
+      var filterList = this.product.filter(function (item) {
+        //表示判定(true:表示する,false:表示しない)
+        if (check1) {
+          //100円の商品以下の商品を表示する
+          if (check1a) {
+            //100円以下の商品は非表示にする
+            show = false;
+          }
+        }
+      }); //表示判定を返す
+
+      return show;
     }
   },
 
