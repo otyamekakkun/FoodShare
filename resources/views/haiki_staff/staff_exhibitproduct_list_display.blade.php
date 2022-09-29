@@ -1,6 +1,5 @@
 @extends('layouts.app2')
 @section('content')
-
 <body>
     {{-- 
         １ヘッダー部分の場所取り
@@ -8,6 +7,19 @@
         ３ nav要素の場所取り, botanみたいな形にしたい。（切り抜いて配色みたいな感じ） fontsize 配色
         
         --}}
+{{-- 
+    自分の出品した商品を取得するだけの処理。
+    
+    --}}
+
+
+
+
+
+
+
+
+
         <header>
             @include('rest.staff.header')
         </header>
@@ -30,9 +42,6 @@
     <a href="{{route('haiki_shopper.staff_exhibitproduct_display')}}"><button>商品を出品する</a></button>
     </div>
     </div>
-    
-    
-    
     </main>
     
     

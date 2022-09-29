@@ -35,6 +35,29 @@
 1.ボタンをクリックしたらモーダルを出す機能をつけたい。（そのモーダルから、あなたは本当に
 利用者ですか？スタッフですか？と言うコメントを出してモーダル上から画面遷移をさせる。
 --}}
+
+
+
+
+{{-- 
+    自分が購入した商品を取得する。
+    各商品ごとに詳細を見る、購入をキャンセルするボタンがある。
+    自分の商品なので気にする必要はなさそう。
+
+    vueの処理はなし
+    結構後の方の処理
+    
+    
+    --}}
+
+
+
+
+
+
+
+
+
 @extends('layouts.app2') 
 
 
@@ -49,7 +72,7 @@
     haiki shareへようこそ！！
 
 </h1>
-<a class="btn_tw" href="https://twitter.com/intent/tweet?text=ここを記述するとtwitter内ですでに文が打ち込まれる;" target="_blank_" rel="nofollow"><i class="fab fa-twitter fa-fw"></i> この商品をシェアする</a>
+<a class="btn_tw" href="https://twitter.com/intent/tweet?text=ここを記述するとtwitter内ですでに文が打ち込まれる;" target="_blank_" rel="nofollow"><i class="fab fa-twitter fa-fw"></i> この商品をシェアするs</a>
 
 <main>
 

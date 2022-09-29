@@ -45,10 +45,26 @@
 //7.購入していない時の状況
 //=====================================================
 購入していない状況だったら、購入できる状態に持っていく。
-
-
-
  --}}
+
+
+{{-- 
+    これもそんなに難しいものではないと思う。
+    自分が出品した商品＋購入フラグが立っているものをよみこべばいい
+    laravelでwhere文で呼び込めばいいのかな？
+
+    --}}
+
+
+
+
+
+
+
+
+
+
+
 
 @extends('layouts.app2')
 @section('content')
@@ -61,17 +77,12 @@
 </h1>
 
 
-
-
-
-
 <main>
     <div class="l-staffmypage">
         {{-- 
     <div class="l-staffmypage__exhibitarea">
     <h1>自分のコンビニが出品した商品</h1>
     <button><a href="{{route('haiki_shopper.staff_exhibitproduct_list_display')}}"><button>出品した商品一覧を表示</a></button>
-    
     </div>
 
      --}}

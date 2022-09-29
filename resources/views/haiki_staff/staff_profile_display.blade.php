@@ -49,7 +49,11 @@
 
 
  --}}
-
+{{-- 
+    ログインしているスタッフの情報をまとめて編集する
+    vueはいらない
+    
+    --}}
 
 @extends('layouts.app2')
 @section('content')
