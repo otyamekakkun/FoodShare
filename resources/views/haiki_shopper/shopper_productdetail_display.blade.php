@@ -70,9 +70,11 @@
     ここでメニューバー見たいな感じをつけようかな
     <button>購入する</button>
     <button>購入をキャンセルする</button>
-   <button><a class="btn_tw" href="https://twitter.com/intent/tweet?text=ここを記述するとtwitter内ですでに文が打ち込まれる;" 
-    target="_blank_" rel="nofollow"><i class="fab fa-twitter fa-fw"></i> この商品をシェアする</a>
+   <button>
+    <a class="btn_tw" href="https://twitter.com/intent/tweet?text=ここを記述するとtwitter内ですでに文が打ち込まれる;" target="_blank_" rel="nofollow"><i class="fab fa-twitter fa-fw"></i> この商品をシェアする</a>
+
    </button> 
+
 </div>
 </div>
 </div>  
