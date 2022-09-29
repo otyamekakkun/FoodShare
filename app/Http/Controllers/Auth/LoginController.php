@@ -78,7 +78,9 @@ class LoginController extends Controller
         if (Auth::guard('admin')->attempt(['email' => $request->email, 'password' => $request->password],
          $request->get('remember'))) {
             //ここのredirect先をコンビニスタッフのマイページに飛ばせるようにする
-            return redirect('/admin')->intended('/admin');
+            //上記のコードだと1度エラーが発生してしまう状態になっていたので下記に書き直した
+            //return redirect('/admin')->intended('/admin');
+            return redirect('/admin');
         }
 
         // If the login attempt was unsuccessful we will increment the number of attempts
