@@ -27,7 +27,16 @@
 <h1>
     コンビニ側が出品した商品の一覧のページです
 </h1>
-<p>{{$products}}</p>
+
+
+@foreach ($products as $product)
+
+
+
+<p>{{$product->product_name}}</p>
+@endforeach
+
+
 
 <main>
     <div class="l-staffmypage">
