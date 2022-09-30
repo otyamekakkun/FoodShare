@@ -68,6 +68,11 @@ Route::get('/haiki/staff_buyproduct',[App\Http\Controllers\HaikiController::clas
 Route::get('/haiki/staff_productedit',[App\Http\Controllers\HaikiController::class, 'staff_productedit_display'])->name('haiki_shopper.staff_productedit_display')->middleware('auth:admin');                  //9
 Route::get('/haiki/staff_exhibitproductlist',[App\Http\Controllers\HaikiController::class, 'staff_exhibitproduct_list_display'])->name('haiki_shopper.staff_exhibitproduct_list_display')->middleware('auth:admin'); //10
 Route::get('/haiki/staff_productlist',[App\Http\Controllers\HaikiController::class, 'staff_productlist_display'])->name('haiki_shopper.staff_productlist_display')->middleware('auth:admin'); //11
+//これは新たに追加したものだから修正する必要がありそう
+Route::get('/haiki/{id}/staff_productedit',[App\Http\Controllers\HaikiController::class, 'staff_productedit_display'])->name('haiki_shopper.staff_productedit_display');                  //9
+Route::get('/haiki/{id}/staff_productdetail',[App\Http\Controllers\HaikiController::class, 'staff_productdetail_display'])->name('haiki_shopper.staff_productdetail_display');                  //9
+
+
 */
 // ここから追加
 
@@ -110,6 +115,8 @@ Route::get('/haiki/staff_buyproduct',[App\Http\Controllers\HaikiController::clas
 //ここで編集する商品画面を作った
 
 Route::get('/haiki/{id}/staff_productedit',[App\Http\Controllers\HaikiController::class, 'staff_productedit_display'])->name('haiki_shopper.staff_productedit_display');                  //9
+Route::get('/haiki/{id}/staff_productdetail',[App\Http\Controllers\HaikiController::class, 'staff_productdetail_display'])->name('haiki_shopper.staff_productdetail_display');                  //9
+
 Route::get('/haiki/staff_exhibitproductlist',[App\Http\Controllers\HaikiController::class, 'staff_exhibitproduct_list_display'])->name('haiki_shopper.staff_exhibitproduct_list_display'); //10
 
 

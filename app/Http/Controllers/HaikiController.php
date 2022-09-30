@@ -135,6 +135,11 @@ return view('admin');
         return view('haiki_staff.staff_buyproduct_display');
     } //.............................................................8
 
+
+//=====================================================
+//コンビニ用の商品編集画面を表したもの
+//=====================================================
+
     public function staff_productedit_display($id){
 
         //関数名を
@@ -143,6 +148,29 @@ return view('admin');
     return view('haiki_staff.staff_productedit_display',['products'=>$product]);
 
     } //.............................................................9
+
+
+
+    public function staff_productdetail_display($id){
+
+        //関数名を
+        $product = products::find($id)->get();
+        
+    return view('haiki_staff.staff_productdetail_display',['products'=>$product]);
+
+    } //.............................................................9
+
+
+
+
+
+
+
+
+
+
+
+
 
 //========================================================================    
 //コンビニスタッフが商品を出品したものをリスト化するもの

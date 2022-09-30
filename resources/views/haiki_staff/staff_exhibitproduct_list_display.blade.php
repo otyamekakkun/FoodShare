@@ -29,6 +29,8 @@
     <p>価格:{{$product->price}}</p>
     {{-- <button>詳細をみる</button> --}}
     <p>詳細をみる</p>
+    <button><a href="{{route('haiki_shopper.staff_productdetail_display',$product->id)}}">商品の詳細をみる</a>
+
     @if($product->bought===0)
     {{-- <button>購入されていないので編集する</button> --}}
     {{-- <a href="{{route('haiki_shopper.staff_productedit_display',$product->product_id)}}">>商品を編集する<</a> --}}
