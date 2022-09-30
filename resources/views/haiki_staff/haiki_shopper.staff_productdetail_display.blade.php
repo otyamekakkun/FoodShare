@@ -13,7 +13,7 @@
             @include('rest.staff.header')
     
 <h1>
-    コンビニ側用の商品詳細画面にする
+    コンビニ側でも商品一覧を写す機能を作ります
 </h1>
 <div id="app">
 <footer-component></footer-component>
