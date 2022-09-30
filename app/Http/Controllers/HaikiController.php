@@ -79,7 +79,10 @@ return view('haiki_shopper.shopper_mypage_display');
 //staff_mypage_display
 //===========================================================
     public function staff_mypage_display(){
-        return view('haiki_staff.staff_mypage_display');
+        $id = Auth::guard('admin')->id();
+        $product = products::where("admin_id",$id)->paginate(2);
+
+        return view('haiki_staff.staff_mypage_display',['products'=>$product]);
     } 
     /*
     データベースの処理を行う。
@@ -161,15 +164,6 @@ return view('admin');
     return view('haiki_staff.staff_productdetail_display',['products'=>$product]);
 
     } //.............................................................9
-
-
-
-
-
-
-
-
-
 
 
 
