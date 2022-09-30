@@ -40,10 +40,26 @@
     @endif
     {{-- おそらく詳細を見る編集するでidをふる練習をしないと行けなさそう。 --}}
 
-    @endforeach
-    
-    
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @endforeach
+        
+    {{$products->links('layouts.paginate')}}
+
+    
 
 
 
@@ -55,8 +71,6 @@
     </div>
     </main>
     
-    
-
 
 
 

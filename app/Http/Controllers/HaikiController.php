@@ -153,7 +153,13 @@ return view('admin');
         //$drills = Drill::all();
         //return view('drills.index',['drills'=>$drills]); //drills.indexに値を渡している
         $id = Auth::guard('admin')->id();
-        $product = products::where("admin_id",$id)->get();
+        $product = products::where("admin_id",$id)->paginate(2);
+        //ページネーションの処理できる？
+
+        //$product = products::where("admin_id",$id);
+
+
+
     return view('haiki_staff.staff_exhibitproduct_list_display',['products'=>$product]);
     } 
 
