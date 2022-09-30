@@ -149,12 +149,14 @@ return view('admin');
 
     } //.............................................................9
 
-
+//=========================================
+//コンビニ側商品の詳細画面に行けるようにしたもの
+//=========================================
 
     public function staff_productdetail_display($id){
 
         //関数名を
-        $product = products::find($id)->get();
+        $product = products::find($id);
         
     return view('haiki_staff.staff_productdetail_display',['products'=>$product]);
 
