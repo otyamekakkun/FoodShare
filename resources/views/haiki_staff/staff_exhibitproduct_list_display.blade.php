@@ -29,20 +29,34 @@
 </h1>
 
 
-@foreach ($products as $product)
-
-
-
-<p>{{$product->product_name}}</p>
-<p>価格:{{$product->price}}</p>
-@endforeach
-
-
 
 <main>
     <div class="l-staffmypage">
     <div class="l-staffmypage__exhibitarea">
     <h1>自分のコンビニが出品した商品</h1>
+    @foreach ($products as $product)
+
+
+    <img src="{{ Storage::url($product->img_path) }}" width="25%">
+    <p>商品名:{{$product->product_name}}
+    </p>
+    <p>価格:{{$product->price}}</p>
+    <button>詳細をみる</button>
+    @if($product->bought===0)
+    <button>購入されていないので編集する</button>
+    @endif
+    {{-- おそらく詳細を見る編集するでidをふる練習をしないと行けなさそう。 --}}
+
+    @endforeach
+    
+    
+
+
+
+
+
+
+
     <button><a href="{{route('haiki_shopper.staff_productedit_display')}}"><button>出品した商品一覧を表示</a></button>
     </div>
     {{-- 基本的にページネーションをここで施す --}}
