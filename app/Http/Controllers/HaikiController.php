@@ -135,10 +135,11 @@ return view('admin');
         return view('haiki_staff.staff_buyproduct_display');
     } //.............................................................8
 
-    public function staff_productedit_display($product_id){
+    public function staff_productedit_display($id){
 
         //関数名を
-        $product = products::find($product_id);
+        $product = products::find($id)->get();
+        
     return view('haiki_staff.staff_productedit_display',['products'=>$product]);
 
     } //.............................................................9
