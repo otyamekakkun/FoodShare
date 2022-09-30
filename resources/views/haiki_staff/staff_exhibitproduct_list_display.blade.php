@@ -34,6 +34,8 @@
     @if($product->bought===0)
     {{-- <button>購入されていないので編集する</button> --}}
     <p>編集する</p>
+    <a href="{{route('haiki_shopper.staff_productedit_display',$product->product_id)}}">>商品を編集する<</a>
+
     @endif
     {{-- おそらく詳細を見る編集するでidをふる練習をしないと行けなさそう。 --}}
 

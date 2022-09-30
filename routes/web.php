@@ -106,7 +106,10 @@ Route::get('/haiki/staff_exhibitproduct',[App\Http\Controllers\HaikiController::
 Route::post('create_exhibitproduct',[App\Http\Controllers\HaikiController::class,'create_exhibitproduct'])->name('create.exhibit');
 //商品を出品するホームページ制作ここまで。
 Route::get('/haiki/staff_buyproduct',[App\Http\Controllers\HaikiController::class, 'staff_buyproduct_display'])->name('haiki_shopper.staff_buyproduct_display');                     //8
-Route::get('/haiki/staff_productedit',[App\Http\Controllers\HaikiController::class, 'staff_productedit_display'])->name('haiki_shopper.staff_productedit_display');                  //9
+
+//ここで編集する商品画面を作った
+
+Route::get('/haiki/product_id/staff_productedit',[App\Http\Controllers\HaikiController::class, 'staff_productedit_display'])->name('haiki_shopper.staff_productedit_display');                  //9
 Route::get('/haiki/staff_exhibitproductlist',[App\Http\Controllers\HaikiController::class, 'staff_exhibitproduct_list_display'])->name('haiki_shopper.staff_exhibitproduct_list_display'); //10
 
 
