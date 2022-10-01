@@ -749,6 +749,11 @@ a {
   background: #b2d142;
 }
 
+.c-title {
+  text-align: center;
+  font-size: 20px;
+}
+
 /*
 * かなりの可能性で書き換える可能性があるので9/1４時点ではここまでにしとく
 *

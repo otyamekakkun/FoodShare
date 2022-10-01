@@ -177,7 +177,7 @@ return view('admin');
         //$drills = Drill::all();
         //return view('drills.index',['drills'=>$drills]); //drills.indexに値を渡している
         $id = Auth::guard('admin')->id();
-        $product = products::where("admin_id",$id)->paginate(2);
+        $product = products::where("admin_id",$id)->paginate(5);
         //ページネーションの処理できる？
 
         //$product = products::where("admin_id",$id);
@@ -197,7 +197,8 @@ return view('admin');
 public function admin(){
 
     $id = Auth::guard('admin')->id();
-    $product = products::where("admin_id",$id)->paginate(2);
+    //ページネーションでしようか全ページ
+    $product = products::where("admin_id",$id)->paginate(5);
 
     return view('admin',['products'=>$product]);
     
