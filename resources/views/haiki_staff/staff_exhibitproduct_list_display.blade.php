@@ -20,13 +20,15 @@
                 <div>
                     <div>
                         <div>
+                            <div>
     @foreach ($products as $product)
-    <div class="proa">
+    <div class="prob">
         <img src="{{ Storage::url($product->img_path) }}" width="25%">
-        <p>商品名:{{$product->product_name}}</p>
-        <p>価格:{{$product->price}}</p>
+        <div class="proc">
+            <ul>
+        <li>商品名:{{$product->product_name}}</li>
+        <li>価格:{{$product->price}}</li>
     
-    </div>
     {{-- <button>詳細をみる</button> --}}
     <button><a href="{{route('haiki_shopper.staff_productdetail_display',$product->id)}}">商品の詳細をみる</a></button>
     @if($product->bought===0)
@@ -34,8 +36,10 @@
     {{-- <a href="{{route('haiki_shopper.staff_productedit_display',$product->product_id)}}">>商品を編集する<</a> --}}
     <button><a href="{{route('haiki_shopper.staff_productedit_display',$product->id)}}">商品を編集する</a>
     </button>
+</ul>
 </div>
-
+</div>
+<div class="c-under"></div>
     @endif
     {{-- おそらく詳細を見る編集するでidをふる練習をしないと行けなさそう。 --}}
 
@@ -51,9 +55,6 @@
 
     {{$products->links('layouts.paginate')}}
 
-                </div>
-                </div>
-            </div>
             {{-- 全体のレイアウトを閉じるdiv --}}
 </div>
 </main>
