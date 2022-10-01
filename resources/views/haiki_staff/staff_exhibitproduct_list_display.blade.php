@@ -15,20 +15,14 @@
 
 {{-- おそらくもっといい方法があると思うが --}}
 
-            <div class="pro">
-                <div class="proa">
+            <div class="l-exhibitproductlist__list">
+                <div class="l-exhibitproductlist__listb">
                 <div>
                     <div>
                         <div>
                             <div>
     @foreach ($products as $product)
     <div class="prob">
-
-
-
-
-
-
         <img src="{{ Storage::url($product->img_path) }}" width="25%">
         <div class="proc">
             <ul>

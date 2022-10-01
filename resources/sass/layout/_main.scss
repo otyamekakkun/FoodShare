@@ -227,3 +227,45 @@
 
     //画面の大きさによって高さが足りなくなりそうなのでレスポンシブを使う
 }
+
+//ここはレイアウト部分
+.l-exhibitproductlist__list {
+    height: 1400px;
+    margin-top: 10px;
+    //text-align: center;
+    //水色部分に反応しているところ表示
+}
+
+.l-exhibitproductlist__listb {
+    padding: 20px;
+    margin-top: 10px;
+}
+
+//================================================
+//staff_productdetail
+//================================================
+.l-staffproductdetail {
+    background: white;
+    display: block;
+    //中央に要素を寄せるときはこれを用いる
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
+    width: 80%;
+    height: 600px;
+}
+.l-staffproductdetail__area {
+    // background: red;
+    // margin-right: auto;
+    //margin-left: auto;
+    display: flex;
+}
+img {
+    height: 500px;
+    width: 60%;
+    margin: 40px;
+}
+.l-staffproductdetail__areaflex {
+    display: flex;
+}

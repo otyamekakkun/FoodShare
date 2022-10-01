@@ -53,11 +53,6 @@
 
 
 
-
-
-
-
-
 @extends('layouts.app2') 
 
 
