@@ -187,9 +187,13 @@
 //================================================
 .a {
     background: white;
-    margin: auto;
+    display: block;
+    //中央に要素を寄せるときはこれを用いる
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
     width: 80%;
-    height: 700px;
+    height: 1400px;
 }
 .b {
     background: red;
@@ -210,3 +214,16 @@
 //=================================
 //staff_exhibitproductlist (ページ）
 //=================================
+.l-exhibitproductlist {
+    background: white;
+    display: block;
+    //中央に要素を寄せるときはこれを用いる
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    width: 80%;
+    height: 1700px;
+
+    //画面の大きさによって高さが足りなくなりそうなのでレスポンシブを使う
+}
