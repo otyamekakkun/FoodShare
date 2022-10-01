@@ -187,6 +187,41 @@ return view('admin');
     return view('haiki_staff.staff_exhibitproduct_list_display',['products'=>$product]);
     } 
 
+
+
+
+//=================================
+//管理者ログイン用のマイページ
+//=================================
+
+public function admin(){
+
+    $id = Auth::guard('admin')->id();
+    $product = products::where("admin_id",$id)->paginate(2);
+
+    return view('admin',['products'=>$product]);
+    
+   // return view('admin');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //====================================================================
 //(create_exhibitproductで商品を出品する画面を作る)  12
 //====================================================================

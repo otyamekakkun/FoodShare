@@ -130,9 +130,11 @@ Route::get('/login/admin', [App\Http\Controllers\Auth\LoginController::class, 's
 Route::get('/register/admin', [App\Http\Controllers\Auth\RegisterController::class, 'showAdminRegisterForm']);
 Route::post('/login/admin', [App\Http\Controllers\Auth\LoginController::class, 'adminLogin']);
 Route::post('/register/admin', [App\Http\Controllers\Auth\RegisterController::class, 'registerAdmin'])->name('admin-register');
-Route::view('/admin','admin')->middleware('auth:admin')->name('admin-home');
+//Route::view('/admin','admin')->middleware('auth:admin')->name('admin-home');
 
- Route::Resource('rest',RestappController::class);
+//マイページでもデータベースが表示できるような処理を施す
+Route::get('/admin', [App\Http\Controllers\HaikiController::class, 'admin'])->middleware('auth:admin')->name('admin-home');
+
 
 //商品の写真を入力するものデータベース
 Route::get('/item/index', [App\Http\Controllers\ItemController::class, 'index'])->name('item.index');
