@@ -29,6 +29,19 @@
     
     --}}
 
+    <li>商品名:{{$products->product_name}}</li>
+
+
+
+
+
+
+
+
+
+
+    
+
 <div id="app">
 <footer-component></footer-component>
 </div>

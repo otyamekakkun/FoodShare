@@ -146,7 +146,7 @@ return view('admin');
     public function staff_productedit_display($id){
 
         //関数名を
-        $product = products::find($id)->get();
+        $product = products::find($id);
         
     return view('haiki_staff.staff_productedit_display',['products'=>$product]);
 

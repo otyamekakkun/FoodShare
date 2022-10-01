@@ -46,13 +46,6 @@
     @endforeach
 </div>
 
-
-
-
-
-
-
-
     {{$products->links('layouts.paginate')}}
 
             {{-- 全体のレイアウトを閉じるdiv --}}
