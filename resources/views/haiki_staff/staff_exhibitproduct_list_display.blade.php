@@ -23,11 +23,17 @@
                             <div>
     @foreach ($products as $product)
     <div class="prob">
+
+
+
+
+
+
         <img src="{{ Storage::url($product->img_path) }}" width="25%">
         <div class="proc">
             <ul>
         <li>商品名:{{$product->product_name}}</li>
-        <li>価格:{{$product->price}}</li>
+        <li>¥{{$product->price}}</li>
     
     {{-- <button>詳細をみる</button> --}}
     <button><a href="{{route('haiki_shopper.staff_productdetail_display',$product->id)}}">商品の詳細をみる</a></button>
