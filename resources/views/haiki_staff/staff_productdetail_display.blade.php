@@ -17,7 +17,7 @@
     
 <div class="l-staffproductdetail">
     <div class="l-staffproductdetail__area">
-    <img src="{{ Storage::url($products->img_path) }}" class=""/>
+    <img src="{{ Storage::url($products->img_path) }}" class="c-productdetailimg"/>
     <div class="l-staffproductdetail__areaflex">
         <ul class="c-productdetaillist">
     <li>商品名:{{$products->product_name}}</li>

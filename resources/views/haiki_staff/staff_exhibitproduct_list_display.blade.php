@@ -22,9 +22,9 @@
                         <div>
                             <div>
     @foreach ($products as $product)
-    <div class="prob">
+    <div class="c-productlist">
         <img src="{{ Storage::url($product->img_path) }}" width="25%">
-        <div class="proc">
+        <div class="c-productlist__sentence">
             <ul>
         <li>商品名:{{$product->product_name}}</li>
         <li>¥{{$product->price}}</li>

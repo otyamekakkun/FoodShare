@@ -20,16 +20,15 @@
  --}}
 
 
-
 <main>
 <div class="l-staffmypage">
 <div class="l-staffmypage__exhibitarea">
-<h1>自分のコンビニが出品した商品</h1>
 <button><a href="{{route('haiki_shopper.staff_exhibitproduct_list_display')}}"><button>出品した商品一覧を表示</a></button>
 
 
 @foreach ($products as $product)
 <img src="{{ Storage::url($product->img_path) }}" width="25%">
+<ul>
 <p>商品名:{{$product->product_name}}</p>
 <p>価格:{{$product->price}}</p>
 {{-- <button>詳細をみる</button> --}}
@@ -41,7 +40,7 @@
 {{-- <a href="{{route('haiki_shopper.staff_productedit_display',$product->product_id)}}">>商品を編集する<</a> --}}
 <button><a href="{{route('haiki_shopper.staff_productedit_display',$product->id)}}">商品を編集する</a>
 </button>
-
+</ul>
 @endif
 {{-- おそらく詳細を見る編集するでidをふる練習をしないと行けなさそう。 --}}
 
