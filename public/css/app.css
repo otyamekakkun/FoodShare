@@ -778,6 +778,11 @@ a {
   margin-top: 10px;
 }
 
+.prob {
+  background: red;
+  display: flex;
+}
+
 .c-under {
   border-bottom: double;
   border-color: black;
