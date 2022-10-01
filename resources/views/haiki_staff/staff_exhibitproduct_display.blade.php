@@ -18,12 +18,34 @@
             @include('rest.staff.header')
         </header>
         <div id="app">
-<h1>
+
+
+
+
+
+<h1 class="c-title">
     商品を出品する
 </h1>
+
+<div class="a">
 {{-- form画面ここから --}}
 <form method="POST" action="{{ route('create.exhibit') }}" enctype="multipart/form-data">
     @csrf
+
+
+    <drag-component></drag-component>
+
+
+
+
+
+
+
+
+
+
+
+
         出品したい商品の画像を入れてください
             <label for="img_path" class="">写真を入れる</label>
     
@@ -59,6 +81,22 @@
 {{-- 全体を括るdiv --}}
 
 </form>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 <footer-component></footer-component>
 </div> 
 {{-- 上のdivはコンポーネントを囲むdiv --}}

@@ -36,6 +36,10 @@ Vue.component(
     "productlist-component",
     require("./shopper/productlist/main.vue").default
 );
+
+// カレンダーvueのコンポーネント
+Vue.component("drag-component", require("./staff/dragdrop.vue").default);
+
 //実験用のコンポーネント
 Vue.component("drills-component", require("./drills/drills.vue").default);
 
