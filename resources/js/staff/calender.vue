@@ -11,6 +11,7 @@
             type="date"
             :min="new Date().toISOString().split('T')[0]"
             name="best_by_date"
+            class="l-productexhibitform__typo3"
         />
     </div>
 </template>

@@ -29,26 +29,29 @@
 <form method="POST" action="{{ route('create.exhibit') }}" enctype="multipart/form-data">
 
     @csrf
-    <div class="q">
-        <label>商品名</label><br>
-            <input id="" type="text" class="form-control @error('problem2') is-invalid @enderror" name="product_name" value="">
+    <div class="l-productexhibitform">
+        <div class="l-productexhibitform">
+        <h1 class="l-productexhibitform__sentence">商品名</h1><br>
+            <input id="" type="text" class="l-productexhibitform__typo @error('problem2') is-invalid @enderror" name="product_name" value="">
             @error('product_name')
             <span class="" role="alert">
                 <strong>{{ $message }}</strong>
             </span>
             @enderror
             <br/>
-        <label>金額を入れる</label><br>
-            <input id="" type="number" class="form-control @error('price') is-invalid @enderror" name="price" value="">
+        <label class="l-productexhibitform__sentence">金額を入れる</label><br>
+            <input id="" type="number" class="l-productexhibitform__typo2 @error('price') is-invalid @enderror" name="price" value="">
 
             @error('price')
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
             </span>
             @enderror
-        </div>
 {{-- 賞味期限の入力はjsを使用。デフォルトだと現在日時より前の日付も記入できるから --}}
  <calender-component></calender-component>
+</div>
+</div>
+
     {{-- <drag-component></drag-component> --}}
 
     出品したい商品の画像を入れてください

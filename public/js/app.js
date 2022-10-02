@@ -5773,6 +5773,7 @@ var render = function render() {
       _c = _vm._self._c;
 
   return _c("div", [_c("P", [_vm._v("賞味期限を入れてください")]), _vm._v(" "), _c("input", {
+    staticClass: "l-productexhibitform__typo3",
     attrs: {
       type: "date",
       min: new Date().toISOString().split("T")[0],
