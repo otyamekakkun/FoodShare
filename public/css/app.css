@@ -719,19 +719,65 @@ a {
   width: 80%;
   height: 600px;
 }
+@media screen and (max-width: 720px) {
+  .l-staffproductdetail {
+    height: 500px;
+  }
+}
+@media screen and (max-width: 414px) {
+  .l-staffproductdetail {
+    height: 500px;
+  }
+}
 
 .l-staffproductdetail__area {
   display: flex;
 }
-
-.c-productdetailimg {
-  height: 500px;
-  width: 60%;
-  margin: 40px;
+@media screen and (max-width:1090px) {
+  .l-staffproductdetail__area {
+    height: 400px;
+    width: 40%;
+  }
+}
+@media screen and (max-width:960px) {
+  .l-staffproductdetail__area {
+    height: 400px;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 720px) {
+  .l-staffproductdetail__area {
+    height: 350px;
+    width: 55%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+@media screen and (max-width: 414px) {
+  .l-staffproductdetail__area {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 .l-staffproductdetail__areaflex {
   display: flex;
+}
+@media screen and (max-width: 720px) {
+  .l-staffproductdetail__areaflex {
+    display: block;
+    width: 100%;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 414px) {
+  .l-staffproductdetail__areaflex {
+    display: block;
+    width: 100%;
+    margin: auto;
+  }
 }
 
 .a {
@@ -846,6 +892,60 @@ a {
   margin-top: auto;
   margin-bottom: auto;
   margin-left: 20px;
+}
+@media screen and (max-width: 720px) {
+  .c-productdetaillist {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 414px) {
+  .c-productdetaillist {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    font-size: 20px;
+  }
+}
+
+.c-productdetailimg {
+  width: 50%;
+  height: 500px;
+  margin: 40px;
+}
+@media screen and (max-width:1090px) {
+  .c-productdetailimg {
+    height: 400px;
+    width: 40%;
+  }
+}
+@media screen and (max-width:960px) {
+  .c-productdetailimg {
+    height: 400px;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 720px) {
+  .c-productdetailimg {
+    height: 200px;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 414px) {
+  .c-productdetailimg {
+    height: 200px;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+  }
 }
 
 /*
