@@ -19,7 +19,7 @@
                 <div class="">{{ isset($authgroup) ? ucwords($authgroup) : ""}} {{ __('Login') }}</div>
 {{-- 管理者ログインページここから --}}
                     @isset($authgroup)
-                    <p>コンビニスタッフログインページ</p>
+                    <p>コンビニスタッフ専用ログインページ</p>
                     <p>利用者は普通のログインページで記述してください</p>
                     <form method="POST" action="{{ url("login/$authgroup") }}">
                     @else

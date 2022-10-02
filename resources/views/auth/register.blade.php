@@ -1,18 +1,11 @@
 @extends('layouts.app3')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ isset($authgroup) ? ucwords($authgroup) : ""}} {{ __('Register') }}</div>
+@include('rest.other.otherheader')
+                <div class="">{{ isset($authgroup) ? ucwords($authgroup) : ""}} {{ __('Register') }}</div>
 
-                <div class="card-body">
-
-                {{ isset($authgroup) ? ucwords($authgroup) : ""}} {{ __('Register') }}
-                @include('rest.other.otherheader')
+                {{-- {{ isset($authgroup) ? ucwords($authgroup) : ""}} {{ __('Register') }} --}}
                 {{-- この部分は関係ない --}}
-                <p> お客様ユーザー登録ページ</p>
                     @isset($authgroup)
                     <form method="POST" action="{{ url("register/$authgroup") }}">
 <h1>コンビニスタッフユーザー登録</h1>
@@ -55,22 +48,30 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
 
 {{-- ここから管理者用のユーザー登録ページ --}}
+
                         @isset($authgroup)
                         <form method="POST" action="{{ url("register/$authgroup") }}">
+                            {{-- ユーザー登録ページのコンビニ名 --}}
     @csrf
 <p>勤めているコンビニの会社</p>
 <input type="text" placeholder="勤めているコンビニの会社を記述してください" name="convinience_name">
+{{-- ユーザー登録ページのコンビニ名ここまで --}}
 
+{{-- ユーザー登録ページの支店名ここから --}}
 <p>支店名記入欄</p>
 <input type="text" placeholder="支店名記入欄" name="convinience_branch">
-
+{{-- ユーザー登録ページ支店名ここまで --}}
+{{-- ユーザー登録住所ここから --}}
 <p>住所</p>
 <input type="text" placeholder="住所記入欄" name="adress">
                             @endisset
-
+                            {{-- ユーザー登録ここまで --}}
+{{--ユーザー登録ボタン  --}}
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
                                 </button>
+                                {{--ユーザー登録ボタンここまで  --}}
+
 
 <div id=app>
     {{-- incompletefooter-componentはfooterをレウアウトしてくれるもの。ただしページ量が少ないときにfooter
