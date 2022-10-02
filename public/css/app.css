@@ -513,11 +513,23 @@ a {
 .l-login {
   width: 100%;
   height: 500px;
-  background: white;
+  background: #faf9f5;
 }
 
 .l-register__common {
-  background: red;
+  background: #faf9f5;
+  height: 400px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.l-register__common__sentence {
+  text-align: center;
+  width: 100%;
+  margin: 10px;
+  font-size: 20px;
 }
 
 .l-formshopperprofile {

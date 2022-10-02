@@ -20,7 +20,7 @@
                         <div class="l-register__common">
 
                             <label for="name">{{ __('Name') }}</label>
-                                <input id="name" type="text" class=" @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                <input id="name" type="text" class="l-register__common__sentence @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
                                 @error('name')
                                     <span  role="alert">
@@ -30,7 +30,7 @@
 
                             <label for="email" class="">{{ __('Email Address') }}</label>
 
-                                <input id="email" type="email" class=" @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                <input id="email" type="email" class="l-register__common__sentence @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
                                 @error('email')
                                     <span class="" role="alert">
@@ -39,7 +39,7 @@
                                 @enderror
 
                             <label for="password" class="">{{ __('Password') }}</label>
-                                <input id="password" type="password" class=" @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                <input id="password" type="password" class="l-register__common__sentence @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
                                 @error('password')
                                     <span class="" role="alert">
@@ -47,10 +47,12 @@
                                     </span>
                                 @enderror
 
-                            <label for="password-confirm" class="">{{ __('Confirm Password') }}</label>
+                            <label for="password-confirm" class="l-register__common__sentence">{{ __('Confirm Password') }}</label>
 
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-
+                                <input id="password-confirm" type="password" class="l-register__common__sentence" name="password_confirmation" required autocomplete="new-password">
+                            </div> 
+                            {{-- ここまで併用のdiv --}}
+                            
 
                         @isset($authgroup)
                         <form method="POST" action="{{ url("register/$authgroup") }}">
@@ -63,8 +65,6 @@
 <p>勤めているコンビニの会社</p>
 <input type="text" placeholder="勤めているコンビニの会社を記述してください" name="convinience_name">
 
-</div> 
-{{-- ここまで併用のdiv --}}
 {{-- ユーザー登録ページのコンビニ名ここまで --}}
 
 {{-- ユーザー登録ページの支店名ここから --}}
