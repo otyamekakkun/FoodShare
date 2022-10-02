@@ -26,35 +26,43 @@
 {{-- form画面ここから --}}
 <div class="l-exhibitproduct__area">
 
-<form method="POST" action="{{ route('create.exhibit') }}" enctype="multipart/form-data">
+<form method="POST" action="{{ route('create.exhibit') }}" enctype="multipart/form-data" class="m">
 
     @csrf
     <div class="l-productexhibitform">
         <div class="l-productexhibitform">
-        <h1 class="l-productexhibitform__sentence">商品名</h1><br>
-            <input id="" type="text" class="l-productexhibitform__typo @error('problem2') is-invalid @enderror" name="product_name" value="">
+            <div class="l-productexhibitform__flex">
+                <div class="u-space"></div>
+                <div class="u-space__detail">
+        <h1 class="l-productexhibitform__sentence">商品名</h1>
+            <input  type="text" class="l-productexhibitform__typo @error('problem2') is-invalid @enderror" name="product_name" value="" placeholder="商品名">
             @error('product_name')
             <span class="" role="alert">
                 <strong>{{ $message }}</strong>
             </span>
             @enderror
+        </div>
             <br/>
+            <div class="l-productexhibitform__flex">
         <label class="l-productexhibitform__sentence">金額を入れる</label><br>
-            <input id="" type="number" class="l-productexhibitform__typo2 @error('price') is-invalid @enderror" name="price" value="">
-
+            <input id="" type="number" class="l-productexhibitform__typo2 @error('price') is-invalid @enderror" name="price" value="">円
             @error('price')
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
             </span>
             @enderror
+        </div>
+        </div>
 {{-- 賞味期限の入力はjsを使用。デフォルトだと現在日時より前の日付も記入できるから --}}
+<div class="l">
  <calender-component></calender-component>
+</div>
 </div>
 </div>
 
     {{-- <drag-component></drag-component> --}}
 
-    出品したい商品の画像を入れてください
+    出品したい商品の画像を入れてください<br/>
     <label for="img_path" class="">写真を入れる</label>
 
         <input id="img_path" type="file" class="form-control @error('img_path') is-invalid @enderror" name="img_path" value="">

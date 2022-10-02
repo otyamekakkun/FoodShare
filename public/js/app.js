@@ -5772,7 +5772,9 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", [_c("P", [_vm._v("賞味期限を入れてください")]), _vm._v(" "), _c("input", {
+  return _c("div", {
+    staticClass: "l"
+  }, [_c("P", [_vm._v("賞味期限を入れてください")]), _vm._v(" "), _c("input", {
     staticClass: "l-productexhibitform__typo3",
     attrs: {
       type: "date",

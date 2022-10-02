@@ -5,7 +5,7 @@
 
  -->
 <template>
-    <div>
+    <div class="l">
         <P>賞味期限を入れてください</P>
         <input
             type="date"
