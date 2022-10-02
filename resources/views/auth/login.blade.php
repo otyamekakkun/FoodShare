@@ -17,35 +17,40 @@
 @include('rest.other.otherheader')
 
                 <div class="">{{ isset($authgroup) ? ucwords($authgroup) : ""}} {{ __('Login') }}</div>
-
-                <div class="">
+{{-- 管理者ログインページここから --}}
                     @isset($authgroup)
                     <p>コンビニスタッフログインページ</p>
                     <p>利用者は普通のログインページで記述してください</p>
                     <form method="POST" action="{{ url("login/$authgroup") }}">
                     @else
+                    {{-- 管理者ログインページここまで --}}
+                    {{-- ここから最後までユーザー登録者用と管理者用併用のログインページ --}}
                     <form method="POST" action="{{ route('login') }}">
                     @endisset
                         @csrf
-                        
-                            <label for="email" class="">{{ __('Email Address') }}</label>
-                                <input id="email" type="email" class=" @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                        <div class="l-login">
+
+                            {{-- <label for="email" class="">{{ __('Email Address') }}</label> --}}
+                                <input id="email" type="email" class=" @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="emailを入力してください">
 
                                 @error('email')
                                     <span class="" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-                            <label for="password" class="">{{ __('Password') }}</label>
+                                {{-- email入力欄ここまで --}}
+                            {{-- パスワード入力欄ここから --}}
 
-                                <input id="password" type="password" class=" @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+
+                                <input id="password" type="password" class=" @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="パスワード入力">
 
                                 @error('password')
                                     <span class="" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-
+                                {{-- パスワード入力欄ここまで --}}
+{{-- パスワードリマインダーここから --}}
                                     <input class="" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                                     <label class="" for="remember">
@@ -60,7 +65,9 @@
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif
+                                {{-- パスワードリマインダーここまで --}}
                     </form>
+                </div>
                     <div id=app>
                         {{-- incompletefooter-componentはfooterをレウアウトしてくれるもの。ただしページ量が少ないときにfooter
                             エリアが最下部にならないように定義したもの --}}
