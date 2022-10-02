@@ -37,8 +37,6 @@
 --}}
 
 
-
-
 {{-- 
     自分が購入した商品を取得する。
     各商品ごとに詳細を見る、購入をキャンセルするボタンがある。
@@ -49,9 +47,6 @@
     
     
     --}}
-
-
-
 
 @extends('layouts.app2') 
 
@@ -68,9 +63,7 @@
 
 </h1>
 <a class="btn_tw" href="https://twitter.com/intent/tweet?text=ここを記述するとtwitter内ですでに文が打ち込まれる;" target="_blank_" rel="nofollow"><i class="fab fa-twitter fa-fw"></i> この商品をシェアするs</a>
-
 <main>
-
     <div class="l-shoppermypage">
     <div class="l-shoppermypage__exhibitarea">
     <h1>ご購入された商品一覧</h1>
