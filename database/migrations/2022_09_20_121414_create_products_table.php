@@ -15,14 +15,16 @@ class CreateProductsTable extends Migration
     public function up()
     {
         Schema::create('products', function (Blueprint $table) {
-            $table->bigIncrements('product_id');//商品ID
+            $table->bigIncrements('id');//商品ID
             $table->integer('admin_id')->nullable();//管理者ID 
             $table->integer('user_id')->nullable();//ユーザーID
             $table->string('product_name')->nullable();//商品の名前を入力するためのもの
             $table->string('img_path')->nullable();//画像を入れるもの
             $table->integer('price')->nullable();//価格を入力するためのもの
             $table->date('best_by_date')->nullable();//賞味期限を記述するためのもの
-            $table->boolean('bought')->default(false);//購入されたかどうかをチェックする
+            $table->boolean('bought')->default(false)->nullable();//購入されたかどうかをチェックする
+            $table->boolean('delete')->default(false)->nullable();//購入されたかどうかをチェックする
+
 
            $table->timestamps();
 
