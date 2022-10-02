@@ -81,6 +81,7 @@ return view('haiki_shopper.shopper_mypage_display');
     public function staff_mypage_display(){
         $id = Auth::guard('admin')->id();
         $product = products::where("admin_id",$id)->paginate(2);
+        
 
         return view('haiki_staff.staff_mypage_display',['products'=>$product]);
     } 
@@ -204,20 +205,6 @@ public function admin(){
     
    // return view('admin');
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
