@@ -29,7 +29,7 @@
 
 <body>
     <div id="app">
-        <drills-component></drills-component>
+       {{-- <drills-component></drills-component> --}}
     </div>
 </body>
 
