@@ -8,15 +8,19 @@
                 {{-- この部分は関係ない --}}
                     @isset($authgroup)
                     <form method="POST" action="{{ url("register/$authgroup") }}">
+                        <div class="l-login">
+                        {{-- <div class="l-login"> --}}
 <h1>コンビニスタッフユーザー登録</h1>
  @else
  {{-- この部分は関係ない --}}
+ {{-- ここからユーザー登録ページ併用 --}}
                     <form method="POST" action="{{ route('register') }}">
                     @endisset
                         @csrf
+                        <div class="l-register__common">
+
                             <label for="name">{{ __('Name') }}</label>
-                             {{-- {{}} --}}
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                <input id="name" type="text" class=" @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
                                 @error('name')
                                     <span  role="alert">
@@ -24,21 +28,21 @@
                                     </span>
                                 @enderror
 
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
+                            <label for="email" class="">{{ __('Email Address') }}</label>
 
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                <input id="email" type="email" class=" @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
                                 @error('email')
-                                    <span class="invalid-feedback" role="alert">
+                                    <span class="" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
 
-                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                            <label for="password" class="">{{ __('Password') }}</label>
+                                <input id="password" type="password" class=" @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
                                 @error('password')
-                                    <span class="invalid-feedback" role="alert">
+                                    <span class="" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
@@ -47,17 +51,24 @@
 
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
 
-{{-- ここから管理者用のユーザー登録ページ --}}
 
                         @isset($authgroup)
                         <form method="POST" action="{{ url("register/$authgroup") }}">
+
+                            {{-- ここまで共通のユーザー登録ページ --}}
+                            {{-- ここから管理者用のユーザー登録ページ --}}
+
                             {{-- ユーザー登録ページのコンビニ名 --}}
     @csrf
 <p>勤めているコンビニの会社</p>
 <input type="text" placeholder="勤めているコンビニの会社を記述してください" name="convinience_name">
+
+</div> 
+{{-- ここまで併用のdiv --}}
 {{-- ユーザー登録ページのコンビニ名ここまで --}}
 
 {{-- ユーザー登録ページの支店名ここから --}}
+<div class="">
 <p>支店名記入欄</p>
 <input type="text" placeholder="支店名記入欄" name="convinience_branch">
 {{-- ユーザー登録ページ支店名ここまで --}}
@@ -71,8 +82,8 @@
                                     {{ __('Register') }}
                                 </button>
                                 {{--ユーザー登録ボタンここまで  --}}
-
-
+                            </div>
+                            
 <div id=app>
     {{-- incompletefooter-componentはfooterをレウアウトしてくれるもの。ただしページ量が少ないときにfooter
         エリアが最下部にならないように定義したもの --}}

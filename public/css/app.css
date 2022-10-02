@@ -516,6 +516,10 @@ a {
   background: white;
 }
 
+.l-register__common {
+  background: red;
+}
+
 .l-formshopperprofile {
   margin: auto;
   padding: 35px;
