@@ -26,11 +26,7 @@ class HaikiController extends Controller
     public function shopper_profile_display(){
         return view('haiki_shopper.shopper_profile_display');
     } //...........................................画面表示するもの
-//===========================================================================2終了
 
-//===================================================================
-//3.shopper_profile_edit                                           //
-//===================================================================
 
 public function shopper_profile_edit(Request $request)
 {
@@ -41,7 +37,21 @@ $request->validate([
     'password'=>'required|min:6',
     'password2'=>'required|min:6|same:password',
 ]);
-return view('haiki_shopper.shopper_mypage_display');//..............画面表示するもの
+
+$id = Auth::id();
+$user = DB::table('users')->find($id);
+return view('haiki_shopper.shopper_mypage_display',['my_user'=>$user]);//..............画面表示するもの
+
+
+
+
+
+
+//===========================================================================2終了
+
+//===================================================================
+//3.shopper_profile_edit                                           //
+//===================================================================
 }
 
 //==============================================================3終了

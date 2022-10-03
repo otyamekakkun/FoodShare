@@ -444,10 +444,6 @@ a {
   margin: auto;
 }
 
-/* レスポンシブ対応は660px以下になったときに対策する
-ハンバーガーメニューを作成してそこからresponsive対応する。
-
-*/
 .l-header {
   display: flex;
   align-items: justify-content;
