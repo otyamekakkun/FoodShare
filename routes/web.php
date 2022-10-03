@@ -156,3 +156,4 @@ Route::get('/haiki/index3',[App\Http\Controllers\HaikiController::class, 'produc
 
 //削除
 Route::post('/haiki/{id}/staff_productedit', [App\Http\Controllers\HaikiController::class, 'destroy'])->name('drills.delete');
+
