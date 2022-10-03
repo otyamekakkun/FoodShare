@@ -53,13 +53,6 @@ class DrillsController extends Controller
         $drill->place = $request->place;
         $drill->best_by_date = $request->best_by_date;
         $drill->save();//今回は丁寧に代入する方式をとる。
-
-
-
-
-
-
-        
 /*
 Drill::create([
     'title'=>$drill->title,

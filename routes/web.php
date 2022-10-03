@@ -8,9 +8,6 @@ use App\Http\Controllers\HaikiController; //laravel8なので左のことを記�
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 
-
-
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -105,32 +102,62 @@ Route::get('/haiki/shopper_productlist',[HaikiController::class, 'shopper_produc
 Route::get('/haiki/shopper_productdetail',[HaikiController::class, 'shopper_productdetail_display'])->name('haiki_shopper.shopper_productdetail_display');      //4
 
 //haiki shareのご利用スタッフが利用するもの
+
+//=========================================
+//コンビニスタッフプロフィール編集画面を作るもの 4
+//========================================
 Route::get('/haiki/staff_profile',[HaikiController::class, 'staff_profile_display'])->name('haiki_shopper.staff_profile_display');    
 
 
-/*
-*商品出品をするホームページのルート
-*
-*
-*/
+
+//=============================================================ここまで4
+
+
+//=================================================
+//商品を出品する画面 5
+//=================================================
 Route::get('/haiki/staff_exhibitproduct',[HaikiController::class, 'staff_exhibitproduct_display'])->name('haiki_shopper.staff_exhibitproduct_display'); 
 Route::post('create_exhibitproduct',[HaikiController::class,'create_exhibitproduct'])->name('create.exhibit');
-//商品を出品するホームページ制作ここまで。
-Route::get('/haiki/staff_buyproduct',[HaikiController::class, 'staff_buyproduct_display'])->name('haiki_shopper.staff_buyproduct_display');                     //8
 
-//ここで編集する商品画面を作った
+//=================================================================商品を出品するホームページ制作ここまで。
 
-Route::get('/haiki/{id}/staff_productedit',[HaikiController::class, 'staff_productedit_display'])->name('haiki_shopper.staff_productedit_display');                  //9
-Route::get('/haiki/{id}/staff_productdetail',[HaikiController::class, 'staff_productdetail_display'])->name('haiki_shopper.staff_productdetail_display');                  //9
+//===================================
+//購入された商品一覧6                 //
+//===================================
+Route::get('/haiki/staff_buyproduct',[HaikiController::class, 'staff_buyproduct_display'])->name('haiki_shopper.staff_buyproduct_display');
 
+//=========================================6ここまで
+
+//==============================================================
+//7商品編集画面                                                 //
+//==============================================================
+/*
+1 商品詳細画面を編集する
+2 商品をアップロードするコード
+3 商品詳細画面で削除する
+*/
+
+Route::get('/haiki/{id}/staff_productedit',[HaikiController::class, 'staff_productedit_display'])->name('haiki_shopper.staff_productedit_display'); 
+Route::post('/haiki/{id}/staff_productedit', [HaikiController::class, 'update_exhibitproduct'])->name('exhibit.update');//商品をアップロードする
+Route::post('/haikii/{id}/staff_productedit', [HaikiController::class, 'destroy'])->name('drills.delete');//削除
+
+//======================================================================================================ここまで
+
+
+
+
+//==========================================================
+//商品詳細画面
+//=======================================================
+Route::get('/haiki/{id}/staff_productdetail',[HaikiController::class, 'staff_productdetail_display'])->name('haiki_shopper.staff_productdetail_display');    
+//=======================================ここまで
+
+//===============================================
+//出品した商品の一覧                              //
+//===============================================
 Route::get('/haiki/staff_exhibitproductlist',[HaikiController::class, 'staff_exhibitproduct_list_display'])->name('haiki_shopper.staff_exhibitproduct_list_display'); //10
 
-
-
 //form入力チェック用のroute
-//staff_profileのフォームを入力する
-Route::post('/haiki/staff_profile',[HaikiController::class, 'staff_profile_edit'])->name('haiki_staffprofile_edit');
-
 // ここから追加
 Route::get('/login/admin', [LoginController::class, 'showAdminLoginForm']);
 Route::get('/register/admin', [RegisterController::class, 'showAdminRegisterForm']);
@@ -141,6 +168,12 @@ Route::post('/register/admin', [RegisterController::class, 'registerAdmin'])->na
 //マイページでもデータベースが表示できるような処理を施す
 Route::get('/admin', [App\Http\Controllers\HaikiController::class, 'admin'])->middleware('auth:admin')->name('admin-home');
 
+
+//====================================================
+//json形式で記述するもの
+//==========================================
+
+
 //json形式でデータベースを取得したときに格納しとく場所
 //ここ後にセキュリティ対策をしないと大変なことになりそう（パスワードダダ漏れになるし。）
 //例えばこのurlをグチャグチャにする。
@@ -148,9 +181,10 @@ Route::get('/haiki/index1',[HaikiController::class, 'index1'])->name('drills.ind
 Route::get('/haiki/index2',[HaikiController::class, 'index2'])->name('drills.index2');
 Route::get('/haiki/index3',[HaikiController::class, 'productjson'])->name('product.json');
 
-//商品をアップロードする
-Route::post('/haiki/{id}/staff_productedit', [HaikiController::class, 'update_exhibitproduct'])->name('exhibit.update');
 
-//削除
-Route::post('/haikii/{id}/staff_productedit', [HaikiController::class, 'destroy'])->name('drills.delete');
+//===========
+//ゴミファイルになるかどうか
+//==========
+//staff_profileのフォームを入力する
+Route::post('/haiki/staff_profile',[HaikiController::class, 'staff_profile_edit'])->name('haiki_staffprofile_edit');
 
