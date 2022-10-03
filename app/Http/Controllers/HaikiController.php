@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Models\products;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
@@ -27,10 +26,7 @@ class HaikiController extends Controller
     public function shopper_profile_display(){
         return view('haiki_shopper.shopper_profile_display');
     } //...........................................画面表示するもの
-
-
 //===========================================================================2終了
-
 
 //===================================================================
 //3.shopper_profile_edit                                           //
@@ -90,9 +86,7 @@ $request->validate([
 return view('admin');//========================おそらく捨てられるものになりそう
 }
 
-
 //=============================================================ここまで
-
 
 //==============================================================
 //6コンビニ 商品出品画面                                          //
@@ -144,7 +138,6 @@ return redirect('admin')->with('flash_message', __('Registered.'));
 }//............................................商品の編集した画面をアップロードするもの
 //======================================================================商品編集画面ここまで
 
-
 //=====================
 //削除フラグ
 //=====================
@@ -157,50 +150,31 @@ public function destory($id){
 //=========================================
 //コンビニ側商品の詳細画面に行けるようにしたもの
 //=========================================
-
     public function staff_productdetail_display($id){
-
-        //関数名を
         $product = products::find($id);
         
     return view('haiki_staff.staff_productdetail_display',['products'=>$product]);
-
-    } //.............................................................9
-
-
-
+    } //.............................................................9画面を表示するもの
 
 //========================================================================    
 //コンビニスタッフが商品を出品したものをリスト化するもの
 //========================================================================    
-
     public function staff_exhibitproduct_list_display(){
-
-        //$drills = Drill::all();
-        //return view('drills.index',['drills'=>$drills]); //drills.indexに値を渡している
         $id = Auth::guard('admin')->id();
         $product = products::where("admin_id",$id)->paginate(5);
-        //ページネーションの処理できる？
-
-        //$product = products::where("admin_id",$id);
-
-
-
     return view('haiki_staff.staff_exhibitproduct_list_display',['products'=>$product]);
-    } 
-//=================================
-//管理者ログイン用のマイページ
-//=================================
+    } //...................................
+
+//==========================================================ここまで
+
+//=======================================================================
+//管理者ログイン用のマイページ                                              //
+//=======================================================================
 
 public function admin(){
-
     $id = Auth::guard('admin')->id();
-    //ページネーションでしようか全ページ
     $product = products::where("admin_id",$id)->paginate(5);
-
     return view('admin',['products'=>$product]);
-    
-   // return view('admin');
 }
 
 //====================================================================
@@ -213,35 +187,20 @@ public function create_exhibitproduct(Request $request){
        'img_path' => 'required|file|image|mimes:png,jpeg',
        'price'=>'required',
     ]);
-/* 
-create_exhibitproductのpost送信を行うためのデータベースの処理。
-1.storage > public > img配下に画像が保存されるように処理をする。
-2.今回は一つ一つデータベースに値を登録する処理を記述。
-3.登録されたらコンビニmypageに遷移される。同時に登録されました~みたいなメッセージを出す。
-*/
 $img = $request->file('img_path');
 $path = $img->store('img','public');//1
-
-//$idは管理者ログインのidを取得する
 $id = Auth::guard('admin')->id();
-
 $product = new products;
 $product->product_name = $request->product_name;
 $product->admin_id = $id;//現在ログインしているコンビニユーザー情報のidをこの中に入れる
 $product->img_path=$path;
 $product->price = $request->price;
 $product->best_by_date = $request->best_by_date;
-//$product->bought = $request->bought;
-//$product->delete = $request->delete;
 $product->save();//2
-
 return redirect('admin')->with('flash_message', __('Registered.'));//3
-
 }
- //.............................................................終了12
-    //画面を表示するための処理ここまで
 
-
+//==========================================================================
 
 //================================================
 //json形式でファイルを保存するためのコントローラ        //
@@ -256,14 +215,7 @@ public function index2(Request $request){
     $drill = products::all();
     return response()->json($drill);
 }
-
-//==================================
-//商品リストの取得をjson形式にしたもの
-//=================================
 public function productjson(){
-
-    //$drills = Drill::all();
-    //return view('drills.index',['drills'=>$drills]); //drills.indexに値を渡している
     $id = Auth::guard('admin')->id();
     $product = products::where("admin_id",$id)->get();
 return response()->json($product);
