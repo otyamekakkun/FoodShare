@@ -120,6 +120,7 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
             'convinience_name'=>$data['convinience_name'],
             'convinience_branch'=>$data["convinience_branch"],
+            'prefecture'=>$data["prefecture"],//ログイン時ユーザー登録する画面で処理がうまく行かなかったらここをみる
             'adress'=>$data["adress"]
 
         ]);
@@ -127,7 +128,7 @@ class RegisterController extends Controller
 
     protected function registeredAdmin(Request $request, $user)
     {
-        //
+        //もしかしてこの辺にユーザー登録がうまくいっていいない軌跡がある？
     }
 
 

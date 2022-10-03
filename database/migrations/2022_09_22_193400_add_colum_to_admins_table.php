@@ -17,6 +17,8 @@ class AddColumToAdminsTable extends Migration
             //adminsテーブルに
             $table->string('convinience_name');
             $table->string('convinience_branch');
+            $table->text('prefecture');
+
             $table->text('adress');
         });
     }
