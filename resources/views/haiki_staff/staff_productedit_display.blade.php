@@ -69,6 +69,12 @@
 <button type="submit" class="btn btn-primary">
     商品を出品する
 </button>
+
+
+
+
+
+
 {{-- 全体を括るdiv --}}
 </div>
 
@@ -78,7 +84,10 @@
 
 
 
-
+<form action="{{ route('drills.delete',$products->id ) }}" method="post" class="d-inline">
+    @csrf
+    <button class="btn btn-danger" onclick='return confirm("削除しますか？");'>{{ __('Go Delete')  }}</button>
+</form>
 
 
 

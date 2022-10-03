@@ -153,6 +153,52 @@ return view('admin');
 
     } //.............................................................9
 
+
+public function destroy($id){
+    products::find($id)->delete();
+
+    return redirect('admin');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+//========================
+//編集機能は同じものを使用する
+//======================
+
+//=====================
+//削除フラグ
+//=====================
+
+public function destory($id){
+
+    products::find($id)->delete();
+
+/*
+    $pro = Auth::guard('admin')->id();
+    //ページネーションでしようか全ページ
+    $product = products::where("admin_id",$pro)->paginate(5);
+
+    return view('admin',['products'=>$product]);
+
+*/
+
+    return redirect('admin');
+}
+
+
+    
+
 //=========================================
 //コンビニ側商品の詳細画面に行けるようにしたもの
 //=========================================
