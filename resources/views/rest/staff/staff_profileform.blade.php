@@ -49,10 +49,6 @@
 @enderror
 
 
-
-
-
-
 <select name="prefecture" class="l-formstaffprofile__text">
     <option selected>都道府県</option>
     <option value="北海道">北海道</option>

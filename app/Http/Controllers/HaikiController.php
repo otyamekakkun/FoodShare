@@ -10,18 +10,6 @@ use Illuminate\Support\Facades\Auth;
 
 class HaikiController extends Controller
 {
-/** それぞれのページの概要。
- * 1(利用客)マイページ表示用
- * 2(利用客)プロフィール編集画面表示用
- * 3(利用客)商品一覧表示用
- * 4(利用客)商品詳細表示用
- * 5(コンビニ)マイページ表示用
- * 6(コンビニ)コンビニプロフィール編集表示用
- * 7(コンビニ)商品を出品する画面
- * 8(コンビニ)購入された商品一覧を表示するもの
- * 9(コンビニ)出品する商品を編集するもの
- * 10(コンビニ)出品した商品を一覧する表示
- */
 //===================================================================
  //shoepper_mypage 1
  //==================================================================
@@ -96,16 +84,13 @@ return view('haiki_shopper.shopper_mypage_display');
     
 //========================================================5終了
 //..................................................................9staff_profile_display
-//staffのprofileのdisplay
+
+//=====================================
+//staffのprofileのdisplay(コンビニ情報を登録し直す)
+//====================================
     public function staff_profile_display(){
         return view('haiki_staff.staff_profile_display');
     } 
-
-
-
-
-
-
 
 
     public function staff_profile_edit(Request $request)
