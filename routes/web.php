@@ -152,8 +152,9 @@ Route::get('/haiki/index1',[App\Http\Controllers\HaikiController::class, 'index1
 Route::get('/haiki/index2',[App\Http\Controllers\HaikiController::class, 'index2'])->name('drills.index2');
 Route::get('/haiki/index3',[App\Http\Controllers\HaikiController::class, 'productjson'])->name('product.json');
 
-
+//商品をアップロードする
+Route::post('/haiki/{id}/staff_productedit', [App\Http\Controllers\HaikiController::class, 'update_exhibitproduct'])->name('exhibit.update');
 
 //削除
-Route::post('/haiki/{id}/staff_productedit', [App\Http\Controllers\HaikiController::class, 'destroy'])->name('drills.delete');
+Route::post('/haikii/{id}/staff_productedit', [App\Http\Controllers\HaikiController::class, 'destroy'])->name('drills.delete');
 

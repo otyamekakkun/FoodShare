@@ -26,7 +26,7 @@
 {{-- form画面ここから --}}
 <div class="l-exhibitproduct__area">
 
-<form method="POST" action="{{ route('create.exhibit') }}" enctype="multipart/form-data">
+<form method="POST" action="{{ route('exhibit.update',$products->id)}}" enctype="multipart/form-data">
 
     @csrf
     <div class="l-productexhibitform">
@@ -83,12 +83,10 @@
 </div>
 
 
-
 <form action="{{ route('drills.delete',$products->id ) }}" method="post" class="d-inline">
     @csrf
     <button class="btn btn-danger" onclick='return confirm("削除しますか？");'>{{ __('Go Delete')  }}</button>
 </form>
-
 
 
 

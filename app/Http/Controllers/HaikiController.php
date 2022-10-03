@@ -162,19 +162,51 @@ public function destroy($id){
 
 
 
-
-
-
-
-
-
-
-
-
-
 //========================
 //編集機能は同じものを使用する
 //======================
+public function update_exhibitproduct(Request $request,$id){
+    //入力するときにバリデーションチェックを設ける
+    $request->validate([
+       'img_path' => 'required|file|image|mimes:png,jpeg',
+       'price'=>'required',
+    ]);
+/* 
+create_exhibitproductのpost送信を行うためのデータベースの処理。
+1.storage > public > img配下に画像が保存されるように処理をする。
+2.今回は一つ一つデータベースに値を登録する処理を記述。
+3.登録されたらコンビニmypageに遷移される。同時に登録されました~みたいなメッセージを出す。
+*/
+$img = $request->file('img_path');
+$path = $img->store('img','public');//1
+
+//$idは管理者ログインのidを取得する
+//$id = Auth::guard('admin')->id();
+
+$product = products::find($id);
+$product->product_name = $request->product_name;
+//$product->admin_id = $id;//現在ログインしているコンビニユーザー情報のidをこの中に入れる
+$product->img_path=$path;
+$product->price = $request->price;
+$product->best_by_date = $request->best_by_date;
+//$product->bought = $request->bought;
+//$product->delete = $request->delete;
+$product->save();//2
+
+return redirect('admin')->with('flash_message', __('Registered.'));//3
+
+}
+
+
+
+
+
+
+
+
+
+
+
 
 //=====================
 //削除フラグ
