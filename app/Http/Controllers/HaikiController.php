@@ -68,7 +68,7 @@ return view('haiki_shopper.shopper_mypage_display');//..............画面表示
 //staffのprofileのdisplay(コンビニ情報を登録し直す)               //
 //=============================================================
     public function staff_profile_display(){
-        return view('haiki_staff.staff_profile_display');//............................................画面表示するもの
+        return view('haiki_staff.staff_profile_display');//...................画面表示するもの
     } 
 
     public function staff_profile_edit(Request $request)
@@ -123,8 +123,8 @@ public function destroy($id){
 public function update_exhibitproduct(Request $request,$id){
     //入力するときにバリデーションチェックを設ける
     $request->validate([
-       'img_path' => 'required|file|image|mimes:png,jpeg',
-       'price'=>'required',
+'img_path' => 'required|file|image|mimes:png,jpeg',
+'price'=>'required',
     ]);
 $img = $request->file('img_path');
 $path = $img->store('img','public');//1
