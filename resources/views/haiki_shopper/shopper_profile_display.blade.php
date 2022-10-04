@@ -42,6 +42,7 @@
             @include('rest.shopper.header') 
             </header>
     <main>
+        <h1>{{$user->name}}</h1>
 {{-- boxを作るdivタグにしたい --}}
 {{--下のコードはrest化したフォームページ。  --}}
 @include('rest.shopper.shopperprofile')
