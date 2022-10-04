@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Admin;
 use App\Models\products;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
@@ -46,53 +47,16 @@ $request->validate([
 //$product = products::find($id);
 $id = Auth::id();
 $user = User::find($id);
-//$user->name=$request->name;
 $user->email=$request->email;
 $user->password= Hash::make($request->password);
-
 $user->save();
 //パスワードをハッシュ化させる必要があるのでそれを記述する
 
 
 return redirect('haiki/shopper_mypage');//..............画面表示するもの
-//haiki/shopper_mypage
-/*
-public function staff_productedit_display($id){
-    $product = products::find($id);
-    return view('haiki_staff.staff_productedit_display',['products'=>$product]);
- } //...................................................
-
-
-public function update_exhibitproduct(Request $request,$id){
-    //入力するときにバリデーションチェックを設ける
-    $request->validate([
-'img_path' => 'required|file|image|mimes:png,jpeg',
-'price'=>'required',
-    ]);
-$img = $request->file('img_path');
-$path = $img->store('img','public');//1
-$product = products::find($id);
-$product->product_name = $request->product_name;
-$product->img_path=$path;
-$product->price = $request->price;
-$product->best_by_date = $request->best_by_date;
-$product->save();
-return redirect('admin')->with('flash_message', __('Registered.'));
-}//............................................商品の編集した画面をアップロードするもの
-
-*/
-
-
-
 
 //===========================================================================2終了
-
-//===================================================================
-//3.shopper_profile_edit                                           //
-//===================================================================
 }
-
-//==============================================================3終了
 
 //===================================================================
 //4 お客様商品一覧                                                    //
@@ -122,10 +86,10 @@ return redirect('admin')->with('flash_message', __('Registered.'));
         return view('haiki_staff.staff_profile_display',['admin'=>$admin]);//...................画面表示するもの
     } 
 
-    public function staff_profile_edit(Request $request, $id)
+    public function staff_profile_edit(Request $request)
 {
 $request->validate([
-    'email'=>'email:filter,dns',//emailのバリデーション
+    //'email'=>'email:filter,dns',//emailのバリデーション
    // 'password'=>'string|regex:/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z\-]{6,24}$/',
 //パスワードに関しては半角英数字で8文字の記述を対応させる。
 
@@ -142,24 +106,70 @@ $request->validate([
 
 $id = Auth::guard('admin')->id();
 //$product = products::where("admin_id",$id)->paginate(5);
-
-$admin=DB::table('admins')->find($id);
-$admin->name = $request->name;
-$admin->password= $request->password;
+//$admin=DB::table('admins')->find($id);
+$admin = Admin::find($id);
+//$admin->name = $request->name;
+$admin->password= Hash::make($request->password);
 $admin->convinience_name = $request->convinience_name;
 $admin->convinience_branch = $request->convinience_branch;
 $admin->prefecture=$request->prefecture;
 $admin->adress=$request->adrees;
 $admin->save();
 return redirect('admin')->with('flash_message', __('Registered.'));
-
-
-
-
-
-
-return redirect('admin');//========================おそらく捨てられるものになりそう
 }
+/*
+//===================================================================
+//shopper_profile_display 2                                        //
+//===================================================================
+    public function shopper_profile_display(){
+        $id = Auth::id();
+        $user = DB::table('users')->find($id);
+        return view('haiki_shopper.shopper_profile_display',['user'=>$user]);
+    } //...........................................画面表示するもの
+
+
+public function shopper_profile_edit(Request $request)
+{
+$request->validate([
+    //入力ネームと同じものを対応させる
+    //後で詳しく設定する（今は最低限）
+    /*
+    'email'=>'required|email:filter,dns',
+    'password'=>'required|min:6',
+    'password2'=>'required|min:6|same:password',
+    
+]);
+//$product = products::find($id);
+$id = Auth::id();
+$user = User::find($id);
+$user->email=$request->email;
+$user->password= Hash::make($request->password);
+$user->save();
+//パスワードをハッシュ化させる必要があるのでそれを記述する
+
+
+return redirect('haiki/shopper_mypage');//..............画面表示するもの
+
+//===========================================================================2終了
+}
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //=============================================================ここまで
 

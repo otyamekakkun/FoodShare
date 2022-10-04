@@ -62,11 +62,9 @@
     <header>
         @include('rest.staff.header')
     </header>
-
-
 @include('rest.staff.staff_profileform')
 <div id="app">
-<incompletefooter-component></incompletefooter-component>
+<footer-component></incompletefooter-component>
 </div>
 </body>
 @endsection
