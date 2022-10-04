@@ -24,7 +24,9 @@ class HaikiController extends Controller
 //shopper_profile_display 2                                        //
 //===================================================================
     public function shopper_profile_display(){
-        return view('haiki_shopper.shopper_profile_display');
+        $id = Auth::id();
+        $user = DB::table('users')->find($id);
+        return view('haiki_shopper.shopper_profile_display',['user'=>$user]);
     } //...........................................画面表示するもの
 
 
@@ -42,7 +44,31 @@ $id = Auth::id();
 $user = DB::table('users')->find($id);
 return view('haiki_shopper.shopper_mypage_display',['my_user'=>$user]);//..............画面表示するもの
 
+/*
+public function staff_productedit_display($id){
+    $product = products::find($id);
+    return view('haiki_staff.staff_productedit_display',['products'=>$product]);
+ } //...................................................
 
+
+public function update_exhibitproduct(Request $request,$id){
+    //入力するときにバリデーションチェックを設ける
+    $request->validate([
+'img_path' => 'required|file|image|mimes:png,jpeg',
+'price'=>'required',
+    ]);
+$img = $request->file('img_path');
+$path = $img->store('img','public');//1
+$product = products::find($id);
+$product->product_name = $request->product_name;
+$product->img_path=$path;
+$product->price = $request->price;
+$product->best_by_date = $request->best_by_date;
+$product->save();
+return redirect('admin')->with('flash_message', __('Registered.'));
+}//............................................商品の編集した画面をアップロードするもの
+
+*/
 
 
 
