@@ -92,7 +92,7 @@ Route::get('/haiki/shopper_mypage',[HaikiController::class,'shopper_mypage_displ
 // shopper_profileのフォーム入力ページ 2
 //================================================================
 Route::get('/haiki/shopper_profile',[HaikiController::class, 'shopper_profile_display'])->name('haiki_shopper.shopper_profile_display');                        //2これは自分専用のページにしたい
-Route::post('/haiki/shopper_profile',[HaikiController::class, 'shopper_profile_edit'])->name('haiki_shopperprofile_edit');
+Route::post('/haiki/{id}/shopper_profile',[HaikiController::class, 'shopper_profile_edit'])->name('haiki_shopperprofile_edit');
 
 //考察１idをパラメータ内に含ませる
 
