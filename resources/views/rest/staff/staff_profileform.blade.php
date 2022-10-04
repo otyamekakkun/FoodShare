@@ -3,7 +3,7 @@
     restファイル コンビニ側のプロフィール編集画面おフォームページ
     --}}
     <section>
-        <form class="l-form" action="{{route('haiki_staffprofile_edit')}}" method="POST">
+        <form class="l-form" action="{{route('haiki_staffrprofile_edit',$admin->id)}}" method="POST">
             @csrf
             <div class="l-formstaffprofile">
             <h3 class="l-formstaffprofile__title">コンビニ情報編集画面</h3>
@@ -109,7 +109,6 @@
 @enderror
 
             <input type="submit" class="l-formstaffprofile__sub" value="変更する">
-    
         </div>
         </form>
         </div>

@@ -24,8 +24,6 @@
 <div class="l-staffmypage">
 <div class="l-staffmypage__exhibitarea">
 <button><a href="{{route('haiki_shopper.staff_exhibitproduct_list_display')}}"><button>出品した商品一覧を表示</a></button>
-
-
 @foreach ($products as $product)
 <img src="{{ Storage::url($product->img_path) }}" width="25%">
 <ul>

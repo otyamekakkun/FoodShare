@@ -110,8 +110,7 @@ Route::get('/haiki/shopper_productdetail',[HaikiController::class, 'shopper_prod
 //コンビニスタッフプロフィール編集画面を作るもの 4
 //========================================
 Route::get('/haiki/staff_profile',[HaikiController::class, 'staff_profile_display'])->name('haiki_shopper.staff_profile_display');    
-
-
+Route::post('/haiki/{id}/staff_profile',[HaikiController::class, 'staff_profile_edit'])->name('haiki_staffrprofile_edit');
 
 //=============================================================ここまで4
 

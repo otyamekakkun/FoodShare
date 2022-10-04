@@ -17,7 +17,6 @@
     <strong>{{$message}}</strong>
 </span>
 @enderror
-{{-- 
 
 <input class="l-formshopperprofile__text" action="post" type="password" name="password" placeholder="パスワード編集">
 @error('password')
@@ -31,7 +30,6 @@
     <strong>{{$message}}</strong>
 </span>
 @enderror
- --}}
         </div>
     <input type="submit" class="c-formshopperprofile__sub" value="変更する">
     </div>

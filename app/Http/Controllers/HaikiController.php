@@ -109,10 +109,13 @@ return redirect('admin')->with('flash_message', __('Registered.'));
 //staffのprofileのdisplay(コンビニ情報を登録し直す)               //
 //=============================================================
     public function staff_profile_display(){
-        return view('haiki_staff.staff_profile_display');//...................画面表示するもの
+
+        $id = Auth::guard('admin')->id();
+        $admin = DB::table('admins')->find($id);
+        return view('haiki_staff.staff_profile_display',['admin'=>$admin]);//...................画面表示するもの
     } 
 
-    public function staff_profile_edit(Request $request)
+    public function staff_profile_edit(Request $request, $id)
 {
 $request->validate([
     //入力ネームと同じものを対応させる
@@ -124,7 +127,26 @@ $request->validate([
     'adress'=>'required'
 
 ]);
-return view('admin');//========================おそらく捨てられるものになりそう
+
+$id = Auth::guard('admin')->id();
+$product = products::where("admin_id",$id)->paginate(5);
+
+$admin=DB::table('admins')->find($id);
+$admin->name = $request->name;
+$admin->password=$request->password;
+$admin->convinience_name = $request->convinience_name;
+$product->convinience_branch = $request->convinience_branch;
+$product->prefecture=$request->prefecture;
+$product->adress=$request->adress;
+$admin->save();
+return redirect('admin')->with('flash_message', __('Registered.'));
+
+
+
+
+
+
+return redirect('admin');//========================おそらく捨てられるものになりそう
 }
 
 //=============================================================ここまで

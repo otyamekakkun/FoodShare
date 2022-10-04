@@ -62,6 +62,8 @@
     <header>
         @include('rest.staff.header')
     </header>
+
+
 @include('rest.staff.staff_profileform')
 <div id="app">
 <footer-component></footer-component>
