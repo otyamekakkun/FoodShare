@@ -35,7 +35,7 @@ public function shopper_profile_edit(Request $request)
 $request->validate([
     //入力ネームと同じものを対応させる
     //後で詳しく設定する（今は最低限）
-    'email'=>'required|min:5',
+    'email'=>'required|email:filter,dns',
     'password'=>'required|min:6',
     'password2'=>'required|min:6|same:password',
 ]);
@@ -118,6 +118,10 @@ return redirect('admin')->with('flash_message', __('Registered.'));
     public function staff_profile_edit(Request $request, $id)
 {
 $request->validate([
+    'email'=>'email:filter,dns',//emailのバリデーション
+   // 'password'=>'string|regex:/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z\-]{6,24}$/',
+//パスワードに関しては半角英数字で8文字の記述を対応させる。
+
     //入力ネームと同じものを対応させる
     //後で詳しく設定する（今は最低限）
     /*
@@ -248,6 +252,7 @@ public function admin(){
 public function create_exhibitproduct(Request $request){
     //入力するときにバリデーションチェックを設ける
     $request->validate([
+        'product_name'=>'required',
        'img_path' => 'required|file|image|mimes:png,jpeg',
        'price'=>'required',
     ]);

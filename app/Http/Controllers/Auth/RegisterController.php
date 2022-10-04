@@ -84,9 +84,13 @@ class RegisterController extends Controller
     protected function adminValidator(array $data)
     {
         return Validator::make($data, [
+            //ユーザー登録するときのバリデーションチェック
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:admins'],
             'password' => ['required', 'string', 'min:6', 'confirmed'],
+            'convinience_name'=>['required'],
+            'convinience_branch'=>['required'],
+            'adress'=>['required']
         ]);
     }
 
