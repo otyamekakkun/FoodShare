@@ -2,7 +2,7 @@
     header部分　保守性が高くなるように修正する箇所を１箇所にまとめた。
     --}}
 <section>
-    <form method="POST" action="{{route('haiki_shopperprofile_edit')}}">
+    <form method="POST" action="{{route('haiki_shopperprofile_edit',$user->id)}}">
         
         @csrf
         <div class="l-formshopperprofile">
@@ -22,14 +22,14 @@
     <strong>{{$message}}</strong>
 </span>
 @enderror
-
-        <input class="l-formshopperprofile__text" action="post" type="password" name="password2" placeholder="パスワード再入力">
+{{-- 
+        <input class="l-formshopperprofile__text" action="post" type="password" name="password" placeholder="パスワード再入力">
         @error('password2')
 <span class="" role="alert">
     <strong>{{$message}}</strong>
 </span>
 @enderror
-
+ --}}
         </div>
     <input type="submit" class="c-formshopperprofile__sub" value="変更する">
     </div>

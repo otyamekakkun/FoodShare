@@ -42,7 +42,12 @@ $request->validate([
 
 $id = Auth::id();
 $user = DB::table('users')->find($id);
-return view('haiki_shopper.shopper_mypage_display',['my_user'=>$user]);//..............画面表示するもの
+$user->name=$request->name;
+$user->email=$request->email;
+$user->password=$request->password;
+$user->save();
+
+return redirect('haiki_shopper.shopper_mypage_display',['user'=>$user]);//..............画面表示するもの
 
 /*
 public function staff_productedit_display($id){
