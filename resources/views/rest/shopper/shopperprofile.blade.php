@@ -11,27 +11,6 @@
         <div class="l-formshopperprofile__te">
 
 
-
-            <span>名前</span>
-        <input class="l-formshopperprofile__text" action="post" type="text" name="email" placeholder="名前編集" value={{$user->name}}>
-
-@error('email')
-<span class="" role="alert">
-    <strong>{{$message}}</strong>
-</span>
-@enderror
-
-
-
-
-
-
-
-
-
-
-
-
             <span>email</span>
         <input class="l-formshopperprofile__text" action="post" type="text" name="email" placeholder="メールアドレス編集" value={{$user->email}}>
 
