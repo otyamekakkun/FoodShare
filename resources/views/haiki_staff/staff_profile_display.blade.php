@@ -66,7 +66,7 @@
 
 @include('rest.staff.staff_profileform')
 <div id="app">
-<footer-component></footer-component>
+<incompletefooter-component></incompletefooter-component>
 </div>
 </body>
 @endsection

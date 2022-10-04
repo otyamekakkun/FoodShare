@@ -45,11 +45,10 @@ $request->validate([
 //$product = products::find($id);
 $id = Auth::id();
 $user = User::find($id);
-//$user->name=$request->name;
-//$user->email=$request->email;
-//$user->password=$request->password;
-$user->fill($request->all())->save();
-return redirect('haiki_shopper.shopper_mypage_display',['user'=>$user]);//..............画面表示するもの
+$user->name=$request->name;
+$user->email=$request->email;
+$user->password=$request->password;
+return redirect('haiki_shopper.shopper_mypage_display');//..............画面表示するもの
 
 /*
 public function staff_productedit_display($id){

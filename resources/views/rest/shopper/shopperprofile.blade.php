@@ -9,6 +9,29 @@
         <h3 class="l-formshopperprofile__title">{{$user->name}}様
             プロフィール編集</h3>
         <div class="l-formshopperprofile__te">
+
+
+
+            <span>名前</span>
+        <input class="l-formshopperprofile__text" action="post" type="text" name="email" placeholder="名前編集" value={{$user->name}}>
+
+@error('email')
+<span class="" role="alert">
+    <strong>{{$message}}</strong>
+</span>
+@enderror
+
+
+
+
+
+
+
+
+
+
+
+
             <span>email</span>
         <input class="l-formshopperprofile__text" action="post" type="text" name="email" placeholder="メールアドレス編集" value={{$user->email}}>
 
@@ -24,7 +47,6 @@
     <strong>{{$message}}</strong>
 </span>
 @enderror
-{{-- 
         <input class="l-formshopperprofile__text" action="post" type="password" name="password" placeholder="パスワード再入力">
         @error('password')
 <span class="" role="alert">
@@ -32,7 +54,6 @@
 </span>
 @enderror
         </div>
-         --}}
     <input type="submit" class="c-formshopperprofile__sub" value="変更する">
     </div>
     </form>

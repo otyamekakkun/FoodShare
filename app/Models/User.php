@@ -37,12 +37,6 @@ protected $table="users";
        'remember_token',
     ];
 
-
-
-
-
-
-    
     /**
      * The attributes that should be cast.
      *
