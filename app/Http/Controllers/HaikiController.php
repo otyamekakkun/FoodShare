@@ -113,7 +113,7 @@ $admin->password= Hash::make($request->password);
 $admin->convinience_name = $request->convinience_name;
 $admin->convinience_branch = $request->convinience_branch;
 $admin->prefecture=$request->prefecture;
-$admin->adress=$request->adrees;
+$admin->adress=$request->adress;
 $admin->save();
 return redirect('admin')->with('flash_message', __('Registered.'));
 }
