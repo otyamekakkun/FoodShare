@@ -31,7 +31,7 @@ class HaikiController extends Controller
     } //...........................................画面表示するもの
 
 
-public function shopper_profile_edit(Request $request, $id)
+public function shopper_profile_edit(Request $request)
 {
 $request->validate([
     //入力ネームと同じものを対応させる
@@ -46,10 +46,9 @@ $request->validate([
 $id = Auth::id();
 $user = User::find($id);
 //$user->name=$request->name;
-$user->email=$request->email;
-$user->password=$request->password;
-$user->save();
-
+//$user->email=$request->email;
+//$user->password=$request->password;
+$user->fill($request->all())->save();
 return redirect('haiki_shopper.shopper_mypage_display',['user'=>$user]);//..............画面表示するもの
 
 /*

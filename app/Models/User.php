@@ -24,6 +24,7 @@ protected $table="users";
         'name',
         'email',
         'password',
+       // 'remember_token',
     ];
 
     /**
@@ -33,9 +34,15 @@ protected $table="users";
      */
     protected $hidden = [
         'password',
-        'remember_token',
+       'remember_token',
     ];
 
+
+
+
+
+
+    
     /**
      * The attributes that should be cast.
      *

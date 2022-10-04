@@ -24,13 +24,15 @@
     <strong>{{$message}}</strong>
 </span>
 @enderror
+{{-- 
         <input class="l-formshopperprofile__text" action="post" type="password" name="password" placeholder="パスワード再入力">
-        @error('password2')
+        @error('password')
 <span class="" role="alert">
     <strong>{{$message}}</strong>
 </span>
 @enderror
         </div>
+         --}}
     <input type="submit" class="c-formshopperprofile__sub" value="変更する">
     </div>
     </form>
