@@ -5,6 +5,7 @@ use App\Models\products;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Foundation\Auth\User;
 use Illuminate\Support\Facades\Auth;
 
 class HaikiController extends Controller
@@ -30,19 +31,21 @@ class HaikiController extends Controller
     } //...........................................画面表示するもの
 
 
-public function shopper_profile_edit(Request $request)
+public function shopper_profile_edit(Request $request, $id)
 {
 $request->validate([
     //入力ネームと同じものを対応させる
     //後で詳しく設定する（今は最低限）
+    /*
     'email'=>'required|email:filter,dns',
     'password'=>'required|min:6',
     'password2'=>'required|min:6|same:password',
+    */
 ]);
-
+//$product = products::find($id);
 $id = Auth::id();
-$user = DB::table('users')->find($id);
-$user->name=$request->name;
+$user = User::find($id);
+//$user->name=$request->name;
 $user->email=$request->email;
 $user->password=$request->password;
 $user->save();
