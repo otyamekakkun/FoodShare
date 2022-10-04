@@ -28,7 +28,7 @@
     <div class="l-productexhibitform">
         <div class="l-productexhibitform">
         <h1 class="l-productexhibitform__sentence">商品名</h1><br>
-            <input id="" type="text" class="l-productexhibitform__typo @error('problem2') is-invalid @enderror" name="product_name" value="">
+            <input id="" type="text" class="l-productexhibitform__typo @error('problem2') is-invalid @enderror" name="product_name" value="{{$products->product_name}}">
             @error('product_name')
             <span class="" role="alert">
                 <strong>{{ $message }}</strong>
@@ -36,7 +36,7 @@
             @enderror
             <br/>
         <label class="l-productexhibitform__sentence">金額を入れる</label><br>
-            <input id="" type="number" class="l-productexhibitform__typo2 @error('price') is-invalid @enderror" name="price" value="">
+            <input id="" type="number" class="l-productexhibitform__typo2 @error('price') is-invalid @enderror" name="price" value="{{$products->price}}">
 
             @error('price')
             <span class="invalid-feedback" role="alert">
@@ -53,24 +53,14 @@
     出品したい商品の画像を入れてください
     <label for="img_path" class="">写真を入れる</label>
 
-        <input id="img_path" type="file" class="form-control @error('img_path') is-invalid @enderror" name="img_path" value="">
+        <input id="img_path" type="file" class="form-control @error('img_path') is-invalid @enderror" name="img_path" value="{{$products->img_path}}">
 
         @error('img_path')
             <strong>{{ $message }}</strong>
         @enderror
-
-
-
-
 <button type="submit" class="btn btn-primary">
     商品を出品する
 </button>
-
-
-
-
-
-
 {{-- 全体を括るdiv --}}
 </div>
 
@@ -84,7 +74,7 @@
     <button class="btn btn-danger" onclick='return confirm("削除しますか？");'>{{ __('Go Delete')  }}</button>
 </form>
 
-
+<button><a href={{route('admin-home')}}>編集の内容を破棄して戻る</a></button>
 
 
 

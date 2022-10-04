@@ -190,9 +190,8 @@ public function destroy($id){
 
 public function update_exhibitproduct(Request $request,$id){
     //入力するときにバリデーションチェックを設ける
+    //一応バリデーションも含ませとく。変更の処理がなけレバそのまま行けるように変更できるようにする
     $request->validate([
-'img_path' => 'required|file|image|mimes:png,jpeg',
-'price'=>'required',
     ]);
 $img = $request->file('img_path');
 $path = $img->store('img','public');//1
