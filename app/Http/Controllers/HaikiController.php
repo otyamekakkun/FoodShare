@@ -7,6 +7,7 @@ use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class HaikiController extends Controller
 {
@@ -47,8 +48,11 @@ $id = Auth::id();
 $user = User::find($id);
 //$user->name=$request->name;
 $user->email=$request->email;
-$user->password=$request->password;
+$user->password= Hash::make($request->password);
+
 $user->save();
+//パスワードをハッシュ化させる必要があるのでそれを記述する
+
 
 return redirect('haiki/shopper_mypage');//..............画面表示するもの
 //haiki/shopper_mypage
