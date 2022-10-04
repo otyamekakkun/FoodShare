@@ -47,6 +47,7 @@ $request->validate([
 //$product = products::find($id);
 $id = Auth::id();
 $user = User::find($id);
+$user->name=$request->name;
 $user->email=$request->email;
 $user->password= Hash::make($request->password);
 $user->save();

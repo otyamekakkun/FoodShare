@@ -10,6 +10,15 @@
             プロフィール編集</h3>
         <div class="l-formshopperprofile__te">
 
+            <input class="l-formshopperprofile__text" action="post" type="text" name="name" placeholder="メールアドレス編集" value={{$user->name}}>
+
+            @error('name')
+            <span class="" role="alert">
+                <strong>{{$message}}</strong>
+            </span>
+            @enderror
+            
+            
 
             <span>email</span>
         <input class="l-formshopperprofile__text" action="post" type="text" name="email" placeholder="メールアドレス編集" value={{$user->email}}>
