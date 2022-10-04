@@ -255,6 +255,7 @@ public function create_exhibitproduct(Request $request){
         'product_name'=>'required',
        'img_path' => 'required|file|image|mimes:png,jpeg',
        'price'=>'required',
+       'best_by_date'=>'required'
     ]);
 $img = $request->file('img_path');
 $path = $img->store('img','public');//1
