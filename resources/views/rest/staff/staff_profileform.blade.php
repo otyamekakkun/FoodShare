@@ -8,14 +8,14 @@
             <div class="l-formstaffprofile">
             <h3 class="l-formstaffprofile__title">コンビニ情報編集画面</h3>
             <div class="l-formstaffprofile__te">
-            <input class="l-formstaffprofile__text" action="post" type="text" name="email" placeholder="メールアドレス編集">
+            <input class="l-formstaffprofile__text" action="post" type="text" name="email" placeholder="メールアドレス編集" value="{{$admin->email}}">
 {{-- メールアドレス編集のエラーメッセージよう --}}
             @error('email')
 <span class="" role="alert">
     <strong>{{$message}}</strong>
 </span>
 @enderror
-
+{{--  --}}
             <input class="l-formstaffprofile__text" action="post" type="password" name="password" placeholder="パスワード編集">
 
             @error('password')
@@ -32,7 +32,7 @@
 </span>
 @enderror
 
-            <input class="l-formstaffprofile__text" action="post" type="password" name="convinience_name" placeholder="コンビニ名">
+            <input class="l-formstaffprofile__text" action="post" type="text" name="convinience_name" placeholder="コンビニ名" value="{{$admin->convinience_name}}">
 
             @error('convinience_name')
 <span class="" role="alert">
@@ -40,7 +40,7 @@
 </span>
 @enderror
 
-            <input class="l-formstaffprofile__text" action="post" type="password" name="convinience_branch" placeholder="支店名">
+            <input class="l-formstaffprofile__text" action="post" type="text" name="convinience_branch" placeholder="支店名" value="{{$admin->convinience_branch}}">
 
             @error('convinience_branch')
 <span class="" role="alert">
@@ -49,7 +49,7 @@
 @enderror
 
 
-<select name="prefecture" class="l-formstaffprofile__text">
+<select name="prefecture" class="l-formstaffprofile__text" value="{{$admin->prefecture}}">
     <option selected>都道府県</option>
     <option value="北海道">北海道</option>
     <option value="青森県">青森県</option>
@@ -100,7 +100,7 @@
     <option value="沖縄県">沖縄県</option>
     </select>
     </select>
-            <input class="l-formstaffprofile__text" action="post" type="password" name="adress" placeholder="住所">
+            <input class="l-formstaffprofile__text" action="post" type="text" name="adress" placeholder="住所" value="{{$admin->adress}}">
 
             @error('adress')
 <span class="" role="alert">

@@ -120,24 +120,25 @@ return redirect('admin')->with('flash_message', __('Registered.'));
 $request->validate([
     //入力ネームと同じものを対応させる
     //後で詳しく設定する（今は最低限）
+    /*
     'email'=>'required|string|min:8',
     'password'=>'required|min:6',
     'convinience_name'=>'required',
     'convinience_branch'=>'required',
     'adress'=>'required'
-
+*/
 ]);
 
 $id = Auth::guard('admin')->id();
-$product = products::where("admin_id",$id)->paginate(5);
+//$product = products::where("admin_id",$id)->paginate(5);
 
 $admin=DB::table('admins')->find($id);
 $admin->name = $request->name;
-$admin->password=$request->password;
+$admin->password= $request->password;
 $admin->convinience_name = $request->convinience_name;
-$product->convinience_branch = $request->convinience_branch;
-$product->prefecture=$request->prefecture;
-$product->adress=$request->adress;
+$admin->convinience_branch = $request->convinience_branch;
+$admin->prefecture=$request->prefecture;
+$admin->adress=$request->adrees;
 $admin->save();
 return redirect('admin')->with('flash_message', __('Registered.'));
 
