@@ -61,6 +61,13 @@
     {{$my_user->name}}様
     haiki shareへようこそ！！
 
+    {{-- マイページに表示されるのは購入フラグがきちんと立っているものが表示される。 
+        ゆーざーidに入るのはログインしているユーザー出ないといけない
+        ユーザーidの値と購入フラグがきちんと立っているものを取得する
+
+        参考として商品が出品されたものを参考にするといい
+        --}}
+
 </h1>
 <a class="btn_tw" href="https://twitter.com/intent/tweet?text=ここを記述するとtwitter内ですでに文が打ち込まれる;" target="_blank_" rel="nofollow"><i class="fab fa-twitter fa-fw"></i> この商品をシェアするs</a>
 <main>
