@@ -1,6 +1,5 @@
 <template>
     <div id="app">
-        <img :src="image_url | replace('public', '../storage')" alt="" />
         <h1 class="c-title">コンビニ側が出品した商品の一覧のページです</h1>
         <main>
             <div class="l-exhibitproductlist">
@@ -36,8 +35,6 @@ export default {
             return {
                 products: "", //からのデータを用意する。
                 imageUrl: "https://via.placeholder.com/300x200?text=Image-1",
-
-                checkflg: false,
             };
         }
     },
