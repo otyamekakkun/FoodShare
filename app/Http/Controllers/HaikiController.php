@@ -245,7 +245,7 @@ public function index1(Request $request){
 */
 public function staff_exhibitproduct_json(){
     $id = Auth::guard('admin')->id();
-    $product = products::where("admin_id",$id)->paginate(5);
+    $product = products::where("admin_id",$id);
     return response()->json($product);
 
 }
@@ -319,6 +319,11 @@ public function index2(Request $request){
     return response()->json($drill);
 }
 
+
+
+
+
+//今ログインしているものを取得してくるjson形式
 public function productjson(){
     $id = Auth::guard('admin')->id();
     $product = products::where("admin_id",$id)->get();
