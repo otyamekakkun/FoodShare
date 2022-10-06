@@ -4,8 +4,18 @@
         <header>
             @include('rest.staff.header')
         </header>
+<div id="app">
+    
+<exhibitlist-componennt></exhibitlist-componennt>
+<footer-component></footer-component>
 
-<h1 class="c-title">
+</div>
+</body>
+@endsection
+
+{{-- 
+    
+    <h1 class="c-title">
     コンビニ側が出品した商品の一覧のページです
 </h1>
 
@@ -14,46 +24,55 @@
         {{-- <div class="c-productlist"> --}}
 
 {{-- おそらくもっといい方法があると思うが --}}
-            <div class="l-exhibitproductlist__list">
-                <div class="l-exhibitproductlist__listb">
+{{-- 
+<div class="l-exhibitproductlist__list">
+    <div class="l-exhibitproductlist__listb">
+    <div>
+        <div>
+            <div>
                 <div>
-                    <div>
-                        <div>
-                            <div>
-    @foreach ($products as $product)
-    <div class="c-productlist">
-        <img src="{{ Storage::url($product->img_path) }}" width="25%">
-        <div class="c-productlist__sentence">
-            <ul>
-        <li>商品名:{{$product->product_name}}</li>
-        <li>¥{{$product->price}}</li>
-    
-    {{-- <button>詳細をみる</button> --}}
-    <button><a href="{{route('haiki_shopper.staff_productdetail_display',$product->id)}}">商品の詳細をみる</a></button>
-    @if($product->bought===0)
-    {{-- <button>購入されていないので編集する</button> --}}
-    {{-- <a href="{{route('haiki_shopper.staff_productedit_display',$product->product_id)}}">>商品を編集する<</a> --}}
-    <button><a href="{{route('haiki_shopper.staff_productedit_display',$product->id)}}">商品を編集する</a>
-    </button>
+@foreach ($products as $product)
+<div class="c-productlist">
+    ここまですみ
+
+<img src="{{ Storage::url($product->img_path) }}" width="25%">
+<div class="c-productlist__sentence">
+<ul>
+<li>商品名:{{$product->product_name}}</li>
+<li>¥{{$product->price}}</li>
+ --}}
+{{-- <button>詳細をみる</button> --}}
+{{--  
+<button><a href="{{route('haiki_shopper.staff_productdetail_display',$product->id)}}">商品の詳細をみる</a></button>
+@if($product->bought===0)
+--}}
+{{-- <button>購入されていないので編集する</button> --}}
+{{-- <a href="{{route('haiki_shopper.staff_productedit_display',$product->product_id)}}">>商品を編集する<</a> --}}
+{{-- 
+<button><a href="{{route('haiki_shopper.staff_productedit_display',$product->id)}}">商品を編集する</a>
+</button>
 </ul>
 </div>
 </div>
 <div class="c-under"></div>
-    @endif
-    {{-- おそらく詳細を見る編集するでidをふる練習をしないと行けなさそう。 --}}
-
-    @endforeach
+@endif
+ --}}
+{{-- おそらく詳細を見る編集するでidをふる練習をしないと行けなさそう。 --}}
+{{-- 
+@endforeach
 </div>
 
-    {{$products->links('layouts.paginate')}}
+{{$products->links('layouts.paginate')}}
 
-            {{-- 全体のレイアウトを閉じるdiv --}}
-</div>
-</main>
-
-<div id="app">
-<exhibitlist-componennt></exhibitlist-componennt>
-<footer-component></footer-component>
-</div>
-</body>
-@endsection
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    --}}

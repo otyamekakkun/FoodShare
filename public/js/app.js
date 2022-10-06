@@ -5302,54 +5302,6 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/drills/drills.vue?vue&type=script&lang=js&":
-/*!*********************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/drills/drills.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  data: function data() {
-    {
-      return {
-        uses: [],
-        xuses: [] //img_path: {},
-
-      };
-    }
-  },
-  mounted: function mounted() {
-    var _this = this;
-
-    var url = "/drills/ind";
-    var url2 = "/drills/inde";
-    /*
-    コンソールで表現する
-    axios.get(url).then(function (response) {
-        var drills = response.data;
-        console.log(drills);
-    });
-    */
-
-    axios__WEBPACK_IMPORTED_MODULE_0___default().get(url).then(function (response) {
-      return _this.uses = response.data;
-    });
-    axios__WEBPACK_IMPORTED_MODULE_0___default().get(url2).then(function (response) {
-      return _this.xuses = response.data;
-    });
-  }
-});
-
-/***/ }),
-
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/exhibitproductlist/exhibitproductlist.vue?vue&type=script&lang=js&":
 /*!*********************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/exhibitproductlist/exhibitproductlist.vue?vue&type=script&lang=js& ***!
@@ -5367,21 +5319,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     {
-      //データは言わば変数みたいなもの色々なところで使い回せる
       return {
-        //データベースの情報を取得
         products: "",
         //からのデータを用意する。
-        // pro:[1][1],
-        // product_img:product.img_path,
         imageUrl: "https://via.placeholder.com/300x200?text=Image-1",
         checkflg: false
       };
     }
   },
-  //実験として情報を受け取る練習からする。
-  //これはjson形式で値を取得しないといけないもの
-  //子コンポーネントを登録するここのデータはほぼ確定している。
   mounted: function mounted() {
     var _this = this;
 
@@ -5561,43 +5506,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "render": () => (/* binding */ render),
 /* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
 /* harmony export */ });
-var render = function render() {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("div", [_vm._l(_vm.uses, function (use) {
-    return _c("tr", [_c("td", {
-      domProps: {
-        textContent: _vm._s(use.problem2)
-      }
-    }), _vm._v(" "), _c("td", {
-      domProps: {
-        textContent: _vm._s(use.category_name)
-      }
-    }), _vm._v(" "), _c("td", {
-      domProps: {
-        textContent: _vm._s(use.place)
-      }
-    }), _vm._v(" "), _c("td", {
-      domProps: {
-        textContent: _vm._s(use.best_by_date)
-      }
-    })]);
-  }), _vm._v(" "), _vm._l(_vm.xuses, function (use2) {
-    return _c("tr", [_c("td", {
-      domProps: {
-        textContent: _vm._s(use2.problem2)
-      }
-    }), _vm._v(" "), _c("td", {
-      domProps: {
-        textContent: _vm._s(use2.category_name)
-      }
-    })]);
-  })], 2);
-};
+var render = function render() {};
 
 var staticRenderFns = [];
-render._withStripped = true;
 
 
 /***/ }),
@@ -5627,17 +5538,26 @@ var render = function render() {
       src: _vm._f("replace")(_vm.image_url, "public", "../storage"),
       alt: ""
     }
-  }), _vm._v(" "), _c("h1", [_vm._v("exhibitproductlistのコンポーネント")]), _vm._v(" "), _vm._l(_vm.products, function (product) {
-    return _c("div", [_c("td", {
-      domProps: {
-        textContent: _vm._s(product.price)
-      }
-    }), _vm._v(" "), _c("img", {
+  }), _vm._v(" "), _c("h1", {
+    staticClass: "c-title"
+  }, [_vm._v("コンビニ側が出品した商品の一覧のページです")]), _vm._v(" "), _c("main", [_c("div", {
+    staticClass: "l-exhibitproductlist"
+  }, [_c("div", {
+    staticClass: "l-exhibitproductlist__list"
+  }, [_c("div", {
+    staticClass: "l-exhibitproductlist__listb"
+  }, [_c("div", _vm._l(_vm.products, function (item) {
+    return _c("li", [_c("div", {
+      staticClass: "c-productlist"
+    }, [_c("img", {
       attrs: {
-        src: product.img_path
+        src: item.img_path,
+        width: "25%"
       }
-    })]);
-  })], 2);
+    }), _vm._v(" "), _c("div", {
+      staticClass: "c-productlist__sentence"
+    }, [_vm._v("\n                                    商品名." + _vm._s(item.product_name) + "お値段." + _vm._s(item.price) + "円.\n                                ")])])]);
+  }), 0)])])])])]);
 };
 
 var staticRenderFns = [];
@@ -28638,17 +28558,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _drills_vue_vue_type_template_id_b25ab63e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./drills.vue?vue&type=template&id=b25ab63e& */ "./resources/js/drills/drills.vue?vue&type=template&id=b25ab63e&");
-/* harmony import */ var _drills_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./drills.vue?vue&type=script&lang=js& */ "./resources/js/drills/drills.vue?vue&type=script&lang=js&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-
-
+var script = {}
 
 
 /* normalize component */
 ;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _drills_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
+  script,
   _drills_vue_vue_type_template_id_b25ab63e___WEBPACK_IMPORTED_MODULE_0__.render,
   _drills_vue_vue_type_template_id_b25ab63e___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
@@ -28924,22 +28842,6 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
 
 component.options.__file = "resources/js/staff/dragdrop.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/drills/drills.vue?vue&type=script&lang=js&":
-/*!*****************************************************************!*\
-  !*** ./resources/js/drills/drills.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_drills_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./drills.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/drills/drills.vue?vue&type=script&lang=js&");
- /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_drills_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
