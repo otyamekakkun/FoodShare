@@ -1,12 +1,11 @@
 <template>
     <div id="app">
-        <!-- <img :src="image_url | replace('public', '../storage')" alt="" /> -->
+        <img :src="image_url | replace('public', '../storage')" alt="" />
 
         <h1>exhibitproductlistのコンポーネント</h1>
         <div v-for="product in products">
             <td v-text="product.price"></td>
-            <td v-text="product.price"></td>
-            <!-- <img v-bind:src="item.img_path"> -->
+            <img v-bind:src="product.img_path" />
         </div>
     </div>
 </template>

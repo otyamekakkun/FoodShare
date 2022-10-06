@@ -5622,14 +5622,19 @@ var render = function render() {
     attrs: {
       id: "app"
     }
-  }, [_c("h1", [_vm._v("exhibitproductlistのコンポーネント")]), _vm._v(" "), _vm._l(_vm.products, function (product) {
+  }, [_c("img", {
+    attrs: {
+      src: _vm._f("replace")(_vm.image_url, "public", "../storage"),
+      alt: ""
+    }
+  }), _vm._v(" "), _c("h1", [_vm._v("exhibitproductlistのコンポーネント")]), _vm._v(" "), _vm._l(_vm.products, function (product) {
     return _c("div", [_c("td", {
       domProps: {
         textContent: _vm._s(product.price)
       }
-    }), _vm._v(" "), _c("td", {
-      domProps: {
-        textContent: _vm._s(product.price)
+    }), _vm._v(" "), _c("img", {
+      attrs: {
+        src: product.img_path
       }
     })]);
   })], 2);

@@ -320,9 +320,6 @@ public function index2(Request $request){
 }
 
 
-
-
-
 //今ログインしているものを取得してくるjson形式
 public function productjson(){
     $id = Auth::guard('admin')->id();
