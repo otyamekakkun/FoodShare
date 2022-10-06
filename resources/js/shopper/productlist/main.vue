@@ -9,16 +9,64 @@
         <!-- 
         <p>{{ countUp() }}</p>
         <product val="これ"></product>
+        -->
 
         <div v-for="product in products">
             <td v-text="product.price"></td>
-            <h1 v-if="product.price"></h1>
+            <td v-text="product.price"></td>
         </div>
+
+
+<!-- ここで様々な条件を取り出す練習をする -->
+    <div>
+        <li v-for="item in products"
+            v-bind:class="{takai: item.price>300}">
+            ID.{{item.id}}商品名.{{item.product_name}}お値段.{{item.price}}円.
+            <img :src="item.img_path">
+<!-- 
+画像表示する際にsrc属性のみエラー件数1
+v-bind:src属性のみエラー件数7件
+
+ -->
+
+
+
+            <span v-if="item.price <=100">やすい</span>
+            <span v-else-if="item.price >100 && item.price<=500">普通</span>
+            <span v-else-if="item.price >500 && item.price<=1000">やや高い</span>
+            <span v-else-if="item.price >1000" >そのほか</span> 
+<!-- 写真の導入の仕方がいまいちわかっていない -->
+            </li>
     </div>
--->
+
+
+
+
+
+<input type="checkbox" v-model="checkflg"/>チェックを入れる
+<div v-show="checkflg">チェックが入ると表示されます
+<button>商品を購入します</button>
+<button>購入をキャンセルする</button>
+
+<div v-for="product in products">
+    <td v-text="product.product_name"></td>
+            <td v-text="product.price"></td>
+            <!-- <img v-bind:src="product.img_path"> -->
+        </div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
         <!-- <div>{{ countUp }}</div> -->
         <!-- <p>{{ search() }}</p> -->
-
+<!-- 
         <h1>商品一覧</h1>
         <div class="search">
             検索結果
@@ -32,13 +80,12 @@
                 <option value="2">500円以下を表示する</option>
                 <option value="3">1000円以下を表示する</option>
             </select>
-            <!-- 賞味期限が有効期限いないかどうかを確かめる -->
             <input
                 type="checkbox"
                 v-model="check1"
             />賞味期限以内の商品を表示する
-            <!-- 都道府県の情報を取得する -->
-
+             -->
+<!-- 
             <select class="">
     <option selected>都道府県</option>
     <option value="北海道">北海道</option>
@@ -90,14 +137,13 @@
     <option value="沖縄県">沖縄県</option>
     </select>
 
-
-            </div>
-        </div>
+ -->
 
         <!-- ここまでが商品の検索するheader部分に当たる。 -->
         <!-- <p>{{ countdown() }}</p> -->
         <!-- ここで色々なものを表示するための記述する -->
 </template>
+
 <script>
 import axios from "axios";
 /*
@@ -117,7 +163,13 @@ export default {
                 check2: false,
                 check3: false,
                 //データベースの情報を取得
-                products: {},
+                products:[],//からのデータを用意する。
+                pro:[],
+               // pro:[1][1],
+               // product_img:product.img_path,
+
+
+                checkflg:false,
             };
         }
     },
@@ -130,6 +182,16 @@ export default {
         product: product,
     },
     methods: {
+
+count:function(){
+    console.log($route.path);
+},
+
+
+
+
+
+
         //json形式で値を取得する方法
         /*
 今回準備するメソッド
@@ -145,8 +207,9 @@ export default {
 
         /*
 ここから処理を記述するs
-
 */
+
+
 
         search: function () {
             //コンポーネントのインスタンスを取得
@@ -182,7 +245,16 @@ export default {
     //親から子にコンポーネントを渡す必要があるのでデータベースの値を子に渡す必要がある。
     mounted() {
         var url = "/haiki/index1";
-        axios.get(url).then((response) => (this.products = response.data));
+        axios.get(url).then((response) => 
+        
+        
+        
+
+        {this.products = response.data}
+        
+        
+        
+        );
     },
 };
 </script>
@@ -230,3 +302,12 @@ export default {
                 //ソート順(0:未選択,1:100円以下を絞りこむ,2:500円以下を絞り込む、3:1000円以下を絞りこむ)
                 //賞味期限が切れているかどうかをチェック。(切れている商品があったら非表示にすること)
                 //出品しているコンビニのある都道府県を実装すること
+
+
+
+
+/*
+これは連想配列形式
+https://www.brain-gate.net/content/column/system-program-associative-array/
+v-showで要素の存在を切り替える
+*/

@@ -5422,7 +5422,12 @@ import productlist from "./component/product-list.vue";
         check2: false,
         check3: false,
         //データベースの情報を取得
-        products: {}
+        products: [],
+        //からのデータを用意する。
+        pro: [],
+        // pro:[1][1],
+        // product_img:product.img_path,
+        checkflg: false
       };
     }
   },
@@ -5435,6 +5440,9 @@ import productlist from "./component/product-list.vue";
     product: _component_product_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   methods: {
+    count: function count() {
+      console.log($route.path);
+    },
     //json形式で値を取得する方法
 
     /*
@@ -5487,7 +5495,7 @@ import productlist from "./component/product-list.vue";
 
     var url = "/haiki/index1";
     axios__WEBPACK_IMPORTED_MODULE_0___default().get(url).then(function (response) {
-      return _this.products = response.data;
+      _this.products = response.data;
     });
   }
 });
@@ -5660,22 +5668,42 @@ var render = function render() {
     attrs: {
       id: "app"
     }
-  }, [_c("h1", [_vm._v("商品一覧")]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c("div", {}, [_vm._v("\n            " + _vm._s(_vm.products) + "\n            "), _vm._m(1), _vm._v(" "), _c("input", {
+  }, [_vm._l(_vm.products, function (product) {
+    return _c("div", [_c("td", {
+      domProps: {
+        textContent: _vm._s(product.price)
+      }
+    }), _vm._v(" "), _c("td", {
+      domProps: {
+        textContent: _vm._s(product.price)
+      }
+    })]);
+  }), _vm._v(" "), _c("div", _vm._l(_vm.products, function (item) {
+    return _c("li", {
+      class: {
+        takai: item.price > 300
+      }
+    }, [_vm._v("\n            ID." + _vm._s(item.id) + "商品名." + _vm._s(item.product_name) + "お値段." + _vm._s(item.price) + "円.\n            "), _c("img", {
+      attrs: {
+        src: item.img_path
+      }
+    }), _vm._v(" "), item.price <= 100 ? _c("span", [_vm._v("やすい")]) : item.price > 100 && item.price <= 500 ? _c("span", [_vm._v("普通")]) : item.price > 500 && item.price <= 1000 ? _c("span", [_vm._v("やや高い")]) : item.price > 1000 ? _c("span", [_vm._v("そのほか")]) : _vm._e()]);
+  }), 0), _vm._v(" "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
-      value: _vm.check1,
-      expression: "check1"
+      value: _vm.checkflg,
+      expression: "checkflg"
     }],
     attrs: {
       type: "checkbox"
     },
     domProps: {
-      checked: Array.isArray(_vm.check1) ? _vm._i(_vm.check1, null) > -1 : _vm.check1
+      checked: Array.isArray(_vm.checkflg) ? _vm._i(_vm.checkflg, null) > -1 : _vm.checkflg
     },
     on: {
       change: function change($event) {
-        var $$a = _vm.check1,
+        var $$a = _vm.checkflg,
             $$el = $event.target,
             $$c = $$el.checked ? true : false;
 
@@ -5684,244 +5712,36 @@ var render = function render() {
               $$i = _vm._i($$a, $$v);
 
           if ($$el.checked) {
-            $$i < 0 && (_vm.check1 = $$a.concat([$$v]));
+            $$i < 0 && (_vm.checkflg = $$a.concat([$$v]));
           } else {
-            $$i > -1 && (_vm.check1 = $$a.slice(0, $$i).concat($$a.slice($$i + 1)));
+            $$i > -1 && (_vm.checkflg = $$a.slice(0, $$i).concat($$a.slice($$i + 1)));
           }
         } else {
-          _vm.check1 = $$c;
+          _vm.checkflg = $$c;
         }
       }
     }
-  }), _vm._v("賞味期限以内の商品を表示する\n            "), _vm._v(" "), _vm._m(2)])]);
+  }), _vm._v("チェックを入れる\n"), _c("div", {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: _vm.checkflg,
+      expression: "checkflg"
+    }]
+  }, [_vm._v("チェックが入ると表示されます\n"), _c("button", [_vm._v("商品を購入します")]), _vm._v(" "), _c("button", [_vm._v("購入をキャンセルする")]), _vm._v(" "), _vm._l(_vm.products, function (product) {
+    return _c("div", [_c("td", {
+      domProps: {
+        textContent: _vm._s(product.product_name)
+      }
+    }), _vm._v(" "), _c("td", {
+      domProps: {
+        textContent: _vm._s(product.price)
+      }
+    })]);
+  })], 2)], 2);
 };
 
-var staticRenderFns = [function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("div", {
-    staticClass: "search"
-  }, [_vm._v("\n            検索結果\n            "), _c("span", {}, [_vm._v("?件")])]);
-}, function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("select", {}, [_c("option", {
-    attrs: {
-      value: "0"
-    }
-  }, [_vm._v("価格の範囲を指定する")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "1"
-    }
-  }, [_vm._v("100円以下を表示する")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "2"
-    }
-  }, [_vm._v("500円以下を表示する")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "3"
-    }
-  }, [_vm._v("1000円以下を表示する")])]);
-}, function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("select", {}, [_c("option", {
-    attrs: {
-      selected: ""
-    }
-  }, [_vm._v("都道府県")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "北海道"
-    }
-  }, [_vm._v("北海道")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "青森県"
-    }
-  }, [_vm._v("青森県")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "岩手県"
-    }
-  }, [_vm._v("岩手県")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "宮城県"
-    }
-  }, [_vm._v("宮城県")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "秋田県"
-    }
-  }, [_vm._v("秋田県")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "山形県"
-    }
-  }, [_vm._v("山形県")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "福島県"
-    }
-  }, [_vm._v("福島県")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "茨城県"
-    }
-  }, [_vm._v("茨城県")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "栃木県"
-    }
-  }, [_vm._v("栃木県")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "群馬県"
-    }
-  }, [_vm._v("群馬県")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "埼玉県"
-    }
-  }, [_vm._v("埼玉県")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "千葉県"
-    }
-  }, [_vm._v("千葉県")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "東京都"
-    }
-  }, [_vm._v("東京都")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "神奈川県"
-    }
-  }, [_vm._v("神奈川県")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "新潟県"
-    }
-  }, [_vm._v("新潟県")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "富山県"
-    }
-  }, [_vm._v("富山県")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "石川県"
-    }
-  }, [_vm._v("石川県")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "福井県"
-    }
-  }, [_vm._v("福井県")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "山梨県"
-    }
-  }, [_vm._v("山梨県")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "長野県"
-    }
-  }, [_vm._v("長野県")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "岐阜県"
-    }
-  }, [_vm._v("岐阜県")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "静岡県"
-    }
-  }, [_vm._v("静岡県")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "愛知県"
-    }
-  }, [_vm._v("愛知県")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "三重県"
-    }
-  }, [_vm._v("三重県")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "滋賀県"
-    }
-  }, [_vm._v("滋賀県")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "京都府"
-    }
-  }, [_vm._v("京都府")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "大阪府"
-    }
-  }, [_vm._v("大阪府")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "兵庫県"
-    }
-  }, [_vm._v("兵庫県")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "奈良県"
-    }
-  }, [_vm._v("奈良県")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "和歌山県"
-    }
-  }, [_vm._v("和歌山県")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "鳥取県"
-    }
-  }, [_vm._v("鳥取県")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "島根県"
-    }
-  }, [_vm._v("島根県")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "岡山県"
-    }
-  }, [_vm._v("岡山県")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "広島県"
-    }
-  }, [_vm._v("広島県")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "山口県"
-    }
-  }, [_vm._v("山口県")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "徳島県"
-    }
-  }, [_vm._v("徳島県")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "香川県"
-    }
-  }, [_vm._v("香川県")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "愛媛県"
-    }
-  }, [_vm._v("愛媛県")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "高知県"
-    }
-  }, [_vm._v("高知県")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "福岡県"
-    }
-  }, [_vm._v("福岡県")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "佐賀県"
-    }
-  }, [_vm._v("佐賀県")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "長崎県"
-    }
-  }, [_vm._v("長崎県")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "熊本県"
-    }
-  }, [_vm._v("熊本県")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "大分県"
-    }
-  }, [_vm._v("大分県")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "宮崎県"
-    }
-  }, [_vm._v("宮崎県")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "鹿児島県"
-    }
-  }, [_vm._v("鹿児島県")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "沖縄県"
-    }
-  }, [_vm._v("沖縄県")])]);
-}];
+var staticRenderFns = [];
 render._withStripped = true;
 
 
