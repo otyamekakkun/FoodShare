@@ -43,6 +43,12 @@ Vue.component("drag-component", require("./staff/dragdrop.vue").default);
 //実験用のコンポーネント
 Vue.component("drills-component", require("./drills/drills.vue").default);
 
+//商品一覧リストのコンポーネント
+Vue.component(
+    "exhibitlist-componennt",
+    require("./exhibitproductlist/exhibitproductlist.vue").default
+);
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

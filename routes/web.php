@@ -184,6 +184,36 @@ Route::get('/haiki/index2',[HaikiController::class, 'index2'])->name('drills.ind
 Route::get('/haiki/index3',[HaikiController::class, 'productjson'])->name('product.json');
 
 
+
+
+
+
+
+
+
+
+
+
+//json形式で渡すものはしっかりと対策する必要がある。
+//staff_exhibitproductをjson形式で渡す
+Route::get('/haiki/jsonstaff_exhibit',[HaikiController::class, 'staff_exhibitproduct_json'])->name('product.json');
+//ok
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //===========
 //ゴミファイルになるかどうか
 //==========

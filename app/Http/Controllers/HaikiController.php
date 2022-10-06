@@ -155,22 +155,7 @@ return redirect('haiki/shopper_mypage');//..............画面表示するもの
 //===========================================================================2終了
 }
 
-
-
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //=============================================================ここまで
@@ -249,7 +234,22 @@ public function destory($id){
         $id = Auth::guard('admin')->id();
         $product = products::where("admin_id",$id)->paginate(5);
     return view('haiki_staff.staff_exhibitproduct_list_display',['products'=>$product]);
-    } //...................................
+    } //...................................ここに問題がありそう。
+//json形式で渡す
+/*
+public function index1(Request $request){
+    $drill = products::all();
+    return response()->json($drill);
+    //index1の内容は基本的にファイルの中に入っているもの全てを取得する
+}
+*/
+public function staff_exhibitproduct_json(){
+    $id = Auth::guard('admin')->id();
+    $product = products::where("admin_id",$id)->paginate(5);
+    return response()->json($product);
+
+}
+
 
 //==========================================================ここまで
 
@@ -287,17 +287,13 @@ $path = Storage::disk("public")->putFile('profile', $image);
 $imagePath = "/storage/" . $path;
 
 
-
-
-
-
-
 $id = Auth::guard('admin')->id();
 $product = new products;
 $product->product_name = $request->product_name;
 $product->admin_id = $id;//現在ログインしているコンビニユーザー情報のidをこの中に入れる
 //$product->img_path=$imagePath;
-$product->img_path=$path;
+//json形式で取得している
+$product->img_path=$imagePath;
 $product->price = $request->price;
 $product->best_by_date = $request->best_by_date;
 $product->save();//2
@@ -315,23 +311,13 @@ return redirect('admin')->with('flash_message', __('Registered.'));//3
 public function index1(Request $request){
     $drill = products::all();
     return response()->json($drill);
+    //index1の内容は基本的にファイルの中に入っているもの全てを取得する
 }
 
 public function index2(Request $request){
     $drill = products::all();
     return response()->json($drill);
 }
-
-
-
-
-
-
-
-
-
-
-
 
 public function productjson(){
     $id = Auth::guard('admin')->id();

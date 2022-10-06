@@ -14,7 +14,6 @@
         {{-- <div class="c-productlist"> --}}
 
 {{-- おそらくもっといい方法があると思うが --}}
-
             <div class="l-exhibitproductlist__list">
                 <div class="l-exhibitproductlist__listb">
                 <div>
@@ -53,6 +52,7 @@
 </main>
 
 <div id="app">
+<exhibitlist-componennt></exhibitlist-componennt>
 <footer-component></footer-component>
 </div>
 </body>
