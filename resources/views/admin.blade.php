@@ -26,6 +26,7 @@
 <button><a href="{{route('haiki_shopper.staff_exhibitproduct_list_display')}}"><button>出品した商品一覧を表示</a></button>
 @foreach ($products as $product)
 <img src="{{ Storage::url($product->img_path) }}" width="25%">
+{{-- public参加に保存されたとき --}}
 <ul>
 <p>商品名:{{$product->product_name}}</p>
 <p>価格:{{$product->price}}</p>

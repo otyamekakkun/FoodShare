@@ -6,14 +6,20 @@
 <!--  -->
 <template>
     <div id="app">
+
+        <img :src="image_url | replace('public','../storage')" alt="">
+
         <!-- 
         <p>{{ countUp() }}</p>
         <product val="これ"></product>
-        -->
-
+-->
+{{products}}
         <div v-for="product in products">
             <td v-text="product.price"></td>
             <td v-text="product.price"></td>
+            <!-- <img v-bind:src="item.img_path"> -->
+
+
         </div>
 
 
@@ -22,10 +28,11 @@
         <li v-for="item in products"
             v-bind:class="{takai: item.price>300}">
             ID.{{item.id}}商品名.{{item.product_name}}お値段.{{item.price}}円.
-            <img :src="item.img_path">
+            <img v-bind:src="item.img_path">
 <!-- 
 画像表示する際にsrc属性のみエラー件数1
 v-bind:src属性のみエラー件数7件
+        <img src="{{ Storage::url($product->img_path) }}" width="25%">
 
  -->
 
@@ -56,7 +63,6 @@ v-bind:src属性のみエラー件数7件
 </div>
 
 </div>
-
 
 
 
@@ -163,10 +169,10 @@ export default {
                 check2: false,
                 check3: false,
                 //データベースの情報を取得
-                products:[],//からのデータを用意する。
-                pro:[],
+                products:"",//からのデータを用意する。
                // pro:[1][1],
                // product_img:product.img_path,
+               imageUrl: 'https://via.placeholder.com/300x200?text=Image-1',
 
 
                 checkflg:false,
@@ -186,7 +192,6 @@ export default {
 count:function(){
     console.log($route.path);
 },
-
 
 
 
@@ -244,18 +249,29 @@ count:function(){
     //json形式でデータベースの値を取得する。
     //親から子にコンポーネントを渡す必要があるのでデータベースの値を子に渡す必要がある。
     mounted() {
-        var url = "/haiki/index1";
-        axios.get(url).then((response) => 
-        
-        
-        
+        const url = "/haiki/index1";  
+      // const img="/haiki/index2";
+       axios.get(url).then((response) => (this.products = response.data));
+       //axios.get(img).then((response) => (this.products = response.data));
 
-        {this.products = response.data}
-        
-        
-        
-        );
+
+
+
+        //axios.get(url).then(response=>{this.products=URL.createObjectURL(response.data);})
+        //axios.get(url,{responseType:'arraybuffer'}).then(response =>  Buffer.from(response.data, 'base64');
     },
+
+
+
+
+
+
+
+
+
+
+
+
 };
 </script>
 <!-- 
@@ -310,4 +326,11 @@ count:function(){
 これは連想配列形式
 https://www.brain-gate.net/content/column/system-program-associative-array/
 v-showで要素の存在を切り替える
+*/
+/*
+画面のurlかをする方法を考察する。
+publicをstorageのところで画像が保存されるようにセッティングする
+
+
+
 */

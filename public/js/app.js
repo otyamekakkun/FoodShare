@@ -5422,11 +5422,11 @@ import productlist from "./component/product-list.vue";
         check2: false,
         check3: false,
         //データベースの情報を取得
-        products: [],
+        products: "",
         //からのデータを用意する。
-        pro: [],
         // pro:[1][1],
         // product_img:product.img_path,
+        imageUrl: 'https://via.placeholder.com/300x200?text=Image-1',
         checkflg: false
       };
     }
@@ -5493,10 +5493,13 @@ import productlist from "./component/product-list.vue";
   mounted: function mounted() {
     var _this = this;
 
-    var url = "/haiki/index1";
+    var url = "/haiki/index1"; // const img="/haiki/index2";
+
     axios__WEBPACK_IMPORTED_MODULE_0___default().get(url).then(function (response) {
-      _this.products = response.data;
-    });
+      return _this.products = response.data;
+    }); //axios.get(img).then((response) => (this.products = response.data));
+    //axios.get(url).then(response=>{this.products=URL.createObjectURL(response.data);})
+    //axios.get(url,{responseType:'arraybuffer'}).then(response =>  Buffer.from(response.data, 'base64');
   }
 });
 
@@ -5668,7 +5671,12 @@ var render = function render() {
     attrs: {
       id: "app"
     }
-  }, [_vm._l(_vm.products, function (product) {
+  }, [_c("img", {
+    attrs: {
+      src: _vm._f("replace")(_vm.image_url, "public", "../storage"),
+      alt: ""
+    }
+  }), _vm._v(" "), _vm._v("\n" + _vm._s(_vm.products) + "\n        "), _vm._l(_vm.products, function (product) {
     return _c("div", [_c("td", {
       domProps: {
         textContent: _vm._s(product.price)
