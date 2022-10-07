@@ -198,10 +198,17 @@ public function update_exhibitproduct(Request $request,$id){
     $request->validate([
     ]);
 $img = $request->file('img_path');
-$path = $img->store('img','public');//1
+//$path = $img->store('img','public');//1
+
+
+
+$image = $request->file("img_path");
+$path = Storage::disk("public")->putFile('profile', $image); 
+$imagePath = "/storage/" . $path;
+
 $product = products::find($id);
 $product->product_name = $request->product_name;
-$product->img_path=$path;
+$product->img_path=$imagePath;
 $product->price = $request->price;
 $product->best_by_date = $request->best_by_date;
 $product->save();

@@ -59,7 +59,7 @@
             <strong>{{ $message }}</strong>
         @enderror
 <button type="submit" class="btn btn-primary">
-    商品を出品する
+商品を編集する
 </button>
 {{-- 全体を括るdiv --}}
 </div>

@@ -12,14 +12,6 @@
 </h1>
 <div id="app">
 
-{{-- 
-<button><a href="{{route('haiki_shopper.staff_buyproduct_display')}}"><button>購入された商品を写す</a></button>
-<button><a href="{{route('haiki_shopper.staff_productedit_display')}}"><button>出品した商品を編集する</a></button>
-
-<button><a href="{{route('haiki_shopper.staff_productedit_display')}}"><button>出品した商品一覧を表示</a></button>
-
- --}}
-
 
 <main>
 <div class="l-staffmypage">
