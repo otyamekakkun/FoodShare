@@ -5,6 +5,8 @@
     <header>
         @include('rest.staff.header')
     </header>
+    <div id="app">
+
 
 <h1 class="c-title">
     商品詳細
@@ -24,13 +26,13 @@
 
     <li class="c-under">価格:{{$products->price}}</li>
     <li class="c-under">賞味期限：{{$products->best_by_date}}</li>
+
 </ul>
 </div>
     </div>
 </div>
+<staff_productdetail-component :test="'{{$products->img_path}}'"></staff_productdetail-component>
 
-<div id="app">
-    <staff_productdetail-component></staff_productdetail-component>
 <incompletefooter-component></incompletefooter-component>
 </div>
 </body>
