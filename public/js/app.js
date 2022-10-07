@@ -5437,7 +5437,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ["test", "name"]
+  props: ["test", "name", "price", "best_by_date"]
 });
 
 /***/ }),
@@ -5944,7 +5944,7 @@ var render = function render() {
       src: _vm.test,
       width: "25%"
     }
-  }), _vm._v(" "), _c("p", [_vm._v(_vm._s(_vm.name))])]);
+  }), _vm._v(" "), _c("p", [_vm._v(_vm._s(_vm.name))]), _vm._v(" "), _c("p", [_vm._v(_vm._s(_vm.price))]), _vm._v(" "), _c("p", [_vm._v(_vm._s(_vm.best_by_date))])]);
 };
 
 var staticRenderFns = [];

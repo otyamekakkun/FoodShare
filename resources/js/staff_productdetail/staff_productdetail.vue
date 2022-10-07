@@ -4,11 +4,13 @@
 
         <img v-bind:src="test" width="25%" />
         <p>{{ name }}</p>
+        <p>{{ price }}</p>
+        <p>{{ best_by_date }}</p>
     </div>
 </template>
 <script>
 export default {
-    props: ["test", "name"],
+    props: ["test", "name", "price", "best_by_date"],
 };
 </script>
 
