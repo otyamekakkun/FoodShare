@@ -39,19 +39,6 @@
 @endforeach
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 </div>
 
 <div class="l-staffmypage__side">
