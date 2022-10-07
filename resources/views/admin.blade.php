@@ -87,6 +87,8 @@
 
 
 <div id="app">
+    <admin-component></admin-component>
+
 <footer-component></footer-component>
 </div>
 </body>
