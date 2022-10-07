@@ -234,6 +234,29 @@ public function destory($id){
     return view('haiki_staff.staff_productdetail_display',['products'=>$product]);
     } //.............................................................9画面を表示するもの
 
+//json形式
+//今ログインしているものを取得してくるjson形式
+public function staffproductdetailjson($id){
+    $product = products::find($id);
+return response()->json($product);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //========================================================================    
 //コンビニスタッフが商品を出品したものをリスト化するもの
 //========================================================================    

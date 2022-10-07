@@ -199,7 +199,7 @@ Route::get('/haiki/index3',[HaikiController::class, 'productjson'])->name('produ
 Route::get('/haiki/jsonstaff_exhibit',[HaikiController::class, 'staff_exhibitproduct_json'])->name('product.json');
 //ok
 
-
+Route::get('/haiki/{id}/jsonstaffproductdetail',[HaikiController::class, 'staffproductdetailjson'])->name('products.json');
 
 
 
