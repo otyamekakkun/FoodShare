@@ -30,6 +30,7 @@
 </div>
 
 <div id="app">
+    <staff_productdetail-component></staff_productdetail-component>
 <incompletefooter-component></incompletefooter-component>
 </div>
 </body>
