@@ -11,16 +11,13 @@
     出品した商品一覧
 </h1>
 <div id="app">
+    <admin-component></admin-component>
 
 
 <main>
-<div class="l-staffmypage">
-<div class="l-staffmypage__exhibitarea">
-
 @foreach ($products as $product)
-<admin-component :pro="'{{$product->id}}'" :name="'{{$product->product_name}}'"></admin-component>
-
 <ul>
+    
 <p>商品名:{{$product->product_name}}</p>
 <p>価格:{{$product->price}}</p>
 {{-- <button>詳細をみる</button> --}}
@@ -35,11 +32,9 @@
 @endif
 {{-- おそらく詳細を見る編集するでidをふる練習をしないと行けなさそう。 --}}
 
-
 @endforeach
 
 </div>
-
 </div>
 </main>
 

@@ -3,12 +3,11 @@
         <li v-for="item in products">
             <div class="c-productlist">
                 <img v-bind:src="item.img_path" width="25%" />
-                <!-- <div class="c-productlist__sentence"> -->
-                <li>商品No.{{ item.id }}</li>
-                <li>商品名.<br />{{ item.product_name }}</li>
-                <li>お値段.{{ item.price }}円.</li>
-
-                <!-- </div> -->
+                <div class="c-productlist__sentence">
+                    <li>商品No.{{ item.id }}</li>
+                    <li>商品名.{{ item.product_name }}</li>
+                    <li>お値段.{{ item.price }}円.</li>
+                </div>
             </div>
         </li>
     </div>
