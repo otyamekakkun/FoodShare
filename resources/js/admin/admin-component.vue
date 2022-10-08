@@ -7,15 +7,21 @@
                 <li>商品No.{{ item.id }}</li>
                 <li>商品名.<br />{{ item.product_name }}</li>
                 <li>お値段.{{ item.price }}円.</li>
+
                 <!-- </div> -->
             </div>
         </li>
+        <a href="haiki/{{pro}}/staff_productdetail">商品詳細ページ </a>
+
+        <p>{{ pro }}</p>
     </div>
 </template>
 <script>
 import axios from "axios";
 
 export default {
+    props: ["pro"],
+
     data: function () {
         {
             return {

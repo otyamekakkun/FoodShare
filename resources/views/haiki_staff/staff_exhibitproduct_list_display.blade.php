@@ -16,9 +16,10 @@
 <main>
 <div class="l-staffmypage">
 <div class="l-staffmypage__exhibitarea">
-<admin-component></admin-component>
 
 @foreach ($products as $product)
+<admin-component :pro="'{{$product->id}}'" :name="'{{$product->product_name}}'"></admin-component>
+
 <ul>
 <p>商品名:{{$product->product_name}}</p>
 <p>価格:{{$product->price}}</p>

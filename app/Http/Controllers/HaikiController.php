@@ -262,7 +262,7 @@ return response()->json($product);
 //========================================================================    
     public function staff_exhibitproduct_list_display(){
         $id = Auth::guard('admin')->id();
-        $product = products::where("admin_id",$id)->paginate(5);
+        $product = products::where("admin_id",$id)->get();
     return view('haiki_staff.staff_exhibitproduct_list_display',['products'=>$product]);
     } //...................................ここに問題がありそう。
 //json形式で渡す
