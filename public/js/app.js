@@ -5455,9 +5455,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "render": () => (/* binding */ render),
 /* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
 /* harmony export */ });
-var render = function render() {};
+var render = function render() {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("div", {
+    attrs: {
+      id: "app"
+    }
+  }, _vm._l(_vm.products, function (item) {
+    return _c("li", [_c("div", {
+      staticClass: "c-productlist"
+    }, [_c("img", {
+      attrs: {
+        src: item.img_path,
+        width: "25%"
+      }
+    }), _vm._v(" "), _c("li", [_vm._v("商品No." + _vm._s(item.id))]), _vm._v(" "), _c("li", [_vm._v("商品名."), _c("br"), _vm._v(_vm._s(item.product_name))]), _vm._v(" "), _c("li", [_vm._v("お値段." + _vm._s(item.price) + "円.")])])]);
+  }), 0);
+};
 
 var staticRenderFns = [];
+render._withStripped = true;
 
 
 /***/ }),

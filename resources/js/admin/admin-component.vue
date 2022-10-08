@@ -11,9 +11,6 @@
                 <!-- </div> -->
             </div>
         </li>
-        <a href="haiki/{{pro}}/staff_productdetail">商品詳細ページ </a>
-
-        <p>{{ pro }}</p>
     </div>
 </template>
 <script>
