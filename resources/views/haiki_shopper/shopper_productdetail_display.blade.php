@@ -32,7 +32,7 @@
     :product_price="'{{$products->price}}'" :product_best_by_date="'{{$products->best_by_date}}'"></shopperproductdetail-component>
 
 
-    <form action="" enctype="multipart/form-data" method="post">
+    <form action="{{ route('bought.update',$products->id)}}" enctype="multipart/form-data" method="post">
         @csrf
         <button class="btn btn-danger">購入する</button>
     </form>
@@ -46,7 +46,7 @@ form属性対応
 
 
 
-
+bought.update
 
 
 
