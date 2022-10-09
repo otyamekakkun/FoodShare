@@ -69,6 +69,10 @@ Vue.component(
 //================================================
 //staff_mypageのコンポーネント(基本的に購入された商品一覧5件を表示するコード)
 //================================================
+Vue.component(
+    "staffmypagebought-componennt",
+    require("./staffmypage/staffboughtmypage.vue").default
+);
 
 //=============================================================
 
