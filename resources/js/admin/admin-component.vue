@@ -7,16 +7,20 @@
                     <li>商品No.{{ item.id }}</li>
                     <li>商品名.{{ item.product_name }}</li>
                     <li>お値段.{{ item.price }}円.</li>
+                    <button>
+                        <a v-bind:href="`${item.id}}/staff_productdetail`"
+                            >詳細にいく</a
+                        >
+                    </button>
+
+                    <button>
+                        <a v-bind:href="`${item.id}}/staff_productedit`"
+                            >商品を編集する</a
+                        >
+                    </button>
                 </div>
             </div>
         </li>
-
-        <div v-for="items in products">
-            <h1>{{ items.id }}</h1>
-            <a v-bind:href="`haiki/${items.id}}/staff_productdetail`"
-                >詳細にいく</a
-            >
-        </div>
     </div>
 </template>
 <script>
