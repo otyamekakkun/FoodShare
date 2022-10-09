@@ -119,44 +119,6 @@ $admin->adress=$request->adress;
 $admin->save();
 return redirect('admin')->with('flash_message', __('Registered.'));
 }
-/*
-//===================================================================
-//shopper_profile_display 2                                        //
-//===================================================================
-    public function shopper_profile_display(){
-        $id = Auth::id();
-        $user = DB::table('users')->find($id);
-        return view('haiki_shopper.shopper_profile_display',['user'=>$user]);
-    } //...........................................画面表示するもの
-
-
-public function shopper_profile_edit(Request $request)
-{
-$request->validate([
-    //入力ネームと同じものを対応させる
-    //後で詳しく設定する（今は最低限）
-    /*
-    'email'=>'required|email:filter,dns',
-    'password'=>'required|min:6',
-    'password2'=>'required|min:6|same:password',
-    
-]);
-//$product = products::find($id);
-$id = Auth::id();
-$user = User::find($id);
-$user->email=$request->email;
-$user->password= Hash::make($request->password);
-$user->save();
-//パスワードをハッシュ化させる必要があるのでそれを記述する
-
-
-return redirect('haiki/shopper_mypage');//..............画面表示するもの
-
-//===========================================================================2終了
-}
-
-*/
-
 
 //=============================================================ここまで
 
@@ -240,22 +202,6 @@ public function staffproductdetailjson($id){
     $product = products::find($id);
 return response()->json($product);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //========================================================================    
 //コンビニスタッフが商品を出品したものをリスト化するもの
