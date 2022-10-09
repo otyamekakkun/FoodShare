@@ -53,8 +53,6 @@ $user->email=$request->email;
 $user->password= Hash::make($request->password);
 $user->save();
 //パスワードをハッシュ化させる必要があるのでそれを記述する
-
-
 return redirect('haiki/shopper_mypage');//..............画面表示するもの
 
 //===========================================================================2終了
@@ -77,7 +75,22 @@ return redirect('haiki/shopper_mypage');//..............画面表示するもの
 $product = products::find($id);         
         return view('haiki_shopper.shopper_productdetail_display',['products'=>$product]);
     } 
+    public function shopper_productdetail_bought (Request $request, $id){
 
+        $user = Auth::id();
+        $product = products::find($id);//商品専用のid
+    
+    
+        $product->user_id = $user;//現在ログインしているコンビニユーザー情報のidをこの中に入れる
+    
+        $product->user_id=$request->user_id;
+        $product->bought =$request->bought;
+        $product->save();
+        return redirect('haiki/shopper_mypage');
+    
+    
+    }
+    
 
 
 //post送信できるように記述する
