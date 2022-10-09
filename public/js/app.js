@@ -5471,8 +5471,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ["product_id", "product_img"]
+  props: ["pro"],
+  data: function data() {
+    {
+      return {
+        products: "",
+        //からのデータを用意する。
+        imageUrl: "https://via.placeholder.com/300x200?text=Image-1"
+      };
+    }
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    var url = "/haiki/index3";
+    axios__WEBPACK_IMPORTED_MODULE_0___default().get(url).then(function (response) {
+      return _this.products = response.data;
+    });
+  }
 });
 
 /***/ }),
@@ -6122,7 +6142,30 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", [_vm._v("\n    購入された商品リストを写す\n    "), _c("p", [_vm._v(_vm._s(this.product_id))])]);
+  return _c("div", {
+    attrs: {
+      id: "app"
+    }
+  }, _vm._l(_vm.products, function (item) {
+    return _c("li", [_c("div", {
+      staticClass: "c-productlist"
+    }, [_c("img", {
+      attrs: {
+        src: item.img_path,
+        width: "25%"
+      }
+    }), _vm._v(" "), _c("div", {
+      staticClass: "c-productlist__sentence"
+    }, [_c("li", [_vm._v("商品No." + _vm._s(item.id))]), _vm._v(" "), _c("li", [_vm._v("商品名." + _vm._s(item.product_name))]), _vm._v(" "), _c("li", [_vm._v("お値段." + _vm._s(item.price) + "円.")]), _vm._v(" "), _c("button", [_c("a", {
+      attrs: {
+        href: "haiki/".concat(item.id, "}/staff_productdetail")
+      }
+    }, [_vm._v("詳細にいく")])]), _vm._v(" "), _c("button", [_c("a", {
+      attrs: {
+        href: "haiki/".concat(item.id, "}/staff_productedit")
+      }
+    }, [_vm._v("商品を編集する")])]), _vm._v(" "), item.price <= 100 ? _c("span", [_vm._v("やすい")]) : item.price > 100 && item.price <= 500 ? _c("span", [_vm._v("普通")]) : item.price > 500 && item.price <= 1000 ? _c("span", [_vm._v("やや高い")]) : item.price > 1000 ? _c("span", [_vm._v("そのほか")]) : _vm._e(), _vm._v(" "), item.bought >= 1 ? _c("span", [_vm._v("購入された")]) : _c("span", [_vm._v("購入されていない")])])])]);
+  }), 0);
 };
 
 var staticRenderFns = [];

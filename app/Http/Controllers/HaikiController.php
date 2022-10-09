@@ -149,7 +149,10 @@ return redirect('admin')->with('flash_message', __('Registered.'));
 
     public function staff_buyproduct_display(Request $request){
         $id = Auth::guard('admin')->id();
-        $products=Admin::find($id);
+        $products=products::where('admin_id',$id)->get();
+
+        //         $product = products::where("admin_id",$id)->get();
+
 
         return view('haiki_staff.staff_buyproduct_display',['products'=>$products]);
     } //.............................................購入
