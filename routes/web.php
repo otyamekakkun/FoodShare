@@ -151,7 +151,8 @@ Route::post('/haikii/{id}/staff_productedit', [HaikiController::class, 'destroy'
 //==========================================================
 //商品詳細画面
 //=======================================================
-Route::get('/haiki/{id}/staff_productdetail',[HaikiController::class, 'staff_productdetail_display'])->name('haiki_shopper.staff_productdetail_display');    
+Route::get('/haiki/{id}/staff_productdetail',[HaikiController::class, 'staff_productdetail_display'])->name('haiki_shopper.staff_productdetail_display');   
+Route::post('',[HaikiController::class,'shopper_productdetail_bought'])->name('bought.update');
 //=======================================ここまで
 
 //===============================================

@@ -31,6 +31,40 @@
 <shopperproductdetail-component :product_img="'{{$products->img_path}}'" :product_name="'{{$products->product_name}}'"
     :product_price="'{{$products->price}}'" :product_best_by_date="'{{$products->best_by_date}}'"></shopperproductdetail-component>
 
+
+    <form action="" enctype="multipart/form-data" method="post">
+        @csrf
+        <button class="btn btn-danger">購入する</button>
+    </form>
+
+
+
+{{-- 
+
+form属性対応
+    <form action="{{ route('shopper_productdetail_bought')}}" enctype="multipart/form-data" method="post">
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <form action="{{ route('drills.delete',$products->id ) }}" method="post" class="d-inline">
+        @csrf
+        <button class="btn btn-danger" onclick='return confirm("削除しますか？");'>{{ __('Go Delete')  }}</button>
+    </form>
+     --}}
+
+
+
+
 <footer-component></footer-component>
 </div>
 </body>
