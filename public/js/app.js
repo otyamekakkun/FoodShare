@@ -5697,7 +5697,7 @@ var render = function render() {
         }
       }
     }
-  }), _vm._v("賞味期限以内の商品を表示する\n        "), _vm._m(1)]), _vm._v(" "), _c("div", _vm._l(_vm.products, function (item) {
+  }), _vm._v("賞味期限以内の商品を表示する\n        "), _vm._m(1)]), _vm._v(" "), _c("div", [_vm._v("\n        ここを正確に処理をすれば良さそう。\n        "), _vm._l(_vm.products, function (item) {
     return _c("li", {
       class: {
         takai: item.price > 300
@@ -5707,8 +5707,12 @@ var render = function render() {
         src: item.img_path,
         width: "25%"
       }
-    }), _vm._v("\n\n            商品名." + _vm._s(item.product_name) + "お値段." + _vm._s(item.price) + "円.\n            "), item.price <= 100 ? _c("span", [_vm._v("やすい")]) : item.price > 100 && item.price <= 500 ? _c("span", [_vm._v("普通")]) : item.price > 500 && item.price <= 1000 ? _c("span", [_vm._v("やや高い")]) : item.price > 1000 ? _c("span", [_vm._v("そのほか")]) : _vm._e()]);
-  }), 0)]);
+    }), _vm._v("\n\n            商品名." + _vm._s(item.product_name) + "お値段." + _vm._s(item.price) + "円.\n            "), _c("button", [_c("a", {
+      attrs: {
+        href: "/haiki/".concat(item.id, "/shopper_productdetail")
+      }
+    }, [_vm._v("商品の詳細をみる")])]), _vm._v(" "), item.price <= 100 ? _c("span", [_vm._v("やすい")]) : item.price > 100 && item.price <= 500 ? _c("span", [_vm._v("普通")]) : item.price > 500 && item.price <= 1000 ? _c("span", [_vm._v("やや高い")]) : item.price > 1000 ? _c("span", [_vm._v("そのほか")]) : _vm._e()]);
+  })], 2)]);
 };
 
 var staticRenderFns = [function () {

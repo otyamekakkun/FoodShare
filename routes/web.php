@@ -102,7 +102,7 @@ Route::post('/haiki/{id}/shopper_profile',[HaikiController::class, 'shopper_prof
 //お客様の商品一覧を閲覧するもの 3
 //=====================================================================
 Route::get('/haiki/shopper_productlist',[HaikiController::class, 'shopper_productlist_display'])->name('haiki_shopper.shopper_productlist_display');            //3
-Route::get('/haiki/shopper_productdetail',[HaikiController::class, 'shopper_productdetail_display'])->name('haiki_shopper.shopper_productdetail_display');      //4
+Route::get('/haiki/{id}/shopper_productdetail',[HaikiController::class, 'shopper_productdetail_display'])->name('haiki_shopper.shopper_productdetail_display');      //4
 
 //haiki shareのご利用スタッフが利用するもの
 
