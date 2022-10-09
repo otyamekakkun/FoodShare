@@ -10,7 +10,8 @@
     ここで全体図をつける
 <div class="l-productdetail__area">
 <div class="l-productdetail__area__photo">
-    ここで写真を入れる欄を作ろうかな
+
+
 </div>
 
 <div class="l-productdetail__area__menu">
@@ -27,9 +28,9 @@
 </div>  
 {{-- 全体を決めるもの --}}
 <div id="app">
+<shopperproductdetail-component :product_img="'{{$products->img_path}}'"></shopperproductdetail-component>
 
-    <shopperproductdetail-component></shopperproductdetail-component>
-<incompletefooter-component></incompletefooter-component>
+<footer-component></footer-component>
 </div>
 </body>
 @endsection
@@ -41,23 +42,7 @@
     2.基本的に商品を編集するみたいな容量で記述する。ただしそれよりすごい簡易的で購入フラグと今ログインしているユーザーフラグを
     更新すれば良い。
     3.購入後はマイページに遷移する。
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    4既に商品が購入されていたら購入することはできない。ただし購入をキャンセルすることができる。
     
     
     --}}
