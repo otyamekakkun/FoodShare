@@ -74,7 +74,6 @@
     <div class="l-staffmypage">
      <div class="l-staffmypage__bought">
         <h1>ご購入された商品一覧</h1>
-        <a href="{{route('haiki_shopper.staff_buyproduct_display')}}"><button>購入された商品を全権表示</a></button>
 </div>
 
     <div class="l-staffmypage__side">
@@ -83,18 +82,9 @@
     <a href="{{route('haiki_shopper.staff_exhibitproduct_display')}}"><button>商品を出品する</a></button>
     </div>
     </div>
-    
-    
-    
     </main>
-    
-    
-
-
-
-
 <div id="app">
-    <bought-componennt></bought-componennt>
+    <bought-componennt :product_img="'{{$products->id}}'"></bought-componennt>
 <footer-component></footer-component>
 </div>
 </body>

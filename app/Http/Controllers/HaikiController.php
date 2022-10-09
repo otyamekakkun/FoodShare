@@ -89,18 +89,12 @@ $product = products::find($id);
     }
     
 
-
-
-
-
-
 //=================================================ここまで
 
 //=============================================================
 //staffのprofileのdisplay(コンビニ情報を登録し直す)               //
 //=============================================================
     public function staff_profile_display(){
-
         $id = Auth::guard('admin')->id();
         $admin = DB::table('admins')->find($id);
         return view('haiki_staff.staff_profile_display',['admin'=>$admin]);//...................画面表示するもの
@@ -153,8 +147,11 @@ return redirect('admin')->with('flash_message', __('Registered.'));
 //7コンビニ 購入された商品一覧画面                                 //
 //==============================================================
 
-    public function staff_buyproduct_display(){
-        return view('haiki_staff.staff_buyproduct_display');
+    public function staff_buyproduct_display(Request $request){
+        $id = Auth::guard('admin')->id();
+        $products=Admin::find($id);
+
+        return view('haiki_staff.staff_buyproduct_display',['products'=>$products]);
     } //.............................................購入
 
 //=====================================================
@@ -253,7 +250,7 @@ public function staff_exhibitproduct_json(){
 
 public function admin(){
     $id = Auth::guard('admin')->id();
-    $product = products::where("admin_id",$id)->paginate(5);
+    $product = products::where("admin_id",$id)->get();
     return view('admin',['products'=>$product]);
 }
 
