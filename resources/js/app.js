@@ -61,11 +61,25 @@ Vue.component(
     "admin-component",
     require("./admin/admin-component.vue").default
 );
+
+
+
+
+
+
+
+
+
+
+
+
 //staff_productdetailのコンポーネント
 Vue.component(
     "staff_productdetail-component",
     require("./staff_productdetail/staff_productdetail.vue").default
 );
+
+
 
 Vue.component(
     "shopperproductdetail-component",
