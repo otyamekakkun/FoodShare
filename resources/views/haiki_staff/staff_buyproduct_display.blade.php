@@ -84,7 +84,7 @@
     </div>
     </main>
 <div id="app">
-    <bought-componennt :product_img="'{{$products->id}}'"></bought-componennt>
+    <bought-componennt :product_id="'{{$products->id}}'" :product_img="'{{$products->img_path}}'"></bought-componennt>
 <footer-component></footer-component>
 </div>
 </body>
