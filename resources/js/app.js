@@ -49,6 +49,13 @@ Vue.component(
     require("./exhibitproductlist/exhibitproductlist.vue").default
 );
 
+//staff_mypageのコンポーネント
+
+Vue.component(
+    "staffmypage-componennt",
+    require("./staffmypage/staffmypage.vue").default
+);
+
 //adminのコンポーネント
 Vue.component(
     "admin-component",

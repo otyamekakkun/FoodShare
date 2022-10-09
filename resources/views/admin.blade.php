@@ -17,7 +17,8 @@
 <div class="l-staffmypage">
 <div class="l-staffmypage__exhibitarea">
 <button><a href="{{route('haiki_shopper.staff_exhibitproduct_list_display')}}"><button>出品した商品一覧を表示</a></button>
-<admin-component></admin-component>
+{{-- コンポーネント部分 --}}
+<staffmypage-componennt></staffmypage-componennt>
 
 
 
@@ -35,19 +36,7 @@
         <a href="{{route('haiki_shopper.staff_buyproduct_display')}}"><button>購入された商品を全権表示</a></button>
 
 </div>
-
-
 </main>
-
-
-{{-- <button>詳細をみる</button> --}}
-
-{{-- <button>購入されていないので編集する</button> --}}
-{{-- <a href="{{route('haiki_shopper.staff_productedit_display',$product->product_id)}}">>商品を編集する<</a> --}}
-
-
-
-
 <footer-component></footer-component>
 </div>
 </body>

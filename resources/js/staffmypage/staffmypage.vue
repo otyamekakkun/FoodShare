@@ -1,0 +1,52 @@
+<template>
+    <div id="app">
+        <li v-for="item in products">
+            <div class="c-productlist">
+                <img v-bind:src="item.img_path" width="25%" />
+                <div class="c-productlist__sentence">
+                    <li>商品No.{{ item.id }}</li>
+                    <li>商品名.{{ item.product_name }}</li>
+                    <li>お値段.{{ item.price }}円.</li>
+                    <!-- 
+リンク先の設定が異なるので応急処置でもう一つコンポーネントを作成した
+                     -->
+                    <button>
+                        <a v-bind:href="`haiki/${item.id}}/staff_productdetail`"
+                            >詳細にいく</a
+                        >
+                    </button>
+                    <button>
+                        <a v-bind:href="`haiki/${item.id}}/staff_productedit`"
+                            >商品を編集する</a
+                        >
+                    </button>
+                </div>
+            </div>
+        </li>
+    </div>
+</template>
+<script>
+import axios from "axios";
+
+export default {
+    props: ["pro"],
+
+    data: function () {
+        {
+            return {
+                products: "", //からのデータを用意する。
+                imageUrl: "https://via.placeholder.com/300x200?text=Image-1",
+            };
+        }
+    },
+    mounted() {
+        const url = "/haiki/index3";
+        axios.get(url).then((response) => (this.products = response.data));
+    },
+};
+</script>
+
+<!-- 
+コンポーネントのpropsでデータを渡す処理をすれば良い
+
+ -->
