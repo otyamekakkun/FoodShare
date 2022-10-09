@@ -67,6 +67,11 @@ Vue.component(
     require("./staff_productdetail/staff_productdetail.vue").default
 );
 
+Vue.component(
+    "shopperproductdetail-component",
+    require("./shopperproductdetail/shopper_product.vue").default
+);
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

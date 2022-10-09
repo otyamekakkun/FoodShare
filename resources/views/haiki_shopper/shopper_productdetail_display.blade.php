@@ -84,6 +84,15 @@
 
    </button> 
 
+
+
+
+
+
+
+
+
+
 </div>
 </div>
 </div>  
@@ -91,6 +100,8 @@
 
 
 <div id="app">
+
+    <shopperproductdetail-component></shopperproductdetail-component>
 <incompletefooter-component></incompletefooter-component>
 </div>
 </body>
