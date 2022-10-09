@@ -28,7 +28,8 @@
 </div>  
 {{-- 全体を決めるもの --}}
 <div id="app">
-<shopperproductdetail-component :product_img="'{{$products->img_path}}'"></shopperproductdetail-component>
+<shopperproductdetail-component :product_img="'{{$products->img_path}}'" :product_name="'{{$products->product_name}}'"
+    :product_price="'{{$products->price}}'" :product_best_by_date="'{{$products->best_by_date}}'"></shopperproductdetail-component>
 
 <footer-component></footer-component>
 </div>
