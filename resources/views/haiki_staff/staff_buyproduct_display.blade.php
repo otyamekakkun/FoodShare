@@ -94,6 +94,7 @@
 
 
 <div id="app">
+    <bought-componennt></bought-componennt>
 <footer-component></footer-component>
 </div>
 </body>

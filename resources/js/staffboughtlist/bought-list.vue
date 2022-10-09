@@ -1,1 +1,3 @@
-<template>購入された商品リストを写します</template>
+<template>
+    <div>購入された商品リストを写します</div>
+</template>
