@@ -5438,7 +5438,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ["product_img"]
+  props: ["product_img", "product_name", "product_price", "product_best_by_date"]
 });
 
 /***/ }),
@@ -5977,7 +5977,7 @@ var render = function render() {
       src: _vm.product_img,
       width: "25%"
     }
-  })]);
+  }), _vm._v(" "), _c("p", [_vm._v(_vm._s(_vm.product_name))]), _vm._v(" "), _c("p", [_vm._v(_vm._s(_vm.product_price))]), _vm._v(" "), _c("p", [_vm._v(_vm._s(_vm.product_best_by_date))])]);
 };
 
 var staticRenderFns = [];
