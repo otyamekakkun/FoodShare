@@ -78,6 +78,57 @@ $product = products::find($id);
         return view('haiki_shopper.shopper_productdetail_display',['products'=>$product]);
     } 
 
+
+
+//post送信できるように記述する
+public function shopper_productdetail_bought (Request $request, $id){
+
+    $user = Auth::id();
+    $product = products::find($id);//商品専用のid
+
+
+    $product->user_id = $user;//現在ログインしているコンビニユーザー情報のidをこの中に入れる
+
+    $product->user_id=$request->user_id;
+    $product->bought =$request->bought;
+
+
+}
+
+/*
+public function update_exhibitproduct(Request $request,$id){
+    //入力するときにバリデーションチェックを設ける
+    //一応バリデーションも含ませとく。変更の処理がなけレバそのまま行けるように変更できるようにする
+    $request->validate([
+    ]);
+$img = $request->file('img_path');
+//$path = $img->store('img','public');//1
+
+
+
+$image = $request->file("img_path");
+$path = Storage::disk("public")->putFile('profile', $image); 
+$imagePath = "/storage/" . $path;
+$product = products::find($id);
+$product->product_name = $request->product_name;
+$product->img_path=$imagePath;
+$product->price = $request->price;
+$product->best_by_date = $request->best_by_date;
+$product->save();
+return redirect('admin')->with('flash_message', __('Registered.'));
+}//............................................商品の編集した画面をアップロードするもの
+//======================================================================商品編集画面ここまで
+
+
+
+*/
+
+
+
+
+
+
+
 //=================================================ここまで
 
 //=============================================================
@@ -169,7 +220,6 @@ $img = $request->file('img_path');
 $image = $request->file("img_path");
 $path = Storage::disk("public")->putFile('profile', $image); 
 $imagePath = "/storage/" . $path;
-
 $product = products::find($id);
 $product->product_name = $request->product_name;
 $product->img_path=$imagePath;
@@ -197,6 +247,7 @@ public function destory($id){
         
     return view('haiki_staff.staff_productdetail_display',['products'=>$product]);
     } //.............................................................9画面を表示するもの
+
 
 //json形式
 //今ログインしているものを取得してくるjson形式
