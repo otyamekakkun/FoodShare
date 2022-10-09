@@ -6123,27 +6123,52 @@ window.Vue = (__webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js
  */
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
+//===========================================
 // フッターのコンポーネント
+//===========================================
 
 Vue.component("incompletefooter-component", (__webpack_require__(/*! ./footercomponents/incompleteFooterComponent.vue */ "./resources/js/footercomponents/incompleteFooterComponent.vue")["default"]));
-Vue.component("footer-component", (__webpack_require__(/*! ./footercomponents/FooterComponent.vue */ "./resources/js/footercomponents/FooterComponent.vue")["default"])); // カレンダーvueのコンポーネント
+Vue.component("footer-component", (__webpack_require__(/*! ./footercomponents/FooterComponent.vue */ "./resources/js/footercomponents/FooterComponent.vue")["default"])); //===================================================================
+// カレンダーvueのコンポーネント(現在時刻よりも前の時刻は入力できないようにする)
+//===================================================================
 
-Vue.component("calender-component", (__webpack_require__(/*! ./staff/calender.vue */ "./resources/js/staff/calender.vue")["default"])); //商品一覧のコンポーネント
+Vue.component("calender-component", (__webpack_require__(/*! ./staff/calender.vue */ "./resources/js/staff/calender.vue")["default"])); //===================================================================
+//商品一覧のコンポーネント
+//===================================================================
 
-Vue.component("productlist-component", (__webpack_require__(/*! ./shopper/productlist/main.vue */ "./resources/js/shopper/productlist/main.vue")["default"])); // カレンダーvueのコンポーネント
+Vue.component("productlist-component", (__webpack_require__(/*! ./shopper/productlist/main.vue */ "./resources/js/shopper/productlist/main.vue")["default"])); //===================================================================
+// カレンダーvueのコンポーネント
+//===================================================================
 
-Vue.component("drag-component", (__webpack_require__(/*! ./staff/dragdrop.vue */ "./resources/js/staff/dragdrop.vue")["default"])); //実験用のコンポーネント
+Vue.component("drag-component", (__webpack_require__(/*! ./staff/dragdrop.vue */ "./resources/js/staff/dragdrop.vue")["default"])); //================================================
+//商品一覧リストのコンポーネント
+//================================================
 
-Vue.component("drills-component", (__webpack_require__(/*! ./drills/drills.vue */ "./resources/js/drills/drills.vue")["default"])); //商品一覧リストのコンポーネント
+Vue.component("exhibitlist-componennt", (__webpack_require__(/*! ./exhibitproductlist/exhibitproductlist.vue */ "./resources/js/exhibitproductlist/exhibitproductlist.vue")["default"])); //================================================
+//staff_mypageのコンポーネント(基本的に出品した商品一覧5件を表示するコード)
+//================================================
 
-Vue.component("exhibitlist-componennt", (__webpack_require__(/*! ./exhibitproductlist/exhibitproductlist.vue */ "./resources/js/exhibitproductlist/exhibitproductlist.vue")["default"])); //staff_mypageのコンポーネント
+Vue.component("staffmypage-componennt", (__webpack_require__(/*! ./staffmypage/staffmypage.vue */ "./resources/js/staffmypage/staffmypage.vue")["default"])); //================================================
+//staff_mypageのコンポーネント(基本的に購入された商品一覧5件を表示するコード)
+//================================================
+//=============================================================
+//============================================================
+//adminのコンポーネント(コンビニ管理者が出品した商品を一覧表示するもの)
+//=============================================================
 
-Vue.component("staffmypage-componennt", (__webpack_require__(/*! ./staffmypage/staffmypage.vue */ "./resources/js/staffmypage/staffmypage.vue")["default"])); //adminのコンポーネント
+Vue.component("admin-component", (__webpack_require__(/*! ./admin/admin-component.vue */ "./resources/js/admin/admin-component.vue")["default"])); //===============================================================
+//staff_productdetailのコンポーネント(管理者専用の商品商品詳細画面)
+//===============================================================
 
-Vue.component("admin-component", (__webpack_require__(/*! ./admin/admin-component.vue */ "./resources/js/admin/admin-component.vue")["default"])); //staff_productdetailのコンポーネント
+Vue.component("staff_productdetail-component", (__webpack_require__(/*! ./staff_productdetail/staff_productdetail.vue */ "./resources/js/staff_productdetail/staff_productdetail.vue")["default"])); //==================================================================
+//shopperproductdetailのコンポーネント（ご利用者の商品詳細画面)
+//================================================================
 
-Vue.component("staff_productdetail-component", (__webpack_require__(/*! ./staff_productdetail/staff_productdetail.vue */ "./resources/js/staff_productdetail/staff_productdetail.vue")["default"]));
-Vue.component("shopperproductdetail-component", (__webpack_require__(/*! ./shopperproductdetail/shopper_product.vue */ "./resources/js/shopperproductdetail/shopper_product.vue")["default"]));
+Vue.component("shopperproductdetail-component", (__webpack_require__(/*! ./shopperproductdetail/shopper_product.vue */ "./resources/js/shopperproductdetail/shopper_product.vue")["default"])); //===================================================================
+//実験用のコンポーネント
+//===================================================================
+
+Vue.component("drills-component", (__webpack_require__(/*! ./drills/drills.vue */ "./resources/js/drills/drills.vue")["default"]));
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

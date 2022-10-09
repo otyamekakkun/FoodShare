@@ -18,8 +18,9 @@ window.Vue = require("vue").default;
 
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
-
+//===========================================
 // フッターのコンポーネント
+//===========================================
 Vue.component(
     "incompletefooter-component",
     require("./footercomponents/incompleteFooterComponent.vue").default
@@ -29,62 +30,78 @@ Vue.component(
     require("./footercomponents/FooterComponent.vue").default
 );
 
-// カレンダーvueのコンポーネント
+//===================================================================
+// カレンダーvueのコンポーネント(現在時刻よりも前の時刻は入力できないようにする)
+//===================================================================
 Vue.component("calender-component", require("./staff/calender.vue").default);
+
+//===================================================================
 //商品一覧のコンポーネント
+//===================================================================
+
 Vue.component(
     "productlist-component",
     require("./shopper/productlist/main.vue").default
 );
 
+//===================================================================
 // カレンダーvueのコンポーネント
+//===================================================================
+
 Vue.component("drag-component", require("./staff/dragdrop.vue").default);
 
-//実験用のコンポーネント
-Vue.component("drills-component", require("./drills/drills.vue").default);
-
+//================================================
 //商品一覧リストのコンポーネント
+//================================================
 Vue.component(
     "exhibitlist-componennt",
     require("./exhibitproductlist/exhibitproductlist.vue").default
 );
 
-//staff_mypageのコンポーネント
-
+//================================================
+//staff_mypageのコンポーネント(基本的に出品した商品一覧5件を表示するコード)
+//================================================
 Vue.component(
     "staffmypage-componennt",
     require("./staffmypage/staffmypage.vue").default
 );
 
-//adminのコンポーネント
+//================================================
+//staff_mypageのコンポーネント(基本的に購入された商品一覧5件を表示するコード)
+//================================================
+
+//=============================================================
+
+//============================================================
+//adminのコンポーネント(コンビニ管理者が出品した商品を一覧表示するもの)
+//=============================================================
 Vue.component(
     "admin-component",
     require("./admin/admin-component.vue").default
 );
 
-
-
-
-
-
-
-
-
-
-
-
-//staff_productdetailのコンポーネント
+//===============================================================
+//staff_productdetailのコンポーネント(管理者専用の商品商品詳細画面)
+//===============================================================
 Vue.component(
     "staff_productdetail-component",
     require("./staff_productdetail/staff_productdetail.vue").default
 );
 
-
+//==================================================================
+//shopperproductdetailのコンポーネント（ご利用者の商品詳細画面)
+//================================================================
 
 Vue.component(
     "shopperproductdetail-component",
     require("./shopperproductdetail/shopper_product.vue").default
 );
+
+//===================================================================
+//実験用のコンポーネント
+//===================================================================
+
+Vue.component("drills-component", require("./drills/drills.vue").default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

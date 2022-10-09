@@ -53,6 +53,10 @@
     自分が出品した商品＋購入フラグが立っているものをよみこべばいい
     laravelでwhere文で呼び込めばいいのかな？
 
+
+    bought の数字を取得して１なら購入されたということで表示する。
+    vueコンポーネントを導入する
+
     --}}
 
 
@@ -64,23 +68,13 @@
 </header>
 
 <body>
-<h1 class="c-title">出品した商品を購入された商品を写すもの
+<h1 class="c-title">自分自身が商品を出品して購入されたものを表示する
 </h1>
-
-
 <main>
     <div class="l-staffmypage">
-        {{-- 
-    <div class="l-staffmypage__exhibitarea">
-    <h1>自分のコンビニが出品した商品</h1>
-    <button><a href="{{route('haiki_shopper.staff_exhibitproduct_list_display')}}"><button>出品した商品一覧を表示</a></button>
-    </div>
-
-     --}}
      <div class="l-staffmypage__bought">
         <h1>ご購入された商品一覧</h1>
         <a href="{{route('haiki_shopper.staff_buyproduct_display')}}"><button>購入された商品を全権表示</a></button>
-
 </div>
 
     <div class="l-staffmypage__side">
