@@ -59,8 +59,6 @@
 </div>
 </div>
 </div>
-
-
     出品したい商品の画像を入れてください<br/>
     <label for="img_path" class="">写真を入れる</label>
 
