@@ -74,13 +74,14 @@ return redirect('haiki/shopper_mypage');//..............画面表示するもの
 
     public function shopper_productdetail_display($id){
 //laravelの処理で記述することができるようにする
-$product = products::find($id);
-        return view('haiki_shopper.shopper_productdetail_display',['products'=>$product]);
+//$product = products::find($id);         ,['products'=>$product]
+        return view('haiki_shopper.shopper_productdetail_display');
     } 
 
 
 
 //post送信できるように記述する
+/*
 public function shopper_productdetail_bought (Request $request, $id){
 
     $user = Auth::id();
@@ -94,6 +95,7 @@ public function shopper_productdetail_bought (Request $request, $id){
 
 
 }
+*/
 
 /*
 public function update_exhibitproduct(Request $request,$id){

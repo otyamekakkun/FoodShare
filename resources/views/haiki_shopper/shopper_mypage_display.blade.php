@@ -75,11 +75,11 @@
     <div class="l-shoppermypage__exhibitarea">
     <h1>ご購入された商品一覧</h1>
     <a href="{{route('haiki_shopper.shopper_productlist_display')}}"><button>商品一覧に移動する</a></button>
-
+{{--  
 <h1>商品の画像</h1>
     <a href="{{route('haiki_shopper.shopper_productdetail_display')}}"><button>商品の詳細をみる</a></button>
 <button>購入をキャンセルする</button>
-
+--}}
     </div>
     
     <div class="l-staffmypage__side">
