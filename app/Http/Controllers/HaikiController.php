@@ -79,12 +79,9 @@ $product = products::find($id);
 
         $user = Auth::id();
         $product = products::find($id);//商品専用のid
-    
-    
         $product->user_id = $user;//現在ログインしているコンビニユーザー情報のidをこの中に入れる
-    
-        $product->user_id=$request->user_id;
-        $product->bought =$request->bought;
+        $product->user_id=$user;
+        $product->bought =1;
         $product->save();
         return redirect('haiki/shopper_mypage');
     
