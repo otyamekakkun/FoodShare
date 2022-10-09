@@ -6194,8 +6194,8 @@ var render = function render() {
     attrs: {
       id: "app"
     }
-  }, [_vm._v("\n    " + _vm._s(_vm.products) + "\n    "), _vm._l(_vm.products, function (item) {
-    return _c("li", [_c("div", {
+  }, _vm._l(_vm.products, function (item) {
+    return _c("li", [item.bought >= 1 ? _c("div", [_c("div", {
       staticClass: "c-productlist"
     }, [_c("img", {
       attrs: {
@@ -6204,16 +6204,16 @@ var render = function render() {
       }
     }), _vm._v(" "), _c("div", {
       staticClass: "c-productlist__sentence"
-    }, [(item.bought = 1) ? _c("li", [_vm._v("購入されたよ")]) : _vm._e(), _vm._v(" "), _c("li", [_vm._v("商品No." + _vm._s(item.id))]), _vm._v(" "), _c("li", [_vm._v("商品名." + _vm._s(item.product_name))]), _vm._v(" "), _c("li", [_vm._v("お値段." + _vm._s(item.price) + "円.")]), _vm._v(" "), _c("button", [_c("a", {
+    }, [_c("li", [_vm._v("商品No." + _vm._s(item.id))]), _vm._v(" "), _c("li", [_vm._v("商品名." + _vm._s(item.product_name))]), _vm._v(" "), _c("li", [_vm._v("お値段." + _vm._s(item.price) + "円.")]), _vm._v(" "), _c("button", [_c("a", {
       attrs: {
-        href: "haiki/".concat(item.id, "}/staff_productdetail")
+        href: "".concat(item.id, "}/staff_productdetail")
       }
     }, [_vm._v("詳細にいく")])]), _vm._v(" "), _c("button", [_c("a", {
       attrs: {
-        href: "haiki/".concat(item.id, "}/staff_productedit")
+        href: "".concat(item.id, "}/staff_productedit")
       }
-    }, [_vm._v("商品を編集する")])])])])]);
-  })], 2);
+    }, [_vm._v("商品を編集する")])])])])]) : _vm._e()]);
+  }), 0);
 };
 
 var staticRenderFns = [];
