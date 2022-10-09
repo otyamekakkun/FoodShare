@@ -10,6 +10,13 @@
                 </div>
             </div>
         </li>
+
+        <div v-for="items in products">
+            <h1>{{ items.id }}</h1>
+            <a v-bind:href="`haiki/${items.id}}/staff_productdetail`"
+                >詳細にいく</a
+            >
+        </div>
     </div>
 </template>
 <script>
