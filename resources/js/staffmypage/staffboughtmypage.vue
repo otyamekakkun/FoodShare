@@ -3,6 +3,7 @@
         <li v-for="item in products">
             <div v-if="item.bought >= 1">
                 <div class="c-productlist">
+                    <h1>購入済み</h1>
                     <img v-bind:src="item.img_path" width="25%" />
                     <div class="c-productlist__sentence">
                         <li>商品No.{{ item.id }}</li>

@@ -111,6 +111,14 @@ Vue.component(
     require("./shopperproductdetail/shopper_product.vue").default
 );
 
+//==================================================================
+//shopperproductdetailのコンポーネント（ご利用者の商品詳細画面)
+//================================================================
+Vue.component(
+    "shoppermypage-component",
+    require("./shoppermypage/shoppermypage.vue").default
+);
+
 //===================================================================
 //実験用のコンポーネント
 //===================================================================

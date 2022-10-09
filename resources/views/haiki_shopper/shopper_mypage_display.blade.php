@@ -91,6 +91,8 @@
 <div id=app>
     {{-- incompletefooter-componentはfooterをレウアウトしてくれるもの。ただしページ量が少ないときにfooter
         エリアが最下部にならないように定義したもの --}}
+
+        <shoppermypage-component></shoppermypage-component>
 <footer-component></footer-component>
 </div>
 @endsection 
