@@ -1,34 +1,25 @@
 <template>
     <div id="app">
         <li v-for="item in products">
-            <div class="c-productlist">
-                <img v-bind:src="item.img_path" width="25%" />
-                <div class="c-productlist__sentence">
-                    <li>商品No.{{ item.id }}</li>
-                    <li>商品名.{{ item.product_name }}</li>
-                    <li>お値段.{{ item.price }}円.</li>
-                    <button>
-                        <a v-bind:href="`haiki/${item.id}}/staff_productdetail`"
-                            >詳細にいく</a
-                        >
-                    </button>
+            <div v-if="item.bought >= 1">
+                <div class="c-productlist">
+                    <img v-bind:src="item.img_path" width="25%" />
+                    <div class="c-productlist__sentence">
+                        <li>商品No.{{ item.id }}</li>
+                        <li>商品名.{{ item.product_name }}</li>
+                        <li>お値段.{{ item.price }}円.</li>
+                        <button>
+                            <a v-bind:href="`${item.id}}/staff_productdetail`"
+                                >詳細にいく</a
+                            >
+                        </button>
 
-                    <button>
-                        <a v-bind:href="`haiki/${item.id}}/staff_productedit`"
-                            >商品を編集する</a
-                        >
-                    </button>
-                    <span v-if="item.price <= 100">やすい</span>
-                    <span v-else-if="item.price > 100 && item.price <= 500"
-                        >普通</span
-                    >
-                    <span v-else-if="item.price > 500 && item.price <= 1000"
-                        >やや高い</span
-                    >
-                    <span v-else-if="item.price > 1000">そのほか</span>
-
-                    <span v-if="item.bought >= 1">購入された</span>
-                    <span v-else="item.bought < 1">購入されていない</span>
+                        <button>
+                            <a v-bind:href="`${item.id}}/staff_productedit`"
+                                >商品を編集する</a
+                            >
+                        </button>
+                    </div>
                 </div>
             </div>
         </li>

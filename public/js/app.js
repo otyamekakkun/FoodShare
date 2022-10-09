@@ -6147,7 +6147,7 @@ var render = function render() {
       id: "app"
     }
   }, _vm._l(_vm.products, function (item) {
-    return _c("li", [_c("div", {
+    return _c("li", [item.bought >= 1 ? _c("div", [_c("div", {
       staticClass: "c-productlist"
     }, [_c("img", {
       attrs: {
@@ -6158,13 +6158,13 @@ var render = function render() {
       staticClass: "c-productlist__sentence"
     }, [_c("li", [_vm._v("商品No." + _vm._s(item.id))]), _vm._v(" "), _c("li", [_vm._v("商品名." + _vm._s(item.product_name))]), _vm._v(" "), _c("li", [_vm._v("お値段." + _vm._s(item.price) + "円.")]), _vm._v(" "), _c("button", [_c("a", {
       attrs: {
-        href: "haiki/".concat(item.id, "}/staff_productdetail")
+        href: "".concat(item.id, "}/staff_productdetail")
       }
     }, [_vm._v("詳細にいく")])]), _vm._v(" "), _c("button", [_c("a", {
       attrs: {
-        href: "haiki/".concat(item.id, "}/staff_productedit")
+        href: "".concat(item.id, "}/staff_productedit")
       }
-    }, [_vm._v("商品を編集する")])]), _vm._v(" "), item.price <= 100 ? _c("span", [_vm._v("やすい")]) : item.price > 100 && item.price <= 500 ? _c("span", [_vm._v("普通")]) : item.price > 500 && item.price <= 1000 ? _c("span", [_vm._v("やや高い")]) : item.price > 1000 ? _c("span", [_vm._v("そのほか")]) : _vm._e(), _vm._v(" "), item.bought >= 1 ? _c("span", [_vm._v("購入された")]) : _c("span", [_vm._v("購入されていない")])])])]);
+    }, [_vm._v("商品を編集する")])])])])]) : _vm._e()]);
   }), 0);
 };
 
