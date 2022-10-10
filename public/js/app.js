@@ -5388,14 +5388,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
-var _data$methods$methods;
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 
  //ここでエラーが発生していたコンポーネント自体読み取れていないということなのでここは読み取れている。
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_data$methods$methods = {
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     {
       //データは言わば変数みたいなもの色々なところで使い回せる
@@ -5407,8 +5403,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         //2,500円以内のものを表示する 3,100円以下を表示する
         // check2: false,
         // check3: false,
-        products: "",
+        products: {},
         //からのデータを用意する。
+        productbox: {},
+        newTodoText: "",
         imageUrl: "https://via.placeholder.com/300x200?text=Image-1",
         checkflg: false,
         isChecked: false,
@@ -5424,23 +5422,29 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   //これはjson形式で値を取得しないといけないもの
   //子コンポーネントを登録するここのデータはほぼ確定している。
   methods: {
-    count: function count() {
-      console.log($route.path);
+    sortArray: function sortArray() {
+      var productbox = this.products[1].price;
+      return productbox;
+    },
+    sort: function sort() {
+      var brr = this.products.map(function (obj) {
+        var newobj = {};
+        newobj[obj.id] = obj.price;
+        return newobj;
+      });
+      return brr;
     }
-  }
-}, _defineProperty(_data$methods$methods, "methods", {
-  filterdList: function filterdList() {
-    var app = this.products;
-    var filterdList = this.products;
-  }
-}), _defineProperty(_data$methods$methods, "mounted", function mounted() {
-  var _this = this;
+  },
+  //map
+  mounted: function mounted() {
+    var _this = this;
 
-  var url = "/haiki/index1";
-  axios__WEBPACK_IMPORTED_MODULE_0___default().get(url).then(function (response) {
-    return _this.products = response.data;
-  });
-}), _data$methods$methods);
+    var url = "/haiki/index1";
+    axios__WEBPACK_IMPORTED_MODULE_0___default().get(url).then(function (response) {
+      return _this.products = response.data;
+    });
+  }
+});
 
 /***/ }),
 
@@ -5846,7 +5850,7 @@ var render = function render() {
     attrs: {
       id: "app"
     }
-  }, [_c("div", [_c("h1", [_vm._v("商品一覧")]), _vm._v("\n            検索結果\n            "), _c("div", [_c("input", {
+  }, [_c("div", [_c("div", [_vm._v("\n                " + _vm._s(_vm.sortArray()) + "\n                " + _vm._s(_vm.sort()) + "\n            ")]), _vm._v(" "), _c("h1", [_vm._v("商品一覧")]), _vm._v("\n            検索結果\n            "), _c("div", [_c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",

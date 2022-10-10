@@ -1,6 +1,11 @@
 <template>
     <div id="app">
         <div>
+            <!-- フィルター -->
+            <div>
+                {{ sortArray() }}
+                {{ sort() }}
+            </div>
             <!-- {{ filterdList() }} -->
             <h1>商品一覧</h1>
             検索結果
@@ -147,7 +152,11 @@ export default {
 
                 // check2: false,
                 // check3: false,
-                products: "", //からのデータを用意する。
+                products: {}, //からのデータを用意する。
+                productbox: {},
+
+                newTodoText: "",
+
                 imageUrl: "https://via.placeholder.com/300x200?text=Image-1",
 
                 checkflg: false,
@@ -165,17 +174,21 @@ export default {
     //これはjson形式で値を取得しないといけないもの
     //子コンポーネントを登録するここのデータはほぼ確定している。
     methods: {
-        count: function () {
-            console.log($route.path);
+        sortArray: function () {
+            const productbox = this.products[1].price;
+            return productbox;
         },
-    },
 
-    methods: {
-        filterdList() {
-            const app = this.products;
-            const filterdList = this.products;
+        sort: function () {
+            let brr = this.products.map((obj) => {
+                let newobj = {};
+                newobj[obj.id] = obj.price;
+                return newobj;
+            });
+            return brr;
         },
     },
+    //map
 
     mounted() {
         const url = "/haiki/index1";
@@ -187,13 +200,17 @@ export default {
 基本的にデータと数値を比較すれば画面は切り替わる
 数字をデータ型として変数に格納する。
 
+filterを使って絞りこみ作戦を行う。
+
+[
+{1},
+{2},
+]
+
+jsではソートがないので自分で作る必要がある
 
 
-
-
-
-
-
-
-
+配列オブジェクト
+値一つ取得するの完了
+            return this.products[1].price;
  -->
