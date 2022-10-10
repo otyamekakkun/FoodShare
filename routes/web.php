@@ -185,6 +185,7 @@ Route::get('/haiki/index2',[HaikiController::class, 'index2'])->name('drills.ind
 Route::get('/haiki/index3',[HaikiController::class, 'productjson'])->name('product.json');
 
 
+Route::get('/haiki/index4',[HaikiController::class, 'userjson'])->name('user.json');
 
 
 

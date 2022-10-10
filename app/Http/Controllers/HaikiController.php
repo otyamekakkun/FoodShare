@@ -321,7 +321,32 @@ public function productjson(){
 return response()->json($product);
 }
 
+
+
+//shopper自分が購入した商品を写し出すjson形式生成
+//今ログインしているものを取得してくるjson形式
+public function userjson(){
+    $id = Auth::id();
+    $user = products::where('user_id',$id)->get();
+
+return response()->json($user);
 }
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
 
 
 //=========================================================json形式で渡すのここまで。
