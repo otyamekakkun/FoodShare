@@ -67,19 +67,20 @@
             </select>
         </div>
         <div>
-            ここを正確に処理をすれば良さそう。
             <li
                 v-for="item in products"
                 v-bind:class="{ takai: item.price > 300 }"
             >
-                <img v-bind:src="item.img_path" width="25%" />
-
-                商品名.{{ item.product_name }}お値段.{{ item.price }}円.
-                <button>
-                    <a v-bind:href="`/haiki/${item.id}/shopper_productdetail`"
-                        >商品の詳細をみる</a
-                    >
-                </button>
+                <div v-if="item.price >= 50000">
+                    <img v-bind:src="item.img_path" width="25%" />
+                    商品名.{{ item.product_name }}お値段.{{ item.price }}円.
+                    <button>
+                        <a
+                            v-bind:href="`/haiki/${item.id}/shopper_productdetail`"
+                            >商品の詳細をみる</a
+                        >
+                    </button>
+                </div>
 
                 <div v-if="item.bought >= 1">
                     <li>購入されました</li>

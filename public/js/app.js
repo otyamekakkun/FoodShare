@@ -5447,9 +5447,6 @@ __webpack_require__.r(__webpack_exports__);
       //データは言わば変数みたいなもの色々なところで使い回せる
       return {
         //ここでの処理はチェックボタンが押されているかどうかの言わばスイッチみたいに役割を持たせる。
-        check1: false,
-        check2: false,
-        check3: false,
         products: "",
         //からのデータを用意する。
         imageUrl: "https://via.placeholder.com/300x200?text=Image-1",
@@ -5839,22 +5836,22 @@ var render = function render() {
         }
       }
     }
-  }), _vm._v("賞味期限以内の商品を表示する\n        "), _vm._m(1)]), _vm._v(" "), _c("div", [_vm._v("\n        ここを正確に処理をすれば良さそう。\n        "), _vm._l(_vm.products, function (item) {
+  }), _vm._v("賞味期限以内の商品を表示する\n        "), _vm._m(1)]), _vm._v(" "), _c("div", _vm._l(_vm.products, function (item) {
     return _c("li", {
       class: {
         takai: item.price > 300
       }
-    }, [_c("img", {
+    }, [item.price >= 50000 ? _c("div", [_c("img", {
       attrs: {
         src: item.img_path,
         width: "25%"
       }
-    }), _vm._v("\n\n            商品名." + _vm._s(item.product_name) + "お値段." + _vm._s(item.price) + "円.\n            "), _c("button", [_c("a", {
+    }), _vm._v("\n                商品名." + _vm._s(item.product_name) + "お値段." + _vm._s(item.price) + "円.\n                "), _c("button", [_c("a", {
       attrs: {
         href: "/haiki/".concat(item.id, "/shopper_productdetail")
       }
-    }, [_vm._v("商品の詳細をみる")])]), _vm._v(" "), item.bought >= 1 ? _c("div", [_c("li", [_vm._v("購入されました")])]) : _vm._e()]);
-  })], 2)]);
+    }, [_vm._v("商品の詳細をみる")])])]) : _vm._e(), _vm._v(" "), item.bought >= 1 ? _c("div", [_c("li", [_vm._v("購入されました")])]) : _vm._e()]);
+  }), 0)]);
 };
 
 var staticRenderFns = [function () {
@@ -6097,18 +6094,18 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", [_vm._v("\n    ここを正確に処理をすれば良さそう。\n\n    "), _vm._l(_vm.products, function (item) {
+  return _c("div", _vm._l(_vm.products, function (item) {
     return _c("li", [item.bought >= 1 ? _c("div", [_c("img", {
       attrs: {
         src: item.img_path,
         width: "25%"
       }
-    }), _vm._v("\n\n            商品名." + _vm._s(item.product_name) + "お値段." + _vm._s(item.price) + "円.\n            "), _c("button", [_c("a", {
+    }), _vm._v("\n            商品名." + _vm._s(item.product_name) + "お値段." + _vm._s(item.price) + "円.\n            "), _c("button", [_c("a", {
       attrs: {
         href: "/haiki/".concat(item.id, "/shopper_productdetail")
       }
     }, [_vm._v("商品の詳細をみる")])])]) : _vm._e()]);
-  })], 2);
+  }), 0);
 };
 
 var staticRenderFns = [];
