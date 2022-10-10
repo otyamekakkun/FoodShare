@@ -1,6 +1,7 @@
 <template>
     <div>
         sss
+        <!-- {{ fiilterdList() }} -->
         <!-- 商品検索一覧 -->
         <Productheaders></Productheaders>
         <!-- 商品一覧 -->
@@ -27,6 +28,12 @@ export default {
             //出品した都道府県で絞り込む
         };
     },
-    methods: {},
+    methods: {
+        //検索条件でリストを返すプロパティ
+        fiilterdList() {
+            const app = this.products; //インスタンスを格納する
+            return app;
+        },
+    },
 };
 </script>

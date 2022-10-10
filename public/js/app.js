@@ -5405,7 +5405,14 @@ __webpack_require__.r(__webpack_exports__);
       //出品した都道府県で絞り込む
     };
   },
-  methods: {}
+  methods: {
+    //検索条件でリストを返すプロパティ
+    fiilterdList: function fiilterdList() {
+      var app = this.products; //インスタンスを格納する
+
+      return app;
+    }
+  }
 });
 
 /***/ }),
