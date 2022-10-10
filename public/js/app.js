@@ -5400,9 +5400,14 @@ __webpack_require__.r(__webpack_exports__);
   },
   //コンポーネントが持つデータ
   data: function data() {
-    return {//価格で絞り込む
+    return {
+      //価格で絞り込む
+      check1: false,
+      check2: false,
+      check3: false,
       //賞味期限で絞り込む
       //出品した都道府県で絞り込む
+      bestdaycheck: false
     };
   },
   methods: {
@@ -5410,7 +5415,56 @@ __webpack_require__.r(__webpack_exports__);
     fiilterdList: function fiilterdList() {
       var app = this.products; //インスタンスを格納する
 
-      return app;
+      var filterdList = this.products.filter(function (item) {
+        //表示判定(true表示する, false表示しない)
+        var show = true; //検索条件：価格絞り込みチェック１
+
+        if (app.check1) {
+          //価格が百円以上のものなら非表示にする
+          if (item.price > 100) {
+            show = false;
+          }
+        }
+
+        if (app.check2) {
+          //価格が500円以上のものなら非表示にする
+          if (item.price > 500) {
+            show = false;
+          }
+        }
+
+        if (app.check3) {
+          //価格が1000円以上のものなら非表示にする
+          if (item.price > 1000) {
+            show = false;
+          }
+        } //価格の絞り込み終わり
+        //検索条件：賞味期限（現在時刻よりも有効期限が切れていた時に処理を行う
+
+
+        if (app.bestdaycheck) {
+          //現在時刻よりも有効期限が切れたいらた、非表示にする
+          var nowdate = Date();
+          var bestdate = "";
+
+          if (nowdate > bestdate) {
+            show = false;
+          }
+        } //都道府県 値が入っているかどうかを判別するnullなら、絞り込みを行わない
+
+
+        if (app.prefecturecheck) {
+          var a = "データベースに入っている都道府県";
+          var b = "選択した都道府県";
+
+          if (a !== b) {
+            show = false;
+          }
+        } //チェックボックスの表示判定を返す
+
+
+        return show;
+      });
     }
   }
 });
