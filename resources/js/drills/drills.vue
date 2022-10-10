@@ -1,16 +1,4 @@
-<template>
-    <div>今チャーす</div>
-</template>
 <!-- 
-
-
-
-
-
-
-
-
-
 実験データ
 
     <template>
