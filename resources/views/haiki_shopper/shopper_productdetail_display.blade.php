@@ -44,7 +44,7 @@
 
 
 @if($products->bought>=1)
-    <form action="" enctype="multipart/form-data" method="post">
+    <form action="{{route('bought.cancel',$products->id)}}" enctype="multipart/form-data" method="post">
         @csrf
         <button class="btn btn-danger">購入をやめる</button>
     </form>

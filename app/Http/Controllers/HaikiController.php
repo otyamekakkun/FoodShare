@@ -87,6 +87,22 @@ $product = products::find($id);
     
     
     }
+
+
+    public function shopper_productdetail_cancel (Request $request, $id){
+
+        $user = Auth::id();
+        $product = products::find($id);//商品専用のid
+        $product->user_id = $user;//現在ログインしているコンビニユーザー情報のidをこの中に入れる
+        $product->user_id=$user;
+        $product->bought =0;
+        $product->save();
+        return redirect('haiki/shopper_mypage');
+    
+    
+    }
+    
+
     
 
 //=================================================ここまで
