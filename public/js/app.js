@@ -5853,7 +5853,7 @@ var render = function render() {
       attrs: {
         href: "/haiki/".concat(item.id, "/shopper_productdetail")
       }
-    }, [_vm._v("商品の詳細をみる")])]), _vm._v(" "), item.price <= 100 ? _c("span", [_vm._v("やすい")]) : item.price > 100 && item.price <= 500 ? _c("span", [_vm._v("普通")]) : item.price > 500 && item.price <= 1000 ? _c("span", [_vm._v("やや高い")]) : item.price > 1000 ? _c("span", [_vm._v("そのほか")]) : _vm._e()]);
+    }, [_vm._v("商品の詳細をみる")])]), _vm._v(" "), item.bought >= 1 ? _c("div", [_c("li", [_vm._v("購入されました")])]) : _vm._e()]);
   })], 2)]);
 };
 

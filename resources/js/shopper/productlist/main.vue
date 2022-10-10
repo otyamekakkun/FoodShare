@@ -81,14 +81,9 @@
                     >
                 </button>
 
-                <span v-if="item.price <= 100">やすい</span>
-                <span v-else-if="item.price > 100 && item.price <= 500"
-                    >普通</span
-                >
-                <span v-else-if="item.price > 500 && item.price <= 1000"
-                    >やや高い</span
-                >
-                <span v-else-if="item.price > 1000">そのほか</span>
+                <div v-if="item.bought >= 1">
+                    <li>購入されました</li>
+                </div>
             </li>
         </div>
     </div>
