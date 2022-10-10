@@ -2,10 +2,7 @@
     <div id="app">
         <div>
             <!-- フィルター -->
-            <div>
-                {{ sortArray() }}
-                {{ sort() }}
-            </div>
+            <div></div>
             <!-- {{ filterdList() }} -->
             <h1>商品一覧</h1>
             検索結果
@@ -173,21 +170,6 @@ export default {
     //実験として情報を受け取る練習からする。
     //これはjson形式で値を取得しないといけないもの
     //子コンポーネントを登録するここのデータはほぼ確定している。
-    methods: {
-        sortArray: function () {
-            const productbox = this.products[1].price;
-            return productbox;
-        },
-
-        sort: function () {
-            let brr = this.products.map((obj) => {
-                let newobj = {};
-                newobj[obj.id] = obj.price;
-                return newobj;
-            });
-            return brr;
-        },
-    },
     //map
 
     mounted() {
@@ -213,4 +195,42 @@ jsではソートがないので自分で作る必要がある
 配列オブジェクト
 値一つ取得するの完了
             return this.products[1].price;
+
+
+
+
+
+
+
+
+
+
+                methods: {
+        sortArray: function () {
+            const productbox = this.products[1].price;
+            return productbox;
+        },
+
+        //emitかpropsで値を渡すのかな
+        sort: function () {
+            let brr = this.products.map((obj) => {
+                let newobj = {};
+                newobj[obj.id] = obj.price;
+                return newobj;
+            });
+            return brr;
+        },
+
+        sort2: function () {
+            let brr = this.products.map((obj) => {
+                let newobj = {};
+                newobj[obj.id] = obj.price;
+                return newobj;
+            });
+            const a = brr[1].price;
+
+            return a;
+        },
+    },
+
  -->

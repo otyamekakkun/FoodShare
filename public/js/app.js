@@ -5421,20 +5421,6 @@ __webpack_require__.r(__webpack_exports__);
   //実験として情報を受け取る練習からする。
   //これはjson形式で値を取得しないといけないもの
   //子コンポーネントを登録するここのデータはほぼ確定している。
-  methods: {
-    sortArray: function sortArray() {
-      var productbox = this.products[1].price;
-      return productbox;
-    },
-    sort: function sort() {
-      var brr = this.products.map(function (obj) {
-        var newobj = {};
-        newobj[obj.id] = obj.price;
-        return newobj;
-      });
-      return brr;
-    }
-  },
   //map
   mounted: function mounted() {
     var _this = this;
@@ -5850,7 +5836,7 @@ var render = function render() {
     attrs: {
       id: "app"
     }
-  }, [_c("div", [_c("div", [_vm._v("\n                " + _vm._s(_vm.sortArray()) + "\n                " + _vm._s(_vm.sort()) + "\n            ")]), _vm._v(" "), _c("h1", [_vm._v("商品一覧")]), _vm._v("\n            検索結果\n            "), _c("div", [_c("input", {
+  }, [_c("div", [_c("div"), _vm._v(" "), _c("h1", [_vm._v("商品一覧")]), _vm._v("\n            検索結果\n            "), _c("div", [_c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
