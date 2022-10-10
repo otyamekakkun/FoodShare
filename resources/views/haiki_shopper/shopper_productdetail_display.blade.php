@@ -31,11 +31,29 @@
 <shopperproductdetail-component :product_img="'{{$products->img_path}}'" :product_name="'{{$products->product_name}}'"
     :product_price="'{{$products->price}}'" :product_best_by_date="'{{$products->best_by_date}}'"></shopperproductdetail-component>
 
-
+@if($products->bought<=0)
     <form action="{{ route('bought.update',$products->id)}}" enctype="multipart/form-data" method="post">
         @csrf
         <button class="btn btn-danger">購入する</button>
     </form>
+@endif
+
+
+
+
+
+
+@if($products->bought>=1)
+    <form action="" enctype="multipart/form-data" method="post">
+        @csrf
+        <button class="btn btn-danger">購入をやめる</button>
+    </form>
+@endif
+
+
+
+
+
 
 
 
