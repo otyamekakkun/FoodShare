@@ -1,12 +1,54 @@
 <template>
     <div id="app">
         <div>
-            {{ filterdList() }}
+            <!-- {{ filterdList() }} -->
             <h1>商品一覧</h1>
             検索結果
-            <span class="">?件</span>
+            <div>
+                <!-- チェックボックスの実験 -->
+                <input type="checkbox" id="checkbox1" v-model="isChecked" />
+                <label for="checkbox1">プロパティの値；{{ isChecked }}</label>
+            </div>
+            <!-- セレクトボックスの実験 -->
+            <div>
+                <select v-model="checked2">
+                    <option value="0">価格の範囲を指定する</option>
+                    <option value="1">100円以下を表示する</option>
+                    <option value="2">500円以下を表示する</option>
+                    <option value="3">1000円以下を表示する</option>
+                </select>
+                <div>
+                    <div v-if="checked2 >= 3">
+                        <li v-for="item in products">
+                            <div v-if="item.price <= 1000">
+                                <img v-bind:src="item.img_path" width="25%" />
+                                商品名.{{ item.product_name }}お値段.{{
+                                    item.price
+                                }}円.
+                                <button>
+                                    <a
+                                        v-bind:href="`/haiki/${item.id}/shopper_productdetail`"
+                                        >商品の詳細をみる</a
+                                    >
+                                </button>
 
-            <select class="" v-model="check1">
+                                <div v-if="item.bought >= 1">
+                                    <li>購入されました</li>
+                                </div>
+                            </div>
+                            <!-- ここまで
+ここから値段が真ん中ぐらい
+-->
+                        </li>
+                    </div>
+                    <div v-else-if="checked2 >= 2 < 3">500円以下です</div>
+                    <div v-else-if="checked2 >= 1 < 2">100円以下です</div>
+                    <div v-else></div>
+                </div>
+                <!--                 <div v-if="item.price <= high_price" -->
+            </div>
+
+            <select class="" v-model="check0">
                 <option value="0">価格の範囲を指定する</option>
                 <option value="1">100円以下を表示する</option>
                 <option value="2">500円以下を表示する</option>
@@ -64,12 +106,10 @@
                 <option value="沖縄県">沖縄県</option>
             </select>
         </div>
+        <!-- お金が高い -->
         <div>
-            <li
-                v-for="item in products"
-                v-bind:class="{ takai: item.price > 300 }"
-            >
-                <div v-if="item.price <= a">
+            <li v-for="item in products">
+                <div v-if="item.price <= high_price">
                     <img v-bind:src="item.img_path" width="25%" />
                     商品名.{{ item.product_name }}お値段.{{ item.price }}円.
                     <button>
@@ -83,6 +123,9 @@
                         <li>購入されました</li>
                     </div>
                 </div>
+                <!-- ここまで
+ここから値段が真ん中ぐらい
+-->
             </li>
         </div>
     </div>
@@ -90,6 +133,7 @@
 
 <script>
 import axios from "axios";
+import { has } from "immutable";
 //ここでエラーが発生していたコンポーネント自体読み取れていないということなのでここは読み取れている。
 export default {
     data: function () {
@@ -97,14 +141,23 @@ export default {
             //データは言わば変数みたいなもの色々なところで使い回せる
             return {
                 //ここでの処理はチェックボタンが押されているかどうかの言わばスイッチみたいに役割を持たせる。
-                check1: false,
+                check0: 0,
+                price_order: 0, //0は何もしない,1000円以内のものを表示する
+                //2,500円以内のものを表示する 3,100円以下を表示する
+
                 // check2: false,
                 // check3: false,
                 products: "", //からのデータを用意する。
                 imageUrl: "https://via.placeholder.com/300x200?text=Image-1",
 
                 checkflg: false,
-                a: 500,
+                isChecked: false,
+                //serekutoボックスの実験
+                checked2: "",
+
+                low_price: 100,
+                middle_price: 500,
+                high_price: 1000,
             };
         }
     },
@@ -120,7 +173,7 @@ export default {
     methods: {
         filterdList() {
             const app = this.products;
-            return app;
+            const filterdList = this.products;
         },
     },
 
