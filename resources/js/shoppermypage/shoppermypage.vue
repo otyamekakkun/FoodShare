@@ -1,22 +1,18 @@
 <template>
     <div>
         ここを正確に処理をすれば良さそう。
-        <li v-for="item in products" v-bind:class="{ takai: item.price > 300 }">
-            <img v-bind:src="item.img_path" width="25%" />
 
-            商品名.{{ item.product_name }}お値段.{{ item.price }}円.
-            <button>
-                <a v-bind:href="`/haiki/${item.id}/shopper_productdetail`"
-                    >商品の詳細をみる</a
-                >
-            </button>
+        <li v-for="item in products">
+            <div v-if="item.bought >= 1">
+                <img v-bind:src="item.img_path" width="25%" />
 
-            <span v-if="item.price <= 100">やすい</span>
-            <span v-else-if="item.price > 100 && item.price <= 500">普通</span>
-            <span v-else-if="item.price > 500 && item.price <= 1000"
-                >やや高い</span
-            >
-            <span v-else-if="item.price > 1000">そのほか</span>
+                商品名.{{ item.product_name }}お値段.{{ item.price }}円.
+                <button>
+                    <a v-bind:href="`/haiki/${item.id}/shopper_productdetail`"
+                        >商品の詳細をみる</a
+                    >
+                </button>
+            </div>
         </li>
     </div>
 </template>
