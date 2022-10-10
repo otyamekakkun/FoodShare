@@ -2,9 +2,9 @@
     <div>
         sss
         <!-- 商品検索一覧 -->
-        <Product-header></Product-header>
+        <Productheaders></Productheaders>
         <!-- 商品一覧 -->
-        <product></product>
+        <Product></Product>
     </div>
 </template>
 <script>
@@ -19,5 +19,14 @@ export default {
         Productheaders,
         Product,
     },
+    //コンポーネントが持つデータ
+    data: function () {
+        return {
+            //価格で絞り込む
+            //賞味期限で絞り込む
+            //出品した都道府県で絞り込む
+        };
+    },
+    methods: {},
 };
 </script>
