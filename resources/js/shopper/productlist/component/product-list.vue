@@ -1,7 +1,10 @@
 <template>
     <div>
-        ss
+        sss
         <!-- 商品検索一覧 -->
+        <Product-header></Product-header>
+        <!-- 商品一覧 -->
+        <product></product>
     </div>
 </template>
 <script>
