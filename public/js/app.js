@@ -5388,21 +5388,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+var _data$methods$methods;
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
  //ここでエラーが発生していたコンポーネント自体読み取れていないということなのでここは読み取れている。
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_data$methods$methods = {
   data: function data() {
     {
       //データは言わば変数みたいなもの色々なところで使い回せる
       return {
         //ここでの処理はチェックボタンが押されているかどうかの言わばスイッチみたいに役割を持たせる。
         check1: false,
-        check2: false,
-        check3: false,
+        // check2: false,
+        // check3: false,
         products: "",
         //からのデータを用意する。
         imageUrl: "https://via.placeholder.com/300x200?text=Image-1",
-        checkflg: false
+        checkflg: false,
+        a: 500
       };
     }
   },
@@ -5413,16 +5418,20 @@ __webpack_require__.r(__webpack_exports__);
     count: function count() {
       console.log($route.path);
     }
-  },
-  mounted: function mounted() {
-    var _this = this;
-
-    var url = "/haiki/index1";
-    axios__WEBPACK_IMPORTED_MODULE_0___default().get(url).then(function (response) {
-      return _this.products = response.data;
-    });
   }
-});
+}, _defineProperty(_data$methods$methods, "methods", {
+  filterdList: function filterdList() {
+    var app = this.products;
+    return app;
+  }
+}), _defineProperty(_data$methods$methods, "mounted", function mounted() {
+  var _this = this;
+
+  var url = "/haiki/index1";
+  axios__WEBPACK_IMPORTED_MODULE_0___default().get(url).then(function (response) {
+    return _this.products = response.data;
+  });
+}), _data$methods$methods);
 
 /***/ }),
 
@@ -5803,62 +5812,25 @@ var render = function render() {
     attrs: {
       id: "app"
     }
-  }, [_c("div", [_c("h1", [_vm._v("商品一覧")]), _vm._v("\n        検索結果\n        "), _c("span", {}, [_vm._v("?件")]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c("input", {
+  }, [_c("div", [_vm._v("\n        " + _vm._s(_vm.filterdList()) + "\n        "), _c("h1", [_vm._v("商品一覧")]), _vm._v("\n        検索結果\n        "), _c("span", {}, [_vm._v("?件")]), _vm._v(" "), _c("select", {
     directives: [{
       name: "model",
       rawName: "v-model",
       value: _vm.check1,
       expression: "check1"
     }],
-    attrs: {
-      type: "checkbox"
-    },
-    domProps: {
-      checked: Array.isArray(_vm.check1) ? _vm._i(_vm.check1, null) > -1 : _vm.check1
-    },
     on: {
       change: function change($event) {
-        var $$a = _vm.check1,
-            $$el = $event.target,
-            $$c = $$el.checked ? true : false;
-
-        if (Array.isArray($$a)) {
-          var $$v = null,
-              $$i = _vm._i($$a, $$v);
-
-          if ($$el.checked) {
-            $$i < 0 && (_vm.check1 = $$a.concat([$$v]));
-          } else {
-            $$i > -1 && (_vm.check1 = $$a.slice(0, $$i).concat($$a.slice($$i + 1)));
-          }
-        } else {
-          _vm.check1 = $$c;
-        }
+        var $$selectedVal = Array.prototype.filter.call($event.target.options, function (o) {
+          return o.selected;
+        }).map(function (o) {
+          var val = "_value" in o ? o._value : o.value;
+          return val;
+        });
+        _vm.check1 = $event.target.multiple ? $$selectedVal : $$selectedVal[0];
       }
     }
-  }), _vm._v("賞味期限以内の商品を表示する\n        "), _vm._m(1)]), _vm._v(" "), _c("div", _vm._l(_vm.products, function (item) {
-    return _c("li", {
-      class: {
-        takai: item.price > 300
-      }
-    }, [item.price >= 50000 ? _c("div", [_c("img", {
-      attrs: {
-        src: item.img_path,
-        width: "25%"
-      }
-    }), _vm._v("\n                商品名." + _vm._s(item.product_name) + "お値段." + _vm._s(item.price) + "円.\n                "), _c("button", [_c("a", {
-      attrs: {
-        href: "/haiki/".concat(item.id, "/shopper_productdetail")
-      }
-    }, [_vm._v("商品の詳細をみる")])])]) : _vm._e(), _vm._v(" "), item.bought >= 1 ? _c("div", [_c("li", [_vm._v("購入されました")])]) : _vm._e()]);
-  }), 0)]);
-};
-
-var staticRenderFns = [function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("select", {}, [_c("option", {
+  }, [_c("option", {
     attrs: {
       value: "0"
     }
@@ -5874,8 +5846,29 @@ var staticRenderFns = [function () {
     attrs: {
       value: "3"
     }
-  }, [_vm._v("1000円以下を表示する")])]);
-}, function () {
+  }, [_vm._v("1000円以下を表示する")])]), _vm._v(" "), _c("input", {
+    attrs: {
+      type: "checkbox"
+    }
+  }), _vm._v("賞味期限以内の商品を表示する\n        "), _vm._m(0)]), _vm._v(" "), _c("div", _vm._l(_vm.products, function (item) {
+    return _c("li", {
+      class: {
+        takai: item.price > 300
+      }
+    }, [item.price <= _vm.a ? _c("div", [_c("img", {
+      attrs: {
+        src: item.img_path,
+        width: "25%"
+      }
+    }), _vm._v("\n                商品名." + _vm._s(item.product_name) + "お値段." + _vm._s(item.price) + "円.\n                "), _c("button", [_c("a", {
+      attrs: {
+        href: "/haiki/".concat(item.id, "/shopper_productdetail")
+      }
+    }, [_vm._v("商品の詳細をみる")])]), _vm._v(" "), item.bought >= 1 ? _c("div", [_c("li", [_vm._v("購入されました")])]) : _vm._e()]) : _vm._e()]);
+  }), 0)]);
+};
+
+var staticRenderFns = [function () {
   var _vm = this,
       _c = _vm._self._c;
 

@@ -1,20 +1,18 @@
 <template>
     <div id="app">
         <div>
+            {{ filterdList() }}
             <h1>商品一覧</h1>
             検索結果
             <span class="">?件</span>
 
-            <select class="">
+            <select class="" v-model="check1">
                 <option value="0">価格の範囲を指定する</option>
                 <option value="1">100円以下を表示する</option>
                 <option value="2">500円以下を表示する</option>
                 <option value="3">1000円以下を表示する</option>
             </select>
-            <input
-                type="checkbox"
-                v-model="check1"
-            />賞味期限以内の商品を表示する
+            <input type="checkbox" />賞味期限以内の商品を表示する
             <select class="">
                 <option selected>都道府県</option>
                 <option value="北海道">北海道</option>
@@ -71,7 +69,7 @@
                 v-for="item in products"
                 v-bind:class="{ takai: item.price > 300 }"
             >
-                <div v-if="item.price >= 50000">
+                <div v-if="item.price <= a">
                     <img v-bind:src="item.img_path" width="25%" />
                     商品名.{{ item.product_name }}お値段.{{ item.price }}円.
                     <button>
@@ -80,10 +78,10 @@
                             >商品の詳細をみる</a
                         >
                     </button>
-                </div>
 
-                <div v-if="item.bought >= 1">
-                    <li>購入されました</li>
+                    <div v-if="item.bought >= 1">
+                        <li>購入されました</li>
+                    </div>
                 </div>
             </li>
         </div>
@@ -100,12 +98,13 @@ export default {
             return {
                 //ここでの処理はチェックボタンが押されているかどうかの言わばスイッチみたいに役割を持たせる。
                 check1: false,
-                check2: false,
-                check3: false,
+                // check2: false,
+                // check3: false,
                 products: "", //からのデータを用意する。
                 imageUrl: "https://via.placeholder.com/300x200?text=Image-1",
 
                 checkflg: false,
+                a: 500,
             };
         }
     },
@@ -118,9 +117,30 @@ export default {
         },
     },
 
+    methods: {
+        filterdList() {
+            const app = this.products;
+            return app;
+        },
+    },
+
     mounted() {
         const url = "/haiki/index1";
         axios.get(url).then((response) => (this.products = response.data));
     },
 };
 </script>
+<!-- 
+基本的にデータと数値を比較すれば画面は切り替わる
+数字をデータ型として変数に格納する。
+
+
+
+
+
+
+
+
+
+
+ -->
