@@ -5423,8 +5423,10 @@ __webpack_require__.r(__webpack_exports__);
       //出品した都道府県で絞り込む
       prefecturecheck: false,
       //賞味期限で絞り込む
-      bestdaycheck: false //ここからは実験的なコード
-
+      bestdaycheck: false,
+      //ここからは実験的なコード
+      kabo: true,
+      checktest: 4
     };
   },
   methods: {
@@ -5440,6 +5442,14 @@ __webpack_require__.r(__webpack_exports__);
         var b = 15;
         return a + b; //公式１trueなら値を比較する処理を記述する
       }
+    },
+    drills: function drills() {
+      var a = 10;
+      var b = 15;
+      return a + b;
+    },
+    check: function check() {
+      console.log(this.checktest);
     },
     //検索条件でリストを返すプロパティ
     fiilterdList: function fiilterdList() {
@@ -6185,7 +6195,54 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", [_vm._v("\n        " + _vm._s(_vm.drill()) + "\n\n        "), _c("Productheaders", {
+  return _c("div", [_vm._v("\n        " + _vm._s(_vm.check()) + "\n\n        "), _vm._v(" "), _c("input", {
+    attrs: {
+      type: "checkbox"
+    },
+    on: {
+      click: function click($event) {
+        _vm.kabo = !_vm.kabo;
+      }
+    }
+  }), _vm._v(" "), _c("Transition", {
+    attrs: {
+      name: "fade"
+    }
+  }, [_vm.kabo ? _c("p", [_vm._v("\n                100\n                " + _vm._s(_vm.drills()) + "\n            ")]) : _c("p", [_vm._v("こちらはかぼちゃお化けです")])]), _vm._v(" "), _c("select", {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: _vm.checktest,
+      expression: "checktest"
+    }],
+    on: {
+      change: function change($event) {
+        var $$selectedVal = Array.prototype.filter.call($event.target.options, function (o) {
+          return o.selected;
+        }).map(function (o) {
+          var val = "_value" in o ? o._value : o.value;
+          return val;
+        });
+        _vm.checktest = $event.target.multiple ? $$selectedVal : $$selectedVal[0];
+      }
+    }
+  }, [_c("option", {
+    attrs: {
+      value: "4"
+    }
+  }, [_vm._v("価格の範囲を指定する")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "1"
+    }
+  }, [_vm._v("100円以下を表示する")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "2"
+    }
+  }, [_vm._v("500円以下を表示する")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "3"
+    }
+  }, [_vm._v("1000円以下を表示する")])]), _vm._v(" "), _vm.checktest >= 4 ? _c("div", [_vm._v("絞り込みなし")]) : _vm._e(), _vm._v(" "), _vm.checktest >= 3 < 4 ? _c("div", [_vm._v("1000円")]) : _vm._e(), _vm._v(" "), _vm.checktest >= 2 < 3 ? _c("div", [_vm._v("500円以下")]) : _vm._e(), _vm._v(" "), _vm.checktest >= 1 < 2 ? _c("div", [_vm._v("100円以下")]) : _vm._e(), _vm._v(" "), _c("Productheaders", {
     attrs: {
       check1: _vm.check1,
       prefecturecheck: _vm.prefecture,

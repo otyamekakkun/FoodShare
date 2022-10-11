@@ -1,11 +1,36 @@
 <template>
     <div>
+        {{ check() }}
+
         <!-- {{ fiilterdList() }} -->
         <!-- 商品検索一覧 
         基本的にチェックボックスの値の情報を受け渡す。
         並び替えのイベントにもきをつける
         -->
-        {{ drill() }}
+        <!-- {{ drill() }} -->
+        <input v-on:click="kabo = !kabo" type="checkbox" />
+        <Transition name="fade">
+            <p v-if="kabo">
+                100
+                {{ drills() }}
+            </p>
+            <p v-else="kabo">こちらはかぼちゃお化けです</p>
+        </Transition>
+
+        <!-- 3つ以上の実験 -->
+
+        <!-- 実験 -->
+        <select v-model="checktest">
+            <option value="4">価格の範囲を指定する</option>
+            <option value="1">100円以下を表示する</option>
+            <option value="2">500円以下を表示する</option>
+            <option value="3">1000円以下を表示する</option>
+        </select>
+        <div v-if="checktest >= 4">絞り込みなし</div>
+        <div v-if="checktest >= 3 < 4">1000円</div>
+        <div v-if="checktest >= 2 < 3">500円以下</div>
+
+        <div v-if="checktest >= 1 < 2">100円以下</div>
 
         <Productheaders
             v-bind:check1="check1"
@@ -48,6 +73,8 @@ export default {
             bestdaycheck: false,
 
             //ここからは実験的なコード
+            kabo: true,
+            checktest: 4,
         };
     },
     methods: {
@@ -65,6 +92,15 @@ export default {
 
                 //公式１trueなら値を比較する処理を記述する
             }
+        },
+
+        drills() {
+            const a = 10;
+            const b = 15;
+            return a + b;
+        },
+        check() {
+            console.log(this.checktest);
         },
 
         //検索条件でリストを返すプロパティ
@@ -117,3 +153,19 @@ export default {
     },
 };
 </script>
+<!-- 
+スイッチ分のtrueかfalseはtemplate内で記述することにする。
+つまりif文が発生したときの際のみscriptで記述することにする
+
+さばいる形式で生き残るかどうか
+
+
+
+
+
+
+
+
+
+
+ -->
