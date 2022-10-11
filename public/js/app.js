@@ -6159,7 +6159,18 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", [_c("Productheaders"), _vm._v(" "), _c("Product")], 1);
+  return _c("div", [_c("Productheaders", {
+    attrs: {
+      check1: _vm.check1,
+      prefecturecheck: _vm.prefecture,
+      bestdaycheck: _vm.bestdaycheck
+    },
+    on: {
+      bestdaycheck: function bestdaycheck($event) {}
+    }
+  }), _vm._v(" "), _vm._l(_vm.products, function (item) {
+    return _c("Product");
+  })], 2);
 };
 
 var staticRenderFns = [];

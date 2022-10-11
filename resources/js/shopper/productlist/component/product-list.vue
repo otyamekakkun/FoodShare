@@ -1,10 +1,19 @@
 <template>
     <div>
         <!-- {{ fiilterdList() }} -->
-        <!-- 商品検索一覧 -->
-        <Productheaders></Productheaders>
+        <!-- 商品検索一覧 
+        基本的にチェックボックスの値の情報を受け渡す。
+        並び替えのイベントにもきをつける
+        -->
+
+        <Productheaders
+            v-bind:check1="check1"
+            v-bind:prefecturecheck="prefecture"
+            v-bind:bestdaycheck="bestdaycheck"
+            v-on:bestdaycheck=""
+        ></Productheaders>
         <!-- 商品一覧 -->
-        <Product></Product>
+        <Product v-for="item in products"></Product>
     </div>
 </template>
 <script>
