@@ -68,7 +68,7 @@
             <strong>{{ $message }}</strong>
         @enderror
 
-
+<input type="text" name="prefecture">
 
 
 <button type="submit" class="btn btn-primary">
