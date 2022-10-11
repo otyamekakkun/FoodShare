@@ -306,6 +306,7 @@ $product->admin_id = $id;//現在ログインしているコンビニユーザ�
 $product->img_path=$imagePath;
 $product->price = $request->price;
 $product->best_by_date = $request->best_by_date;
+$product->prefecture=$request->prefecture;
 $product->save();//2
 
 
