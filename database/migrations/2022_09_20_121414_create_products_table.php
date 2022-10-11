@@ -22,6 +22,7 @@ class CreateProductsTable extends Migration
             $table->string('img_path')->nullable();//画像を入れるもの
             $table->integer('price')->nullable();//価格を入力するためのもの
             $table->date('best_by_date')->nullable();//賞味期限を記述するためのもの
+            $table->string('prefecture');//都道府県名を記述するところ
             $table->boolean('bought')->default(false)->nullable();//購入されたかどうかをチェックする
             $table->boolean('delete')->default(false)->nullable();//購入されたかどうかをチェックする
 

@@ -319,7 +319,17 @@ return redirect('admin')->with('flash_message', __('Registered.'));//3
 //================================================
 //これがjson形式で値を渡す方法
 public function index1(Request $request){
-    $drill = products::all();
+    // $drill = products::all();
+$drill = DB::table('products')->leftJoin('admins','admin_id','=','prefecture')->get();
+
+
+
+//->leftJoin('admins','admin_id','=', 'id')->get()
+
+
+
+
+    
     return response()->json($drill);
     //index1の内容は基本的にファイルの中に入っているもの全てを取得する
 }

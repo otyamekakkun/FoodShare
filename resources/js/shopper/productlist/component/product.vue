@@ -18,8 +18,10 @@
 
 <template>
     <div>
+        {{ this.product }}
+
         <!-- 基本的に商品一覧の処理機能を記述します -->
-        なにもされたいない
+        なにかした処理されている
         <li v-for="item in product">
             <div>
                 <img v-bind:src="item.img_path" width="25%" />
