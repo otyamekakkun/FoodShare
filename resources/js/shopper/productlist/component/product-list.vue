@@ -19,7 +19,7 @@
 
         <!-- 3つ以上の実験 -->
 
-        <!-- 実験 -->
+        <!-- 実験 
         <select v-model="checktest">
             <option value="4">価格の範囲を指定する</option>
             <option value="1">100円以下を表示する</option>
@@ -31,7 +31,7 @@
         <div v-if="checktest >= 2 < 3">500円以下</div>
 
         <div v-if="checktest >= 1 < 2">100円以下</div>
-
+-->
         <Productheaders
             v-bind:check1="check1"
             v-bind:prefecturecheck="prefecture"

@@ -6208,41 +6208,7 @@ var render = function render() {
     attrs: {
       name: "fade"
     }
-  }, [_vm.kabo ? _c("p", [_vm._v("\n                100\n                " + _vm._s(_vm.drills()) + "\n            ")]) : _c("p", [_vm._v("こちらはかぼちゃお化けです")])]), _vm._v(" "), _c("select", {
-    directives: [{
-      name: "model",
-      rawName: "v-model",
-      value: _vm.checktest,
-      expression: "checktest"
-    }],
-    on: {
-      change: function change($event) {
-        var $$selectedVal = Array.prototype.filter.call($event.target.options, function (o) {
-          return o.selected;
-        }).map(function (o) {
-          var val = "_value" in o ? o._value : o.value;
-          return val;
-        });
-        _vm.checktest = $event.target.multiple ? $$selectedVal : $$selectedVal[0];
-      }
-    }
-  }, [_c("option", {
-    attrs: {
-      value: "4"
-    }
-  }, [_vm._v("価格の範囲を指定する")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "1"
-    }
-  }, [_vm._v("100円以下を表示する")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "2"
-    }
-  }, [_vm._v("500円以下を表示する")]), _vm._v(" "), _c("option", {
-    attrs: {
-      value: "3"
-    }
-  }, [_vm._v("1000円以下を表示する")])]), _vm._v(" "), _vm.checktest >= 4 ? _c("div", [_vm._v("絞り込みなし")]) : _vm._e(), _vm._v(" "), _vm.checktest >= 3 < 4 ? _c("div", [_vm._v("1000円")]) : _vm._e(), _vm._v(" "), _vm.checktest >= 2 < 3 ? _c("div", [_vm._v("500円以下")]) : _vm._e(), _vm._v(" "), _vm.checktest >= 1 < 2 ? _c("div", [_vm._v("100円以下")]) : _vm._e(), _vm._v(" "), _c("Productheaders", {
+  }, [_vm.kabo ? _c("p", [_vm._v("\n                100\n                " + _vm._s(_vm.drills()) + "\n            ")]) : _c("p", [_vm._v("こちらはかぼちゃお化けです")])]), _vm._v(" "), _c("Productheaders", {
     attrs: {
       check1: _vm.check1,
       prefecturecheck: _vm.prefecture,
