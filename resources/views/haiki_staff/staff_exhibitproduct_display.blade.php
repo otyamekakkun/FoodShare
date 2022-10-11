@@ -5,8 +5,6 @@
     データベース機能
     画面モックは今から考え直すが設計図はあるのでそれに準じる
     --}}
-
-
 {{-- 
 これは後は画面モックすれば完成する
     --}}
@@ -67,8 +65,9 @@
         @error('img_path')
             <strong>{{ $message }}</strong>
         @enderror
-
-<input type="text" name="prefecture">
+        {{-- 基本的に都道府県を記述するところはフォームには出さない。ログインしている人の件名が入るように
+            セッティングする --}}
+<input type="text" name="prefecture" value="{{$admin->prefecture}}" class="u-hidden">
 
 
 <button type="submit" class="btn btn-primary">

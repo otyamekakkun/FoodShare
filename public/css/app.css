@@ -1032,6 +1032,10 @@ a {
 *
 *
 */
+.u-hidden {
+  display: none;
+}
+
 .u-space {
   padding: 10px;
 }

@@ -154,7 +154,10 @@ return redirect('admin')->with('flash_message', __('Registered.'));
 //6コンビニ 商品出品画面                                          //
 //==============================================================
     public function staff_exhibitproduct_display(){
-        return view('haiki_staff.staff_exhibitproduct_display');
+        $id = Auth::guard('admin')->id();
+        $admin = Admin::find($id);
+
+        return view('haiki_staff.staff_exhibitproduct_display',['admin'=>$admin]);
     } 
 
 //==========================================================ここまで
@@ -295,8 +298,6 @@ $path = $img->store('img','public');//1
 $image = $request->file("img_path");
 $path = Storage::disk("public")->putFile('profile', $image); 
 $imagePath = "/storage/" . $path;
-
-
 $id = Auth::guard('admin')->id();
 $product = new products;
 $product->product_name = $request->product_name;
@@ -321,7 +322,7 @@ return redirect('admin')->with('flash_message', __('Registered.'));//3
 //これがjson形式で値を渡す方法
 public function index1(Request $request){
     // $drill = products::all();
-$drill = DB::table('products')->leftJoin('admins','admin_id','=','prefecture')->get();
+$drill = DB::table('products')->get();
 
 
 
