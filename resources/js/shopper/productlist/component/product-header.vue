@@ -1,16 +1,18 @@
 <template>
     <div>
+        <p>価格の範囲を指定する</p>
+
         <select
             class=""
             v-bind:value="check1"
             v-on:change="$emit('orderChanged', parseInt($event.target.value))"
         >
-            <option value="0">価格の範囲を指定する</option>
+            <option value="0">特に指定しない</option>
             <option value="1">100円以下の商品を表示する</option>
             <option value="2">500円以下の商品を表示する</option>
             <option value="3">1000円以下の商品を表示する</option>
         </select>
-
+        <p>出品されたコンビニの都道府県で絞り込む</p>
         <select class="" v-bind:value="prefecturecheck">
             <option selected>都道府県</option>
             <option value="北海道">北海道</option>

@@ -5496,7 +5496,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ["product"]
+  props: ["product"],
+  data: function data() {
+    return {
+      a: 1
+    };
+  },
+  methods: {}
 });
 
 /***/ }),
@@ -5912,7 +5918,7 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", [_c("select", {
+  return _c("div", [_c("p", [_vm._v("価格の範囲を指定する")]), _vm._v(" "), _c("select", {
     domProps: {
       value: _vm.check1
     },
@@ -5925,7 +5931,7 @@ var render = function render() {
     attrs: {
       value: "0"
     }
-  }, [_vm._v("価格の範囲を指定する")]), _vm._v(" "), _c("option", {
+  }, [_vm._v("特に指定しない")]), _vm._v(" "), _c("option", {
     attrs: {
       value: "1"
     }
@@ -5937,7 +5943,7 @@ var render = function render() {
     attrs: {
       value: "3"
     }
-  }, [_vm._v("1000円以下の商品を表示する")])]), _vm._v(" "), _c("select", {
+  }, [_vm._v("1000円以下の商品を表示する")])]), _vm._v(" "), _c("p", [_vm._v("出品されたコンビニの都道府県で絞り込む")]), _vm._v(" "), _c("select", {
     domProps: {
       value: _vm.prefecturecheck
     }
@@ -6203,7 +6209,7 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", [_vm._v("\n    Konijnfwie\n    "), _vm._v(" "), _vm._l(_vm.product, function (item) {
+  return _c("div", [_vm._v("\n    なにもされたいない\n    "), _vm._l(_vm.product, function (item) {
     return _c("li", [_c("div", [_c("img", {
       attrs: {
         src: item.img_path,
