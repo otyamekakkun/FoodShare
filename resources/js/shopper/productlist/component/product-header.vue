@@ -1,13 +1,13 @@
 <template>
     <div>
-        <select class="">
+        <select class="" v-bind:value="check1">
             <option value="0">価格の範囲を指定する</option>
             <option value="1">100円以下の商品を表示する</option>
             <option value="2">500円以下の商品を表示する</option>
             <option value="3">1000円以下の商品を表示する</option>
         </select>
 
-        <select class="">
+        <select class="" v-bind:value="prefecturecheck">
             <option selected>都道府県</option>
             <option value="北海道">北海道</option>
             <option value="青森県">青森県</option>
@@ -58,6 +58,16 @@
             <option value="沖縄県">沖縄県</option>
         </select>
 
-        <input type="checkbox" />賞味期限有効なものだけを表示する
+        <input
+            type="checkbox"
+            v-bind="bestdaycheck"
+            v-on:change=""
+        />賞味期限有効なものだけを表示する
     </div>
 </template>
+<script>
+export default {
+    props: ["check1", "prefecturecheck", "bestdaycheck"],
+};
+//コンポーネントが親から受け取るデータ
+</script>

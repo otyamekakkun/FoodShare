@@ -1,6 +1,5 @@
 <template>
     <div>
-        sss
         <!-- {{ fiilterdList() }} -->
         <!-- 商品検索一覧 -->
         <Productheaders></Productheaders>
@@ -25,10 +24,9 @@ export default {
         return {
             //価格で絞り込む
             check1: false,
-            check2: false,
-            check3: false,
-            //賞味期限で絞り込む
             //出品した都道府県で絞り込む
+            prefecturecheck: false,
+            //賞味期限で絞り込む
             bestdaycheck: false,
         };
     },
@@ -45,20 +43,17 @@ export default {
                     if (item.price > 100) {
                         show = false;
                     }
-                }
-                if (app.check2) {
                     //価格が500円以上のものなら非表示にする
                     if (item.price > 500) {
                         show = false;
                     }
-                }
-                if (app.check3) {
                     //価格が1000円以上のものなら非表示にする
 
                     if (item.price > 1000) {
                         show = false;
                     }
                 }
+
                 //価格の絞り込み終わり
                 //検索条件：賞味期限（現在時刻よりも有効期限が切れていた時に処理を行う
 
@@ -81,6 +76,7 @@ export default {
                 //チェックボックスの表示判定を返す
                 return show;
             });
+            return filterdList;
         },
     },
 };
