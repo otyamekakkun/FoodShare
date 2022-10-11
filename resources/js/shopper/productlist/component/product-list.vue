@@ -13,7 +13,15 @@
             v-on:bestdaycheck=""
         ></Productheaders>
         <!-- 商品一覧 -->
-        <Product v-for="item in products"></Product>
+        <Product :product="this.products"></Product>
+
+        <!-- 
+受け渡しは考えないといけない
+            v-for="(item, index) in index"
+            v-bind:item="item"
+            v-bind:id="index + 1"
+            v-bind:key="index"
+ -->
     </div>
 </template>
 <script>

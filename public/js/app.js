@@ -5495,7 +5495,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({// props: ["products"],
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ["product"]
 });
 
 /***/ }),
@@ -5914,6 +5915,11 @@ var render = function render() {
   return _c("div", [_c("select", {
     domProps: {
       value: _vm.check1
+    },
+    on: {
+      change: function change($event) {
+        _vm.$emit("orderChanged", parseInt($event.target.value));
+      }
     }
   }, [_c("option", {
     attrs: {
@@ -6168,9 +6174,11 @@ var render = function render() {
     on: {
       bestdaycheck: function bestdaycheck($event) {}
     }
-  }), _vm._v(" "), _vm._l(_vm.products, function (item) {
-    return _c("Product");
-  })], 2);
+  }), _vm._v(" "), _c("Product", {
+    attrs: {
+      product: this.products
+    }
+  })], 1);
 };
 
 var staticRenderFns = [];
@@ -6195,7 +6203,18 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", [_vm._v("produc.vue映っていますか")]);
+  return _c("div", [_vm._v("\n    Konijnfwie\n    "), _vm._v(" "), _vm._l(_vm.product, function (item) {
+    return _c("li", [_c("div", [_c("img", {
+      attrs: {
+        src: item.img_path,
+        width: "25%"
+      }
+    }), _vm._v("\n            商品名." + _vm._s(item.product_name) + "お値段." + _vm._s(item.price) + "円.\n            "), _c("button", [_c("a", {
+      attrs: {
+        href: "/haiki/".concat(item.id, "/shopper_productdetail")
+      }
+    }, [_vm._v("商品の詳細をみる")])])])]);
+  })], 2);
 };
 
 var staticRenderFns = [];

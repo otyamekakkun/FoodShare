@@ -1,6 +1,10 @@
 <template>
     <div>
-        <select class="" v-bind:value="check1">
+        <select
+            class=""
+            v-bind:value="check1"
+            v-on:change="$emit('orderChanged', parseInt($event.target.value))"
+        >
             <option value="0">価格の範囲を指定する</option>
             <option value="1">100円以下の商品を表示する</option>
             <option value="2">500円以下の商品を表示する</option>
