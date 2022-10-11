@@ -10,6 +10,19 @@
 <h1>
     出品した商品一覧
 </h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div id="app">
     <admin-component></admin-component>
 

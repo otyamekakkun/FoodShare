@@ -52,25 +52,14 @@
     商品詳細を見るで画面を飛ばさないと行けない{id}でパラメータをつける必要がありそう。
     --}}
 
-
-
-
-
-
-
-
-
-
-
  @extends('layouts.app2')
  @section('content')
  
-
  <body>
     <header>
         @include('rest.shopper.header') 
         </header>
-        
+
         <div id="app">
 <productlist-component><productlist-component>
  <footer-component></footer-component>

@@ -5,6 +5,7 @@
         基本的にチェックボックスの値の情報を受け渡す。
         並び替えのイベントにもきをつける
         -->
+        {{ drill() }}
 
         <Productheaders
             v-bind:check1="check1"
@@ -45,9 +46,27 @@ export default {
             prefecturecheck: false,
             //賞味期限で絞り込む
             bestdaycheck: false,
+
+            //ここからは実験的なコード
         };
     },
     methods: {
+        //ここは実験的なコード
+        drill() {
+            const app = this.products;
+            const best = this.bestdaycheck;
+            console.log(app);
+            console.log(best); //とただスイッチを押しても無限でfalseしか帰ってこない
+
+            if (best) {
+                const a = 10;
+                const b = 15;
+                return a + b;
+
+                //公式１trueなら値を比較する処理を記述する
+            }
+        },
+
         //検索条件でリストを返すプロパティ
         fiilterdList() {
             const app = this.products; //インスタンスを格納する

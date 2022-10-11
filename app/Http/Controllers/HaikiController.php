@@ -63,7 +63,8 @@ return redirect('haiki/shopper_mypage');//..............画面表示するもの
 //===================================================================
 
     public function shopper_productlist_display(){
-        return view('haiki_shopper.shopper_productlist_display');
+        $product = DB::table('products')->get();
+        return view('haiki_shopper.shopper_productlist_display',['products'=>$product]);
     } //.............................................................画面表示するもの
 
 //==============================================================

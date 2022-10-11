@@ -5423,10 +5423,24 @@ __webpack_require__.r(__webpack_exports__);
       //出品した都道府県で絞り込む
       prefecturecheck: false,
       //賞味期限で絞り込む
-      bestdaycheck: false
+      bestdaycheck: false //ここからは実験的なコード
+
     };
   },
   methods: {
+    //ここは実験的なコード
+    drill: function drill() {
+      var app = this.products;
+      var best = this.bestdaycheck;
+      console.log(app);
+      console.log(best); //とただスイッチを押しても無限でfalseしか帰ってこない
+
+      if (best) {
+        var a = 10;
+        var b = 15;
+        return a + b; //公式１trueなら値を比較する処理を記述する
+      }
+    },
     //検索条件でリストを返すプロパティ
     fiilterdList: function fiilterdList() {
       var app = this.products; //インスタンスを格納する
@@ -6171,7 +6185,7 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", [_c("Productheaders", {
+  return _c("div", [_vm._v("\n        " + _vm._s(_vm.drill()) + "\n\n        "), _c("Productheaders", {
     attrs: {
       check1: _vm.check1,
       prefecturecheck: _vm.prefecture,
@@ -6209,7 +6223,7 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", [_vm._v("\n    " + _vm._s(this.product) + "\n\n    "), _vm._v("\n    なにかした処理されている\n    "), _vm._l(_vm.product, function (item) {
+  return _c("div", [_vm._v("\n    なにかした処理されている\n    "), _vm._l(_vm.product, function (item) {
     return _c("li", [_c("div", [_c("img", {
       attrs: {
         src: item.img_path,

@@ -49,8 +49,6 @@
     --}}
 
 @extends('layouts.app2') 
-
-
  @section('content') 
 <body>
 <header>
@@ -68,31 +66,28 @@
         参考として商品が出品されたものを参考にするといい
         --}}
 
-</h1>
-<a class="btn_tw" href="https://twitter.com/intent/tweet?text=ここを記述するとtwitter内ですでに文が打ち込まれる;" target="_blank_" rel="nofollow"><i class="fab fa-twitter fa-fw"></i> この商品をシェアするs</a>
-<main>
-    <div class="l-shoppermypage">
-    <div class="l-shoppermypage__exhibitarea">
-    <h1>ご購入された商品一覧</h1>
-    <a href="{{route('haiki_shopper.shopper_productlist_display')}}"><button>商品一覧に移動する</a></button>
-{{--  
-<h1>商品の画像</h1>
-    <a href="{{route('haiki_shopper.shopper_productdetail_display')}}"><button>商品の詳細をみる</a></button>
-<button>購入をキャンセルする</button>
---}}
-    </div>
-    
-    <div class="l-staffmypage__side">
-    <p>メニュー</p>
-    <a href="{{route('haiki_shopper.shopper_profile_display')}}"><button>利用者プロフィール編集画面</a></button>
-    </div>
-    </div>
-    </main>
-<div id=app>
-    {{-- incompletefooter-componentはfooterをレウアウトしてくれるもの。ただしページ量が少ないときにfooter
-        エリアが最下部にならないように定義したもの --}}
 
+<div id=app>
+    <main>
+    <div class="l-shoppermypage">
+        <div class="l-shoppermypage__exhibitarea">
+        <h1>ご購入された商品一覧</h1>
+        <a href="{{route('haiki_shopper.shopper_productlist_display')}}"><button>商品一覧に移動する</a></button>
         <shoppermypage-component></shoppermypage-component>
+        </div>
+    </div>
+
+
+
+    <div class="l-staffmypage__side">
+        <p>メニュー</p>
+        <a href="{{route('haiki_shopper.shopper_profile_display')}}"><button>利用者プロフィール編集画面</a></button>
+        </div>
+    
+    </main>
+
+
+
 <footer-component></footer-component>
 </div>
 @endsection 

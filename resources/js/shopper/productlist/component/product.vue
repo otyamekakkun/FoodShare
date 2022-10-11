@@ -18,8 +18,6 @@
 
 <template>
     <div>
-        {{ this.product }}
-
         <!-- 基本的に商品一覧の処理機能を記述します -->
         なにかした処理されている
         <li v-for="item in product">
