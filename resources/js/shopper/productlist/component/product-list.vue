@@ -138,7 +138,10 @@ export default {
                 }
             }
 
-            return products;
+            //            return products;
+            return products.filter(function (el) {
+                return el.price <= this.budgets;
+            }, this);
         },
         bestproducts: function () {
             //ここでitemsリストを絞り込んで返します。

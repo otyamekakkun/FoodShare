@@ -5516,9 +5516,12 @@ __webpack_require__.r(__webpack_exports__);
         if (product.prefecture.indexOf(this.keywords) !== -1) {
           products.push(product);
         }
-      }
+      } //            return products;
 
-      return products;
+
+      return products.filter(function (el) {
+        return el.price <= this.budgets;
+      }, this);
     },
     bestproducts: function bestproducts() {
       //ここでitemsリストを絞り込んで返します。
