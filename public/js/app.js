@@ -5483,7 +5483,7 @@ __webpack_require__.r(__webpack_exports__);
       }],
       keyword: "",
       //実験
-      keyword2: "",
+      keywords: "",
       //都道府県
       users: [{
         id: 1,
@@ -5535,14 +5535,14 @@ __webpack_require__.r(__webpack_exports__);
       var products = [];
 
       for (var i in this.products) {
-        var product = this.products[i];
+        var product = this.products[i]; // console.log(product);
 
-        if (product.prefecture.indexOf(this.keyword2) !== -1) {
+        if (product.prefecture.indexOf(this.keywords) !== -1) {
           products.push(product);
         }
       }
 
-      return this.products;
+      return products;
     }
   },
   methods: {
@@ -6399,19 +6399,19 @@ var render = function render() {
     directives: [{
       name: "model",
       rawName: "v-model",
-      value: _vm.keyword2,
-      expression: "keyword2"
+      value: _vm.keywords,
+      expression: "keywords"
     }],
     attrs: {
       type: "text"
     },
     domProps: {
-      value: _vm.keyword2
+      value: _vm.keywords
     },
     on: {
       input: function input($event) {
         if ($event.target.composing) return;
-        _vm.keyword2 = $event.target.value;
+        _vm.keywords = $event.target.value;
       }
     }
   }), _vm._v(" "), _c("table", _vm._l(_vm.filteredProducts, function (product) {

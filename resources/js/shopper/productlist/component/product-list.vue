@@ -30,7 +30,7 @@
         </div>
 
         <div>
-            <input type="text" v-model="keyword2" />
+            <input type="text" v-model="keywords" />
             <table>
                 <tr v-for="product in filteredProducts" :key="product.id">
                     <td v-text="product.id"></td>
@@ -112,7 +112,7 @@ export default {
                 { id: 1003, name: "オレンジ", price: 300 },
             ],
             keyword: "", //実験
-            keyword2: "", //都道府県
+            keywords: "", //都道府県
 
             users: [
                 {
@@ -177,12 +177,14 @@ export default {
 
             for (var i in this.products) {
                 var product = this.products[i];
+                // console.log(product);
 
-                if (product.prefecture.indexOf(this.keyword2) !== -1) {
+                if (product.prefecture.indexOf(this.keywords) !== -1) {
                     products.push(product);
                 }
             }
-            return this.products;
+
+            return products;
         },
     },
 
