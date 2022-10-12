@@ -5466,12 +5466,34 @@ __webpack_require__.r(__webpack_exports__);
   //コンポーネントが持つデータ
   data: function data() {
     return {
-      //これは実験
       products: [],
-      keyword: "",
-      //実験
       keywords: "",
       //都道府県
+      //これは実験
+      budget: 10000,
+      //アイテムのデータを一覧で持たせます。
+      //この中のpriceを基準として表示する商品を選びます。
+      items: [{
+        id: 0,
+        product: "最新のmac",
+        price: 9000
+      }, {
+        id: 1,
+        product: "少し前のmac",
+        price: 8000
+      }, {
+        id: 2,
+        product: "昔のmac",
+        price: 7000
+      }, {
+        id: 3,
+        product: "ダメなmac",
+        price: 6000
+      }, {
+        id: 4,
+        product: "壊れたmac",
+        price: 5000
+      }],
       //価格で絞り込む
       check1: false,
       //出品した都道府県で絞り込む
@@ -5496,6 +5518,18 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       return products;
+    },
+    bestproducts: function bestproducts() {
+      //ここでitemsリストを絞り込んで返します。
+      //this.itemsでこの処理のitemsを呼び出します。
+      //その後、filterでリストを絞り込みます。
+      //引数としてel(リストの全データ)を渡し、関数内で使えるようにします。
+      //elの文字は任意に変更できません。
+      return this.items.filter(function (el) {
+        //データの中の価格が予算より少ないものを選んで絞り込みます。
+        //こうして出来上がったリストがbestproductsに格納されます。
+        return el.price <= this.budget;
+      }, this);
     }
   },
   methods: {
@@ -6338,6 +6372,33 @@ var render = function render() {
         width: "25%"
       }
     })]);
+  }), 0)]), _vm._v(" "), _c("div", {
+    attrs: {
+      id: "app"
+    }
+  }, [_c("input", {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: _vm.budget,
+      expression: "budget"
+    }],
+    attrs: {
+      type: "text"
+    },
+    domProps: {
+      value: _vm.budget
+    },
+    on: {
+      input: function input($event) {
+        if ($event.target.composing) return;
+        _vm.budget = $event.target.value;
+      }
+    }
+  }), _vm._v("の中で買えるもの\n            "), _c("ul", _vm._l(_vm.bestproducts, function (items) {
+    return _c("li", {
+      key: _vm.bestproducts.id
+    }, [_vm._v("\n                    " + _vm._s(items.product) + ":" + _vm._s(items.price) + "円\n                ")]);
   }), 0)]), _vm._v(" "), _c("input", {
     attrs: {
       type: "checkbox"

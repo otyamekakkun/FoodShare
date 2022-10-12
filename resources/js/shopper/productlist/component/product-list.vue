@@ -15,6 +15,22 @@
             </table>
         </div>
 
+        <div id="app">
+            <!--v-modelでbudget(予算)をリアルタイムで変更可能にします-->
+            <!--budget(予算)はscriptのbudgetと連動しています-->
+            <input type="text" v-model="budget" />の中で買えるもの
+            <ul>
+                <!--bestproductsが最終的に選ばれた予算以下の商品のリストが入ります。-->
+                <!--どうやって予算以下の商品を選んでいるのでしょう。-->
+                <!--scriptを見てください。-->
+                <!--v-bind:keyに表示されたデータのidを指定します。-->
+                <!--v-bind:keyは、なるべく入れる必要があります。-->
+                <li v-for="items in bestproducts" v-bind:key="bestproducts.id">
+                    {{ items.product }}:{{ items.price }}円
+                </li>
+            </ul>
+        </div>
+
         <!-- {{ fiilterdList() }} -->
         <!-- 商品検索一覧 
         基本的にチェックボックスの値の情報を受け渡す。
@@ -63,11 +79,21 @@ export default {
     //コンポーネントが持つデータ
     data: function () {
         return {
-            //これは実験
             products: [],
 
-            keyword: "", //実験
             keywords: "", //都道府県
+
+            //これは実験
+            budget: 10000,
+            //アイテムのデータを一覧で持たせます。
+            //この中のpriceを基準として表示する商品を選びます。
+            items: [
+                { id: 0, product: "最新のmac", price: 9000 },
+                { id: 1, product: "少し前のmac", price: 8000 },
+                { id: 2, product: "昔のmac", price: 7000 },
+                { id: 3, product: "ダメなmac", price: 6000 },
+                { id: 4, product: "壊れたmac", price: 5000 },
+            ],
 
             //価格で絞り込む
             check1: false,
@@ -96,6 +122,18 @@ export default {
             }
 
             return products;
+        },
+        bestproducts: function () {
+            //ここでitemsリストを絞り込んで返します。
+            //this.itemsでこの処理のitemsを呼び出します。
+            //その後、filterでリストを絞り込みます。
+            //引数としてel(リストの全データ)を渡し、関数内で使えるようにします。
+            //elの文字は任意に変更できません。
+            return this.items.filter(function (el) {
+                //データの中の価格が予算より少ないものを選んで絞り込みます。
+                //こうして出来上がったリストがbestproductsに格納されます。
+                return el.price <= this.budget;
+            }, this);
         },
     },
 
