@@ -2,32 +2,11 @@
     <div>
         <!-- {{ check() }} -->
 
-        <div id="app">
-            <!--  -->
-            <ul>
-                <!-- リストで表示します。 -->
-                <li v-for="(fruit, index) in list" v-bind:key="fruit.id">
-                    ID:{{ fruit.id }} {{ fruit.name }} 価格:{{ fruit.price }}
-                    <!-- 削除ボタン -->
-                    <button v-on:click="deleteFruit(index)">削除</button>
-                </li>
-            </ul>
-        </div>
+        <!--  -->
 
         <!-- 
 これに基づいて商品検索都道府県機能を作る
  -->
-
-        <div>
-            <input type="text" v-model="keyword" />
-            <table>
-                <tr v-for="user in filteredUsers" :key="user.id">
-                    <td v-text="user.id"></td>
-                    <td v-text="user.name"></td>
-                    <td v-text="user.email"></td>
-                </tr>
-            </table>
-        </div>
 
         <div>
             <input type="text" v-model="keywords" />
@@ -35,7 +14,10 @@
                 <tr v-for="product in filteredProducts" :key="product.id">
                     <td v-text="product.id"></td>
                     <td v-text="product.product_name"></td>
+                    <td v-text="product.price"></td>
+                    円
                     <td v-text="product.prefecture"></td>
+                    <img v-bind:src="product.img_path" width="25%" />
                 </tr>
             </table>
         </div>
@@ -55,21 +37,6 @@
             <p v-else="kabo">こちらはかぼちゃお化けです</p>
         </Transition>
 
-        <!-- 3つ以上の実験 -->
-
-        <!-- 実験 
-        <select v-model="checktest">
-            <option value="4">価格の範囲を指定する</option>
-            <option value="1">100円以下を表示する</option>
-            <option value="2">500円以下を表示する</option>
-            <option value="3">1000円以下を表示する</option>
-        </select>
-        <div v-if="checktest >= 4">絞り込みなし</div>
-        <div v-if="checktest >= 3 < 4">1000円</div>
-        <div v-if="checktest >= 2 < 3">500円以下</div>
-
-        <div v-if="checktest >= 1 < 2">100円以下</div>
--->
         <Productheaders
             v-bind:check1="check1"
             v-bind:prefecturecheck="prefecture"
@@ -156,22 +123,6 @@ export default {
     },
 
     computed: {
-        filteredUsers: function () {
-            var users = [];
-
-            for (var i in this.users) {
-                var user = this.users[i];
-
-                if (
-                    user.name.indexOf(this.keyword) !== -1 ||
-                    user.email.indexOf(this.keyword) !== -1
-                ) {
-                    users.push(user);
-                }
-            }
-
-            return users;
-        },
         filteredProducts: function () {
             var products = [];
 
@@ -194,12 +145,6 @@ export default {
         drill2() {
             const result1 = this.products.slice(0, 1);
             return result1;
-        },
-
-        // 削除ボタンが押下された時に呼び出されます。
-        deleteFruit: function (index) {
-            // 指定されたindexの要素を1つ削除します。
-            this.list.splice(index, 1);
         },
 
         drill() {

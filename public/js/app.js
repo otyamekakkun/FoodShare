@@ -5518,19 +5518,6 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   computed: {
-    filteredUsers: function filteredUsers() {
-      var users = [];
-
-      for (var i in this.users) {
-        var user = this.users[i];
-
-        if (user.name.indexOf(this.keyword) !== -1 || user.email.indexOf(this.keyword) !== -1) {
-          users.push(user);
-        }
-      }
-
-      return users;
-    },
     filteredProducts: function filteredProducts() {
       var products = [];
 
@@ -5551,11 +5538,6 @@ __webpack_require__.r(__webpack_exports__);
     drill2: function drill2() {
       var result1 = this.products.slice(0, 1);
       return result1;
-    },
-    // 削除ボタンが押下された時に呼び出されます。
-    deleteFruit: function deleteFruit(index) {
-      // 指定されたindexの要素を1つ削除します。
-      this.list.splice(index, 1);
     },
     drill: function drill() {
       var app = this.products;
@@ -6346,56 +6328,7 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", [_c("div", {
-    attrs: {
-      id: "app"
-    }
-  }, [_c("ul", _vm._l(_vm.list, function (fruit, index) {
-    return _c("li", {
-      key: fruit.id
-    }, [_vm._v("\n                    ID:" + _vm._s(fruit.id) + " " + _vm._s(fruit.name) + " 価格:" + _vm._s(fruit.price) + "\n                    "), _vm._v(" "), _c("button", {
-      on: {
-        click: function click($event) {
-          return _vm.deleteFruit(index);
-        }
-      }
-    }, [_vm._v("削除")])]);
-  }), 0)]), _vm._v(" "), _c("div", [_c("input", {
-    directives: [{
-      name: "model",
-      rawName: "v-model",
-      value: _vm.keyword,
-      expression: "keyword"
-    }],
-    attrs: {
-      type: "text"
-    },
-    domProps: {
-      value: _vm.keyword
-    },
-    on: {
-      input: function input($event) {
-        if ($event.target.composing) return;
-        _vm.keyword = $event.target.value;
-      }
-    }
-  }), _vm._v(" "), _c("table", _vm._l(_vm.filteredUsers, function (user) {
-    return _c("tr", {
-      key: user.id
-    }, [_c("td", {
-      domProps: {
-        textContent: _vm._s(user.id)
-      }
-    }), _vm._v(" "), _c("td", {
-      domProps: {
-        textContent: _vm._s(user.name)
-      }
-    }), _vm._v(" "), _c("td", {
-      domProps: {
-        textContent: _vm._s(user.email)
-      }
-    })]);
-  }), 0)]), _vm._v(" "), _c("div", [_c("input", {
+  return _c("div", [_c("div", [_c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -6427,7 +6360,16 @@ var render = function render() {
       }
     }), _vm._v(" "), _c("td", {
       domProps: {
+        textContent: _vm._s(product.price)
+      }
+    }), _vm._v("\n                    円\n                    "), _c("td", {
+      domProps: {
         textContent: _vm._s(product.prefecture)
+      }
+    }), _vm._v(" "), _c("img", {
+      attrs: {
+        src: product.img_path,
+        width: "25%"
       }
     })]);
   }), 0)]), _vm._v(" "), _c("input", {
