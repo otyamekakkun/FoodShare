@@ -5471,6 +5471,7 @@ __webpack_require__.r(__webpack_exports__);
       //都道府県
       //これは実験
       budget: 10000,
+      budgets: 10000,
       //アイテムのデータを一覧で持たせます。
       //この中のpriceを基準として表示する商品を選びます。
       items: [{
@@ -5529,6 +5530,18 @@ __webpack_require__.r(__webpack_exports__);
         //データの中の価格が予算より少ないものを選んで絞り込みます。
         //こうして出来上がったリストがbestproductsに格納されます。
         return el.price <= this.budget;
+      }, this);
+    },
+    bestproductss: function bestproductss() {
+      //ここでitemsリストを絞り込んで返します。
+      //this.itemsでこの処理のitemsを呼び出します。
+      //その後、filterでリストを絞り込みます。
+      //引数としてel(リストの全データ)を渡し、関数内で使えるようにします。
+      //elの文字は任意に変更できません。
+      return this.products.filter(function (el) {
+        //データの中の価格が予算より少ないものを選んで絞り込みます。
+        //こうして出来上がったリストがbestproductsに格納されます。
+        return el.price <= this.budgets;
       }, this);
     }
   },
@@ -6397,8 +6410,35 @@ var render = function render() {
     }
   }), _vm._v("の中で買えるもの\n            "), _c("ul", _vm._l(_vm.bestproducts, function (items) {
     return _c("li", {
-      key: _vm.bestproducts.id
+      key: items.id
     }, [_vm._v("\n                    " + _vm._s(items.product) + ":" + _vm._s(items.price) + "円\n                ")]);
+  }), 0)]), _vm._v(" "), _c("div", {
+    attrs: {
+      id: "app"
+    }
+  }, [_c("input", {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: _vm.budgets,
+      expression: "budgets"
+    }],
+    attrs: {
+      type: "text"
+    },
+    domProps: {
+      value: _vm.budgets
+    },
+    on: {
+      input: function input($event) {
+        if ($event.target.composing) return;
+        _vm.budgets = $event.target.value;
+      }
+    }
+  }), _vm._v("の中で買えるもの\n            "), _c("ul", _vm._l(_vm.bestproductss, function (items) {
+    return _c("li", {
+      key: items.id
+    }, [_vm._v("\n                    " + _vm._s(items.product_name) + ":" + _vm._s(items.price) + "円\n                ")]);
   }), 0)]), _vm._v(" "), _c("input", {
     attrs: {
       type: "checkbox"

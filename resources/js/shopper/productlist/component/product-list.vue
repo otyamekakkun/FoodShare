@@ -25,8 +25,24 @@
                 <!--scriptを見てください。-->
                 <!--v-bind:keyに表示されたデータのidを指定します。-->
                 <!--v-bind:keyは、なるべく入れる必要があります。-->
-                <li v-for="items in bestproducts" v-bind:key="bestproducts.id">
+                <li v-for="items in bestproducts" v-bind:key="items.id">
                     {{ items.product }}:{{ items.price }}円
+                </li>
+            </ul>
+        </div>
+
+        <div id="app">
+            <!--v-modelでbudget(予算)をリアルタイムで変更可能にします-->
+            <!--budget(予算)はscriptのbudgetと連動しています-->
+            <input type="text" v-model="budgets" />の中で買えるもの
+            <ul>
+                <!--bestproductsが最終的に選ばれた予算以下の商品のリストが入ります。-->
+                <!--どうやって予算以下の商品を選んでいるのでしょう。-->
+                <!--scriptを見てください。-->
+                <!--v-bind:keyに表示されたデータのidを指定します。-->
+                <!--v-bind:keyは、なるべく入れる必要があります。-->
+                <li v-for="items in bestproductss" v-bind:key="items.id">
+                    {{ items.product_name }}:{{ items.price }}円
                 </li>
             </ul>
         </div>
@@ -85,6 +101,7 @@ export default {
 
             //これは実験
             budget: 10000,
+            budgets: 10000,
             //アイテムのデータを一覧で持たせます。
             //この中のpriceを基準として表示する商品を選びます。
             items: [
@@ -133,6 +150,19 @@ export default {
                 //データの中の価格が予算より少ないものを選んで絞り込みます。
                 //こうして出来上がったリストがbestproductsに格納されます。
                 return el.price <= this.budget;
+            }, this);
+        },
+
+        bestproductss: function () {
+            //ここでitemsリストを絞り込んで返します。
+            //this.itemsでこの処理のitemsを呼び出します。
+            //その後、filterでリストを絞り込みます。
+            //引数としてel(リストの全データ)を渡し、関数内で使えるようにします。
+            //elの文字は任意に変更できません。
+            return this.products.filter(function (el) {
+                //データの中の価格が予算より少ないものを選んで絞り込みます。
+                //こうして出来上がったリストがbestproductsに格納されます。
+                return el.price <= this.budgets;
             }, this);
         },
     },
