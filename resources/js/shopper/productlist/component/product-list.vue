@@ -1,6 +1,22 @@
 <template>
     <div>
-        {{ check() }}
+        <!-- {{ check() }} -->
+
+        <div id="app">
+            <!--  -->
+            <ul>
+                <!-- リストで表示します。 -->
+                <li v-for="(fruit, index) in list" v-bind:key="fruit.id">
+                    ID:{{ fruit.id }} {{ fruit.name }} 価格:{{ fruit.price }}
+                    <!-- 削除ボタン -->
+                    <button v-on:click="deleteFruit(index)">削除</button>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            {{ drill2() }}
+        </div>
 
         <!-- {{ fiilterdList() }} -->
         <!-- 商品検索一覧 
@@ -65,6 +81,13 @@ export default {
     //コンポーネントが持つデータ
     data: function () {
         return {
+            //これは実験
+            list: [
+                { id: 1001, name: "リンゴ", price: 100 },
+                { id: 1002, name: "バナナ", price: 200 },
+                { id: 1003, name: "オレンジ", price: 300 },
+            ],
+
             //価格で絞り込む
             check1: false,
             //出品した都道府県で絞り込む
@@ -79,6 +102,18 @@ export default {
     },
     methods: {
         //ここは実験的なコード
+        //開始位置を指定
+        drill2() {
+            const result1 = this.products.slice(0, 1);
+            return result1;
+        },
+
+        // 削除ボタンが押下された時に呼び出されます。
+        deleteFruit: function (index) {
+            // 指定されたindexの要素を1つ削除します。
+            this.list.splice(index, 1);
+        },
+
         drill() {
             const app = this.products;
             const best = this.bestdaycheck;
