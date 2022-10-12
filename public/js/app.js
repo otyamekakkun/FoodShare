@@ -5507,8 +5507,9 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   computed: {
+    //このコードの関数を使う
     filteredProducts: function filteredProducts() {
-      var products = [];
+      var products = []; //ここから都道府県を入力したら絞り込めるコードを記述
 
       for (var i in this.products) {
         var product = this.products[i]; // console.log(product);
@@ -5516,7 +5517,8 @@ __webpack_require__.r(__webpack_exports__);
         if (product.prefecture.indexOf(this.keywords) !== -1) {
           products.push(product);
         }
-      } //            return products;
+      } //都道府県コードここまで
+      // return products;
 
 
       return products.filter(function (el) {
