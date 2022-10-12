@@ -17,44 +17,6 @@
             </table>
         </div>
 
-        <div id="app">
-            <!--v-modelでbudget(予算)をリアルタイムで変更可能にします-->
-            <!--budget(予算)はscriptのbudgetと連動しています-->
-            <input type="text" v-model="budget" />の中で買えるもの
-            <ul>
-                <!--bestproductsが最終的に選ばれた予算以下の商品のリストが入ります。-->
-                <!--どうやって予算以下の商品を選んでいるのでしょう。-->
-                <!--scriptを見てください。-->
-                <!--v-bind:keyに表示されたデータのidを指定します。-->
-                <!--v-bind:keyは、なるべく入れる必要があります。-->
-                <li v-for="items in bestproducts" v-bind:key="items.id">
-                    {{ items.product }}:{{ items.price }}円
-                </li>
-            </ul>
-        </div>
-
-        <div id="app">
-            <!--v-modelでbudget(予算)をリアルタイムで変更可能にします-->
-            <!--budget(予算)はscriptのbudgetと連動しています-->
-            <input type="text" v-model="budgets" />の中で買えるもの
-            <ul>
-                <!--bestproductsが最終的に選ばれた予算以下の商品のリストが入ります。-->
-                <!--どうやって予算以下の商品を選んでいるのでしょう。-->
-                <!--scriptを見てください。-->
-                <!--v-bind:keyに表示されたデータのidを指定します。-->
-                <!--v-bind:keyは、なるべく入れる必要があります。-->
-                <li v-for="items in bestproductss" v-bind:key="items.id">
-                    {{ items.product_name }}:{{ items.price }}円
-                </li>
-            </ul>
-        </div>
-
-        <!-- {{ fiilterdList() }} -->
-        <!-- 商品検索一覧 
-        基本的にチェックボックスの値の情報を受け渡す。
-        並び替えのイベントにもきをつける
-        -->
-        <!-- {{ drill() }} -->
         <input v-on:click="kabo = !kabo" type="checkbox" />
         <Transition name="fade">
             <p v-if="kabo">
@@ -72,14 +34,6 @@
         ></Productheaders>
         <!-- 商品一覧 -->
         <Product :product="this.products"></Product>
-
-        <!-- 
-受け渡しは考えないといけない
-            v-for="(item, index) in index"
-            v-bind:item="item"
-            v-bind:id="index + 1"
-            v-bind:key="index"
- -->
     </div>
 </template>
 <script>
@@ -142,31 +96,6 @@ export default {
 
             //            return products;
             return products.filter(function (el) {
-                return el.price <= this.budgets;
-            }, this);
-        },
-        bestproducts: function () {
-            //ここでitemsリストを絞り込んで返します。
-            //this.itemsでこの処理のitemsを呼び出します。
-            //その後、filterでリストを絞り込みます。
-            //引数としてel(リストの全データ)を渡し、関数内で使えるようにします。
-            //elの文字は任意に変更できません。
-            return this.items.filter(function (el) {
-                //データの中の価格が予算より少ないものを選んで絞り込みます。
-                //こうして出来上がったリストがbestproductsに格納されます。
-                return el.price <= this.budget;
-            }, this);
-        },
-
-        bestproductss: function () {
-            //ここでitemsリストを絞り込んで返します。
-            //this.itemsでこの処理のitemsを呼び出します。
-            //その後、filterでリストを絞り込みます。
-            //引数としてel(リストの全データ)を渡し、関数内で使えるようにします。
-            //elの文字は任意に変更できません。
-            return this.products.filter(function (el) {
-                //データの中の価格が予算より少ないものを選んで絞り込みます。
-                //こうして出来上がったリストがbestproductsに格納されます。
                 return el.price <= this.budgets;
             }, this);
         },
