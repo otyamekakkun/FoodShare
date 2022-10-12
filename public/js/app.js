@@ -5468,44 +5468,10 @@ __webpack_require__.r(__webpack_exports__);
     return {
       //これは実験
       products: [],
-      list: [{
-        id: 1001,
-        name: "リンゴ",
-        price: 100
-      }, {
-        id: 1002,
-        name: "バナナ",
-        price: 200
-      }, {
-        id: 1003,
-        name: "オレンジ",
-        price: 300
-      }],
       keyword: "",
       //実験
       keywords: "",
       //都道府県
-      users: [{
-        id: 1,
-        name: "鈴木太郎",
-        email: "suzukitaro@example.com"
-      }, {
-        id: 2,
-        name: "佐藤二郎",
-        email: "satoujiro@example.com"
-      }, {
-        id: 3,
-        name: "田中三郎",
-        email: "tanakasaburo@example.com"
-      }, {
-        id: 4,
-        name: "山本四郎",
-        email: "yamamotoshiro@example.com"
-      }, {
-        id: 5,
-        name: "高橋五郎",
-        email: "takahashigoro@example.com"
-      }],
       //価格で絞り込む
       check1: false,
       //出品した都道府県で絞り込む
@@ -6328,7 +6294,7 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", [_c("div", [_c("input", {
+  return _c("div", [_c("div", [_c("p", [_vm._v("都道府県を入力してください")]), _vm._v(" "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
