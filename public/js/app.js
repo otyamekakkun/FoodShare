@@ -6363,7 +6363,7 @@ var render = function render() {
         _vm.keywords = $event.target.value;
       }
     }
-  }), _vm._v(" "), _c("input", {
+  }), _vm._v(" "), _c("p", [_vm._v("購入されたい商品の予算内の金額を入力してください")]), _vm._v(" "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -6382,7 +6382,7 @@ var render = function render() {
         _vm.budgets = $event.target.value;
       }
     }
-  }), _vm._v(" "), _c("table", _vm._l(_vm.filteredProducts, function (product) {
+  }), _vm._v("円以内で買えるもの\n            "), _c("table", _vm._l(_vm.filteredProducts, function (product) {
     return _c("tr", {
       key: product.id
     }, [_c("td", {
