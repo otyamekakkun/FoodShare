@@ -4,6 +4,17 @@
             <p>都道府県を入力してください</p>
             <input type="text" v-model="keywords" />
             <p>購入されたい商品の予算内の金額を入力してください</p>
+
+            <div class="l">
+                <P>賞味期限を入れてください</P>
+                <input
+                    type="date"
+                    :min="new Date().toISOString().split('T')[0]"
+                    class="l-productexhibitform__typo3"
+                    v-bind="Days"
+                />
+            </div>
+
             <input type="text" v-model="budgets" />円以内で買えるもの
             <table>
                 <tr v-for="product in filteredProducts" :key="product.id">
@@ -54,6 +65,7 @@ export default {
             products: [],
 
             keywords: "", //都道府県
+            Days: "", //日付入力
 
             //これは実験
             budget: 10000,

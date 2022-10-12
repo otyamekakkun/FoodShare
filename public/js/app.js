@@ -5469,6 +5469,8 @@ __webpack_require__.r(__webpack_exports__);
       products: [],
       keywords: "",
       //都道府県
+      Days: "",
+      //日付入力
       //これは実験
       budget: 10000,
       budgets: 10000,
@@ -6341,7 +6343,15 @@ var render = function render() {
         _vm.keywords = $event.target.value;
       }
     }
-  }), _vm._v(" "), _c("p", [_vm._v("購入されたい商品の予算内の金額を入力してください")]), _vm._v(" "), _c("input", {
+  }), _vm._v(" "), _c("p", [_vm._v("購入されたい商品の予算内の金額を入力してください")]), _vm._v(" "), _c("div", {
+    staticClass: "l"
+  }, [_c("P", [_vm._v("賞味期限を入れてください")]), _vm._v(" "), _c("input", _vm._b({
+    staticClass: "l-productexhibitform__typo3",
+    attrs: {
+      type: "date",
+      min: new Date().toISOString().split("T")[0]
+    }
+  }, "input", _vm.Days, false))], 1), _vm._v(" "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
