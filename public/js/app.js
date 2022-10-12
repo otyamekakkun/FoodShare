@@ -6363,6 +6363,25 @@ var render = function render() {
         _vm.keywords = $event.target.value;
       }
     }
+  }), _vm._v(" "), _c("input", {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: _vm.budgets,
+      expression: "budgets"
+    }],
+    attrs: {
+      type: "text"
+    },
+    domProps: {
+      value: _vm.budgets
+    },
+    on: {
+      input: function input($event) {
+        if ($event.target.composing) return;
+        _vm.budgets = $event.target.value;
+      }
+    }
   }), _vm._v(" "), _c("table", _vm._l(_vm.filteredProducts, function (product) {
     return _c("tr", {
       key: product.id

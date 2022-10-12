@@ -3,6 +3,8 @@
         <div>
             <p>都道府県を入力してください</p>
             <input type="text" v-model="keywords" />
+            <input type="text" v-model="budgets" />
+
             <table>
                 <tr v-for="product in filteredProducts" :key="product.id">
                     <td v-text="product.id"></td>
