@@ -5467,6 +5467,7 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       //これは実験
+      products: [],
       list: [{
         id: 1001,
         name: "リンゴ",
@@ -5480,6 +5481,31 @@ __webpack_require__.r(__webpack_exports__);
         name: "オレンジ",
         price: 300
       }],
+      keyword: "",
+      //実験
+      keyword2: "",
+      //都道府県
+      users: [{
+        id: 1,
+        name: "鈴木太郎",
+        email: "suzukitaro@example.com"
+      }, {
+        id: 2,
+        name: "佐藤二郎",
+        email: "satoujiro@example.com"
+      }, {
+        id: 3,
+        name: "田中三郎",
+        email: "tanakasaburo@example.com"
+      }, {
+        id: 4,
+        name: "山本四郎",
+        email: "yamamotoshiro@example.com"
+      }, {
+        id: 5,
+        name: "高橋五郎",
+        email: "takahashigoro@example.com"
+      }],
       //価格で絞り込む
       check1: false,
       //出品した都道府県で絞り込む
@@ -5490,6 +5516,34 @@ __webpack_require__.r(__webpack_exports__);
       kabo: true,
       checktest: 4
     };
+  },
+  computed: {
+    filteredUsers: function filteredUsers() {
+      var users = [];
+
+      for (var i in this.users) {
+        var user = this.users[i];
+
+        if (user.name.indexOf(this.keyword) !== -1 || user.email.indexOf(this.keyword) !== -1) {
+          users.push(user);
+        }
+      }
+
+      return users;
+    },
+    filteredProducts: function filteredProducts() {
+      var products = [];
+
+      for (var i in this.products) {
+        var product = this.products[i];
+
+        if (product.prefecture.indexOf(this.keyword2) !== -1) {
+          products.push(product);
+        }
+      }
+
+      return this.products;
+    }
   },
   methods: {
     //ここは実験的なコード
@@ -6306,7 +6360,77 @@ var render = function render() {
         }
       }
     }, [_vm._v("削除")])]);
-  }), 0)]), _vm._v(" "), _c("div", [_vm._v("\n            " + _vm._s(_vm.drill2()) + "\n        ")]), _vm._v(" "), _c("input", {
+  }), 0)]), _vm._v(" "), _c("div", [_c("input", {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: _vm.keyword,
+      expression: "keyword"
+    }],
+    attrs: {
+      type: "text"
+    },
+    domProps: {
+      value: _vm.keyword
+    },
+    on: {
+      input: function input($event) {
+        if ($event.target.composing) return;
+        _vm.keyword = $event.target.value;
+      }
+    }
+  }), _vm._v(" "), _c("table", _vm._l(_vm.filteredUsers, function (user) {
+    return _c("tr", {
+      key: user.id
+    }, [_c("td", {
+      domProps: {
+        textContent: _vm._s(user.id)
+      }
+    }), _vm._v(" "), _c("td", {
+      domProps: {
+        textContent: _vm._s(user.name)
+      }
+    }), _vm._v(" "), _c("td", {
+      domProps: {
+        textContent: _vm._s(user.email)
+      }
+    })]);
+  }), 0)]), _vm._v(" "), _c("div", [_c("input", {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: _vm.keyword2,
+      expression: "keyword2"
+    }],
+    attrs: {
+      type: "text"
+    },
+    domProps: {
+      value: _vm.keyword2
+    },
+    on: {
+      input: function input($event) {
+        if ($event.target.composing) return;
+        _vm.keyword2 = $event.target.value;
+      }
+    }
+  }), _vm._v(" "), _c("table", _vm._l(_vm.filteredProducts, function (product) {
+    return _c("tr", {
+      key: product.id
+    }, [_c("td", {
+      domProps: {
+        textContent: _vm._s(product.id)
+      }
+    }), _vm._v(" "), _c("td", {
+      domProps: {
+        textContent: _vm._s(product.product_name)
+      }
+    }), _vm._v(" "), _c("td", {
+      domProps: {
+        textContent: _vm._s(product.prefecture)
+      }
+    })]);
+  }), 0)]), _vm._v(" "), _c("input", {
     attrs: {
       type: "checkbox"
     },

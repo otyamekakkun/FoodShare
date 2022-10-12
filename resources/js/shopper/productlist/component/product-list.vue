@@ -14,8 +14,30 @@
             </ul>
         </div>
 
+        <!-- 
+これに基づいて商品検索都道府県機能を作る
+ -->
+
         <div>
-            {{ drill2() }}
+            <input type="text" v-model="keyword" />
+            <table>
+                <tr v-for="user in filteredUsers" :key="user.id">
+                    <td v-text="user.id"></td>
+                    <td v-text="user.name"></td>
+                    <td v-text="user.email"></td>
+                </tr>
+            </table>
+        </div>
+
+        <div>
+            <input type="text" v-model="keyword2" />
+            <table>
+                <tr v-for="product in filteredProducts" :key="product.id">
+                    <td v-text="product.id"></td>
+                    <td v-text="product.product_name"></td>
+                    <td v-text="product.prefecture"></td>
+                </tr>
+            </table>
         </div>
 
         <!-- {{ fiilterdList() }} -->
@@ -82,10 +104,42 @@ export default {
     data: function () {
         return {
             //これは実験
+            products: [],
+
             list: [
                 { id: 1001, name: "リンゴ", price: 100 },
                 { id: 1002, name: "バナナ", price: 200 },
                 { id: 1003, name: "オレンジ", price: 300 },
+            ],
+            keyword: "", //実験
+            keyword2: "", //都道府県
+
+            users: [
+                {
+                    id: 1,
+                    name: "鈴木太郎",
+                    email: "suzukitaro@example.com",
+                },
+                {
+                    id: 2,
+                    name: "佐藤二郎",
+                    email: "satoujiro@example.com",
+                },
+                {
+                    id: 3,
+                    name: "田中三郎",
+                    email: "tanakasaburo@example.com",
+                },
+                {
+                    id: 4,
+                    name: "山本四郎",
+                    email: "yamamotoshiro@example.com",
+                },
+                {
+                    id: 5,
+                    name: "高橋五郎",
+                    email: "takahashigoro@example.com",
+                },
             ],
 
             //価格で絞り込む
@@ -100,6 +154,38 @@ export default {
             checktest: 4,
         };
     },
+
+    computed: {
+        filteredUsers: function () {
+            var users = [];
+
+            for (var i in this.users) {
+                var user = this.users[i];
+
+                if (
+                    user.name.indexOf(this.keyword) !== -1 ||
+                    user.email.indexOf(this.keyword) !== -1
+                ) {
+                    users.push(user);
+                }
+            }
+
+            return users;
+        },
+        filteredProducts: function () {
+            var products = [];
+
+            for (var i in this.products) {
+                var product = this.products[i];
+
+                if (product.prefecture.indexOf(this.keyword2) !== -1) {
+                    products.push(product);
+                }
+            }
+            return this.products;
+        },
+    },
+
     methods: {
         //ここは実験的なコード
         //開始位置を指定
