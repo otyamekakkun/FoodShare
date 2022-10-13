@@ -5472,6 +5472,7 @@ __webpack_require__.r(__webpack_exports__);
       Days: "",
       //日付入力
       Days2: "",
+      check3: true,
       //これは実験
       budget: 10000,
       budgets: 10000,
@@ -5680,6 +5681,13 @@ __webpack_require__.r(__webpack_exports__);
       products: {} //axiosから取得してきたデータを格納する
 
     };
+  },
+  methods: {
+    days: function days() {
+      var date = new Date();
+      var Date = date.toLocaleDateString();
+      return Date;
+    }
   },
   mounted: function mounted() {
     var _this = this;
@@ -6365,7 +6373,16 @@ var render = function render() {
         _vm.Days2 = $event.target.value;
       }
     }
-  }), _vm._v(" "), _c("p", [_vm._v(_vm._s(_vm.drill3()))])]), _vm._v(" "), _c("div", [_c("p", [_vm._v("都道府県を入力してください")]), _vm._v(" "), _c("input", {
+  }), _vm._v(" "), _c("p", [_vm._v(_vm._s(_vm.drill3()))])]), _vm._v(" "), _c("div", [_vm.check3 ? _c("div", [_c("P", [_vm._v("現在賞味期限よりも切れていないものだけを表示する")]), _vm._v(" "), _c("input", {
+    attrs: {
+      type: "checkbox"
+    },
+    on: {
+      click: function click($event) {
+        _vm.check3 = !_vm.check3;
+      }
+    }
+  }), _vm._v(" "), _c("p", [_vm._v("都道府県を入力してください")]), _vm._v(" "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -6384,28 +6401,7 @@ var render = function render() {
         _vm.keywords = $event.target.value;
       }
     }
-  }), _vm._v(" "), _c("p", [_vm._v("購入されたい商品の予算内の金額を入力してください")]), _vm._v(" "), _c("P", [_vm._v("賞味期限を入れてください")]), _vm._v(" "), _c("input", {
-    directives: [{
-      name: "model",
-      rawName: "v-model",
-      value: _vm.Days,
-      expression: "Days"
-    }],
-    staticClass: "l-productexhibitform__typo3",
-    attrs: {
-      type: "date",
-      min: new Date().toISOString().split("T")[0]
-    },
-    domProps: {
-      value: _vm.Days
-    },
-    on: {
-      input: function input($event) {
-        if ($event.target.composing) return;
-        _vm.Days = $event.target.value;
-      }
-    }
-  }), _vm._v(" "), _c("input", {
+  }), _vm._v(" "), _c("p", [_vm._v("購入されたい商品の予算内の金額を入力してください")]), _vm._v(" "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -6424,7 +6420,7 @@ var render = function render() {
         _vm.budgets = $event.target.value;
       }
     }
-  }), _vm._v("円以内で買えるもの\n        "), _c("table", _vm._l(_vm.filteredProducts, function (product) {
+  }), _vm._v("円以内で買えるもの\n\n            "), _c("table", _vm._l(_vm.filteredProducts, function (product) {
     return _c("tr", {
       key: product.id
     }, [_c("td", {
@@ -6439,7 +6435,7 @@ var render = function render() {
       domProps: {
         textContent: _vm._s(product.price)
       }
-    }), _vm._v("\n                円\n                "), _c("td", {
+    }), _vm._v("\n                    円\n                    "), _c("td", {
       domProps: {
         textContent: _vm._s(product.prefecture)
       }
@@ -6453,7 +6449,83 @@ var render = function render() {
         width: "25%"
       }
     })]);
-  }), 0)], 1), _vm._v(" "), _c("input", {
+  }), 0)], 1) : _c("div", [_c("p", [_vm._v("期限が切れている商品も含めて表示する")]), _vm._v(" "), _c("input", {
+    attrs: {
+      type: "checkbox"
+    },
+    on: {
+      click: function click($event) {
+        _vm.check3 = !_vm.check3;
+      }
+    }
+  }), _vm._v(" "), _c("p", [_vm._v("都道府県を入力してください")]), _vm._v(" "), _c("input", {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: _vm.keywords,
+      expression: "keywords"
+    }],
+    attrs: {
+      type: "text"
+    },
+    domProps: {
+      value: _vm.keywords
+    },
+    on: {
+      input: function input($event) {
+        if ($event.target.composing) return;
+        _vm.keywords = $event.target.value;
+      }
+    }
+  }), _vm._v(" "), _c("p", [_vm._v("購入されたい商品の予算内の金額を入力してください")]), _vm._v(" "), _c("input", {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: _vm.budgets,
+      expression: "budgets"
+    }],
+    attrs: {
+      type: "text"
+    },
+    domProps: {
+      value: _vm.budgets
+    },
+    on: {
+      input: function input($event) {
+        if ($event.target.composing) return;
+        _vm.budgets = $event.target.value;
+      }
+    }
+  }), _vm._v("円以内で買えるもの\n\n            "), _c("P", [_vm._v("現在賞味期限よりも切れていないものだけを表示する")]), _vm._v(" "), _c("table", _vm._l(_vm.filteredProducts, function (product) {
+    return _c("tr", {
+      key: product.id
+    }, [product.best_by_date <= _vm.Days ? _c("div", [_c("td", {
+      domProps: {
+        textContent: _vm._s(product.id)
+      }
+    }), _vm._v(" "), _c("td", {
+      domProps: {
+        textContent: _vm._s(product.product_name)
+      }
+    }), _vm._v(" "), _c("td", {
+      domProps: {
+        textContent: _vm._s(product.price)
+      }
+    }), _vm._v("\n                        円\n                        "), _c("td", {
+      domProps: {
+        textContent: _vm._s(product.prefecture)
+      }
+    }), _vm._v(" "), _c("td", {
+      domProps: {
+        textContent: _vm._s(product.best_by_date)
+      }
+    }), _vm._v(" "), _c("img", {
+      attrs: {
+        src: product.img_path,
+        width: "25%"
+      }
+    })]) : _vm._e()]);
+  }), 0)], 1)]), _vm._v(" "), _c("input", {
     attrs: {
       type: "checkbox"
     },
@@ -6466,7 +6538,7 @@ var render = function render() {
     attrs: {
       name: "fade"
     }
-  }, [_vm.kabo ? _c("p", [_vm._v("\n            100\n            " + _vm._s(_vm.drills()) + "\n        ")]) : _c("p", [_vm._v("こちらはかぼちゃお化けです")])]), _vm._v(" "), _c("Productheaders", {
+  }, [_vm.kabo ? _c("p", [_vm._v("100")]) : _c("p", [_vm._v("こちらはかぼちゃお化けです")])]), _vm._v(" "), _c("Productheaders", {
     attrs: {
       check1: _vm.check1,
       prefecturecheck: _vm.prefecture,
@@ -6542,7 +6614,8 @@ var render = function render() {
 
   return _c("div", [_c("div", [_c("product-list", {
     attrs: {
-      products: this.products
+      products: this.products,
+      days: this.days
     }
   })], 1)]);
 };

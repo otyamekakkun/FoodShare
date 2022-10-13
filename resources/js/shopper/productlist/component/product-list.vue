@@ -12,38 +12,54 @@
         </div>
 
         <div>
-            <p>都道府県を入力してください</p>
-            <input type="text" v-model="keywords" />
-            <p>購入されたい商品の予算内の金額を入力してください</p>
+            <div v-if="check3">
+                <P>現在賞味期限よりも切れていないものだけを表示する</P>
+                <input v-on:click="check3 = !check3" type="checkbox" />
+                <p>都道府県を入力してください</p>
+                <input type="text" v-model="keywords" />
+                <p>購入されたい商品の予算内の金額を入力してください</p>
+                <input type="text" v-model="budgets" />円以内で買えるもの
 
-            <P>賞味期限を入れてください</P>
-            <input
-                type="date"
-                :min="new Date().toISOString().split('T')[0]"
-                class="l-productexhibitform__typo3"
-                v-model="Days"
-            />
+                <table>
+                    <tr v-for="product in filteredProducts" :key="product.id">
+                        <td v-text="product.id"></td>
+                        <td v-text="product.product_name"></td>
+                        <td v-text="product.price"></td>
+                        円
+                        <td v-text="product.prefecture"></td>
+                        <td v-text="product.best_by_date"></td>
+                        <img v-bind:src="product.img_path" width="25%" />
+                    </tr>
+                </table>
+            </div>
+            <div v-else="check3">
+                <p>期限が切れている商品も含めて表示する</p>
+                <input v-on:click="check3 = !check3" type="checkbox" />
+                <p>都道府県を入力してください</p>
+                <input type="text" v-model="keywords" />
+                <p>購入されたい商品の予算内の金額を入力してください</p>
+                <input type="text" v-model="budgets" />円以内で買えるもの
 
-            <input type="text" v-model="budgets" />円以内で買えるもの
-            <table>
-                <tr v-for="product in filteredProducts" :key="product.id">
-                    <td v-text="product.id"></td>
-                    <td v-text="product.product_name"></td>
-                    <td v-text="product.price"></td>
-                    円
-                    <td v-text="product.prefecture"></td>
-                    <td v-text="product.best_by_date"></td>
-                    <img v-bind:src="product.img_path" width="25%" />
-                </tr>
-            </table>
+                <P>現在賞味期限よりも切れていないものだけを表示する</P>
+                <table>
+                    <tr v-for="product in filteredProducts" :key="product.id">
+                        <div v-if="product.best_by_date <= Days">
+                            <td v-text="product.id"></td>
+                            <td v-text="product.product_name"></td>
+                            <td v-text="product.price"></td>
+                            円
+                            <td v-text="product.prefecture"></td>
+                            <td v-text="product.best_by_date"></td>
+                            <img v-bind:src="product.img_path" width="25%" />
+                        </div>
+                    </tr>
+                </table>
+            </div>
         </div>
 
         <input v-on:click="kabo = !kabo" type="checkbox" />
         <Transition name="fade">
-            <p v-if="kabo">
-                100
-                {{ drills() }}
-            </p>
+            <p v-if="kabo">100</p>
             <p v-else="kabo">こちらはかぼちゃお化けです</p>
         </Transition>
 
@@ -77,6 +93,7 @@ export default {
             keywords: "", //都道府県
             Days: "", //日付入力
             Days2: "",
+            check3: true,
 
             //これは実験
             budget: 10000,
