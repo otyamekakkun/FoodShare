@@ -116,6 +116,7 @@ export default {
 
                 if (
                     product.prefecture.indexOf(this.keywords) !== -1
+
                     // product.best_by_date.indexOf(this.Days) >= this.Days
                 ) {
                     if (!this.Days) {
@@ -135,9 +136,11 @@ export default {
 
             //都道府県コードここまで
             // return products;
-            return products.filter(function (el) {
-                return el.price <= this.budgets;
-            }, this);
+            if (products) {
+                return products.filter(function (el) {
+                    return el.price <= this.budgets;
+                }, this);
+            }
         },
     },
 

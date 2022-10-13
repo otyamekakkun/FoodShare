@@ -5538,9 +5538,11 @@ __webpack_require__.r(__webpack_exports__);
       // return products;
 
 
-      return products.filter(function (el) {
-        return el.price <= this.budgets;
-      }, this);
+      if (products) {
+        return products.filter(function (el) {
+          return el.price <= this.budgets;
+        }, this);
+      }
     }
   },
   methods: {
