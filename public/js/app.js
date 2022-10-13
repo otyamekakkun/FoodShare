@@ -5439,7 +5439,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ["products", "kakuto"],
+  props: ["products"],
   //main.vueからデータの中身が入っている。
   //子コンポーネントを登録する
   components: {
@@ -5577,11 +5577,6 @@ __webpack_require__.r(__webpack_exports__);
       var date = new Date();
       var Date = date.toLocaleDateString();
       return Date;
-    },
-    kakuto: function kakuto() {
-      var c = new Date();
-      var z = c.toLocaleDateString();
-      return z;
     }
   },
   mounted: function mounted() {
@@ -5994,7 +5989,7 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", [_c("div", [_vm._v("\n        " + _vm._s(this.kakuto()) + "\n    ")]), _vm._v(" "), _c("div", [_c("div", [_c("p", [_vm._v("都道府県を入力してください")]), _vm._v(" "), _c("input", {
+  return _c("div", [_c("div", [_c("div", [_c("p", [_vm._v("都道府県を入力してください")]), _vm._v(" "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -6124,7 +6119,7 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", [_c("div", [_vm._v("\n        " + _vm._s(_vm.kakuto()) + "\n        "), _c("product-list", {
+  return _c("div", [_c("div", [_c("product-list", {
     attrs: {
       products: this.products,
       days: this.days,

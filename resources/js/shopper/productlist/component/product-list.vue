@@ -1,10 +1,6 @@
 <template>
     <div>
         <div>
-            {{ this.kakuto() }}
-        </div>
-
-        <div>
             <div>
                 <p>都道府県を入力してください</p>
                 <input type="text" v-model="keywords" />
@@ -56,7 +52,7 @@ import Productheaders from "./product-header.vue";
 import Product from "./product.vue";
 
 export default {
-    props: ["products", "kakuto"], //main.vueからデータの中身が入っている。
+    props: ["products"], //main.vueからデータの中身が入っている。
 
     //子コンポーネントを登録する
     components: {

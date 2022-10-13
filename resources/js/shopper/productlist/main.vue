@@ -1,7 +1,6 @@
 <template>
     <div>
         <div>
-            {{ kakuto() }}
             <product-list
                 :products="this.products"
                 :days="this.days"
@@ -30,12 +29,6 @@ export default {
             const date = new Date();
             const Date = date.toLocaleDateString();
             return Date;
-        },
-
-        kakuto: function () {
-            const c = new Date();
-            const z = c.toLocaleDateString();
-            return z;
         },
     },
 
