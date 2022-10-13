@@ -1,7 +1,6 @@
 <template>
     <div>
         <div>
-            {{ days4() }}
             {{ this.kakuto() }}
             {{ this.a }}
             {{ this.b }}
@@ -181,12 +180,6 @@ days4(){
     Days: new Date().toLocaleDateString, //日付入力
 }
 */
-        days4() {
-            const c = new Date();
-            const b = c.toLocaleDateString();
-            return b;
-        },
-
         //開始位置を指定
         drill2() {
             const result1 = this.products.slice(0, 1);

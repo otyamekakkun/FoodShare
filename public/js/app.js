@@ -5554,11 +5554,6 @@ __webpack_require__.r(__webpack_exports__);
     Days: new Date().toLocaleDateString, //日付入力
     }
     */
-    days4: function days4() {
-      var c = new Date();
-      var b = c.toLocaleDateString();
-      return b;
-    },
     //開始位置を指定
     drill2: function drill2() {
       var result1 = this.products.slice(0, 1);
@@ -6368,7 +6363,7 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", [_c("div", [_vm._v("\n        " + _vm._s(_vm.days4()) + "\n        " + _vm._s(this.kakuto()) + "\n        " + _vm._s(this.a) + "\n        " + _vm._s(this.b) + "\n        "), _c("p", [_vm._v("こんにちは")]), _vm._v("\n        実験\n        "), _c("input", {
+  return _c("div", [_c("div", [_vm._v("\n        " + _vm._s(this.kakuto()) + "\n        " + _vm._s(this.a) + "\n        " + _vm._s(this.b) + "\n        "), _c("p", [_vm._v("こんにちは")]), _vm._v("\n        実験\n        "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
