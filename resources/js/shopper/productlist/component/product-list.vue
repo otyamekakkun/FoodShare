@@ -15,27 +15,7 @@
         </div>
 
         <div>
-            <div v-if="check3">
-                <P>現在賞味期限よりも切れていないものだけを表示する</P>
-                <input v-on:click="check3 = !check3" type="checkbox" />
-                <p>都道府県を入力してください</p>
-                <input type="text" v-model="keywords" />
-                <p>購入されたい商品の予算内の金額を入力してください</p>
-                <input type="text" v-model="budgets" />円以内で買えるもの
-
-                <table>
-                    <tr v-for="product in filteredProducts" :key="product.id">
-                        <td v-text="product.id"></td>
-                        <td v-text="product.product_name"></td>
-                        <td v-text="product.price"></td>
-                        円
-                        <td v-text="product.prefecture"></td>
-                        <td v-text="product.best_by_date"></td>
-                        <img v-bind:src="product.img_path" width="25%" />
-                    </tr>
-                </table>
-            </div>
-            <div v-else="check3">
+            <div>
                 <p>期限が切れている商品も含めて表示する</p>
                 <input v-on:click="check3 = !check3" type="checkbox" />
                 <p>都道府県を入力してください</p>
@@ -112,13 +92,6 @@ export default {
             budgets: 10000,
             //アイテムのデータを一覧で持たせます。
             //この中のpriceを基準として表示する商品を選びます。
-            items: [
-                { id: 0, product: "最新のmac", price: 9000 },
-                { id: 1, product: "少し前のmac", price: 8000 },
-                { id: 2, product: "昔のmac", price: 7000 },
-                { id: 3, product: "ダメなmac", price: 6000 },
-                { id: 4, product: "壊れたmac", price: 5000 },
-            ],
 
             //価格で絞り込む
             check1: false,
