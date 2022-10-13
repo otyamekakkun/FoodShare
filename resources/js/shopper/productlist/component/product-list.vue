@@ -17,8 +17,6 @@
                     class="l-productexhibitform__typo3"
                     v-model="Days2"
                 />
-                {{ Days2 }}
-
                 <table>
                     <tr v-for="product in filteredProducts" :key="product.id">
                         <div v-if="product.best_by_date >= Days2">
@@ -46,15 +44,11 @@
             <p v-if="kabo">100</p>
             <p v-else="kabo">こちらはかぼちゃお化けです</p>
         </Transition>
-
-        <Productheaders
-            v-bind:check1="check1"
-            v-bind:prefecturecheck="prefecture"
-            v-bind:bestdaycheck="bestdaycheck"
-            v-on:bestdaycheck=""
-        ></Productheaders>
+        <!-- コンポーネントで渡すもの -->
+        <Productheaders></Productheaders>
         <!-- 商品一覧 -->
-        <Product :product="this.products"></Product>
+        <Product></Product>
+        <!-- コンポーネントで渡すものここまで -->
     </div>
 </template>
 <script>
@@ -180,9 +174,3 @@ days4(){
     },
 };
 </script>
-<!-- 
-スイッチ分のtrueかfalseはtemplate内で記述することにする。
-つまりif文が発生したときの際のみscriptで記述することにする
-
-さばいる形式で生き残るかどうか
- -->

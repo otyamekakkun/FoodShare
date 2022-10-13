@@ -6053,7 +6053,7 @@ var render = function render() {
         _vm.Days2 = $event.target.value;
       }
     }
-  }), _vm._v("\n            " + _vm._s(_vm.Days2) + "\n\n            "), _c("table", _vm._l(_vm.filteredProducts, function (product) {
+  }), _vm._v(" "), _c("table", _vm._l(_vm.filteredProducts, function (product) {
     return _c("tr", {
       key: product.id
     }, [product.best_by_date >= _vm.Days2 ? _c("div", [_c("td", {
@@ -6099,20 +6099,7 @@ var render = function render() {
     attrs: {
       name: "fade"
     }
-  }, [_vm.kabo ? _c("p", [_vm._v("100")]) : _c("p", [_vm._v("こちらはかぼちゃお化けです")])]), _vm._v(" "), _c("Productheaders", {
-    attrs: {
-      check1: _vm.check1,
-      prefecturecheck: _vm.prefecture,
-      bestdaycheck: _vm.bestdaycheck
-    },
-    on: {
-      bestdaycheck: function bestdaycheck($event) {}
-    }
-  }), _vm._v(" "), _c("Product", {
-    attrs: {
-      product: this.products
-    }
-  })], 1);
+  }, [_vm.kabo ? _c("p", [_vm._v("100")]) : _c("p", [_vm._v("こちらはかぼちゃお化けです")])]), _vm._v(" "), _c("Productheaders"), _vm._v(" "), _c("Product")], 1);
 };
 
 var staticRenderFns = [];
