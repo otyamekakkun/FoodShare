@@ -5463,10 +5463,7 @@ __webpack_require__.r(__webpack_exports__);
       //出品した都道府県で絞り込む
       prefecturecheck: false,
       //賞味期限で絞り込む
-      bestdaycheck: false,
-      //ここからは実験的なコード
-      kabo: true,
-      checktest: 4
+      bestdaycheck: false
     };
   },
   computed: {
@@ -6081,20 +6078,7 @@ var render = function render() {
         href: "/haiki/".concat(product.id, "/shopper_productdetail")
       }
     }, [_vm._v("商品の詳細をみる")])])]) : _vm._e()]);
-  }), 0)], 1)]), _vm._v(" "), _c("input", {
-    attrs: {
-      type: "checkbox"
-    },
-    on: {
-      click: function click($event) {
-        _vm.kabo = !_vm.kabo;
-      }
-    }
-  }), _vm._v(" "), _c("Transition", {
-    attrs: {
-      name: "fade"
-    }
-  }, [_vm.kabo ? _c("p", [_vm._v("100")]) : _c("p", [_vm._v("こちらはかぼちゃお化けです")])]), _vm._v(" "), _c("Productheaders"), _vm._v(" "), _c("Product")], 1);
+  }), 0)], 1)]), _vm._v(" "), _c("Productheaders"), _vm._v(" "), _c("Product")], 1);
 };
 
 var staticRenderFns = [];

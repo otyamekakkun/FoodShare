@@ -35,11 +35,6 @@
             </div>
         </div>
 
-        <input v-on:click="kabo = !kabo" type="checkbox" />
-        <Transition name="fade">
-            <p v-if="kabo">100</p>
-            <p v-else="kabo">こちらはかぼちゃお化けです</p>
-        </Transition>
         <!-- コンポーネントで渡すもの -->
         <Productheaders></Productheaders>
         <!-- 商品一覧 -->
@@ -79,10 +74,6 @@ export default {
             prefecturecheck: false,
             //賞味期限で絞り込む
             bestdaycheck: false,
-
-            //ここからは実験的なコード
-            kabo: true,
-            checktest: 4,
         };
     },
 
