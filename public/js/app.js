@@ -5472,8 +5472,6 @@ __webpack_require__.r(__webpack_exports__);
       Days2: "",
       check3: true,
       //これは実験
-      a: "",
-      b: this.kakuto,
       budget: 10000,
       budgets: 10000,
       //アイテムのデータを一覧で持たせます。
@@ -6291,28 +6289,7 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", [_c("div", [_vm._v("\n        " + _vm._s(this.kakuto()) + "\n        " + _vm._s(this.a) + "\n        " + _vm._s(this.b) + "\n        "), _c("p", [_vm._v("こんにちは")]), _vm._v("\n        実験\n        "), _c("input", {
-    directives: [{
-      name: "model",
-      rawName: "v-model",
-      value: _vm.Days2,
-      expression: "Days2"
-    }],
-    staticClass: "l-productexhibitform__typo3",
-    attrs: {
-      type: "date",
-      min: new Date().toISOString().split("T")[0]
-    },
-    domProps: {
-      value: _vm.Days2
-    },
-    on: {
-      input: function input($event) {
-        if ($event.target.composing) return;
-        _vm.Days2 = $event.target.value;
-      }
-    }
-  })]), _vm._v(" "), _c("div", [_c("div", [_c("p", [_vm._v("期限が切れている商品も含めて表示する")]), _vm._v(" "), _c("input", {
+  return _c("div", [_c("div", [_vm._v("\n        " + _vm._s(this.kakuto()) + "\n    ")]), _vm._v(" "), _c("div", [_c("div", [_c("p", [_vm._v("期限が切れている商品も含めて表示する")]), _vm._v(" "), _c("input", {
     attrs: {
       type: "checkbox"
     },

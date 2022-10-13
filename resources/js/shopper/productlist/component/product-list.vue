@@ -2,16 +2,6 @@
     <div>
         <div>
             {{ this.kakuto() }}
-            {{ this.a }}
-            {{ this.b }}
-            <p>こんにちは</p>
-            実験
-            <input
-                type="date"
-                :min="new Date().toISOString().split('T')[0]"
-                class="l-productexhibitform__typo3"
-                v-model="Days2"
-            />
         </div>
 
         <div>
@@ -86,8 +76,6 @@ export default {
             check3: true,
 
             //これは実験
-            a: "",
-            b: this.kakuto,
             budget: 10000,
             budgets: 10000,
             //アイテムのデータを一覧で持たせます。
