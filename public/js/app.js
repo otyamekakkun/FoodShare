@@ -5453,13 +5453,7 @@ __webpack_require__.r(__webpack_exports__);
       keywords: "",
       //都道府県
       Days2: "",
-      //これは実験
-      budget: 10000,
       budgets: 10000,
-      //アイテムのデータを一覧で持たせます。
-      //この中のpriceを基準として表示する商品を選びます。
-      //価格で絞り込む
-      check1: false,
       //出品した都道府県で絞り込む
       prefecturecheck: false,
       //賞味期限で絞り込む
