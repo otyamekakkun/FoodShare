@@ -5470,7 +5470,6 @@ __webpack_require__.r(__webpack_exports__);
       keywords: "",
       //都道府県
       Days2: "",
-      check3: true,
       //これは実験
       budget: 10000,
       budgets: 10000,
@@ -5490,8 +5489,7 @@ __webpack_require__.r(__webpack_exports__);
   computed: {
     //このコードの関数を使う
     filteredProducts: function filteredProducts() {
-      var products = [];
-      var products2 = []; //ここから都道府県を入力したら絞り込めるコードを記述
+      var products = []; //ここから都道府県を入力したら絞り込めるコードを記述
 
       for (var i in this.products) {
         var product = this.products[i]; // console.log(product);
@@ -6289,16 +6287,7 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", [_c("div", [_vm._v("\n        " + _vm._s(this.kakuto()) + "\n    ")]), _vm._v(" "), _c("div", [_c("div", [_c("p", [_vm._v("期限が切れている商品も含めて表示する")]), _vm._v(" "), _c("input", {
-    attrs: {
-      type: "checkbox"
-    },
-    on: {
-      click: function click($event) {
-        _vm.check3 = !_vm.check3;
-      }
-    }
-  }), _vm._v(" "), _c("p", [_vm._v("都道府県を入力してください")]), _vm._v(" "), _c("input", {
+  return _c("div", [_c("div", [_vm._v("\n        " + _vm._s(this.kakuto()) + "\n    ")]), _vm._v(" "), _c("div", [_c("div", [_c("p", [_vm._v("都道府県を入力してください")]), _vm._v(" "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -6336,7 +6325,7 @@ var render = function render() {
         _vm.budgets = $event.target.value;
       }
     }
-  }), _vm._v("円以内で買えるもの\n\n            "), _c("P", [_vm._v("現在賞味期限よりも切れていないものだけを表示する")]), _vm._v(" "), _c("input", {
+  }), _vm._v("円以内で買えるもの\n            "), _c("P", [_vm._v("現在賞味期限よりも切れていないものだけを表示する")]), _vm._v(" "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",

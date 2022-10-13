@@ -6,13 +6,10 @@
 
         <div>
             <div>
-                <p>期限が切れている商品も含めて表示する</p>
-                <input v-on:click="check3 = !check3" type="checkbox" />
                 <p>都道府県を入力してください</p>
                 <input type="text" v-model="keywords" />
                 <p>購入されたい商品の予算内の金額を入力してください</p>
                 <input type="text" v-model="budgets" />円以内で買えるもの
-
                 <P>現在賞味期限よりも切れていないものだけを表示する</P>
                 <input
                     type="date"
@@ -73,7 +70,6 @@ export default {
 
             keywords: "", //都道府県
             Days2: "",
-            check3: true,
 
             //これは実験
             budget: 10000,
@@ -98,7 +94,6 @@ export default {
         //このコードの関数を使う
         filteredProducts: function () {
             var products = [];
-            var products2 = [];
             //ここから都道府県を入力したら絞り込めるコードを記述
             for (var i in this.products) {
                 var product = this.products[i];
