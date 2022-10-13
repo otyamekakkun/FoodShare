@@ -2,7 +2,9 @@
     <div>
         <div>
             {{ days4() }}
+            {{ this.kakuto() }}
             {{ this.a }}
+            {{ this.b }}
             <p>こんにちは</p>
             実験
             <input
@@ -43,9 +45,17 @@
                 <input type="text" v-model="budgets" />円以内で買えるもの
 
                 <P>現在賞味期限よりも切れていないものだけを表示する</P>
+                <input
+                    type="date"
+                    :min="new Date().toISOString().split('T')[0]"
+                    class="l-productexhibitform__typo3"
+                    v-model="Days2"
+                />
+                {{ Days2 }}
+
                 <table>
                     <tr v-for="product in filteredProducts" :key="product.id">
-                        <div v-if="product.best_by_date <= this.a">
+                        <div v-if="product.best_by_date >= Days2">
                             <td v-text="product.id"></td>
                             <td v-text="product.product_name"></td>
                             <td v-text="product.price"></td>
@@ -80,7 +90,7 @@ import Productheaders from "./product-header.vue";
 import Product from "./product.vue";
 
 export default {
-    props: ["products"], //main.vueからデータの中身が入っている。
+    props: ["products", "kakuto"], //main.vueからデータの中身が入っている。
 
     //子コンポーネントを登録する
     components: {
@@ -98,6 +108,7 @@ export default {
 
             //これは実験
             a: "",
+            b: this.kakuto,
             budget: 10000,
             budgets: 10000,
             //アイテムのデータを一覧で持たせます。

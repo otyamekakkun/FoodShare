@@ -5456,7 +5456,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ["products"],
+  props: ["products", "kakuto"],
   //main.vueからデータの中身が入っている。
   //子コンポーネントを登録する
   components: {
@@ -5473,6 +5473,7 @@ __webpack_require__.r(__webpack_exports__);
       check3: true,
       //これは実験
       a: "",
+      b: this.kakuto,
       budget: 10000,
       budgets: 10000,
       //アイテムのデータを一覧で持たせます。
@@ -5697,6 +5698,11 @@ __webpack_require__.r(__webpack_exports__);
       var date = new Date();
       var Date = date.toLocaleDateString();
       return Date;
+    },
+    kakuto: function kakuto() {
+      var c = new Date();
+      var z = c.toLocaleDateString();
+      return z;
     }
   },
   mounted: function mounted() {
@@ -6362,7 +6368,7 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", [_c("div", [_vm._v("\n        " + _vm._s(_vm.days4()) + "\n        " + _vm._s(this.a) + "\n        "), _c("p", [_vm._v("こんにちは")]), _vm._v("\n        実験\n        "), _c("input", {
+  return _c("div", [_c("div", [_vm._v("\n        " + _vm._s(_vm.days4()) + "\n        " + _vm._s(this.kakuto()) + "\n        " + _vm._s(this.a) + "\n        " + _vm._s(this.b) + "\n        "), _c("p", [_vm._v("こんにちは")]), _vm._v("\n        実験\n        "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -6506,10 +6512,31 @@ var render = function render() {
         _vm.budgets = $event.target.value;
       }
     }
-  }), _vm._v("円以内で買えるもの\n\n            "), _c("P", [_vm._v("現在賞味期限よりも切れていないものだけを表示する")]), _vm._v(" "), _c("table", _vm._l(_vm.filteredProducts, function (product) {
+  }), _vm._v("円以内で買えるもの\n\n            "), _c("P", [_vm._v("現在賞味期限よりも切れていないものだけを表示する")]), _vm._v(" "), _c("input", {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: _vm.Days2,
+      expression: "Days2"
+    }],
+    staticClass: "l-productexhibitform__typo3",
+    attrs: {
+      type: "date",
+      min: new Date().toISOString().split("T")[0]
+    },
+    domProps: {
+      value: _vm.Days2
+    },
+    on: {
+      input: function input($event) {
+        if ($event.target.composing) return;
+        _vm.Days2 = $event.target.value;
+      }
+    }
+  }), _vm._v("\n            " + _vm._s(_vm.Days2) + "\n\n            "), _c("table", _vm._l(_vm.filteredProducts, function (product) {
     return _c("tr", {
       key: product.id
-    }, [product.best_by_date <= this.a ? _c("div", [_c("td", {
+    }, [product.best_by_date >= _vm.Days2 ? _c("div", [_c("td", {
       domProps: {
         textContent: _vm._s(product.id)
       }
@@ -6622,10 +6649,11 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", [_c("div", [_c("product-list", {
+  return _c("div", [_c("div", [_vm._v("\n        " + _vm._s(_vm.kakuto()) + "\n        "), _c("product-list", {
     attrs: {
       products: this.products,
-      days: this.days
+      days: this.days,
+      kakuto: _vm.kakuto
     }
   })], 1)]);
 };
