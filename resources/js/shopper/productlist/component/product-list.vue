@@ -6,7 +6,10 @@
                 <input type="text" v-model="keywords" />
                 <p>購入されたい商品の予算内の金額を入力してください</p>
                 <input type="text" v-model="budgets" />円以内で買えるもの
-                <P>現在賞味期限よりも切れていないものだけを表示する</P>
+                <p>有効期限チェック</p>
+                <P
+                    >ご希望の日付を入力してください<br />(入力された日付に対して,<br />賞味期限が有効なものだけ表示します)</P
+                >
                 <input
                     type="date"
                     :min="new Date().toISOString().split('T')[0]"
@@ -45,7 +48,6 @@
 <script>
 import Productheaders from "./product-header.vue";
 import Product from "./product.vue";
-
 export default {
     props: ["products"], //main.vueからデータの中身が入っている。
 
@@ -59,96 +61,32 @@ export default {
         return {
             products: [],
             keywords: "", //都道府県
-            Days2: "",
-            budgets: 10000,
+            Days2: "", //入力された日付がデータとして入ります
+            budgets: 10000, //デフォルトで10000円と打ち込まれている。
             //出品した都道府県で絞り込む
             prefecturecheck: false,
-            //賞味期限で絞り込む
-            bestdaycheck: false,
         };
     },
 
     computed: {
         //このコードの関数を使う
         filteredProducts: function () {
-            var products = [];
+            const products = [];
             //ここから都道府県を入力したら絞り込めるコードを記述
             for (var i in this.products) {
                 var product = this.products[i];
-                // console.log(product);
-
-                if (
-                    product.prefecture.indexOf(this.keywords) !== -1
-
-                    // product.best_by_date.indexOf(this.Days) >= this.Days
-                ) {
+                if (product.prefecture.indexOf(this.keywords) !== -1) {
                     if (!this.Days) {
                         products.push(product);
                     }
-                    // products.push(product);
                 }
-
-                /*
-                if (products.best_by_date >= a) {
-                }
-            */
-                console.log(this.Days);
-                console.log(products);
-                console.log(product.best_by_date);
             }
-
-            //都道府県コードここまで
-            // return products;
             if (products) {
                 return products.filter(function (el) {
                     return el.price <= this.budgets;
                 }, this);
             }
         },
-    },
-
-    methods: {
-        //ここは実験的なコード
-        /*
-days4(){
-    Days: new Date().toLocaleDateString, //日付入力
-}
-*/
-        //開始位置を指定
-        drill2() {
-            const result1 = this.products.slice(0, 1);
-            return result1;
-        },
-
-        drill3() {
-            return this.Days2;
-        },
-
-        drill() {
-            const app = this.products;
-            const best = this.bestdaycheck;
-            console.log(app);
-            console.log(best); //とただスイッチを押しても無限でfalseしか帰ってこない
-
-            if (best) {
-                const a = 10;
-                const b = 15;
-                return a + b;
-
-                //公式１trueなら値を比較する処理を記述する
-            }
-        },
-
-        drills() {
-            const a = 10;
-            const b = 15;
-            return a + b;
-        },
-        check() {
-            console.log(this.checktest);
-        },
-
-        //検索条件でリストを返すプロパティ
     },
 };
 </script>

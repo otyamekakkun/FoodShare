@@ -5453,11 +5453,11 @@ __webpack_require__.r(__webpack_exports__);
       keywords: "",
       //都道府県
       Days2: "",
+      //入力された日付がデータとして入ります
       budgets: 10000,
+      //デフォルトで10000円と打ち込まれている。
       //出品した都道府県で絞り込む
-      prefecturecheck: false,
-      //賞味期限で絞り込む
-      bestdaycheck: false
+      prefecturecheck: false
     };
   },
   computed: {
@@ -5466,27 +5466,14 @@ __webpack_require__.r(__webpack_exports__);
       var products = []; //ここから都道府県を入力したら絞り込めるコードを記述
 
       for (var i in this.products) {
-        var product = this.products[i]; // console.log(product);
+        var product = this.products[i];
 
-        if (product.prefecture.indexOf(this.keywords) !== -1 // product.best_by_date.indexOf(this.Days) >= this.Days
-        ) {
+        if (product.prefecture.indexOf(this.keywords) !== -1) {
           if (!this.Days) {
             products.push(product);
-          } // products.push(product);
-
+          }
         }
-        /*
-        if (products.best_by_date >= a) {
-        }
-        */
-
-
-        console.log(this.Days);
-        console.log(products);
-        console.log(product.best_by_date);
-      } //都道府県コードここまで
-      // return products;
-
+      }
 
       if (products) {
         return products.filter(function (el) {
@@ -5494,44 +5481,6 @@ __webpack_require__.r(__webpack_exports__);
         }, this);
       }
     }
-  },
-  methods: {
-    //ここは実験的なコード
-
-    /*
-    days4(){
-    Days: new Date().toLocaleDateString, //日付入力
-    }
-    */
-    //開始位置を指定
-    drill2: function drill2() {
-      var result1 = this.products.slice(0, 1);
-      return result1;
-    },
-    drill3: function drill3() {
-      return this.Days2;
-    },
-    drill: function drill() {
-      var app = this.products;
-      var best = this.bestdaycheck;
-      console.log(app);
-      console.log(best); //とただスイッチを押しても無限でfalseしか帰ってこない
-
-      if (best) {
-        var a = 10;
-        var b = 15;
-        return a + b; //公式１trueなら値を比較する処理を記述する
-      }
-    },
-    drills: function drills() {
-      var a = 10;
-      var b = 15;
-      return a + b;
-    },
-    check: function check() {
-      console.log(this.checktest);
-    } //検索条件でリストを返すプロパティ
-
   }
 });
 
@@ -6018,7 +5967,7 @@ var render = function render() {
         _vm.budgets = $event.target.value;
       }
     }
-  }), _vm._v("円以内で買えるもの\n            "), _c("P", [_vm._v("現在賞味期限よりも切れていないものだけを表示する")]), _vm._v(" "), _c("input", {
+  }), _vm._v("円以内で買えるもの\n            "), _c("p", [_vm._v("有効期限チェック")]), _vm._v(" "), _c("P", [_vm._v("ご希望の日付を入力してください"), _c("br"), _vm._v("(入力された日付に対して,"), _c("br"), _vm._v("賞味期限が有効なものだけ表示します)")]), _vm._v(" "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
