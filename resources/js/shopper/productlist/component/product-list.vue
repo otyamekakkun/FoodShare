@@ -1,19 +1,28 @@
 <template>
     <div>
         <div>
+            実験
+            <input
+                type="date"
+                :min="new Date().toISOString().split('T')[0]"
+                class="l-productexhibitform__typo3"
+                v-model="Days2"
+            />
+            <p>{{ drill3() }}</p>
+        </div>
+
+        <div>
             <p>都道府県を入力してください</p>
             <input type="text" v-model="keywords" />
             <p>購入されたい商品の予算内の金額を入力してください</p>
 
-            <div class="l">
-                <P>賞味期限を入れてください</P>
-                <input
-                    type="date"
-                    :min="new Date().toISOString().split('T')[0]"
-                    class="l-productexhibitform__typo3"
-                    v-bind="Days"
-                />
-            </div>
+            <P>賞味期限を入れてください</P>
+            <input
+                type="date"
+                :min="new Date().toISOString().split('T')[0]"
+                class="l-productexhibitform__typo3"
+                v-model="Days"
+            />
 
             <input type="text" v-model="budgets" />円以内で買えるもの
             <table>
@@ -23,6 +32,7 @@
                     <td v-text="product.price"></td>
                     円
                     <td v-text="product.prefecture"></td>
+                    <td v-text="product.best_by_date"></td>
                     <img v-bind:src="product.img_path" width="25%" />
                 </tr>
             </table>
@@ -66,6 +76,7 @@ export default {
 
             keywords: "", //都道府県
             Days: "", //日付入力
+            Days2: "",
 
             //これは実験
             budget: 10000,
@@ -97,15 +108,31 @@ export default {
         //このコードの関数を使う
         filteredProducts: function () {
             var products = [];
+            var products2 = [];
             //ここから都道府県を入力したら絞り込めるコードを記述
             for (var i in this.products) {
                 var product = this.products[i];
                 // console.log(product);
 
-                if (product.prefecture.indexOf(this.keywords) !== -1) {
-                    products.push(product);
+                if (
+                    product.prefecture.indexOf(this.keywords) !== -1
+                    // product.best_by_date.indexOf(this.Days) >= this.Days
+                ) {
+                    if (!this.Days) {
+                        products.push(product);
+                    }
+                    // products.push(product);
                 }
+
+                /*
+                if (products.best_by_date >= a) {
+                }
+            */
+                console.log(this.Days);
+                console.log(products);
+                console.log(product.best_by_date);
             }
+
             //都道府県コードここまで
             // return products;
             return products.filter(function (el) {
@@ -120,6 +147,10 @@ export default {
         drill2() {
             const result1 = this.products.slice(0, 1);
             return result1;
+        },
+
+        drill3() {
+            return this.Days2;
         },
 
         drill() {

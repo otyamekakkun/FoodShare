@@ -5471,6 +5471,7 @@ __webpack_require__.r(__webpack_exports__);
       //都道府県
       Days: "",
       //日付入力
+      Days2: "",
       //これは実験
       budget: 10000,
       budgets: 10000,
@@ -5511,14 +5512,28 @@ __webpack_require__.r(__webpack_exports__);
   computed: {
     //このコードの関数を使う
     filteredProducts: function filteredProducts() {
-      var products = []; //ここから都道府県を入力したら絞り込めるコードを記述
+      var products = [];
+      var products2 = []; //ここから都道府県を入力したら絞り込めるコードを記述
 
       for (var i in this.products) {
         var product = this.products[i]; // console.log(product);
 
-        if (product.prefecture.indexOf(this.keywords) !== -1) {
-          products.push(product);
+        if (product.prefecture.indexOf(this.keywords) !== -1 // product.best_by_date.indexOf(this.Days) >= this.Days
+        ) {
+          if (!this.Days) {
+            products.push(product);
+          } // products.push(product);
+
         }
+        /*
+        if (products.best_by_date >= a) {
+        }
+        */
+
+
+        console.log(this.Days);
+        console.log(products);
+        console.log(product.best_by_date);
       } //都道府県コードここまで
       // return products;
 
@@ -5534,6 +5549,9 @@ __webpack_require__.r(__webpack_exports__);
     drill2: function drill2() {
       var result1 = this.products.slice(0, 1);
       return result1;
+    },
+    drill3: function drill3() {
+      return this.Days2;
     },
     drill: function drill() {
       var app = this.products;
@@ -6324,7 +6342,28 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", [_c("div", [_c("p", [_vm._v("都道府県を入力してください")]), _vm._v(" "), _c("input", {
+  return _c("div", [_c("div", [_vm._v("\n        実験\n        "), _c("input", {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: _vm.Days2,
+      expression: "Days2"
+    }],
+    staticClass: "l-productexhibitform__typo3",
+    attrs: {
+      type: "date",
+      min: new Date().toISOString().split("T")[0]
+    },
+    domProps: {
+      value: _vm.Days2
+    },
+    on: {
+      input: function input($event) {
+        if ($event.target.composing) return;
+        _vm.Days2 = $event.target.value;
+      }
+    }
+  }), _vm._v(" "), _c("p", [_vm._v(_vm._s(_vm.drill3()))])]), _vm._v(" "), _c("div", [_c("p", [_vm._v("都道府県を入力してください")]), _vm._v(" "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -6343,15 +6382,28 @@ var render = function render() {
         _vm.keywords = $event.target.value;
       }
     }
-  }), _vm._v(" "), _c("p", [_vm._v("購入されたい商品の予算内の金額を入力してください")]), _vm._v(" "), _c("div", {
-    staticClass: "l"
-  }, [_c("P", [_vm._v("賞味期限を入れてください")]), _vm._v(" "), _c("input", _vm._b({
+  }), _vm._v(" "), _c("p", [_vm._v("購入されたい商品の予算内の金額を入力してください")]), _vm._v(" "), _c("P", [_vm._v("賞味期限を入れてください")]), _vm._v(" "), _c("input", {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: _vm.Days,
+      expression: "Days"
+    }],
     staticClass: "l-productexhibitform__typo3",
     attrs: {
       type: "date",
       min: new Date().toISOString().split("T")[0]
+    },
+    domProps: {
+      value: _vm.Days
+    },
+    on: {
+      input: function input($event) {
+        if ($event.target.composing) return;
+        _vm.Days = $event.target.value;
+      }
     }
-  }, "input", _vm.Days, false))], 1), _vm._v(" "), _c("input", {
+  }), _vm._v(" "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -6389,13 +6441,17 @@ var render = function render() {
       domProps: {
         textContent: _vm._s(product.prefecture)
       }
+    }), _vm._v(" "), _c("td", {
+      domProps: {
+        textContent: _vm._s(product.best_by_date)
+      }
     }), _vm._v(" "), _c("img", {
       attrs: {
         src: product.img_path,
         width: "25%"
       }
     })]);
-  }), 0)]), _vm._v(" "), _c("input", {
+  }), 0)], 1), _vm._v(" "), _c("input", {
     attrs: {
       type: "checkbox"
     },
