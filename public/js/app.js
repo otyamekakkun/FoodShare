@@ -5469,11 +5469,10 @@ __webpack_require__.r(__webpack_exports__);
       products: [],
       keywords: "",
       //都道府県
-      Days: "",
-      //日付入力
       Days2: "",
       check3: true,
       //これは実験
+      a: "",
       budget: 10000,
       budgets: 10000,
       //アイテムのデータを一覧で持たせます。
@@ -5548,6 +5547,17 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     //ここは実験的なコード
+
+    /*
+    days4(){
+    Days: new Date().toLocaleDateString, //日付入力
+    }
+    */
+    days4: function days4() {
+      var c = new Date();
+      var b = c.toLocaleDateString();
+      return b;
+    },
     //開始位置を指定
     drill2: function drill2() {
       var result1 = this.products.slice(0, 1);
@@ -6352,7 +6362,7 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", [_c("div", [_vm._v("\n        実験\n        "), _c("input", {
+  return _c("div", [_c("div", [_vm._v("\n        " + _vm._s(_vm.days4()) + "\n        " + _vm._s(this.a) + "\n        "), _c("p", [_vm._v("こんにちは")]), _vm._v("\n        実験\n        "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -6373,7 +6383,7 @@ var render = function render() {
         _vm.Days2 = $event.target.value;
       }
     }
-  }), _vm._v(" "), _c("p", [_vm._v(_vm._s(_vm.drill3()))])]), _vm._v(" "), _c("div", [_vm.check3 ? _c("div", [_c("P", [_vm._v("現在賞味期限よりも切れていないものだけを表示する")]), _vm._v(" "), _c("input", {
+  })]), _vm._v(" "), _c("div", [_vm.check3 ? _c("div", [_c("P", [_vm._v("現在賞味期限よりも切れていないものだけを表示する")]), _vm._v(" "), _c("input", {
     attrs: {
       type: "checkbox"
     },
@@ -6499,7 +6509,7 @@ var render = function render() {
   }), _vm._v("円以内で買えるもの\n\n            "), _c("P", [_vm._v("現在賞味期限よりも切れていないものだけを表示する")]), _vm._v(" "), _c("table", _vm._l(_vm.filteredProducts, function (product) {
     return _c("tr", {
       key: product.id
-    }, [product.best_by_date <= _vm.Days ? _c("div", [_c("td", {
+    }, [product.best_by_date <= this.a ? _c("div", [_c("td", {
       domProps: {
         textContent: _vm._s(product.id)
       }

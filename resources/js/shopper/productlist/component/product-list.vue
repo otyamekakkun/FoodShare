@@ -1,6 +1,9 @@
 <template>
     <div>
         <div>
+            {{ days4() }}
+            {{ this.a }}
+            <p>こんにちは</p>
             実験
             <input
                 type="date"
@@ -8,7 +11,6 @@
                 class="l-productexhibitform__typo3"
                 v-model="Days2"
             />
-            <p>{{ drill3() }}</p>
         </div>
 
         <div>
@@ -43,7 +45,7 @@
                 <P>現在賞味期限よりも切れていないものだけを表示する</P>
                 <table>
                     <tr v-for="product in filteredProducts" :key="product.id">
-                        <div v-if="product.best_by_date <= Days">
+                        <div v-if="product.best_by_date <= this.a">
                             <td v-text="product.id"></td>
                             <td v-text="product.product_name"></td>
                             <td v-text="product.price"></td>
@@ -91,11 +93,11 @@ export default {
             products: [],
 
             keywords: "", //都道府県
-            Days: "", //日付入力
             Days2: "",
             check3: true,
 
             //これは実験
+            a: "",
             budget: 10000,
             budgets: 10000,
             //アイテムのデータを一覧で持たせます。
@@ -163,6 +165,17 @@ export default {
 
     methods: {
         //ここは実験的なコード
+        /*
+days4(){
+    Days: new Date().toLocaleDateString, //日付入力
+}
+*/
+        days4() {
+            const c = new Date();
+            const b = c.toLocaleDateString();
+            return b;
+        },
+
         //開始位置を指定
         drill2() {
             const result1 = this.products.slice(0, 1);
