@@ -1,0 +1,65 @@
+//================================================
+//staff_productdetail
+//================================================
+.l-staffproductdetail {
+    background: white;
+    display: block;
+    //中央に要素を寄せるときはこれを用いる
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
+    width: 80%;
+    height: 600px;
+    @include mql() {
+        //height: 350px;
+        //width: 55%;
+        height: 500px;
+    }
+    @include mq() {
+        //写真を上にして他の要素を下にする
+        height: 500px;
+    }
+}
+.l-staffproductdetail__area {
+    // background: red;
+    // margin-right: auto;
+    //margin-left: auto;
+    display: flex;
+
+    @include mqxxl() {
+        height: 400px;
+        width: 40%;
+    }
+    @include mqxl() {
+        height: 400px;
+        width: 50%;
+    }
+    @include mql() {
+        height: 350px;
+        width: 55%;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    @include mq() {
+        //写真を上にして他の要素を下にする
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+.l-staffproductdetail__areaflex {
+    display: flex;
+    @include mql() {
+        display: block;
+        width: 100%;
+        margin: auto;
+    }
+    @include mq() {
+        //写真を上にして他の要素を下にする
+        display: block;
+        width: 100%;
+        margin: auto;
+    }
+}
