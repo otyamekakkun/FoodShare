@@ -5437,13 +5437,12 @@ __webpack_require__.r(__webpack_exports__);
 //import Productheaders from "./product-header.vue";
 //import Product from "./product.vue";
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ["products"],
+  props: ["products", "keyword", "Days", "budget"],
   //main.vueからデータの中身が入っている。
   //子コンポーネントを登録する
   //コンポーネントが持つデータ
   data: function data() {
     return {
-      products: [],
       keywords: "",
       //都道府県
       Days2: "",
@@ -5502,8 +5501,17 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      products: {} //axiosから取得してきたデータを格納する
-
+      products: {},
+      //axiosから取得してきたデータを格納する
+      //子から親にデータをもらう。
+      keywords: "",
+      //都道府県
+      Days2: "",
+      //入力された日付がデータとして入ります
+      budgets: 10000,
+      //デフォルトで10000円と打ち込まれている。
+      //出品した都道府県で絞り込む
+      prefecturecheck: false
     };
   },
   methods: {},
@@ -6036,7 +6044,10 @@ var render = function render() {
 
   return _c("div", [_c("div", [_c("product-list", {
     attrs: {
-      products: this.products
+      products: this.products,
+      keyword: this.keywords,
+      Days: this.Days2,
+      budget: this.budgets
     }
   })], 1)]);
 };

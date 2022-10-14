@@ -37,25 +37,18 @@
                 </table>
             </div>
         </div>
-
-        <!-- コンポーネントで渡すもの -->
-        <!-- <Productheaders></Productheaders> -->
-        <!-- 商品一覧 -->
-        <!-- <Product></Product> -->
-        <!-- コンポーネントで渡すものここまで -->
     </div>
 </template>
 <script>
 //import Productheaders from "./product-header.vue";
 //import Product from "./product.vue";
 export default {
-    props: ["products"], //main.vueからデータの中身が入っている。
+    props: ["products", "keyword", "Days", "budget"], //main.vueからデータの中身が入っている。
 
     //子コンポーネントを登録する
     //コンポーネントが持つデータ
     data: function () {
         return {
-            products: [],
             keywords: "", //都道府県
             Days2: "", //入力された日付がデータとして入ります
             budgets: 10000, //デフォルトで10000円と打ち込まれている。

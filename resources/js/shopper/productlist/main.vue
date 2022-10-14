@@ -1,7 +1,12 @@
 <template>
     <div>
         <div>
-            <product-list :products="this.products"></product-list>
+            <product-list
+                :products="this.products"
+                :keyword="this.keywords"
+                :Days="this.Days2"
+                :budget="this.budgets"
+            ></product-list>
         </div>
     </div>
 </template>
@@ -17,6 +22,12 @@ export default {
     data: function () {
         return {
             products: {}, //axiosから取得してきたデータを格納する
+            //子から親にデータをもらう。
+            keywords: "", //都道府県
+            Days2: "", //入力された日付がデータとして入ります
+            budgets: 10000, //デフォルトで10000円と打ち込まれている。
+            //出品した都道府県で絞り込む
+            prefecturecheck: false,
         };
     },
 
