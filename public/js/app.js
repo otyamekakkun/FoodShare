@@ -5616,10 +5616,31 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     {
       return {
-        products: "",
+        products: [],
         //からのデータを用意する。
-        imageUrl: "https://via.placeholder.com/300x200?text=Image-1"
+        imageUrl: "https://via.placeholder.com/300x200?text=Image-1",
+        currentPage: 1,
+        perPage: 5
       };
+    }
+  },
+  computed: {
+    /*
+    ページネーションの仕組みを利用して最新５件だけ表示されるシステムを構築した。
+    出品した商品最新5件なのでreverse()メソッドで呼び出す配列の順序を逆にした。
+    */
+    getItems: function getItems() {
+      var start = (this.currentPage - 1) * this.perPage;
+      var end = this.currentPage * this.perPage;
+      return this.products.reverse().slice(start, end);
+    },
+    getPaginateCount: function getPaginateCount() {
+      return Math.ceil(this.products.length / this.perPage);
+    }
+  },
+  methods: {
+    paginateClickCallback: function paginateClickCallback(pageNum) {
+      this.currentPage = Number(pageNum);
     }
   },
   mounted: function mounted() {
@@ -5662,10 +5683,14 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   computed: {
+    /*
+    ページネーションの仕組みを利用して最新５件だけ表示されるシステムを構築した。
+    出品した商品最新5件なのでreverse()メソッドで呼び出す配列の順序を逆にした。
+    */
     getItems: function getItems() {
       var start = (this.currentPage - 1) * this.perPage;
       var end = this.currentPage * this.perPage;
-      return this.products.slice(start, end).reverse();
+      return this.products.reverse().slice(start, end);
     },
     getPaginateCount: function getPaginateCount() {
       return Math.ceil(this.products.length / this.perPage);
@@ -6201,7 +6226,7 @@ var render = function render() {
     attrs: {
       id: "app"
     }
-  }, _vm._l(_vm.products, function (item) {
+  }, _vm._l(_vm.getItems, function (item) {
     return _c("li", [item.bought >= 1 ? _c("div", [_c("div", {
       staticClass: "c-productlist"
     }, [_c("h1", [_vm._v("購入済み")]), _vm._v(" "), _c("img", {
@@ -6249,7 +6274,7 @@ var render = function render() {
     attrs: {
       id: "app"
     }
-  }, [_vm._l(_vm.getItems, function (item) {
+  }, _vm._l(_vm.getItems, function (item) {
     return _c("li", [_c("div", {
       staticClass: "c-productlist"
     }, [_c("img", {
@@ -6268,24 +6293,7 @@ var render = function render() {
         href: "haiki/".concat(item.id, "}/staff_productedit")
       }
     }, [_vm._v("商品を編集する")])]), _vm._v(" "), item.bought >= 1 ? _c("div", [_c("h1", [_vm._v("購入済み")])]) : _vm._e()])])]);
-  }), _vm._v(" "), _c("div", [_c("vuejs-paginate", {
-    attrs: {
-      "page-count": _vm.getPaginateCount,
-      "prev-text": "<",
-      "next-text": ">",
-      "click-handler": _vm.paginateClickCallback,
-      "container-class": "pagination justify-content-center",
-      "page-class": "page-item",
-      "page-link-class": "page-link",
-      "prev-class": "page-item",
-      "prev-link-class": "page-link",
-      "next-class": "page-item",
-      "next-link-class": "page-link",
-      "first-last-button": true,
-      "first-button-text": "<<",
-      "last-button-text": ">>"
-    }
-  })], 1)], 2);
+  }), 0);
 };
 
 var staticRenderFns = [];

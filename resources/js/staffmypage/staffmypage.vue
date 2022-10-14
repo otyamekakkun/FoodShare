@@ -25,64 +25,8 @@
                 </div>
             </div>
         </li>
-        <div>
-            <vuejs-paginate
-                :page-count="getPaginateCount"
-                :prev-text="'<'"
-                :next-text="'>'"
-                :click-handler="paginateClickCallback"
-                :container-class="'pagination justify-content-center'"
-                :page-class="'page-item'"
-                :page-link-class="'page-link'"
-                :prev-class="'page-item'"
-                :prev-link-class="'page-link'"
-                :next-class="'page-item'"
-                :next-link-class="'page-link'"
-                :first-last-button="true"
-                :first-button-text="'<<'"
-                :last-button-text="'>>'"
-            ></vuejs-paginate>
-        </div>
     </div>
 </template>
-<!--  
-<template>
-    <div id="app" class="container-fluid">
-        <div>
-            <table class="table table-bordered">
-                <thead>
-                    <th>#</th>
-                    <th>Name</th>
-                </thead>
-                <tbody>
-                    <tr v-for="e in getItems" :key="e.id">
-                        <td>{{ e.id }}</td>
-                        <td>{{ e.name }}</td>
-                    </tr>
-                </tbody>
-            </table>
-            <div>
-                <vuejs-paginate
-                    :page-count="getPaginateCount"
-                    :prev-text="'<'"
-                    :next-text="'>'"
-                    :click-handler="paginateClickCallback"
-                    :container-class="'pagination justify-content-center'"
-                    :page-class="'page-item'"
-                    :page-link-class="'page-link'"
-                    :prev-class="'page-item'"
-                    :prev-link-class="'page-link'"
-                    :next-class="'page-item'"
-                    :next-link-class="'page-link'"
-                    :first-last-button="true"
-                    :first-button-text="'<<'"
-                    :last-button-text="'>>'"
-                ></vuejs-paginate>
-            </div>
-        </div>
-    </div>
-</template>
--->
 <script>
 import axios from "axios";
 
@@ -99,12 +43,15 @@ export default {
             };
         }
     },
-
     computed: {
+        /*
+ページネーションの仕組みを利用して最新５件だけ表示されるシステムを構築した。
+出品した商品最新5件なのでreverse()メソッドで呼び出す配列の順序を逆にした。
+*/
         getItems: function () {
             let start = (this.currentPage - 1) * this.perPage;
             let end = this.currentPage * this.perPage;
-            return this.products.slice(start, end).reverse();
+            return this.products.reverse().slice(start, end);
         },
         getPaginateCount: function () {
             return Math.ceil(this.products.length / this.perPage);
@@ -168,3 +115,41 @@ export default {
 };
 </script>
 </script> -->
+<!--  
+<template>
+    <div id="app" class="container-fluid">
+        <div>
+            <table class="table table-bordered">
+                <thead>
+                    <th>#</th>
+                    <th>Name</th>
+                </thead>
+                <tbody>
+                    <tr v-for="e in getItems" :key="e.id">
+                        <td>{{ e.id }}</td>
+                        <td>{{ e.name }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div>
+                <vuejs-paginate
+                    :page-count="getPaginateCount"
+                    :prev-text="'<'"
+                    :next-text="'>'"
+                    :click-handler="paginateClickCallback"
+                    :container-class="'pagination justify-content-center'"
+                    :page-class="'page-item'"
+                    :page-link-class="'page-link'"
+                    :prev-class="'page-item'"
+                    :prev-link-class="'page-link'"
+                    :next-class="'page-item'"
+                    :next-link-class="'page-link'"
+                    :first-last-button="true"
+                    :first-button-text="'<<'"
+                    :last-button-text="'>>'"
+                ></vuejs-paginate>
+            </div>
+        </div>
+    </div>
+</template>
+-->
