@@ -1,11 +1,7 @@
 <template>
     <div>
         <div>
-            <product-list
-                :products="this.products"
-                :days="this.days"
-                :kakuto="kakuto"
-            ></product-list>
+            <product-list :products="this.products"></product-list>
         </div>
     </div>
 </template>
@@ -24,13 +20,7 @@ export default {
         };
     },
 
-    methods: {
-        days: function () {
-            const date = new Date();
-            const Date = date.toLocaleDateString();
-            return Date;
-        },
-    },
+    methods: {},
 
     mounted() {
         const url = "/haiki/index1";

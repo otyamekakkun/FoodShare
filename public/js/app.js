@@ -5512,13 +5512,7 @@ __webpack_require__.r(__webpack_exports__);
 
     };
   },
-  methods: {
-    days: function days() {
-      var date = new Date();
-      var Date = date.toLocaleDateString();
-      return Date;
-    }
-  },
+  methods: {},
   mounted: function mounted() {
     var _this = this;
 
@@ -6048,9 +6042,7 @@ var render = function render() {
 
   return _c("div", [_c("div", [_c("product-list", {
     attrs: {
-      products: this.products,
-      days: this.days,
-      kakuto: _vm.kakuto
+      products: this.products
     }
   })], 1)]);
 };
