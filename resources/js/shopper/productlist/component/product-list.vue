@@ -40,8 +40,6 @@
     </div>
 </template>
 <script>
-//import Productheaders from "./product-header.vue";
-//import Product from "./product.vue";
 export default {
     props: ["products", "keyword", "Days", "budget"], //main.vueからデータの中身が入っている。
 

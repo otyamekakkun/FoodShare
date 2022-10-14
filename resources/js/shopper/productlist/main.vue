@@ -32,7 +32,7 @@ export default {
     },
 
     methods: {},
-
+    //データベースから情報を取得します
     mounted() {
         const url = "/haiki/index1";
         axios.get(url).then((response) => (this.products = response.data));

@@ -5434,8 +5434,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-//import Productheaders from "./product-header.vue";
-//import Product from "./product.vue";
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ["products", "keyword", "Days", "budget"],
   //main.vueからデータの中身が入っている。
@@ -5515,6 +5513,7 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {},
+  //データベースから情報を取得します
   mounted: function mounted() {
     var _this = this;
 
