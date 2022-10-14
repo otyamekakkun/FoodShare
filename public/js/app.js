@@ -5476,9 +5476,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var vuejs_paginate__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuejs-paginate */ "./node_modules/vuejs-paginate/dist/index.js");
+/* harmony import */ var vuejs_paginate__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vuejs_paginate__WEBPACK_IMPORTED_MODULE_1__);
+
  //ここでエラーが発生していたコンポーネント自体読み取れていないということなのでここは読み取れている。
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  components: {
+    "vuejs-paginate": (vuejs_paginate__WEBPACK_IMPORTED_MODULE_1___default())
+  },
   data: function data() {
     {
       //データは言わば変数みたいなもの色々なところで使い回せる
@@ -5486,17 +5492,30 @@ __webpack_require__.r(__webpack_exports__);
         //ここでの処理はチェックボタンが押されているかどうかの言わばスイッチみたいに役割を持たせる。
         products: "",
         //からのデータを用意する。
-        imageUrl: "https://via.placeholder.com/300x200?text=Image-1",
-        checkflg: false
+        currentPage: 1,
+        perPage: 5
       };
     }
   },
   //実験として情報を受け取る練習からする。
   //これはjson形式で値を取得しないといけないもの
   //子コンポーネントを登録するここのデータはほぼ確定している。
+  computed: {
+    getItems: function getItems() {
+      var start = (this.currentPage - 1) * this.perPage;
+      var end = this.currentPage * this.perPage;
+      return this.products.slice(start, end);
+    },
+    getPaginateCount: function getPaginateCount() {
+      return Math.ceil(this.products.length / this.perPage);
+    }
+  },
   methods: {
     count: function count() {
       console.log($route.path);
+    },
+    paginateClickCallback: function paginateClickCallback(pageNum) {
+      this.currentPage = Number(pageNum);
     }
   },
   mounted: function mounted() {
@@ -5713,15 +5732,6 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     paginateClickCallback: function paginateClickCallback(pageNum) {
       this.currentPage = Number(pageNum);
-    },
-    compare: function compare(a, b) {
-      var r = 0;
-
-      if (a.update_at) {
-        r = -1;
-      } else if (a.update_at > b.update_at) {
-        return r;
-      }
     }
   },
   mounted: function mounted() {
@@ -6044,7 +6054,7 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", _vm._l(_vm.products, function (item) {
+  return _c("div", [_vm._l(_vm.getItems, function (item) {
     return _c("li", [item.bought >= 1 ? _c("div", [_c("img", {
       attrs: {
         src: item.img_path,
@@ -6055,7 +6065,24 @@ var render = function render() {
         href: "/haiki/".concat(item.id, "/shopper_productdetail")
       }
     }, [_vm._v("商品の詳細をみる")])])]) : _vm._e()]);
-  }), 0);
+  }), _vm._v(" "), _c("vuejs-paginate", {
+    attrs: {
+      "page-count": _vm.getPaginateCount,
+      "prev-text": "<",
+      "next-text": ">",
+      "click-handler": _vm.paginateClickCallback,
+      "container-class": "pagination justify-content-center",
+      "page-class": "page-item",
+      "page-link-class": "page-link",
+      "prev-class": "page-item",
+      "prev-link-class": "page-link",
+      "next-class": "page-item",
+      "next-link-class": "page-link",
+      "first-last-button": true,
+      "first-button-text": "<<",
+      "last-button-text": ">>"
+    }
+  })], 2);
 };
 
 var staticRenderFns = [];
