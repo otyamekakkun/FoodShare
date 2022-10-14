@@ -398,16 +398,6 @@ a {
 }
 
 /*
-今回は写真しゃしんふ
-*/
-.img {
-  width: 10%;
-  height: auto;
-  vertical-align: bottom;
-  background: url("/img/top.jpg");
-}
-
-/*
 * 1 footerを作るsassのファイルを読み込む 
 * 2 headerを作るsassのファイルを読み込む
 * 3 _sidebarファイルを作る
