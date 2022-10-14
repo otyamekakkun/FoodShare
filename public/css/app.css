@@ -858,6 +858,26 @@ a {
   margin: 30px;
 }
 
+.l-shopperproductlist {
+  background: white;
+  width: 90%;
+  height: 700px;
+  margin: 30px;
+}
+
+.l-shopperproductlist__area {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px;
+}
+
+.l-shopperproductlist__area__photo {
+  background: red;
+  width: 29%;
+  height: 120px;
+  margin: 15px;
+}
+
 /*
 * 1 今後も使い回しそうなbuttonデザインを作るファイル 
 * 2 今後も使い回しそうなアラートを作るファイル
