@@ -1,12 +1,7 @@
 <template>
     <div>
         <div>
-            <product-list
-                :products="this.products"
-                :keyword="this.keywords"
-                :Days="this.Days2"
-                :budget="this.budgets"
-            ></product-list>
+            <product-list :products="this.products"></product-list>
         </div>
     </div>
 </template>

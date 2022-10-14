@@ -5372,7 +5372,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ["products", "keyword", "Days", "budget"],
+  props: ["products"],
   //main.vueからデータの中身が入っている。
   //子コンポーネントを登録する
   //コンポーネントが持つデータ
@@ -5933,7 +5933,7 @@ var render = function render() {
         _vm.budgets = $event.target.value;
       }
     }
-  }), _vm._v("円以内で買えるもの\n            "), _c("p", [_vm._v("有効期限チェック")]), _vm._v(" "), _c("P", [_vm._v("ご希望の日付を入力してください"), _c("br"), _vm._v("(入力された日付に対して,"), _c("br"), _vm._v("賞味期限が有効なものだけ表示します)")]), _vm._v(" "), _c("input", {
+  }), _vm._v("円以内で買えるもの\n            "), _c("p", [_vm._v("有効期限チェック")]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -5987,10 +5987,15 @@ var render = function render() {
         href: "/haiki/".concat(product.id, "/shopper_productdetail")
       }
     }, [_vm._v("商品の詳細をみる")])])]) : _vm._e()]);
-  }), 0)], 1)])]);
+  }), 0)])])]);
 };
 
-var staticRenderFns = [];
+var staticRenderFns = [function () {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("p", [_vm._v("\n                ご希望の日付を入力してください"), _c("br"), _vm._v("(入力された日付に対して,"), _c("br"), _vm._v("賞味期限が有効なものだけ表示します)\n            ")]);
+}];
 render._withStripped = true;
 
 
@@ -6014,10 +6019,7 @@ var render = function render() {
 
   return _c("div", [_c("div", [_c("product-list", {
     attrs: {
-      products: this.products,
-      keyword: this.keywords,
-      Days: this.Days2,
-      budget: this.budgets
+      products: this.products
     }
   })], 1)]);
 };

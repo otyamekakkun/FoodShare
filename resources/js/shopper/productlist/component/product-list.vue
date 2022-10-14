@@ -7,9 +7,9 @@
                 <p>購入されたい商品の予算内の金額を入力してください</p>
                 <input type="text" v-model="budgets" />円以内で買えるもの
                 <p>有効期限チェック</p>
-                <P
-                    >ご希望の日付を入力してください<br />(入力された日付に対して,<br />賞味期限が有効なものだけ表示します)</P
-                >
+                <p>
+                    ご希望の日付を入力してください<br />(入力された日付に対して,<br />賞味期限が有効なものだけ表示します)
+                </p>
                 <input
                     type="date"
                     :min="new Date().toISOString().split('T')[0]"
@@ -41,7 +41,7 @@
 </template>
 <script>
 export default {
-    props: ["products", "keyword", "Days", "budget"], //main.vueからデータの中身が入っている。
+    props: ["products"], //main.vueからデータの中身が入っている。
 
     //子コンポーネントを登録する
     //コンポーネントが持つデータ
