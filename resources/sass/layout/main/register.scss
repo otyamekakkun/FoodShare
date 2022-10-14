@@ -1,0 +1,20 @@
+//===========================================
+//ユーザー登録ページ
+//============================================
+
+.l-register__common {
+    background: color(formbackground);
+    height: 400px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.l-register__common__sentence {
+    text-align: center;
+    // background: cyan;
+    width: 100%;
+    margin: 10px;
+    font-size: 20px;
+}
