@@ -26,12 +26,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-//drills/newはあくまでも実験的要素が絡んでいるので終わったら必ず消去すること
-Route::get('/drills/new',[App\Http\Controllers\DrillsController::class, 'new'])->name('drills.new');
-Route::post('/drills',[App\Http\Controllers\DrillsController::class, 'create'])->name('drills.create');
-Route::get('/drills/index',[App\Http\Controllers\DrillsController::class, 'index'])->name('drills.index');
-Route::get('/drills/ind',[App\Http\Controllers\DrillsController::class, 'ind'])->name('drills.ind');
-Route::get('/drills/inde',[App\Http\Controllers\DrillsController::class, 'inde'])->name('drills.inde');
 
 
 //画面を表示するための処理ここから開始
@@ -188,34 +182,12 @@ Route::get('/haiki/index3',[HaikiController::class, 'productjson'])->name('produ
 
 
 Route::get('/haiki/index4',[HaikiController::class, 'userjson'])->name('user.json');
-
-
-
-
-
-
-
-
-
-
 //json形式で渡すものはしっかりと対策する必要がある。
 //staff_exhibitproductをjson形式で渡す
 Route::get('/haiki/jsonstaff_exhibit',[HaikiController::class, 'staff_exhibitproduct_json'])->name('product.json');
 //ok
 
 Route::get('/haiki/{id}/jsonstaffproductdetail',[HaikiController::class, 'staffproductdetailjson'])->name('products.json');
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //===========
