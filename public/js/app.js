@@ -6334,11 +6334,7 @@ Vue.component("shopperproductdetail-component", (__webpack_require__(/*! ./shopp
 //shopperproductdetailのコンポーネント（ご利用者の商品詳細画面)
 //================================================================
 
-Vue.component("shoppermypage-component", (__webpack_require__(/*! ./shoppermypage/shoppermypage.vue */ "./resources/js/shoppermypage/shoppermypage.vue")["default"])); //===================================================================
-//実験用のコンポーネント
-//===================================================================
-
-Vue.component("drills-component", (__webpack_require__(/*! ./drills/drills.vue */ "./resources/js/drills/drills.vue")["default"]));
+Vue.component("shoppermypage-component", (__webpack_require__(/*! ./shoppermypage/shoppermypage.vue */ "./resources/js/shoppermypage/shoppermypage.vue")["default"]));
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -29086,40 +29082,6 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
 /* hot reload */
 if (false) { var api; }
 component.options.__file = "resources/js/admin/admin-component.vue"
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/drills/drills.vue":
-/*!****************************************!*\
-  !*** ./resources/js/drills/drills.vue ***!
-  \****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-var render, staticRenderFns
-var script = {}
-
-
-/* normalize component */
-;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__["default"])(
-  script,
-  render,
-  staticRenderFns,
-  false,
-  null,
-  null,
-  null
-  
-)
-
-component.options.__file = "resources/js/drills/drills.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),

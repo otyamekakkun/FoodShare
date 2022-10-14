@@ -119,12 +119,6 @@ Vue.component(
     require("./shoppermypage/shoppermypage.vue").default
 );
 
-//===================================================================
-//実験用のコンポーネント
-//===================================================================
-
-Vue.component("drills-component", require("./drills/drills.vue").default);
-
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
