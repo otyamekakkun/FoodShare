@@ -37,26 +37,12 @@
         <button class="btn btn-danger">購入する</button>
     </form>
 @endif
-
-
-
-
-
-
 @if($products->bought>=1)
     <form action="{{route('bought.cancel',$products->id)}}" enctype="multipart/form-data" method="post">
         @csrf
         <button class="btn btn-danger">購入をやめる</button>
     </form>
 @endif
-
-
-
-
-
-
-
-
 {{-- 
 
 form属性対応

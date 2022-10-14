@@ -12,17 +12,6 @@
 </h1>
 
 
-
-
-
-
-
-
-
-
-
-
-
 <div id="app">
     <admin-component></admin-component>
 
