@@ -1,0 +1,54 @@
+//=================================
+//staff_exhibitproductlist (ページ）
+//=================================
+.l-exhibitproductlist {
+    background: white;
+    display: block;
+    //中央に要素を寄せるときはこれを用いる
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    width: 80%;
+    height: 1700px;
+
+    //画面の大きさによって高さが足りなくなりそうなのでレスポンシブを使う
+}
+
+//ここはレイアウト部分
+.l-exhibitproductlist__list {
+    height: 1400px;
+    margin-top: 10px;
+    //text-align: center;
+    //水色部分に反応しているところ表示
+}
+
+.l-productexhibitform__sentence {
+    //margin-bottom: 20px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.l-exhibitproductlist__listb {
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.l-productexhibitform__typo {
+    background: white;
+    // font-size: 20px;
+    // padding: 20px;
+    color: black;
+    width: 50%;
+    margin: 5px;
+}
+
+.l-productexhibitform__typo2 {
+    background: white;
+    color: black;
+}
+
+.l-productexhibitform__typo3 {
+    background: white;
+    color: black;
+}
