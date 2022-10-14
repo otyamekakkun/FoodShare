@@ -1,11 +1,8 @@
-//========================
-//コンビニスタッフ用staff_profile
-//===========================
-.l-form {
-    margin: size(l);
-}
+//=====================================
+//shopper_profile_display(ファイルのcss)
+//=====================================
 
-.l-formstaffprofile {
+.l-formshopperprofile {
     margin: auto;
     padding: size(xxl);
     text-align: center;
@@ -13,35 +10,33 @@
     font-family: "Noto Serif TC", serif;
     font-size: size(xxl);
     width: 50%;
-    height: 900px;
+    height: 550px;
     line-height: 65px;
     &__te {
         justify-content: center;
         margin: size(xl);
+        @include mq() {
+            // background: cyan;
+        }
     }
 
     &__text {
         background: white;
         margin: 20px 20px 20px;
         border: none;
+        @include mq() {
+            width: 100%;
+        }
     }
-    &__sub {
-        background: #174113;
-        border: none;
-        color: white;
-        width: 12%;
-        font-size: size(m);
-        border-radius: size(ss);
-        position: absolute;
-        right: 25%;
-        margin: 180px 65px;
-        transition: all 1.2s;
+
+    @include mqxl() {
+        //  background: red;
+        width: 75%;
     }
-    &__sub:hover {
-        cursor: pointer;
-        background: #b2d142;
+    @include mq() {
+        background: red;
+        height: 550px;
     }
 }
-
 //変更すると言う文字がずれたら　レスポンシブ対応をとる。
 //980pxからレスポンシブ対応をする
