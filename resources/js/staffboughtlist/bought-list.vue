@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <li v-for="item in products">
+        <li v-for="item in getItems">
             <div v-if="item.bought >= 1">
                 <div class="c-productlist">
                     <img v-bind:src="item.img_path" width="25%" />
@@ -24,133 +24,66 @@
                 </div>
             </div>
         </li>
+        <div>
+            <vuejs-paginate
+                :page-count="getPaginateCount"
+                :prev-text="'<'"
+                :next-text="'>'"
+                :click-handler="paginateClickCallback"
+                :container-class="'pagination justify-content-center'"
+                :page-class="'page-item'"
+                :page-link-class="'page-link'"
+                :prev-class="'page-item'"
+                :prev-link-class="'page-link'"
+                :next-class="'page-item'"
+                :next-link-class="'page-link'"
+                :first-last-button="true"
+                :first-button-text="'<<'"
+                :last-button-text="'>>'"
+            ></vuejs-paginate>
+        </div>
     </div>
 </template>
 <script>
 import axios from "axios";
-
-export default {
-    props: ["pro"],
-
-    data: function () {
-        {
-            return {
-                products: "", //からのデータを用意する。
-                imageUrl: "https://via.placeholder.com/300x200?text=Image-1",
-            };
-        }
-    },
-    mounted() {
-        const url = "/haiki/index3";
-        axios.get(url).then((response) => (this.products = response.data));
-    },
-};
-</script>
-<!-- 
-                <li
-                v-for="item in products"
-                v-bind:class="{ takai: item.price > 300 }"
-            >
-                <img v-bind:src="item.img_path" width="25%" />
-
-                商品名.{{ item.product_name }}お値段.{{ item.price }}円.
-                <button>
-                    <a v-bind:href="`/haiki/${item.id}/shopper_productdetail`"
-                        >商品の詳細をみる</a
-                    >
-                </button>
-
-                <span v-if="item.price <= 100">やすい</span>
-                <span v-else-if="item.price > 100 && item.price <= 500"
-                    >普通</span
-                >
-                <span v-else-if="item.price > 500 && item.price <= 1000"
-                    >やや高い</span
-                >
-                <span v-else-if="item.price > 1000">そのほか</span>
-            </li>
-
- -->
-<!-- 
-コンポーネントのpropsでデータを渡す処理をすれば良い
-
- -->
-<!-- 
-<script>
 import VueJsPaginate from "vuejs-paginate";
 
 export default {
     components: {
         "vuejs-paginate": VueJsPaginate,
     },
+    props: ["pro"],
+
     data: function () {
-        return {
-            items: [],
-            currentPage: 1,
-            perPage: 10,
-        };
-    },
-    created: function () {
-        for (let i = 1; i <= 95; i++) {
-            this.items.push({
-                id: i,
-                name: "name_" + i,
-            });
+        {
+            return {
+                products: [], //からのデータを用意する。
+                imageUrl: "https://via.placeholder.com/300x200?text=Image-1",
+                currentPage: 1,
+                perPage: 5,
+            };
         }
     },
     computed: {
         getItems: function () {
             let start = (this.currentPage - 1) * this.perPage;
             let end = this.currentPage * this.perPage;
-            return this.items.slice(start, end);
+
+            return this.products.slice(start, end);
         },
         getPaginateCount: function () {
-            return Math.ceil(this.items.length / this.perPage);
+            return Math.ceil(this.products.length / this.perPage);
         },
     },
     methods: {
         paginateClickCallback: function (pageNum) {
             this.currentPage = Number(pageNum);
         },
+
+        mounted() {
+            const url = "/haiki/index3";
+            axios.get(url).then((response) => (this.products = response.data));
+        },
     },
 };
 </script>
-</script> -->
-<!--  
-<template>
-    <div id="app" class="container-fluid">
-        <div>
-            <table class="table table-bordered">
-                <thead>
-                    <th>#</th>
-                    <th>Name</th>
-                </thead>
-                <tbody>
-                    <tr v-for="e in getItems" :key="e.id">
-                        <td>{{ e.id }}</td>
-                        <td>{{ e.name }}</td>
-                    </tr>
-                </tbody>
-            </table>
-            <div>
-                <vuejs-paginate
-                    :page-count="getPaginateCount"
-                    :prev-text="'<'"
-                    :next-text="'>'"
-                    :click-handler="paginateClickCallback"
-                    :container-class="'pagination justify-content-center'"
-                    :page-class="'page-item'"
-                    :page-link-class="'page-link'"
-                    :prev-class="'page-item'"
-                    :prev-link-class="'page-link'"
-                    :next-class="'page-item'"
-                    :next-link-class="'page-link'"
-                    :first-last-button="true"
-                    :first-button-text="'<<'"
-                    :last-button-text="'>>'"
-                ></vuejs-paginate>
-            </div>
-        </div>
-    </div>
-</template>
--->

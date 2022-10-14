@@ -13,9 +13,9 @@
 
 
 <div id="app">
-    <admin-component></admin-component>
+    {{-- <admin-component></admin-component> --}}
 
-
+<exhibitlist-componennt></exhibitlist-componennt>
 
 <footer-component></footer-component>
 </div>

@@ -17,6 +17,20 @@
                                             item.price
                                         }}円.
                                     </div>
+
+                                    <button>
+                                        <a
+                                            v-bind:href="`${item.id}}/staff_productdetail`"
+                                            >詳細にいく</a
+                                        >
+                                    </button>
+
+                                    <button>
+                                        <a
+                                            v-bind:href="`${item.id}}/staff_productedit`"
+                                            >商品を編集する</a
+                                        >
+                                    </button>
                                 </div>
                             </li>
                         </div>
