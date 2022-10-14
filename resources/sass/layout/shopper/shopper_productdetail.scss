@@ -1,0 +1,28 @@
+//=============================================
+//商品の詳細画面の画面モック shopper_productdetail
+//=============================================
+.l-productdetail {
+    background: white;
+    margin-right: 80px;
+    margin-left: 80px;
+    width: 90%;
+    height: 600px;
+
+    &__area {
+        display: flex;
+
+        &__photo {
+            background: cyan;
+            margin: 30px;
+            height: 400px;
+            width: 55%;
+        }
+        &__menu {
+            background: red;
+            color: white;
+            height: 400px;
+            width: 35%;
+            margin: 30px;
+        }
+    }
+}
