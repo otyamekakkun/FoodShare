@@ -11,8 +11,6 @@
     haiki share スタッフ専用ページへようこそ！！
 </h1>
 <div id="app">
-
-
 <main>
 <div class="l-staffmypage">
 <div class="l-staffmypage__exhibitarea">
@@ -41,18 +39,3 @@
 </div>
 </body>
 @endsection
-
-
-{{-- 
-@foreach ($products as $product)
-<ul>
-<p>商品名:{{$product->product_name}}</p>
-<p>価格:{{$product->price}}</p>
-<button><a href="{{route('haiki_shopper.staff_productdetail_display',$product->id)}}">商品の詳細をみる</a>
-@if($product->bought===0)
-<button><a href="{{route('haiki_shopper.staff_productedit_display',$product->id)}}">商品を編集する</a>
-</button>
-</ul>
-@endif
-@endforeach
- --}}

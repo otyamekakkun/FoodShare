@@ -5618,7 +5618,6 @@ __webpack_require__.r(__webpack_exports__);
       return {
         products: [],
         //からのデータを用意する。
-        imageUrl: "https://via.placeholder.com/300x200?text=Image-1",
         currentPage: 1,
         perPage: 5
       };
@@ -5626,8 +5625,9 @@ __webpack_require__.r(__webpack_exports__);
   },
   computed: {
     /*
-    ページネーションの仕組みを利用して最新５件だけ表示されるシステムを構築した。
-    出品した商品最新5件なのでreverse()メソッドで呼び出す配列の順序を逆にした。
+    ページネーションの仕組みを利用して最新５件だけ表示されるシステムを構築しました。
+    商品編集したらupdate_atの時刻が変わってしまい、購入された最新5件が変わってしまう可能性がありそうが、そもそも購入された時点で
+    商品を編集できないようにプログラムされているので、update_atで比較して最新５件を表示することを実装しました。
     */
     getItems: function getItems() {
       var start = (this.currentPage - 1) * this.perPage;
@@ -5641,6 +5641,15 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     paginateClickCallback: function paginateClickCallback(pageNum) {
       this.currentPage = Number(pageNum);
+    },
+    compare: function compare(a, b) {
+      var r = 0;
+
+      if (a.update_at) {
+        r = -1;
+      } else if (a.update_at > b.update_at) {
+        return r;
+      }
     }
   },
   mounted: function mounted() {
@@ -5676,7 +5685,6 @@ __webpack_require__.r(__webpack_exports__);
       return {
         products: [],
         //からのデータを用意する。
-        imageUrl: "https://via.placeholder.com/300x200?text=Image-1",
         currentPage: 1,
         perPage: 5
       };
@@ -5699,6 +5707,15 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     paginateClickCallback: function paginateClickCallback(pageNum) {
       this.currentPage = Number(pageNum);
+    },
+    compare: function compare(a, b) {
+      var r = 0;
+
+      if (a.update_at) {
+        r = -1;
+      } else if (a.update_at > b.update_at) {
+        return r;
+      }
     }
   },
   mounted: function mounted() {

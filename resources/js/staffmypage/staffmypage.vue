@@ -37,7 +37,6 @@ export default {
         {
             return {
                 products: [], //からのデータを用意する。
-                imageUrl: "https://via.placeholder.com/300x200?text=Image-1",
                 currentPage: 1,
                 perPage: 5,
             };
@@ -60,6 +59,14 @@ export default {
     methods: {
         paginateClickCallback: function (pageNum) {
             this.currentPage = Number(pageNum);
+        },
+        compare: function (a, b) {
+            let r = 0;
+            if (a.update_at) {
+                r = -1;
+            } else if (a.update_at > b.update_at) {
+                return r;
+            }
         },
     },
 
