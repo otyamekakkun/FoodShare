@@ -1,6 +1,7 @@
 <template>
     <div id="app">
-        <li v-for="item in products">
+        <!-- {{ drill() }} -->
+        <li v-for="item in getItems">
             <div class="c-productlist">
                 <img v-bind:src="item.img_path" width="25%" />
 
@@ -24,6 +25,24 @@
                 </div>
             </div>
         </li>
+        <div>
+            <vuejs-paginate
+                :page-count="getPaginateCount"
+                :prev-text="'<'"
+                :next-text="'>'"
+                :click-handler="paginateClickCallback"
+                :container-class="'pagination justify-content-center'"
+                :page-class="'page-item'"
+                :page-link-class="'page-link'"
+                :prev-class="'page-item'"
+                :prev-link-class="'page-link'"
+                :next-class="'page-item'"
+                :next-link-class="'page-link'"
+                :first-last-button="true"
+                :first-button-text="'<<'"
+                :last-button-text="'>>'"
+            ></vuejs-paginate>
+        </div>
     </div>
 </template>
 <!--  
@@ -73,11 +92,30 @@ export default {
     data: function () {
         {
             return {
-                products: "", //からのデータを用意する。
+                products: [], //からのデータを用意する。
                 imageUrl: "https://via.placeholder.com/300x200?text=Image-1",
+                currentPage: 1,
+                perPage: 5,
             };
         }
     },
+
+    computed: {
+        getItems: function () {
+            let start = (this.currentPage - 1) * this.perPage;
+            let end = this.currentPage * this.perPage;
+            return this.products.slice(start, end).reverse();
+        },
+        getPaginateCount: function () {
+            return Math.ceil(this.products.length / this.perPage);
+        },
+    },
+    methods: {
+        paginateClickCallback: function (pageNum) {
+            this.currentPage = Number(pageNum);
+        },
+    },
+
     mounted() {
         const url = "/haiki/index3";
         axios.get(url).then((response) => (this.products = response.data));
