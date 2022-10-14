@@ -858,6 +858,24 @@ a {
   font-size: 20px;
 }
 
+.l-staffmypage {
+  display: flex;
+}
+
+.l-staffmypage__exhibitarea {
+  width: 68%;
+  height: 1600px;
+  background: white;
+  margin: 30px;
+}
+
+.l-staffmypage__bought {
+  width: 68%;
+  height: 1600px;
+  margin: 20px;
+  background: white;
+}
+
 /*
 * 1 今後も使い回しそうなbuttonデザインを作るファイル 
 * 2 今後も使い回しそうなアラートを作るファイル
