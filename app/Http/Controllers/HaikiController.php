@@ -285,15 +285,12 @@ public function create_exhibitproduct(Request $request){
     //入力するときにバリデーションチェックを設ける
     $request->validate([
         'product_name'=>'required',
-       'img_path' => 'required|file|image|mimes:png,jpeg',
-       'price'=>'required',
-       'best_by_date'=>'required'
+        'img_path' => 'required|file|image|mimes:png,jpeg',
+        'price'=>'required',
+        'best_by_date'=>'required'
     ]);
 
     //laravelで表示されるための処理。
-$img = $request->file('img_path');
-$path = $img->store('img','public');//1
-
 //2つ保存されればゴール
 //vueで表示するための処理
 $image = $request->file("img_path");
