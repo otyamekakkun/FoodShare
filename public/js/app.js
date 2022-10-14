@@ -5315,15 +5315,37 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var vuejs_paginate__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuejs-paginate */ "./node_modules/vuejs-paginate/dist/index.js");
+/* harmony import */ var vuejs_paginate__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vuejs_paginate__WEBPACK_IMPORTED_MODULE_1__);
+
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  components: {
+    "vuejs-paginate": (vuejs_paginate__WEBPACK_IMPORTED_MODULE_1___default())
+  },
   data: function data() {
     {
       return {
         products: "",
         //からのデータを用意する。
-        imageUrl: "https://via.placeholder.com/300x200?text=Image-1"
+        currentPage: 1,
+        perPage: 5
       };
+    }
+  },
+  computed: {
+    getItems: function getItems() {
+      var start = (this.currentPage - 1) * this.perPage;
+      var end = this.currentPage * this.perPage;
+      return this.products.slice(start, end);
+    },
+    getPaginateCount: function getPaginateCount() {
+      return Math.ceil(this.products.length / this.perPage);
+    }
+  },
+  methods: {
+    paginateClickCallback: function paginateClickCallback(pageNum) {
+      this.currentPage = Number(pageNum);
     }
   },
   mounted: function mounted() {
@@ -5744,7 +5766,7 @@ var render = function render() {
     staticClass: "l-exhibitproductlist__list"
   }, [_c("div", {
     staticClass: "l-exhibitproductlist__listb"
-  }, [_c("div", _vm._l(_vm.products, function (item) {
+  }, [_c("div", [_vm._l(_vm.getItems, function (item) {
     return _c("li", [_c("div", {
       staticClass: "c-productlist"
     }, [_c("img", {
@@ -5763,7 +5785,24 @@ var render = function render() {
         href: "".concat(item.id, "}/staff_productedit")
       }
     }, [_vm._v("商品を編集する")])])])]);
-  }), 0)])])])])]);
+  }), _vm._v(" "), _c("vuejs-paginate", {
+    attrs: {
+      "page-count": _vm.getPaginateCount,
+      "prev-text": "<",
+      "next-text": ">",
+      "click-handler": _vm.paginateClickCallback,
+      "container-class": "pagination justify-content-center",
+      "page-class": "page-item",
+      "page-link-class": "page-link",
+      "prev-class": "page-item",
+      "prev-link-class": "page-link",
+      "next-class": "page-item",
+      "next-link-class": "page-link",
+      "first-last-button": true,
+      "first-button-text": "<<",
+      "last-button-text": ">>"
+    }
+  })], 2)])])])])]);
 };
 
 var staticRenderFns = [];
