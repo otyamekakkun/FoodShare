@@ -3,54 +3,39 @@
         <h1 class="c-title">コンビニ側が出品した商品の一覧のページです</h1>
         <main>
             <div class="l-exhibitproductlist">
-                <div class="l-exhibitproductlist__list">
-                    <div class="l-exhibitproductlist__listb">
-                        <div>
-                            <li v-for="item in getItems">
-                                <div class="c-productlist">
-                                    <img
-                                        v-bind:src="item.img_path"
-                                        width="25%"
-                                    />
-                                    <div class="c-productlist__sentence">
-                                        商品名.{{ item.product_name }}お値段.{{
-                                            item.price
-                                        }}円.
-                                    </div>
+                <div>
+                    <li v-for="item in getItems">
+                        <img v-bind:src="item.img_path" width="25%" />
+                        商品名:{{ item.product_name }}お値段.{{ item.price }}円.
 
-                                    <button>
-                                        <a
-                                            v-bind:href="`${item.id}}/staff_productdetail`"
-                                            >詳細にいく</a
-                                        >
-                                    </button>
+                        <button>
+                            <a v-bind:href="`${item.id}}/staff_productdetail`"
+                                >詳細にいく</a
+                            >
+                        </button>
 
-                                    <button>
-                                        <a
-                                            v-bind:href="`${item.id}}/staff_productedit`"
-                                            >商品を編集する</a
-                                        >
-                                    </button>
-                                </div>
-                            </li>
-                            <vuejs-paginate
-                                :page-count="getPaginateCount"
-                                :prev-text="'<'"
-                                :next-text="'>'"
-                                :click-handler="paginateClickCallback"
-                                :container-class="'pagination justify-content-center'"
-                                :page-class="'page-item'"
-                                :page-link-class="'page-link'"
-                                :prev-class="'page-item'"
-                                :prev-link-class="'page-link'"
-                                :next-class="'page-item'"
-                                :next-link-class="'page-link'"
-                                :first-last-button="true"
-                                :first-button-text="'<<'"
-                                :last-button-text="'>>'"
-                            ></vuejs-paginate>
-                        </div>
-                    </div>
+                        <button>
+                            <a v-bind:href="`${item.id}}/staff_productedit`"
+                                >商品を編集する</a
+                            >
+                        </button>
+                    </li>
+                    <vuejs-paginate
+                        :page-count="getPaginateCount"
+                        :prev-text="'<'"
+                        :next-text="'>'"
+                        :click-handler="paginateClickCallback"
+                        :container-class="'pagination justify-content-center'"
+                        :page-class="'page-item'"
+                        :page-link-class="'page-link'"
+                        :prev-class="'page-item'"
+                        :prev-link-class="'page-link'"
+                        :next-class="'page-item'"
+                        :next-link-class="'page-link'"
+                        :first-last-button="true"
+                        :first-button-text="'<<'"
+                        :last-button-text="'>>'"
+                    ></vuejs-paginate>
                 </div>
             </div>
         </main>
@@ -69,11 +54,14 @@ export default {
             return {
                 products: "", //からのデータを用意する。
                 currentPage: 1,
-                perPage: 5,
+                perPage: 10,
             };
         }
     },
     computed: {
+        /*
+getItemsはページネーションの算出を行う。１ページ毎に10カラム取得できるようにする
+*/
         getItems: function () {
             let start = (this.currentPage - 1) * this.perPage;
             let end = this.currentPage * this.perPage;
@@ -94,8 +82,3 @@ export default {
     },
 };
 </script>
-
-<!-- 
-コンポーネントのpropsでデータを渡す処理をすれば良い
-
- -->
