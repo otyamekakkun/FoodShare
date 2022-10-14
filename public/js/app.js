@@ -5645,33 +5645,42 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var vuejs_paginate__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuejs-paginate */ "./node_modules/vuejs-paginate/dist/index.js");
-/* harmony import */ var vuejs_paginate__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vuejs_paginate__WEBPACK_IMPORTED_MODULE_1__);
-
+/* harmony import */ var vuejs_paginate__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuejs-paginate */ "./node_modules/vuejs-paginate/dist/index.js");
+/* harmony import */ var vuejs_paginate__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vuejs_paginate__WEBPACK_IMPORTED_MODULE_0__);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ["pro"],
   components: {
-    "vuejs-paginate": (vuejs_paginate__WEBPACK_IMPORTED_MODULE_1___default())
+    "vuejs-paginate": (vuejs_paginate__WEBPACK_IMPORTED_MODULE_0___default())
   },
   data: function data() {
-    {
-      return {
-        products: "",
-        //からのデータを用意する。
-        imageUrl: "https://via.placeholder.com/300x200?text=Image-1"
-      };
+    return {
+      items: [],
+      currentPage: 1,
+      perPage: 10
+    };
+  },
+  created: function created() {
+    for (var i = 1; i <= 95; i++) {
+      this.items.push({
+        id: i,
+        name: "name_" + i
+      });
     }
   },
-  mounted: function mounted() {
-    var _this = this;
-
-    var url = "/haiki/index3";
-    axios__WEBPACK_IMPORTED_MODULE_0___default().get(url).then(function (response) {
-      return _this.products = response.data;
-    });
+  computed: {
+    getItems: function getItems() {
+      var start = (this.currentPage - 1) * this.perPage;
+      var end = this.currentPage * this.perPage;
+      return this.items.slice(start, end);
+    },
+    getPaginateCount: function getPaginateCount() {
+      return Math.ceil(this.items.length / this.perPage);
+    }
+  },
+  methods: {
+    paginateClickCallback: function paginateClickCallback(pageNum) {
+      this.currentPage = Number(pageNum);
+    }
   }
 });
 
@@ -6235,29 +6244,17 @@ var render = function render() {
       _c = _vm._self._c;
 
   return _c("div", {
+    staticClass: "container-fluid",
     attrs: {
       id: "app"
     }
-  }, [_vm._l(_vm.products, function (item) {
-    return _c("li", [_c("div", {
-      staticClass: "c-productlist"
-    }, [_c("img", {
-      attrs: {
-        src: item.img_path,
-        width: "25%"
-      }
-    }), _vm._v(" "), _c("div", {
-      staticClass: "c-productlist__sentence"
-    }, [_c("li", [_vm._v("商品No." + _vm._s(item.id))]), _vm._v(" "), _c("li", [_vm._v("商品名." + _vm._s(item.product_name))]), _vm._v(" "), _c("li", [_vm._v("お値段." + _vm._s(item.price) + "円.")]), _vm._v(" "), _c("button", [_c("a", {
-      attrs: {
-        href: "haiki/".concat(item.id, "}/staff_productdetail")
-      }
-    }, [_vm._v("詳細にいく")])]), _vm._v(" "), _c("button", [_c("a", {
-      attrs: {
-        href: "haiki/".concat(item.id, "}/staff_productedit")
-      }
-    }, [_vm._v("商品を編集する")])]), _vm._v(" "), item.bought >= 1 ? _c("div", [_c("h1", [_vm._v("購入済み")])]) : _vm._e()])])]);
-  }), _vm._v(" "), _c("div", [_c("vuejs-paginate", {
+  }, [_c("div", [_c("table", {
+    staticClass: "table table-bordered"
+  }, [_vm._m(0), _vm._v(" "), _c("tbody", _vm._l(_vm.getItems, function (e) {
+    return _c("tr", {
+      key: e.id
+    }, [_c("td", [_vm._v(_vm._s(e.id))]), _vm._v(" "), _c("td", [_vm._v(_vm._s(e.name))])]);
+  }), 0)]), _vm._v(" "), _c("div", [_c("vuejs-paginate", {
     attrs: {
       "page-count": _vm.getPaginateCount,
       "prev-text": "<",
@@ -6274,10 +6271,15 @@ var render = function render() {
       "first-button-text": "<<",
       "last-button-text": ">>"
     }
-  })], 1)], 2);
+  })], 1)])]);
 };
 
-var staticRenderFns = [];
+var staticRenderFns = [function () {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("thead", [_c("th", [_vm._v("#")]), _vm._v(" "), _c("th", [_vm._v("Name")])]);
+}];
 render._withStripped = true;
 
 
