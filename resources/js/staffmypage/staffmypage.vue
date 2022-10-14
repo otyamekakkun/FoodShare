@@ -28,6 +28,7 @@
 </template>
 <script>
 import axios from "axios";
+import VueJsPaginate from "vuejs-paginate";
 
 export default {
     props: ["pro"],
