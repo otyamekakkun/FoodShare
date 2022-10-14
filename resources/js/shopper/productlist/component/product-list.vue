@@ -39,23 +39,19 @@
         </div>
 
         <!-- コンポーネントで渡すもの -->
-        <Productheaders></Productheaders>
+        <!-- <Productheaders></Productheaders> -->
         <!-- 商品一覧 -->
-        <Product></Product>
+        <!-- <Product></Product> -->
         <!-- コンポーネントで渡すものここまで -->
     </div>
 </template>
 <script>
-import Productheaders from "./product-header.vue";
-import Product from "./product.vue";
+//import Productheaders from "./product-header.vue";
+//import Product from "./product.vue";
 export default {
     props: ["products"], //main.vueからデータの中身が入っている。
 
     //子コンポーネントを登録する
-    components: {
-        Productheaders,
-        Product,
-    },
     //コンポーネントが持つデータ
     data: function () {
         return {

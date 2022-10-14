@@ -5434,18 +5434,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _product_header_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./product-header.vue */ "./resources/js/shopper/productlist/component/product-header.vue");
-/* harmony import */ var _product_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./product.vue */ "./resources/js/shopper/productlist/component/product.vue");
-
-
+//import Productheaders from "./product-header.vue";
+//import Product from "./product.vue";
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ["products"],
   //main.vueからデータの中身が入っている。
   //子コンポーネントを登録する
-  components: {
-    Productheaders: _product_header_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
-    Product: _product_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
-  },
   //コンポーネントが持つデータ
   data: function data() {
     return {
@@ -6015,7 +6009,7 @@ var render = function render() {
         href: "/haiki/".concat(product.id, "/shopper_productdetail")
       }
     }, [_vm._v("商品の詳細をみる")])])]) : _vm._e()]);
-  }), 0)], 1)]), _vm._v(" "), _c("Productheaders"), _vm._v(" "), _c("Product")], 1);
+  }), 0)], 1)])]);
 };
 
 var staticRenderFns = [];
@@ -29311,40 +29305,6 @@ component.options.__file = "resources/js/footercomponents/incompleteFooterCompon
 
 /***/ }),
 
-/***/ "./resources/js/shopper/productlist/component/product-header.vue":
-/*!***********************************************************************!*\
-  !*** ./resources/js/shopper/productlist/component/product-header.vue ***!
-  \***********************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-var render, staticRenderFns
-var script = {}
-
-
-/* normalize component */
-;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__["default"])(
-  script,
-  render,
-  staticRenderFns,
-  false,
-  null,
-  null,
-  null
-  
-)
-
-component.options.__file = "resources/js/shopper/productlist/component/product-header.vue"
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
-
-/***/ }),
-
 /***/ "./resources/js/shopper/productlist/component/product-list.vue":
 /*!*********************************************************************!*\
   !*** ./resources/js/shopper/productlist/component/product-list.vue ***!
@@ -29380,40 +29340,6 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
 /* hot reload */
 if (false) { var api; }
 component.options.__file = "resources/js/shopper/productlist/component/product-list.vue"
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/shopper/productlist/component/product.vue":
-/*!****************************************************************!*\
-  !*** ./resources/js/shopper/productlist/component/product.vue ***!
-  \****************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-var render, staticRenderFns
-var script = {}
-
-
-/* normalize component */
-;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__["default"])(
-  script,
-  render,
-  staticRenderFns,
-  false,
-  null,
-  null,
-  null
-  
-)
-
-component.options.__file = "resources/js/shopper/productlist/component/product.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
