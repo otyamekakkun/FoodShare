@@ -77,7 +77,6 @@ $product = products::find($id);
         return view('haiki_shopper.shopper_productdetail_display',['products'=>$product]);
     } 
     public function shopper_productdetail_bought (Request $request, $id){
-
         $user = Auth::id();
         $product = products::find($id);//商品専用のid
         $product->user_id = $user;//現在ログインしているコンビニユーザー情報のidをこの中に入れる
@@ -85,13 +84,9 @@ $product = products::find($id);
         $product->bought =1;
         $product->save();
         return redirect('haiki/shopper_mypage');
-    
-    
     }
 
-
     public function shopper_productdetail_cancel (Request $request, $id){
-
         $user = Auth::id();
         $product = products::find($id);//商品専用のid
         $product->user_id = $user;//現在ログインしているコンビニユーザー情報のidをこの中に入れる
@@ -99,12 +94,7 @@ $product = products::find($id);
         $product->bought =0;
         $product->save();
         return redirect('haiki/shopper_mypage');
-    
-    
     }
-    
-
-    
 
 //=================================================ここまで
 
@@ -358,21 +348,7 @@ public function userjson(){
 return response()->json($user);
 }
 
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
 
 
 //=========================================================json形式で渡すのここまで。

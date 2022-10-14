@@ -79,19 +79,6 @@
 </form>
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <footer-component></footer-component>
 </div> 
 {{-- 上のdivはコンポーネントを囲むdiv --}}
