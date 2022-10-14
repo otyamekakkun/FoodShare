@@ -27,13 +27,11 @@
 /*
 * 1 footerを作るsassのファイルを読み込む 
 * 2 headerを作るsassのファイルを読み込む
-* 3 _mainファイルを作る（改訂あり)
-* 4 _sidebarファイルを作る
+* 3 _sidebarファイルを作る
 */
 @import "layout/_footer"; //....................1
 @import "layout/_header"; //....................2
-@import "layout/_main"; //....................3
-@import "layout/_sidebar"; //....................4
+@import "layout/_sidebar"; //....................3
 
 @import "layout/other/login";
 @import "layout/other/register";
@@ -41,6 +39,8 @@
 @import "layout/staff/staffprofile";
 @import "layout/staff/staff_exhibitproduct";
 @import "layout/staff/staff_exhibitlist";
+@import "layout/staff/staff_buyproductlist";
+
 @import "layout/staff/staff_productdetail";
 
 @import "layout/shopper/shopper_profile";

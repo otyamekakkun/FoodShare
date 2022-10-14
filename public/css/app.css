@@ -410,8 +410,7 @@ a {
 /*
 * 1 footerを作るsassのファイルを読み込む 
 * 2 headerを作るsassのファイルを読み込む
-* 3 _mainファイルを作る（改訂あり)
-* 4 _sidebarファイルを作る
+* 3 _sidebarファイルを作る
 */
 .l-footerincomplete {
   position: fixed;
@@ -504,26 +503,6 @@ a {
   background: #b2d142;
   box-shadow: 1px 1px 1px 1px orange;
   transform: translateY(-2px);
-}
-
-.l-shopperproductlist {
-  background: white;
-  width: 90%;
-  height: 700px;
-  margin: 30px;
-}
-
-.l-shopperproductlist__area {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 30px;
-}
-
-.l-shopperproductlist__area__photo {
-  background: red;
-  width: 29%;
-  height: 120px;
-  margin: 15px;
 }
 
 .l-staffmypage__side {
