@@ -851,40 +851,17 @@ a {
   }
 }
 
-.a {
-  background: white;
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 20px;
-  width: 80%;
-  height: 1400px;
-}
-
-.b {
-  background: red;
-  padding: 30px;
-  width: 40%;
-  height: 200px;
-}
-
-.c {
-  background: #b2d142;
-}
-
-.d {
-  background: cyan;
-}
-
-.e {
-  background: green;
-}
-
 .l-staffmypage__side {
   width: 25%;
   height: 500px;
   margin: 30px;
   background: white;
+}
+
+.l-login {
+  width: 100%;
+  height: 500px;
+  background: #faf9f5;
 }
 
 /*

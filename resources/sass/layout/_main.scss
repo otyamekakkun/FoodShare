@@ -392,33 +392,3 @@
         margin: auto;
     }
 }
-
-//============================
-//モデル
-//===================
-
-.a {
-    background: white;
-    display: block;
-    //中央に要素を寄せるときはこれを用いる
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 20px;
-    width: 80%;
-    height: 1400px;
-}
-.b {
-    background: red;
-    padding: 30px;
-    width: 40%;
-    height: 200px;
-}
-.c {
-    background: #b2d142;
-}
-.d {
-    background: cyan;
-}
-.e {
-    background: green;
-}
