@@ -4,22 +4,27 @@
         <main>
             <div class="l-exhibitproductlist">
                 <div>
-                    <li v-for="item in getItems">
+                    <ul v-for="item in getItems">
                         <img v-bind:src="item.img_path" width="25%" />
-                        商品名:{{ item.product_name }}お値段.{{ item.price }}円.
-
-                        <button>
-                            <a v-bind:href="`${item.id}}/staff_productdetail`"
-                                >詳細にいく</a
-                            >
-                        </button>
-
-                        <button>
-                            <a v-bind:href="`${item.id}}/staff_productedit`"
-                                >商品を編集する</a
-                            >
-                        </button>
-                    </li>
+                        <li>商品No.{{ item.id }}</li>
+                        <li>商品名:{{ item.product_name }}</li>
+                        <li>お値段:{{ item.price }}円.</li>
+                        <li>
+                            <button>
+                                <a
+                                    v-bind:href="`${item.id}}/staff_productdetail`"
+                                    >詳細にいく</a
+                                >
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <a v-bind:href="`${item.id}}/staff_productedit`"
+                                    >商品を編集する</a
+                                >
+                            </button>
+                        </li>
+                    </ul>
                     <vuejs-paginate
                         :page-count="getPaginateCount"
                         :prev-text="'<'"
@@ -42,6 +47,8 @@
     </div>
 </template>
 <script>
+//axiosはデータベースの情報を取得する
+//vue-js-paginateはvue側で簡単にページネーションを実装するためのライブラリ。
 import axios from "axios";
 import VueJsPaginate from "vuejs-paginate";
 
@@ -59,9 +66,7 @@ export default {
         }
     },
     computed: {
-        /*
-getItemsはページネーションの算出を行う。１ページ毎に10カラム取得できるようにする
-*/
+        //getItemsはページネーションの算出を行う。１ページ毎に10カラム取得できるようにする
         getItems: function () {
             let start = (this.currentPage - 1) * this.perPage;
             let end = this.currentPage * this.perPage;

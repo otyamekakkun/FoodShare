@@ -5317,6 +5317,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var vuejs_paginate__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuejs-paginate */ "./node_modules/vuejs-paginate/dist/index.js");
 /* harmony import */ var vuejs_paginate__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vuejs_paginate__WEBPACK_IMPORTED_MODULE_1__);
+//axiosはデータベースの情報を取得する
+//vue-js-paginateはvue側で簡単にページネーションを実装するためのライブラリ。
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -5334,9 +5336,7 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   computed: {
-    /*
-    getItemsはページネーションの算出を行う。１ページ毎に10カラム取得できるようにする
-    */
+    //getItemsはページネーションの算出を行う。１ページ毎に10カラム取得できるようにする
     getItems: function getItems() {
       var start = (this.currentPage - 1) * this.perPage;
       var end = this.currentPage * this.perPage;
@@ -5774,20 +5774,20 @@ var render = function render() {
   }, [_vm._v("コンビニ側が出品した商品の一覧のページです")]), _vm._v(" "), _c("main", [_c("div", {
     staticClass: "l-exhibitproductlist"
   }, [_c("div", [_vm._l(_vm.getItems, function (item) {
-    return _c("li", [_c("img", {
+    return _c("ul", [_c("img", {
       attrs: {
         src: item.img_path,
         width: "25%"
       }
-    }), _vm._v("\n                    商品名:" + _vm._s(item.product_name) + "お値段." + _vm._s(item.price) + "円.\n\n                    "), _c("button", [_c("a", {
+    }), _vm._v(" "), _c("li", [_vm._v("商品No." + _vm._s(item.id))]), _vm._v(" "), _c("li", [_vm._v("商品名:" + _vm._s(item.product_name))]), _vm._v(" "), _c("li", [_vm._v("お値段:" + _vm._s(item.price) + "円.")]), _vm._v(" "), _c("li", [_c("button", [_c("a", {
       attrs: {
         href: "".concat(item.id, "}/staff_productdetail")
       }
-    }, [_vm._v("詳細にいく")])]), _vm._v(" "), _c("button", [_c("a", {
+    }, [_vm._v("詳細にいく")])])]), _vm._v(" "), _c("li", [_c("button", [_c("a", {
       attrs: {
         href: "".concat(item.id, "}/staff_productedit")
       }
-    }, [_vm._v("商品を編集する")])])]);
+    }, [_vm._v("商品を編集する")])])])]);
   }), _vm._v(" "), _c("vuejs-paginate", {
     attrs: {
       "page-count": _vm.getPaginateCount,
