@@ -26,7 +26,7 @@
         </li>
     </div>
 </template>
-
+<!--  
 <template>
     <div id="app" class="container-fluid">
         <div>
@@ -63,16 +63,12 @@
         </div>
     </div>
 </template>
-
+-->
 <script>
 import axios from "axios";
-import VueJsPaginate from "vuejs-paginate";
 
 export default {
     props: ["pro"],
-    components: {
-        "vuejs-paginate": VueJsPaginate,
-    },
 
     data: function () {
         {
@@ -93,6 +89,7 @@ export default {
 コンポーネントのpropsでデータを渡す処理をすれば良い
 
  -->
+<!-- 
 <script>
 import VueJsPaginate from "vuejs-paginate";
 
@@ -132,4 +129,4 @@ export default {
     },
 };
 </script>
-</script>
+</script> -->
