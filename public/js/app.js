@@ -5773,8 +5773,12 @@ var render = function render() {
     staticClass: "c-title"
   }, [_vm._v("コンビニ側が出品した商品の一覧のページです")]), _vm._v(" "), _c("main", [_c("div", {
     staticClass: "l-exhibitproductlist"
-  }, [_c("div", [_vm._l(_vm.getItems, function (item) {
-    return _c("ul", [_c("img", {
+  }, [_c("div", {
+    staticClass: "c-productlist"
+  }, [_vm._l(_vm.getItems, function (item) {
+    return _c("ul", {
+      staticClass: "c-productlist__items"
+    }, [_c("img", {
       attrs: {
         src: item.img_path,
         width: "25%"

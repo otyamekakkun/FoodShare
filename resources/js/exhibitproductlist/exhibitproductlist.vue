@@ -3,8 +3,8 @@
         <h1 class="c-title">コンビニ側が出品した商品の一覧のページです</h1>
         <main>
             <div class="l-exhibitproductlist">
-                <div>
-                    <ul v-for="item in getItems">
+                <div class="c-productlist">
+                    <ul class="c-productlist__items" v-for="item in getItems">
                         <img v-bind:src="item.img_path" width="25%" />
                         <li>商品No.{{ item.id }}</li>
                         <li>商品名:{{ item.product_name }}</li>
