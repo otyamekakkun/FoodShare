@@ -24,6 +24,26 @@
                 </div>
             </div>
         </li>
+
+        <div>
+            <!-- ページネーション -->
+            <vuejs-paginate
+                :page-count="getPaginateCount"
+                :prev-text="'<'"
+                :next-text="'>'"
+                :click-handler="paginateClickCallback"
+                :container-class="'pagination justify-content-center'"
+                :page-class="'page-item'"
+                :page-link-class="'page-link'"
+                :prev-class="'page-item'"
+                :prev-link-class="'page-link'"
+                :next-class="'page-item'"
+                :next-link-class="'page-link'"
+                :first-last-button="true"
+                :first-button-text="'<<'"
+                :last-button-text="'>>'"
+            ></vuejs-paginate>
+        </div>
     </div>
 </template>
 <script>
@@ -32,6 +52,9 @@ import VueJsPaginate from "vuejs-paginate";
 
 export default {
     props: ["pro"],
+    components: {
+        "vuejs-paginate": VueJsPaginate,
+    },
 
     data: function () {
         {

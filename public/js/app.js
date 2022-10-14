@@ -5653,6 +5653,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ["pro"],
+  components: {
+    "vuejs-paginate": (vuejs_paginate__WEBPACK_IMPORTED_MODULE_1___default())
+  },
   data: function data() {
     {
       return {
@@ -6235,7 +6238,7 @@ var render = function render() {
     attrs: {
       id: "app"
     }
-  }, _vm._l(_vm.products, function (item) {
+  }, [_vm._l(_vm.products, function (item) {
     return _c("li", [_c("div", {
       staticClass: "c-productlist"
     }, [_c("img", {
@@ -6254,7 +6257,24 @@ var render = function render() {
         href: "haiki/".concat(item.id, "}/staff_productedit")
       }
     }, [_vm._v("商品を編集する")])]), _vm._v(" "), item.bought >= 1 ? _c("div", [_c("h1", [_vm._v("購入済み")])]) : _vm._e()])])]);
-  }), 0);
+  }), _vm._v(" "), _c("div", [_c("vuejs-paginate", {
+    attrs: {
+      "page-count": _vm.getPaginateCount,
+      "prev-text": "<",
+      "next-text": ">",
+      "click-handler": _vm.paginateClickCallback,
+      "container-class": "pagination justify-content-center",
+      "page-class": "page-item",
+      "page-link-class": "page-link",
+      "prev-class": "page-item",
+      "prev-link-class": "page-link",
+      "next-class": "page-item",
+      "next-link-class": "page-link",
+      "first-last-button": true,
+      "first-button-text": "<<",
+      "last-button-text": ">>"
+    }
+  })], 1)], 2);
 };
 
 var staticRenderFns = [];
