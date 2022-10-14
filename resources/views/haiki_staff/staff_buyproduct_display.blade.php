@@ -66,23 +66,7 @@
 <header>
     @include('rest.staff.header')
 </header>
-
 <body>
-<h1 class="c-title">自分自身が商品を出品して購入されたものを表示する
-</h1>
-<main>
-    <div class="l-staffmypage">
-     <div class="l-staffmypage__bought">
-        <h1>ご購入された商品一覧</h1>
-</div>
-
-    <div class="l-staffmypage__side">
-    <p>メニュー</p>
-    <a href="{{route('haiki_shopper.staff_profile_display')}}"><button>コンビニプロフィール編集画面</a></button>
-    <a href="{{route('haiki_shopper.staff_exhibitproduct_display')}}"><button>商品を出品する</a></button>
-    </div>
-    </div>
-    </main>
 <div id="app">
     <bought-componennt></bought-componennt>
 <footer-component></footer-component>
