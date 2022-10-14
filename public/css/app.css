@@ -984,18 +984,13 @@ a {
 }
 
 /*
-* かなりの可能性で書き換える可能性があるので9/1４時点ではここまでにしとく
-*
+* まだ記載なし
 */
 /*
 * かなりの可能性で書き換える可能性があるので9/1４時点ではここまでにしとく
 *
 *
 */
-.u-hidden {
-  display: none;
-}
-
 .u-space {
   padding: 10px;
 }
@@ -1004,4 +999,8 @@ a {
   text-align: center;
   margin-bottom: -20px;
   margin-left: auto;
+}
+
+.u-hidden {
+  display: none;
 }
