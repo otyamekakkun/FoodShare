@@ -36,7 +36,7 @@
                                 >
                                     <a
                                         v-bind:href="`${item.id}}/staff_productdetail`"
-                                        >詳細にいく</a
+                                        >詳細を見る</a
                                     >
                                 </button>
                                 <div v-if="item.bought <= 0">

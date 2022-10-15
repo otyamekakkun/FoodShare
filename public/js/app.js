@@ -5803,7 +5803,7 @@ var render = function render() {
       attrs: {
         href: "".concat(item.id, "}/staff_productdetail")
       }
-    }, [_vm._v("詳細にいく")])]), _vm._v(" "), item.bought <= 0 ? _c("div", [_c("button", {
+    }, [_vm._v("詳細を見る")])]), _vm._v(" "), item.bought <= 0 ? _c("div", [_c("button", {
       staticClass: "c-productlist__items__bottom__area"
     }, [_c("a", {
       attrs: {

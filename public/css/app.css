@@ -662,18 +662,6 @@ a {
   }
 }
 
-.l-shopperproductlist {
-  display: block;
-  background: #f6f5f4;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 20px;
-  margin-bottom: 40px;
-  border: solid #174113;
-  border-radius: 10px;
-  width: 90%;
-}
-
 .l-staffproductdetail {
   background: white;
   display: block;
