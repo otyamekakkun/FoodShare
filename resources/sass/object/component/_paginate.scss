@@ -1,22 +1,35 @@
 //===============================================
-//ページネーションデザイン設計を行う(_paginate.scss)
+//ページネーションデザイン設計を行う(_paginate.scss) staff_exhibitproductlist
 //===============================================
 
 .c-paginate {
     display: flex;
     justify-content: center;
-    background: red;
+    // background: red;
     width: 100%;
     margin: 100px;
+    // font-size: size(l);
 }
 
 .page-item {
     display: inline;
     text-align: center;
     width: 100%;
-    background: cyan;
+
+    padding: size(m);
+    margin: size(m);
+    font-size: size(m);
+    border: solid size(sssss);
+    border-radius: size(sss);
+    //font-family: "Permanent Marker", cursive;
+    background: rgb(238, 238, 238);
+    transition: all 0.5s;
+    &:hover {
+        background: orange;
+    }
 }
 
 .page-link {
-    color: red;
+    //color: black;
+    font-size: size(l);
 }

@@ -45,9 +45,19 @@
     &__title {
         color: red;
         position: relative;
-        font-size: size(l);
+        background: white;
+        border: solid 1px orange;
+        border-radius: size(sss);
+        text-align: center;
+        opacity: 0.8;
+        font-size: size(xxl);
         top: -170px;
-        left: 230px;
+        // left: 200px;
+        margin-left: auto;
+        margin-right: auto;
+
+        width: 50%;
+        font-family: "Permanent Marker", cursive;
     }
 }
 .c-productlist__items__img2 {

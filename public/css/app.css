@@ -965,7 +965,6 @@ a {
 .c-paginate {
   display: flex;
   justify-content: center;
-  background: red;
   width: 100%;
   margin: 100px;
 }
@@ -974,11 +973,20 @@ a {
   display: inline;
   text-align: center;
   width: 100%;
-  background: cyan;
+  padding: 20px;
+  margin: 20px;
+  font-size: 20px;
+  border: solid 2px;
+  border-radius: 5px;
+  background: rgb(238, 238, 238);
+  transition: all 0.5s;
+}
+.page-item:hover {
+  background: orange;
 }
 
 .page-link {
-  color: red;
+  font-size: 25px;
 }
 
 .c-productlist {
@@ -1021,9 +1029,17 @@ a {
 .c-productlist__items__img__title {
   color: red;
   position: relative;
-  font-size: 25px;
+  background: white;
+  border: solid 1px orange;
+  border-radius: 5px;
+  text-align: center;
+  opacity: 0.8;
+  font-size: 35px;
   top: -170px;
-  left: 230px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  font-family: "Permanent Marker", cursive;
 }
 
 .c-productlist__items__img2 {
