@@ -8,7 +8,8 @@
     </header>
 
 <h1>
-    haiki share スタッフ専用ページへようこそ！！
+ {{$admin->convinience_name}}所属
+ {{$admin->name}}様haikishare専用ページ
 </h1>
 <div id="app">
 <main>
@@ -32,7 +33,7 @@
 <div class="l-staffmypage__bought">
         <h1>ご購入された商品一覧</h1>
         <a href="{{route('haiki_shopper.staff_buyproduct_display')}}"><button>購入された商品を全権表示</a></button>
-<staffmypagebought-componennt :product_img="'{{$products}}'"></staffmypagebought-componennt>
+<staffmypagebought-componennt></staffmypagebought-componennt>
 </div>
 </main>
 <footer-component></footer-component>

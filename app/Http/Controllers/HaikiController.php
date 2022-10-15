@@ -262,9 +262,17 @@ public function staff_exhibitproduct_json(){
 //=======================================================================
 
 public function admin(){
+    /*
     $id = Auth::guard('admin')->id();
     $product = products::where("admin_id",$id)->get();
     return view('admin',['products'=>$product]);
+*/
+
+    $id = Auth::guard('admin')->id();
+    $admin = DB::table('admins')->find($id);
+    return view('admin',['admin'=>$admin]);//...................画面表示するもの
+
+
 }
 /*
 
