@@ -311,15 +311,6 @@ return redirect('admin')->with('flash_message', __('Registered.'));//3
 public function index1(Request $request){
     // $drill = products::all();
 $drill = DB::table('products')->get();
-
-
-
-//->leftJoin('admins','admin_id','=', 'id')->get()
-
-
-
-
-    
     return response()->json($drill);
     //index1の内容は基本的にファイルの中に入っているもの全てを取得する
 }
@@ -330,7 +321,7 @@ public function index2(Request $request){
 }
 
 
-//今ログインしているものを取得してくるjson形式
+//管理者としてログインした時に、管理者専用の情報を取得するjson形式のデータベース
 public function productjson(){
     $id = Auth::guard('admin')->id();
     $product = products::where("admin_id",$id)->get();

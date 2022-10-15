@@ -178,6 +178,8 @@ Route::get('/admin', [App\Http\Controllers\HaikiController::class, 'admin'])->mi
 //例えばこのurlをグチャグチャにする。
 Route::get('/haiki/index1',[HaikiController::class, 'index1'])->name('drills.index1');
 Route::get('/haiki/index2',[HaikiController::class, 'index2'])->name('drills.index2');
+
+//管理者としてログインした時に、管理者専用の情報を取得するjson形式のデータベース
 Route::get('/haiki/index3',[HaikiController::class, 'productjson'])->name('product.json');
 
 
