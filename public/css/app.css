@@ -1017,16 +1017,18 @@ a {
 
 .c-productlist__items__img2 {
   width: 80%;
+  display: block;
+  background-attachment: fixed;
+  text-align: center;
   margin-left: auto;
   margin-right: auto;
   background-attachment: fixed;
 }
 
 .c-productlist__items__list {
-  background: red;
   text-align: center;
   margin-top: 2px;
-  margin-bottom: 2px;
+  margin-bottom: 35px;
 }
 
 /*
