@@ -5960,7 +5960,7 @@ var render = function render() {
         _vm.budgets = $event.target.value;
       }
     }
-  }), _vm._v("円以内で買えるもの\n            "), _c("p", [_vm._v("有効期限チェック")]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c("input", {
+  }), _vm._v("円以内で買えるもの\n               "), _c("p", [_vm._v("有効期限チェック")]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -5984,7 +5984,19 @@ var render = function render() {
   }), _vm._v(" "), _c("table", _vm._l(_vm.filteredProducts, function (product) {
     return _c("tr", {
       key: product.id
-    }, [product.best_by_date >= _vm.Days2 ? _c("div", [product.bought >= 1 ? _c("div", [_c("td", {
+    }, [product.best_by_date >= _vm.Days2 ? _c("div", [product.bought >= 1 ? _c("div", [_c("img", {
+      staticClass: "c-productlist__items__img",
+      attrs: {
+        src: product.img_path
+      }
+    }), _vm._v(" "), _c("p", {
+      staticClass: "c-productlist__items__img__title"
+    }, [_vm._v("\n                                   購入済み！\n                               ")])]) : _vm._e(), _vm._v(" "), product.bought <= 0 ? _c("div", [_c("img", {
+      staticClass: "c-productlist__items__img2",
+      attrs: {
+        src: product.img_path
+      }
+    })]) : _vm._e(), _vm._v(" "), _c("td", {
       domProps: {
         textContent: _vm._s(product.id)
       }
@@ -5996,7 +6008,7 @@ var render = function render() {
       domProps: {
         textContent: _vm._s(product.price)
       }
-    }), _vm._v("\n                            円\n\n                            "), _c("td", {
+    }), _vm._v("\n                           円\n\n                           "), _c("td", {
       domProps: {
         textContent: _vm._s(product.prefecture)
       }
@@ -6013,7 +6025,7 @@ var render = function render() {
       attrs: {
         href: "/haiki/".concat(product.id, "/shopper_productdetail")
       }
-    }, [_vm._v("商品の詳細をみる")])])]) : _vm._e()]) : _vm._e()]);
+    }, [_vm._v("商品の詳細をみる")])])]) : _vm._e()]);
   }), 0)])])]);
 };
 
@@ -6021,7 +6033,7 @@ var staticRenderFns = [function () {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("p", [_vm._v("\n                ご希望の日付を入力してください"), _c("br"), _vm._v("(入力された日付に対して,"), _c("br"), _vm._v("賞味期限が有効なものだけ表示します)\n            ")]);
+  return _c("p", [_vm._v("\n                   ご希望の日付を入力してください"), _c("br"), _vm._v("(入力された日付に対して,"), _c("br"), _vm._v("賞味期限が有効なものだけ表示します)\n               ")]);
 }];
 render._withStripped = true;
 
@@ -6086,14 +6098,14 @@ var render = function render() {
       staticClass: "c-productlist__items"
     }, [_c("li", {
       staticClass: "c-productlist__items__title"
-    }, [_vm._v("\n                        商品No." + _vm._s(item.id) + "\n                    ")]), _vm._v(" "), item.bought >= 1 ? _c("div", [_c("img", {
+    }, [_vm._v("\n                           商品No." + _vm._s(item.id) + "\n                       ")]), _vm._v(" "), item.bought >= 1 ? _c("div", [_c("img", {
       staticClass: "c-productlist__items__img",
       attrs: {
         src: item.img_path
       }
     }), _vm._v(" "), _c("p", {
       staticClass: "c-productlist__items__img__title"
-    }, [_vm._v("\n                            購入済み！\n                        ")])]) : _vm._e(), _vm._v(" "), _c("div", {
+    }, [_vm._v("\n                               購入済み！\n                           ")])]) : _vm._e(), _vm._v(" "), _c("div", {
       staticClass: "c-productlist__items__list"
     }, [_c("li", [_vm._v("商品名:" + _vm._s(item.product_name))]), _vm._v(" "), _c("li", [_vm._v("お値段:" + _vm._s(item.price) + "円.")]), _vm._v(" "), _c("div", {
       staticClass: "c-productlist__items__bottom"

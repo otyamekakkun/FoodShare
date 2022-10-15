@@ -20,28 +20,91 @@
                     <tr v-for="product in filteredProducts" :key="product.id">
                         <div v-if="product.best_by_date >= Days2">
                             <div v-if="product.bought >= 1">
-                                <td v-text="product.id"></td>
-                                <td v-text="product.product_name"></td>
-                                <td v-text="product.price"></td>
-                                円
-
-                                <td v-text="product.prefecture"></td>
-                                <td v-text="product.best_by_date"></td>
                                 <img
                                     v-bind:src="product.img_path"
-                                    width="25%"
+                                    class="c-productlist__items__img"
                                 />
-
-                                <button>
-                                    <a
-                                        v-bind:href="`/haiki/${product.id}/shopper_productdetail`"
-                                        >商品の詳細をみる</a
-                                    >
-                                </button>
+                                <p class="c-productlist__items__img__title">
+                                    購入済み！
+                                </p>
                             </div>
+
+                            <div v-if="product.bought <= 0">
+                                <img
+                                    v-bind:src="product.img_path"
+                                    class="c-productlist__items__img2"
+                                />
+                            </div>
+
+                            <td v-text="product.id"></td>
+                            <td v-text="product.product_name"></td>
+                            <td v-text="product.price"></td>
+                            円
+
+                            <td v-text="product.prefecture"></td>
+                            <td v-text="product.best_by_date"></td>
+                            <img v-bind:src="product.img_path" width="25%" />
+
+                            <button>
+                                <a
+                                    v-bind:href="`/haiki/${product.id}/shopper_productdetail`"
+                                    >商品の詳細をみる</a
+                                >
+                            </button>
                         </div>
                     </tr>
                 </table>
+
+                <!--                     <ul class="c-productlist__items" v-for="item in getItems">
+                        購入されたら商品にlabelを付け足す機能
+                        <li class="c-productlist__items__title">
+                            商品No.{{ item.id }}
+                        </li>
+
+                        <div v-if="item.bought >= 1">
+                            <img
+                                v-bind:src="item.img_path"
+                                class="c-productlist__items__img"
+                            />
+                            <p class="c-productlist__items__img__title">
+                                購入済み！
+                            </p>
+                        </div>
+
+                        <div v-if="item.bought <= 0">
+                            <img
+                                v-bind:src="item.img_path"
+                                class="c-productlist__items__img2"
+                            />
+                        </div>
+
+                        <div class="c-productlist__items__list">
+                            <li>商品No.{{ item.id }}</li>
+                            <li>商品名:{{ item.product_name }}</li>
+                            <li>お値段:{{ item.price }}円.</li>
+                            <div class="c-productlist__items__bottom">
+                                <button
+                                    class="c-productlist__items__bottom__area"
+                                >
+                                    <a
+                                        v-bind:href="`${item.id}}/staff_productdetail`"
+                                        >詳細にいく</a
+                                    >
+                                </button>
+                                <div v-if="item.bought <= 0">
+                                    <button
+                                        class="c-productlist__items__bottom__area"
+                                    >
+                                        <a
+                                            v-bind:href="`${item.id}}/staff_productedit`"
+                                            >商品を編集</a
+                                        >
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </ul>
+ -->
             </div>
         </div>
     </div>
