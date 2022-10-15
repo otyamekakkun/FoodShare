@@ -790,26 +790,14 @@ a {
 
 .l-productdetail {
   background: white;
-  margin-right: 80px;
-  margin-left: 80px;
-  width: 90%;
-  height: 600px;
-}
-.l-productdetail__area {
-  display: flex;
-}
-.l-productdetail__area__photo {
-  background: cyan;
-  margin: 30px;
-  height: 400px;
-  width: 55%;
-}
-.l-productdetail__area__menu {
-  background: red;
-  color: white;
-  height: 400px;
-  width: 35%;
-  margin: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  border: solid 2px;
+  border-radius: 20px;
+  width: 85%;
+  height: 900px;
 }
 
 .l-shopperproductlist {

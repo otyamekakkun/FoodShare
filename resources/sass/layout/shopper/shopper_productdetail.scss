@@ -1,28 +1,14 @@
 //=============================================
-//商品の詳細画面の画面モック shopper_productdetail
+//商品の詳細画面の画面モック shopper_productdetail staff_productdetail
 //=============================================
 .l-productdetail {
     background: white;
-    margin-right: 80px;
-    margin-left: 80px;
-    width: 90%;
-    height: 600px;
-
-    &__area {
-        display: flex;
-
-        &__photo {
-            background: cyan;
-            margin: 30px;
-            height: 400px;
-            width: 55%;
-        }
-        &__menu {
-            background: red;
-            color: white;
-            height: 400px;
-            width: 35%;
-            margin: 30px;
-        }
-    }
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: size(xxl);
+    margin-bottom: size(xxl);
+    border: solid size(sssss);
+    border-radius: size(m);
+    width: 85%;
+    height: 900px;
 }
