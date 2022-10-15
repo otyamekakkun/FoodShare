@@ -5981,11 +5981,10 @@ var render = function render() {
         _vm.Days2 = $event.target.value;
       }
     }
-  }), _vm._v(" "), _c("ul", {
-    staticClass: "c-productlist__items"
-  }, _vm._l(_vm.filteredProducts, function (product) {
-    return _c("li", {
-      key: product.id
+  }), _vm._v(" "), _vm._l(_vm.filteredProducts, function (product) {
+    return _c("ul", {
+      key: product.id,
+      staticClass: "c-productlist__items"
     }, [product.best_by_date >= _vm.Days2 ? _c("div", [product.bought >= 1 ? _c("div", [_c("img", {
       staticClass: "c-productlist__items__img",
       attrs: {
@@ -5993,7 +5992,7 @@ var render = function render() {
       }
     }), _vm._v(" "), _c("p", {
       staticClass: "c-productlist__items__img__title"
-    }, [_vm._v("\n                                   購入済み！\n                               ")])]) : _vm._e(), _vm._v(" "), product.bought <= 0 ? _c("div", [_c("img", {
+    }, [_vm._v("\n                               購入済み！\n                           ")])]) : _vm._e(), _vm._v(" "), product.bought <= 0 ? _c("div", [_c("img", {
       staticClass: "c-productlist__items__img2",
       attrs: {
         src: product.img_path
@@ -6009,7 +6008,7 @@ var render = function render() {
         href: "".concat(product.id, "}/shopper_productdetail")
       }
     }, [_vm._v("詳細にいく")])])])])]) : _vm._e()]);
-  }), 0)])])]);
+  })], 2)])]);
 };
 
 var staticRenderFns = [function () {

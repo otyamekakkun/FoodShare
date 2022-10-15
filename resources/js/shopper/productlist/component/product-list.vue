@@ -16,43 +16,45 @@
                     class="l-productexhibitform__typo3"
                     v-model="Days2"
                 />
-                <ul class="c-productlist__items">
-                    <li v-for="product in filteredProducts" :key="product.id">
-                        <div v-if="product.best_by_date >= Days2">
-                            <div v-if="product.bought >= 1">
-                                <img
-                                    v-bind:src="product.img_path"
-                                    class="c-productlist__items__img"
-                                />
-                                <p class="c-productlist__items__img__title">
-                                    購入済み！
-                                </p>
-                            </div>
+                <ul
+                    class="c-productlist__items"
+                    v-for="product in filteredProducts"
+                    :key="product.id"
+                >
+                    <div v-if="product.best_by_date >= Days2">
+                        <div v-if="product.bought >= 1">
+                            <img
+                                v-bind:src="product.img_path"
+                                class="c-productlist__items__img"
+                            />
+                            <p class="c-productlist__items__img__title">
+                                購入済み！
+                            </p>
+                        </div>
 
-                            <div v-if="product.bought <= 0">
-                                <img
-                                    v-bind:src="product.img_path"
-                                    class="c-productlist__items__img2"
-                                />
-                            </div>
+                        <div v-if="product.bought <= 0">
+                            <img
+                                v-bind:src="product.img_path"
+                                class="c-productlist__items__img2"
+                            />
+                        </div>
 
-                            <div class="c-productlist__items__list">
-                                <li>商品No.{{ product.id }}</li>
-                                <li>商品名:{{ product.product_name }}</li>
-                                <li>お値段:{{ product.price }}円.</li>
-                                <div class="c-productlist__items__bottom">
-                                    <button
-                                        class="c-productlist__items__bottom__area"
+                        <div class="c-productlist__items__list">
+                            <li>商品No.{{ product.id }}</li>
+                            <li>商品名:{{ product.product_name }}</li>
+                            <li>お値段:{{ product.price }}円.</li>
+                            <div class="c-productlist__items__bottom">
+                                <button
+                                    class="c-productlist__items__bottom__area"
+                                >
+                                    <a
+                                        v-bind:href="`${product.id}}/shopper_productdetail`"
+                                        >詳細にいく</a
                                     >
-                                        <a
-                                            v-bind:href="`${product.id}}/shopper_productdetail`"
-                                            >詳細にいく</a
-                                        >
-                                    </button>
-                                </div>
+                                </button>
                             </div>
                         </div>
-                    </li>
+                    </div>
                 </ul>
 
                 <!--                     <ul class="c-productlist__items" v-for="item in getItems">
