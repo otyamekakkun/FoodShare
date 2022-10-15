@@ -999,9 +999,9 @@ a {
     /*
     */
     text-align: center;
-    font-size: 25px;
+    font-size: 15px;
     padding: 3px;
-    margin: 10px;
+    margin: 5px;
     margin: auto;
     background: #f6f5f4;
     border: solid black;
@@ -1019,7 +1019,7 @@ a {
   .page-link {
     background: #f6f5f4;
     border: solid black;
-    font-size: 25px;
+    font-size: 13px;
   }
 }
 
