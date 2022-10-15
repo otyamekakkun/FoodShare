@@ -1021,7 +1021,9 @@ a {
 .c-productlist__items__img__title {
   color: red;
   position: relative;
-  top: -50px;
+  font-size: 25px;
+  top: -170px;
+  left: 230px;
 }
 
 .c-productlist__items__img2 {
