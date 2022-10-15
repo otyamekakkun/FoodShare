@@ -16,7 +16,7 @@
                     class="l-productexhibitform__typo3"
                     v-model="Days2"
                 />
-                <div class="l-exhibitproductlist">
+                <div class="l-shopperproductlist">
                     <div class="c-productlist">
                         <ul
                             v-if="product.best_by_date >= Days2"
