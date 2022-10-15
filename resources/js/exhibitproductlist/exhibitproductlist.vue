@@ -5,10 +5,23 @@
             <div class="l-exhibitproductlist">
                 <div class="c-productlist">
                     <ul class="c-productlist__items" v-for="item in getItems">
-                        <img
-                            v-bind:src="item.img_path"
-                            class="c-productlist__items__img"
-                        />
+                        <div v-if="item.bought >= 1">
+                            <img
+                                v-bind:src="item.img_path"
+                                class="c-productlist__items__img"
+                            />
+                            <p class="c-productlist__items__img__title">
+                                購入されました！
+                            </p>
+                        </div>
+
+                        <div v-if="item.bought <= 0">
+                            <img
+                                v-bind:src="item.img_path"
+                                class="c-productlist__items__img2"
+                            />
+                        </div>
+
                         <li>商品No.{{ item.id }}</li>
                         <li>商品名:{{ item.product_name }}</li>
                         <li>お値段:{{ item.price }}円.</li>

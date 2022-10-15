@@ -885,6 +885,19 @@ a {
 
 .c-productlist__items__img {
   width: 80%;
+  background-attachment: fixed;
+  opacity: 0.3;
+  display: block;
+}
+.c-productlist__items__img__title {
+  color: red;
+  position: relative;
+  top: -50px;
+}
+
+.c-productlist__items__img2 {
+  width: 80%;
+  background-attachment: fixed;
 }
 
 .c-productlist__sentence {

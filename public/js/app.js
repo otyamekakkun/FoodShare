@@ -5778,12 +5778,19 @@ var render = function render() {
   }, [_vm._l(_vm.getItems, function (item) {
     return _c("ul", {
       staticClass: "c-productlist__items"
-    }, [_c("img", {
+    }, [item.bought >= 1 ? _c("div", [_c("img", {
       staticClass: "c-productlist__items__img",
       attrs: {
         src: item.img_path
       }
-    }), _vm._v(" "), _c("li", [_vm._v("商品No." + _vm._s(item.id))]), _vm._v(" "), _c("li", [_vm._v("商品名:" + _vm._s(item.product_name))]), _vm._v(" "), _c("li", [_vm._v("お値段:" + _vm._s(item.price) + "円.")]), _vm._v(" "), _c("li", [_c("button", [_c("a", {
+    }), _vm._v(" "), _c("p", {
+      staticClass: "c-productlist__items__img__title"
+    }, [_vm._v("\n                            購入されました！\n                        ")])]) : _vm._e(), _vm._v(" "), item.bought <= 0 ? _c("div", [_c("img", {
+      staticClass: "c-productlist__items__img2",
+      attrs: {
+        src: item.img_path
+      }
+    })]) : _vm._e(), _vm._v(" "), _c("li", [_vm._v("商品No." + _vm._s(item.id))]), _vm._v(" "), _c("li", [_vm._v("商品名:" + _vm._s(item.product_name))]), _vm._v(" "), _c("li", [_vm._v("お値段:" + _vm._s(item.price) + "円.")]), _vm._v(" "), _c("li", [_c("button", [_c("a", {
       attrs: {
         href: "".concat(item.id, "}/staff_productdetail")
       }
