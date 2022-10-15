@@ -983,7 +983,7 @@ a {
   width: 100%;
   margin: 100px;
 }
-@media screen and (max-width: 414px) {
+@media screen and (max-width:980px) {
   .c-paginate {
     display: flex;
     justify-content: center;
@@ -992,6 +992,14 @@ a {
   }
 }
 @media screen and (max-width: 720px) {
+  .c-paginate {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (max-width: 414px) {
   .c-paginate {
     display: flex;
     justify-content: center;
@@ -1011,6 +1019,14 @@ a {
   border-radius: 5px;
   background: rgb(238, 238, 238);
   transition: all 0.5s;
+}
+@media screen and (max-width:980px) {
+  .page-item {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    margin: 5px;
+  }
 }
 @media screen and (max-width: 720px) {
   .page-item {
