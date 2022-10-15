@@ -1,0 +1,42 @@
+//============================================================
+//_productlist 出品した商品リスト、購入された商品リストを記述するもの
+//
+//=============================================================
+.c-productlist {
+    // background: red;
+    //ここはgridとして残しておく。
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    //  text-align: center;
+    height: 100px;
+    background: white;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: size(l);
+
+    //background: green;
+}
+
+.c-productlist__items {
+    width: 50%;
+    //  background: red;
+}
+.c-productlist__items__img {
+    width: 80%;
+    background-attachment: fixed;
+    opacity: 0.3;
+    display: block;
+
+    &__title {
+        color: red;
+        position: relative;
+        top: -50px;
+    }
+}
+.c-productlist__items__img2 {
+    width: 80%;
+    background-attachment: fixed;
+}
