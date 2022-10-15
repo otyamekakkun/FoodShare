@@ -26,15 +26,19 @@
                             <li>商品No.{{ item.id }}</li>
                             <li>商品名:{{ item.product_name }}</li>
                             <li>お値段:{{ item.price }}円.</li>
-                            <div class="c-productlist__items">
-                                <button>
+                            <div class="c-productlist__items__bottom">
+                                <button
+                                    class="c-productlist__items__bottom__area"
+                                >
                                     <a
                                         v-bind:href="`${item.id}}/staff_productdetail`"
                                         >詳細にいく</a
                                     >
                                 </button>
                                 <div v-if="item.bought <= 0">
-                                    <button>
+                                    <button
+                                        class="c-productlist__items__bottom__area"
+                                    >
                                         <a
                                             v-bind:href="`${item.id}}/staff_productedit`"
                                             >商品を編集する</a

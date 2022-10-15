@@ -62,3 +62,21 @@
     margin-bottom: size(xxl);
     background: white;
 }
+
+//==============================
+//ボタン処理
+//==============================
+.c-productlist__items__bottom {
+    //background: red;
+    margin-top: size(l);
+    font-size: size(l);
+}
+.c-productlist__items__bottom__area {
+    //background: green;
+    //  display: flex;
+    // justify-content: center;
+    text-align: center;
+    width: 75%;
+    border-radius: 5px;
+    margin-bottom: size(m);
+}
