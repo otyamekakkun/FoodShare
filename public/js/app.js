@@ -5996,36 +5996,7 @@ var render = function render() {
       attrs: {
         src: product.img_path
       }
-    })]) : _vm._e(), _vm._v(" "), _c("td", {
-      domProps: {
-        textContent: _vm._s(product.id)
-      }
-    }), _vm._v(" "), _c("td", {
-      domProps: {
-        textContent: _vm._s(product.product_name)
-      }
-    }), _vm._v(" "), _c("td", {
-      domProps: {
-        textContent: _vm._s(product.price)
-      }
-    }), _vm._v("\n                           円\n\n                           "), _c("td", {
-      domProps: {
-        textContent: _vm._s(product.prefecture)
-      }
-    }), _vm._v(" "), _c("td", {
-      domProps: {
-        textContent: _vm._s(product.best_by_date)
-      }
-    }), _vm._v(" "), _c("img", {
-      attrs: {
-        src: product.img_path,
-        width: "25%"
-      }
-    }), _vm._v(" "), _c("button", [_c("a", {
-      attrs: {
-        href: "/haiki/".concat(product.id, "/shopper_productdetail")
-      }
-    }, [_vm._v("商品の詳細をみる")])])]) : _vm._e()]);
+    })]) : _vm._e()]) : _vm._e()]);
   }), 0)])])]);
 };
 

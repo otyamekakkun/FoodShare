@@ -35,22 +35,6 @@
                                     class="c-productlist__items__img2"
                                 />
                             </div>
-
-                            <td v-text="product.id"></td>
-                            <td v-text="product.product_name"></td>
-                            <td v-text="product.price"></td>
-                            円
-
-                            <td v-text="product.prefecture"></td>
-                            <td v-text="product.best_by_date"></td>
-                            <img v-bind:src="product.img_path" width="25%" />
-
-                            <button>
-                                <a
-                                    v-bind:href="`/haiki/${product.id}/shopper_productdetail`"
-                                    >商品の詳細をみる</a
-                                >
-                            </button>
                         </div>
                     </tr>
                 </table>
