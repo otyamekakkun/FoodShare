@@ -990,11 +990,18 @@ a {
   padding-top: 35px;
 }
 
+.c-productlist__items__title {
+  font-size: 20px;
+  margin-left: 25px;
+  margin-top: 15px;
+}
+
 .c-productlist__items {
-  width: 40%;
+  width: 44%;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 35px;
+  border-radius: 20px;
   background: white;
 }
 
@@ -1041,10 +1048,24 @@ a {
 }
 
 .c-productlist__items__bottom__area {
-  text-align: center;
+  /*
+  レスポンシブ対応させる時はこの値にする
   width: 75%;
   border-radius: 5px;
+  margin-bottom: size(m);
+  */
+  text-align: center;
+  width: 55%;
+  border-radius: 5px;
   margin-bottom: 20px;
+  transition: all 1.2s;
+}
+.c-productlist__items__bottom__area:hover {
+  cursor: pointer;
+  background: #b2d142;
+  box-shadow: 1px 1px 1px 1px orange;
+  transform: translateY(-2px);
+  border: none;
 }
 
 /*
