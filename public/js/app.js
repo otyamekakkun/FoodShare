@@ -6073,18 +6073,40 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", [_vm._l(_vm.getItems, function (item) {
-    return _c("li", [item.bought >= 1 ? _c("div", [_c("img", {
+  return _c("div", {
+    attrs: {
+      id: "app"
+    }
+  }, [_c("main", [_c("div", {
+    staticClass: "l-exhibitproductlist"
+  }, [_c("div", {
+    staticClass: "c-productlist"
+  }, [_vm._l(_vm.getItems, function (item) {
+    return _c("ul", {
+      staticClass: "c-productlist__items"
+    }, [_c("li", {
+      staticClass: "c-productlist__items__title"
+    }, [_vm._v("\n                        商品No." + _vm._s(item.id) + "\n                    ")]), _vm._v(" "), item.bought >= 1 ? _c("div", [_c("img", {
+      staticClass: "c-productlist__items__img",
       attrs: {
-        src: item.img_path,
-        width: "25%"
+        src: item.img_path
       }
-    }), _vm._v("\n            商品名." + _vm._s(item.product_name) + "お値段." + _vm._s(item.price) + "円.\n            "), _c("button", [_c("a", {
+    }), _vm._v(" "), _c("p", {
+      staticClass: "c-productlist__items__img__title"
+    }, [_vm._v("\n                            購入済み！\n                        ")])]) : _vm._e(), _vm._v(" "), _c("div", {
+      staticClass: "c-productlist__items__list"
+    }, [_c("li", [_vm._v("商品名:" + _vm._s(item.product_name))]), _vm._v(" "), _c("li", [_vm._v("お値段:" + _vm._s(item.price) + "円.")]), _vm._v(" "), _c("div", {
+      staticClass: "c-productlist__items__bottom"
+    }, [_c("button", {
+      staticClass: "c-productlist__items__bottom__area"
+    }, [_c("a", {
       attrs: {
-        href: "/haiki/".concat(item.id, "/shopper_productdetail")
+        href: "".concat(item.id, "}/staff_productdetail")
       }
-    }, [_vm._v("商品の詳細をみる")])])]) : _vm._e()]);
-  }), _vm._v(" "), _c("vuejs-paginate", {
+    }, [_vm._v("詳細にいく")])])])])]);
+  }), _vm._v(" "), _c("div", {
+    staticClass: "c-paginate"
+  }, [_c("vuejs-paginate", {
     attrs: {
       "page-count": _vm.getPaginateCount,
       "prev-text": "<",
@@ -6101,7 +6123,7 @@ var render = function render() {
       "first-button-text": "<<",
       "last-button-text": ">>"
     }
-  })], 2);
+  })], 1)], 2)])])]);
 };
 
 var staticRenderFns = [];

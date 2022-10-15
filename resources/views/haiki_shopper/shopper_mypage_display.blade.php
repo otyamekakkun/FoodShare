@@ -59,32 +59,19 @@
     {{$my_user->name}}様
     haiki shareへようこそ！！
 
-    {{-- マイページに表示されるのは購入フラグがきちんと立っているものが表示される。 
-        ゆーざーidに入るのはログインしているユーザー出ないといけない
-        ユーザーidの値と購入フラグがきちんと立っているものを取得する
-
-        参考として商品が出品されたものを参考にするといい
-        --}}
-
+            <p>メニュー</p>
+            <a href="{{route('haiki_shopper.shopper_profile_display')}}"><button>利用者プロフィール編集画面</a></button>
+    
 
 <div id=app>
     <main>
-    <div class="l-shoppermypage">
-        <div class="l-shoppermypage__exhibitarea">
         <h1>ご購入された商品一覧</h1>
         <a href="{{route('haiki_shopper.shopper_productlist_display')}}"><button>商品一覧に移動する</a></button>
+
         <shoppermypage-component></shoppermypage-component>
-        </div>
-    </div>
 
 
 
-    <div class="l-staffmypage__side">
-        <p>メニュー</p>
-        <a href="{{route('haiki_shopper.shopper_profile_display')}}"><button>利用者プロフィール編集画面</a></button>
-        </div>
-    
-    </main>
 
 
 

@@ -355,7 +355,7 @@ return response()->json($product);
 
 
 //shopper自分が購入した商品を写し出すjson形式生成
-//今ログインしているものを取得してくるjson形式
+//ログインしているidを取得して、productsテーブルからuser_idと照合したカラムを取り出す。
 public function userjson(){
     $id = Auth::id();
     $user = products::where('user_id',$id)->get();
