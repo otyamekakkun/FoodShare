@@ -5981,18 +5981,22 @@ var render = function render() {
         _vm.Days2 = $event.target.value;
       }
     }
-  }), _vm._v(" "), _vm._l(_vm.filteredProducts, function (product) {
-    return _c("ul", {
+  }), _vm._v(" "), _c("div", {
+    staticClass: "l-exhibitproductlist"
+  }, [_c("div", {
+    staticClass: "c-productlist"
+  }, _vm._l(_vm.filteredProducts, function (product) {
+    return product.best_by_date >= _vm.Days2 ? _c("ul", {
       key: product.id,
       staticClass: "c-productlist__items"
-    }, [product.best_by_date >= _vm.Days2 ? _c("div", [product.bought >= 1 ? _c("div", [_c("img", {
+    }, [product.bought >= 1 ? _c("div", [_c("img", {
       staticClass: "c-productlist__items__img",
       attrs: {
         src: product.img_path
       }
     }), _vm._v(" "), _c("p", {
       staticClass: "c-productlist__items__img__title"
-    }, [_vm._v("\n                               購入済み！\n                           ")])]) : _vm._e(), _vm._v(" "), product.bought <= 0 ? _c("div", [_c("img", {
+    }, [_vm._v("\n                                       購入済み！\n                                   ")])]) : _vm._e(), _vm._v(" "), product.bought <= 0 ? _c("div", [_c("img", {
       staticClass: "c-productlist__items__img2",
       attrs: {
         src: product.img_path
@@ -6007,8 +6011,8 @@ var render = function render() {
       attrs: {
         href: "".concat(product.id, "}/shopper_productdetail")
       }
-    }, [_vm._v("詳細にいく")])])])])]) : _vm._e()]);
-  })], 2)])]);
+    }, [_vm._v("詳細にいく")])])])])]) : _vm._e();
+  }), 0)])])])]);
 };
 
 var staticRenderFns = [function () {
