@@ -148,7 +148,7 @@ return redirect('admin')->with('flash_message', __('Registered.'));
         $id = Auth::guard('admin')->id();
         $admin = Admin::find($id);
 
-        return view('haiki_staff.staff_exhibitproduct_display',['admin'=>$admin]);
+        return view('haiki_staff.staff_exhibitproduct_display',['admins'=>$admin]);
     } 
 
 //==========================================================ここまで
@@ -158,13 +158,12 @@ return redirect('admin')->with('flash_message', __('Registered.'));
 //==============================================================
 
     public function staff_buyproduct_display(Request $request){
+        //$id = Auth::guard('admin')->id();
+        //$products=products::where('admin_id',$id)->get();
+
         $id = Auth::guard('admin')->id();
-        $products=products::where('admin_id',$id)->get();
-
-        //         $product = products::where("admin_id",$id)->get();
-
-
-        return view('haiki_staff.staff_buyproduct_display',['products'=>$products]);
+        $admin = DB::table('admins')->find($id);
+        return view('haiki_staff.staff_buyproduct_display',['admins'=>$admin]);
     } //.............................................購入
 
 //=====================================================

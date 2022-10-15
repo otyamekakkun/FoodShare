@@ -6226,7 +6226,7 @@ var render = function render() {
     attrs: {
       id: "app"
     }
-  }, [_c("h1", [_vm._v("購入された商品一覧")]), _vm._v(" "), _c("main", [_c("div", {
+  }, [_c("main", [_c("div", {
     staticClass: "l-exhibitproductlist"
   }, [_c("div", {
     staticClass: "c-productlist"

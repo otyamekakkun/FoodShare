@@ -1,6 +1,5 @@
 <template>
     <div id="app">
-        <h1>購入された商品一覧</h1>
         <main>
             <div class="l-exhibitproductlist">
                 <div class="c-productlist">
