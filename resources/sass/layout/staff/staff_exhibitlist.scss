@@ -2,14 +2,14 @@
 //staff_exhibitproductlist (ページ）
 //=================================
 .l-exhibitproductlist {
-    background: white;
     display: block;
+    background: #f6f5f4;
     //中央に要素を寄せるときはこれを用いる
     margin-right: auto;
     margin-left: auto;
     margin-top: 20px;
     margin-bottom: 40px;
-    width: 80%;
+    width: 90%;
     height: 2800px;
 
     //画面の大きさによって高さが足りなくなりそうなのでレスポンシブを使う
