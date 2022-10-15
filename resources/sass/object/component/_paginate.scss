@@ -37,6 +37,14 @@
     //font-family: "Permanent Marker", cursive;
     background: rgb(238, 238, 238);
     transition: all 0.5s;
+    @include mql() {
+        margin-left: auto;
+        margin-right: auto;
+        font-size: size(ss);
+        text-align: center;
+        padding: size(sss);
+        margin: size(sssss);
+    }
 
     @include mq() {
         text-align: center;
@@ -48,15 +56,6 @@
         border: solid black;
         margin: size(sssss);
     }
-    @include mql() {
-        margin-left: auto;
-        margin-right: auto;
-        font-size: size(ss);
-        text-align: center;
-        padding: size(sss);
-        margin: size(sssss);
-    }
-
     &:hover {
         background: orange;
     }
@@ -68,12 +67,4 @@
     font-size: size(l);
     //line-height: center;
     text-align: center;
-    @include mq() {
-        //414px
-        // margin: size(sssss);
-    }
-    @include mql() {
-        //414px
-        // margin: size(sssss);
-    }
 }

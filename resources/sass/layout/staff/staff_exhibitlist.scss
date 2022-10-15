@@ -14,14 +14,17 @@
 
     width: 90%;
     height: 3800px;
+    @include mqxl() {
+        height: 3500px;
+    }
+    @include mql() {
+        //720px以下
+        height: 6350px;
+    }
 
     @include mq() {
         //414px対応
         height: 5500px;
-    }
-    @include mql() {
-        //720px以下
-        height: 6600px;
     }
 
     //画面の大きさによって高さが足りなくなりそうなのでレスポンシブを使う
