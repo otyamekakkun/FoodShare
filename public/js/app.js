@@ -5799,7 +5799,9 @@ var render = function render() {
         href: "".concat(item.id, "}/staff_productedit")
       }
     }, [_vm._v("商品を編集する")])])])]) : _vm._e()]);
-  }), _vm._v(" "), _c("vuejs-paginate", {
+  }), _vm._v(" "), _c("div", {
+    staticClass: "c-paginate"
+  }, [_c("vuejs-paginate", {
     attrs: {
       "page-count": _vm.getPaginateCount,
       "prev-text": "<",
@@ -5816,7 +5818,7 @@ var render = function render() {
       "first-button-text": "<<",
       "last-button-text": ">>"
     }
-  })], 2)])])]);
+  })], 1)], 2)])])]);
 };
 
 var staticRenderFns = [];
