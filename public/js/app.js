@@ -6212,12 +6212,14 @@ var render = function render() {
 
   return _c("div", [_c("h1", {
     staticClass: "c-title"
-  }, [_vm._v("商品詳細")]), _vm._v(" "), _c("img", {
+  }, [_vm._v("商品詳細")]), _vm._v(" "), _c("main", [_c("div", {
+    staticClass: "l-productdetail"
+  }, [_c("img", {
     attrs: {
       src: _vm.img,
       width: "25%"
     }
-  }), _vm._v(" "), _c("ul", [_c("li", [_vm._v(_vm._s(_vm.id))]), _vm._v(" "), _c("li", [_vm._v(_vm._s(_vm.name))]), _vm._v(" "), _c("li", [_vm._v("お値段" + _vm._s(_vm.price))]), _vm._v(" "), _c("li", [_vm._v(_vm._s(_vm.bought))]), _vm._v(" "), _c("li", [_vm._v(_vm._s(_vm.best_by_date))]), _vm._v(" "), _c("li", [_vm._v(_vm._s(_vm.prefecture))])])]);
+  }), _vm._v(" "), _c("ul", [_c("li", [_vm._v(_vm._s(_vm.id))]), _vm._v(" "), _c("li", [_vm._v(_vm._s(_vm.name))]), _vm._v(" "), _c("li", [_vm._v("お値段" + _vm._s(_vm.price))]), _vm._v(" "), _c("li", [_vm._v(_vm._s(_vm.bought))]), _vm._v(" "), _c("li", [_vm._v(_vm._s(_vm.best_by_date))]), _vm._v(" "), _c("li", [_vm._v(_vm._s(_vm.prefecture))])])])])]);
 };
 
 var staticRenderFns = [];
