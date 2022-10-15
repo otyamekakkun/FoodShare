@@ -73,7 +73,7 @@ export default {
             //データは言わば変数みたいなもの色々なところで使い回せる
             return {
                 //ここでの処理はチェックボタンが押されているかどうかの言わばスイッチみたいに役割を持たせる。
-                products: "", //からのデータを用意する。
+                products: [], //からのデータを用意する。
                 currentPage: 1,
                 perPage: 10,
             };
@@ -86,7 +86,7 @@ export default {
         getItems: function () {
             let start = (this.currentPage - 1) * this.perPage;
             let end = this.currentPage * this.perPage;
-            return this.products.slice(start, end);
+            return this.products.reverse().slice(start, end);
         },
         getPaginateCount: function () {
             return Math.ceil(this.products.length / this.perPage);

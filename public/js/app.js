@@ -5493,7 +5493,7 @@ __webpack_require__.r(__webpack_exports__);
       //データは言わば変数みたいなもの色々なところで使い回せる
       return {
         //ここでの処理はチェックボタンが押されているかどうかの言わばスイッチみたいに役割を持たせる。
-        products: "",
+        products: [],
         //からのデータを用意する。
         currentPage: 1,
         perPage: 10
@@ -5507,7 +5507,7 @@ __webpack_require__.r(__webpack_exports__);
     getItems: function getItems() {
       var start = (this.currentPage - 1) * this.perPage;
       var end = this.currentPage * this.perPage;
-      return this.products.slice(start, end);
+      return this.products.reverse().slice(start, end);
     },
     getPaginateCount: function getPaginateCount() {
       return Math.ceil(this.products.length / this.perPage);
