@@ -5788,7 +5788,9 @@ var render = function render() {
       attrs: {
         src: item.img_path
       }
-    })]) : _vm._e(), _vm._v(" "), _c("li", [_vm._v("商品No." + _vm._s(item.id))]), _vm._v(" "), _c("li", [_vm._v("商品名:" + _vm._s(item.product_name))]), _vm._v(" "), _c("li", [_vm._v("お値段:" + _vm._s(item.price) + "円.")]), _vm._v(" "), _c("li", [_c("button", [_c("a", {
+    })]) : _vm._e(), _vm._v(" "), _c("div", {
+      staticClass: "c-productlist__items__list"
+    }, [_c("li", [_vm._v("商品No." + _vm._s(item.id))]), _vm._v(" "), _c("li", [_vm._v("商品名:" + _vm._s(item.product_name))]), _vm._v(" "), _c("li", [_vm._v("お値段:" + _vm._s(item.price) + "円.")]), _vm._v(" "), _c("li", [_c("button", [_c("a", {
       attrs: {
         href: "".concat(item.id, "}/staff_productdetail")
       }
@@ -5796,7 +5798,7 @@ var render = function render() {
       attrs: {
         href: "".concat(item.id, "}/staff_productedit")
       }
-    }, [_vm._v("商品を編集する")])])])]) : _vm._e()]);
+    }, [_vm._v("商品を編集する")])])])]) : _vm._e()])]);
   }), _vm._v(" "), _c("div", {
     staticClass: "c-paginate"
   }, [_c("vuejs-paginate", {

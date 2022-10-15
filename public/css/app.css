@@ -1004,6 +1004,9 @@ a {
   width: 80%;
   background-attachment: fixed;
   opacity: 0.3;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
   display: block;
 }
 .c-productlist__items__img__title {
@@ -1014,7 +1017,16 @@ a {
 
 .c-productlist__items__img2 {
   width: 80%;
+  margin-left: auto;
+  margin-right: auto;
   background-attachment: fixed;
+}
+
+.c-productlist__items__list {
+  background: red;
+  text-align: center;
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 
 /*

@@ -22,26 +22,28 @@
                             />
                         </div>
 
-                        <li>商品No.{{ item.id }}</li>
-                        <li>商品名:{{ item.product_name }}</li>
-                        <li>お値段:{{ item.price }}円.</li>
-                        <li>
-                            <button>
-                                <a
-                                    v-bind:href="`${item.id}}/staff_productdetail`"
-                                    >詳細にいく</a
-                                >
-                            </button>
-                        </li>
-                        <div v-if="item.bought <= 0">
+                        <div class="c-productlist__items__list">
+                            <li>商品No.{{ item.id }}</li>
+                            <li>商品名:{{ item.product_name }}</li>
+                            <li>お値段:{{ item.price }}円.</li>
                             <li>
                                 <button>
                                     <a
-                                        v-bind:href="`${item.id}}/staff_productedit`"
-                                        >商品を編集する</a
+                                        v-bind:href="`${item.id}}/staff_productdetail`"
+                                        >詳細にいく</a
                                     >
                                 </button>
                             </li>
+                            <div v-if="item.bought <= 0">
+                                <li>
+                                    <button>
+                                        <a
+                                            v-bind:href="`${item.id}}/staff_productedit`"
+                                            >商品を編集する</a
+                                        >
+                                    </button>
+                                </li>
+                            </div>
                         </div>
                     </ul>
 
