@@ -5981,7 +5981,9 @@ var render = function render() {
         _vm.Days2 = $event.target.value;
       }
     }
-  }), _vm._v(" "), _c("ul", _vm._l(_vm.filteredProducts, function (product) {
+  }), _vm._v(" "), _c("ul", {
+    staticClass: "c-productlist__items"
+  }, _vm._l(_vm.filteredProducts, function (product) {
     return _c("li", {
       key: product.id
     }, [product.best_by_date >= _vm.Days2 ? _c("div", [product.bought >= 1 ? _c("div", [_c("img", {
@@ -5998,7 +6000,15 @@ var render = function render() {
       }
     })]) : _vm._e(), _vm._v(" "), _c("div", {
       staticClass: "c-productlist__items__list"
-    }, [_c("li", [_vm._v("商品No." + _vm._s(product.id))]), _vm._v(" "), _c("li", [_vm._v("商品名:" + _vm._s(product.product_name))]), _vm._v(" "), _c("li", [_vm._v("お値段:" + _vm._s(product.price) + "円.")])])]) : _vm._e()]);
+    }, [_c("li", [_vm._v("商品No." + _vm._s(product.id))]), _vm._v(" "), _c("li", [_vm._v("商品名:" + _vm._s(product.product_name))]), _vm._v(" "), _c("li", [_vm._v("お値段:" + _vm._s(product.price) + "円.")]), _vm._v(" "), _c("div", {
+      staticClass: "c-productlist__items__bottom"
+    }, [_c("button", {
+      staticClass: "c-productlist__items__bottom__area"
+    }, [_c("a", {
+      attrs: {
+        href: "".concat(product.id, "}/shopper_productdetail")
+      }
+    }, [_vm._v("詳細にいく")])])])])]) : _vm._e()]);
   }), 0)])])]);
 };
 

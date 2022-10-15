@@ -16,7 +16,7 @@
                     class="l-productexhibitform__typo3"
                     v-model="Days2"
                 />
-                <ul>
+                <ul class="c-productlist__items">
                     <li v-for="product in filteredProducts" :key="product.id">
                         <div v-if="product.best_by_date >= Days2">
                             <div v-if="product.bought >= 1">
@@ -40,6 +40,16 @@
                                 <li>商品No.{{ product.id }}</li>
                                 <li>商品名:{{ product.product_name }}</li>
                                 <li>お値段:{{ product.price }}円.</li>
+                                <div class="c-productlist__items__bottom">
+                                    <button
+                                        class="c-productlist__items__bottom__area"
+                                    >
+                                        <a
+                                            v-bind:href="`${product.id}}/shopper_productdetail`"
+                                            >詳細にいく</a
+                                        >
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </li>
