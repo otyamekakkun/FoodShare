@@ -4,15 +4,20 @@
 
         <main>
             <div class="l-productdetail">
-                <img v-bind:src="img" width="25%" />
-                <ul>
-                    <li>{{ id }}</li>
-                    <li>{{ name }}</li>
-                    <li>お値段{{ price }}</li>
-                    <li>{{ bought }}</li>
-                    <li>{{ best_by_date }}</li>
-                    <li>{{ prefecture }}</li>
-                </ul>
+                <div class="l-productdetail__area">
+                    <ul>
+                        <img
+                            v-bind:src="img"
+                            width="50%"
+                            class="c-productdetail__img"
+                        />
+                        <li>商品No.{{ id }}</li>
+                        <li>商品名{{ name }}</li>
+                        <li>お値段{{ price }}</li>
+                        <li>賞味期限{{ best_by_date }}</li>
+                        <li>出品したコンビニの都道府県{{ prefecture }}</li>
+                    </ul>
+                </div>
             </div>
         </main>
     </div>

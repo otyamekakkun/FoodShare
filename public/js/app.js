@@ -6214,12 +6214,15 @@ var render = function render() {
     staticClass: "c-title"
   }, [_vm._v("商品詳細")]), _vm._v(" "), _c("main", [_c("div", {
     staticClass: "l-productdetail"
-  }, [_c("img", {
+  }, [_c("div", {
+    staticClass: "l-productdetail__area"
+  }, [_c("ul", [_c("img", {
+    staticClass: "c-productdetail__img",
     attrs: {
       src: _vm.img,
-      width: "25%"
+      width: "50%"
     }
-  }), _vm._v(" "), _c("ul", [_c("li", [_vm._v(_vm._s(_vm.id))]), _vm._v(" "), _c("li", [_vm._v(_vm._s(_vm.name))]), _vm._v(" "), _c("li", [_vm._v("お値段" + _vm._s(_vm.price))]), _vm._v(" "), _c("li", [_vm._v(_vm._s(_vm.bought))]), _vm._v(" "), _c("li", [_vm._v(_vm._s(_vm.best_by_date))]), _vm._v(" "), _c("li", [_vm._v(_vm._s(_vm.prefecture))])])])])]);
+  }), _vm._v(" "), _c("li", [_vm._v("商品No." + _vm._s(_vm.id))]), _vm._v(" "), _c("li", [_vm._v("商品名" + _vm._s(_vm.name))]), _vm._v(" "), _c("li", [_vm._v("お値段" + _vm._s(_vm.price))]), _vm._v(" "), _c("li", [_vm._v("賞味期限" + _vm._s(_vm.best_by_date))]), _vm._v(" "), _c("li", [_vm._v("出品したコンビニの都道府県" + _vm._s(_vm.prefecture))])])])])])]);
 };
 
 var staticRenderFns = [];
