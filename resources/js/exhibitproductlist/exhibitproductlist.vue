@@ -15,7 +15,7 @@
                                 class="c-productlist__items__img"
                             />
                             <p class="c-productlist__items__img__title">
-                                購入されました！
+                                購入済み！
                             </p>
                         </div>
 

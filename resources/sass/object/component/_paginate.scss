@@ -9,6 +9,12 @@
     width: 100%;
     margin: 100px;
     // font-size: size(l);
+    @include mq() {
+        display: flex;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .page-item {
@@ -24,6 +30,24 @@
     //font-family: "Permanent Marker", cursive;
     background: rgb(238, 238, 238);
     transition: all 0.5s;
+
+    @include mq() {
+        //414px
+        // display: flex;
+        // justify-content: center;
+        /*
+        */
+
+        text-align: center;
+        font-size: size(l);
+        padding: size(ssss);
+        margin: size(ss);
+        margin: auto;
+        background: #f6f5f4;
+        border: solid black;
+        margin: size(sssss);
+    }
+
     &:hover {
         background: orange;
     }
@@ -32,4 +56,11 @@
 .page-link {
     //color: black;
     font-size: size(l);
+    @include mq() {
+        //414px
+        background: #f6f5f4;
+        border: solid black;
+        font-size: size(l);
+        // margin: size(sssss);
+    }
 }

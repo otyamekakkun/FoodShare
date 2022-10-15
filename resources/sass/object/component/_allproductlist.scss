@@ -13,6 +13,10 @@
     margin-right: auto;
     margin-top: size(xxl);
     padding-top: size(xxl);
+    @include mq() {
+        //414px対応
+        display: block;
+    }
 }
 
 .c-productlist__items__title {
@@ -20,6 +24,9 @@
     font-size: size(m);
     margin-left: size(l);
     margin-top: size(s);
+    @include mq() {
+        //414px対応
+    }
 }
 
 .c-productlist__items {
@@ -30,6 +37,11 @@
     border-radius: size(m);
     border: solid #174113;
     background: white;
+    @include mq() {
+        //414px対応
+        // background: red;
+        width: 80%;
+    }
 }
 .c-productlist__items__img {
     width: 65%;
@@ -58,6 +70,12 @@
 
         width: 50%;
         font-family: "Permanent Marker", cursive;
+
+        @include mq() {
+            //414px対応
+            font-size: size(sssss);
+            top: -75px;
+        }
     }
 }
 .c-productlist__items__img2 {
