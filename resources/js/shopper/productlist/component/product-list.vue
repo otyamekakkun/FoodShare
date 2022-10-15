@@ -35,6 +35,12 @@
                                     class="c-productlist__items__img2"
                                 />
                             </div>
+
+                            <div class="c-productlist__items__list">
+                                <li>商品No.{{ product.id }}</li>
+                                <li>商品名:{{ product.product_name }}</li>
+                                <li>お値段:{{ product.price }}円.</li>
+                            </div>
                         </div>
                     </li>
                 </ul>

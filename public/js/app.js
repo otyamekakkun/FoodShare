@@ -5996,7 +5996,9 @@ var render = function render() {
       attrs: {
         src: product.img_path
       }
-    })]) : _vm._e()]) : _vm._e()]);
+    })]) : _vm._e(), _vm._v(" "), _c("div", {
+      staticClass: "c-productlist__items__list"
+    }, [_c("li", [_vm._v("商品No." + _vm._s(product.id))]), _vm._v(" "), _c("li", [_vm._v("商品名:" + _vm._s(product.product_name))]), _vm._v(" "), _c("li", [_vm._v("お値段:" + _vm._s(product.price) + "円.")])])]) : _vm._e()]);
   }), 0)])])]);
 };
 
