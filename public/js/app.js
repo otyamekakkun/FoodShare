@@ -5769,9 +5769,7 @@ var render = function render() {
     attrs: {
       id: "app"
     }
-  }, [_c("h1", {
-    staticClass: "c-title"
-  }, [_vm._v("コンビニ側が出品した商品の一覧のページです")]), _vm._v(" "), _c("main", [_c("div", {
+  }, [_c("main", [_c("div", {
     staticClass: "l-exhibitproductlist"
   }, [_c("div", {
     staticClass: "c-productlist"

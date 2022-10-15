@@ -12,6 +12,11 @@
     <header>
         @include('rest.staff.header')
     </header>
+    <h1 class="c-title">
+    {{$admin->convinience_name}}所属
+    {{$admin->name}}様が出品された商品一覧
+</h1>
+
 <div id="app">
     {{-- コンポーネントexhibitproductlist.vueとfooter-componenntを導出する --}}
 <exhibitlist-componennt></exhibitlist-componennt>

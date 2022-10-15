@@ -235,9 +235,12 @@ return response()->json($product);
 //コンビニスタッフが商品を出品したものをリスト化するもの
 //========================================================================    
     public function staff_exhibitproduct_list_display(){
+
         $id = Auth::guard('admin')->id();
-        $product = products::where("admin_id",$id)->get();
-    return view('haiki_staff.staff_exhibitproduct_list_display',['products'=>$product]);
+        $admin = DB::table('admins')->find($id);
+        return view('haiki_staff.staff_exhibitproduct_list_display',['admin'=>$admin]);//...................画面表示するもの
+
+
     } //...................................ここに問題がありそう。
 //json形式で渡す
 /*
@@ -262,17 +265,10 @@ public function staff_exhibitproduct_json(){
 //=======================================================================
 
 public function admin(){
-    /*
-    $id = Auth::guard('admin')->id();
-    $product = products::where("admin_id",$id)->get();
-    return view('admin',['products'=>$product]);
-*/
-
+//ログインしているコンビニ名と名前を出力する
     $id = Auth::guard('admin')->id();
     $admin = DB::table('admins')->find($id);
     return view('admin',['admin'=>$admin]);//...................画面表示するもの
-
-
 }
 /*
 

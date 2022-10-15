@@ -1,6 +1,5 @@
 <template>
     <div id="app">
-        <h1 class="c-title">コンビニ側が出品した商品の一覧のページです</h1>
         <main>
             <div class="l-exhibitproductlist">
                 <div class="c-productlist">
