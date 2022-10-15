@@ -5806,7 +5806,7 @@ var render = function render() {
       attrs: {
         href: "".concat(item.id, "}/staff_productedit")
       }
-    }, [_vm._v("商品を編集する")])])]) : _vm._e()])])]);
+    }, [_vm._v("商品を編集")])])]) : _vm._e()])])]);
   }), _vm._v(" "), _c("div", {
     staticClass: "c-paginate"
   }, [_c("vuejs-paginate", {

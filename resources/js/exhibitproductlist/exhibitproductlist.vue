@@ -45,7 +45,7 @@
                                     >
                                         <a
                                             v-bind:href="`${item.id}}/staff_productedit`"
-                                            >商品を編集する</a
+                                            >商品を編集</a
                                         >
                                     </button>
                                 </div>
