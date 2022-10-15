@@ -4,6 +4,7 @@
             <div class="l-exhibitproductlist">
                 <div class="c-productlist">
                     <ul class="c-productlist__items" v-for="item in getItems">
+                        <!-- 購入されたら商品にlabelを付け足す機能 -->
                         <div v-if="item.bought >= 1">
                             <img
                                 v-bind:src="item.img_path"

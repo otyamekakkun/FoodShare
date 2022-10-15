@@ -11,13 +11,20 @@
     flex-wrap: wrap;
     //  text-align: center;
     height: 100px;
-    background: white;
+    //background: red;
     width: 100%;
+    /*
     margin-left: auto;
     margin-right: auto;
     margin-bottom: size(l);
-
+    padding: size(l);
+*/
     //background: green;
+    margin-left: auto;
+    margin-right: auto;
+    // text-align: center;
+    margin-top: size(xxl);
+    padding-top: size(xxl);
 }
 
 .c-productlist__items {
