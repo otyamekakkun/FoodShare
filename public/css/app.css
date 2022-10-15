@@ -642,7 +642,7 @@ a {
   margin-top: 20px;
   margin-bottom: 40px;
   width: 90%;
-  height: 2800px;
+  height: 2900px;
 }
 
 .l-staffproductdetail {
@@ -1028,7 +1028,9 @@ a {
 
 .c-productlist__items__list {
   text-align: center;
-  margin-top: 2px;
+  display: block;
+  font-size: 25px;
+  margin-top: 5px;
   margin-bottom: 35px;
   background: white;
 }

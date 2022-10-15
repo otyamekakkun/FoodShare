@@ -55,7 +55,10 @@
 
 .c-productlist__items__list {
     text-align: center;
-    margin-top: size(sssss);
+    display: block;
+    font-size: size(l);
+
+    margin-top: size(sss);
     margin-bottom: size(xxl);
     background: white;
 }
