@@ -5,7 +5,10 @@
             <div class="l-exhibitproductlist">
                 <div class="c-productlist">
                     <ul class="c-productlist__items" v-for="item in getItems">
-                        <img v-bind:src="item.img_path" width="25%" />
+                        <img
+                            v-bind:src="item.img_path"
+                            class="c-productlist__items__img"
+                        />
                         <li>商品No.{{ item.id }}</li>
                         <li>商品名:{{ item.product_name }}</li>
                         <li>お値段:{{ item.price }}円.</li>
@@ -17,13 +20,16 @@
                                 >
                             </button>
                         </li>
-                        <li>
-                            <button>
-                                <a v-bind:href="`${item.id}}/staff_productedit`"
-                                    >商品を編集する</a
-                                >
-                            </button>
-                        </li>
+                        <div v-if="item.bought <= 0">
+                            <li>
+                                <button>
+                                    <a
+                                        v-bind:href="`${item.id}}/staff_productedit`"
+                                        >商品を編集する</a
+                                    >
+                                </button>
+                            </li>
+                        </div>
                     </ul>
                     <vuejs-paginate
                         :page-count="getPaginateCount"

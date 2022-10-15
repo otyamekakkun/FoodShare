@@ -883,6 +883,10 @@ a {
   width: 50%;
 }
 
+.c-productlist__items__img {
+  width: 80%;
+}
+
 .c-productlist__sentence {
   display: flex;
   justify-content: center;

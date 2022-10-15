@@ -5779,19 +5779,19 @@ var render = function render() {
     return _c("ul", {
       staticClass: "c-productlist__items"
     }, [_c("img", {
+      staticClass: "c-productlist__items__img",
       attrs: {
-        src: item.img_path,
-        width: "25%"
+        src: item.img_path
       }
     }), _vm._v(" "), _c("li", [_vm._v("商品No." + _vm._s(item.id))]), _vm._v(" "), _c("li", [_vm._v("商品名:" + _vm._s(item.product_name))]), _vm._v(" "), _c("li", [_vm._v("お値段:" + _vm._s(item.price) + "円.")]), _vm._v(" "), _c("li", [_c("button", [_c("a", {
       attrs: {
         href: "".concat(item.id, "}/staff_productdetail")
       }
-    }, [_vm._v("詳細にいく")])])]), _vm._v(" "), _c("li", [_c("button", [_c("a", {
+    }, [_vm._v("詳細にいく")])])]), _vm._v(" "), item.bought <= 0 ? _c("div", [_c("li", [_c("button", [_c("a", {
       attrs: {
         href: "".concat(item.id, "}/staff_productedit")
       }
-    }, [_vm._v("商品を編集する")])])])]);
+    }, [_vm._v("商品を編集する")])])])]) : _vm._e()]);
   }), _vm._v(" "), _c("vuejs-paginate", {
     attrs: {
       "page-count": _vm.getPaginateCount,
