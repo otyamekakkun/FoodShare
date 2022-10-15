@@ -28,11 +28,14 @@
 }
 
 .c-productlist__items {
-    width: 50%;
-    //  background: red;
+    width: 47%;
+    background: green;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: size(xxl);
 }
 .c-productlist__items__img {
-    width: 80%;
+    width: 65%;
     background-attachment: fixed;
     opacity: 0.3;
     text-align: center;
@@ -48,7 +51,7 @@
     }
 }
 .c-productlist__items__img2 {
-    width: 80%;
+    width: 70%;
     //text-align: center;
     display: block;
     background-attachment: fixed;
@@ -65,4 +68,5 @@
     text-align: center;
     margin-top: size(sssss);
     margin-bottom: size(xxl);
+    background: red;
 }
