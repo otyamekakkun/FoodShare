@@ -9,8 +9,11 @@
     margin-left: auto;
     margin-top: 20px;
     margin-bottom: 40px;
+    border: solid #174113;
+    border-radius: size(ss);
+
     width: 90%;
-    height: 3600px;
+    height: 3800px;
 
     //画面の大きさによって高さが足りなくなりそうなのでレスポンシブを使う
 }

@@ -28,7 +28,7 @@
     margin-right: auto;
     margin-bottom: size(xxl);
     border-radius: size(m);
-
+    border: solid #174113;
     background: white;
 }
 .c-productlist__items__img {
@@ -90,16 +90,19 @@
     margin-bottom: size(m);
     */
     text-align: center;
+    border: solid 3px #174113;
+
     width: 55%;
     border-radius: 5px;
     margin-bottom: size(m);
+    background: rgb(238, 238, 238);
     transition: all 1.2s;
 
     &:hover {
         cursor: pointer;
-        background: #b2d142;
-        box-shadow: 1px 1px 1px 1px orange;
-        transform: translateY(-2px);
-        border: none;
+        background: orange;
+        box-shadow: 1px 1px 1px 1px #b2d142;
+        transform: translateX(+2px);
+        //border: none;
     }
 }

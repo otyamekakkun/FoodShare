@@ -641,8 +641,10 @@ a {
   margin-left: auto;
   margin-top: 20px;
   margin-bottom: 40px;
+  border: solid #174113;
+  border-radius: 10px;
   width: 90%;
-  height: 3600px;
+  height: 3800px;
 }
 
 .l-staffproductdetail {
@@ -1002,6 +1004,7 @@ a {
   margin-right: auto;
   margin-bottom: 35px;
   border-radius: 20px;
+  border: solid #174113;
   background: white;
 }
 
@@ -1055,17 +1058,18 @@ a {
   margin-bottom: size(m);
   */
   text-align: center;
+  border: solid 3px #174113;
   width: 55%;
   border-radius: 5px;
   margin-bottom: 20px;
+  background: rgb(238, 238, 238);
   transition: all 1.2s;
 }
 .c-productlist__items__bottom__area:hover {
   cursor: pointer;
-  background: #b2d142;
-  box-shadow: 1px 1px 1px 1px orange;
-  transform: translateY(-2px);
-  border: none;
+  background: orange;
+  box-shadow: 1px 1px 1px 1px #b2d142;
+  transform: translateX(2px);
 }
 
 /*
