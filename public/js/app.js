@@ -5981,8 +5981,8 @@ var render = function render() {
         _vm.Days2 = $event.target.value;
       }
     }
-  }), _vm._v(" "), _c("table", _vm._l(_vm.filteredProducts, function (product) {
-    return _c("tr", {
+  }), _vm._v(" "), _c("ul", _vm._l(_vm.filteredProducts, function (product) {
+    return _c("li", {
       key: product.id
     }, [product.best_by_date >= _vm.Days2 ? _c("div", [product.bought >= 1 ? _c("div", [_c("img", {
       staticClass: "c-productlist__items__img",

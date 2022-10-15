@@ -16,8 +16,8 @@
                     class="l-productexhibitform__typo3"
                     v-model="Days2"
                 />
-                <table>
-                    <tr v-for="product in filteredProducts" :key="product.id">
+                <ul>
+                    <li v-for="product in filteredProducts" :key="product.id">
                         <div v-if="product.best_by_date >= Days2">
                             <div v-if="product.bought >= 1">
                                 <img
@@ -36,8 +36,8 @@
                                 />
                             </div>
                         </div>
-                    </tr>
-                </table>
+                    </li>
+                </ul>
 
                 <!--                     <ul class="c-productlist__items" v-for="item in getItems">
                         購入されたら商品にlabelを付け足す機能
