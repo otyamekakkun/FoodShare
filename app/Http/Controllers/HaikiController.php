@@ -266,6 +266,27 @@ public function admin(){
     $product = products::where("admin_id",$id)->get();
     return view('admin',['products'=>$product]);
 }
+/*
+
+
+
+        $id = Auth::guard('admin')->id();
+        $admin = DB::table('admins')->find($id);
+        return view('haiki_staff.staff_profile_display',['admin'=>$admin]);//...................画面表示するもの
+
+
+
+
+
+
+
+
+
+
+        $id = Auth::id();
+        $user = DB::table('users')->find($id);
+        return view('haiki_shopper.shopper_mypage_display',['my_user'=>$user]);
+*/
 
 //====================================================================
 //(create_exhibitproductで商品を出品する画面を作る)  12
