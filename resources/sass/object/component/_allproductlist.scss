@@ -3,33 +3,20 @@
 //
 //=============================================================
 .c-productlist {
-    // background: red;
-    //ここはgridとして残しておく。
     display: flex;
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    //  text-align: center;
     height: 100px;
-    //background: red;
     width: 100%;
-    /*
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: size(l);
-    padding: size(l);
-*/
-    //background: green;
-    margin-left: auto;
-    margin-right: auto;
-    // text-align: center;
     margin-top: size(xxl);
     padding-top: size(xxl);
 }
 
 .c-productlist__items {
     width: 47%;
-    background: green;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: size(xxl);
@@ -52,11 +39,9 @@
 }
 .c-productlist__items__img2 {
     width: 70%;
-    //text-align: center;
     display: block;
     background-attachment: fixed;
     text-align: center;
-
     margin-left: auto;
     margin-right: auto;
 
@@ -64,9 +49,7 @@
 }
 
 .c-productlist__items__list {
-    // background: red;
     text-align: center;
     margin-top: size(sssss);
     margin-bottom: size(xxl);
-    background: red;
 }

@@ -984,12 +984,6 @@ a {
   flex-wrap: wrap;
   height: 100px;
   width: 100%;
-  /*
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: size(l);
-      padding: size(l);
-  */
   margin-left: auto;
   margin-right: auto;
   margin-top: 35px;
@@ -998,7 +992,6 @@ a {
 
 .c-productlist__items {
   width: 47%;
-  background: green;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 35px;
@@ -1033,7 +1026,6 @@ a {
   text-align: center;
   margin-top: 2px;
   margin-bottom: 35px;
-  background: red;
 }
 
 /*
