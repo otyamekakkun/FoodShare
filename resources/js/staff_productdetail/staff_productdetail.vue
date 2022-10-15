@@ -2,14 +2,29 @@
     <div>
         <h1 class="c-title">商品詳細</h1>
 
-        <img v-bind:src="test" width="25%" />
-        <p>{{ name }}</p>
-        <p>{{ price }}</p>
-        <p>{{ best_by_date }}</p>
+        <img v-bind:src="img" width="25%" />
+        <ul>
+            <li>{{ id }}</li>
+            <li>{{ name }}</li>
+
+            <li>お値段{{ price }}</li>
+            <li>{{ bought }}</li>
+
+            <li>{{ best_by_date }}</li>
+            <li>{{ prefecture }}</li>
+        </ul>
     </div>
 </template>
 <script>
 export default {
-    props: ["test", "name", "price", "best_by_date"],
+    props: [
+        "id",
+        "img",
+        "name",
+        "price",
+        "best_by_date",
+        "prefecture",
+        "bought",
+    ],
 };
 </script>
