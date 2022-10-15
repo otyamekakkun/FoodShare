@@ -5496,7 +5496,7 @@ __webpack_require__.r(__webpack_exports__);
         products: "",
         //からのデータを用意する。
         currentPage: 1,
-        perPage: 5
+        perPage: 10
       };
     }
   },

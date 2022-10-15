@@ -47,7 +47,7 @@ export default {
                 //ここでの処理はチェックボタンが押されているかどうかの言わばスイッチみたいに役割を持たせる。
                 products: "", //からのデータを用意する。
                 currentPage: 1,
-                perPage: 5,
+                perPage: 10,
             };
         }
     },

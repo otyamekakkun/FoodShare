@@ -17,6 +17,9 @@
         //414px対応
         display: block;
     }
+    @include mql() {
+        display: block;
+    }
 }
 
 .c-productlist__items__title {
@@ -40,6 +43,9 @@
     @include mq() {
         //414px対応
         // background: red;
+        width: 80%;
+    }
+    @include mql() {
         width: 80%;
     }
 }
@@ -73,8 +79,14 @@
 
         @include mq() {
             //414px対応
-            font-size: size(sssss);
-            top: -75px;
+            width: 100%;
+            font-size: size(s);
+        }
+        @include mql() {
+            //720px以下対応
+            width: 100%;
+            font-size: size(s);
+            top: -80px;
         }
     }
 }
