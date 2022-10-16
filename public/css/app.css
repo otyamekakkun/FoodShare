@@ -1271,7 +1271,6 @@ a {
 }
 
 .c-productdetail__shoppermenu {
-  margin-top: 100px;
   margin-right: auto;
   margin-left: auto;
   background: white;
@@ -1280,17 +1279,15 @@ a {
   border-radius: 10px;
   justify-content: center;
   width: 80%;
+  display: flex;
 }
 
 .c-productdetail__shoppermenu__button {
   display: block;
-  height: 25px;
+  height: 30px;
   text-align: center;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: auto;
+  line-height: 30px;
   transition: all 1.2s;
-  background: red;
 }
 .c-productdetail__shoppermenu__button:hover {
   background: orange;
