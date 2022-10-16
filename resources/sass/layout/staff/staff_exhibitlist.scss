@@ -14,7 +14,7 @@
     border-radius: size(ss);
 
     width: 90%;
-    height: 3800px;
+    height: 3900px;
     @include mqxl() {
         height: 3500px;
     }
@@ -30,4 +30,3 @@
 
     //画面の大きさによって高さが足りなくなりそうなのでレスポンシブを使う
 }
-
