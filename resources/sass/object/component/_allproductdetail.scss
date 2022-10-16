@@ -74,9 +74,16 @@
     border: dotted 1px;
     border-radius: 10px;
     display: flex;
-    justify-content: center;
-
+    //justify-content: center;
     width: 80%;
 }
 .c-productdetail__shoppermenu__button {
+    height: size(l);
+    display: flex;
+    //  justify-content: center;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    margin-left: auto;
 }
