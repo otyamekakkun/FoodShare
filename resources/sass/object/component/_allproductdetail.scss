@@ -73,20 +73,23 @@
     height: 200px;
     border: dotted 1px;
     border-radius: 10px;
-    display: flex;
-    //justify-content: center;
+    //  display: flex;
+    justify-content: center;
     width: 80%;
 }
+
 .c-productdetail__shoppermenu__button {
-    height: size(xxl);
-    line-height: center;
-    display: flex;
-    //  justify-content: center;
+    display: block;
+    height: size(l);
     text-align: center;
-    margin-top: auto;
-    margin-bottom: auto;
+    //line-height: 100px;
     margin-right: auto;
     margin-left: auto;
-    font-size: size(m);
-    border-radius: size(ss);
+    margin-top: auto;
+
+    transition: all 1.2s;
+    background: red;
+    &:hover {
+        background: orange;
+    }
 }

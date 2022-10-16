@@ -22,8 +22,8 @@
 {{-- <div class="c-productdetail__shoppermenu"> --}}
 @if($products->bought<=0)
     <form class="c-productdetail__shoppermenu" action="{{ route('bought.update',$products->id)}}" enctype="multipart/form-data" method="post">
-        <button class="c-productdetail__shoppermenu__button">
-            <a  href="https://twitter.com/intent/tweet?text=haiki share 商品名{{$products->product_name}}について自由に書いて広めよう!!" target="_blank_" rel="nofollow"><i class="fab fa-twitter fa-fw"></i> この商品をシェアする</a> </button> 
+            <a href="https://twitter.com/intent/tweet?text=haiki share 商品名{{$products->product_name}}について自由に書いて広めよう!!" target="_blank_" rel="nofollow"> <button class="c-productdetail__shoppermenu__button">
+                この商品をシェアする</button> </a>  <i class="fab fa-twitter fa-fw"></i>        
         @csrf
         <button class="c-productdetail__shoppermenu__button">商品を買う！</button>
     </form>
