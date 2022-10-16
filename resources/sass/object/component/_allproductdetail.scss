@@ -61,3 +61,22 @@
     font-size: size(m);
     margin-top: size(xxl);
 }
+
+//===============================
+//shopper購入するボタンのメニュー欄
+//===============================
+.c-productdetail__shoppermenu {
+    margin-top: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    background: white;
+    height: 200px;
+    border: dotted 1px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+
+    width: 80%;
+}
+.c-productdetail__shoppermenu__button {
+}

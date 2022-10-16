@@ -19,21 +19,21 @@
 
 
 
-<div class="l-productdetail__shoppermenu">
-    <button>
+<div class="c-productdetail__shoppermenu">
+    <button class="c-productdetail__shoppermenu__button">
         <a class="btn_tw" href="https://twitter.com/intent/tweet?text=haiki share 商品名{{$products->product_name}}について自由に書いて広めよう!!" target="_blank_" rel="nofollow"><i class="fab fa-twitter fa-fw"></i> この商品をシェアする</a>
     
        </button> 
 @if($products->bought<=0)
     <form action="{{ route('bought.update',$products->id)}}" enctype="multipart/form-data" method="post">
         @csrf
-        <button class="btn btn-danger">購入する</button>
+        <button class="c-productdetail__shoppermenu__button">商品を買う！</button>
     </form>
 @endif
 @if($products->bought>=1)
     <form action="{{route('bought.cancel',$products->id)}}" enctype="multipart/form-data" method="post">
         @csrf
-        <button class="btn btn-danger">購入をやめる</button>
+        <button class="c-productdetail__shoppermenu__button">購入をやめる</button>
     </form>
 @endif
 

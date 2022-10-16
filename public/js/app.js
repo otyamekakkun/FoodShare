@@ -6171,7 +6171,7 @@ var render = function render() {
     staticClass: "c-productlist__items__listt__sentence"
   }, [_vm._v("\n                    ・期限:" + _vm._s(_vm.best_by_date) + "\n                ")]), _vm._v(" "), _c("li", {
     staticClass: "c-productlist__items__listt__sentence"
-  }, [_vm._v("\n                    ・出品した県名:" + _vm._s(_vm.prefecture) + "\n                ")])])]), _vm._v("\n        ここを目処に記述する\n        ")]);
+  }, [_vm._v("\n                    ・出品した県名:" + _vm._s(_vm.prefecture) + "\n                ")])])])]);
 };
 
 var staticRenderFns = [];

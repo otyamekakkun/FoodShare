@@ -733,7 +733,7 @@ a {
   }
 }
 
-.l-productdetail__shoppermenu {
+.c-productdetail__shoppermenu {
   background: red;
   margin-top: 100px;
   width: 60%;
@@ -825,14 +825,6 @@ a {
   margin-top: 20px;
   text-align: center;
   height: 860px;
-}
-
-.l-productdetail__shoppermenu {
-  background: red;
-  margin-top: 100px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 60%;
 }
 
 .l-shopperproductlist {
@@ -1276,6 +1268,19 @@ a {
   text-align: left;
   font-size: 20px;
   margin-top: 35px;
+}
+
+.c-productdetail__shoppermenu {
+  margin-top: 100px;
+  margin-right: auto;
+  margin-left: auto;
+  background: white;
+  height: 200px;
+  border: dotted 1px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  width: 80%;
 }
 
 /*
