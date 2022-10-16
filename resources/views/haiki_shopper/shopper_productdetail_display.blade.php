@@ -5,31 +5,13 @@
         <header>
             @include('rest.shopper.header') 
             </header>
-<h1>商品の詳細情報です</h1>
-<div class="l-productdetail">
-    ここで全体図をつける
-<div class="l-productdetail__area">
-<div class="l-productdetail__area__photo">
 
-
-</div>
-
-<div class="l-productdetail__area__menu">
-    ここでメニューバー見たいな感じをつけようかな
-    <button>購入する</button>
-    <button>購入をキャンセルする</button>
-   <button>
-    <a class="btn_tw" href="https://twitter.com/intent/tweet?text=ここを記述するとtwitter内ですでに文が打ち込まれる;" target="_blank_" rel="nofollow"><i class="fab fa-twitter fa-fw"></i> この商品をシェアする</a>
-
-   </button> 
-
-</div>
-</div>
-</div>  
 {{-- 全体を決めるもの --}}
 <div id="app">
-<shopperproductdetail-component :product_img="'{{$products->img_path}}'" :product_name="'{{$products->product_name}}'"
-    :product_price="'{{$products->price}}'" :product_best_by_date="'{{$products->best_by_date}}'"></shopperproductdetail-component>
+    <div class="l-productdetail">
+
+<shopperproductdetail-component :id="'{{$products->id}}'" :img="'{{$products->img_path}}'" :name="'{{$products->product_name}}'"
+    :price="'{{$products->price}}'" :best_by_date="'{{$products->best_by_date}}'" :prefecture="'{{$products->prefecture}}'"></shopperproductdetail-component>
 
 @if($products->bought<=0)
     <form action="{{ route('bought.update',$products->id)}}" enctype="multipart/form-data" method="post">
@@ -43,6 +25,19 @@
         <button class="btn btn-danger">購入をやめる</button>
     </form>
 @endif
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
 {{-- 
 
 form属性対応
@@ -84,4 +79,26 @@ bought.update
     4既に商品が購入されていたら購入することはできない。ただし購入をキャンセルすることができる。
     
     
+    <h1>商品の詳細情報です</h1>
+<div class="l-productdetail">
+    ここで全体図をつける
+<div class="l-productdetail__area">
+<div class="l-productdetail__area__photo">
+
+
+</div>
+
+<div class="l-productdetail__area__menu">
+    ここでメニューバー見たいな感じをつけようかな
+    <button>購入する</button>
+    <button>購入をキャンセルする</button>
+   <button>
+    <a class="btn_tw" href="https://twitter.com/intent/tweet?text=ここを記述するとtwitter内ですでに文が打ち込まれる;" target="_blank_" rel="nofollow"><i class="fab fa-twitter fa-fw"></i> この商品をシェアする</a>
+
+   </button> 
+
+</div>
+</div>
+</div>  
+
     --}}
