@@ -78,7 +78,8 @@
     width: 80%;
 }
 .c-productdetail__shoppermenu__button {
-    height: size(l);
+    height: size(xxl);
+    line-height: center;
     display: flex;
     //  justify-content: center;
     text-align: center;
@@ -86,4 +87,6 @@
     margin-bottom: auto;
     margin-right: auto;
     margin-left: auto;
+    font-size: size(m);
+    border-radius: size(ss);
 }

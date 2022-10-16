@@ -23,9 +23,7 @@
 @if($products->bought<=0)
     <form class="c-productdetail__shoppermenu" action="{{ route('bought.update',$products->id)}}" enctype="multipart/form-data" method="post">
         <button class="c-productdetail__shoppermenu__button">
-            <a class="btn_tw" href="https://twitter.com/intent/tweet?text=haiki share 商品名{{$products->product_name}}について自由に書いて広めよう!!" target="_blank_" rel="nofollow"><i class="fab fa-twitter fa-fw"></i> この商品をシェアする</a>
-           </button> 
-    
+            <a  href="https://twitter.com/intent/tweet?text=haiki share 商品名{{$products->product_name}}について自由に書いて広めよう!!" target="_blank_" rel="nofollow"><i class="fab fa-twitter fa-fw"></i> この商品をシェアする</a> </button> 
         @csrf
         <button class="c-productdetail__shoppermenu__button">商品を買う！</button>
     </form>
@@ -36,72 +34,16 @@
         
         
         <button class="c-productdetail__shoppermenu__button">
-            <a class="btn_tw" href="https://twitter.com/intent/tweet?text=haiki share 商品名{{$products->product_name}}について自由に書いて広めよう!!" target="_blank_" rel="nofollow"><i class="fab fa-twitter fa-fw"></i> この商品をシェアする</a>
-           </button> 
-        
-        
-        
+            <a  href="https://twitter.com/intent/tweet?text=haiki share 商品名{{$products->product_name}}について自由に書いて広めよう!!" target="_blank_" rel="nofollow"><i class="fab fa-twitter fa-fw"></i> この商品をシェアする</a></button> 
         @csrf
         <button class="c-productdetail__shoppermenu__button">購入をやめる</button>
 
     </form>
 
 @endif
-
-
-{{-- </div> --}}
-
-
-
-
 </div>
 </main>
-
-
-
-
-
 </div>
-
-{{-- 括るdiv --}}
-    {{-- </div> --}}
-
-
-
-
-
-
-
-
-
-
-
-{{-- 
-
-form属性対応
-    <form action="{{ route('shopper_productdetail_bought')}}" enctype="multipart/form-data" method="post">
-
-
-
-bought.update
-
-
-
-
-
-
-
-
-
-    <form action="{{ route('drills.delete',$products->id ) }}" method="post" class="d-inline">
-        @csrf
-        <button class="btn btn-danger" onclick='return confirm("削除しますか？");'>{{ __('Go Delete')  }}</button>
-    </form>
-     --}}
-
-
-
-
 <footer-component></footer-component>
 </div>
 </body>

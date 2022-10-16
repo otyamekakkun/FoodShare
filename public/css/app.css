@@ -1283,13 +1283,16 @@ a {
 }
 
 .c-productdetail__shoppermenu__button {
-  height: 25px;
+  height: 35px;
+  line-height: center;
   display: flex;
   text-align: center;
   margin-top: auto;
   margin-bottom: auto;
   margin-right: auto;
   margin-left: auto;
+  font-size: 20px;
+  border-radius: 10px;
 }
 
 /*
