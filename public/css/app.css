@@ -1287,6 +1287,10 @@ a {
   height: 30px;
   text-align: center;
   line-height: 30px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 20px;
+  margin-right: 20px;
   transition: all 1.2s;
 }
 .c-productdetail__shoppermenu__button:hover {
