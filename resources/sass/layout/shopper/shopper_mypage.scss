@@ -2,8 +2,8 @@
 //コンビニ側のマイページ作成shopper_mypage_display
 //===========================================
 .l-shopper__mypagemenu {
-    //background: red;
-    height: 450px;
+    background: #f6f5f4;
+    height: 430px;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
@@ -19,8 +19,8 @@
 .l-shopper__mypagemenu__list {
     //display: flex;
     justify-content: center;
-    //background: red;
-    height: 300px;
+    background: white;
+    height: 280px;
     width: 70%;
     margin-left: auto;
     margin-right: auto;
@@ -37,8 +37,32 @@
 }
 
 .l-shopper__mypagemenu__list__button {
-    background: red;
+    height: size(xxl);
+    font-size: size(m);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    border: solid size(ssss);
+    background: #f6f5f4;
+
+    border-radius: size(ss);
+    transition: all 1.2s;
     &:hover {
-        background: green;
+        cursor: pointer;
+        background: orange;
+        box-shadow: 1px 1px 1px 1px #b2d142;
+        transform: translateZ(+2px);
     }
+}
+
+//追加
+.l-shoppermypage__title {
+    //display: inline;
+    text-align: center;
+    // background: red;
+    font-size: size(l);
+    margin-top: size(m);
+    margin-right: auto;
+    margin-right: auto;
 }

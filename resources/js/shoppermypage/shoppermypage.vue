@@ -2,6 +2,7 @@
     <div id="app">
         <main>
             <div class="l-exhibitproductlist">
+                <h1 class="l-shoppermypage__title">これまでに購入された商品</h1>
                 <div class="c-productlist">
                     <ul class="c-productlist__items" v-for="item in getItems">
                         <!-- 購入されたら商品にlabelを付け足す機能 -->

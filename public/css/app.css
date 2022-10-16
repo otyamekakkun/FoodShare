@@ -777,7 +777,8 @@ a {
 }
 
 .l-shopper__mypagemenu {
-  height: 450px;
+  background: #f6f5f4;
+  height: 430px;
   width: 80%;
   margin-left: auto;
   margin-right: auto;
@@ -793,7 +794,8 @@ a {
 
 .l-shopper__mypagemenu__list {
   justify-content: center;
-  height: 300px;
+  background: white;
+  height: 280px;
   width: 70%;
   margin-left: auto;
   margin-right: auto;
@@ -810,10 +812,30 @@ a {
 }
 
 .l-shopper__mypagemenu__list__button {
-  background: red;
+  height: 35px;
+  font-size: 20px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  border: solid 3px;
+  background: #f6f5f4;
+  border-radius: 10px;
+  transition: all 1.2s;
 }
 .l-shopper__mypagemenu__list__button:hover {
-  background: green;
+  cursor: pointer;
+  background: orange;
+  box-shadow: 1px 1px 1px 1px #b2d142;
+  transform: translateZ(2px);
+}
+
+.l-shoppermypage__title {
+  text-align: center;
+  font-size: 25px;
+  margin-top: 20px;
+  margin-right: auto;
+  margin-right: auto;
 }
 
 .l-productdetail {
