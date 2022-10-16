@@ -777,12 +777,43 @@ a {
 }
 
 .l-shopper__mypagemenu {
-  height: 400px;
+  height: 450px;
   width: 80%;
   margin-left: auto;
   margin-right: auto;
   border: solid 2px;
   border-radius: 5px;
+}
+
+.l-shopper__mypagemenu__title {
+  text-align: center;
+  margin-top: 35px;
+  font-size: 25px;
+}
+
+.l-shopper__mypagemenu__list {
+  justify-content: center;
+  height: 300px;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+  font-size: 20px;
+  border: solid 2px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.l-shopper__mypage__list__title {
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.l-shopper__mypagemenu__list__button {
+  background: red;
+}
+.l-shopper__mypagemenu__list__button:hover {
+  background: green;
 }
 
 .l-productdetail {

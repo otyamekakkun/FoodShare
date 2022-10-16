@@ -56,14 +56,18 @@
 <body>
     <div id=app>
         <div class="l-shopper__mypagemenu">
-            <h1>
+            <h1  class="l-shopper__mypagemenu__title">
                 {{$my_user->name}}様 専用マイページ
             </h1>
-                        <p>メニュー</p>
-                        <a href="{{route('haiki_shopper.shopper_profile_display')}}"><button>利用者プロフィール編集画面</a></button>
+<div class="l-shopper__mypagemenu__list">
+    <h1 class="l-shopper__mypage__list__title">{{$my_user->name}}様のプロフィールを編集する</h1>
+    <button class="l-shopper__mypagemenu__list__button"> <a href="{{route('haiki_shopper.shopper_profile_display')}}">プロフィール編集をする</a></button>
                 <main>
-                    <h1>ご購入された商品一覧</h1>
-                    <a href="{{route('haiki_shopper.shopper_productlist_display')}}"><button>商品一覧に移動する</a></button>
+                    <h1 class="l-shopper__mypage__list__title">商品閲覧</h1>
+                    <button class="l-shopper__mypagemenu__list__button"><a href="{{route('haiki_shopper.shopper_productlist_display')}}">商品を閲覧する</a></button>
+
+                </div>
+
                 </div>
         <shoppermypage-component></shoppermypage-component>
 <footer-component></footer-component>
