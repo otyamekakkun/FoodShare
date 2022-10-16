@@ -1193,13 +1193,15 @@ a {
   transform: translateX(2px);
 }
 
+.c-productdetail__title {
+  text-align: center;
+}
+
 .c-productdetail__img {
   width: 50%;
 }
 
 .c-productdetail__list {
-  background: green;
-  color: white;
   text-align: left;
   width: 60%;
   margin-left: auto;
@@ -1207,6 +1209,11 @@ a {
   margin-top: 35px;
   height: 400px;
   font-size: 30px;
+}
+
+.c-productlist__items__listt__sentence {
+  border-bottom: double;
+  border-color: black;
 }
 
 /*

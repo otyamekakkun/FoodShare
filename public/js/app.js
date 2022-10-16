@@ -6225,7 +6225,15 @@ var render = function render() {
     }
   }), _vm._v(" "), _c("h1", [_vm._v("商品の内容")]), _vm._v(" "), _c("ul", {
     staticClass: "c-productdetail__list"
-  }, [_c("li", [_vm._v("・商品名:" + _vm._s(_vm.name))]), _vm._v(" "), _c("li", [_vm._v("・お値段:" + _vm._s(_vm.price) + "円")]), _vm._v(" "), _c("li", [_vm._v("・賞味期限:" + _vm._s(_vm.best_by_date))]), _vm._v(" "), _c("li", [_vm._v("・出品された都道府県:" + _vm._s(_vm.prefecture))])])])])])]);
+  }, [_c("li", {
+    staticClass: "c-productlist__items__listt__sentence"
+  }, [_vm._v("\n                        ・商品名:" + _vm._s(_vm.name) + "\n                    ")]), _vm._v(" "), _c("li", {
+    staticClass: "c-productlist__items__listt__sentence"
+  }, [_vm._v("\n                        ・お値段:" + _vm._s(_vm.price) + "円\n                    ")]), _vm._v(" "), _c("li", {
+    staticClass: "c-productlist__items__listt__sentence"
+  }, [_vm._v("\n                        ・賞味期限:" + _vm._s(_vm.best_by_date) + "\n                    ")]), _vm._v(" "), _c("li", {
+    staticClass: "c-productlist__items__listt__sentence"
+  }, [_vm._v("\n                        ・出品された都道府県:" + _vm._s(_vm.prefecture) + "\n                    ")])])])])])]);
 };
 
 var staticRenderFns = [];
