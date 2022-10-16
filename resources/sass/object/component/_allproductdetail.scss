@@ -1,11 +1,28 @@
 //======================================
 //
-.c-productdetail__title {
-    text-align: center;
-}
-.c-productdetail__img {
+
+.c-productdetail__imgarea {
+    text-align: left;
+    border: dotted 1px;
+    border-radius: 10px;
     width: 50%;
 }
+
+.c-productdetail__title {
+    text-align: center;
+    margin-bottom: size(ss);
+    font-size: size(m);
+}
+.c-productdetail__img {
+    width: 100%;
+}
+
+.c-productdetail__listarea {
+    border: dotted 1px;
+    border-radius: 10px;
+    margin-top: size(xxl);
+}
+
 .c-productdetail__list {
     text-align: left;
     width: 60%;
@@ -16,6 +33,12 @@
     font-size: size(xl);
 }
 .c-productlist__items__listt__sentence {
+    margin-bottom: size(m);
     border-bottom: double;
     border-color: black;
+}
+.c-productdetail__listtitle {
+    text-align: left;
+    font-size: size(m);
+    margin-top: size(xxl);
 }

@@ -1193,12 +1193,27 @@ a {
   transform: translateX(2px);
 }
 
+.c-productdetail__imgarea {
+  text-align: left;
+  border: dotted 1px;
+  border-radius: 10px;
+  width: 50%;
+}
+
 .c-productdetail__title {
   text-align: center;
+  margin-bottom: 10px;
+  font-size: 20px;
 }
 
 .c-productdetail__img {
-  width: 50%;
+  width: 100%;
+}
+
+.c-productdetail__listarea {
+  border: dotted 1px;
+  border-radius: 10px;
+  margin-top: 35px;
 }
 
 .c-productdetail__list {
@@ -1212,8 +1227,15 @@ a {
 }
 
 .c-productlist__items__listt__sentence {
+  margin-bottom: 20px;
   border-bottom: double;
   border-color: black;
+}
+
+.c-productdetail__listtitle {
+  text-align: left;
+  font-size: 20px;
+  margin-top: 35px;
 }
 
 /*
