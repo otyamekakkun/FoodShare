@@ -14,6 +14,14 @@
 <shopperproductdetail-component :id="'{{$products->id}}'" :img="'{{$products->img_path}}'" :name="'{{$products->product_name}}'"
     :price="'{{$products->price}}'" :best_by_date="'{{$products->best_by_date}}'" :prefecture="'{{$products->prefecture}}'"></shopperproductdetail-component>
 
+
+
+
+
+    <button>
+        <a class="btn_tw" href="https://twitter.com/intent/tweet?text=haiki share 商品名{{$products->product_name}}について自由に書いて広めよう!!" target="_blank_" rel="nofollow"><i class="fab fa-twitter fa-fw"></i> この商品をシェアする</a>
+    
+       </button> 
 @if($products->bought<=0)
     <form action="{{ route('bought.update',$products->id)}}" enctype="multipart/form-data" method="post">
         @csrf
