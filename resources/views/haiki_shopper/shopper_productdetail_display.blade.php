@@ -5,19 +5,21 @@
         <header>
             @include('rest.shopper.header') 
             </header>
-            <h1 class="c-title">商品No.{{$products->id}} 商品名{{$products->product_name}}の商品情報</h1>
 
 {{-- 全体を決めるもの --}}
 <div id="app">
-    <div class="l-productdetail">
+    <main>
+        <div class="l-productdetail__shopper">
+            <div class="l-productdetail__area">
+
+    {{-- <div class="l-productdetail__shopper"> --}}
 
 <shopperproductdetail-component :id="'{{$products->id}}'" :img="'{{$products->img_path}}'" :name="'{{$products->product_name}}'"
     :price="'{{$products->price}}'" :best_by_date="'{{$products->best_by_date}}'" :prefecture="'{{$products->prefecture}}'"></shopperproductdetail-component>
 
 
 
-
-
+<div class="l-productdetail__shoppermenu">
     <button>
         <a class="btn_tw" href="https://twitter.com/intent/tweet?text=haiki share 商品名{{$products->product_name}}について自由に書いて広めよう!!" target="_blank_" rel="nofollow"><i class="fab fa-twitter fa-fw"></i> この商品をシェアする</a>
     
@@ -35,7 +37,23 @@
     </form>
 @endif
 
-    </div>
+
+
+
+
+
+</div>
+</div>
+</main>
+
+
+
+
+
+</div>
+
+{{-- 括るdiv --}}
+    {{-- </div> --}}
 
 
 

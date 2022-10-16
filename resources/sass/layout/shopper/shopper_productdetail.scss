@@ -12,6 +12,19 @@
     width: 60%;
     height: 1100px;
 }
+
+.l-productdetail__shopper {
+    background: white;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: size(xxl);
+    margin-bottom: size(xxl);
+    border: solid size(sssss);
+    border-radius: size(m);
+    width: 60%;
+    height: 1400px;
+}
+
 .l-productdetail__area {
     //  background: red;
     width: 80%;
@@ -20,4 +33,15 @@
     margin-top: size(m);
     text-align: center;
     height: 860px;
+}
+//===============================
+//shopperproduct_detail
+//================================
+.l-productdetail__shoppermenu {
+    background: red;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 60%;
 }

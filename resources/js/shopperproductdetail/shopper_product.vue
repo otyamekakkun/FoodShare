@@ -1,47 +1,44 @@
 <template>
     <div>
-        <main>
-            <div class="l-productdetail__area">
-                <div class="c-productdetail__imgarea">
-                    <h1 class="c-productdetail__title">
-                        商品:No.{{ id }}の画像
-                    </h1>
-                    <img v-bind:src="img" class="c-productdetail__img" />
-                </div>
+        <!-- laravelの方に移動
 
-                <div class="c-productdetail__listarea">
-                    <h1 class="c-productdetail__listtitle">商品の内容</h1>
-                    <ul class="c-productdetail__list">
-                        <li class="c-productlist__items__listt__sentence">
-                            ・商品名:{{ name }}
-                        </li>
-                        <li class="c-productlist__items__listt__sentence">
-                            ・お値段:{{ price }}円
-                        </li>
-                        <li class="c-productlist__items__listt__sentence">
-                            ・賞味期限:{{ best_by_date }}
-                        </li>
-                        <li class="c-productlist__items__listt__sentence">
-                            ・出品された県名:{{ prefecture }}
-                        </li>
-                    </ul>
+        <main>
+            <div class="l-productdetail__shopper">
+                <div class="l-productdetail__area">
+ -->
+
+        <h1 class="c-productdetail__info">
+            商品No.{{ id }} 商品名{{ name }}の商品情報
+        </h1>
+
+        <div class="c-productdetail__imgarea">
+            <h1 class="c-productdetail__title">商品:No.{{ id }}の画像</h1>
+            <img v-bind:src="img" class="c-productdetail__img" />
+        </div>
+
+        <div class="c-productdetail__listarea">
+            <h1 class="c-productdetail__listtitle">商品の内容</h1>
+            <ul class="c-productdetail__list">
+                <li class="c-productlist__items__listt__sentence">
+                    ・商品名:{{ name }}
+                </li>
+                <li class="c-productlist__items__listt__sentence">
+                    ・お値段:{{ price }}円
+                </li>
+                <li class="c-productlist__items__listt__sentence">
+                    ・期限:{{ best_by_date }}
+                </li>
+                <li class="c-productlist__items__listt__sentence">
+                    ・出品した県名:{{ prefecture }}
+                </li>
+            </ul>
+        </div>
+        ここを目処に記述する
+        <!-- laravelの方に移動 
                 </div>
             </div>
         </main>
-        <!--  
-        <button>
-            <a
-                class="btn_tw"
-                v-bind:href="`https://twitter.com/intent/tweet?text=商品名${name}について自由に記述しよう;`"
-                target="_blank_"
-                rel="nofollow"
-                ><i class="fab fa-twitter fa-fw"></i> {{ name }}をシェアする</a
-            >
-
-             "`${product.id}}/shopper_productdetail`
-                                                                    v-bind:href="`${product.id}}/shopper_productdetail`"
-        </button>
-        -->
+-->
     </div>
 </template>
 <script>

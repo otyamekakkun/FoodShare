@@ -16,6 +16,7 @@
 .c-productdetail__info {
     margin-top: 55px;
     font-size: size(m);
+    text-align: center;
 }
 
 .c-productdetail__title {
@@ -28,6 +29,8 @@
 .c-productdetail__img {
     width: 80%;
     margin-bottom: size(l);
+    // margin-left: auto;
+    //margin-right: auto;
 }
 
 .c-productdetail__listarea {

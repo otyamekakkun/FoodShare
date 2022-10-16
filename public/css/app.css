@@ -733,6 +733,12 @@ a {
   }
 }
 
+.l-productdetail__shoppermenu {
+  background: red;
+  margin-top: 100px;
+  width: 60%;
+}
+
 .l-formshopperprofile {
   margin: auto;
   padding: 35px;
@@ -800,6 +806,18 @@ a {
   height: 1100px;
 }
 
+.l-productdetail__shopper {
+  background: white;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  border: solid 2px;
+  border-radius: 20px;
+  width: 60%;
+  height: 1400px;
+}
+
 .l-productdetail__area {
   width: 80%;
   margin-left: auto;
@@ -807,6 +825,14 @@ a {
   margin-top: 20px;
   text-align: center;
   height: 860px;
+}
+
+.l-productdetail__shoppermenu {
+  background: red;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
 }
 
 .l-shopperproductlist {
@@ -1205,6 +1231,7 @@ a {
 .c-productdetail__info {
   margin-top: 55px;
   font-size: 20px;
+  text-align: center;
 }
 
 .c-productdetail__title {
