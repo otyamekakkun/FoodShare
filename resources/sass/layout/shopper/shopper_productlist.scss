@@ -1,19 +1,11 @@
 //====================================
 //利用者の商品一覧(shopper_productlist)
 //====================================
-
-.l-shopperproductlist {
-    display: block;
-    background: #f6f5f4;
-    //中央に要素を寄せるときはこれを用いる
-    margin-right: auto;
+.l-productsearch {
+    background: white;
+    height: 400px;
+    width: 85%;
     margin-left: auto;
-    margin-top: 20px;
-    margin-bottom: 40px;
-    border: solid #174113;
-    border-radius: size(ss);
-
-    width: 90%;
-
-    //画面の大きさによって高さが足りなくなりそうなのでレスポンシブを使う
+    margin-right: auto;
+    border-radius: size(m);
 }

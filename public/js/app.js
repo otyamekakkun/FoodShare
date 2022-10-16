@@ -5922,7 +5922,9 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", [_c("div", [_c("div", [_c("p", [_vm._v("都道府県を入力してください")]), _vm._v(" "), _c("input", {
+  return _c("div", [_c("div", [_c("div", [_c("h1", [_vm._v("商品一覧ページ")]), _vm._v(" "), _c("div", {
+    staticClass: "l-productsearch"
+  }, [_c("h1", [_vm._v("商品を検索する")]), _vm._v(" "), _c("p", [_vm._v("都道府県を入力してください")]), _vm._v(" "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -5960,7 +5962,7 @@ var render = function render() {
         _vm.budgets = $event.target.value;
       }
     }
-  }), _vm._v("円以内で買えるもの\n            "), _c("p", [_vm._v("有効期限チェック")]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c("input", {
+  }), _vm._v("円以内で買えるもの\n                "), _c("p", [_vm._v("有効期限チェック")]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -5981,7 +5983,7 @@ var render = function render() {
         _vm.Days2 = $event.target.value;
       }
     }
-  }), _vm._v(" "), _c("div", {
+  })]), _vm._v(" "), _c("div", {
     staticClass: "l-shopperproductlist"
   }, [_c("div", {
     staticClass: "c-productlist"
@@ -6019,7 +6021,7 @@ var staticRenderFns = [function () {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("p", [_vm._v("\n                ご希望の日付を入力してください"), _c("br"), _vm._v("(入力された日付に対して,"), _c("br"), _vm._v("賞味期限が有効なものだけ表示します)\n            ")]);
+  return _c("p", [_vm._v("\n                    ご希望の日付を入力してください"), _c("br"), _vm._v("(入力された日付に対して,"), _c("br"), _vm._v("賞味期限が有効なものだけ表示します)\n                ")]);
 }];
 render._withStripped = true;
 

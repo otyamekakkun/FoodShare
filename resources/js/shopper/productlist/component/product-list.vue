@@ -2,20 +2,26 @@
     <div>
         <div>
             <div>
-                <p>都道府県を入力してください</p>
-                <input type="text" v-model="keywords" />
-                <p>購入されたい商品の予算内の金額を入力してください</p>
-                <input type="text" v-model="budgets" />円以内で買えるもの
-                <p>有効期限チェック</p>
-                <p>
-                    ご希望の日付を入力してください<br />(入力された日付に対して,<br />賞味期限が有効なものだけ表示します)
-                </p>
-                <input
-                    type="date"
-                    :min="new Date().toISOString().split('T')[0]"
-                    class="l-productexhibitform__typo3"
-                    v-model="Days2"
-                />
+                <h1>商品一覧ページ</h1>
+
+                <div class="l-productsearch">
+                    <h1>商品を検索する</h1>
+                    <p>都道府県を入力してください</p>
+                    <input type="text" v-model="keywords" />
+                    <p>購入されたい商品の予算内の金額を入力してください</p>
+                    <input type="text" v-model="budgets" />円以内で買えるもの
+                    <p>有効期限チェック</p>
+                    <p>
+                        ご希望の日付を入力してください<br />(入力された日付に対して,<br />賞味期限が有効なものだけ表示します)
+                    </p>
+                    <input
+                        type="date"
+                        :min="new Date().toISOString().split('T')[0]"
+                        class="l-productexhibitform__typo3"
+                        v-model="Days2"
+                    />
+                </div>
+
                 <div class="l-shopperproductlist">
                     <div class="c-productlist">
                         <ul
