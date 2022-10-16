@@ -3,7 +3,9 @@
         <main>
             <div class="l-productdetail__area">
                 <div class="c-productdetail__imgarea">
-                    <h1 class="c-productdetail__title">商品:No.{{ id }}</h1>
+                    <h1 class="c-productdetail__title">
+                        商品:No.{{ id }}の画像
+                    </h1>
                     <img v-bind:src="img" class="c-productdetail__img" />
                 </div>
                 <button>

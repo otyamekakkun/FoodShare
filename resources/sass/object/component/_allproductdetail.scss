@@ -2,14 +2,20 @@
 //
 
 .c-productdetail__imgarea {
-    text-align: left;
+    //text-align: left;
     border: dotted 1px;
     border-radius: 10px;
-    margin-top: 55px;
+    margin-top: size(l);
     // padding-bottom: size(l);
     //margin-bottom: size(l);
+    margin-left: auto;
+    margin-right: auto;
 
-    width: 50%;
+    width: 60%;
+}
+.c-productdetail__info {
+    margin-top: size(xxl);
+    font-size: size(m);
 }
 
 .c-productdetail__title {
@@ -18,18 +24,19 @@
     font-size: size(m);
 }
 .c-productdetail__img {
-    width: 100%;
+    width: 80%;
+    margin-bottom: size(l);
 }
 
 .c-productdetail__listarea {
     border: dotted 1px;
     border-radius: 10px;
-    margin-top: 55px;
+    margin-top: 70px;
 }
 
 .c-productdetail__list {
     text-align: left;
-    width: 60%;
+    width: 55%;
     margin-left: auto;
     margin-right: auto;
     margin-top: size(xxl);

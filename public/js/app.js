@@ -6152,7 +6152,7 @@ var render = function render() {
     staticClass: "c-productdetail__imgarea"
   }, [_c("h1", {
     staticClass: "c-productdetail__title"
-  }, [_vm._v("商品:No." + _vm._s(_vm.id))]), _vm._v(" "), _c("img", {
+  }, [_vm._v("\n                    商品:No." + _vm._s(_vm.id) + "の画像\n                ")]), _vm._v(" "), _c("img", {
     staticClass: "c-productdetail__img",
     attrs: {
       src: _vm.img
@@ -6243,11 +6243,13 @@ var render = function render() {
     staticClass: "l-productdetail"
   }, [_c("div", {
     staticClass: "l-productdetail__area"
-  }, [_c("div", {
+  }, [_c("h1", {
+    staticClass: "c-productdetail__info"
+  }, [_vm._v("\n                    商品No." + _vm._s(_vm.id) + " 商品名" + _vm._s(_vm.name) + "の商品情報\n                ")]), _vm._v(" "), _c("div", {
     staticClass: "c-productdetail__imgarea"
   }, [_c("h1", {
     staticClass: "c-productdetail__title"
-  }, [_vm._v("商品:No." + _vm._s(_vm.id))]), _vm._v(" "), _c("img", {
+  }, [_vm._v("\n                        商品:No." + _vm._s(_vm.id) + "の画像\n                    ")]), _vm._v(" "), _c("img", {
     staticClass: "c-productdetail__img",
     attrs: {
       src: _vm.img
