@@ -50,33 +50,31 @@
 
 @extends('layouts.app2') 
  @section('content') 
-<body>
 <header>
 @include('rest.shopper.header') 
 </header>
-</body>
-<h1>
-    {{$my_user->name}}様
-    haiki shareへようこそ！！
-
-            <p>メニュー</p>
-            <a href="{{route('haiki_shopper.shopper_profile_display')}}"><button>利用者プロフィール編集画面</a></button>
-    
-
-<div id=app>
-    <main>
-        <h1>ご購入された商品一覧</h1>
-        <a href="{{route('haiki_shopper.shopper_productlist_display')}}"><button>商品一覧に移動する</a></button>
-
+<body>
+    <div id=app>
+        <div class="l-shopper__mypagemenu">
+            <h1>
+                {{$my_user->name}}様 専用マイページ
+            </h1>
+                        <p>メニュー</p>
+                        <a href="{{route('haiki_shopper.shopper_profile_display')}}"><button>利用者プロフィール編集画面</a></button>
+                <main>
+                    <h1>ご購入された商品一覧</h1>
+                    <a href="{{route('haiki_shopper.shopper_productlist_display')}}"><button>商品一覧に移動する</a></button>
+                </div>
         <shoppermypage-component></shoppermypage-component>
-
-
-
-
-
-
 <footer-component></footer-component>
 </div>
+
+
+
+
+
+</body>
+
 @endsection 
 
 

@@ -776,22 +776,13 @@ a {
   }
 }
 
-.l-shoppermypage {
-  display: flex;
-}
-
-.l-shoppermypage__exhibitarea {
-  width: 68%;
-  height: 1600px;
-  background: white;
-  margin: 30px;
-}
-
-.l-shoppermypage__bought {
-  width: 68%;
-  height: 1600px;
-  margin: 20px;
-  background: white;
+.l-shopper__mypagemenu {
+  height: 400px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid 2px;
+  border-radius: 5px;
 }
 
 .l-productdetail {
