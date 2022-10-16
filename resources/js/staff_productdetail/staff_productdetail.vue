@@ -1,7 +1,5 @@
 <template>
     <div>
-        <h1 class="c-title">商品詳細</h1>
-
         <main>
             <div class="l-productdetail">
                 <div class="l-productdetail__area">

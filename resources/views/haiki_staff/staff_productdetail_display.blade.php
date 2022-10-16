@@ -5,6 +5,8 @@
     <header>
         @include('rest.staff.header')
     </header>
+    <h1 class="c-title">商品No.{{$products->id}} 商品名{{$products->product_name}}の商品情報</h1>
+
     <div id="app">
 
 <staff_productdetail-component :id="'{{$products->id}}'" :img="'{{$products->img_path}}'" :name="'{{$products->product_name}}'" :price="'{{$products->price}}'"
