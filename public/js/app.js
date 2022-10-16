@@ -6157,7 +6157,16 @@ var render = function render() {
     attrs: {
       src: _vm.img
     }
-  })]), _vm._v(" "), _c("div", {
+  })]), _vm._v(" "), _c("button", [_c("a", {
+    staticClass: "btn_tw",
+    attrs: {
+      href: "https://twitter.com/intent/tweet?text=\u5546\u54C1\u540D".concat(_vm.name, "\u306B\u3064\u3044\u3066\u81EA\u7531\u306B\u8A18\u8FF0\u3057\u3088\u3046;"),
+      target: "_blank_",
+      rel: "nofollow"
+    }
+  }, [_c("i", {
+    staticClass: "fab fa-twitter fa-fw"
+  }), _vm._v("\n                    " + _vm._s(_vm.name) + "をシェアする")])]), _vm._v(" "), _c("div", {
     staticClass: "c-productdetail__listarea"
   }, [_c("h1", {
     staticClass: "c-productdetail__listtitle"

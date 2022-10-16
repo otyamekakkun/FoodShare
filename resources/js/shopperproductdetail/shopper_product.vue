@@ -6,6 +6,26 @@
                     <h1 class="c-productdetail__title">商品:No.{{ id }}</h1>
                     <img v-bind:src="img" class="c-productdetail__img" />
                 </div>
+                <button>
+                    <a
+                        class="btn_tw"
+                        v-bind:href="`https://twitter.com/intent/tweet?text=商品名${name}について自由に記述しよう;`"
+                        target="_blank_"
+                        rel="nofollow"
+                        ><i class="fab fa-twitter fa-fw"></i>
+                        {{ name }}をシェアする</a
+                    >
+
+                    <!-- "`${product.id}}/shopper_productdetail`
+                    
+                    
+                                                                    v-bind:href="`${product.id}}/shopper_productdetail`"
+
+                    
+                    
+                    
+                    -->
+                </button>
 
                 <div class="c-productdetail__listarea">
                     <h1 class="c-productdetail__listtitle">商品の内容</h1>

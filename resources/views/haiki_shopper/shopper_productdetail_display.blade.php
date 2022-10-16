@@ -5,6 +5,7 @@
         <header>
             @include('rest.shopper.header') 
             </header>
+            <h1 class="c-title">商品No.{{$products->id}} 商品名{{$products->product_name}}の商品情報</h1>
 
 {{-- 全体を決めるもの --}}
 <div id="app">
