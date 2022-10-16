@@ -24,10 +24,10 @@
                                 ・お値段:{{ price }}円
                             </li>
                             <li class="c-productlist__items__listt__sentence">
-                                ・賞味期限:{{ best_by_date }}
+                                ・期限:{{ best_by_date }}
                             </li>
                             <li class="c-productlist__items__listt__sentence">
-                                ・出品された都道府県:{{ prefecture }}
+                                ・出品した県名:{{ prefecture }}
                             </li>
                         </ul>
                     </div>

@@ -5,7 +5,7 @@
     //text-align: left;
     border: dotted 1px;
     border-radius: 10px;
-    margin-top: size(l);
+    margin-top: size(xxl);
     // padding-bottom: size(l);
     //margin-bottom: size(l);
     margin-left: auto;
@@ -14,12 +14,14 @@
     width: 60%;
 }
 .c-productdetail__info {
-    margin-top: size(xxl);
+    margin-top: 55px;
     font-size: size(m);
 }
 
 .c-productdetail__title {
     text-align: center;
+    margin-left: size(s);
+    margin-top: size(s);
     margin-bottom: size(ss);
     font-size: size(m);
 }
@@ -32,6 +34,9 @@
     border: dotted 1px;
     border-radius: 10px;
     margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
 }
 
 .c-productdetail__list {
