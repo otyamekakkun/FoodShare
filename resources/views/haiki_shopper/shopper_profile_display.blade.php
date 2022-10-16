@@ -42,16 +42,62 @@
             @include('rest.shopper.header') 
             </header>
     <main>
-        <h1>{{$user->name}}</h1>
 {{-- boxを作るdivタグにしたい --}}
 {{--下のコードはrest化したフォームページ。  --}}
-@include('rest.shopper.shopperprofile')
+{{-- @include('rest.shopper.shopperprofile') --}}
+{{-- 
+    header部分　保守性が高くなるように修正する箇所を１箇所にまとめた。
+    --}}
+    <section>
+        <form method="POST" enctype="multipart/form-data" action="{{route('haiki_shopperprofile_edit',$user->id)}}">      
+            @csrf
+            <div class="l-formshopperprofile">
+            <h3 class="l-formshopperprofile__title">{{$user->name}}様
+                プロフィール編集</h3>
+            <div class="l-formshopperprofile__te">
+                <input class="l-formshopperprofile__text" action="post" type="text" name="name" placeholder="名前を編集" value={{$user->name}}>
+                @error('name')
+                <span class="" role="alert">
+                    <strong>{{$message}}</strong>
+                </span>
+                @enderror
+                <span>email</span>
+            <input class="l-formshopperprofile__text" action="post" type="text" name="email" placeholder="メールアドレス編集" value={{$user->email}}>
+    
+    @error('email')
+    <span class="" role="alert">
+        <strong>{{$message}}</strong>
+    </span>
+    @enderror
+    
+    <input class="l-formshopperprofile__text" action="post" type="password" name="password" placeholder="パスワード編集" value={{$user->password}}>
+    @error('password')
+    <span class="" role="alert">
+        <strong>{{$message}}</strong>
+    </span>
+    @enderror
+            <input class="l-formshopperprofile__text" action="post" type="password" name="password" placeholder="パスワード再入力" value={{$user->password}}>
+            @error('password')
+    <span class="" role="alert">
+        <strong>{{$message}}</strong>
+    </span>
+    @enderror
+            </div>
+        <input type="submit" class="c-formshopperprofile__sub" value="変更する">
+        </div>
+        </form>
+        </div>
+        </section>
+        
+    
+    
+    
 </main>
 </body>
 <div id=app>
     {{-- incompletefooter-componentはfooterをレウアウトしてくれるもの。ただしページ量が少ないときにfooter
         エリアが最下部にならないように定義したもの --}}
-        <incompletefooter-component></incompleteooter-component>
+        <footer-component><footer-component>
 
 </div>
 
