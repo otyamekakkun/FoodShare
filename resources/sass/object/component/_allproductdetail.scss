@@ -83,17 +83,18 @@
     height: size(xl);
     text-align: center;
     line-height: 30px;
-    //line-height: 100px;
-    //margin-right: auto;
-    // margin-left: auto;
     margin-top: auto;
     margin-bottom: auto;
     margin-left: size(m);
     margin-right: size(m);
+    border-radius: size(sss);
 
     transition: all 1.2s;
     //background: red;
     &:hover {
         background: orange;
+        box-shadow: 1px 1px 1px 1px #b2d142;
+        transform: translateX(+2px);
+        border: none;
     }
 }
