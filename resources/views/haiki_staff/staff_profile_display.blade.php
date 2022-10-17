@@ -68,13 +68,36 @@
             <div class="l-formstaffprofile">
             <h3 class="l-formstaffprofile__title">コンビニ情報編集画面</h3>
             <div class="l-formstaffprofile__te">
+
+
+
+
+
+
+                <span>名前:
+                    @error('name')
+                    <span class="" role="alert">
+                        <strong>{{$message}}</strong>
+                    </span>
+                    @enderror
+                </span>
+                <br/>
+                <input class="l-formstaffprofile__text" action="post" type="text" name="name" placeholder="メールアドレス編集" value="{{$admin->name}}">
+    
+<br/>
+
+
+
+<span>メールアドレス編集:
+                @error('email')
+                <span class="" role="alert">
+                    <strong>{{$message}}</strong>
+                </span>
+                @enderror
+            </span>
+            <br/>
             <input class="l-formstaffprofile__text" action="post" type="text" name="email" placeholder="メールアドレス編集" value="{{$admin->email}}">
 {{-- メールアドレス編集のエラーメッセージよう --}}
-            @error('email')
-<span class="" role="alert">
-    <strong>{{$message}}</strong>
-</span>
-@enderror
 {{--  --}}
             <input class="l-formstaffprofile__text" action="post" type="password" name="password" placeholder="パスワード編集">
 
