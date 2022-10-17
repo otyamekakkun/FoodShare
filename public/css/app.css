@@ -550,6 +550,7 @@ a {
   margin: auto;
   padding: 35px;
   text-align: center;
+  text-decoration: underline;
   background: #faf9f5;
   font-family: "Noto Serif TC", serif;
   font-size: 35px;
