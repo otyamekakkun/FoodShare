@@ -27,7 +27,7 @@
                                 @enderror
                                 <br/>
                             </label>
-                                <input id="name" type="text" class="l-register__common__sentence @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                <input id="name" type="text" class="l-register__common__sentence  name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
                                 <br/>
 {{-- 名前入力スペースここまで --}}
                             <label for="email" class="l-register__common__form__message">Email:

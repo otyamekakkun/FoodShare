@@ -17,7 +17,12 @@
 .l-register__common__title {
     margin-top: size(xxl);
     margin-bottom: size(xl);
+    margin-left: auto;
+    margin-right: auto;
     font-size: size(xl);
+    border: dotted #174113;
+    border-radius: size(sss);
+    width: 32%;
 }
 
 .l-register__common__form {
@@ -50,4 +55,11 @@
     margin-left: 500px;
     height: 65px;
     padding: size(s);
+}
+.l-register__common__form__message {
+    display: block;
+    //background: red;
+    width: 40%;
+    margin-top: size(l);
+    margin-bottom: -28px;
 }
