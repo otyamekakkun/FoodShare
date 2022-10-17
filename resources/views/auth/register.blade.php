@@ -5,6 +5,7 @@
                     @isset($authgroup)
                     <form method="POST" action="{{ url("register/$authgroup") }}">
 <h1>コンビニスタッフユーザー登録</h1>
+<p>お客様(コンビニスタッフ関係ではない)方は,トップページのお客様ユーザー登録というボタンからお入りになって登録をしてください</p>
  @else
  {{-- ここからユーザー登録ページ併用 --}}
                     <form method="POST" action="{{ route('register') }}">
@@ -17,8 +18,6 @@
                             </button>
                             <br/>{{--簡易的につけとく --}}
                             {{--ユーザー登録ボタンここまで  --}}
-
-
                             <div class="l-register__common__form">
                             <label for="name" class="l-register__common__form__message">名前:
                                 @error('name')
