@@ -568,19 +568,22 @@ a {
   background: white;
   border: none;
   border-radius: 5px;
+  margin-top: 20px;
   width: 50%;
+  cursor: pointer;
 }
 
 .l-formstaffprofile__message {
   font-size: 20px;
   display: block;
   width: 40%;
-  height: 25px;
-  margin-bottom: -40px;
+  height: 15px;
+  margin-top: 15px;
+  margin-bottom: -30px;
 }
 
 .l-formstaff__adressarea {
-  height: 400px;
+  height: 600px;
   border: dotted 2px;
   border-radius: 5px;
   margin-left: 30px;
@@ -590,7 +593,49 @@ a {
 
 .l-formstaff__adressarea__title {
   font-size: 25px;
+  margin-top: 30px;
+  margin-bottom: 35px;
+}
+
+.l-formstaffprofile__prefecturetext {
+  font-size: 25px;
+  text-align: center;
+  width: 20%;
+  border-radius: 5px;
   margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: -180px;
+  cursor: pointer;
+  background: white;
+}
+
+.l-formstaffprofile__adresstext {
+  width: 80%;
+  height: 180px;
+  margin-top: 80px;
+  border-radius: 20px;
+  font-size: 20px;
+  text-align: left;
+  background: white;
+  color: black;
+  cursor: pointer;
+}
+
+.l-staffprofile__sub {
+  border: none;
+  background: #184113;
+  border-radius: 10px;
+  color: white;
+  width: 20%;
+  margin-top: 50px;
+  margin-left: 500px;
+  transition: all 1.2s;
+  cursor: pointer;
+}
+.l-staffprofile__sub:hover {
+  background: orange;
+  box-shadow: 1px 1px 1px 1px #b2d142;
+  transform: translateX(5px);
 }
 
 .l-exhibitproduct {

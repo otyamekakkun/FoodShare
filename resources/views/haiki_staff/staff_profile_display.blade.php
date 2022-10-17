@@ -21,6 +21,7 @@
                 <br/>
                 <input class="l-formstaffprofile__text" action="post" type="text" name="name" placeholder="名前を編集" value="{{$admin->name}}">
 <br/>
+
 <span class="l-formstaffprofile__message">メールアドレス編集:
                 @error('email')
                 <span class="" role="alert">
@@ -147,18 +148,19 @@
     </select>
 
 {{-- 都道府県ここまで --}}
-<span class="l-formstaffprofile__message">都道府県以外の住所
+<span class="l-formstaffprofile__message">都道府県以外の住所:
     @error('adress')
     <span class="" role="alert">
         <strong>{{$message}}</strong>
     </span>
     @enderror    
 </span>
-<textarea name="adress" placeholder="都道府県以外の住所" value="{{$admin->adress}}"></textarea>
+<textarea name="adress"  value="{{$admin->adress}}" class="l-formstaffprofile__adresstext"></textarea>
 </textarea>
 {{-- 住所変更ここまで --}}
-            <input type="submit" class="l-formstaffprofile__sub" value="変更する">
-        </div>
+</div>
+
+            <input type="submit" class="l-staffprofile__sub" value="変更する">
         </form>
         </div>
         </section>
