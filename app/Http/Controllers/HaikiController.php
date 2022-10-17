@@ -38,7 +38,7 @@ public function shopper_profile_edit(Request $request)
 $request->validate([
     'name'=>'required',
     'email'=>'required',
-    'password'=>'required',
+    'password'=>'required|min:6|',
     'password_confirmation'=>'required|min:6|same:password'
 
     //入力ネームと同じものを対応させる

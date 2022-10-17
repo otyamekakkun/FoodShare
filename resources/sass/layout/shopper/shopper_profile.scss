@@ -3,13 +3,18 @@
 //=====================================
 
 .l-formshopperprofile {
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
     padding: size(xxl);
     text-align: center;
     background: color("formbackground");
     font-family: "Noto Serif TC", serif;
     font-size: size(xxl);
-    width: 50%;
+    border: solid size(sssss);
+    border-radius: size(sss);
+    width: 65%;
     height: 900px;
     line-height: 65px;
     &__te {
@@ -22,8 +27,10 @@
 
     &__text {
         background: white;
+        width: 60%;
         margin: 20px 20px 20px;
         border: none;
+        border-radius: size(sss);
         @include mq() {
             width: 100%;
         }
@@ -40,3 +47,14 @@
 }
 //変更すると言う文字がずれたら　レスポンシブ対応をとる。
 //980pxからレスポンシブ対応をする
+
+.l-formshopperprofile__message {
+    display: block;
+    // background: red;
+    text-align: left;
+    font-size: size(m);
+    width: 50%;
+    height: size(l);
+    margin-bottom: -40px;
+    margin-left: 200px;
+}

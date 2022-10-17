@@ -57,9 +57,9 @@
 
             <div class="l-formshopperprofile__te">
                 {{-- このようにspanの中にメッセを入れておく --}}
-                <span>名前                
+                <span class="l-formshopperprofile__message">名前:               
                     @error('name')
-                    <span class="" role="alert">
+                    <span class="c-errormessage" role="alert">
                         <strong>{{$message}}</strong>
                     </span>
                     @enderror
@@ -68,9 +68,9 @@
                 <input class="l-formshopperprofile__text" action="post" type="text" name="name" placeholder="名前を編集" value={{$user->name}}>
                 <br/>
                 {{-- 名前編集ここまで --}}
-                <span>email 
+                <span class="l-formshopperprofile__message">email:
                     @error('email')
-                    <span class="" role="alert">
+                    <span class="c-errormessage" role="alert">
                         <strong>{{$message}}</strong>
                     </span>
                     @enderror
@@ -80,20 +80,20 @@
             <input class="l-formshopperprofile__text" action="post" type="text" name="email" placeholder="メールアドレス編集" value={{$user->email}}>
             <br/>
     {{-- emailここまで --}}
-<span>パスワード編集
+    {{-- passwordここから --}}
+<span class="l-formshopperprofile__message">パスワード編集:
     @error('password')
-    <span class="" role="alert">
+    <span class="c-errormessage" role="alert">
         <strong>{{$message}}</strong>
     </span>
     @enderror
 </span>
 <br/>
-
-    <input class="l-formshopperprofile__text" action="post" type="password" name="password" placeholder="パスワード編集"><br/>
-
-    <span>パスワード再入力
+    <input class="l-formshopperprofile__text" action="post" type="password" name="password"><br/>
+    {{-- パスワード編集ここまで --}}
+    <span class="l-formshopperprofile__message">パスワード再入力:
         @error('password_confirmation')
-        <span class="" role="alert">
+        <span class="c-errormessage" role="alert">
             <strong>{{$message}}</strong>
         </span>
         @enderror
@@ -101,7 +101,6 @@
     <br/>
 
             <input class="l-formshopperprofile__text" type="password" class="l-register__common__sentence" name="password_confirmation" required autocomplete="new-password">
-
             </div>
         <input type="submit" class="c-formshopperprofile__sub" value="変更する">
         </div>
