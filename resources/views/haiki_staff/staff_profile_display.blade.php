@@ -102,6 +102,7 @@
 </span>
 <br/>
             <input class="l-formstaffprofile__text" action="post" type="password" name="password" placeholder="パスワード編集">
+            <br/>
 {{-- パスワード入力ここまで --}}
 
 <span class="">パスワード再入力:
@@ -113,27 +114,37 @@
 </span>
 <br/>
         <input class="l-formshopperprofile__text" type="password" class="l-register__common__sentence" name="password_confirmation" required autocomplete="new-password">
-
-
+<br/>
+        {{-- パスワード再入力ここまで --}}
+<span>コンビニ名:
+    @error('convinience_name')
+    <span class="" role="alert">
+        <strong>{{$message}}</strong>
+    </span>
+    @enderror     
+</span>
             <input class="l-formstaffprofile__text" action="post" type="text" name="convinience_name" placeholder="コンビニ名" value="{{$admin->convinience_name}}">
-
-            @error('convinience_name')
-<span class="" role="alert">
-    <strong>{{$message}}</strong>
+            <br/>
+<span>支店名:
+    @error('convinience_branch')
+    <span class="" role="alert">
+        <strong>{{$message}}</strong>
+    </span>
+    @enderror    
 </span>
-@enderror
-
             <input class="l-formstaffprofile__text" action="post" type="text" name="convinience_branch" placeholder="支店名" value="{{$admin->convinience_branch}}">
+            <br/>
+            {{-- 支店名 --}}
 
-            @error('convinience_branch')
-<span class="" role="alert">
-    <strong>{{$message}}</strong>
-</span>
-@enderror
-
-
+            <span>都道府県:
+                @error('prefecture')
+                <span class="" role="alert">
+                    <strong>{{$message}}</strong>
+                </span>
+                @enderror    
+            </span>
 <select name="prefecture" class="l-formstaffprofile__text" value="{{$admin->prefecture}}">
-    <option selected>都道府県</option>
+    {{-- <option selected>都道府県</option> --}}
     <option value="北海道">北海道</option>
     <option value="青森県">青森県</option>
     <option value="岩手県">岩手県</option>

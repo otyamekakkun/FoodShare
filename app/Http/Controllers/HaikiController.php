@@ -121,7 +121,8 @@ $request->validate([
 
     'convinience_name'=>'required',
     'convinience_branch'=>'required',
-    'adress'=>'required'
+    'adress'=>'required',
+    'prefecture'=>'required'
 ]);
 
 $id = Auth::guard('admin')->id();
