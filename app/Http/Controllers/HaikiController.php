@@ -187,10 +187,7 @@ public function update_exhibitproduct(Request $request,$id){
     $request->validate([
     ]);
 $img = $request->file('img_path');
-//$path = $img->store('img','public');//1
-
-
-
+$path = $img->store('img','public');//1
 $image = $request->file("img_path");
 $path = Storage::disk("public")->putFile('profile', $image); 
 $imagePath = "/storage/" . $path;
@@ -314,7 +311,7 @@ $id = Auth::guard('admin')->id();
 $product = new products;
 $product->product_name = $request->product_name;
 $product->admin_id = $id;//現在ログインしているコンビニユーザー情報のidをこの中に入れる
-//$product->img_path=$imagePath;
+$product->img_path=$imagePath;
 //json形式で取得している
 $product->img_path=$imagePath;
 $product->price = $request->price;
