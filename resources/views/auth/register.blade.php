@@ -18,6 +18,10 @@
                     @endisset
                         @csrf
                         <div class="l-register__common">
+                            <button type="submit" class="btn btn-primary">
+                                {{ __('Register') }}
+                            </button>
+                            {{--ユーザー登録ボタンここまで  --}}
 
                             <label for="name">{{ __('Name') }}</label>
                                 <input id="name" type="text" class="l-register__common__sentence @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
@@ -137,10 +141,6 @@
                             @endisset
                             {{-- ユーザー登録ここまで --}}
 {{--ユーザー登録ボタン  --}}
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>
-                                {{--ユーザー登録ボタンここまで  --}}
                             </div>
                             
 <div id=app>
