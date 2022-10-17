@@ -521,6 +521,13 @@ a {
   border-radius: 5px;
 }
 
+.l-register__common__title {
+  margin-top: 35px;
+  margin-bottom: 30px;
+  font-size: 25px;
+  background: red;
+}
+
 .l-register__common__form {
   margin-right: auto;
   margin-left: auto;
@@ -539,6 +546,18 @@ a {
   font-size: 25px;
   border: none;
   border-radius: 5px;
+}
+
+.l-register__common__button {
+  background: #174114;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  margin-top: 15px;
+  margin-left: 500px;
+  height: 65px;
+  padding: 15px;
 }
 
 .l-staffmypage {

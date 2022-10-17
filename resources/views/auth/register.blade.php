@@ -12,8 +12,8 @@
                     @endisset
                         @csrf
                         <div class="l-register__common">
-                            <h1>ユーザー登録画面</h1>
-                            <button type="submit" class="btn btn-primary">
+                            <h1 class="l-register__common__title">ユーザー登録画面</h1>
+                            <button type="submit" class="l-register__common__button">
                                 ユーザー登録して始める
                             </button>
                             <br/>{{--簡易的につけとく --}}
