@@ -25,30 +25,36 @@
                     @else
                     {{-- 管理者ログインページここまで --}}
                     {{-- ここから最後までユーザー登録者用と管理者用併用のログインページ --}}
+                    <div class="l-login">
+
                     <form method="POST" action="{{ route('login') }}">
                     @endisset
                         @csrf
-                        <div class="l-login">
-
-                            {{-- <label for="email" class="">{{ __('Email Address') }}</label> --}}
+<div class="l-login__formarea">
+                            <label for="email" class="">メールアドレス
+<span>
+    @error('email')
+    <span class="" role="alert">
+        <strong>{{ $message }}</strong>
+    </span>
+@enderror
+</span>
+                            </label>
                                 <input id="email" type="email" class=" @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="emailを入力してください">
 
-                                @error('email')
-                                    <span class="" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
                                 {{-- email入力欄ここまで --}}
                             {{-- パスワード入力欄ここから --}}
-
+<label for="password">パスワード
+<span>
+    @error('password')
+    <span class="" role="alert">
+        <strong>{{ $message }}</strong>
+    </span>
+@enderror
+    </span>    
+</label> 
 
                                 <input id="password" type="password" class=" @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="パスワード入力">
-
-                                @error('password')
-                                    <span class="" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
                                 {{-- パスワード入力欄ここまで --}}
 {{-- パスワードリマインダーここから --}}
                                     <input class="" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
@@ -61,11 +67,14 @@
                                 </button>
 
                                 @if (Route::has('password.request'))
+                                <button>
                                     <a class="" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
+                                </button>
                                 @endif
                                 {{-- パスワードリマインダーここまで --}}
+                            </div>
                     </form>
                 </div>
                     <div id=app>
