@@ -2,14 +2,12 @@
 
 @section('content')
 @include('rest.other.otherheader')
-                <div class="">{{ isset($authgroup) ? ucwords($authgroup) : ""}} {{ __('Register') }}</div>
+            {{ isset($authgroup) ? ucwords($authgroup) : ""}} {{ __('Register') }}</div>
 
                 {{-- {{ isset($authgroup) ? ucwords($authgroup) : ""}} {{ __('Register') }} --}}
                 {{-- この部分は関係ない --}}
                     @isset($authgroup)
                     <form method="POST" action="{{ url("register/$authgroup") }}">
-                        <div class="l-login">
-                        {{-- <div class="l-login"> --}}
 <h1>コンビニスタッフユーザー登録</h1>
  @else
  {{-- この部分は関係ない --}}
@@ -21,26 +19,29 @@
                             <button type="submit" class="btn btn-primary">
                                 {{ __('Register') }}
                             </button>
+                            <br/>{{--簡易的につけとく --}}
                             {{--ユーザー登録ボタンここまで  --}}
-
-                            <label for="name">{{ __('Name') }}</label>
-                                <input id="name" type="text" class="l-register__common__sentence @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-
+                            <label for="name">名前:
                                 @error('name')
                                     <span  role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
+                                <br/>
+                            </label>
+                                <input id="name" type="text" class="l-register__common__sentence @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                <br/>
+{{-- 名前入力スペースここまで --}}
 
-                            <label for="email" class="">{{ __('Email Address') }}</label>
+                            <label for="email" class="">Email
+                                @error('email')
+                                <span class="" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+</label><br/>
 
                                 <input id="email" type="email" class="l-register__common__sentence @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-
-                                @error('email')
-                                    <span class="" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
 
                             <label for="password" class="">{{ __('Password') }}</label>
                                 <input id="password" type="password" class="l-register__common__sentence @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
@@ -72,7 +73,6 @@
 {{-- ユーザー登録ページのコンビニ名ここまで --}}
 
 {{-- ユーザー登録ページの支店名ここから --}}
-<div class="">
 <p>支店名記入欄</p>
 <input type="text" placeholder="支店名記入欄" name="convinience_branch">
 {{-- ユーザー登録ページ支店名ここまで --}}
@@ -141,7 +141,6 @@
                             @endisset
                             {{-- ユーザー登録ここまで --}}
 {{--ユーザー登録ボタン  --}}
-                            </div>
                             
 <div id=app>
     {{-- incompletefooter-componentはfooterをレウアウトしてくれるもの。ただしページ量が少ないときにfooter
