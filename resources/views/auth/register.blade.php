@@ -27,7 +27,7 @@
                                 @enderror
                                 <br/>
                             </label>
-                                <input id="name" type="text" class="l-register__common__sentence  name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                <input id="name" type="text" class="l-register__common__sentence @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus  placeholder="名前">
                                 <br/>
 {{-- 名前入力スペースここまで --}}
                             <label for="email" class="l-register__common__form__message">Email:
@@ -37,7 +37,7 @@
                                 </span>
                             @enderror
 </label><br/>
-                                <input id="email" type="email" class="l-register__common__sentence @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                <input id="email" type="email" class="l-register__common__sentence @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Email">
                                 <br/>
 {{-- emailここまで --}}
                             <label for="password" class="l-register__common__form__message">パスワード:                                
@@ -47,12 +47,12 @@
                                 </span>
                             @enderror
 </label><br/>
-                                <input id="password" type="password" class="l-register__common__sentence @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                <input id="password" type="password" class="l-register__common__sentence @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="パスワード">
                                 <br/>
 {{-- パスワードここまで --}}
                             <label for="password-confirm" class="l-register__common__form__message">パスワード再入力:</label><br/>
 
-                                <input id="password-confirm" type="password" class="l-register__common__sentence" name="password_confirmation" required autocomplete="new-password">
+                                <input id="password-confirm" type="password" class="l-register__common__sentence" name="password_confirmation" required autocomplete="new-password" placeholder="パスワード再入力">
                             </div>
                             </div> 
                             {{-- ここまで併用のdiv --}}
