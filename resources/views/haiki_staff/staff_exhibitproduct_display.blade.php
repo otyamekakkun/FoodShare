@@ -67,7 +67,7 @@
         @enderror
         {{-- 基本的に都道府県を記述するところはフォームには出さない。ログインしている人の件名が入るように
             セッティングする --}}
-<input type="text" name="prefecture" value="{{$admin->prefecture}}" class="u-hidden">
+<input type="text" name="prefecture" value="{{$admins->prefecture}}" class="u-hidden">
 
 
 <button type="submit" class="btn btn-primary">

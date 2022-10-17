@@ -68,7 +68,7 @@
 </header>
 <body>
     <h1 class="c-title">
-        {{$admins->name}}様
+        {{-- {{$admins->name}}様 --}}
 購入された商品一覧
     </h1>
 
