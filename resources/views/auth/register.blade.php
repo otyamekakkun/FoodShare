@@ -2,15 +2,12 @@
 
 @section('content')
 @include('rest.other.otherheader')
-            {{ isset($authgroup) ? ucwords($authgroup) : ""}} {{ __('Register') }}</div>
-
-                {{-- {{ isset($authgroup) ? ucwords($authgroup) : ""}} {{ __('Register') }} --}}
-                {{-- この部分は関係ない --}}
+            {{ isset($authgroup) ? ucwords($authgroup) : ""}} 
+        
                     @isset($authgroup)
                     <form method="POST" action="{{ url("register/$authgroup") }}">
 <h1>コンビニスタッフユーザー登録</h1>
  @else
- {{-- この部分は関係ない --}}
  {{-- ここからユーザー登録ページ併用 --}}
                     <form method="POST" action="{{ route('register') }}">
                     @endisset
@@ -21,7 +18,7 @@
                             </button>
                             <br/>{{--簡易的につけとく --}}
                             {{--ユーザー登録ボタンここまで  --}}
-                            <label for="name">名前:
+                            <label for="name" class="l-formstaffprofile__message">名前:
                                 @error('name')
                                     <span  role="alert">
                                         <strong>{{ $message }}</strong>
@@ -32,27 +29,27 @@
                                 <input id="name" type="text" class="l-register__common__sentence @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
                                 <br/>
 {{-- 名前入力スペースここまで --}}
-
-                            <label for="email" class="">Email
+                            <label for="email" class="l-formstaffprofile__message">Email:
                                 @error('email')
                                 <span class="" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
 </label><br/>
-
                                 <input id="email" type="email" class="l-register__common__sentence @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-
-                            <label for="password" class="">{{ __('Password') }}</label>
-                                <input id="password" type="password" class="l-register__common__sentence @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-
+                                <br/>
+{{-- emailここまで --}}
+                            <label for="password" class="l-formstaffprofile__message">パスワード:                                
                                 @error('password')
-                                    <span class="" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-
-                            <label for="password-confirm" class="l-register__common__sentence">{{ __('Confirm Password') }}</label>
+                                <span class="" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+</label><br/>
+                                <input id="password" type="password" class="l-register__common__sentence @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                <br/>
+{{-- パスワードここまで --}}
+                            <label for="password-confirm" class="l-formstaffprofile__message">パスワード再入力:</label><br/>
 
                                 <input id="password-confirm" type="password" class="l-register__common__sentence" name="password_confirmation" required autocomplete="new-password">
                             </div> 
@@ -130,31 +127,9 @@
 </select>
 
 </select>
-
-
-
 <input type="text" placeholder="都道府県以外の住所記述" name="adress"> 
-
-
-
-
                             @endisset
-                            {{-- ユーザー登録ここまで --}}
-{{--ユーザー登録ボタン  --}}
-                            
 <div id=app>
-    {{-- incompletefooter-componentはfooterをレウアウトしてくれるもの。ただしページ量が少ないときにfooter
-
-
-                    <select name="price">
-                <option selected>金額は？
-                    <option value=100>100</option>
-                    <option value=200>200</option>
-                    <option value=300>300</option>
-            </select>
-            //実験けっかでこれはうまくいく
-
-        エリアが最下部にならないように定義したもの --}}
 <footer-component></footer-component>
 </div>
 @endsection
