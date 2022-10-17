@@ -524,14 +524,13 @@ a {
 .l-register__common__title {
   margin-top: 35px;
   margin-bottom: 30px;
-  font-size: 25px;
-  background: red;
+  font-size: 30px;
 }
 
 .l-register__common__form {
   margin-right: auto;
   margin-left: auto;
-  margin-top: 100px;
+  margin-top: 75px;
   height: 500px;
   width: 80%;
   border: dotted #174113;
