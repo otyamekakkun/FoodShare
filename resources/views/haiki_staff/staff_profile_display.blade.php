@@ -7,12 +7,12 @@
         @include('rest.staff.header')
     </header>
     <section>
-        <form class="l-form" action="{{route('haiki_staffrprofile_edit',$admin->id)}}" method="POST">
+        <form  action="{{route('haiki_staffrprofile_edit',$admin->id)}}" method="POST">
             @csrf
             <div class="l-formstaffprofile">
             <h3 class="l-formstaffprofile__title">コンビニ情報編集画面</h3>
             <div class="l-formstaffprofile__te">
-                <span>名前:
+                <span class="l-formstaffprofile__message">名前:
                     @error('name')
                     <span class="" role="alert">
                         <strong>{{$message}}</strong>
@@ -22,7 +22,7 @@
                 <br/>
                 <input class="l-formstaffprofile__text" action="post" type="text" name="name" placeholder="名前を編集" value="{{$admin->name}}">
 <br/>
-<span>メールアドレス編集:
+<span class="l-formstaffprofile__message">メールアドレス編集:
                 @error('email')
                 <span class="" role="alert">
                     <strong>{{$message}}</strong>
@@ -36,7 +36,7 @@
 
 {{--  --}}
 
-<span>パスワード:
+<span class="l-formstaffprofile__message">パスワード:
     @error('password')
     <span class="" role="alert">
         <strong>{{$message}}</strong>
@@ -49,7 +49,7 @@
             <br/>
 {{-- パスワード入力ここまで --}}
 
-<span class="">パスワード再入力:
+<span class="l-formstaffprofile__message">パスワード再入力:
     @error('password_confirmation')
     <span class="c-errormessage" role="alert">
         <strong>{{$message}}</strong>
@@ -60,7 +60,7 @@
         <input class="l-formshopperprofile__text" type="password" class="l-register__common__sentence" name="password_confirmation" required autocomplete="new-password">
 <br/>
         {{-- パスワード再入力ここまで --}}
-<span>コンビニ名:
+<span class="l-formstaffprofile__message">コンビニ名:
     @error('convinience_name')
     <span class="" role="alert">
         <strong>{{$message}}</strong>
@@ -71,7 +71,7 @@
 
             <input class="l-formstaffprofile__text" action="post" type="text" name="convinience_name" placeholder="コンビニ名" value="{{$admin->convinience_name}}">
             <br/>
-<span>支店名:
+<span class="l-formstaffprofile__message">支店名:
     @error('convinience_branch')
     <span class="" role="alert">
         <strong>{{$message}}</strong>
@@ -86,9 +86,9 @@
 
 
 
+<div class="l-formstaff__adressarea">
 
-
-            <span>都道府県:
+            <span class="l-formstaffprofile__message">都道府県:
                 @error('prefecture')
                 <span class="" role="alert">
                     <strong>{{$message}}</strong>
@@ -146,8 +146,9 @@
     <option value="沖縄県">沖縄県</option>
     </select>
     </select>
+
 {{-- 都道府県ここまで --}}
-<span>
+<span class="l-formstaffprofile__message">都道府県以外の住所
     @error('adress')
     <span class="" role="alert">
         <strong>{{$message}}</strong>
@@ -155,13 +156,14 @@
     @enderror    
 </span>
             <input class="l-formstaffprofile__text" action="post" type="text" name="adress" placeholder="住所" value="{{$admin->adress}}">
+        </div>
+
 {{-- 住所変更 --}}
             <input type="submit" class="l-formstaffprofile__sub" value="変更する">
         </div>
         </form>
         </div>
         </section>
-        
 
 <div id="app">
 <footer-component>

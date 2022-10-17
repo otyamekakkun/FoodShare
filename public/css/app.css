@@ -587,6 +587,15 @@ a {
   background: #b2d142;
 }
 
+.l-formstaffprofile__message {
+  font-size: 20px;
+}
+
+.l-formstaff__adressarea {
+  background: red;
+  height: 400px;
+}
+
 .l-exhibitproduct {
   background: white;
   margin-right: auto;
