@@ -155,6 +155,7 @@
     </span>
     @enderror    
 </span>
+
 <textarea name="adress"  value="{{$admin->adress}}" class="l-formstaffprofile__adresstext"></textarea>
 </textarea>
 {{-- 住所変更ここまで --}}

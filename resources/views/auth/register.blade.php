@@ -12,7 +12,7 @@
                     @endisset
                         @csrf
                         <div class="l-register__common">
-                            <h1 class="l-register__common__title">ユーザー登録画面</h1>
+                            <h1 class="l-register__common__title">ユーザー登録（個人情報）</h1>
                             <button type="submit" class="l-register__common__button">
                                 ユーザー登録して始める
                             </button>
