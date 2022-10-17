@@ -114,19 +114,14 @@ $product = products::find($id);
     public function staff_profile_edit(Request $request)
 {
 $request->validate([
-    //'email'=>'email:filter,dns',//emailのバリデーション
-   // 'password'=>'string|regex:/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z\-]{6,24}$/',
-//パスワードに関しては半角英数字で8文字の記述を対応させる。
-
-    //入力ネームと同じものを対応させる
-    //後で詳しく設定する（今は最低限）
-    /*
-    'email'=>'required|string|min:8',
+'name'=>'required',
+    'email'=>'required',
     'password'=>'required|min:6',
+    'password_confirmation'=>'required|min:6|same:password',
+
     'convinience_name'=>'required',
     'convinience_branch'=>'required',
     'adress'=>'required'
-*/
 ]);
 
 $id = Auth::guard('admin')->id();
@@ -353,6 +348,4 @@ return response()->json($user);
 }
 
 }
-
-
 //=========================================================json形式で渡すのここまで。

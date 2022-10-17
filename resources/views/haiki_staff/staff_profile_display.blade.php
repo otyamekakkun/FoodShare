@@ -68,12 +68,6 @@
             <div class="l-formstaffprofile">
             <h3 class="l-formstaffprofile__title">コンビニ情報編集画面</h3>
             <div class="l-formstaffprofile__te">
-
-
-
-
-
-
                 <span>名前:
                     @error('name')
                     <span class="" role="alert">
@@ -83,11 +77,7 @@
                 </span>
                 <br/>
                 <input class="l-formstaffprofile__text" action="post" type="text" name="name" placeholder="メールアドレス編集" value="{{$admin->name}}">
-    
 <br/>
-
-
-
 <span>メールアドレス編集:
                 @error('email')
                 <span class="" role="alert">
@@ -97,23 +87,33 @@
             </span>
             <br/>
             <input class="l-formstaffprofile__text" action="post" type="text" name="email" placeholder="メールアドレス編集" value="{{$admin->email}}">
-{{-- メールアドレス編集のエラーメッセージよう --}}
+            <br/>
+{{-- メールアドレス編集のエラーメッセージ処理終了 --}}
+
 {{--  --}}
+
+<span>パスワード:
+    @error('password')
+    <span class="" role="alert">
+        <strong>{{$message}}</strong>
+    </span>
+    @enderror
+    
+</span>
+<br/>
             <input class="l-formstaffprofile__text" action="post" type="password" name="password" placeholder="パスワード編集">
+{{-- パスワード入力ここまで --}}
 
-            @error('password')
-<span class="" role="alert">
-    <strong>{{$message}}</strong>
+<span class="">パスワード再入力:
+    @error('password_confirmation')
+    <span class="c-errormessage" role="alert">
+        <strong>{{$message}}</strong>
+    </span>
+    @enderror
 </span>
-@enderror
+<br/>
+        <input class="l-formshopperprofile__text" type="password" class="l-register__common__sentence" name="password_confirmation" required autocomplete="new-password">
 
-            <input class="l-formstaffprofile__text" action="post" type="password" name="password2" placeholder="パスワード再入力">
-
-            @error('password2')
-<span class="" role="alert">
-    <strong>{{$message}}</strong>
-</span>
-@enderror
 
             <input class="l-formstaffprofile__text" action="post" type="text" name="convinience_name" placeholder="コンビニ名" value="{{$admin->convinience_name}}">
 
