@@ -10,7 +10,6 @@ use Illuminate\Foundation\Auth\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
-
 class HaikiController extends Controller
 {
 
@@ -184,6 +183,7 @@ public function destroy($id){
 public function update_exhibitproduct(Request $request,$id){
     //入力するときにバリデーションチェックを設ける
     //一応バリデーションも含ませとく。変更の処理がなけレバそのまま行けるように変更できるようにする
+    //急に画像が表示されなくなったら php artisan storage:linkというコマンドを叩けばいける
     $request->validate([
     ]);
 $img = $request->file('img_path');
@@ -267,22 +267,9 @@ public function admin(){
     return view('admin',['admin'=>$admin]);//...................画面表示するもの
 }
 /*
-
-
-
         $id = Auth::guard('admin')->id();
         $admin = DB::table('admins')->find($id);
         return view('haiki_staff.staff_profile_display',['admin'=>$admin]);//...................画面表示するもの
-
-
-
-
-
-
-
-
-
-
         $id = Auth::id();
         $user = DB::table('users')->find($id);
         return view('haiki_shopper.shopper_mypage_display',['my_user'=>$user]);
