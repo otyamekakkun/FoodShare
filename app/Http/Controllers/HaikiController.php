@@ -39,6 +39,7 @@ $request->validate([
     'name'=>'required',
     'email'=>'required',
     'password'=>'required',
+    'password_confirmation'=>'required|min:6|same:password'
 
     //入力ネームと同じものを対応させる
     //後で詳しく設定する（今は最低限）
@@ -53,9 +54,9 @@ $id = Auth::id();
 $user = User::find($id);
 $user->name=$request->name;
 $user->email=$request->email;
-$user->password= Hash::make($request->password);
+$user->password= Hash::make($request->password);//パスワードをハッシュ化させる必要があるのでそれを記述する
+
 $user->save();
-//パスワードをハッシュ化させる必要があるのでそれを記述する
 return redirect('haiki/shopper_mypage');//..............画面表示するもの
 
 //===========================================================================2終了

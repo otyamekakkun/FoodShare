@@ -65,14 +65,17 @@
                     @enderror
     </span>
                 <input class="l-formshopperprofile__text" action="post" type="text" name="name" placeholder="名前を編集" value={{$user->name}}>
+                <br/>
                 {{-- 名前編集ここまで --}}
-                <span>email    @error('email')
+                <span>email 
+                    @error('email')
                     <span class="" role="alert">
                         <strong>{{$message}}</strong>
                     </span>
                     @enderror
                 </span>
             <input class="l-formshopperprofile__text" action="post" type="text" name="email" placeholder="メールアドレス編集" value={{$user->email}}>
+            <br/>
     {{-- emailここまで --}}
 
     @error('password')
@@ -87,8 +90,11 @@
         <strong>{{$message}}</strong>
     </span>
     @enderror
+    <br/>
 
-            <input class="l-formshopperprofile__text" action="post" type="password" name="password" placeholder="パスワード再入力">
+            {{-- <input class="l-formshopperprofile__text" action="post" type="password" name="password" placeholder="パスワード再入力"> --}}
+            <input id="password-confirm" type="password" class="l-register__common__sentence" name="password_confirmation" required autocomplete="new-password">
+
             </div>
         <input type="submit" class="c-formshopperprofile__sub" value="変更する">
         </div>
