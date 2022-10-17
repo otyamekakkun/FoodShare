@@ -11,7 +11,6 @@
             @csrf
             <div class="l-formstaffprofile">
             <h3 class="l-formstaffprofile__title">コンビニ情報編集画面</h3>
-            <div class="l-formstaffprofile__te">
                 <span class="l-formstaffprofile__message">名前:
                     @error('name')
                     <span class="" role="alert">
@@ -57,7 +56,7 @@
     @enderror
 </span>
 <br/>
-        <input class="l-formshopperprofile__text" type="password" class="l-register__common__sentence" name="password_confirmation" required autocomplete="new-password">
+        <input class="l-formstaffprofile__text" type="password" class="l-register__common__sentence" name="password_confirmation" required autocomplete="new-password">
 <br/>
         {{-- パスワード再入力ここまで --}}
 <span class="l-formstaffprofile__message">コンビニ名:
@@ -87,7 +86,7 @@
 
 
 <div class="l-formstaff__adressarea">
-<h1>住所記入欄</h1>
+<h1 class="l-formstaff__adressarea__title">住所記入欄</h1>
             <span class="l-formstaffprofile__message">都道府県:
                 @error('prefecture')
                 <span class="" role="alert">
@@ -95,7 +94,7 @@
                 </span>
                 @enderror    
             </span>
-<select name="prefecture" class="l-formstaffprofile__text" value="{{$admin->prefecture}}">
+<select name="prefecture" class="l-formstaffprofile__prefecturetext" value="{{$admin->prefecture}}">
     {{-- <option selected>都道府県</option> --}}
     <option value="北海道">北海道</option>
     <option value="青森県">青森県</option>
@@ -155,21 +154,8 @@
     </span>
     @enderror    
 </span>
-            {{-- <input class="l-formstaffprofile__text" action="post" type="text" name="adress" placeholder="住所" value="{{$admin->adress}}"> --}}
-        {{-- </div> --}}
-
-
-
-
-
-
 <textarea name="adress" placeholder="都道府県以外の住所" value="{{$admin->adress}}"></textarea>
-
 </textarea>
-
-
-
-
 {{-- 住所変更ここまで --}}
             <input type="submit" class="l-formstaffprofile__sub" value="変更する">
         </div>

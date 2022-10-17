@@ -12,52 +12,47 @@
     background: color("formbackground");
     font-family: "Noto Serif TC", serif;
     font-size: size(xxl);
-    width: 65%;
+    width: 70%;
     height: 1800px;
     line-height: 65px;
     font-size: size(xxl);
     border: solid size(sssss);
     border-radius: size(sss);
 
-    &__te {
-        justify-content: center;
-        margin: size(xl);
-    }
-
-    &__text {
-        background: white;
-        width: 60%;
-        margin: 20px 20px 20px;
-        border: none;
-        border-radius: size(sss);
-    }
-    &__sub {
-        background: #174113;
-        border: none;
-        color: white;
-        width: 12%;
-        font-size: size(m);
-        border-radius: size(ss);
-        position: absolute;
-        right: 25%;
-        margin: 180px 65px;
-        transition: all 1.2s;
-    }
     &__sub:hover {
         cursor: pointer;
         background: #b2d142;
     }
 }
+.l-formstaffprofile__text {
+    background: white;
+    border: none;
+    border-radius: size(sss);
+    width: 50%;
+}
 
 .l-formstaffprofile__message {
     font-size: size(m);
+    display: block;
+    width: 40%;
+    height: size(l);
+    margin-bottom: -40px;
 }
 
 .l-formstaff__adressarea {
     height: 400px;
     border: dotted size(sssss);
     border-radius: size(sss);
+    margin-left: size(xl);
+    margin-right: size(xl);
+    margin-top: 80px;
 }
 
-//変更すると言う文字がずれたら　レスポンシブ対応をとる。
-//980pxからレスポンシブ対応をする
+.l-formstaff__adressarea__title {
+    font-size: size(l);
+    margin-top: size(l);
+}
+
+//都道府県のフォームが大きい
+
+//textareaも記述し直す
