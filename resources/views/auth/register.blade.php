@@ -156,6 +156,6 @@
             //実験けっかでこれはうまくいく
 
         エリアが最下部にならないように定義したもの --}}
-<incompletefooter-component></incompletefooter-component>
+<footer-component></footer-component>
 </div>
 @endsection
