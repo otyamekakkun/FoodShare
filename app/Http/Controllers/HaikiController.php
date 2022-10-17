@@ -36,6 +36,10 @@ class HaikiController extends Controller
 public function shopper_profile_edit(Request $request)
 {
 $request->validate([
+    'name'=>'required',
+    'email'=>'required',
+    'password'=>'required',
+
     //入力ネームと同じものを対応させる
     //後で詳しく設定する（今は最低限）
     /*
