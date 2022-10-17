@@ -592,8 +592,9 @@ a {
 }
 
 .l-formstaff__adressarea {
-  background: red;
   height: 400px;
+  border: dotted 2px;
+  border-radius: 5px;
 }
 
 .l-exhibitproduct {

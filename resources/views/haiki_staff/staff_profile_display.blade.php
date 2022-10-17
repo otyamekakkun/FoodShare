@@ -87,7 +87,7 @@
 
 
 <div class="l-formstaff__adressarea">
-
+<h1>住所記入欄</h1>
             <span class="l-formstaffprofile__message">都道府県:
                 @error('prefecture')
                 <span class="" role="alert">
@@ -155,10 +155,22 @@
     </span>
     @enderror    
 </span>
-            <input class="l-formstaffprofile__text" action="post" type="text" name="adress" placeholder="住所" value="{{$admin->adress}}">
-        </div>
+            {{-- <input class="l-formstaffprofile__text" action="post" type="text" name="adress" placeholder="住所" value="{{$admin->adress}}"> --}}
+        {{-- </div> --}}
 
-{{-- 住所変更 --}}
+
+
+
+
+
+<textarea name="adress" placeholder="都道府県以外の住所" value="{{$admin->adress}}"></textarea>
+
+</textarea>
+
+
+
+
+{{-- 住所変更ここまで --}}
             <input type="submit" class="l-formstaffprofile__sub" value="変更する">
         </div>
         </form>

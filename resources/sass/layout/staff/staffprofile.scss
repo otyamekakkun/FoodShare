@@ -54,8 +54,9 @@
 }
 
 .l-formstaff__adressarea {
-    background: red;
     height: 400px;
+    border: dotted size(sssss);
+    border-radius: size(sss);
 }
 
 //変更すると言う文字がずれたら　レスポンシブ対応をとる。
