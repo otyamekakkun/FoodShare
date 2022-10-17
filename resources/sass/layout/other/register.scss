@@ -2,7 +2,7 @@
 //ユーザー登録ページ
 //============================================
 .l-register__common {
-    background: color(formbackground);
+    background: #f6f5f4;
     height: 900px;
     width: 65%;
     margin-left: auto;
@@ -14,10 +14,22 @@
     border-radius: size(sss);
 }
 
+.l-register__common__form {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 100px;
+    height: 500px;
+    width: 80%;
+    border: dotted #174113;
+    border-radius: size(sss);
+}
+
 .l-register__common__sentence {
     text-align: center;
-    // background: cyan;
+    background: white;
     width: 50%;
-    margin: 10px;
-    font-size: 20px;
+    margin-top: size(xxl);
+    font-size: size(l);
+    border: none;
+    border-radius: size(sss);
 }

@@ -88,14 +88,6 @@ haiki shareのトップ画面を作成しする。
     @endsection
 
 
-{{-- 
-@php
-//一言メモ logの出力先は/storage/logs/laravel.logで見れる
-    logger('トップページに遷移しました')
-    @endphp
- --}}
-
-    
     
     
     

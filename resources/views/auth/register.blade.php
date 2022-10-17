@@ -13,12 +13,16 @@
                     @endisset
                         @csrf
                         <div class="l-register__common">
+                            <h1>ユーザー登録画面</h1>
                             <button type="submit" class="btn btn-primary">
-                                {{ __('Register') }}
+                                ユーザー登録して始める
                             </button>
                             <br/>{{--簡易的につけとく --}}
                             {{--ユーザー登録ボタンここまで  --}}
-                            <label for="name" class="l-formstaffprofile__message">名前:
+
+
+                            <div class="l-register__common__form">
+                            <label for="name" class="l-register__common__form__message">名前:
                                 @error('name')
                                     <span  role="alert">
                                         <strong>{{ $message }}</strong>
@@ -29,7 +33,7 @@
                                 <input id="name" type="text" class="l-register__common__sentence @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
                                 <br/>
 {{-- 名前入力スペースここまで --}}
-                            <label for="email" class="l-formstaffprofile__message">Email:
+                            <label for="email" class="l-register__common__form__message">Email:
                                 @error('email')
                                 <span class="" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -39,7 +43,7 @@
                                 <input id="email" type="email" class="l-register__common__sentence @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
                                 <br/>
 {{-- emailここまで --}}
-                            <label for="password" class="l-formstaffprofile__message">パスワード:                                
+                            <label for="password" class="l-register__common__form__message">パスワード:                                
                                 @error('password')
                                 <span class="" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -49,9 +53,10 @@
                                 <input id="password" type="password" class="l-register__common__sentence @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
                                 <br/>
 {{-- パスワードここまで --}}
-                            <label for="password-confirm" class="l-formstaffprofile__message">パスワード再入力:</label><br/>
+                            <label for="password-confirm" class="l-register__common__form__message">パスワード再入力:</label><br/>
 
                                 <input id="password-confirm" type="password" class="l-register__common__sentence" name="password_confirmation" required autocomplete="new-password">
+                            </div>
                             </div> 
                             {{-- ここまで併用のdiv --}}
                             
