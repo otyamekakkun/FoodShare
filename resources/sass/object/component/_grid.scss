@@ -8,26 +8,6 @@
 //出品した商品一覧のリスト化のもの
 //====================================================
 
-/*
-.c-productlist {
-    // background: red;
-    //ここはgridとして残しておく。
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    //  text-align: center;
-    height: 100px;
-    background: white;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: size(l);
-
-    //background: green;
-}
-*/
-
 .c-productlist__sentence {
     display: flex;
     justify-content: center;

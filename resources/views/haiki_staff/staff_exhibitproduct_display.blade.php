@@ -19,13 +19,9 @@
 <h1 class="c-title">
     商品を出品する
 </h1>
-
 <div class="l-exhibitproduct">
-{{-- form画面ここから --}}
 <div class="l-exhibitproduct__area">
-
 <form method="POST" action="{{ route('create.exhibit') }}" enctype="multipart/form-data" class="m">
-
     @csrf
     <div class="l-productexhibitform">
         <div class="l-productexhibitform">
@@ -79,6 +75,8 @@
 </form>
 
 </div>
+<drag-component></drag-component>
+
 <footer-component></footer-component>
 </div> 
 {{-- 上のdivはコンポーネントを囲むdiv --}}
