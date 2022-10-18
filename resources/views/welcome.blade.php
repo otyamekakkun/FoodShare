@@ -10,19 +10,10 @@
 <aside>
     <img src="{{asset('img/top.jpg')}}" class="l-topimg">
 </aside>
+<div class="l-top__title"> 
 <h1>haiki share</h1>
 <h3>環境と安さの相乗効果</h3>
-
-
-
-
-
-
-
-
-
-
-
+</div>
 
     <h1>買い物を始める</h1>
     <button><a class="" href="{{ route('login') }}">お客様ログイン</a></button>

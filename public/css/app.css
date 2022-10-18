@@ -513,8 +513,16 @@ a {
 
 .l-topimg {
   width: 100%;
+  position: relative;
 }
 
+.l-top__title {
+  position: absolute;
+  color: white;
+  top: 300px;
+  left: 500px;
+  font-size: 35px;
+}
 .l-login {
   width: 65%;
   height: 800px;

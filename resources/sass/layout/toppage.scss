@@ -1,3 +1,13 @@
 .l-topimg {
     width: 100%;
+    position: relative;
+}
+.l-top__title {
+    position: absolute;
+    color: white;
+    top: 300px;
+    left: 500px;
+    font-size: size(xxl);
+    @include mq() {
+    }
 }
