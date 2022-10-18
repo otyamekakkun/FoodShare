@@ -5,12 +5,15 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Reset Password') }}</div>
-
+                <div class="card-header">{{ isset($authgroup) ? ucwords($authgroup) : ""}} {{ __('Reset Password') }}</div>
                 <div class="card-body">
+                    @isset($authgroup)
+                    <form method="POST" action="{{ route($authgroup.'.password.update') }}">
+                    @else
                     <form method="POST" action="{{ route('password.update') }}">
-                        @csrf
 
+                    @endisset
+                        @csrfs
                         <input type="hidden" name="token" value="{{ $token }}">
 
                         <div class="row mb-3">
@@ -40,6 +43,7 @@
                                 @enderror
                             </div>
                         </div>
+                        <h1>こんにちは</h1>
 
                         <div class="row mb-3">
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirm Password') }}</label>

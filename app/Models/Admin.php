@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable; //メールが送信できるようにする
+use App\Notifications\AdminResetPassword;
 
 class Admin extends Authenticatable
 {
@@ -19,4 +20,8 @@ adminテーブル（コンビニ管理者の情報を登録することができ
     protected $hidden = [
         'password', 'remember_token',
     ];
+    public function sendPasswordResetNotification($token)
+    {
+        $this->notify(new AdminResetPassword($token));
+    }
 }

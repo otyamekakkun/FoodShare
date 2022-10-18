@@ -63,17 +63,22 @@
                                     <label class="" for="remember">
                                         {{ __('Remember Me') }}
                                     </label>
+                                    
                                 <button type="submit" class="">
                                     {{ __('Login') }}
                                 </button>
 
-                                @if (Route::has('password.request'))
-                                <button>
-                                    <a class="" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                </button>
-                                @endif
+                                @if (Route::has(isset($authgroup) ? $authgroup.'.password.request' : 'password.request'))
+                                <a class="btn btn-link" href="{{ route(isset($authgroup) ? $authgroup.'.password.request' : 'password.request') }}">
+                                    {{ __('Forgot Your Password?') }}
+                                </a>
+                            @endif
+
+
+
+
+
+
                                 {{-- パスワードリマインダーここまで --}}
                             </div>
                         </div>
