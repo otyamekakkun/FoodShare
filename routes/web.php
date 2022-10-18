@@ -7,6 +7,7 @@ use App\Http\Controllers\RestappController;
 use App\Http\Controllers\HaikiController; //laravel8なので左のことを記述してルートの書き方を楽にする
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\MailableController;
 
 /*
 |--------------------------------------------------------------------------
@@ -202,3 +203,5 @@ Route::get('password/admin/reset', [App\Http\Controllers\Auth\AdminForgotPasswor
 Route::post('password/admin/email', [App\Http\Controllers\Auth\AdminForgotPasswordController::class, 'sendResetLinkEmail'])->name('admin.password.email');
 Route::get('password/admin/reset/{token}', [App\Http\Controllers\Auth\AdminResetPasswordController::class, 'showResetForm'])->name('admin.password.reset');
 Route::post('password/admin/reset', [App\Http\Controllers\Auth\AdminResetPasswordController::class, 'reset'])->name('admin.password.update');
+Route::get('contact2',[MailableController::class, 'index'] )->name('contact.index');
+Route::post('contact2', [MailableController::class, 'send']);
