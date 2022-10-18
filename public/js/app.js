@@ -5564,21 +5564,38 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      isEnter: false
+      preview: "",
+      name: "",
+      styleA: true,
+      styleB: false
     };
   },
   methods: {
-    dragEnter: function dragEnter() {
-      this.isEnter = true;
+    uploadFile: function uploadFile(event) {
+      var _this = this;
+
+      this.styleA = true;
+      this.styleB = false;
+      var files = event.target.files ? event.target.files : event.dataTransfer.files;
+      var file = files[0];
+      var reader = new FileReader();
+
+      reader.onload = function (event) {
+        _this.preview = event.target.result;
+      };
+
+      reader.readAsDataURL(file);
+      this.name = files[0].name;
+      document.getElementById("upload_image").files = files;
     },
-    dragLeave: function dragLeave() {
-      this.isEnter = false;
-    },
-    dragOver: function dragOver() {
-      console.log("DragOver");
-    },
-    dropFile: function dropFile() {
-      console.log("Dropped File");
+    changeStyle: function changeStyle(event, flag) {
+      if (flag == "ok") {
+        this.styleA = false;
+        this.styleB = true;
+      } else {
+        this.styleA = true;
+        this.styleB = false;
+      }
     }
   }
 });
@@ -6269,23 +6286,82 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", {
-    staticClass: "drop_area",
+  return _c("div", [_c("form", {
+    attrs: {
+      action: "******",
+      method: "post",
+      enctype: "multipart/form-data"
+    }
+  }, [_c("div", {
+    staticClass: "form-group commonStyle",
     class: {
-      enter: _vm.isEnter
+      styleA: _vm.styleA,
+      styleB: _vm.styleB
+    },
+    attrs: {
+      id: "upload"
     },
     on: {
-      dragenter: _vm.dragEnter,
-      dragleave: _vm.dragLeave,
       dragover: function dragover($event) {
         $event.preventDefault();
+        return _vm.changeStyle($event, "ok");
+      },
+      dragleave: function dragleave($event) {
+        $event.preventDefault();
+        return _vm.changeStyle($event, "no");
       },
       drop: function drop($event) {
         $event.preventDefault();
-        return _vm.dropFile.apply(null, arguments);
+        return _vm.uploadFile($event);
       }
     }
-  }, [_vm._v("\n    ファイルアップロード\n")]);
+  }, [_c("label", {
+    staticClass: "button",
+    attrs: {
+      for: "upload_image"
+    }
+  }, [_c("p", [_vm._v("画像を選択")]), _vm._v(" "), _c("input", {
+    staticStyle: {
+      display: "none"
+    },
+    attrs: {
+      id: "upload_image",
+      type: "file",
+      name: "img",
+      accept: "image/*"
+    },
+    on: {
+      change: function change($event) {
+        return _vm.uploadFile($event);
+      }
+    }
+  })]), _vm._v(" "), _c("p", [_vm._v("またはここに画像ファイルをドラッグ＆ドロップ")]), _vm._v(" "), _c("img", {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: _vm.preview,
+      expression: "preview"
+    }],
+    staticStyle: {
+      width: "300px"
+    },
+    attrs: {
+      src: _vm.preview
+    }
+  }), _vm._v(" "), _c("p", {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: _vm.preview,
+      expression: "preview"
+    }]
+  }, [_vm._v(_vm._s(_vm.name))])]), _vm._v(" "), _c("button", {
+    staticClass: "btn btn-success",
+    staticStyle: {
+      width: "400px",
+      "margin-left": "30px"
+    }
+  }, [_vm._v("\n            アップロード\n        ")])])]);
 };
 
 var staticRenderFns = [];
@@ -11936,7 +12012,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\nhtml,\nbody {\n    height: 100%;\n}\nbody {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n.drop_area {\n    color: gray;\n    font-weight: bold;\n    font-size: 1.2em;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    width: 500px;\n    height: 300px;\n    border: 5px solid gray;\n    border-radius: 15px;\n}\n.enter {\n    border: 10px dotted powderblue;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.commonStyle {\n    padding: 30px;\n    text-align: center;\n    margin: 30px;\n    width: 400px;\n}\n.styleA {\n    border: 3px dotted gray;\n}\n.styleB {\n    border: 3px dotted rgba(0, 200, 0, 0.7);\n}\n.button {\n    border: 1px solid green;\n    padding: 3px;\n    border-radius: 5px;\n    background-color: white;\n}\n.button p {\n    color: green;\n    margin-top: 10px;\n    margin-left: 10px;\n    margin-right: 10px;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
