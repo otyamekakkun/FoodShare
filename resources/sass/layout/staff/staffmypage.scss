@@ -13,7 +13,24 @@
     border-radius: size(s);
     border: solid #174113;
 }
-
+.l-staffmypage__title {
+    // background: red;
+    font-size: size(m);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: size(xl);
+    margin-bottom: size(xl);
+}
+.l-staffmypage__menu {
+    background: white;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 360px;
+    border-radius: size(s);
+    border: solid #174113;
+}
 // リストの幅設計
 .l-staffmypage__productlist {
     background: #f6f5f4;
