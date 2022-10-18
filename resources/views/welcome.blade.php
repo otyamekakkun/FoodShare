@@ -8,11 +8,23 @@
 </header>
 
 <aside>
-    <img src="{{asset('img/top.jpg')}}">
+    <img src="{{asset('img/top.jpg')}}" class="l-topimg">
 </aside>
 <h1>haiki share</h1>
 <h3>環境と安さの相乗効果</h3>
-    <h1>コンビニの買い物を始める</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+    <h1>買い物を始める</h1>
     <button><a class="" href="{{ route('login') }}">お客様ログイン</a></button>
    <button><a class="nav-link" href="{{ route('register') }}">お客様ユーザー登録</a></button> 
 

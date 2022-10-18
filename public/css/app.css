@@ -511,6 +511,10 @@ a {
   background: white;
 }
 
+.l-topimg {
+  width: 100%;
+}
+
 .l-login {
   width: 65%;
   height: 800px;
