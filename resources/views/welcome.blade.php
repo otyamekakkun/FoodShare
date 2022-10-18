@@ -16,9 +16,6 @@
 </div>
 
 
-<div class="bg">
-    <h1 class="fadein">fadein（フェードイン）アニメーション</h1>
-  </div>
 
 
 

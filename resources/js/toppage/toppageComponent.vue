@@ -1,8 +1,9 @@
-<!--  
 <template>
     <div>
-                <transition>
+        <!-- 
+        <transition>
             <div v-show="visible">
+                 -->
         <div class="l-top__area">
             <div class="l-top__area__custom">
                 <h1>買い物を始める</h1>
@@ -13,37 +14,26 @@
                     <a class="nav-link" href="./register">お客様ユーザー登録</a>
                 </button>
             </div>
+        </div>
+        <!-- 
             </div>
-            </div>
-                    </transition>
+        </transition>
+         -->
 
+        <div class="l-top__area__staff">
+            <h1>コンビニスタッフとして</h1>
+            <button><a href="./login/admin">ログインする</a></button>
+            <button>
+                <a href="./register/admin">ユーザー登録する</a>
+            </button>
 
-            <div class="l-top__area__staff">
-                <h1>コンビニスタッフとして</h1>
-                <button><a href="./login/admin">ログインする</a></button>
-                <button>
-                    <a href="./register/admin">ユーザー登録する</a>
-                </button>
-
-                <p>
-                    お客様がご利用される場合は上のお客様ログイン,またはお客様ユーザー登録からお入りください。
-                </p>
-            </div>
+            <p>
+                お客様がご利用される場合は上のお客様ログイン,またはお客様ユーザー登録からお入りください。
+            </p>
         </div>
     </div>
 </template>
-<template>
-    <div>
-        <transition>
-            <div v-show="visible">
-                <h1 id="header-logo">ここがフェードイン・アウトするよ</h1>
-            </div>
-        </transition>
-        <p>いろいろ書きたいこと...夢...希望...勇気...そして、愛</p>
-    </div>
-</template>
- <script>
-
+<script>
 export default {
     data() {
         return {
@@ -57,9 +47,6 @@ export default {
         handleScroll() {
             const FADEIN_ELEM_TOP = FADEIN_ELEM.getBoundingClientRect().top;
             const WINDOW_HEIGHT = window.innerHeight;
-
-
-
 
             this.scrollY = window.scrollY;
             if (!this.visible) {
