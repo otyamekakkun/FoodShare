@@ -6428,21 +6428,28 @@ var render = function render() {
     }
   }, [_c("main", [_c("div", {
     staticClass: "l-exhibitproductlist"
-  }, _vm._l(_vm.getItems, function (item) {
+  }, [_c("h1", {
+    staticClass: "l-shoppermypage__title"
+  }, [_vm._v("\n                        これまでに出品された商品\n                    ")]), _vm._v(" "), _vm._l(_vm.getItems, function (item) {
     return _c("ul", {
       staticClass: "c-productlist__items"
-    }, [_c("h1", {
-      staticClass: "l-shoppermypage__title"
-    }, [_vm._v("\n                    これまでに出品された商品\n                ")]), _vm._v(" "), _c("div", {
-      staticClass: "c-productlist"
-    }, [_c("img", {
+    }, [_c("li", {
+      staticClass: "c-productlist__items__title"
+    }, [_vm._v("\n                            商品No." + _vm._s(item.id) + "\n                        ")]), _vm._v(" "), item.bought >= 1 ? _c("div", [_c("img", {
+      staticClass: "c-productlist__items__img",
       attrs: {
-        src: item.img_path,
-        width: "25%"
+        src: item.img_path
       }
-    }), _vm._v(" "), _c("div", {
+    }), _vm._v(" "), _c("p", {
+      staticClass: "c-productlist__items__img__title"
+    }, [_vm._v("\n                                購入済み！\n                            ")])]) : _vm._e(), _vm._v(" "), item.bought <= 0 ? _c("div", [_c("img", {
+      staticClass: "c-productlist__items__img2",
+      attrs: {
+        src: item.img_path
+      }
+    })]) : _vm._e(), _vm._v(" "), _c("div", {
       staticClass: "c-productlist__items__list"
-    }, [_c("li", [_vm._v("商品No." + _vm._s(item.id))]), _vm._v(" "), _c("li", [_vm._v("商品名." + _vm._s(item.product_name))]), _vm._v(" "), _c("li", [_vm._v("お値段." + _vm._s(item.price) + "円.")]), _vm._v(" "), _c("button", [_c("a", {
+    }, [_c("li", [_vm._v("商品名." + _vm._s(item.product_name))]), _vm._v(" "), _c("li", [_vm._v("お値段." + _vm._s(item.price) + "円.")]), _vm._v(" "), _c("button", [_c("a", {
       attrs: {
         href: "haiki/".concat(item.id, "}/staff_productdetail")
       }
@@ -6450,8 +6457,8 @@ var render = function render() {
       attrs: {
         href: "haiki/".concat(item.id, "}/staff_productedit")
       }
-    }, [_vm._v("商品を編集する")])]), _vm._v(" "), item.bought >= 1 ? _c("div", [_c("h1", [_vm._v("購入済み")])]) : _vm._e()])])]);
-  }), 0)])]);
+    }, [_vm._v("商品を編集する")])]), _vm._v(" "), item.bought >= 1 ? _c("div", [_c("h1", [_vm._v("購入済み")])]) : _vm._e()])]);
+  })], 2)])]);
 };
 
 var staticRenderFns = [];

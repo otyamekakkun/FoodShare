@@ -2,17 +2,36 @@
     <div id="app">
         <main>
             <div class="l-exhibitproductlist">
-                <ul class="c-productlist__items" v-for="item in getItems">
-
-                    <h1 class="l-shoppermypage__title">
+                <h1 class="l-shoppermypage__title">
                         これまでに出品された商品
                     </h1>
 
-                    <div class="c-productlist">
-                        <img v-bind:src="item.img_path" width="25%" />
+                <ul class="c-productlist__items" v-for="item in getItems">
+                    <li class="c-productlist__items__title">
+                            商品No.{{ item.id }}
+                        </li>
+
+                        <div v-if="item.bought >= 1">
+                        <img
+                                v-bind:src="item.img_path"
+                                class="c-productlist__items__img"
+                            />
+                            <p class="c-productlist__items__img__title">
+                                購入済み！
+                            </p>
+</div>
+<div v-if="item.bought<=0">
+    <img
+                                v-bind:src="item.img_path"
+                                class="c-productlist__items__img2"
+                            />
+
+
+</div>
+
+
 
                         <div class="c-productlist__items__list">
-                            <li>商品No.{{ item.id }}</li>
                             <li>商品名.{{ item.product_name }}</li>
                             <li>お値段.{{ item.price }}円.</li>
                             <button>
@@ -31,7 +50,6 @@
                                 <h1>購入済み</h1>
                             </div>
                         </div>
-                    </div>
                 </li>
                 </ul>
             </div>
