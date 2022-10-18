@@ -1,6 +1,7 @@
 <template>
     <div id="app">
         <main>
+            <!-- ここから共通しているのでc-に書き換える。 -->
             <div class="l-exhibitproductlist">
                 <h1 class="l-shoppermypage__title">これまでに購入された商品</h1>
                 <div class="c-productlist">

@@ -6426,10 +6426,14 @@ var render = function render() {
     attrs: {
       id: "app"
     }
-  }, [_c("div", {
+  }, [_c("main", [_c("div", {
     staticClass: "l-exhibitproductlist"
   }, _vm._l(_vm.getItems, function (item) {
-    return _c("li", [_c("div", {
+    return _c("ul", {
+      staticClass: "c-productlist__items"
+    }, [_c("h1", {
+      staticClass: "l-shoppermypage__title"
+    }, [_vm._v("\n                    これまでに出品された商品\n                ")]), _vm._v(" "), _c("div", {
       staticClass: "c-productlist"
     }, [_c("img", {
       attrs: {
@@ -6447,7 +6451,7 @@ var render = function render() {
         href: "haiki/".concat(item.id, "}/staff_productedit")
       }
     }, [_vm._v("商品を編集する")])]), _vm._v(" "), item.bought >= 1 ? _c("div", [_c("h1", [_vm._v("購入済み")])]) : _vm._e()])])]);
-  }), 0)]);
+  }), 0)])]);
 };
 
 var staticRenderFns = [];
