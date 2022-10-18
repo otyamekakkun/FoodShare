@@ -5576,6 +5576,9 @@ __webpack_require__.r(__webpack_exports__);
     },
     dragOver: function dragOver() {
       console.log("DragOver");
+    },
+    dropFile: function dropFile() {
+      console.log("Dropped File");
     }
   }
 });
@@ -6274,7 +6277,13 @@ var render = function render() {
     on: {
       dragenter: _vm.dragEnter,
       dragleave: _vm.dragLeave,
-      dragover: _vm.dragOver
+      dragover: function dragover($event) {
+        $event.preventDefault();
+      },
+      drop: function drop($event) {
+        $event.preventDefault();
+        return _vm.dropFile.apply(null, arguments);
+      }
     }
   }, [_vm._v("\n    ファイルアップロード\n")]);
 };

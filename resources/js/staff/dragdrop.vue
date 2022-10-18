@@ -1,11 +1,11 @@
 <template>
     <div
         class="drop_area"
-        　　　　　@dragenter="dragEnter"
-        　　　　　@dragleave="dragLeave"
-        　　　　　@dragover="dragOver"
-        　
-        　　　　　:class="{enter: isEnter}"
+        @dragenter="dragEnter"
+        @dragleave="dragLeave"
+        @dragover.prevent
+        @drop.prevent="dropFile"
+        :class="{ enter: isEnter }"
     >
         ファイルアップロード
     </div>
@@ -26,6 +26,9 @@ export default {
         },
         dragOver() {
             console.log("DragOver");
+        },
+        dropFile() {
+            console.log("Dropped File");
         },
     },
 };
