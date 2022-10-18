@@ -1,5 +1,8 @@
+<!--  
 <template>
     <div>
+                <transition>
+            <div v-show="visible">
         <div class="l-top__area">
             <div class="l-top__area__custom">
                 <h1>買い物を始める</h1>
@@ -10,6 +13,10 @@
                     <a class="nav-link" href="./register">お客様ユーザー登録</a>
                 </button>
             </div>
+            </div>
+            </div>
+                    </transition>
+
 
             <div class="l-top__area__staff">
                 <h1>コンビニスタッフとして</h1>
@@ -25,3 +32,41 @@
         </div>
     </div>
 </template>
+<template>
+    <div>
+        <transition>
+            <div v-show="visible">
+                <h1 id="header-logo">ここがフェードイン・アウトするよ</h1>
+            </div>
+        </transition>
+        <p>いろいろ書きたいこと...夢...希望...勇気...そして、愛</p>
+    </div>
+</template>
+ <script>
+
+export default {
+    data() {
+        return {
+            visible: false,
+        };
+    },
+    created() {
+        window.addEventListener("scroll", this.handleScroll);
+    },
+    methods: {
+        handleScroll() {
+            const FADEIN_ELEM_TOP = FADEIN_ELEM.getBoundingClientRect().top;
+            const WINDOW_HEIGHT = window.innerHeight;
+
+
+
+
+            this.scrollY = window.scrollY;
+            if (!this.visible) {
+                this.visible = window.scrollY > 800;
+            }
+        },
+    },
+};
+</script>
+-->
