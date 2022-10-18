@@ -726,57 +726,6 @@ a {
   transform: translateX(5px);
 }
 
-.l-exhibitproduct {
-  background: white;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 30px;
-  margin-top: 20px;
-  width: 80%;
-  height: 700px;
-}
-
-.l-productexhibitform__sentence {
-  margin: 10px;
-  line-height: 10px;
-}
-
-.l-exhibitproduct__area {
-  background: #707070;
-  color: white;
-}
-
-.k {
-  padding: 10px;
-}
-
-.l-productexhibitform__flex {
-  display: block;
-  justify-content: center;
-  padding: 2px;
-  text-align: center;
-  line-height: 35px;
-}
-
-.l-productexhibitform {
-  display: block;
-  margin: 25px;
-  width: 100%;
-  text-align: center;
-}
-
-.m {
-  margin: auto;
-  text-align: center;
-  line-height: 60px;
-}
-
-.center {
-  width: 100%;
-  text-align: center;
-  margin: auto;
-}
-
 .l-exhibitproductlist {
   display: block;
   background: #f6f5f4;
