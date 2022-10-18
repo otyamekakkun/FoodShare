@@ -6449,15 +6449,20 @@ var render = function render() {
       }
     })]) : _vm._e(), _vm._v(" "), _c("div", {
       staticClass: "c-productlist__items__list"
-    }, [_c("li", [_vm._v("商品名." + _vm._s(item.product_name))]), _vm._v(" "), _c("li", [_vm._v("お値段." + _vm._s(item.price) + "円.")]), _vm._v(" "), _c("button", [_c("a", {
+    }, [_c("li", [_vm._v("商品名." + _vm._s(item.product_name))]), _vm._v(" "), _c("li", [_vm._v("お値段." + _vm._s(item.price) + "円.")]), _vm._v(" "), _c("div", {
+      staticClass: "c-productlist__items__bottom"
+    }, [_c("button", [_c("a", {
+      staticClass: "c-productlist__items__bottom__area",
       attrs: {
         href: "haiki/".concat(item.id, "}/staff_productdetail")
       }
-    }, [_vm._v("詳細にいく")])]), _vm._v(" "), _c("button", [_c("a", {
+    }, [_vm._v("詳細にいく")])]), _vm._v(" "), item.bought <= 0 ? _c("div", [_c("button", {
+      staticClass: "c-productlist__items__bottom__area"
+    }, [_c("a", {
       attrs: {
         href: "haiki/".concat(item.id, "}/staff_productedit")
       }
-    }, [_vm._v("商品を編集する")])]), _vm._v(" "), item.bought >= 1 ? _c("div", [_c("h1", [_vm._v("購入済み")])]) : _vm._e()])]);
+    }, [_vm._v("商品を編集する")])])]) : _vm._e()])])]);
   })], 2)])]);
 };
 
