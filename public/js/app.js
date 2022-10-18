@@ -6437,19 +6437,19 @@ var render = function render() {
     staticClass: "l-staffmypage__productlist"
   }, [_c("h1", {
     staticClass: "l-shoppermypage__title"
-  }, [_vm._v("\n                        これまでに出品された商品\n                    ")]), _vm._v(" "), _vm._l(_vm.getItems, function (item) {
+  }, [_vm._v("これまでに出品された商品")]), _vm._v(" "), _vm._l(_vm.getItems, function (item) {
     return _c("ul", {
       staticClass: "c-productlist__items"
     }, [_c("li", {
       staticClass: "c-productlist__items__title"
-    }, [_vm._v("\n                            商品No." + _vm._s(item.id) + "\n                        ")]), _vm._v(" "), item.bought >= 1 ? _c("div", [_c("img", {
+    }, [_vm._v("\n                    商品No." + _vm._s(item.id) + "\n                ")]), _vm._v(" "), item.bought >= 1 ? _c("div", [_c("img", {
       staticClass: "c-productlist__items__img",
       attrs: {
         src: item.img_path
       }
     }), _vm._v(" "), _c("p", {
       staticClass: "c-productlist__items__img__title"
-    }, [_vm._v("\n                                購入済み！\n                            ")])]) : _vm._e(), _vm._v(" "), item.bought <= 0 ? _c("div", [_c("img", {
+    }, [_vm._v("\n                        購入済み！\n                    ")])]) : _vm._e(), _vm._v(" "), item.bought <= 0 ? _c("div", [_c("img", {
       staticClass: "c-productlist__items__img2",
       attrs: {
         src: item.img_path
