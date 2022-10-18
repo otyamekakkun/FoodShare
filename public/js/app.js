@@ -6286,13 +6286,7 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", [_c("form", {
-    attrs: {
-      action: "******",
-      method: "post",
-      enctype: "multipart/form-data"
-    }
-  }, [_c("div", {
+  return _c("div", [_c("div", {
     staticClass: "form-group commonStyle",
     class: {
       styleA: _vm.styleA,
@@ -6327,7 +6321,7 @@ var render = function render() {
     attrs: {
       id: "upload_image",
       type: "file",
-      name: "img",
+      name: "img_path",
       accept: "image/*"
     },
     on: {
@@ -6355,13 +6349,7 @@ var render = function render() {
       value: _vm.preview,
       expression: "preview"
     }]
-  }, [_vm._v(_vm._s(_vm.name))])]), _vm._v(" "), _c("button", {
-    staticClass: "btn btn-success",
-    staticStyle: {
-      width: "400px",
-      "margin-left": "30px"
-    }
-  }, [_vm._v("\n            アップロード\n        ")])])]);
+  }, [_vm._v(_vm._s(_vm.name))])])]);
 };
 
 var staticRenderFns = [];

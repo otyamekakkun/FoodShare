@@ -1,44 +1,39 @@
 <template>
     <div>
         <!-- ここからフォームの部分 -->
-        <form action="******" method="post" enctype="multipart/form-data">
-            <div
-                id="upload"
-                class="form-group commonStyle"
-                v-bind:class="{ styleA: styleA, styleB: styleB }"
-                @dragover.prevent="changeStyle($event, 'ok')"
-                @dragleave.prevent="changeStyle($event, 'no')"
-                @drop.prevent="uploadFile($event)"
-            >
-                <label for="upload_image" class="button">
-                    <p>画像を選択</p>
-                    <input
-                        id="upload_image"
-                        type="file"
-                        name="img"
-                        @change="uploadFile($event)"
-                        style="display: none"
-                        accept="image/*"
-                    />
-                </label>
-
-                <!-- ここからプレビュー機能の部分 -->
-                <p>またはここに画像ファイルをドラッグ＆ドロップ</p>
-                <img
-                    v-show="preview"
-                    v-bind:src="preview"
-                    style="width: 300px"
+        <!-- <form action="******" method="post" enctype="multipart/form-data"> -->
+        <div
+            id="upload"
+            class="form-group commonStyle"
+            v-bind:class="{ styleA: styleA, styleB: styleB }"
+            @dragover.prevent="changeStyle($event, 'ok')"
+            @dragleave.prevent="changeStyle($event, 'no')"
+            @drop.prevent="uploadFile($event)"
+        >
+            <label for="upload_image" class="button">
+                <p>画像を選択</p>
+                <input
+                    id="upload_image"
+                    type="file"
+                    name="img_path"
+                    @change="uploadFile($event)"
+                    style="display: none"
+                    accept="image/*"
                 />
-                <p v-show="preview">{{ name }}</p>
-                <!-- ここまでプレビュー機能の部分 -->
-            </div>
-            <button
-                class="btn btn-success"
-                style="width: 400px; margin-left: 30px"
-            >
-                アップロード
-            </button>
-        </form>
+            </label>
+
+            <!-- ここからプレビュー機能の部分 -->
+            <p>またはここに画像ファイルをドラッグ＆ドロップ</p>
+            <img v-show="preview" v-bind:src="preview" style="width: 300px" />
+            <p v-show="preview">{{ name }}</p>
+            <!-- ここまでプレビュー機能の部分 -->
+        </div>
+        <!-- 
+        <button class="btn btn-success" style="width: 400px; margin-left: 30px">
+            アップロード
+        </button>
+         -->
+        <!-- </form> -->
     </div>
 </template>
 <script>

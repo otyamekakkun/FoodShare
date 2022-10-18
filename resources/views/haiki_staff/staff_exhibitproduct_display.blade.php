@@ -55,8 +55,10 @@
 </div>
     出品したい商品の画像を入れてください<br/>
     <label for="img_path" class="">写真を入れる</label>
-
+{{--  
         <input id="img_path" type="file" class="form-control @error('img_path') is-invalid @enderror" name="img_path" value="">
+        --}}
+        <drag-component></drag-component>
 
         @error('img_path')
             <strong>{{ $message }}</strong>
@@ -71,11 +73,9 @@
 </button>
 {{-- 全体を括るdiv --}}
 </div>
-
 </form>
-
 </div>
-<drag-component></drag-component>
+{{-- <drag-component></drag-component> --}}
 
 <footer-component></footer-component>
 </div> 
