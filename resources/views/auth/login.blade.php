@@ -22,7 +22,6 @@
                     <p>コンビニスタッフ専用ログインページ</p>
                     <p>利用者は普通のログインページで記述してください</p>
                     <div class="l-login">
-
                     <form method="POST" action="{{ url("login/$authgroup") }}">
                     @else
                     {{-- 管理者ログインページここまで --}}

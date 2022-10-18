@@ -18,9 +18,6 @@
 <button><a href="{{route('haiki_shopper.staff_exhibitproduct_list_display')}}"><button>出品した商品一覧を表示</a></button>
 {{-- コンポーネント部分 --}}
 <staffmypage-componennt></staffmypage-componennt>
-
-
-
 </div>
 
 <div class="l-staffmypage__side">

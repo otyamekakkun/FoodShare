@@ -6426,6 +6426,8 @@ var render = function render() {
     attrs: {
       id: "app"
     }
+  }, [_c("div", {
+    staticClass: "l-exhibitproductlist"
   }, _vm._l(_vm.getItems, function (item) {
     return _c("li", [_c("div", {
       staticClass: "c-productlist"
@@ -6435,7 +6437,7 @@ var render = function render() {
         width: "25%"
       }
     }), _vm._v(" "), _c("div", {
-      staticClass: "c-productlist__sentence"
+      staticClass: "c-productlist__items__list"
     }, [_c("li", [_vm._v("商品No." + _vm._s(item.id))]), _vm._v(" "), _c("li", [_vm._v("商品名." + _vm._s(item.product_name))]), _vm._v(" "), _c("li", [_vm._v("お値段." + _vm._s(item.price) + "円.")]), _vm._v(" "), _c("button", [_c("a", {
       attrs: {
         href: "haiki/".concat(item.id, "}/staff_productdetail")
@@ -6445,7 +6447,7 @@ var render = function render() {
         href: "haiki/".concat(item.id, "}/staff_productedit")
       }
     }, [_vm._v("商品を編集する")])]), _vm._v(" "), item.bought >= 1 ? _c("div", [_c("h1", [_vm._v("購入済み")])]) : _vm._e()])])]);
-  }), 0);
+  }), 0)]);
 };
 
 var staticRenderFns = [];
