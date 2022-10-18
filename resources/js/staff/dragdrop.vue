@@ -2,6 +2,9 @@
     <div
         class="drop_area"
         　　　　　@dragenter="dragEnter"
+        　　　　　@dragleave="dragLeave"
+        　　　　　@dragover="dragOver"
+        　
         　　　　　:class="{enter: isEnter}"
     >
         ファイルアップロード
@@ -17,6 +20,12 @@ export default {
     methods: {
         dragEnter() {
             this.isEnter = true;
+        },
+        dragLeave() {
+            this.isEnter = false;
+        },
+        dragOver() {
+            console.log("DragOver");
         },
     },
 };

@@ -5570,6 +5570,12 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     dragEnter: function dragEnter() {
       this.isEnter = true;
+    },
+    dragLeave: function dragLeave() {
+      this.isEnter = false;
+    },
+    dragOver: function dragOver() {
+      console.log("DragOver");
     }
   }
 });
@@ -6266,7 +6272,9 @@ var render = function render() {
       enter: _vm.isEnter
     },
     on: {
-      dragenter: _vm.dragEnter
+      dragenter: _vm.dragEnter,
+      dragleave: _vm.dragLeave,
+      dragover: _vm.dragOver
     }
   }, [_vm._v("\n    ファイルアップロード\n")]);
 };
