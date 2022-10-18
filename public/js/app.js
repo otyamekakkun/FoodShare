@@ -6379,7 +6379,7 @@ var render = function render() {
       id: "app"
     }
   }, [_c("main", [_c("div", {
-    staticClass: "l-exhibitproductlist"
+    staticClass: "l-staffmypage__productlist"
   }, [_c("h1", {
     staticClass: "l-shoppermypage__title"
   }, [_vm._v("これまでに購入された商品")]), _vm._v(" "), _vm._l(_vm.getItems, function (item) {
@@ -6434,7 +6434,7 @@ var render = function render() {
       id: "app"
     }
   }, [_c("main", [_c("div", {
-    staticClass: "l-exhibitproductlist"
+    staticClass: "l-staffmypage__productlist"
   }, [_c("h1", {
     staticClass: "l-shoppermypage__title"
   }, [_vm._v("\n                        これまでに出品された商品\n                    ")]), _vm._v(" "), _vm._l(_vm.getItems, function (item) {

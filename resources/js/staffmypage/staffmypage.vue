@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <main>
-            <div class="l-exhibitproductlist">
+            <div class="l-staffmypage__productlist">
                 <h1 class="l-shoppermypage__title">
                         これまでに出品された商品
                     </h1>

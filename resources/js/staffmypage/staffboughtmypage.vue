@@ -1,7 +1,8 @@
 <template>
     <div id="app">
         <main>
-            <div class="l-exhibitproductlist">
+            <!-- l-exhibitproductlistのところも、そのページようにレイアウトを組み直す必要がある。 -->
+            <div class="l-staffmypage__productlist">
                 <h1 class="l-shoppermypage__title">これまでに購入された商品</h1>
                 <ul class="c-productlist__items" v-for="item in getItems">
                     <div v-if="item.bought >= 1">

@@ -588,6 +588,20 @@ a {
   margin-bottom: -28px;
 }
 
+.l-staffmypage {
+  background: #f6f5f4;
+}
+
+.l-staffmypage__productlist {
+  background: #f6f5f4;
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 80px;
+  padding: 35px;
+  border-radius: 15px;
+}
+
 .l-formstaffprofile {
   margin-left: auto;
   margin-right: auto;
