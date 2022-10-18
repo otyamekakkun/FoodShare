@@ -1,32 +1,40 @@
 <template>
     <div id="app">
-        <li v-for="item in getItems">
-            <div v-if="item.bought >= 1">
-                <div class="c-productlist">
-                    <h1>購入済み</h1>
-                    <img v-bind:src="item.img_path" width="25%" />
-                    <div class="c-productlist__sentence">
-                        <li>商品No.{{ item.id }}</li>
-                        <li>商品名.{{ item.product_name }}</li>
-                        <li>お値段.{{ item.price }}円.</li>
-                        <button>
-                            <a
-                                v-bind:href="`haiki/${item.id}}/staff_productdetail`"
-                                >詳細にいく</a
-                            >
-                        </button>
-                        <button>
-                            <a
-                                v-bind:href="`haiki/${item.id}}/staff_productedit`"
-                                >商品を編集する</a
-                            >
-                        </button>
+        <main>
+            <div class="l-exhibitproductlist">
+                <h1 class="l-shoppermypage__title">これまでに購入された商品</h1>
+                <ul class="c-productlist__items" v-for="item in getItems">
+                    <div v-if="item.bought >= 1">
+                        <li class="c-productlist__items__title">
+                            商品No.{{ item.id }}
+                        </li>
+                        <img
+                            v-bind:src="item.img_path"
+                            class="c-productlist__items__img"
+                        />
+                        <p class="c-productlist__items__img__title">
+                            購入済み！
+                        </p>
+                        <div class="c-productlist__items__list">
+                            <li>商品名.{{ item.product_name }}</li>
+                            <li>お値段.{{ item.price }}円.</li>
+                            <div class="c-productlist__items__bottom">
+                                <button>
+                                    <a
+                                        v-bind:href="`haiki/${item.id}}/staff_productdetail`"
+                                        class="c-productlist__items__bottom__area"
+                                        >詳細にいく</a
+                                    >
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </ul>
             </div>
-        </li>
+        </main>
     </div>
 </template>
+
 <script>
 import axios from "axios";
 
