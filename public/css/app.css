@@ -523,6 +523,27 @@ a {
   left: 500px;
   font-size: 35px;
 }
+.l-top__area {
+  height: 1600px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+
+.l-top__area__custom {
+  height: 750px;
+  border: solid 15px #174113;
+  border-radius: 15px;
+  margin-bottom: 100px;
+}
+
+.l-top__area__staff {
+  height: 850px;
+  border: solid 15px #174113;
+  border-radius: 15px;
+}
+
 .l-login {
   width: 65%;
   height: 800px;
