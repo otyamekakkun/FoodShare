@@ -61,8 +61,7 @@ Route::view('/admin', [HaikiController::class, 'admin'])->middleware('auth:admin
 //=============================================
 //ご利用客のマイページ 1
 //=============================================
-Route::group(['middleware'=>'auth'],
-function(){Route::get('/haiki/shopper_mypage',[HaikiController::class,'shopper_mypage_display'])->name('haiki_shopper.shopper_mypage_display');   
+Route::get('/haiki/shopper_mypage',[HaikiController::class,'shopper_mypage_display'])->name('haiki_shopper.shopper_mypage_display');   
 //==================================================================-ここまで
 
 //================================================================
@@ -79,7 +78,19 @@ Route::post('/haiki/{id}/shopper_profile',[HaikiController::class, 'shopper_prof
 //=====================================================================
 Route::get('/haiki/shopper_productlist',[HaikiController::class, 'shopper_productlist_display'])->name('haiki_shopper.shopper_productlist_display');            //3
 Route::get('/haiki/{id}/shopper_productdetail',[HaikiController::class, 'shopper_productdetail_display'])->name('haiki_shopper.shopper_productdetail_display');      //4
+
+
+/*
+Route::group(['middleware'=>'auth'],function(){
 });
+
+*/
+
+
+
+
+
+
 
 //haiki shareのご利用スタッフが利用するもの
 
@@ -117,8 +128,8 @@ Route::get('/haiki/staff_buyproduct',[HaikiController::class, 'staff_buyproduct_
 */
 
 Route::get('/haiki/{id}/staff_productedit',[HaikiController::class, 'staff_productedit_display'])->middleware('auth:admin')->name('haiki_shopper.staff_productedit_display'); 
-Route::post('/haiki/{id}/staff_productedit', [HaikiController::class, 'update_exhibitproduct'])->name('exhibit.update');//商品をアップロードする
-Route::post('/haikii/{id}/staff_productedit', [HaikiController::class, 'destroy'])->name('drills.delete');//削除
+Route::post('/haiki/{id}/staff_productedit', [HaikiController::class, 'update_exhibitproduct'])->middleware('auth:admin')->name('exhibit.update');//商品をアップロードする
+Route::post('/haikii/{id}/staff_productedit', [HaikiController::class, 'destroy'])->middleware('auth:admin')->name('drills.delete');//削除
 
 //======================================================================================================ここまで
 
@@ -129,7 +140,9 @@ Route::post('/haikii/{id}/staff_productedit', [HaikiController::class, 'destroy'
 //商品詳細画面
 //=======================================================
 
-Route::get('/haiki/{id}/staff_productdetail',[HaikiController::class, 'staff_productdetail_display'])->middleware('auth:admin')->name('haiki_shopper.staff_productdetail_display');   
+Route::get('/haiki/{id}/staff_productdetail',[HaikiController::class, 'staff_productdetail_display'])->middleware('auth:admin')->name('haiki_shopper.staff_productdetail_display');
+
+// shopperのproductdetail
 Route::post('/haiki/{id}/staff_productdetail',[HaikiController::class,'shopper_productdetail_bought'])->name('bought.update');
 Route::post('/haiki/{id}/staff_productdetai',[HaikiController::class,'shopper_productdetail_cancel'])->name('bought.cancel');
 
@@ -168,6 +181,9 @@ Route::get('/haiki/index3',[HaikiController::class, 'productjson'])->name('produ
 
 
 Route::get('/haiki/index4',[HaikiController::class, 'userjson'])->name('user.json');
+// ここに問題あり？
+//Route::get('/haiki/index5',[HaikiController::class, 'buyjson'])->name('buy.json');
+
 //json形式で渡すものはしっかりと対策する必要がある。
 //staff_exhibitproductをjson形式で渡す
 Route::get('/haiki/jsonstaff_exhibit',[HaikiController::class, 'staff_exhibitproduct_json'])->name('product.json');

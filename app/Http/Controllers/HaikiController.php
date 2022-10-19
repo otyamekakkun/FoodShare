@@ -291,6 +291,7 @@ public function productjson(){
 return response()->json($product);
 }
 
+
 //shopper自分が購入した商品を写し出すjson形式生成
 //ログインしているidを取得して、productsテーブルからuser_idと照合したカラムを取り出す。
 public function userjson(){
@@ -299,5 +300,19 @@ public function userjson(){
 
 return response()->json($user);
 }
+
+
+
+
+
+
+
+/*
+public function buyjson(){
+    $id = Auth::guard('admin')->id();
+    $product = products::where("admin_id",$id)->orderBy('created_at','desc')->get();
+return response()->json($product);
+}
+*/
 }
 //=========================================================json形式で渡すのここまで。
