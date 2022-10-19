@@ -12,7 +12,6 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 class HaikiController extends Controller
 {
-
 //===================================================================
  //shoepper_mypage1                                                 //
  //==================================================================
@@ -40,14 +39,6 @@ $request->validate([
     'email'=>'required',
     'password'=>'required|min:6|',
     'password_confirmation'=>'required|min:6|same:password'
-
-    //入力ネームと同じものを対応させる
-    //後で詳しく設定する（今は最低限）
-    /*
-    'email'=>'required|email:filter,dns',
-    'password'=>'required|min:6',
-    'password2'=>'required|min:6|same:password',
-    */
 ]);
 //$product = products::find($id);
 $id = Auth::id();
@@ -55,17 +46,14 @@ $user = User::find($id);
 $user->name=$request->name;
 $user->email=$request->email;
 $user->password= Hash::make($request->password);//パスワードをハッシュ化させる必要があるのでそれを記述する
-
 $user->save();
 return redirect('haiki/shopper_mypage');//..............画面表示するもの
-
 //===========================================================================2終了
 }
 
 //===================================================================
 //4 お客様商品一覧                                                    //
 //===================================================================
-
     public function shopper_productlist_display(){
         $product = DB::table('products')->get();
         return view('haiki_shopper.shopper_productlist_display',['products'=>$product]);
@@ -74,7 +62,6 @@ return redirect('haiki/shopper_mypage');//..............画面表示するもの
 //==============================================================
 //5お客用商品詳細ページ                                          //
 //==============================================================
-
     public function shopper_productdetail_display($id){
 //laravelの処理で記述することができるようにする
 $product = products::find($id);         
@@ -89,7 +76,6 @@ $product = products::find($id);
         $product->save();
         return redirect('haiki/shopper_mypage');
     }
-
     public function shopper_productdetail_cancel (Request $request, $id){
         $user = Auth::id();
         $product = products::find($id);//商品専用のid
@@ -99,7 +85,6 @@ $product = products::find($id);
         $product->save();
         return redirect('haiki/shopper_mypage');
     }
-
 //=================================================ここまで
 
 //=============================================================
@@ -110,7 +95,6 @@ $product = products::find($id);
         $admin = DB::table('admins')->find($id);
         return view('haiki_staff.staff_profile_display',['admin'=>$admin]);//...................画面表示するもの
     } 
-
     public function staff_profile_edit(Request $request)
 {
 $request->validate([
@@ -118,7 +102,6 @@ $request->validate([
     'email'=>'required',
     'password'=>'required|min:6',
     'password_confirmation'=>'required|min:6|same:password',
-
     'convinience_name'=>'required',
     'convinience_branch'=>'required',
     'adress'=>'required',
@@ -126,8 +109,6 @@ $request->validate([
 ]);
 
 $id = Auth::guard('admin')->id();
-//$product = products::where("admin_id",$id)->paginate(5);
-//$admin=DB::table('admins')->find($id);
 $admin = Admin::find($id);
 $admin->name = $request->name;
 $admin->password= Hash::make($request->password);
@@ -138,7 +119,6 @@ $admin->adress=$request->adress;
 $admin->save();
 return redirect('admin')->with('flash_message', __('Registered.'));
 }
-
 //=============================================================ここまで
 
 //==============================================================
@@ -147,20 +127,16 @@ return redirect('admin')->with('flash_message', __('Registered.'));
     public function staff_exhibitproduct_display(){
         $id = Auth::guard('admin')->id();
         $admin = Admin::find($id);
-
         return view('haiki_staff.staff_exhibitproduct_display',['admins'=>$admin]);
     } 
 
-//==========================================================ここまで
+//=========================================================ここまで
 
 //==============================================================
 //7コンビニ 購入された商品一覧画面                                 //
 //==============================================================
 
     public function staff_buyproduct_display(Request $request){
-        //$id = Auth::guard('admin')->id();
-        //$products=products::where('admin_id',$id)->get();
-
         $id = Auth::guard('admin')->id();
         $admin = DB::table('admins')->find($id);
         return view('haiki_staff.staff_buyproduct_display',['admins'=>$admin]);
@@ -182,9 +158,6 @@ public function destroy($id){
 
 
 public function update_exhibitproduct(Request $request,$id){
-    //入力するときにバリデーションチェックを設ける
-    //一応バリデーションも含ませとく。変更の処理がなけレバそのまま行けるように変更できるようにする
-    //急に画像が表示されなくなったら php artisan storage:linkというコマンドを叩けばいける
     $request->validate([
     ]);
 $img = $request->file('img_path');
@@ -240,13 +213,6 @@ return response()->json($product);
 
     } //...................................ここに問題がありそう。
 //json形式で渡す
-/*
-public function index1(Request $request){
-    $drill = products::all();
-    return response()->json($drill);
-    //index1の内容は基本的にファイルの中に入っているもの全てを取得する
-}
-*/
 public function staff_exhibitproduct_json(){
     $id = Auth::guard('admin')->id();
     $product = products::where("admin_id",$id);
@@ -267,14 +233,6 @@ public function admin(){
     $admin = DB::table('admins')->find($id);
     return view('admin',['admin'=>$admin]);//...................画面表示するもの
 }
-/*
-        $id = Auth::guard('admin')->id();
-        $admin = DB::table('admins')->find($id);
-        return view('haiki_staff.staff_profile_display',['admin'=>$admin]);//...................画面表示するもの
-        $id = Auth::id();
-        $user = DB::table('users')->find($id);
-        return view('haiki_shopper.shopper_mypage_display',['my_user'=>$user]);
-*/
 
 //====================================================================
 //(create_exhibitproductで商品を出品する画面を作る)  12
@@ -300,14 +258,11 @@ $product = new products;
 $product->product_name = $request->product_name;
 $product->admin_id = $id;//現在ログインしているコンビニユーザー情報のidをこの中に入れる
 $product->img_path=$imagePath;
-//json形式で取得している
 $product->img_path=$imagePath;
 $product->price = $request->price;
 $product->best_by_date = $request->best_by_date;
 $product->prefecture=$request->prefecture;
 $product->save();//2
-
-
 return redirect('admin')->with('flash_message', __('Registered.'));//3
 }
 
@@ -329,15 +284,12 @@ public function index2(Request $request){
     return response()->json($drill);
 }
 
-
 //管理者としてログインした時に、管理者専用の情報を取得するjson形式のデータベース
 public function productjson(){
     $id = Auth::guard('admin')->id();
     $product = products::where("admin_id",$id)->get();
 return response()->json($product);
 }
-
-
 
 //shopper自分が購入した商品を写し出すjson形式生成
 //ログインしているidを取得して、productsテーブルからuser_idと照合したカラムを取り出す。
@@ -347,6 +299,5 @@ public function userjson(){
 
 return response()->json($user);
 }
-
 }
 //=========================================================json形式で渡すのここまで。
