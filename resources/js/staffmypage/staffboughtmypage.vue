@@ -1,5 +1,6 @@
 <template>
     <div id="app">
+        {{ compare() }}
         <main>
             <!-- l-exhibitproductlistのところも、そのページようにレイアウトを組み直す必要がある。 -->
             <div class="l-staffmypage__productlist">
@@ -60,7 +61,6 @@ export default {
         getItems: function () {
             let start = (this.currentPage - 1) * this.perPage;
             let end = this.currentPage * this.perPage;
-
             return this.products.reverse().slice(start, end);
         },
         getPaginateCount: function () {
@@ -71,12 +71,10 @@ export default {
         paginateClickCallback: function (pageNum) {
             this.currentPage = Number(pageNum);
         },
-        compare: function (a, b) {
-            let r = 0;
-            if (a.update_at) {
-                r = -1;
-            } else if (a.update_at > b.update_at) {
-                return r;
+        compare: function () {
+            for (var i in this.products) {
+                const product = this.products[i];
+                console.log(product.updated_at);
             }
         },
     },

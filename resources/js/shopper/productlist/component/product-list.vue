@@ -72,9 +72,6 @@
 <script>
 export default {
     props: ["products"], //main.vueからデータの中身が入っている。
-
-    //子コンポーネントを登録する
-    //コンポーネントが持つデータ
     data: function () {
         return {
             keywords: "", //都道府県

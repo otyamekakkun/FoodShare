@@ -5377,8 +5377,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ["products"],
   //main.vueからデータの中身が入っている。
-  //子コンポーネントを登録する
-  //コンポーネントが持つデータ
   data: function data() {
     return {
       keywords: "",
@@ -5725,13 +5723,10 @@ __webpack_require__.r(__webpack_exports__);
     paginateClickCallback: function paginateClickCallback(pageNum) {
       this.currentPage = Number(pageNum);
     },
-    compare: function compare(a, b) {
-      var r = 0;
-
-      if (a.update_at) {
-        r = -1;
-      } else if (a.update_at > b.update_at) {
-        return r;
+    compare: function compare() {
+      for (var i in this.products) {
+        var product = this.products[i];
+        console.log(product.updated_at);
       }
     }
   },
@@ -6553,7 +6548,7 @@ var render = function render() {
     attrs: {
       id: "app"
     }
-  }, [_c("main", [_c("div", {
+  }, [_vm._v("\n    " + _vm._s(_vm.compare()) + "\n    "), _c("main", [_c("div", {
     staticClass: "l-staffmypage__productlist"
   }, [_c("h1", {
     staticClass: "l-shoppermypage__title"
