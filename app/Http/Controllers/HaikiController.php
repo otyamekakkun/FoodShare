@@ -307,12 +307,12 @@ return response()->json($user);
 
 
 
-/*
+
 public function buyjson(){
     $id = Auth::guard('admin')->id();
-    $product = products::where("admin_id",$id)->orderBy('created_at','desc')->get();
+    $product = products::where("admin_id",$id)->orderBy('updated_at','desc')->get();
 return response()->json($product);
 }
-*/
+
 }
 //=========================================================json形式で渡すのここまで。

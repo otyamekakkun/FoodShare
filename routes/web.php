@@ -181,8 +181,8 @@ Route::get('/haiki/index3',[HaikiController::class, 'productjson'])->name('produ
 
 
 Route::get('/haiki/index4',[HaikiController::class, 'userjson'])->name('user.json');
-// ここに問題あり？
-//Route::get('/haiki/index5',[HaikiController::class, 'buyjson'])->name('buy.json');
+// buy
+Route::get('/haiki/index5',[HaikiController::class, 'buyjson'])->name('buy.json');
 
 //json形式で渡すものはしっかりと対策する必要がある。
 //staff_exhibitproductをjson形式で渡す
