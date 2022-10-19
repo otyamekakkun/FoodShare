@@ -116,7 +116,7 @@ export default {
         },
     },
     mounted() {
-        const url = "/haiki/index3";
+        const url = "/haiki/index5";
         axios.get(url).then((response) => (this.products = response.data));
     },
 };

@@ -1,6 +1,5 @@
 <template>
     <div id="app">
-        {{ compare() }}
         <main>
             <!-- l-exhibitproductlistのところも、そのページようにレイアウトを組み直す必要がある。 -->
             <div class="l-staffmypage__productlist">
@@ -61,7 +60,7 @@ export default {
         getItems: function () {
             let start = (this.currentPage - 1) * this.perPage;
             let end = this.currentPage * this.perPage;
-            return this.products.reverse().slice(start, end);
+            return this.products.slice(start, end);
         },
         getPaginateCount: function () {
             return Math.ceil(this.products.length / this.perPage);
@@ -71,16 +70,10 @@ export default {
         paginateClickCallback: function (pageNum) {
             this.currentPage = Number(pageNum);
         },
-        compare: function () {
-            for (var i in this.products) {
-                const product = this.products[i];
-                console.log(product.updated_at);
-            }
-        },
     },
 
     mounted() {
-        const url = "/haiki/index3";
+        const url = "/haiki/index5";
         axios.get(url).then((response) => (this.products = response.data));
     },
 };
