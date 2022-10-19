@@ -44,25 +44,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
  * 11(コンビニ)コンビニ側でも今出回っている商品の一覧を項目するもの(購入はできないように設定する)
  */
 //利用客を表示するもの
-/*
 
-ログインしている状態でないと開発が進むことができない場合は上記のrouteを使うこと。
-Route::get('/haiki/shopper_mypage',[App\Http\Controllers\HaikiController::class, 'shopper_mypage_display'])->name('haiki_shopper.shopper_mypage_display')->middleware('auth:admin');                           //1
-Route::get('/haiki/shopper_profile',[App\Http\Controllers\HaikiController::class, 'shopper_profile_display'])->name('haiki_shopper.shopper_profile_display')->middleware('auth:admin');                        //2
-Route::get('/haiki/shopper_productlist',[App\Http\Controllers\HaikiController::class, 'shopper_productlist_display'])->name('haiki_shopper.shopper_productlist_display')->middleware('auth:admin');            //3
-Route::get('/haiki/shopper_productdetail',[App\Http\Controllers\HaikiController::class, 'shopper_productdetail_display'])->name('haiki_shopper.shopper_productdetail_display')->middleware('auth:admin');      //4
 
-//haiki shareのご利用スタッフが利用するもの
-Route::get('/haiki/staff_profile',[App\Http\Controllers\HaikiController::class, 'staff_profile_display'])->name('haiki_shopper.staff_profile_display')->middleware('auth:admin');                              //6
-Route::get('/haiki/staff_exhibitproduct',[App\Http\Controllers\HaikiController::class, 'staff_exhibitproduct_display'])->name('haiki_shopper.staff_exhibitproduct_display')->middleware('auth:admin');         //7
-Route::get('/haiki/staff_buyproduct',[App\Http\Controllers\HaikiController::class, 'staff_buyproduct_display'])->name('haiki_shopper.staff_buyproduct_display')->middleware('auth:admin');                     //8
-Route::get('/haiki/staff_productedit',[App\Http\Controllers\HaikiController::class, 'staff_productedit_display'])->name('haiki_shopper.staff_productedit_display')->middleware('auth:admin');                  //9
-Route::get('/haiki/staff_exhibitproductlist',[App\Http\Controllers\HaikiController::class, 'staff_exhibitproduct_list_display'])->name('haiki_shopper.staff_exhibitproduct_list_display')->middleware('auth:admin'); //10
-Route::get('/haiki/staff_productlist',[App\Http\Controllers\HaikiController::class, 'staff_productlist_display'])->name('haiki_shopper.staff_productlist_display')->middleware('auth:admin'); //11
-//これは新たに追加したものだから修正する必要がありそう
-Route::get('/haiki/{id}/staff_productedit',[App\Http\Controllers\HaikiController::class, 'staff_productedit_display'])->name('haiki_shopper.staff_productedit_display');                  //9
-Route::get('/haiki/{id}/staff_productdetail',[App\Http\Controllers\HaikiController::class, 'staff_productdetail_display'])->name('haiki_shopper.staff_productdetail_display');                  //9
-*/
 // ここから追加
 
 //それ以外なら下記の項目を使うこと
@@ -113,15 +96,15 @@ Route::post('/haiki/{id}/staff_profile',[HaikiController::class, 'staff_profile_
 //=================================================
 //商品を出品する画面 5
 //=================================================
-Route::get('/haiki/staff_exhibitproduct',[HaikiController::class, 'staff_exhibitproduct_display'])->name('haiki_shopper.staff_exhibitproduct_display'); 
+Route::get('/haiki/staff_exhibitproduct',[HaikiController::class, 'staff_exhibitproduct_display'])->name('haiki_shopper.staff_exhibitproduct_display')->middleware('auth:admin'); 
 Route::post('create_exhibitproduct',[HaikiController::class,'create_exhibitproduct'])->name('create.exhibit');
 
 //=================================================================商品を出品するホームページ制作ここまで。
 
 //===================================
-//購入された商品一覧6                 //
+//購入された商品一覧6                 
 //===================================
-Route::get('/haiki/staff_buyproduct',[HaikiController::class, 'staff_buyproduct_display'])->name('haiki_shopper.staff_buyproduct_display');
+Route::get('/haiki/staff_buyproduct',[HaikiController::class, 'staff_buyproduct_display'])->name('haiki_shopper.staff_buyproduct_display')->middleware('auth:admin');
 
 //=========================================6ここまで
 
@@ -134,7 +117,7 @@ Route::get('/haiki/staff_buyproduct',[HaikiController::class, 'staff_buyproduct_
 3 商品詳細画面で削除する
 */
 
-Route::get('/haiki/{id}/staff_productedit',[HaikiController::class, 'staff_productedit_display'])->name('haiki_shopper.staff_productedit_display'); 
+Route::get('/haiki/{id}/staff_productedit',[HaikiController::class, 'staff_productedit_display'])->middleware('auth:admin')->name('haiki_shopper.staff_productedit_display'); 
 Route::post('/haiki/{id}/staff_productedit', [HaikiController::class, 'update_exhibitproduct'])->name('exhibit.update');//商品をアップロードする
 Route::post('/haikii/{id}/staff_productedit', [HaikiController::class, 'destroy'])->name('drills.delete');//削除
 
@@ -146,7 +129,7 @@ Route::post('/haikii/{id}/staff_productedit', [HaikiController::class, 'destroy'
 //==========================================================
 //商品詳細画面
 //=======================================================
-Route::get('/haiki/{id}/staff_productdetail',[HaikiController::class, 'staff_productdetail_display'])->name('haiki_shopper.staff_productdetail_display');   
+Route::get('/haiki/{id}/staff_productdetail',[HaikiController::class, 'staff_productdetail_display'])->middleware('auth:admin')->name('haiki_shopper.staff_productdetail_display');   
 Route::post('/haiki/{id}/staff_productdetail',[HaikiController::class,'shopper_productdetail_bought'])->name('bought.update');
 Route::post('/haiki/{id}/staff_productdetai',[HaikiController::class,'shopper_productdetail_cancel'])->name('bought.cancel');
 
@@ -155,7 +138,7 @@ Route::post('/haiki/{id}/staff_productdetai',[HaikiController::class,'shopper_pr
 //===============================================
 //出品した商品の一覧                              //
 //===============================================
-Route::get('/haiki/staff_exhibitproductlist',[HaikiController::class, 'staff_exhibitproduct_list_display'])->name('haiki_shopper.staff_exhibitproduct_list_display'); //10
+Route::get('/haiki/staff_exhibitproductlist',[HaikiController::class, 'staff_exhibitproduct_list_display'])->middleware('auth:admin')->name('haiki_shopper.staff_exhibitproduct_list_display'); //10
 
 //form入力チェック用のroute
 // ここから追加
@@ -166,7 +149,7 @@ Route::post('/register/admin', [RegisterController::class, 'registerAdmin'])->na
 //Route::view('/admin','admin')->middleware('auth:admin')->name('admin-home');
 
 //マイページでもデータベースが表示できるような処理を施す
-Route::get('/admin', [App\Http\Controllers\HaikiController::class, 'admin'])->middleware('auth:admin')->name('admin-home')->middleware('auth:admin');
+Route::get('/admin', [App\Http\Controllers\HaikiController::class, 'admin'])->middleware('auth:admin')->name('admin-home');
 
 
 //====================================================
