@@ -166,7 +166,7 @@ Route::post('/register/admin', [RegisterController::class, 'registerAdmin'])->na
 //Route::view('/admin','admin')->middleware('auth:admin')->name('admin-home');
 
 //マイページでもデータベースが表示できるような処理を施す
-Route::get('/admin', [App\Http\Controllers\HaikiController::class, 'admin'])->middleware('auth:admin')->name('admin-home');
+Route::get('/admin', [App\Http\Controllers\HaikiController::class, 'admin'])->middleware('auth:admin')->name('admin-home')->middleware('auth:admin');
 
 
 //====================================================
