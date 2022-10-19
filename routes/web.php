@@ -61,9 +61,8 @@ Route::view('/admin', [HaikiController::class, 'admin'])->middleware('auth:admin
 //=============================================
 //ご利用客のマイページ 1
 //=============================================
-Route::get('/haiki/shopper_mypage',[HaikiController::class,'shopper_mypage_display'])->name('haiki_shopper.shopper_mypage_display');   
-
-
+Route::group(['middleware'=>'auth'],
+function(){Route::get('/haiki/shopper_mypage',[HaikiController::class,'shopper_mypage_display'])->name('haiki_shopper.shopper_mypage_display');   
 //==================================================================-ここまで
 
 //================================================================
@@ -73,7 +72,6 @@ Route::get('/haiki/shopper_profile',[HaikiController::class, 'shopper_profile_di
 Route::post('/haiki/{id}/shopper_profile',[HaikiController::class, 'shopper_profile_edit'])->name('haiki_shopperprofile_edit');
 
 //考察１idをパラメータ内に含ませる
-
 //================================================================ここまで
 
 //=====================================================================
@@ -81,6 +79,7 @@ Route::post('/haiki/{id}/shopper_profile',[HaikiController::class, 'shopper_prof
 //=====================================================================
 Route::get('/haiki/shopper_productlist',[HaikiController::class, 'shopper_productlist_display'])->name('haiki_shopper.shopper_productlist_display');            //3
 Route::get('/haiki/{id}/shopper_productdetail',[HaikiController::class, 'shopper_productdetail_display'])->name('haiki_shopper.shopper_productdetail_display');      //4
+});
 
 //haiki shareのご利用スタッフが利用するもの
 
@@ -129,6 +128,7 @@ Route::post('/haikii/{id}/staff_productedit', [HaikiController::class, 'destroy'
 //==========================================================
 //商品詳細画面
 //=======================================================
+
 Route::get('/haiki/{id}/staff_productdetail',[HaikiController::class, 'staff_productdetail_display'])->middleware('auth:admin')->name('haiki_shopper.staff_productdetail_display');   
 Route::post('/haiki/{id}/staff_productdetail',[HaikiController::class,'shopper_productdetail_bought'])->name('bought.update');
 Route::post('/haiki/{id}/staff_productdetai',[HaikiController::class,'shopper_productdetail_cancel'])->name('bought.cancel');
