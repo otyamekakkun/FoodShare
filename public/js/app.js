@@ -5515,9 +5515,6 @@ __webpack_require__.r(__webpack_exports__);
       };
     }
   },
-  //実験として情報を受け取る練習からする。
-  //これはjson形式で値を取得しないといけないもの
-  //子コンポーネントを登録するここのデータはほぼ確定している。
   computed: {
     getItems: function getItems() {
       var start = (this.currentPage - 1) * this.perPage;
@@ -6193,18 +6190,18 @@ var render = function render() {
   }, [_vm._v("これまでに購入された商品")]), _vm._v(" "), _c("div", {
     staticClass: "c-productlist"
   }, [_vm._l(_vm.getItems, function (item) {
-    return _c("ul", {
+    return _c("ul", [item.bought >= 1 ? _c("div", [_c("div", {
       staticClass: "c-productlist__items"
-    }, [item.bought >= 1 ? _c("div", [_c("li", {
+    }, [_c("li", {
       staticClass: "c-productlist__items__title"
-    }, [_vm._v("\n                            商品No." + _vm._s(item.id) + "\n                        ")]), _vm._v(" "), _c("img", {
+    }, [_vm._v("\n                                商品No." + _vm._s(item.id) + "\n                            ")]), _vm._v(" "), _c("img", {
       staticClass: "c-productlist__items__img",
       attrs: {
         src: item.img_path
       }
     }), _vm._v(" "), _c("p", {
       staticClass: "c-productlist__items__img__title"
-    }, [_vm._v("\n                            購入済み！\n                        ")]), _vm._v(" "), _c("div", {
+    }, [_vm._v("\n                                購入済み！\n                            ")]), _vm._v(" "), _c("div", {
       staticClass: "c-productlist__items__list"
     }, [_c("li", [_vm._v("商品名:" + _vm._s(item.product_name))]), _vm._v(" "), _c("li", [_vm._v("お値段:" + _vm._s(item.price) + "円.")]), _vm._v(" "), _c("div", {
       staticClass: "c-productlist__items__bottom"
@@ -6214,7 +6211,7 @@ var render = function render() {
       attrs: {
         href: "".concat(item.id, "/shopper_productdetail")
       }
-    }, [_vm._v("詳細にいく")])])])])]) : _vm._e()]);
+    }, [_vm._v("詳細にいく")])])])])])]) : _vm._e()]);
   }), _vm._v(" "), _c("div", {
     staticClass: "c-paginate"
   }, [_c("vuejs-paginate", {
