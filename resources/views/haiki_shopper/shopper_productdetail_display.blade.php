@@ -5,7 +5,6 @@
         <header>
             @include('rest.shopper.header') 
             </header>
-
 {{-- 全体を決めるもの --}}
 <div id="app">
     <main>
