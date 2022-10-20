@@ -14,21 +14,27 @@
 <form method="POST" action="{{ route('create.exhibit') }}" enctype="multipart/form-data">
     @csrf
     <div class="c-staffform__area">
-        <h1 class="l-productexhibitform__sentence">商品名</h1>
-            <input  type="text" class= "@error('problem2') is-invalid @enderror" name="product_name" value="" placeholder="商品名">
+        <span class="l-productexhibitform__sentence">商品名:
             @error('product_name')
             <span class="" role="alert">
                 <strong>{{ $message }}</strong>
             </span>
             @enderror
             <br/>
-        <label class="">金額を入れる</label><br>
-            <input id="" type="number" class=" @error('price') is-invalid @enderror" name="price" value="">円
-            @error('price')
-            <span class="invalid-feedback" role="alert">
+        </span>
+            <input  type="text" class= "" name="product_name" value="" placeholder="商品名">
+<br/>
+        <label class="">金額を入れる:
+        <span>
+            @error('product_name')
+            <span class="" role="alert">
                 <strong>{{ $message }}</strong>
             </span>
             @enderror
+            <br/>
+</span>    
+        </label><br>
+            <input id="" type="number" class=" @error('price') is-invalid @enderror" name="price" value="">円
 {{-- 賞味期限の入力はjsを使用。デフォルトだと現在日時より前の日付も記入できるから --}}
  <calender-component></calender-component>
         <drag-component></drag-component>
