@@ -6179,7 +6179,7 @@ var render = function render() {
       staticClass: "c-productlist__items__bottom__area"
     }, [_c("a", {
       attrs: {
-        href: "".concat(item.id, "}/staff_productdetail")
+        href: "".concat(item.id, "/shopper_productdetail")
       }
     }, [_vm._v("詳細にいく")])])])])]);
   }), _vm._v(" "), _c("div", {

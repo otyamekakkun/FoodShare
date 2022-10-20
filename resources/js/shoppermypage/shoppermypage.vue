@@ -28,7 +28,7 @@
                                     class="c-productlist__items__bottom__area"
                                 >
                                     <a
-                                        v-bind:href="`${item.id}}/staff_productdetail`"
+                                        v-bind:href="`${item.id}/shopper_productdetail`"
                                         >詳細にいく</a
                                     >
                                 </button>
