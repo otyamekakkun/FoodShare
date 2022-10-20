@@ -6543,7 +6543,7 @@ var render = function render() {
       id: "app"
     }
   }, [_c("main", [_c("div", {
-    staticClass: "l-staffmypage__productlist"
+    staticClass: "c-staffmypage__list"
   }, [_c("h1", {
     staticClass: "l-shoppermypage__title"
   }, [_vm._v("これまでに購入された商品")]), _vm._v(" "), _vm._l(_vm.getItems, function (item) {

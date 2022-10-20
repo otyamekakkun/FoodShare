@@ -1064,6 +1064,10 @@ a {
   background: #b2d142;
 }
 
+body {
+  background: red;
+}
+
 .c-title {
   text-align: center;
   font-size: 20px;
