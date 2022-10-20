@@ -2,8 +2,8 @@
     <div id="app">
         <main>
             <!-- l-exhibitproductlistのところも、そのページようにレイアウトを組み直す必要がある。 -->
-            <div class="c-staffmypage__list">
-                <h1 class="l-shoppermypage__title">これまでに購入された商品</h1>
+            <div class="c-staffmypagelistarea">
+                <h1 class="c-title">これまでに購入された商品</h1>
                 <ul class="c-productlist__items" v-for="item in getItems">
                     <div v-if="item.bought >= 1">
                         <li class="c-productlist__items__title">

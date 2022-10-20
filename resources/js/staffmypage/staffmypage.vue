@@ -1,8 +1,9 @@
 <template>
     <div id="app">
         <main>
-            <div class="l-staffmypage__productlist">
-                <h1 class="l-shoppermypage__title">これまでに出品された商品</h1>
+            <div class="c-staffmypagelistarea">
+                <h1 class="c-title">これまでに出品された商品</h1>
+
                 <ul class="c-productlist__items" v-for="item in getItems">
                     <li class="c-productlist__items__title">
                         商品No.{{ item.id }}

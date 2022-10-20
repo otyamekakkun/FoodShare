@@ -1,3 +1,13 @@
-body {
-    background: red;
+//====================================================
+//共通化するエリアのコンポーネント部分 staffmypageのリスト
+//===================================================
+.c-staffmypagelistarea {
+    background: #f6f5f4;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%;
+    border-radius: size(ss);
+    padding: size(l);
 }
