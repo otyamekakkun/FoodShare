@@ -6259,7 +6259,7 @@ var render = function render() {
   return _c("div", {
     staticClass: "l"
   }, [_c("P", [_vm._v("賞味期限を入れてください")]), _vm._v(" "), _c("input", {
-    staticClass: "l-productexhibitform__typo3",
+    staticClass: "c-staffform__area__textcarender",
     attrs: {
       type: "date",
       min: new Date().toISOString().split("T")[0],
@@ -6313,12 +6313,13 @@ var render = function render() {
         return _vm.uploadFile($event);
       }
     }
+  }, [_c("div", {
+    staticClass: "c-staffform__area__uploadimgarea"
   }, [_c("label", {
-    staticClass: "button",
     attrs: {
       for: "upload_image"
     }
-  }, [_c("p", [_vm._v("画像を選択")]), _vm._v(" "), _c("input", {
+  }, [_vm._m(0), _vm._v(" "), _c("input", {
     staticStyle: {
       display: "none"
     },
@@ -6333,7 +6334,9 @@ var render = function render() {
         return _vm.uploadFile($event);
       }
     }
-  })]), _vm._v(" "), _c("p", [_vm._v("またはここに画像ファイルをドラッグ＆ドロップ")]), _vm._v(" "), _c("img", {
+  })])]), _vm._v(" "), _c("div", {
+    staticClass: "c-staffform__area__textimgarea"
+  }, [_c("img", {
     directives: [{
       name: "show",
       rawName: "v-show",
@@ -6341,7 +6344,7 @@ var render = function render() {
       expression: "preview"
     }],
     staticStyle: {
-      width: "300px"
+      width: "400px"
     },
     attrs: {
       src: _vm.preview
@@ -6353,10 +6356,15 @@ var render = function render() {
       value: _vm.preview,
       expression: "preview"
     }]
-  }, [_vm._v(_vm._s(_vm.name))])])]);
+  }, [_vm._v(_vm._s(_vm.name))])])])]);
 };
 
-var staticRenderFns = [];
+var staticRenderFns = [function () {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("p", [_vm._v("\n                    このエリアにドラッグ&ドロップまたは画像を選択してください"), _c("br"), _vm._v("\n                    (*下に画像が表示されます)\n                ")]);
+}];
 render._withStripped = true;
 
 

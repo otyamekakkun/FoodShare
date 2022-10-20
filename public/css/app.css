@@ -770,7 +770,7 @@ a {
 }
 
 .c-staffform {
-  background: white;
+  background: #f6f5f4;
   width: 80%;
   margin-left: auto;
   margin-right: auto;
@@ -782,14 +782,63 @@ a {
 }
 
 .c-staffform__area {
-  background: #f6f5f4;
-  width: 80%;
+  width: 60%;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
   margin-top: 35px;
-  height: 850px;
-  border: dotted #174113;
+  height: 900px;
   border-radius: 5px;
+}
+
+.c-staffform__area__textname {
+  background: white;
+  font-size: 30px;
+  text-align: left;
+  margin: 5px;
+}
+
+.c-staffform__area__textprice {
+  background: cyan;
+  width: 20%;
+  font-size: 25px;
+  margin-left: 180px;
+}
+
+.c-staffform__area__uploadimgarea {
+  width: 50%;
+  background: red;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.c-staffform__area__textimgarea {
+  font-size: 25px;
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  background: white;
+  width: 100%;
+  height: 300px;
+  border: dotted #174113;
+  border-radius: 10px;
+}
+
+.c-staffform__area__submitbutton {
+  display: block;
+  background: #174113;
+  margin-top: 80px;
+  margin-left: auto;
+  height: 60px;
+  width: 30%;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  transition: all 1.2s;
+}
+.c-staffform__area__submitbutton:hover {
+  background: orange;
 }
 
 .l-exhibitproductlist {

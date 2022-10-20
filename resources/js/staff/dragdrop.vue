@@ -10,30 +10,33 @@
             @dragleave.prevent="changeStyle($event, 'no')"
             @drop.prevent="uploadFile($event)"
         >
-            <label for="upload_image" class="button">
-                <p>画像を選択</p>
-                <input
-                    id="upload_image"
-                    type="file"
-                    name="img_path"
-                    @change="uploadFile($event)"
-                    style="display: none"
-                    accept="image/*"
-                />
-            </label>
-
+            <div class="c-staffform__area__uploadimgarea">
+                <label for="upload_image">
+                    <p>
+                        このエリアにドラッグ&ドロップまたは画像を選択してください<br />
+                        (*下に画像が表示されます)
+                    </p>
+                    <input
+                        id="upload_image"
+                        type="file"
+                        name="img_path"
+                        @change="uploadFile($event)"
+                        style="display: none"
+                        accept="image/*"
+                    />
+                </label>
+            </div>
             <!-- ここからプレビュー機能の部分 -->
-            <p>またはここに画像ファイルをドラッグ＆ドロップ</p>
-            <img v-show="preview" v-bind:src="preview" style="width: 300px" />
-            <p v-show="preview">{{ name }}</p>
+            <div class="c-staffform__area__textimgarea">
+                <img
+                    v-show="preview"
+                    v-bind:src="preview"
+                    style="width: 400px"
+                />
+                <p v-show="preview">{{ name }}</p>
+            </div>
             <!-- ここまでプレビュー機能の部分 -->
         </div>
-        <!-- 
-        <button class="btn btn-success" style="width: 400px; margin-left: 30px">
-            アップロード
-        </button>
-         -->
-        <!-- </form> -->
     </div>
 </template>
 <script>
