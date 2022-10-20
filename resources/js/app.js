@@ -94,22 +94,13 @@ Vue.component(
 );
 
 //=============================================================ここまで
-
-//===============================================================
-//staff_productdetailのコンポーネント(管理者専用の商品商品詳細画面)
-//===============================================================
-Vue.component(
-    "staff_productdetail-component",
-    require("./staff_productdetail/staff_productdetail.vue").default
-);
-
-//==================================================================
-//shopperproductdetailのコンポーネント（ご利用者の商品詳細画面)
-//================================================================
+//============================================
+//staff shopper 共通している商品一覧のコンポーネント
+//============================================
 
 Vue.component(
-    "shopperproductdetail-component",
-    require("./shopperproductdetail/shopper_product.vue").default
+    "productdetail-component",
+    require("./commonproductdetail/productdetail-component.vue").default
 );
 
 //==================================================================
