@@ -6363,7 +6363,7 @@ var staticRenderFns = [function () {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("p", [_vm._v("\n                    このエリアにドラッグ&ドロップまたは画像を選択してください"), _c("br"), _vm._v("\n                    (*下に画像が表示されます)\n                ")]);
+  return _c("p", [_vm._v("\n                    このエリアにドラッグ&ドロップまたは画像を選択してください"), _c("br"), _vm._v("\n                    (*下のエリアに画像が表示されます)\n                ")]);
 }];
 render._withStripped = true;
 
