@@ -7,7 +7,6 @@
             <h1 class="c-productdetail__title">商品:No.{{ id }}の画像</h1>
             <img v-bind:src="img" class="c-productdetail__img" />
         </div>
-
         <div class="c-productdetail__listarea">
             <h1 class="c-productdetail__listtitle">商品の内容</h1>
             <ul class="c-productdetail__list">
@@ -27,7 +26,6 @@
         </div>
     </div>
 </template>
-
 <script>
 export default {
     props: [
