@@ -6,7 +6,7 @@
     <header>
         @include('rest.staff.header')
     </header>
-<div class="l-staffmypage">
+<div class="l-shoppermypage">
 <h1 class="l-staffmypage__title">
  {{$admin->convinience_name}}所属
  {{$admin->name}}様専用ページ

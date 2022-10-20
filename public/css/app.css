@@ -657,6 +657,7 @@ a {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 35px;
   height: 380px;
   border-radius: 15px;
   border: solid #174113;
@@ -957,10 +958,12 @@ a {
 
 .l-shopper__mypagemenu {
   background: #f6f5f4;
-  height: 430px;
+  height: 580px;
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 100px;
+  margin-top: 100px;
   border: solid 2px;
   border-radius: 5px;
 }
