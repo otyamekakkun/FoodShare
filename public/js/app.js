@@ -6228,7 +6228,7 @@ var render = function render() {
 
   return _c("div", [_c("h1", {
     staticClass: "c-productdetail__info"
-  }, [_vm._v("\n            商品No." + _vm._s(_vm.id) + " 商品名" + _vm._s(_vm.name) + "の商品情報\n        ")]), _vm._v(" "), _c("div", {
+  }, [_vm._v("\n        商品No." + _vm._s(_vm.id) + " 商品名" + _vm._s(_vm.name) + "の商品情報\n    ")]), _vm._v(" "), _c("div", {
     staticClass: "c-productdetail__imgarea"
   }, [_c("h1", {
     staticClass: "c-productdetail__title"
@@ -6245,13 +6245,13 @@ var render = function render() {
     staticClass: "c-productdetail__list"
   }, [_c("li", {
     staticClass: "c-productlist__items__listt__sentence"
-  }, [_vm._v("\n                    ・商品名:" + _vm._s(_vm.name) + "\n                ")]), _vm._v(" "), _c("li", {
+  }, [_vm._v("\n                ・商品名:" + _vm._s(_vm.name) + "\n            ")]), _vm._v(" "), _c("li", {
     staticClass: "c-productlist__items__listt__sentence"
-  }, [_vm._v("\n                    ・お値段:" + _vm._s(_vm.price) + "円\n                ")]), _vm._v(" "), _c("li", {
+  }, [_vm._v("\n                ・お値段:" + _vm._s(_vm.price) + "円\n            ")]), _vm._v(" "), _c("li", {
     staticClass: "c-productlist__items__listt__sentence"
-  }, [_vm._v("\n                    ・期限:" + _vm._s(_vm.best_by_date) + "\n                ")]), _vm._v(" "), _c("li", {
+  }, [_vm._v("\n                ・期限:" + _vm._s(_vm.best_by_date) + "\n            ")]), _vm._v(" "), _c("li", {
     staticClass: "c-productlist__items__listt__sentence"
-  }, [_vm._v("\n                    ・出品した県名:" + _vm._s(_vm.prefecture) + "\n                ")])])])]);
+  }, [_vm._v("\n                ・出品した県名:" + _vm._s(_vm.prefecture) + "\n            ")])])])]);
 };
 
 var staticRenderFns = [];

@@ -3,7 +3,6 @@
         <h1 class="c-productdetail__info">
             商品No.{{ id }} 商品名{{ name }}の商品情報
         </h1>
-
         <div class="c-productdetail__imgarea">
             <h1 class="c-productdetail__title">商品:No.{{ id }}の画像</h1>
             <img v-bind:src="img" class="c-productdetail__img" />
@@ -26,13 +25,9 @@
                 </li>
             </ul>
         </div>
-        <!-- laravelの方に移動 
-                </div>
-            </div>
-        </main>
--->
     </div>
 </template>
+
 <script>
 export default {
     props: [

@@ -6,7 +6,6 @@
                     <h1 class="c-productdetail__info">
                         商品No.{{ id }} 商品名{{ name }}の商品情報
                     </h1>
-
                     <div class="c-productdetail__imgarea">
                         <h1 class="c-productdetail__title">
                             商品:No.{{ id }}の画像
