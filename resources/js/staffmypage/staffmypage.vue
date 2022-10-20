@@ -27,10 +27,9 @@
                         <li>商品名.{{ item.product_name }}</li>
                         <li>お値段.{{ item.price }}円.</li>
                         <div class="c-productlist__items__bottom">
-                            <button>
+                            <button class="c-productlist__items__bottom__area">
                                 <a
                                     v-bind:href="`haiki/${item.id}}/staff_productdetail`"
-                                    class="c-productlist__items__bottom__area"
                                     >詳細にいく</a
                                 >
                             </button>

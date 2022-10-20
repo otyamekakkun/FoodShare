@@ -6556,8 +6556,9 @@ var render = function render() {
       staticClass: "c-productlist__items__list"
     }, [_c("li", [_vm._v("商品名." + _vm._s(item.product_name))]), _vm._v(" "), _c("li", [_vm._v("お値段." + _vm._s(item.price) + "円.")]), _vm._v(" "), _c("div", {
       staticClass: "c-productlist__items__bottom"
-    }, [_c("button", [_c("a", {
-      staticClass: "c-productlist__items__bottom__area",
+    }, [_c("button", {
+      staticClass: "c-productlist__items__bottom__area"
+    }, [_c("a", {
       attrs: {
         href: "haiki/".concat(item.id, "}/staff_productdetail")
       }

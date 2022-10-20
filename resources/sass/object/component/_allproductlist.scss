@@ -116,44 +116,37 @@
     text-align: center;
     display: block;
     font-size: size(l);
+    text-align: center;
 
     margin-top: size(sss);
-    margin-bottom: size(xxl);
-    background: white;
+    margin-bottom: 60px;
+    // background: red;
 }
 
 //==============================
 //ボタン処理
 //==============================
 .c-productlist__items__bottom {
-    //background: red;
-    margin-top: size(l);
-    font-size: size(l);
+    background: #c2e9c2;
+    margin-top: size(m);
+    padding-top: size(m);
+    //font-size: size(l);
 }
 .c-productlist__items__bottom__area {
-    //background: green;
-    //  display: flex;
-    // justify-content: center;
-    /*
-    レスポンシブ対応させる時はこの値にする
-    width: 75%;
-    border-radius: 5px;
+    background: #174113;
+    margin-left: size(s);
+    margin-right: size(s);
+    // margin-top: size(m);
     margin-bottom: size(m);
-    */
     text-align: center;
-    border: solid 3px #174113;
 
-    width: 55%;
-    border-radius: 5px;
-    margin-bottom: size(m);
-    background: rgb(238, 238, 238);
+    height: 50px;
+    width: 50%;
+    border: none;
+    border-radius: size(ss);
+    color: white;
     transition: all 1.2s;
-
     &:hover {
-        cursor: pointer;
         background: orange;
-        box-shadow: 1px 1px 1px 1px #b2d142;
-        transform: translateX(+2px);
-        //border: none;
     }
 }
