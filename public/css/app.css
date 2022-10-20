@@ -668,26 +668,9 @@ a {
   width: 100%;
   margin: auto;
   margin-top: 60px;
-  height: 150px;
+  height: 160px;
   display: flex;
   background: #c3e9c2;
-}
-
-.l-staffmypage__button {
-  background: #174113;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 35px;
-  text-align: center;
-  width: 30%;
-  border: none;
-  border-radius: 10px;
-  color: white;
-  margin-bottom: 35px;
-  transition: all 1.2s;
-}
-.l-staffmypage__button:hover {
-  background: orange;
 }
 
 .l-formstaffprofile {
@@ -1087,6 +1070,24 @@ a {
   transition: all 1.2s;
 }
 .c-shopper__action__button:hover {
+  background: orange;
+}
+
+.c-staff__action__button {
+  background: #174113;
+  margin-left: 16px;
+  margin-right: 16px;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  height: 60px;
+  width: 30%;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  transition: all 1.2s;
+}
+.c-staff__action__button:hover {
   background: orange;
 }
 

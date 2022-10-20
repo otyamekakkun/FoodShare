@@ -39,29 +39,7 @@
     width: 100%;
     margin: auto;
     margin-top: 60px;
-    height: 150px;
+    height: 160px;
     display: flex;
     background: #c3e9c2;
-}
-
-.l-staffmypage__button {
-    background: #174113;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: size(xxl);
-    text-align: center;
-
-    width: 30%;
-    border: none;
-    border-radius: size(ss);
-    color: white;
-    margin-bottom: size(xxl);
-    transition: all 1.2s;
-    &:hover {
-        background: orange;
-    }
-
-    //margin-bottom: size(l);
-    // margin-left: auto;
-    // margin-right: auto;
 }
