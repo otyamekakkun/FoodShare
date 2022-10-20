@@ -633,12 +633,12 @@ a {
 
 .l-staffmypage {
   background: #f6f5f4;
-  width: 65%;
+  width: 70%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 80px;
   margin-bottom: 80px;
-  height: 500px;
+  height: 530px;
   border-radius: 15px;
   border: solid #174113;
 }
@@ -657,20 +657,34 @@ a {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-  height: 360px;
+  height: 380px;
   border-radius: 15px;
   border: solid #174113;
+  font-size: 20px;
 }
 
-.l-staffmypage__productlist {
-  background: #f6f5f4;
-  width: 65%;
+.l-staffmypage__buttonarea {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  background: #c3e9c2;
+}
+
+.l-staffmypage__button {
+  background: #174113;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 80px;
-  padding: 35px;
-  border-radius: 15px;
-  border: solid #174113;
+  margin-top: 35px;
+  text-align: center;
+  width: 18%;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  margin-bottom: 35px;
+  transition: all 1.2s;
+}
+.l-staffmypage__button:hover {
+  background: orange;
 }
 
 .l-formstaffprofile {

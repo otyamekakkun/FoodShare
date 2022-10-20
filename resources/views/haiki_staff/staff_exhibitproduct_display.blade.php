@@ -37,10 +37,11 @@
             <input id="" type="number" class=" @error('price') is-invalid @enderror" name="price" value="">円
 {{-- 賞味期限の入力はjsを使用。デフォルトだと現在日時より前の日付も記入できるから --}}
  <calender-component></calender-component>
+
+ @error('img_path')
+ <strong>{{ $message }}</strong>
+@enderror
         <drag-component></drag-component>
-        @error('img_path')
-            <strong>{{ $message }}</strong>
-        @enderror
         {{-- 登録した都道府県が自動的にデータベースに入るように設定する --}}
 <input type="text" name="prefecture" value="{{$admins->prefecture}}" class="u-hidden">
 {{-- 都道府県エリアここまで --}}
@@ -52,6 +53,5 @@
 </div>
 <footer-component></footer-component>
 </div>
-
 </body>
 @endsection

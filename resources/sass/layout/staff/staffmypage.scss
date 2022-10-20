@@ -4,12 +4,12 @@
 
 .l-staffmypage {
     background: #f6f5f4;
-    width: 65%;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 80px;
     margin-bottom: 80px;
-    height: 500px;
+    height: 530px;
     border-radius: size(s);
     border: solid #174113;
 }
@@ -22,23 +22,43 @@
     margin-top: size(xl);
     margin-bottom: size(xl);
 }
+
 .l-staffmypage__menu {
     background: white;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    height: 360px;
+    height: 380px;
     border-radius: size(s);
     border: solid #174113;
+    font-size: size(m);
 }
 // リストの幅設計
-.l-staffmypage__productlist {
-    background: #f6f5f4;
-    width: 65%;
+.l-staffmypage__buttonarea {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    background: #c3e9c2;
+}
+
+.l-staffmypage__button {
+    background: #174113;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 80px;
-    padding: size(xxl);
-    border-radius: size(s);
-    border: solid #174113;
+    margin-top: size(xxl);
+    text-align: center;
+
+    width: 18%;
+    border: none;
+    border-radius: size(ss);
+    color: white;
+    margin-bottom: size(xxl);
+    transition: all 1.2s;
+    &:hover {
+        background: orange;
+    }
+
+    //margin-bottom: size(l);
+    // margin-left: auto;
+    // margin-right: auto;
 }

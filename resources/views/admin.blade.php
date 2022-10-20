@@ -12,11 +12,13 @@
  {{$admin->name}}様専用ページ
 </h1>
 <div class="l-staffmypage__menu">
-<p>メニュー</p>
-<button><a href="{{route('haiki_shopper.staff_profile_display')}}">コンビニプロフィール編集画面</a></button>
-<button><a href="{{route('haiki_shopper.staff_exhibitproduct_display')}}">商品を出品する</a></button>
-<button> <a href="{{route('haiki_shopper.staff_buyproduct_display')}}">購入された商品を全権表示</a></button>
-<button><a href="{{route('haiki_shopper.staff_exhibitproduct_list_display')}}">出品した商品一覧を表示</a></button>
+<h1 class="l-staffmypage__title">メニュー</h1>
+<div class="l-staffmypage__buttonarea">
+<button class="l-staffmypage__button"><a href="{{route('haiki_shopper.staff_profile_display')}}">コンビニ情報編集</a></button>
+<button class="l-staffmypage__button"><a href="{{route('haiki_shopper.staff_exhibitproduct_display')}}">出品する</a></button>
+<button class="l-staffmypage__button"> <a href="{{route('haiki_shopper.staff_buyproduct_display')}}">購入された商品リスト</a></button>
+<button class="l-staffmypage__button"><a href="{{route('haiki_shopper.staff_exhibitproduct_list_display')}}">出品した商品リスト</a></button>
+</div>
 </div>
 </div>
 <div id="app">
