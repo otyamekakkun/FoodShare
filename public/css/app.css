@@ -1452,6 +1452,24 @@ a {
   background: orange;
 }
 
+.c-staffmypage__button {
+  background: #174113;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: center;
+  height: 50px;
+  width: 30%;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  transition: all 1.2s;
+}
+.c-staffmypage__button:hover {
+  background: orange;
+}
+
 .c-productdetail__imgarea {
   border: dotted 1px;
   border-radius: 10px;
@@ -1516,10 +1534,8 @@ a {
   margin-left: auto;
   background: white;
   height: 200px;
-  border: dotted 1px;
-  border-radius: 10px;
   justify-content: center;
-  width: 80%;
+  width: 100%;
   display: flex;
 }
 

@@ -136,12 +136,32 @@
     background: #174113;
     margin-left: size(s);
     margin-right: size(s);
-    // margin-top: size(m);
     margin-bottom: size(m);
     text-align: center;
 
     height: 50px;
     width: 50%;
+    border: none;
+    border-radius: size(ss);
+    color: white;
+    transition: all 1.2s;
+    &:hover {
+        background: orange;
+    }
+}
+//===================================
+//staffmypageのボタンエリア
+//===================================
+.c-staffmypage__button {
+    background: #174113;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+
+    height: 50px;
+    width: 30%;
     border: none;
     border-radius: size(ss);
     color: white;

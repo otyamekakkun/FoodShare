@@ -13,8 +13,8 @@
 <div class="l-staffmypage__menu">
     <h1 class="l-staffmypage__title">メニュー</h1>
     <div class="l-staffmypage__buttonarea">
-    <button class="l-staffmypage__button"> <a href="{{route('haiki_shopper.shopper_profile_display')}}">プロフィール編集をする</a></button>
-                    <button class="l-staffmypage__button"><a href="{{route('haiki_shopper.shopper_productlist_display')}}">商品を閲覧する</a></button>
+    <button class="c-staffmypage__button"> <a href="{{route('haiki_shopper.shopper_profile_display')}}">プロフィール編集をする</a></button>
+                    <button class="c-staffmypage__button"><a href="{{route('haiki_shopper.shopper_productlist_display')}}">商品を閲覧する</a></button>
     </div>
                 </div>
 
