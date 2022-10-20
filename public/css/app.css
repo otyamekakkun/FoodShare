@@ -1064,6 +1064,30 @@ a {
   background: #b2d142;
 }
 
+.c-shopper__action {
+  background: #b2d142;
+  margin: auto;
+  width: 100%;
+}
+
+.c-shopper__action__button {
+  background: #174113;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+  margin-top: 35px;
+  height: 50px;
+  width: 30%;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  margin-bottom: 35px;
+  transition: all 1.2s;
+}
+.c-shopper__action__button:hover {
+  background: orange;
+}
+
 .c-staffmypagelistarea {
   background: #f6f5f4;
   margin-top: 100px;
@@ -1449,25 +1473,6 @@ a {
   justify-content: center;
   width: 80%;
   display: flex;
-}
-
-.c-productdetail__shoppermenu__button {
-  display: block;
-  height: 30px;
-  text-align: center;
-  line-height: 30px;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: 20px;
-  margin-right: 20px;
-  border-radius: 5px;
-  transition: all 1.2s;
-}
-.c-productdetail__shoppermenu__button:hover {
-  background: orange;
-  box-shadow: 1px 1px 1px 1px #b2d142;
-  transform: translateX(2px);
-  border: none;
 }
 
 .c-errormessage {

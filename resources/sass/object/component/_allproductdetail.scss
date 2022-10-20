@@ -78,27 +78,6 @@
     display: flex;
 }
 
-.c-productdetail__shoppermenu__button {
-    display: block;
-    height: size(xl);
-    text-align: center;
-    line-height: 30px;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: size(m);
-    margin-right: size(m);
-    border-radius: size(sss);
-
-    transition: all 1.2s;
-    //background: red;
-    &:hover {
-        background: orange;
-        box-shadow: 1px 1px 1px 1px #b2d142;
-        transform: translateX(+2px);
-        border: none;
-    }
-}
-
 .c-errormessage {
     color: rgb(234, 14, 14);
 }

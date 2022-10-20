@@ -42,21 +42,13 @@
             @include('rest.shopper.header') 
             </header>
     <main>
-{{-- boxを作るdivタグにしたい --}}
-{{--下のコードはrest化したフォームページ。  --}}
-{{-- @include('rest.shopper.shopperprofile') --}}
-{{-- 
-    header部分　保守性が高くなるように修正する箇所を１箇所にまとめた。
-    --}}
     <section>
         <form method="POST" enctype="multipart/form-data" action="{{route('haiki_shopperprofile_edit',$user->id)}}">      
             @csrf
             <div class="l-formshopperprofile">
             <h3 class="l-formshopperprofile__title">{{$user->name}}様
                 プロフィール編集</h3>
-
             <div class="l-formshopperprofile__te">
-                {{-- このようにspanの中にメッセを入れておく --}}
                 <span class="l-formshopperprofile__message">名前:               
                     @error('name')
                     <span class="c-errormessage" role="alert">
@@ -99,7 +91,6 @@
         @enderror
     </span>
     <br/>
-
             <input class="l-formshopperprofile__text" type="password" class="l-register__common__sentence" name="password_confirmation" required autocomplete="new-password">
             </div>
         <input type="submit" class="c-formshopperprofile__sub" value="変更する">
@@ -107,10 +98,6 @@
         </form>
         </div>
         </section>
-        
-    
-    
-    
 </main>
 </body>
 <div id=app>

@@ -37,7 +37,6 @@
                             </div>
                         </div>
                     </ul>
-
                     <div class="c-paginate">
                         <vuejs-paginate
                             :page-count="getPaginateCount"

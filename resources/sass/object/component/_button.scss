@@ -40,3 +40,31 @@
     cursor: pointer;
     background: #b2d142;
 }
+
+//商品詳細のボタン
+
+.c-shopper__action {
+    background: #b2d142;
+
+    margin: auto;
+    width: 100%;
+}
+
+.c-shopper__action__button {
+    background: #174113;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    text-align: center;
+    margin-top: size(xxl);
+    height: 50px;
+    width: 30%;
+    border: none;
+    border-radius: size(ss);
+    color: white;
+    margin-bottom: size(xxl);
+    transition: all 1.2s;
+    &:hover {
+        background: orange;
+    }
+}

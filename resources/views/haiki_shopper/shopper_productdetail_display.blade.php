@@ -19,11 +19,11 @@
 {{-- <div class="c-productdetail__shoppermenu"> --}}
 @if($products->bought<=0)
     <form class="c-productdetail__shoppermenu" action="{{ route('bought.update',$products->id)}}" enctype="multipart/form-data" method="post">
-            <a class="c-productdetail__shoppermenu__button" href="https://twitter.com/intent/tweet?text=haiki share 商品名{{$products->product_name}}について自由に書いて広めよう!!" target="_blank_" rel="nofollow">
-                 <button class="c-productdetail__shoppermenu__button">
+            <a  href="https://twitter.com/intent/tweet?text=haiki share 商品名{{$products->product_name}}について自由に書いて広めよう!!" target="_blank_" rel="nofollow">
+                 <button class="l-staffmypage__button">
                 <i class="fab fa-twitter fa-fw"></i>この商品をシェアする</button> </a>        
         @csrf
-        <button class="c-productdetail__shoppermenu__button">商品を買う！</button>
+        <button class="l-staffmypage__button">商品を買う！</button>
     </form>
 
 
@@ -34,12 +34,12 @@
 @if($products->bought>=1)
 
     <form class="c-productdetail__shoppermenu"  action="{{route('bought.cancel',$products->id)}}" enctype="multipart/form-data" method="post">
-        
-        
-        <button class="c-productdetail__shoppermenu__button">
+        <div class="c-shopper__action">    
+        <button class="c-shopper__action__button">
             <a  href="https://twitter.com/intent/tweet?text=haiki share 商品名{{$products->product_name}}について自由に書いて広めよう!!" target="_blank_" rel="nofollow"><i class="fab fa-twitter fa-fw"></i> この商品をシェアする</a></button> 
         @csrf
-        <button class="c-productdetail__shoppermenu__button">購入をやめる</button>
+        <button class="c-shopper__action__button">購入をやめる</button>
+    </div>  
 
     </form>
 

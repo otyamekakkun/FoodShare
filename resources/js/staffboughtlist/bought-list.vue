@@ -22,7 +22,6 @@
                                 購入済み！
                             </p>
                         </div>
-
                         <div v-if="item.bought <= 0">
                             <img
                                 v-bind:src="item.img_path"
