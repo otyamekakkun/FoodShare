@@ -1,9 +1,8 @@
 <template>
     <div id="app">
         <main>
-            <!-- l-exhibitproductlistのところも、そのページようにレイアウトを組み直す必要がある。 -->
             <div class="c-staffmypagelistarea">
-                <h1 class="c-title">これまでに購入された商品</h1>
+                <!-- <h1 class="c-title">これまでに購入された商品</h1> -->
                 <ul class="c-productlist__items" v-for="item in getItems">
                     <div v-if="item.bought >= 1">
                         <li class="c-productlist__items__title">
@@ -20,10 +19,11 @@
                             <li>商品名.{{ item.product_name }}</li>
                             <li>お値段.{{ item.price }}円.</li>
                             <div class="c-productlist__items__bottom">
-                                <button>
+                                <button
+                                    class="c-productlist__items__bottom__area"
+                                >
                                     <a
                                         v-bind:href="`haiki/${item.id}}/staff_productdetail`"
-                                        class="c-productlist__items__bottom__area"
                                         >詳細にいく</a
                                     >
                                 </button>
