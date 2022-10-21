@@ -2,23 +2,10 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-//use Illuminate\Http\RedirectResponse;
-use App\Http\Controllers\RestappController;
 use App\Http\Controllers\HaikiController; //laravel8なので左のことを記述してルートの書き方を楽にする
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\MailableController;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 Route::get('/', function () {
     return view('welcome');
@@ -46,7 +33,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 //利用客を表示するもの
 
 
-// ここから追加
 
 //それ以外なら下記の項目を使うこと
 //=======================================================
@@ -78,18 +64,6 @@ Route::post('/haiki/{id}/shopper_profile',[HaikiController::class, 'shopper_prof
 //=====================================================================
 Route::get('/haiki/shopper_productlist',[HaikiController::class, 'shopper_productlist_display'])->name('haiki_shopper.shopper_productlist_display');            //3
 Route::get('/haiki/{id}/shopper_productdetail',[HaikiController::class, 'shopper_productdetail_display'])->name('haiki_shopper.shopper_productdetail_display');      //4
-
-
-/*
-Route::group(['middleware'=>'auth'],function(){
-});
-
-*/
-
-
-
-
-
 
 
 //haiki shareのご利用スタッフが利用するもの
@@ -159,7 +133,6 @@ Route::get('/login/admin', [LoginController::class, 'showAdminLoginForm']);
 Route::get('/register/admin', [RegisterController::class, 'showAdminRegisterForm']);
 Route::post('/login/admin', [LoginController::class, 'adminLogin']);
 Route::post('/register/admin', [RegisterController::class, 'registerAdmin'])->name('admin-register');
-//Route::view('/admin','admin')->middleware('auth:admin')->name('admin-home');
 
 //マイページでもデータベースが表示できるような処理を施す
 Route::get('/admin', [App\Http\Controllers\HaikiController::class, 'admin'])->middleware('auth:admin')->name('admin-home');
@@ -191,12 +164,6 @@ Route::get('/haiki/jsonstaff_exhibit',[HaikiController::class, 'staff_exhibitpro
 
 Route::get('/haiki/{id}/jsonstaffproductdetail',[HaikiController::class, 'staffproductdetailjson'])->name('products.json');
 
-
-//===========
-//ゴミファイルになるかどうか
-//==========
-//staff_profileのフォームを入力する
-Route::post('/haiki/staff_profile',[HaikiController::class, 'staff_profile_edit'])->name('haiki_staffprofile_edit');
 
 Route::get('password/admin/reset', [App\Http\Controllers\Auth\AdminForgotPasswordController::class, 'showLinkRequestForm'])->name('admin.password.request');
 Route::post('password/admin/email', [App\Http\Controllers\Auth\AdminForgotPasswordController::class, 'sendResetLinkEmail'])->name('admin.password.email');
