@@ -543,6 +543,10 @@ a {
   opacity: 1;
 }
 
+.l-top__title__text {
+  font-size: 100px;
+}
+
 .l-login {
   width: 65%;
   height: 800px;
