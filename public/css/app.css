@@ -633,7 +633,7 @@ a {
 }
 
 .l-staffmypage {
-  background: #f6f5f4;
+  background: rgba(255, 255, 255, 0.9);
   width: 70%;
   margin-left: auto;
   margin-right: auto;
@@ -654,7 +654,7 @@ a {
 }
 
 .l-staffmypage__menu {
-  background: white;
+  background: rgba(255, 255, 255, 0.9);
   width: 80%;
   margin-left: auto;
   margin-right: auto;
@@ -681,7 +681,7 @@ a {
   margin-bottom: 100px;
   padding: 35px;
   text-align: center;
-  background: #faf9f5;
+  background: rgba(255, 255, 255, 0.9);
   font-family: "Noto Serif TC", serif;
   font-size: 35px;
   width: 70%;
@@ -961,7 +961,7 @@ a {
 }
 
 .l-productdetail {
-  background: white;
+  background: rgba(255, 255, 255, 0.8);
   margin-right: auto;
   margin-left: auto;
   margin-top: 35px;
