@@ -40,8 +40,20 @@
     margin-top: 80px;
     margin-bottom: 80px;
     height: 640px;
-    //border: dotted #174113;
-    //border-radius: size(s);
+    //  border: dotted #174113;
+    //  border-radius: size(s);
     font-size: size(m);
     text-align: center;
+}
+.l-login__formarea__message {
+    display: block;
+    margin-top: size(s);
+    margin-bottom: size(sssss);
+}
+
+.l-login__formarea__text {
+    background: white;
+    font-size: size(l);
+    height: 60px;
+    width: 80%;
 }

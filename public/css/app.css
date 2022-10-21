@@ -626,6 +626,19 @@ a {
   text-align: center;
 }
 
+.l-login__formarea__message {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 2px;
+}
+
+.l-login__formarea__text {
+  background: white;
+  font-size: 25px;
+  height: 60px;
+  width: 80%;
+}
+
 .l-register__common {
   background: #f6f5f4;
   height: 900px;

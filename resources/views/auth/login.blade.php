@@ -16,14 +16,12 @@
 @section('content')
 @include('rest.other.otherheader')
 
-                <div class="">{{ isset($authgroup) ? ucwords($authgroup) : ""}}</div>
+                <div>{{ isset($authgroup) ? ucwords($authgroup) : ""}}</div>
 {{-- 管理者ログインページここから --}}
                     @isset($authgroup)
                     <p>コンビニスタッフ専用ログインページ</p>
                     <p>利用者は普通のログインページで記述してください</p>
                     <form method="POST" action="{{ url("login/$authgroup") }}">
-                        <div class="l-login">
-
                     @else
                     {{-- 管理者ログインページここまで --}}
                     {{-- ここから最後までユーザー登録者用と管理者用併用のログインページ --}}
@@ -33,8 +31,8 @@
                     @endisset
                         @csrf
 {{-- <div class="l-login__formarea"> --}}
-    <div class="l-formshopperprofile__te">
-                            <label for="email" class="l-formshopperprofile__message">email:
+    <div class="l-login__formarea">
+                            <span for="email" class="l-login__formarea__message">email:
 <span>
     @error('email')
     <span class="c-errormessage" role="alert">
@@ -42,13 +40,13 @@
     </span>
 @enderror
 </span>
-                            </label>
+</span>
                             <br/>
-                                <input id="" type="email" class="l-formshopperprofile__text" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="emailを入力してください">
+                                <input id="" type="email" class="l-login__formarea__text" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="emailを入力してください">
                                 <br/>
                                 {{-- email入力欄ここまで --}}
                             {{-- パスワード入力欄ここから --}}
-<label for="password">パスワード:
+<span for="password" class="l-login__formarea__message">パスワード:
 <span>
     @error('password')
     <span class="" role="alert">
@@ -56,10 +54,10 @@
     </span>
 @enderror
     </span>    
-</label> 
+</span> 
 <br/>
 
-                                <input id="password" type="password" class=" @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="パスワード入力">
+                                <input id="password" type="password" class="l-login__formarea__text" name="password" required autocomplete="current-password" placeholder="パスワード入力">
                                 {{-- パスワード入力欄ここまで --}}
 {{-- パスワードリマインダーここから --}}
 <br/>
@@ -81,9 +79,8 @@
                                 {{-- パスワードリマインダーここまで --}}
                             </div>
                         </div>
-
+                    </div>
                     </form>
-                </div>
                     <div id=app>
                         {{-- incompletefooter-componentはfooterをレウアウトしてくれるもの。ただしページ量が少ないときにfooter
                             エリアが最下部にならないように定義したもの --}}
