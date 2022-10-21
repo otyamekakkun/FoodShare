@@ -6,28 +6,51 @@
     inset: 0;
     margin: auto;
 }
-.l-top__title__text {
+.l-top__titlearea {
     position: absolute;
+    background: rgba(255, 255, 255, 0.6);
+    width: 80%;
+    height: 500px;
+    transform: translatez(+50%);
+    left: 50%;
+    transform: translateX(-50%);
+    top: 300px;
+    text-align: center;
+    border-radius: size(ssss);
+}
+
+.l-top__title__text {
+    // position: absolute;
     color: white;
     -webkit-text-stroke: size(sss) orange;
     font-family: "Permanent Marker", cursive;
-    font-size: 100px;
+    font-size: 120px;
+    height: 200px;
+    margin-top: 60px;
+
     // 画面サイズが変わっても中央揃えになるようにセッティングする
+    /*
     top: 350px;
 
     transform: translatez(+50%);
     left: 50%;
     transform: translateX(-50%);
+    */
 }
 .l-top__title__text2 {
-    position: absolute;
+    // position: absolute;
     color: white;
-    -webkit-text-stroke: size(sssss) #e4007f;
+    -webkit-text-stroke: size(sss) orange;
     font-family: "Permanent Marker", cursive;
-    font-size: 60px;
-    top: 500px;
+    font-size: 80px;
+    // 画面サイズが変わっても中央揃えになるようにセッティングする
+    /*
+    top: 550px;
+
+    transform: translatez(+50%);
     left: 50%;
     transform: translateX(-50%);
+*/
 }
 
 .l-top__area {
