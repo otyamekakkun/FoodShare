@@ -647,14 +647,13 @@ a {
 }
 
 .l-staffmypage {
-  background: rgba(255, 255, 255, 0.9);
-  width: 70%;
+  background: rgba(255, 255, 255, 0.6);
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 80px;
   margin-bottom: 80px;
   height: 530px;
-  border-radius: 15px;
   border: solid #174113;
 }
 
@@ -672,16 +671,15 @@ a {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 35px;
-  height: 380px;
+  margin-top: 100px;
+  height: 360px;
   font-size: 20px;
 }
 
 .l-staffmypage__buttonarea {
   width: 100%;
   margin: auto;
-  margin-top: 60px;
-  height: 160px;
+  height: 180px;
   display: flex;
   background: orange;
   background: rgba(255, 255, 255, 0.6);
