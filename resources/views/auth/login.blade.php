@@ -16,33 +16,35 @@
 @section('content')
 @include('rest.other.otherheader')
 
-                <div class="">{{ isset($authgroup) ? ucwords($authgroup) : ""}} {{ __('Login') }}</div>
+                <div class="">{{ isset($authgroup) ? ucwords($authgroup) : ""}}</div>
 {{-- 管理者ログインページここから --}}
                     @isset($authgroup)
                     <p>コンビニスタッフ専用ログインページ</p>
                     <p>利用者は普通のログインページで記述してください</p>
-                    <div class="l-login">
                     <form method="POST" action="{{ url("login/$authgroup") }}">
+                        <div class="l-login">
+
                     @else
                     {{-- 管理者ログインページここまで --}}
                     {{-- ここから最後までユーザー登録者用と管理者用併用のログインページ --}}
-                    <div class="l-login ">
-                    {{-- <div class="l-login"> --}}
+                    <div class="l-login">
+                        <h1 class="l-login__title">ログイン</h1>
                     <form method="POST" action="{{ route('login') }}">
                     @endisset
                         @csrf
-<div class="l-login__formarea">
-                            <label for="email" class="">メールアドレス:
+{{-- <div class="l-login__formarea"> --}}
+    <div class="l-formshopperprofile__te">
+                            <label for="email" class="l-formshopperprofile__message">email:
 <span>
     @error('email')
-    <span class="" role="alert">
+    <span class="c-errormessage" role="alert">
         <strong>{{ $message }}</strong>
     </span>
 @enderror
 </span>
                             </label>
                             <br/>
-                                <input id="email" type="email" class=" @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="emailを入力してください">
+                                <input id="" type="email" class="l-formshopperprofile__text" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="emailを入力してください">
                                 <br/>
                                 {{-- email入力欄ここまで --}}
                             {{-- パスワード入力欄ここから --}}
@@ -65,7 +67,6 @@
                                     <label class="" for="remember">
                                         {{ __('Remember Me') }}
                                     </label>
-                                    
                                 <button type="submit" class="">
                                     {{ __('Login') }}
                                 </button>
@@ -80,6 +81,7 @@
                                 {{-- パスワードリマインダーここまで --}}
                             </div>
                         </div>
+
                     </form>
                 </div>
                     <div id=app>
