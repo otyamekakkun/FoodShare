@@ -524,28 +524,27 @@ a {
   left: 500px;
   font-size: 35px;
 }
-.l-topimg2 {
-  width: 100%;
-  opacity: 0.3;
+.l-top__imgarea {
+  background-image: url("../img/top.jpg");
+  background-color: rgba(255, 255, 255, 0.5);
+  background-blend-mode: lighten;
+  height: 900px;
 }
 
 .l-top__area {
-  height: 1600px;
-  background-image: url("../img/top.jpg");
+  opacity: 1;
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 100px;
-  position: absolute;
-  top: 1200px;
-  left: 200px;
 }
 
 .l-top__area__custom {
   height: 750px;
+  background: rgb(255, 255, 255);
   border: solid 15px #174113;
   border-radius: 15px;
   margin-bottom: 100px;
+  opacity: 1;
 }
 
 .l-login {

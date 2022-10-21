@@ -6600,12 +6600,9 @@ var staticRenderFns = [function () {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", [_c("img", {
-    staticClass: "l-topimg2",
-    attrs: {
-      src: "img/top.jpg"
-    }
-  }), _vm._v(" "), _c("div", {
+  return _c("div", [_c("div", {
+    staticClass: "l-top__imgarea"
+  }, [_c("div", {
     staticClass: "l-top__area"
   }, [_c("div", {
     staticClass: "l-top__area__custom"
@@ -6634,7 +6631,7 @@ var staticRenderFns = [function () {
     attrs: {
       href: "./register/admin"
     }
-  }, [_vm._v("ユーザー登録する")])]), _vm._v(" "), _c("p", [_vm._v("\n                お客様がご利用される場合は上のお客様ログイン,またはお客様ユーザー登録からお入りください。\n            ")])])])]);
+  }, [_vm._v("ユーザー登録する")])]), _vm._v(" "), _c("p", [_vm._v("\n                    お客様がご利用される場合は上のお客様ログイン,またはお客様ユーザー登録からお入りください。\n                ")])])])])]);
 }];
 render._withStripped = true;
 

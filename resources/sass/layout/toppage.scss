@@ -12,31 +12,33 @@
     @include mq() {
     }
 }
+.l-top__imgarea {
+    background-image: url("../img/top.jpg");
+    background-color: rgba(255, 255, 255, 0.5);
+    background-blend-mode: lighten;
+    height: 900px;
 
-.l-topimg2 {
-    width: 100%;
-    opacity: 0.3;
-    // position: relative;
+    //opacity: 0.3;
 }
 
 .l-top__area {
     //background: #f6f5f4;
-    height: 1600px;
+    //    / height: 1600px;
     //background: red;
-    background-image: url("../img/top.jpg");
-
+    // background-image: url("../img/top.jpg");
+    // background-color: rgba(255, 255, 255, 1);
+    opacity: 1;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 100px;
-    position: absolute;
-    top: 1200px;
-    left: 200px;
+    //margin-top: 100px;
 }
 
 .l-top__area__custom {
     height: 750px;
+    background: rgba(255, 255, 255, 1);
     border: solid size(s) #174113;
     border-radius: size(s);
     margin-bottom: 100px;
+    opacity: 1;
 }
