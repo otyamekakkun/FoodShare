@@ -4,7 +4,21 @@
         <header>
             @include('rest.staff.header')
         </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
         <div id="app">
+
 <h1>
     商品を編集する
 </h1>
