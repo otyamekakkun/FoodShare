@@ -26,7 +26,8 @@
                     @else
                     {{-- 管理者ログインページここまで --}}
                     {{-- ここから最後までユーザー登録者用と管理者用併用のログインページ --}}
-                    <div class="l-login">
+                    <div class="l-login ">
+                    {{-- <div class="l-login"> --}}
                     <form method="POST" action="{{ route('login') }}">
                     @endisset
                         @csrf

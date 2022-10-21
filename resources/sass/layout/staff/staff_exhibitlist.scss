@@ -6,15 +6,12 @@
     display: block;
     background: #f6f5f4;
     background: rgba(255, 255, 255, 0.6);
-
-    //中央に要素を寄せるときはこれを用いる
     margin-right: auto;
     margin-left: auto;
     margin-top: 20px;
     margin-bottom: 40px;
     border: solid #174113;
     border-radius: size(ss);
-
     width: 90%;
     height: 3900px;
     @include mqxl() {
@@ -29,6 +26,4 @@
         //414px対応
         height: 5500px;
     }
-
-    //画面の大きさによって高さが足りなくなりそうなのでレスポンシブを使う
 }
