@@ -61,17 +61,19 @@
                                 {{-- パスワード入力欄ここまで --}}
 {{-- パスワードリマインダーここから --}}
 <br/>
+<div class="c-loginarea">
                                     <input class="" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-                                    <label class="" for="remember">
                                         {{ __('Remember Me') }}
-                                    </label>
-                                <button type="submit" class="">
+                                <button type="submit" class="c-login__button">
                                     {{ __('Login') }}
                                 </button>
                                 <br/>
+                            </div>
+
                                 @if (Route::has(isset($authgroup) ? $authgroup.'.password.request' : 'password.request'))
-                                <button>
-                                <a class="btn btn-link" href="{{ route(isset($authgroup) ? $authgroup.'.password.request' : 'password.request') }}">
+                                <button class="">
+                                    {{-- c-login__button --}}
+                                <a href="{{ route(isset($authgroup) ? $authgroup.'.password.request' : 'password.request') }}">
                                     {{ __('Forgot Your Password?') }}
                                 </a>
                             </button>

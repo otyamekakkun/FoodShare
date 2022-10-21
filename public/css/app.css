@@ -584,12 +584,12 @@ a {
   background: rgba(255, 255, 255, 0.6);
   margin-right: auto;
   margin-left: auto;
-  margin-top: 20px;
-  margin-bottom: 40px;
+  margin-top: 60px;
+  margin-bottom: 60px;
   border: solid #174113;
   border-radius: 10px;
   width: 80%;
-  height: 1200px;
+  height: 1000px;
 }
 @media screen and (max-width:980px) {
   .l-login {
@@ -1181,6 +1181,19 @@ a {
   background: orange;
 }
 
+.c-login__button {
+  background: #174113;
+  height: 60px;
+  width: 20%;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  transition: all 1.2s;
+}
+.c-login__button:hover {
+  background: orange;
+}
+
 .c-staffmypagelistarea {
   background: rgba(255, 255, 255, 0.6);
   margin-top: 100px;
@@ -1190,6 +1203,11 @@ a {
   width: 65%;
   border-radius: 10px;
   padding: 25px;
+}
+
+.c-loginarea {
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 .c-title {

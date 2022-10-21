@@ -87,6 +87,10 @@
         background: orange;
     }
 }
+
+//===============================
+//トップ画面のボタン
+//===============================
 .c-top__button {
     background: #174113;
     margin-left: size(l);
@@ -106,6 +110,15 @@
     }
 }
 
-//===============================
-//トップ画面のボタン
-//===============================
+.c-login__button {
+    background: #174113;
+    height: 60px;
+    width: 20%;
+    border: none;
+    border-radius: size(ss);
+    color: white;
+    transition: all 1.2s;
+    &:hover {
+        background: orange;
+    }
+}
