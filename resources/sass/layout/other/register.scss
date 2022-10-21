@@ -55,6 +55,10 @@
     margin-left: 500px;
     height: 65px;
     padding: size(s);
+    transition: all 1.2s;
+    &:hover {
+        background: orange;
+    }
 }
 .l-register__common__form__message {
     display: block;

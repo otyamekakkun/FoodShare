@@ -563,9 +563,8 @@ a {
   margin-top: 80px;
   margin-bottom: 80px;
   height: 640px;
-  border: dotted #174113;
-  border-radius: 15px;
   font-size: 20px;
+  text-align: center;
 }
 
 .l-register__common {
@@ -622,6 +621,10 @@ a {
   margin-left: 500px;
   height: 65px;
   padding: 15px;
+  transition: all 1.2s;
+}
+.l-register__common__button:hover {
+  background: orange;
 }
 
 .l-register__common__form__message {

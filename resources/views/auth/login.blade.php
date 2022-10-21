@@ -27,12 +27,11 @@
                     {{-- 管理者ログインページここまで --}}
                     {{-- ここから最後までユーザー登録者用と管理者用併用のログインページ --}}
                     <div class="l-login">
-
                     <form method="POST" action="{{ route('login') }}">
                     @endisset
                         @csrf
 <div class="l-login__formarea">
-                            <label for="email" class="">メールアドレス
+                            <label for="email" class="">メールアドレス:
 <span>
     @error('email')
     <span class="" role="alert">
@@ -41,11 +40,12 @@
 @enderror
 </span>
                             </label>
+                            <br/>
                                 <input id="email" type="email" class=" @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="emailを入力してください">
-
+                                <br/>
                                 {{-- email入力欄ここまで --}}
                             {{-- パスワード入力欄ここから --}}
-<label for="password">パスワード
+<label for="password">パスワード:
 <span>
     @error('password')
     <span class="" role="alert">
@@ -54,12 +54,13 @@
 @enderror
     </span>    
 </label> 
+<br/>
 
                                 <input id="password" type="password" class=" @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="パスワード入力">
                                 {{-- パスワード入力欄ここまで --}}
 {{-- パスワードリマインダーここから --}}
+<br/>
                                     <input class="" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
                                     <label class="" for="remember">
                                         {{ __('Remember Me') }}
                                     </label>
@@ -67,18 +68,14 @@
                                 <button type="submit" class="">
                                     {{ __('Login') }}
                                 </button>
-
+                                <br/>
                                 @if (Route::has(isset($authgroup) ? $authgroup.'.password.request' : 'password.request'))
+                                <button>
                                 <a class="btn btn-link" href="{{ route(isset($authgroup) ? $authgroup.'.password.request' : 'password.request') }}">
                                     {{ __('Forgot Your Password?') }}
                                 </a>
+                            </button>
                             @endif
-
-
-
-
-
-
                                 {{-- パスワードリマインダーここまで --}}
                             </div>
                         </div>

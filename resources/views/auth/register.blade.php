@@ -12,7 +12,7 @@
                     @endisset
                         @csrf
                         <div class="l-register__common">
-                            <h1 class="l-register__common__title">ユーザー登録（個人情報）</h1>
+                            <h1 class="l-register__common__title">（個人情報エリア）</h1>
                             <button type="submit" class="l-register__common__button">
                                 ユーザー登録して始める
                             </button>
@@ -65,15 +65,21 @@
                             {{-- ここから管理者用のユーザー登録ページ --}}
 
                             {{-- ユーザー登録ページのコンビニ名 --}}
+                            <div class="l-register__common">
+
     @csrf
+
+    <h1 class="l-register__common__title">（コンビニ情報エリア）</h1>
 <p>勤めているコンビニの会社</p>
 <input type="text" placeholder="勤めているコンビニの会社を記述してください" name="convinience_name">
-
+<br/>
 {{-- ユーザー登録ページのコンビニ名ここまで --}}
 
 {{-- ユーザー登録ページの支店名ここから --}}
 <p>支店名記入欄</p>
 <input type="text" placeholder="支店名記入欄" name="convinience_branch">
+<br/>
+
 {{-- ユーザー登録ページ支店名ここまで --}}
 {{-- ユーザー登録住所ここから --}}
 <p>住所</p>
@@ -129,8 +135,11 @@
 </select>
 
 </select>
-<input type="text" placeholder="都道府県以外の住所記述" name="adress"> 
+<br/>
+
+<textarea placeholder="都道府県以外の住所記述" name="adress"></textarea>
                             @endisset
+                            </div>
 <div id=app>
 <footer-component></footer-component>
 </div>
