@@ -30,12 +30,3 @@
 </body>
 @endsection
 
-
-{{-- /<div class="l-shopper__mypagemenu"> 
-    
-    
-     l-shopper__mypagemenu 
-    
-    
-    
-    --}}

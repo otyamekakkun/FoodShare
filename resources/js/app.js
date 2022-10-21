@@ -31,10 +31,6 @@ Vue.component(
 // フッターのコンポーネント
 //===========================================
 Vue.component(
-    "incompletefooter-component",
-    require("./footercomponents/incompleteFooterComponent.vue").default
-);
-Vue.component(
     "footer-component",
     require("./footercomponents/FooterComponent.vue").default
 );

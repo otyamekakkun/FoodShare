@@ -19,7 +19,7 @@ class HaikiController extends Controller
         $id = Auth::id();
         $user = DB::table('users')->find($id);
         return view('haiki_shopper.shopper_mypage_display',['my_user'=>$user]);
-    } //..................................................画面表示するもの
+    } //...........................................ログインした人専用の画面表示するもの
 //===========================================================1終了
 
 //===================================================================
@@ -40,7 +40,6 @@ $request->validate([
     'password'=>'required|min:6|',
     'password_confirmation'=>'required|min:6|same:password'
 ]);
-//$product = products::find($id);
 $id = Auth::id();
 $user = User::find($id);
 $user->name=$request->name;
@@ -300,14 +299,6 @@ public function userjson(){
 
 return response()->json($user);
 }
-
-
-
-
-
-
-
-
 public function buyjson(){
     $id = Auth::guard('admin')->id();
     $product = products::where("admin_id",$id)->orderBy('updated_at','desc')->get();
