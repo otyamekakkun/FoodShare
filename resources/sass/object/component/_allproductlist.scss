@@ -22,10 +22,14 @@
 }
 
 .c-productlist__items__title {
-    //background: red;
+    background: rgb(220, 168, 70);
+    color: white;
+    width: 30%;
+
     font-size: size(m);
-    margin-left: size(l);
-    margin-top: size(s);
+    padding-left: size(l);
+    margin-left: size(ss);
+    margin-top: size(xl);
     @include mq() {
         //414px対応
     }
@@ -56,6 +60,7 @@
 }
 .c-productlist__items__img {
     width: 65%;
+    background: #f6f5f4;
     background-attachment: fixed;
     opacity: 0.3;
     text-align: center;
@@ -116,6 +121,7 @@
     display: block;
     font-size: size(l);
     text-align: center;
+    background: #f6f5f4;
 
     margin-top: size(sss);
     margin-bottom: 60px;

@@ -4,7 +4,6 @@
 
 .l-staffmypage {
     background: rgba(255, 255, 255, 0.9);
-
     width: 70%;
     margin-left: auto;
     margin-right: auto;
@@ -15,7 +14,6 @@
     border: solid #174113;
 }
 .l-staffmypage__title {
-    // background: red;
     font-size: size(m);
     margin-left: auto;
     margin-right: auto;
@@ -25,14 +23,12 @@
 }
 
 .l-staffmypage__menu {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(220, 168, 70, 0.8);
     width: 80%;
     margin-left: auto;
     margin-right: auto;
     margin-top: size(xxl);
     height: 380px;
-    border-radius: size(s);
-    border: solid #174113;
     font-size: size(m);
 }
 // リストの幅設計
@@ -42,6 +38,6 @@
     margin-top: 60px;
     height: 160px;
     display: flex;
-    background: #a8c079;
+    background: orange;
+    background: rgba(255, 255, 255, 0.6);
 }
-

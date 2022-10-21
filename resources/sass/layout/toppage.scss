@@ -20,9 +20,9 @@
     margin-right: auto;
 }
 
-.l-top__area__custom {
-    height: 750px;
-    background: rgba(255, 255, 255, 1);
+.l-top__area__form {
+    height: 1250px;
+    background: rgba(255, 255, 255, 0.8);
     border: solid size(s) #174113;
     border-radius: size(s);
     margin-bottom: 100px;
@@ -31,4 +31,15 @@
 
 .l-top__title__text {
     font-size: 100px;
+}
+
+.l-top__area__form__custom {
+    border: solid size(s) #174113;
+    border-radius: size(s);
+
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+    width: 60%;
 }

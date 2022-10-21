@@ -8,11 +8,10 @@
     </header>
 <div class="l-shoppermypage">
 <h1 class="l-staffmypage__title">
- {{$admin->convinience_name}}所属
- {{$admin->name}}様専用ページ
 </h1>
 <div class="l-staffmypage__menu">
-<h1 class="l-staffmypage__title">メニュー</h1>
+<h1 class="l-staffmypage__title"> {{$admin->convinience_name}}所属
+    {{$admin->name}}様専用メニュー</h1>
 <div class="l-staffmypage__buttonarea">
 <button class="c-staff__action__button"><a href="{{route('haiki_shopper.staff_profile_display')}}">コンビニ情報編集</a></button>
 <button class="c-staff__action__button"><a href="{{route('haiki_shopper.staff_exhibitproduct_display')}}">出品する</a></button>
