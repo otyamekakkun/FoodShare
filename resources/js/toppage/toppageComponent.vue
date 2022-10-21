@@ -4,32 +4,28 @@
         <transition>
             <div v-show="visible">
                  -->
+        <img src="img/top.jpg" class="l-topimg2" />
+
         <div class="l-top__area">
             <div class="l-top__area__custom">
                 <h1>買い物を始める</h1>
-                <button>
+                <button class="c-top__button">
                     <a href="login">お客様ログイン</a>
                 </button>
-                <button>
+                <button class="c-top__button">
                     <a class="nav-link" href="./register">お客様ユーザー登録</a>
                 </button>
+                <h1>コンビニスタッフとして</h1>
+                <button class="c-top__button">
+                    <a href="./login/admin">ログインする</a>
+                </button>
+                <button class="c-top__button">
+                    <a href="./register/admin">ユーザー登録する</a>
+                </button>
+                <p>
+                    お客様がご利用される場合は上のお客様ログイン,またはお客様ユーザー登録からお入りください。
+                </p>
             </div>
-        </div>
-        <!-- 
-            </div>
-        </transition>
-         -->
-
-        <div class="l-top__area__staff">
-            <h1>コンビニスタッフとして</h1>
-            <button><a href="./login/admin">ログインする</a></button>
-            <button>
-                <a href="./register/admin">ユーザー登録する</a>
-            </button>
-
-            <p>
-                お客様がご利用される場合は上のお客様ログイン,またはお客様ユーザー登録からお入りください。
-            </p>
         </div>
     </div>
 </template>
@@ -56,4 +52,3 @@ export default {
     },
 };
 </script>
--->

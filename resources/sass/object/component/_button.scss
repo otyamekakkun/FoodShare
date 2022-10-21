@@ -87,3 +87,25 @@
         background: orange;
     }
 }
+.c-top__button {
+    background: #174113;
+    margin-left: 16px;
+    margin-right: 16px;
+
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 60px;
+    width: 30%;
+    border: none;
+    border-radius: size(ss);
+    color: white;
+    transition: all 1.2s;
+    &:hover {
+        background: orange;
+    }
+}
+
+//===============================
+//トップ画面のボタン
+//===============================

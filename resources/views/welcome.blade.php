@@ -14,18 +14,9 @@
 <h1>haiki share</h1>
 <h3>環境と安さの相乗効果</h3>
 </div>
-
-
-
-
-
-
-
-
-
-
 <div id="app">
-    <toppage-component></toppage-component>
+    <toppage-component imgtop:="'{{asset('img/top.jpg')}}'"></toppage-component>
+    <footer-component></footer-component>
 </div>
 </body>
 </html>

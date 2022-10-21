@@ -27,10 +27,6 @@
         <button class="c-shopper__action__button">商品を買う！</button>
         </div>
     </form>
-
-{{-- l-staffmypage__button消去する --}}
-
-
 @endif
 
 @if($products->bought>=1)
