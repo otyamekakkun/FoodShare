@@ -11,8 +11,8 @@
 
 <body>
     <div id=app>
-        <div class="l-shopper__mypagemenu">
-            <h1  class="l-shopper__mypagemenu__title">
+        <div class="c-mypagemenu">
+            <h1  class="c-mypagemenu__title">
                 {{$my_user->name}}様 専用マイページ
             </h1>
 <div class="l-staffmypage__menu"></div>
