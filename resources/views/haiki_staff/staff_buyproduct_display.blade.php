@@ -1,7 +1,7 @@
 @extends('layouts.app2')
 @section('content')
 <header>
-    @include('rest.staff.header')
+    @include('header.staff.staff_header')
 </header>
 <body>
     <h1 class="c-title">

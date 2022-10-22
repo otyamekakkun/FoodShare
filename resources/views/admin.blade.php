@@ -4,7 +4,7 @@
 
 <body>
     <header>
-        @include('header.staff.header')
+        @include('header.staff.staffmypage_header')
     </header>
 <div class="l-shopper__mypagemenu">
 <h1 class="l-staffmypage__title">
