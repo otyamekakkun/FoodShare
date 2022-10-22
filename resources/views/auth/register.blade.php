@@ -21,7 +21,7 @@
                             <h1 class="c-formarea__title">（個人情報エリア）</h1>
                             <br/>{{--簡易的につけとく --}}
                             {{--ユーザー登録ボタンここまで  --}}
-                            <span for="name" class="l-register__common__form__message">名前:
+                            <span for="name" class="c-form__area__message">名前:
                                 @error('name')
                                     <span  role="alert">
                                         <strong>{{ $message }}</strong>
@@ -68,13 +68,35 @@
 
     @csrf
 
-<p>勤めているコンビニの会社</p>
+
+
+
+<span  class="c-form__area__message ">勤めているコンビニ会社:
+    @error('convinience_name')
+    <span class="" role="alert">
+        <strong>{{ $message }}</strong>
+    </span>
+@enderror
+</span><br/>
+
+
 <input type="text" placeholder="勤めているコンビニの会社を記述してください" name="convinience_name" class="c-form__area__text">
 <br/>
 {{-- ユーザー登録ページのコンビニ名ここまで --}}
 
 {{-- ユーザー登録ページの支店名ここから --}}
-<p>支店名記入欄</p>
+
+
+
+
+
+<span  class="c-form__area__message ">支店名記入欄:
+    @error('convinience_branch')
+    <span class="" role="alert">
+        <strong>{{ $message }}</strong>
+    </span>
+@enderror
+</span><br/>
 <input type="text" placeholder="支店名記入欄" name="convinience_branch" class="c-form__area__text">
 <br/>
 
