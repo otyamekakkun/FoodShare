@@ -85,11 +85,6 @@
 {{-- ユーザー登録ページのコンビニ名ここまで --}}
 
 {{-- ユーザー登録ページの支店名ここから --}}
-
-
-
-
-
 <span  class="c-form__area__message ">支店名記入欄:
     @error('convinience_branch')
     <span class="" role="alert">
