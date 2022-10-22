@@ -903,26 +903,6 @@ a {
   margin-bottom: -28px;
 }
 
-.l-staffmypage {
-  background: rgba(255, 255, 255, 0.6);
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 80px;
-  margin-bottom: 80px;
-  height: 530px;
-  border: solid #174113;
-}
-
-.l-staffmypage__title {
-  font-size: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
 .c-staffform {
   background: rgba(255, 255, 255, 0.9);
   width: 80%;
@@ -1049,24 +1029,6 @@ a {
   .l-exhibitproductlist {
     height: 5500px;
   }
-}
-
-.l-shopper__mypagemenu {
-  background: rgba(255, 255, 255, 0.6);
-  height: 580px;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 100px;
-  margin-top: 100px;
-  border: solid 2px;
-  border-radius: 5px;
-}
-
-.l-shopper__mypagemenu__title {
-  text-align: center;
-  margin-top: 35px;
-  font-size: 25px;
 }
 
 .l-productdetail {
@@ -1529,6 +1491,139 @@ a {
 
 .c-errormessage {
   color: rgb(234, 14, 14);
+}
+
+.c-formshopperprofile__sub {
+  background: #174113;
+  border: none;
+  color: white;
+  width: 12%;
+  font-size: 20px;
+  border-radius: 10px;
+  position: absolute;
+  right: 25%;
+  margin: 50px 50px;
+  transition: all 1.2s;
+  /*
+  @include mql() {
+      width: 30%;
+      margin: auto;
+  }
+  */
+}
+@media screen and (max-width:980px) {
+  .c-formshopperprofile__sub {
+    width: 15%;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 720px) {
+  .c-formshopperprofile__sub {
+    width: 20%;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 414px) {
+  .c-formshopperprofile__sub {
+    width: 30%;
+    margin: auto;
+  }
+}
+
+.c-formshopperprofile__sub:hover {
+  cursor: pointer;
+  background: #b2d142;
+}
+
+.c-shopper__action {
+  background: #b2d142;
+  margin: auto;
+  width: 100%;
+}
+
+.c-shopper__action__button {
+  background: #174113;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+  margin-top: 35px;
+  height: 50px;
+  width: 30%;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  margin-bottom: 35px;
+  transition: all 1.2s;
+}
+.c-shopper__action__button:hover {
+  background: orange;
+}
+
+.c-staff__action__button {
+  background: #174113;
+  margin-left: 16px;
+  margin-right: 16px;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  height: 60px;
+  width: 30%;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  transition: all 1.2s;
+}
+.c-staff__action__button:hover {
+  background: orange;
+}
+
+.c-top__button {
+  background: #174113;
+  margin-left: 25px;
+  margin-right: 25px;
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: auto;
+  height: 60px;
+  width: 30%;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  transition: all 1.2s;
+}
+.c-top__button:hover {
+  background: orange;
+}
+
+.c-login__button {
+  background: #174113;
+  height: 60px;
+  width: 20%;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  transition: all 1.2s;
+}
+.c-login__button:hover {
+  background: orange;
+}
+
+.l-shopper__mypagemenu {
+  background: rgba(255, 255, 255, 0.6);
+  height: 580px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+  margin-top: 100px;
+  border: solid 2px;
+  border-radius: 5px;
+}
+
+.l-shopper__mypagemenu__title {
+  text-align: center;
+  margin-top: 35px;
+  font-size: 25px;
 }
 
 /*

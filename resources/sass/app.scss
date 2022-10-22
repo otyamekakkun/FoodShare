@@ -47,7 +47,6 @@
 //staff用
 //==============================================================
 
-@import "layout/staff/staffmypage";
 @import "layout/staff/staff_exhibitproduct";
 @import "layout/staff/staff_exhibitlist";
 //==============================================================
@@ -56,7 +55,6 @@
 //shopper用
 //==============================================================
 
-@import "layout/shopper/shopper_mypage";
 @import "layout/shopper/shopper_productdetail";
 @import "layout/shopper/shopper_productlist";
 //==============================================================
@@ -77,6 +75,7 @@
 @import "object/component/_paginate"; //....................3
 @import "object/component/_allproductlist"; //....................3
 @import "object/component/_allproductdetail"; //....................3
+@import "object/component/_parts"; //....................3
 
 // -----------------------------------------------------------------
 // Object-Project
