@@ -4,8 +4,9 @@
 
 <body>
     <header>
-        @include('rest.staff.header')
+        @include('header.staff.staff_header')
     </header>
+    
     <section>
         <form  action="{{route('haiki_staffrprofile_edit',$admin->id)}}" method="POST">
             @csrf

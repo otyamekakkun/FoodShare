@@ -1,22 +1,10 @@
 @extends('layouts.app2')
 @section('content')
 <body>
-        <header>
-            @include('rest.staff.header')
-        </header>
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <header>
+        @include('header.staff.staff_header')
+    </header>
+    
         <div id="app">
 
 <h1>

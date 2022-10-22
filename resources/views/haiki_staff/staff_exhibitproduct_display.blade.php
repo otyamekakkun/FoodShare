@@ -2,10 +2,10 @@
 @section('content')
 <body>
     {{-- ヘッダー部分 --}}
-        <header>
-            @include('rest.staff.header')
-        </header>
-
+    <header>
+        @include('header.staff.staff_header')
+    </header>
+    
 
 
 @include('common.productcreate');

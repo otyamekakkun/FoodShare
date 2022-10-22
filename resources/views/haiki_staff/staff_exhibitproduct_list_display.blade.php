@@ -10,8 +10,9 @@
 @section('content')
 <body>
     <header>
-        @include('rest.staff.header')
+        @include('header.staff.staff_header')
     </header>
+    
     <h1 class="c-title">
     {{$admin->convinience_name}}所属
     {{$admin->name}}様が出品された商品一覧

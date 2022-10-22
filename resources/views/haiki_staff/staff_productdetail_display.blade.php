@@ -3,9 +3,9 @@
 
 <body>
     <header>
-        @include('rest.staff.header')
+        @include('header.staff.staff_header')
     </header>
-
+    
     <div id="app">
         <div class="l-productdetail">
             <div class="l-productdetail__area">
