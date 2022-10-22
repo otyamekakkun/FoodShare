@@ -2,9 +2,11 @@
 @extends('layouts.app2')
 @section('content')
 <body>
-        <header>
-            @include('rest.shopper.header') 
-            </header>
+    <header>
+        @include('header.shopper.shopper_header') 
+        </header>
+        
+        
 {{-- 全体を決めるもの --}}
 <div id="app">
     <main>

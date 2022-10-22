@@ -3,7 +3,7 @@
  
  <body>
     <header>
-        @include('rest.shopper.header') 
+        @include('header.shopper.shopper_header') 
         </header>
 
         <div id="app">
