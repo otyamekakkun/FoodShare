@@ -3,16 +3,21 @@
 @section('content')
 @include('rest.other.otherheader')
                     @isset($authgroup)
+                    <div class="c-form2">
+
                     <form method="POST" action="{{ url("register/$authgroup") }}">
-                        <div class="c-form2">
+                        {{-- <div class="c-form2"> --}}
+
 <h1>コンビニスタッフユーザー登録</h1>
 <p>お客様(コンビニスタッフ関係ではない)方は,トップページのお客様ユーザー登録というボタンからお入りになって登録をしてください</p>
  @else
  {{-- ここからユーザー登録ページ併用 --}}
                     <form method="POST" action="{{ route('register') }}">
+                        <div class="c-form1">
+
                     @endisset
                         @csrf
-                        <div class="c-form1">
+                            <div class="c-form__area">
                             <h1 class="c-formarea__title">（個人情報エリア）</h1>
                             <br/>{{--簡易的につけとく --}}
                             {{--ユーザー登録ボタンここまで  --}}
@@ -61,11 +66,9 @@
                             {{-- ここから管理者用のユーザー登録ページ --}}
 
                             {{-- ユーザー登録ページのコンビニ名 --}}
-                            <div class="l-register__common">
 
     @csrf
 
-    <h1 class="l-register__common__title">（コンビニ情報エリア）</h1>
 <p>勤めているコンビニの会社</p>
 <input type="text" placeholder="勤めているコンビニの会社を記述してください" name="convinience_name">
 <br/>
@@ -140,7 +143,7 @@
                                 ユーザー登録して始める
                             </button>
                         </form>
-                        </div>
+                    </div>
                             </div>
 <div id=app>
 <footer-component></footer-component>
