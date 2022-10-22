@@ -923,25 +923,6 @@ a {
   margin-bottom: 30px;
 }
 
-.l-staffmypage__menu {
-  background: rgba(220, 168, 70, 0.8);
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 100px;
-  height: 300px;
-  font-size: 20px;
-}
-
-.l-staffmypage__buttonarea {
-  width: 100%;
-  margin: auto;
-  height: 180px;
-  display: flex;
-  background: orange;
-  background: rgba(255, 255, 255, 0.6);
-}
-
 .c-staffform {
   background: rgba(255, 255, 255, 0.9);
   width: 80%;
