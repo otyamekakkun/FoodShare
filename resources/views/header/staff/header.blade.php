@@ -24,10 +24,11 @@
 
 
 <!-- HTMLコード -->
-    <header class="header">
+    {{-- <header class="header"> --}}
+        <div class="l-header">
       <!-- ヘッダーロゴ -->
-      <div class="logo">LOGO</div>
-    
+      <h1 class="l-header__title">haiki share staff専用</h1>
+
       <!-- ハンバーガーメニュー部分 -->
       <div class="nav">
     
@@ -47,7 +48,8 @@
         </nav>
     
       </div>
-    </header>
+    </div>
+    {{-- </header> --}}
 
 
 
