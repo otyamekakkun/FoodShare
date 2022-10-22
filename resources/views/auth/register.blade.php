@@ -4,6 +4,7 @@
 @include('rest.other.otherheader')
                     @isset($authgroup)
                     <form method="POST" action="{{ url("register/$authgroup") }}">
+                        <div class="c-form2">
 <h1>コンビニスタッフユーザー登録</h1>
 <p>お客様(コンビニスタッフ関係ではない)方は,トップページのお客様ユーザー登録というボタンからお入りになって登録をしてください</p>
  @else
@@ -11,51 +12,46 @@
                     <form method="POST" action="{{ route('register') }}">
                     @endisset
                         @csrf
-                        <div class="l-register__common">
-                            <h1 class="l-register__common__title">（個人情報エリア）</h1>
-                            <button type="submit" class="l-register__common__button">
-                                ユーザー登録して始める
-                            </button>
+                        <div class="c-form1">
+                            <h1 class="c-formarea__title">（個人情報エリア）</h1>
                             <br/>{{--簡易的につけとく --}}
                             {{--ユーザー登録ボタンここまで  --}}
-                            <div class="l-register__common__form">
-                            <label for="name" class="l-register__common__form__message">名前:
+                            <span for="name" class="l-register__common__form__message">名前:
                                 @error('name')
                                     <span  role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
+                            </span>
                                 <br/>
-                            </label>
-                                <input id="name" type="text" class="l-register__common__sentence @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus  placeholder="名前">
+                                <input id="name" type="text" class="c-form__area__text" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus  placeholder="名前">
                                 <br/>
 {{-- 名前入力スペースここまで --}}
-                            <label for="email" class="l-register__common__form__message">Email:
+                            <span for="email" class="c-form__area__message ">Email:
                                 @error('email')
                                 <span class="" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
-</label><br/>
-                                <input id="email" type="email" class="l-register__common__sentence @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Email">
+                            </span><br/>
+                                <input id="email" type="email"class="c-form__area__text" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Email">
                                 <br/>
 {{-- emailここまで --}}
-                            <label for="password" class="l-register__common__form__message">パスワード:                                
+                            <label for="password"class="c-form__area__message">パスワード:                                
                                 @error('password')
                                 <span class="" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
 </label><br/>
-                                <input id="password" type="password" class="l-register__common__sentence @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="パスワード">
+                                <input id="password" type="password" class="c-form__area__text" @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="パスワード">
                                 <br/>
 {{-- パスワードここまで --}}
-                            <label for="password-confirm" class="l-register__common__form__message">パスワード再入力:</label><br/>
+                            <label for="password-confirm" class="c-form__area__message ">パスワード再入力:</label><br/>
 
-                                <input id="password-confirm" type="password" class="l-register__common__sentence" name="password_confirmation" required autocomplete="new-password" placeholder="パスワード再入力">
-                            </div>
-                            </div> 
-                            {{-- ここまで併用のdiv --}}
+                                <input id="password-confirm" type="password" class="c-form__area__text" name="password_confirmation" required autocomplete="new-password" placeholder="パスワード再入力">
+                        </div>
+                                {{-- ここまで併用のdiv --}}
                             
 
                         @isset($authgroup)
@@ -139,6 +135,12 @@
 
 <textarea placeholder="都道府県以外の住所記述" name="adress"></textarea>
                             @endisset
+{{-- ボタンはここでやる --}}
+                            <button type="submit" class="l-register__common__button">
+                                ユーザー登録して始める
+                            </button>
+                        </form>
+                        </div>
                             </div>
 <div id=app>
 <footer-component></footer-component>

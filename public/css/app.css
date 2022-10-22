@@ -607,7 +607,7 @@ a {
   }
 }
 
-.l-register {
+.c-form2 {
   display: block;
   background: #f6f5f4;
   background: rgba(255, 255, 255, 0.6);
@@ -621,17 +621,17 @@ a {
   height: 1800px;
 }
 @media screen and (max-width:980px) {
-  .l-register {
+  .c-form2 {
     height: 3500px;
   }
 }
 @media screen and (max-width: 720px) {
-  .l-register {
+  .c-form2 {
     height: 6350px;
   }
 }
 @media screen and (max-width: 414px) {
-  .l-register {
+  .c-form2 {
     height: 5500px;
   }
 }
@@ -655,13 +655,13 @@ a {
   margin-top: 35px;
 }
 
-.c-formarea__message {
+.c-form__area__message {
   display: block;
   margin-top: 15px;
   margin-bottom: 2px;
 }
 
-.c-formarea__text {
+.c-form__area__text {
   background: white;
   font-size: 25px;
   height: 60px;
