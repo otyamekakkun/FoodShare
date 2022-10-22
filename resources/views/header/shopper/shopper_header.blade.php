@@ -18,7 +18,7 @@
               <button class="l-header__nav__button">
               <input class="" type="submit" value="ログアウト">
           </button>
-
+        </form>
           </ul>
         </nav>
 </div>

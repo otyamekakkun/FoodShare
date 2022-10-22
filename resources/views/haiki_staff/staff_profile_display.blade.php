@@ -69,7 +69,6 @@
     @enderror     
 </span>
 <br/>
-
             <input class="l-formstaffprofile__text" action="post" type="text" name="convinience_name" placeholder="コンビニ名" value="{{$admin->convinience_name}}">
             <br/>
 <span class="l-formstaffprofile__message">支店名:
@@ -84,9 +83,6 @@
             <input class="l-formstaffprofile__text" action="post" type="text" name="convinience_branch" placeholder="支店名" value="{{$admin->convinience_branch}}">
             <br/>
             {{-- 支店名ここまで --}}
-
-
-
 <div class="l-formstaff__adressarea">
 <h1 class="l-formstaff__adressarea__title">住所記入欄</h1>
             <span class="l-formstaffprofile__message">都道府県:
@@ -161,7 +157,6 @@
 </textarea>
 {{-- 住所変更ここまで --}}
 </div>
-
             <input type="submit" class="l-staffprofile__sub" value="変更する">
         </form>
         </div>

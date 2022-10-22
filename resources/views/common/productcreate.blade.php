@@ -1,13 +1,16 @@
 <div id="app">
-    <h1 class="c-title">
-        商品を出品する
-    </h1>
-    <div class="c-staffform">
-        <h1 class="c-title">出品されたい商品の情報について記述してください</h1>
+    <div class="c-mypagemenu">
+        <h1  class="c-mypagemenu__title">
+            商品を出品する
+        </h1>
+    </div>
+    <div class="c-form1">
+
+        <h1 class="c-form__title">出品されたい商品の情報について記述してください</h1>
     <form method="POST" action="{{ route('create.exhibit') }}" enctype="multipart/form-data">
         @csrf
         <div class="c-staffform__area">
-            <label class="">商品名:
+            <label class="c-form__title">商品名:
                 @error('product_name')
                 <span class="" role="alert">
                     <strong>{{ $message }}</strong>
@@ -45,3 +48,10 @@
     </form>
     </div>
     
+    {{-- 
+    c-titleはもしかしたらいらないかもしれない
+    c-stafffform
+    c-title
+    c-staffform__area
+    --}}
+

@@ -15,7 +15,6 @@
             <h1  class="c-mypagemenu__title">
                 {{$my_user->name}}様 専用マイページ
             </h1>
-<div class="l-staffmypage__menu"></div>
 
                 </div>
         <shoppermypage-component></shoppermypage-component>
