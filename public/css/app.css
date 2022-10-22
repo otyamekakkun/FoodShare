@@ -607,12 +607,33 @@ a {
   }
 }
 
-.l-login__title {
-  font-size: 25px;
-  text-align: center;
-  margin-left: auto;
+.l-register {
+  display: block;
+  background: #f6f5f4;
+  background: rgba(255, 255, 255, 0.6);
   margin-right: auto;
-  margin-top: 35px;
+  margin-left: auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  border: solid #174113;
+  border-radius: 10px;
+  width: 80%;
+  height: 1800px;
+}
+@media screen and (max-width:980px) {
+  .l-register {
+    height: 3500px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .l-register {
+    height: 6350px;
+  }
+}
+@media screen and (max-width: 414px) {
+  .l-register {
+    height: 5500px;
+  }
 }
 
 .l-login__formarea {
@@ -626,13 +647,21 @@ a {
   text-align: center;
 }
 
-.l-login__formarea__message {
+.c-form__title {
+  font-size: 25px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 35px;
+}
+
+.c-formarea__message {
   display: block;
   margin-top: 15px;
   margin-bottom: 2px;
 }
 
-.l-login__formarea__text {
+.c-formarea__text {
   background: white;
   font-size: 25px;
   height: 60px;

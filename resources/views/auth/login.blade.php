@@ -16,9 +16,11 @@
 @section('content')
 @include('rest.other.otherheader')
 
-                <div>{{ isset($authgroup) ? ucwords($authgroup) : ""}}</div>
 {{-- 管理者ログインページここから --}}
+
                     @isset($authgroup)
+                    <div class="l-login">
+
                     <p>コンビニスタッフ専用ログインページ</p>
                     <p>利用者は普通のログインページで記述してください</p>
                     <form method="POST" action="{{ url("login/$authgroup") }}">
@@ -26,13 +28,13 @@
                     {{-- 管理者ログインページここまで --}}
                     {{-- ここから最後までユーザー登録者用と管理者用併用のログインページ --}}
                     <div class="l-login">
-                        <h1 class="l-login__title">ログイン</h1>
+                        <h1 class="c-form__title">ログイン</h1>
                     <form method="POST" action="{{ route('login') }}">
                     @endisset
                         @csrf
 {{-- <div class="l-login__formarea"> --}}
     <div class="l-login__formarea">
-                            <span for="email" class="l-login__formarea__message">email:
+                            <span for="email" class="c-formarea__message">email:
 <span>
     @error('email')
     <span class="c-errormessage" role="alert">
@@ -42,11 +44,11 @@
 </span>
 </span>
                             <br/>
-                                <input id="" type="email" class="l-login__formarea__text" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="emailを入力してください">
+                                <input id="" type="email" class="c-formarea__text" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="emailを入力してください">
                                 <br/>
                                 {{-- email入力欄ここまで --}}
                             {{-- パスワード入力欄ここから --}}
-<span for="password" class="l-login__formarea__message">パスワード:
+<span for="password" class="c-formarea__message">パスワード:
 <span>
     @error('password')
     <span class="" role="alert">
@@ -57,7 +59,7 @@
 </span> 
 <br/>
 
-                                <input id="password" type="password" class="l-login__formarea__text" name="password" required autocomplete="current-password" placeholder="パスワード入力">
+                                <input id="password" type="password" class="c-formarea__text" name="password" required autocomplete="current-password" placeholder="パスワード入力">
                                 {{-- パスワード入力欄ここまで --}}
 {{-- パスワードリマインダーここから --}}
 <br/>
