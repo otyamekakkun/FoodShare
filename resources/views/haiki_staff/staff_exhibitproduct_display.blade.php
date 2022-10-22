@@ -5,17 +5,7 @@
     <header>
         @include('header.staff.staff_header')
     </header>
-    
-
-
 @include('common.productcreate');
-
-
-
-
-
-
-
 <footer-component></footer-component>
 </div>
 </body>
