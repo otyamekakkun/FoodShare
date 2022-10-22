@@ -55,7 +55,6 @@
                             <label for="password-confirm" class="c-form__area__message ">パスワード再入力:</label><br/>
 
                                 <input id="password-confirm" type="password" class="c-form__area__text" name="password_confirmation" required autocomplete="new-password" placeholder="パスワード再入力">
-                        </div>
                                 {{-- ここまで併用のdiv --}}
                             
 
@@ -70,13 +69,13 @@
     @csrf
 
 <p>勤めているコンビニの会社</p>
-<input type="text" placeholder="勤めているコンビニの会社を記述してください" name="convinience_name">
+<input type="text" placeholder="勤めているコンビニの会社を記述してください" name="convinience_name" class="c-form__area__text">
 <br/>
 {{-- ユーザー登録ページのコンビニ名ここまで --}}
 
 {{-- ユーザー登録ページの支店名ここから --}}
 <p>支店名記入欄</p>
-<input type="text" placeholder="支店名記入欄" name="convinience_branch">
+<input type="text" placeholder="支店名記入欄" name="convinience_branch" class="c-form__area__text">
 <br/>
 
 {{-- ユーザー登録ページ支店名ここまで --}}
@@ -138,10 +137,13 @@
 
 <textarea placeholder="都道府県以外の住所記述" name="adress"></textarea>
                             @endisset
+
 {{-- ボタンはここでやる --}}
                             <button type="submit" class="l-register__common__button">
                                 ユーザー登録して始める
                             </button>
+                        </div>
+
                         </form>
                     </div>
                             </div>
