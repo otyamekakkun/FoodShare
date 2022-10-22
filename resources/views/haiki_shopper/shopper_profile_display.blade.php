@@ -44,14 +44,13 @@
     <main>
         <form method="POST" enctype="multipart/form-data" action="{{route('haiki_shopperprofile_edit',$user->id)}}">      
           
-          <div class="l-login">
-            <div class="l-login__formarea">
+          <div class="c-form1">
+            <div class="c-form__area">
             @csrf
-            <div class="l-formshopperprofile">
-            <h3 class="l-formshopperprofile__title">{{$user->name}}様
+            <h3 class="c-form__title">{{$user->name}}様
                 プロフィール編集</h3>
-            <div class="l-formshopperprofile__te">
-                <span class="l-formshopperprofile__message">名前:               
+                
+                <span class="c-formarea__message">名前:               
                     @error('name')
                     <span class="c-errormessage" role="alert">
                         <strong>{{$message}}</strong>
@@ -59,10 +58,10 @@
                     @enderror
     </span>
     <br/>
-                <input class="l-formshopperprofile__text" action="post" type="text" name="name" placeholder="名前を編集" value={{$user->name}}>
+                <input class="c-formarea__text" action="post" type="text" name="name" placeholder="名前を編集" value={{$user->name}}>
                 <br/>
                 {{-- 名前編集ここまで --}}
-                <span class="l-formshopperprofile__message">email:
+                <span class="c-formarea__message">email:
                     @error('email')
                     <span class="c-errormessage" role="alert">
                         <strong>{{$message}}</strong>
@@ -71,11 +70,11 @@
                 </span>
                 <br/>
 
-            <input class="l-formshopperprofile__text" action="post" type="text" name="email" placeholder="メールアドレス編集" value={{$user->email}}>
+            <input class="c-formarea__text" action="post" type="text" name="email" placeholder="メールアドレス編集" value={{$user->email}}>
             <br/>
     {{-- emailここまで --}}
     {{-- passwordここから --}}
-<span class="l-formshopperprofile__message">パスワード編集:
+<span class="c-formarea__message">パスワード編集:
     @error('password')
     <span class="c-errormessage" role="alert">
         <strong>{{$message}}</strong>
@@ -83,9 +82,9 @@
     @enderror
 </span>
 <br/>
-    <input class="l-formshopperprofile__text" action="post" type="password" name="password"><br/>
+    <input class="c-formarea__text" action="post" type="password" name="password"><br/>
     {{-- パスワード編集ここまで --}}
-    <span class="l-formshopperprofile__message">パスワード再入力:
+    <span class="c-formarea__message">パスワード再入力:
         @error('password_confirmation')
         <span class="c-errormessage" role="alert">
             <strong>{{$message}}</strong>
@@ -93,8 +92,8 @@
         @enderror
     </span>
     <br/>
-            <input class="l-formshopperprofile__text" type="password" class="l-register__common__sentence" name="password_confirmation" required autocomplete="new-password">
-            </div>
+            <input class="c-formarea__text" type="password" name="password_confirmation" required autocomplete="new-password">
+            <br/>
         <input type="submit" class="c-formshopperprofile__sub" value="変更する">
         </div>
     </div>

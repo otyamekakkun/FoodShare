@@ -1,7 +1,7 @@
 //==============================================
 //ログインページloginページのレイアウト部分
 //==============================================
-.l-login {
+.c-form1 {
     display: block;
     background: #f6f5f4;
     background: rgba(255, 255, 255, 0.6);
@@ -51,7 +51,7 @@
     }
 }
 
-.l-login__formarea {
+.c-form__area {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
@@ -63,8 +63,6 @@
     font-size: size(m);
     text-align: center;
 }
-
-//ここはコンポーネントのパーツに分ける
 
 .c-form__title {
     font-size: size(l);
