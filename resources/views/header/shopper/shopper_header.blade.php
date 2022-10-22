@@ -1,6 +1,6 @@
 <div class="l-header">
   
-     <h1 class="l-header__title">haiki share </h1>
+     <h1 class="l-header__title">haiki share</h1>
       <!-- ハンバーガーメニュー部分 -->
     
         <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
