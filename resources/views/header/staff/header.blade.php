@@ -41,9 +41,10 @@
         <!-- メニュー -->
         <nav class="nav_content">
           <ul class="nav_list">
-            <li class="nav_item"><a href="">TOP</a></li>
-            <li class="nav_item"><a href="">ABOUT</a></li>
-            <li class="nav_item"><a href="">SERVICE</a></li>
+            <li class="nav_item"><a href="{{route('haiki_shopper.staff_profile_display')}}">コンビニ編集画面</a></li>
+            <li class="nav_item"><a href="{{route('haiki_shopper.staff_exhibitproduct_display')}}">商品を出品する</a></li>
+            <li class="nav_item"><a href="{{route('haiki_shopper.staff_buyproduct_display')}}">出品した商品の一覧を見る</a></li>
+            <li class="nav_item"><a href="{{route('haiki_shopper.staff_exhibitproduct_list_display')}}">購入された商品の一覧を見る</a></li>
           </ul>
         </nav>
     

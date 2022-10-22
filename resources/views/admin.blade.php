@@ -10,8 +10,9 @@
 <h1 class="l-staffmypage__title">
     {{$admin->convinience_name}}所属 {{$admin->name}}様専用メニュー
 </h1>
+    {{-- ここからは廃止
+
 <div class="l-staffmypage__menu">
-    {{-- ここからは廃止 --}}
 <h1 class="l-staffmypage__title"> メニュー</h1>
 <div class="l-staffmypage__buttonarea">
 <button class="c-staff__action__button"><a href="{{route('haiki_shopper.staff_profile_display')}}">コンビニ情報編集</a></button>
@@ -20,6 +21,7 @@
 <button class="c-staff__action__button"><a href="{{route('haiki_shopper.staff_exhibitproduct_list_display')}}">出品した商品リスト</a></button>
 </div>
 </div>
+ --}}
 </div>
 
 <div id="app">
