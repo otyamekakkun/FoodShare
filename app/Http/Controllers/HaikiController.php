@@ -129,6 +129,45 @@ return redirect('admin')->with('flash_message', __('Registered.'));
         return view('haiki_staff.staff_exhibitproduct_display',['admins'=>$admin]);
     } 
 
+
+public function create_exhibitproduct(Request $request){
+    //入力するときにバリデーションチェックを設ける
+    $request->validate([
+       // 'product_name'=>'required',
+        //'img_path' => 'required|file|image|mimes:png,jpeg',
+        //'price'=>'required',
+        //'best_by_date'=>'required'
+    ]);
+
+    //laravelで表示されるための処理。
+//2つ保存されればゴール
+//vueで表示するための処理
+$image = $request->file("img_path");
+$path = Storage::disk("public")->putFile('profile', $image); 
+$imagePath = "/storage/" . $path;
+$id = Auth::guard('admin')->id();
+$product = new products;
+$product->product_name = $request->product_name;
+$product->admin_id = $id;//現在ログインしているコンビニユーザー情報のidをこの中に入れる
+$product->img_path=$imagePath;
+$product->img_path=$imagePath;
+$product->price = $request->price;
+$product->best_by_date = $request->best_by_date;
+$product->prefecture=$request->prefecture;
+$product->save();//2
+return redirect('admin')->with('flash_message', __('Registered.'));//3
+}
+
+
+
+
+
+
+
+
+
+
+
 //=========================================================ここまで
 
 //==============================================================
@@ -233,37 +272,6 @@ public function admin(){
     return view('admin',['admin'=>$admin]);//...................画面表示するもの
 }
 
-//====================================================================
-//(create_exhibitproductで商品を出品する画面を作る)  12
-//====================================================================
-
-public function create_exhibitproduct(Request $request){
-    //入力するときにバリデーションチェックを設ける
-    $request->validate([
-        'product_name'=>'required',
-        'img_path' => 'required|file|image|mimes:png,jpeg',
-        'price'=>'required',
-        'best_by_date'=>'required'
-    ]);
-
-    //laravelで表示されるための処理。
-//2つ保存されればゴール
-//vueで表示するための処理
-$image = $request->file("img_path");
-$path = Storage::disk("public")->putFile('profile', $image); 
-$imagePath = "/storage/" . $path;
-$id = Auth::guard('admin')->id();
-$product = new products;
-$product->product_name = $request->product_name;
-$product->admin_id = $id;//現在ログインしているコンビニユーザー情報のidをこの中に入れる
-$product->img_path=$imagePath;
-$product->img_path=$imagePath;
-$product->price = $request->price;
-$product->best_by_date = $request->best_by_date;
-$product->prefecture=$request->prefecture;
-$product->save();//2
-return redirect('admin')->with('flash_message', __('Registered.'));//3
-}
 
 //==========================================================================
 
