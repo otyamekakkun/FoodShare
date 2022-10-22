@@ -50,7 +50,7 @@
             <h3 class="c-form__title">{{$user->name}}様
                 プロフィール編集</h3>
                 
-                <span class="c-formarea__message">名前:               
+                <span class="c-form__area__message">名前:               
                     @error('name')
                     <span class="c-errormessage" role="alert">
                         <strong>{{$message}}</strong>
@@ -58,10 +58,10 @@
                     @enderror
     </span>
     <br/>
-                <input class="c-formarea__text" action="post" type="text" name="name" placeholder="名前を編集" value={{$user->name}}>
+                <input class="c-form__area__text" action="post" type="text" name="name" placeholder="名前を編集" value={{$user->name}}>
                 <br/>
                 {{-- 名前編集ここまで --}}
-                <span class="c-formarea__message">email:
+                <span class="c-form__area__message">email:
                     @error('email')
                     <span class="c-errormessage" role="alert">
                         <strong>{{$message}}</strong>
@@ -70,11 +70,11 @@
                 </span>
                 <br/>
 
-            <input class="c-formarea__text" action="post" type="text" name="email" placeholder="メールアドレス編集" value={{$user->email}}>
+            <input class="c-form__area__text" action="post" type="text" name="email" placeholder="メールアドレス編集" value={{$user->email}}>
             <br/>
     {{-- emailここまで --}}
     {{-- passwordここから --}}
-<span class="c-formarea__message">パスワード編集:
+<span class="c-form__area__message">パスワード編集:
     @error('password')
     <span class="c-errormessage" role="alert">
         <strong>{{$message}}</strong>
@@ -82,9 +82,9 @@
     @enderror
 </span>
 <br/>
-    <input class="c-formarea__text" action="post" type="password" name="password"><br/>
+    <input class="c-form__area__text" action="post" type="password" name="password"><br/>
     {{-- パスワード編集ここまで --}}
-    <span class="c-formarea__message">パスワード再入力:
+    <span class="c-form__area__message">パスワード再入力:
         @error('password_confirmation')
         <span class="c-errormessage" role="alert">
             <strong>{{$message}}</strong>
@@ -92,9 +92,9 @@
         @enderror
     </span>
     <br/>
-            <input class="c-formarea__text" type="password" name="password_confirmation" required autocomplete="new-password">
+            <input class="c-form__area__text" type="password" name="password_confirmation" required autocomplete="new-password">
             <br/>
-        <input type="submit" class="c-formshopperprofile__sub" value="変更する">
+        <input type="submit" class="c-form__shopperprofile__sub" value="変更する">
         </div>
     </div>
         </form>
