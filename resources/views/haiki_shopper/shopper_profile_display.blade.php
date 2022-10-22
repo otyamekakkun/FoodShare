@@ -42,8 +42,10 @@
             @include('rest.shopper.header') 
             </header>
     <main>
-    <section>
         <form method="POST" enctype="multipart/form-data" action="{{route('haiki_shopperprofile_edit',$user->id)}}">      
+          
+          <div class="l-login">
+            <div class="l-login__formarea">
             @csrf
             <div class="l-formshopperprofile">
             <h3 class="l-formshopperprofile__title">{{$user->name}}様
@@ -95,9 +97,10 @@
             </div>
         <input type="submit" class="c-formshopperprofile__sub" value="変更する">
         </div>
+    </div>
         </form>
+    </div>
         </div>
-        </section>
 </main>
 </body>
 <div id=app>
