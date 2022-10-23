@@ -523,6 +523,11 @@ a {
   padding: 20px;
   margin-left: 20px;
 }
+@media screen and (max-width: 414px) {
+  .l-header__title {
+    font-size: 40px;
+  }
+}
 
 .l-toppageheader {
   display: flex;
@@ -553,7 +558,8 @@ a {
 }
 @media screen and (max-width: 414px) {
   .c-drawer--open {
-    right: 60px;
+    right: 80px;
+    top: -4px;
   }
 }
 
