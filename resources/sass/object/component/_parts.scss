@@ -48,16 +48,15 @@
 //shopperの商品詳細のボタン
 //================================
 .c-shopper__action {
-    background: #b2d142;
-
+   // background: #b2d142;
     margin: auto;
     width: 100%;
 }
 
 .c-shopper__action__button {
     background: #174113;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
 
     text-align: center;
     margin-top: size(xxl);
@@ -70,6 +69,15 @@
     transition: all 1.2s;
     &:hover {
         background: orange;
+    }
+    @include mq(){
+        //display:block;
+        width:80%;
+        margin-left: 10px;
+        margin-right: 10px;
+    
+    
+        
     }
 }
 

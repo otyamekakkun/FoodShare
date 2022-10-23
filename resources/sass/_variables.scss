@@ -83,6 +83,7 @@ body {
 //414px以下の時にレスポンシブに切り替わる使用にする。s
 $breakpoints: (
     "sm": "screen and (max-width: 414px)",
+    "m": "screen and (max-width: 560px)",
     "l": "screen and (max-width: 720px)",
     "xl": "screen and (max-width:980px)",
     "xxl": "screen and (max-width:1090px)",
@@ -95,6 +96,13 @@ $breakpoints: (
         @content;
     }
 }
+@mixin mqm($breakpoint: m) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+
 
 @mixin mql($breakpoint: l) {
     @media #{map-get($breakpoints, $breakpoint)} {

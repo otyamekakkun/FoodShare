@@ -5,13 +5,10 @@
     margin-top: 50px;
     font-size: size(xxl);
     text-align: center;
-    //display:inline;
-
-    @include mq(){
+    @include mqm(){
         font-size:size(m);
+
     }
-
-
 }
 
 .c-productdetail__imgarea {
@@ -23,10 +20,10 @@
     width: 42%;
 
 
-    @include mq(){
+    @include mqxxl(){
         width:80%;
     }
-    
+
 
 
 }
@@ -71,6 +68,9 @@
     @include mq(){
         height:280px;    
     }
+    @include mqm(){
+        height:300px;    
+    }
 
 
 }
@@ -91,9 +91,24 @@
     border-color: black;
     @include mqxxl(){
         font-size:size(m);
+        padding:size(sss);
+        margin-bottom:size(l)
+
+    }
+
+    @include mql(){
+        font-size:size(s);
+      //  padding:size(sss);
+        margin-bottom:size(xxl)
+
+    }
+
+    @include mqm(){
+        font-size:size(ss);
+        margin-bottom:size(xxl)
+
     }
     @include mq(){
-        font-size:size(ss);
         padding:size(sss);
         margin-bottom:size(l)
     }
@@ -112,10 +127,11 @@
 //shopper購入するボタンのメニュー欄
 //===============================
 .c-productdetail__shoppermenu {
+   // display:inline;
     margin-right: auto;
     margin-left: auto;
-    background: white;
-    height: 200px;
+   // background: white;
+   // height: 200px;
     justify-content: center;
     width: 100%;
     display: flex;
