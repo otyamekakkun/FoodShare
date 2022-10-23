@@ -2,10 +2,43 @@
 //利用者の商品一覧(shopper_productlist)
 //====================================
 .l-productsearch {
-    background: rgba(255, 255, 255, 0.9);
-    height: 400px;
-    width: 85%;
+    background: rgba(255, 255, 255, 0.7);
+    height: 300px;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
-    border-radius: size(m);
+    border-radius: size(sss);
+    margin-top: 80px;
+    padding: size(sss);
+}
+.c-serch {
+    // background: red;
+
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    margin-top: size(3l);
+}
+
+.c-search__title {
+    //background: green;
+    margin-right: size(sss);
+    margin-left: size(m);
+    margin-top: size(sss);
+}
+
+.c-search__prefecture {
+    &:hover {
+        background: #f6f5f4;
+    }
+}
+.c-serch2 {
+    width: 80%;
+    margin-top: 40px;
+    text-align: center;
+}
+.c-search__calender {
+    &:hover {
+        background: #f6f5f4;
+    }
 }

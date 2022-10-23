@@ -18,7 +18,7 @@ l-formstaffprofileあったら削除
             <div class="c-form2">
                 <div class="c-form__area">
 
-            <h3 class="c-form__title">コンビニ情報編集画面</h3>
+            <h3 class="c-form__title">コンビニ情報編集</h3>
                 <span class="c-form__area__message">名前:
                     @error('name')
                     <span class="" role="alert">
@@ -65,7 +65,7 @@ l-formstaffprofileあったら削除
     @enderror
 </span>
 <br/>
-        <input class="c-form__area__text" type="password" class="l-register__common__sentence" name="password_confirmation" required autocomplete="new-password">
+        <input class="c-form__area__text" type="password" class="c-form__area__text" name="password_confirmation" required autocomplete="new-password">
 <br/>
         {{-- パスワード再入力ここまで --}}
 <span class="c-form__area__message">コンビニ名:
@@ -78,7 +78,7 @@ l-formstaffprofileあったら削除
 <br/>
             <input class="c-form__area__text" action="post" type="text" name="convinience_name" placeholder="コンビニ名" value="{{$admin->convinience_name}}">
             <br/>
-<span class="l-formstaffprofile__message">支店名:
+<span class="c-form__area__message">支店名:
     @error('convinience_branch')
     <span class="" role="alert">
         <strong>{{$message}}</strong>
@@ -87,19 +87,19 @@ l-formstaffprofileあったら削除
 </span>
 <br/>
 
-            <input class="l-formstaffprofile__text" action="post" type="text" name="convinience_branch" placeholder="支店名" value="{{$admin->convinience_branch}}">
+            <input class="c-form__area__text" action="post" type="text" name="convinience_branch" placeholder="支店名" value="{{$admin->convinience_branch}}">
             <br/>
             {{-- 支店名ここまで --}}
-<div class="l-formstaff__adressarea">
-<h1 class="l-formstaff__adressarea__title">住所記入欄</h1>
-            <span class="l-formstaffprofile__message">都道府県:
+<div class="c-formstaff__adressarea">
+<h1 class="c-form__adresstitle">住所記入欄</h1>
+            <span class="c-formstaff__prefecture">都道府県選択:
                 @error('prefecture')
                 <span class="" role="alert">
                     <strong>{{$message}}</strong>
                 </span>
                 @enderror    
             </span>
-<select name="prefecture" class="l-formstaffprofile__prefecturetext" value="{{$admin->prefecture}}">
+<select name="prefecture" class="c-formstaff__prefecture__text" value="{{$admin->prefecture}}">
     {{-- <option selected>都道府県</option> --}}
     <option value="北海道">北海道</option>
     <option value="青森県">青森県</option>
@@ -150,21 +150,22 @@ l-formstaffprofileあったら削除
     <option value="沖縄県">沖縄県</option>
     </select>
     </select>
-
+<br/>
 {{-- 都道府県ここまで --}}
-<span class="l-formstaffprofile__message">都道府県以外の住所:
+<span class="c-formstaff__adress">都道府県以外の住所:
     @error('adress')
     <span class="" role="alert">
         <strong>{{$message}}</strong>
     </span>
     @enderror    
 </span>
-
-<textarea name="adress"  value="{{$admin->adress}}" class="l-formstaffprofile__adresstext"></textarea>
+<br/>
+<textarea name="adress"  value="{{$admin->adress}}" class="c-formstaff__adress__text"></textarea>
 </textarea>
 {{-- 住所変更ここまで --}}
 </div>
-            <input type="submit" class="l-staffprofile__sub" value="変更する">
+
+            <input type="submit" class="l-register__common__button" value="変更する">
 
             </div>
             </div>

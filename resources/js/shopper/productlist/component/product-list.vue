@@ -2,24 +2,33 @@
     <div>
         <div>
             <div>
-                <h1>商品一覧ページ</h1>
-
                 <div class="l-productsearch">
-                    <h1>商品を検索する</h1>
-                    <p>都道府県を入力してください</p>
-                    <input type="text" v-model="keywords" />
-                    <p>購入されたい商品の予算内の金額を入力してください</p>
-                    <input type="text" v-model="budgets" />円以内で買えるもの
-                    <p>有効期限チェック</p>
-                    <p>
-                        ご希望の日付を入力してください<br />(入力された日付に対して,<br />賞味期限が有効なものだけ表示します)
-                    </p>
-                    <input
-                        type="date"
-                        :min="new Date().toISOString().split('T')[0]"
-                        class="l-productexhibitform__typo3"
-                        v-model="Days2"
-                    />
+                    <h1 class="c-form__title">商品を検索する</h1>
+                    <div class="c-serch">
+                        <p class="c-search__title">:都道府県で探す</p>
+                        <input
+                            type="text"
+                            v-model="keywords"
+                            placeholder="都道府県を入力してください"
+                            class="c-search__prefecture"
+                        />
+                        <p class="c-search__title">:予算内の金額で検索する</p>
+                        <input
+                            type="text"
+                            v-model="budgets"
+                            class="c-search__prefecture"
+                        />
+                        <p class="c-search__title">円</p>
+                    </div>
+                    <div class="c-serch2">
+                        :有効期限チェック
+                        <input
+                            type="date"
+                            :min="new Date().toISOString().split('T')[0]"
+                            class="c-search__calender"
+                            v-model="Days2"
+                        />
+                    </div>
                 </div>
 
                 <div class="l-shopperproductlist">

@@ -67,10 +67,6 @@
                             {{-- ユーザー登録ページのコンビニ名 --}}
 
     @csrf
-
-
-
-
 <span  class="c-form__area__message ">勤めているコンビニ会社:
     @error('convinience_name')
     <span class="" role="alert">
@@ -82,10 +78,8 @@
 
 <input type="text" placeholder="勤めているコンビニの会社を記述してください" name="convinience_name" class="c-form__area__text">
 <br/>
-{{-- ユーザー登録ページのコンビニ名ここまで --}}
 
-{{-- ユーザー登録ページの支店名ここから --}}
-<span  class="c-form__area__message ">支店名記入欄:
+<span  class="c-form__area__message">支店名記入欄:
     @error('convinience_branch')
     <span class="" role="alert">
         <strong>{{ $message }}</strong>
@@ -95,10 +89,19 @@
 <input type="text" placeholder="支店名記入欄" name="convinience_branch" class="c-form__area__text">
 <br/>
 
-{{-- ユーザー登録ページ支店名ここまで --}}
-{{-- ユーザー登録住所ここから --}}
-<p>住所</p>
-<select name="prefecture">
+<div class="c-formstaff__adressarea">
+
+    <h1 class="c-form__adresstitle">住所記入欄</h1>
+    <span class="c-formstaff__prefecture">都道府県選択:
+        @error('prefecture')
+        <span class="" role="alert">
+            <strong>{{$message}}</strong>
+        </span>
+        @enderror    
+    </span>
+
+
+<select name="prefecture" class="c-formstaff__prefecture__text ">
 <option selected>都道府県</option>
 <option value="北海道">北海道</option>
 <option value="青森県">青森県</option>
@@ -148,13 +151,22 @@
 <option value="鹿児島県">鹿児島県</option>
 <option value="沖縄県">沖縄県</option>
 </select>
-
 </select>
 <br/>
+{{-- 都道府県ここまで --}}
+<span class="c-formstaff__adress">都道府県以外の住所:
+    @error('adress')
+    <span class="" role="alert">
+        <strong>{{$message}}</strong>
+    </span>
+    @enderror    
+</span>
+<br/>
 
-<textarea placeholder="都道府県以外の住所記述" name="adress"></textarea>
+
+<textarea placeholder="都道府県以外の住所記述" name="adress" class="c-formstaff__adress__text " ></textarea>
                             @endisset
-
+</div>
 {{-- ボタンはここでやる --}}
                             <button type="submit" class="l-register__common__button">
                                 ユーザー登録して始める

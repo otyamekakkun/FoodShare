@@ -732,6 +732,49 @@ a {
   height: 60px;
   width: 80%;
 }
+.c-form__area__text:hover {
+  background: #f6f5f4;
+}
+
+.c-form__adresstitle {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.c-formstaff__adressarea {
+  height: 500px;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  border: solid #174113;
+  border-radius: 25px;
+}
+
+.c-formstaff__prefecture {
+  margin-left: 20px;
+}
+
+.c-formstaff__prefecture__text {
+  background: white;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.c-formstaff__prefecture__text:hover {
+  background: #f6f5f4;
+}
+
+.c-formstaff__adress__text {
+  background: white;
+  height: 200px;
+  width: 60%;
+  border-radius: 3px;
+  margin-top: 25px;
+}
+.c-formstaff__adress__text:hover {
+  background: #f6f5f4;
+}
 
 .l-register__common {
   background: #f6f5f4;
@@ -976,12 +1019,41 @@ a {
 }
 
 .l-productsearch {
-  background: rgba(255, 255, 255, 0.9);
-  height: 400px;
-  width: 85%;
+  background: rgba(255, 255, 255, 0.7);
+  height: 300px;
+  width: 70%;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 20px;
+  border-radius: 5px;
+  margin-top: 80px;
+  padding: 5px;
+}
+
+.c-serch {
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  margin-top: 45px;
+}
+
+.c-search__title {
+  margin-right: 5px;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+.c-search__prefecture:hover {
+  background: #f6f5f4;
+}
+
+.c-serch2 {
+  width: 80%;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.c-search__calender:hover {
+  background: #f6f5f4;
 }
 
 /*
