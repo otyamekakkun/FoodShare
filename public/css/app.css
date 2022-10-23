@@ -515,61 +515,6 @@ a {
   text-align: center;
   margin-bottom: 35px;
 }
-.l-header__nav {
-  /*
-          position: absolute;
-          right: 220px;
-          top: size(4l);
-          align-items: center;
-          background: #174113;
-          border: size(ssss) solid;
-          border-radius: size(ssss);
-          text-align: center;
-          color: white;
-  */
-}
-.l-header__nav__button {
-  /*
-      //アニメーション導入する前のもの
-      //inline要素に変更する
-      display: inline;
-      border: none;
-      width: 100px;
-      //  border-radius: size(ssss);
-      font-family: "Noto Serif TC", serif;
-      font-size: 19px;
-      box-shadow: 3px #b8b8b8;
-      transition: all 1.2s;
-  }
-  &__button:hover {
-      cursor: pointer;
-      background: #b2d142;
-      box-shadow: 1px 1px 1px 1px orange;
-      transform: translateY(-2px);
-      border: none;
-              */
-}
-.l-header__mypagebottom {
-  /*
-      display: inline;
-      position: absolute;
-      right: 80px;
-      top: size(4l);
-      text-align: center;
-      border: size(ssss) solid;
-      border-radius: size(ssss);
-      color: white;
-      transition: all 1.2s;
-      width: 100px;
-      font-size: 19px;
-  }
-  &__mypagebottom:hover {
-      cursor: pointer;
-      background: #b2d142;
-      box-shadow: 1px 1px 1px 1px orange;
-      transform: translateY(-2px);
-          */
-}
 
 .l-header__title {
   font-family: "Permanent Marker", cursive;
