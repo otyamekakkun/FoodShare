@@ -3,13 +3,13 @@
       <h1 class="l-header__title">haiki share staff</h1>
 
       <!-- ハンバーガーメニュー部分 -->
-      <div class="nav">
+      {{-- <div class="nav"> いらないかも--}}
     
         <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
-        <input id="drawer_input" class="drawer_hidden" type="checkbox">
+        <input id="drawer_input" class="c-drawer__hidden" type="checkbox">
     
         <!-- ハンバーガーアイコン -->
-        <label for="drawer_input" class="drawer_open"><span></span></label>
+        <label for="drawer_input" class="c-drawer--open"><span></span></label>
     
         <!-- メニュー -->
         <nav class="nav_content">
@@ -22,11 +22,11 @@
           </ul>
           <form action="{{ route('logout') }}" method="post">
             @csrf
-            <button class="l-header__nav__button">
+            <button class="">
             <input class="" type="submit" value="ログアウト">
         </button>
           </form>
         </nav>
     
-      </div>
+      {{-- </div> --}}
     </div>

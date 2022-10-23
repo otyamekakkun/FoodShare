@@ -6,10 +6,10 @@
       <div class="nav">
     
         <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
-        <input id="drawer_input" class="drawer_hidden" type="checkbox">
+        <input id="drawer_input" class="c-drawer__hidden" type="checkbox">
     
         <!-- ハンバーガーアイコン -->
-        <label for="drawer_input" class="drawer_open"><span></span></label>
+        <label for="drawer_input" class="c-drawer--open"><span></span></label>
     
         <!-- メニュー -->
         <nav class="nav_content">
