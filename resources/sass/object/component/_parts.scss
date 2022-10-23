@@ -128,17 +128,32 @@
 }
 
 //=======================================
-//フォームテキストエリア                   //
+//フォームテキストエリア title文字          //
 //=======================================
 
 //ログイン画面 ユーザー登録画面 プロフィール編集画面について
+
+//見出しの部分のレイアウト。（コンビニ側が出品した)
+.c-title {
+    //これまでに出品された商品一覧,これまでに購入された
+    text-align: center;
+    font-size: size(l);
+    margin: 10px;
+}
+
+.c-mypagemenu__title {
+    // background: red;
+    text-align: center;
+    margin: 40px;
+    font-size: size(l);
+}
 
 //======================================
 //マイページのロゴみたいなもの
 //======================================
 .c-mypagemenu {
     background: rgba(255, 255, 255, 0.6);
-    height: 116px;
+    height: 124px;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
@@ -146,10 +161,4 @@
     margin-top: 100px;
     border: solid size(sssss);
     border-radius: size(sss);
-}
-.c-mypagemenu__title {
-    // background: red;
-    text-align: center;
-    margin-top: size(xxl);
-    font-size: size(l);
 }

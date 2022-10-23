@@ -6409,7 +6409,9 @@ var render = function render() {
     }
   }, [_c("main", [_c("div", {
     staticClass: "c-staffmypagelistarea"
-  }, _vm._l(_vm.getItems, function (item) {
+  }, [_c("h1", {
+    staticClass: "c-title"
+  }, [_vm._v("これまでに購入された商品")]), _vm._v(" "), _vm._l(_vm.getItems, function (item) {
     return _c("div", [item.bought >= 1 ? _c("div", [_c("ul", {
       staticClass: "c-productlist__items"
     }, [_c("li", {
@@ -6432,7 +6434,7 @@ var render = function render() {
         href: "haiki/".concat(item.id, "}/staff_productdetail")
       }
     }, [_vm._v("詳細にいく")])])])])])]) : _vm._e()]);
-  }), 0)])]);
+  })], 2)])]);
 };
 
 var staticRenderFns = [];
