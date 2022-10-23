@@ -29,11 +29,9 @@
 * 3 _sidebarファイルを作る
 */
 @import "layout/_footer"; //....................1
-@import "layout/_header"; //....................2
 @import "layout/_sidebar"; //....................3
 
 @import "layout/toppage"; //....................3
-
 @import "layout/header/__header";
 //==============================================================
 //ログインユーザー登録画面の処理
