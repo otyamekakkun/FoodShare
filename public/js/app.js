@@ -5791,11 +5791,9 @@ var render = function render() {
 
   return _c("div", [_c("h1", {
     staticClass: "c-productdetail__info"
-  }, [_vm._v("\n        商品No." + _vm._s(_vm.id) + " " + _vm._s(_vm.name) + "\n    ")]), _vm._v(" "), _c("div", {
+  }, [_vm._v("商品No." + _vm._s(_vm.id) + " " + _vm._s(_vm.name))]), _vm._v(" "), _c("div", {
     staticClass: "c-productdetail__imgarea"
-  }, [_c("h1", {
-    staticClass: "c-productdetail__title"
-  }, [_vm._v("商品:No." + _vm._s(_vm.id) + "の画像")]), _vm._v(" "), _c("img", {
+  }, [_c("img", {
     staticClass: "c-productdetail__img",
     attrs: {
       src: _vm.img

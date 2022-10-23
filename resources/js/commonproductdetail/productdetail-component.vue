@@ -1,10 +1,7 @@
 <template>
     <div>
-        <h1 class="c-productdetail__info">
-            商品No.{{ id }} {{ name }}
-        </h1>
+        <h1 class="c-productdetail__info">商品No.{{ id }} {{ name }}</h1>
         <div class="c-productdetail__imgarea">
-            <h1 class="c-productdetail__title">商品:No.{{ id }}の画像</h1>
             <img v-bind:src="img" class="c-productdetail__img" />
         </div>
         <div class="c-productdetail__listarea">

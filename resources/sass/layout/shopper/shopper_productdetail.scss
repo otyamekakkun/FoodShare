@@ -10,18 +10,19 @@
     border: solid size(sssss);
     border-radius: size(m);
     width: 80%;
-    height: 1000px;
+    height: 1100px;
     //このエリアはproductdetailと同じ
     @include mqxxl() {
-        height: 900px;
+        height: 1000px;
     }
-    @include mq() {
-        height: 712px;
+    @include mqm() {
+        height: 800x;
         margin-top: 90px;
         margin-bottom: 90px;
     }
-    @include mqm() {
-        height: 740px;
+
+    @include mq() {
+        height: 712px;
         margin-top: 90px;
         margin-bottom: 90px;
     }
