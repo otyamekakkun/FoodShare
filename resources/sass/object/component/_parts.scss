@@ -61,7 +61,7 @@
     text-align: center;
     margin-top: size(xxl);
     height: 50px;
-    width: 30%;
+    width: 40%;
     border: none;
     border-radius: size(ss);
     color: white;
@@ -70,15 +70,16 @@
     &:hover {
         background: orange;
     }
-    @include mq(){
+    @include mqxl(){
         //display:block;
         width:80%;
+        margin-top:-5px;
+        margin-bottom:size(3l);
         margin-left: 10px;
         margin-right: 10px;
-    
-    
-        
     }
+
+
 }
 
 .c-staff__action__button {
