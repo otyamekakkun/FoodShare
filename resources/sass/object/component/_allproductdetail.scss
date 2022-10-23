@@ -6,6 +6,12 @@
     font-size: size(xxl);
     text-align: center;
     //display:inline;
+
+    @include mq(){
+        font-size:size(m);
+    }
+
+
 }
 
 .c-productdetail__imgarea {

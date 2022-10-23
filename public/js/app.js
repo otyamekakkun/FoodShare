@@ -5791,7 +5791,7 @@ var render = function render() {
 
   return _c("div", [_c("h1", {
     staticClass: "c-productdetail__info"
-  }, [_vm._v("\n        商品No." + _vm._s(_vm.id) + " 商品名" + _vm._s(_vm.name) + "の商品情報\n    ")]), _vm._v(" "), _c("div", {
+  }, [_vm._v("\n        商品No." + _vm._s(_vm.id) + " " + _vm._s(_vm.name) + "\n    ")]), _vm._v(" "), _c("div", {
     staticClass: "c-productdetail__imgarea"
   }, [_c("h1", {
     staticClass: "c-productdetail__title"

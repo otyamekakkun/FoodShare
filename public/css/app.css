@@ -1311,6 +1311,11 @@ a {
   font-size: 35px;
   text-align: center;
 }
+@media screen and (max-width: 414px) {
+  .c-productdetail__info {
+    font-size: 20px;
+  }
+}
 
 .c-productdetail__imgarea {
   border: dotted 3px #174113;
