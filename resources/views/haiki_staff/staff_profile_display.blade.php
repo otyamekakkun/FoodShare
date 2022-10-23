@@ -6,13 +6,20 @@
     <header>
         @include('header.staff.staff_header')
     </header>
+
+{{-- 
+l-formstaffprofileあったら削除
+ --}}
+
     
     <section>
         <form  action="{{route('haiki_staffrprofile_edit',$admin->id)}}" method="POST">
             @csrf
-            <div class="l-formstaffprofile">
-            <h3 class="l-formstaffprofile__title">コンビニ情報編集画面</h3>
-                <span class="l-formstaffprofile__message">名前:
+            <div class="c-form2">
+                <div class="c-form__area">
+
+            <h3 class="c-form__title">コンビニ情報編集画面</h3>
+                <span class="c-form__area__message">名前:
                     @error('name')
                     <span class="" role="alert">
                         <strong>{{$message}}</strong>
@@ -20,10 +27,10 @@
                     @enderror
                 </span>
                 <br/>
-                <input class="l-formstaffprofile__text" action="post" type="text" name="name" placeholder="名前を編集" value="{{$admin->name}}">
+                <input class="c-form__area__text" action="post" type="text" name="name" placeholder="名前を編集" value="{{$admin->name}}">
 <br/>
 
-<span class="l-formstaffprofile__message">メールアドレス編集:
+<span class="c-form__area__message">メールアドレス編集:
                 @error('email')
                 <span class="" role="alert">
                     <strong>{{$message}}</strong>
@@ -31,13 +38,13 @@
                 @enderror
             </span>
             <br/>
-            <input class="l-formstaffprofile__text" action="post" type="text" name="email" placeholder="メールアドレス編集" value="{{$admin->email}}">
+            <input class="c-form__area__text" action="post" type="text" name="email" placeholder="メールアドレス編集" value="{{$admin->email}}">
             <br/>
 {{-- メールアドレス編集のエラーメッセージ処理終了 --}}
 
 {{--  --}}
 
-<span class="l-formstaffprofile__message">パスワード:
+<span class="c-form__area__message">パスワード:
     @error('password')
     <span class="" role="alert">
         <strong>{{$message}}</strong>
@@ -46,11 +53,11 @@
     
 </span>
 <br/>
-            <input class="l-formstaffprofile__text" action="post" type="password" name="password" placeholder="パスワード編集">
+            <input class="c-form__area__text" action="post" type="password" name="password" placeholder="パスワード編集">
             <br/>
 {{-- パスワード入力ここまで --}}
 
-<span class="l-formstaffprofile__message">パスワード再入力:
+<span class="c-form__area__message">パスワード再入力:
     @error('password_confirmation')
     <span class="c-errormessage" role="alert">
         <strong>{{$message}}</strong>
@@ -58,10 +65,10 @@
     @enderror
 </span>
 <br/>
-        <input class="l-formstaffprofile__text" type="password" class="l-register__common__sentence" name="password_confirmation" required autocomplete="new-password">
+        <input class="c-form__area__text" type="password" class="l-register__common__sentence" name="password_confirmation" required autocomplete="new-password">
 <br/>
         {{-- パスワード再入力ここまで --}}
-<span class="l-formstaffprofile__message">コンビニ名:
+<span class="c-form__area__message">コンビニ名:
     @error('convinience_name')
     <span class="" role="alert">
         <strong>{{$message}}</strong>
@@ -69,7 +76,7 @@
     @enderror     
 </span>
 <br/>
-            <input class="l-formstaffprofile__text" action="post" type="text" name="convinience_name" placeholder="コンビニ名" value="{{$admin->convinience_name}}">
+            <input class="c-form__area__text" action="post" type="text" name="convinience_name" placeholder="コンビニ名" value="{{$admin->convinience_name}}">
             <br/>
 <span class="l-formstaffprofile__message">支店名:
     @error('convinience_branch')
@@ -158,6 +165,9 @@
 {{-- 住所変更ここまで --}}
 </div>
             <input type="submit" class="l-staffprofile__sub" value="変更する">
+
+            </div>
+            </div>
         </form>
         </div>
         </section>
