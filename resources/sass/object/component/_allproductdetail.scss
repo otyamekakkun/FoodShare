@@ -21,6 +21,14 @@
     margin-left: auto;
     margin-right: auto;
     width: 42%;
+
+
+    @include mq(){
+        width:80%;
+    }
+    
+
+
 }
 .c-productdetail__title {
     text-align: center;
@@ -60,6 +68,9 @@
     @include mqxxl(){
         width:100%;
     }
+    @include mq(){
+        height:280px;    
+    }
 
 
 }
@@ -83,6 +94,8 @@
     }
     @include mq(){
         font-size:size(ss);
+        padding:size(sss);
+        margin-bottom:size(l)
     }
 
 

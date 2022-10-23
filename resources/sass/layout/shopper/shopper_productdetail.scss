@@ -15,7 +15,13 @@
     @include mqxxl(){
         height:900px;
     }
+    @include mq(){
+        height:712px;
+        margin-top: 90px;
+        margin-bottom: 90px;
     
+    }
+
 }
 
 .l-productdetail__shopper {
