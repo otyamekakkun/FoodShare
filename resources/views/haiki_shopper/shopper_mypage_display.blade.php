@@ -4,11 +4,6 @@
 <header>
 @include('header.shopper.shoppermypage_header') 
 </header>
-
-
-
-
-
 <body>
     <div id=app>
         <div class="c-mypagemenu">
@@ -17,7 +12,7 @@
             </h1>
 
                 </div>
-        <shoppermypage-component></shoppermypage-component>
+<shoppermypage-component></shoppermypage-component>
 <footer-component></footer-component>
 </div>
 </body>

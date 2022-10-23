@@ -6116,9 +6116,7 @@ var render = function render() {
     staticClass: "l-exhibitproductlist"
   }, [_c("h1", {
     staticClass: "l-shoppermypage__title"
-  }, [_vm._v("これまでに購入された商品")]), _vm._v(" "), _c("div", {
-    staticClass: "c-productlist"
-  }, [_vm._l(_vm.getItems, function (item) {
+  }, [_vm._v("これまでに購入された商品")]), _vm._v(" "), _vm._l(_vm.getItems, function (item) {
     return _c("ul", [item.bought >= 1 ? _c("div", [_c("div", {
       staticClass: "c-productlist__items"
     }, [_c("li", {
@@ -6160,7 +6158,7 @@ var render = function render() {
       "first-button-text": "<<",
       "last-button-text": ">>"
     }
-  })], 1)], 2)])])]);
+  })], 1)], 2)])]);
 };
 
 var staticRenderFns = [];
