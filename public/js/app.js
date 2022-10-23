@@ -6032,7 +6032,7 @@ var render = function render() {
       }
     }
   })])]), _vm._v(" "), _c("div", {
-    staticClass: "l-shopperproductlist"
+    staticClass: "l-exhibitproductlist"
   }, [_c("div", {
     staticClass: "c-productlist"
   }, _vm._l(_vm.filteredProducts, function (product) {
