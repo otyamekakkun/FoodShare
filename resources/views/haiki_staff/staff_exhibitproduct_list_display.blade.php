@@ -12,12 +12,10 @@
     <header>
         @include('header.staff.staff_header')
     </header>
-
     {{-- マイページみたいなものを導入 --}}
     <div class="c-mypagemenu">
 
     <h1 class="c-mypagemenu__title">
-    {{$admin->convinience_name}}所属
     {{$admin->name}}様が出品された商品一覧
 </h1>
     </div>

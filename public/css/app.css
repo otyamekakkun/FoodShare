@@ -900,19 +900,14 @@ a {
   padding-left: 50px;
   padding-right: 50px;
 }
-@media screen and (max-width:980px) {
-  .l-exhibitproductlist {
-    height: 3500px;
-  }
-}
 @media screen and (max-width: 720px) {
   .l-exhibitproductlist {
-    height: 6350px;
+    width: 60%;
   }
 }
 @media screen and (max-width: 414px) {
   .l-exhibitproductlist {
-    height: 5500px;
+    width: 60%;
   }
 }
 
@@ -1197,26 +1192,28 @@ a {
   margin-left: 10px;
   margin-top: 30px;
 }
+@media screen and (max-width: 720px) {
+  .c-productlist__items__title {
+    display: none;
+  }
+}
+@media screen and (max-width: 414px) {
+  .c-productlist__items__title {
+    width: 40%;
+  }
+}
+
 .c-productlist__items {
-  width: 35%;
+  width: 60%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 35px;
+  margin-top: 50px;
+  margin-bottom: 100px;
   border-radius: 20px;
   border: solid 3px #174113;
   background: rgba(255, 255, 255, 0.9);
 }
-@media screen and (max-width:980px) {
-  .c-productlist__items {
-    width: 38%;
-  }
-}
-@media screen and (max-width: 720px) {
-  .c-productlist__items {
-    width: 80%;
-  }
-}
-@media screen and (max-width: 414px) {
+@media screen and (max-width:1090px) {
   .c-productlist__items {
     width: 80%;
   }
@@ -1230,8 +1227,15 @@ a {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 25px;
+  margin-top: 50px;
+  margin-bottom: -10px;
   display: block;
+}
+@media screen and (max-width: 720px) {
+  .c-productlist__items__img {
+    margin-top: 35px;
+    font-size: 15px;
+  }
 }
 .c-productlist__items__img__title {
   color: red;
@@ -1264,6 +1268,7 @@ a {
 }
 @media screen and (max-width: 414px) {
   .c-productlist__items__img__title {
+    top: -50px;
     width: 100%;
     font-size: 15px;
   }
@@ -1276,8 +1281,8 @@ a {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 25px;
-  margin-bottom: 25px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   background-attachment: fixed;
 }
 
@@ -1609,6 +1614,16 @@ a {
   margin: 40px;
   font-size: 25px;
 }
+@media screen and (max-width: 720px) {
+  .c-mypagemenu__title {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .c-mypagemenu__title {
+    font-size: 15px;
+  }
+}
 
 .c-mypagemenu {
   background: rgba(255, 255, 255, 0.6);
@@ -1620,6 +1635,22 @@ a {
   margin-top: 100px;
   border: solid 2px;
   border-radius: 5px;
+}
+@media screen and (max-width: 560px) {
+  .c-mypagemenu {
+    width: 80%;
+    height: 100px;
+    margin-top: 60px;
+    margin-bottom: -50px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .c-mypagemenu {
+    width: 80%;
+    height: 100px;
+    margin-top: 80px;
+    margin-bottom: 50px;
+  }
 }
 
 /*

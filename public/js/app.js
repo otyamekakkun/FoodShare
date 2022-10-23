@@ -6410,9 +6410,7 @@ var render = function render() {
   }, [_vm._v("これまでに購入された商品")]), _vm._v(" "), _vm._l(_vm.getItems, function (item) {
     return _c("div", [item.bought >= 1 ? _c("div", [_c("ul", {
       staticClass: "c-productlist__items"
-    }, [_c("li", {
-      staticClass: "c-productlist__items__title"
-    }, [_vm._v("\n                            商品No." + _vm._s(item.id) + "\n                        ")]), _vm._v(" "), _c("img", {
+    }, [_c("img", {
       staticClass: "c-productlist__items__img",
       attrs: {
         src: item.img_path
@@ -6466,9 +6464,7 @@ var render = function render() {
   }, [_vm._v("これまでに出品された商品")]), _vm._v(" "), _vm._l(_vm.getItems, function (item) {
     return _c("ul", {
       staticClass: "c-productlist__items"
-    }, [_c("li", {
-      staticClass: "c-productlist__items__title"
-    }, [_vm._v("\n                    商品No." + _vm._s(item.id) + "\n                ")]), _vm._v(" "), item.bought >= 1 ? _c("div", [_c("img", {
+    }, [item.bought >= 1 ? _c("div", [_c("img", {
       staticClass: "c-productlist__items__img",
       attrs: {
         src: item.img_path

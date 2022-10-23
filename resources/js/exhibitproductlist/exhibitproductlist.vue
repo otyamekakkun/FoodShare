@@ -5,6 +5,7 @@
                 <div class="c-productlist">
                     <ul class="c-productlist__items" v-for="item in getItems">
                         <!-- 購入されたら商品にlabelを付け足す機能 -->
+                        <!--  -->
                         <li class="c-productlist__items__title">
                             商品No.{{ item.id }}
                         </li>

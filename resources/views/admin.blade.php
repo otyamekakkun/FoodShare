@@ -7,8 +7,7 @@
         @include('header.staff.staffmypage_header')
     </header>
 <div class="c-mypagemenu">
-<h1 class="c-mypagemenu__title">
-    {{$admin->convinience_name}}所属 {{$admin->name}}様専用メニュー
+<h1 class="c-mypagemenu__title"> {{$admin->name}}様専用メニュー
 </h1>
 </div>
 

@@ -5,9 +5,6 @@
                 <h1 class="c-title">これまでに出品された商品</h1>
 
                 <ul class="c-productlist__items" v-for="item in getItems">
-                    <li class="c-productlist__items__title">
-                        商品No.{{ item.id }}
-                    </li>
                     <div v-if="item.bought >= 1">
                         <img
                             v-bind:src="item.img_path"

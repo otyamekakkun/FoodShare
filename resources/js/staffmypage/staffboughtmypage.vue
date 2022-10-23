@@ -6,9 +6,6 @@
                 <div v-for="item in getItems">
                     <div v-if="item.bought >= 1">
                         <ul class="c-productlist__items">
-                            <li class="c-productlist__items__title">
-                                商品No.{{ item.id }}
-                            </li>
                             <img
                                 v-bind:src="item.img_path"
                                 class="c-productlist__items__img"

@@ -13,14 +13,12 @@
     margin-top: size(xxl);
     padding-top: size(xxl);
     @include mq() {
-        //414px対応
         display: block;
     }
     @include mql() {
         display: block;
     }
 }
-
 .c-productlist__items__title {
     background: rgb(220, 168, 70);
     color: white;
@@ -29,30 +27,28 @@
     padding-left: size(l);
     margin-left: size(ss);
     margin-top: size(xl);
+    @include mql() {
+        display: none;
+    }
+
     @include mq() {
-        //414px対応
+        width: 40%;
     }
 }
 
 .c-productlist__items {
     //c-productlist-itemsのところ
-    width: 35%;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: size(xxl);
+    margin-top: size(4l);
+    margin-bottom: 100px;
     border-radius: size(m);
     border: solid size(ssss) #174113;
     //background: white;
     background: rgba(255, 255, 255, 0.9);
 
-    @include mqxl() {
-        width: 38%;
-    }
-    @include mql() {
-        width: 80%;
-    }
-
-    @include mq() {
+    @include mqxxl() {
         width: 80%;
     }
 }
@@ -64,8 +60,16 @@
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    margin-top: size(l);
+    margin-top: size(4l);
+    margin-bottom: -10px;
     display: block;
+
+    @include mql() {
+        //720px以下対応
+        margin-top: size(xxl);
+        font-size: size(s);
+    }
+
     &__title {
         color: red;
         position: relative;
@@ -79,7 +83,6 @@
         // left: 200px;
         margin-left: auto;
         margin-right: auto;
-
         width: 100%;
         font-family: "Permanent Marker", cursive;
 
@@ -97,6 +100,8 @@
 
         @include mq() {
             //414px対応
+            top: -50px;
+
             width: 100%;
             font-size: size(s);
         }
@@ -109,8 +114,8 @@
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    margin-top: size(l);
-    margin-bottom: size(l);
+    margin-top: size(4l);
+    margin-bottom: size(4l);
     background-attachment: fixed;
 }
 
@@ -120,8 +125,6 @@
     font-size: size(l);
     text-align: center;
     background: rgba(224, 169, 73, 0.1);
-    //border: solid orange;
-
     margin-top: size(sss);
     margin-bottom: 60px;
     padding-top: size(l);

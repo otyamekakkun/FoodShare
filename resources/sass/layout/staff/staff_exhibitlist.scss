@@ -16,15 +16,13 @@
     padding-right: 50px;
     // height: 3800px;
     @include mqxl() {
-        height: 3500px;
     }
     @include mql() {
-        //720px以下
-        height: 6350px;
+        width: 60%;
     }
 
     @include mq() {
         //414px対応
-        height: 5500px;
+        width: 60%;
     }
 }
