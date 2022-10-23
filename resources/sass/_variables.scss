@@ -86,6 +86,7 @@ $breakpoints: (
     "l": "screen and (max-width: 720px)",
     "xl": "screen and (max-width:980px)",
     "xxl": "screen and (max-width:1090px)",
+
     //写真の大きさを揃える
 ) !default;
 
@@ -111,3 +112,4 @@ $breakpoints: (
         @content;
     }
 }
+

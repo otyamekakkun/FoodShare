@@ -12,6 +12,10 @@
     width: 80%;
     height: 1000px;
     //このエリアはproductdetailと同じ
+    @include mqxxl(){
+        height:900px;
+    }
+    
 }
 
 .l-productdetail__shopper {

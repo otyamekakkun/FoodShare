@@ -27,13 +27,20 @@
     margin-top: size(xl);
     margin-bottom: size(xl);
     font-size: size(m);
+@include mqxxl(){
+    display:none;
+}
+
+
 }
 .c-productdetail__img {
     width: 70%;
     margin-bottom: size(xl);
     margin-left:size(xxl);
     margin-right:size(xxl);
-
+    @include mqxxl(){
+        margin-top:size(xxl);
+    }
 }
 
 .c-productdetail__listarea {
@@ -44,22 +51,35 @@
     margin-left: auto;
     margin-right: auto;
     width: 88%;
+    @include mqxxl(){
+        width:100%;
+    }
+
+
 }
 
 .c-productdetail__list {
     text-align: left;
-    width: 55%;
+    width: 65%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: size(xxl);
+    margin-top: size(2l);
     font-size: size(xl);
-    height:300px;
+    height:330px;
 
 }
 .c-productlist__items__listt__sentence {
     margin-bottom: size(m);
     border-bottom: double;
     border-color: black;
+    @include mqxxl(){
+        font-size:size(m);
+    }
+    @include mq(){
+        font-size:size(ss);
+    }
+
+
 }
 /*
 いらない
