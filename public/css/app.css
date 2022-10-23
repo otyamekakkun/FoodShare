@@ -908,12 +908,12 @@ a {
   background: rgba(255, 255, 255, 0.8);
   margin-right: auto;
   margin-left: auto;
-  margin-top: 35px;
-  margin-bottom: 35px;
+  margin-top: 100px;
+  margin-bottom: 100px;
   border: solid 2px;
   border-radius: 20px;
-  width: 60%;
-  height: 1100px;
+  width: 80%;
+  height: 1000px;
 }
 
 .l-productdetail__shopper {
@@ -932,7 +932,7 @@ a {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 20px;
+  margin-top: 25px;
   text-align: center;
   height: 860px;
 }
@@ -1289,41 +1289,49 @@ a {
   background: orange;
 }
 
+.c-productdetail__info {
+  margin-top: 50px;
+  font-size: 35px;
+  text-align: center;
+}
+
 .c-productdetail__imgarea {
-  border: dotted 1px;
+  border: dotted 3px #174113;
   border-radius: 10px;
   margin-top: 35px;
   margin-left: auto;
   margin-right: auto;
-  width: 60%;
-}
-
-.c-productdetail__info {
-  margin-top: 55px;
-  font-size: 20px;
-  text-align: center;
+  width: 42%;
 }
 
 .c-productdetail__title {
   text-align: center;
-  margin-left: 15px;
-  margin-top: 15px;
-  margin-bottom: 10px;
+  width: 50%;
+  border: solid #174113;
+  background: orange;
+  color: white;
+  border-radius: 15px;
+  margin-left: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   font-size: 20px;
 }
 
 .c-productdetail__img {
-  width: 80%;
-  margin-bottom: 25px;
+  width: 70%;
+  margin-bottom: 30px;
+  margin-left: 35px;
+  margin-right: 35px;
 }
 
 .c-productdetail__listarea {
-  border: dotted 1px;
+  border: dotted 3px;
   border-radius: 10px;
   margin-top: 70px;
+  margin-bottom: 70px;
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
+  width: 88%;
 }
 
 .c-productdetail__list {
@@ -1332,8 +1340,8 @@ a {
   margin-left: auto;
   margin-right: auto;
   margin-top: 35px;
-  height: 400px;
   font-size: 30px;
+  height: 300px;
 }
 
 .c-productlist__items__listt__sentence {
@@ -1342,12 +1350,14 @@ a {
   border-color: black;
 }
 
+/*
+いらない
 .c-productdetail__listtitle {
-  text-align: left;
-  font-size: 20px;
-  margin-top: 35px;
+    text-align: left;
+    font-size: size(m);
+    margin-top: size(xxl);
 }
-
+*/
 .c-productdetail__shoppermenu {
   margin-right: auto;
   margin-left: auto;

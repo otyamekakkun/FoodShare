@@ -8,19 +8,19 @@
             <img v-bind:src="img" class="c-productdetail__img" />
         </div>
         <div class="c-productdetail__listarea">
-            <h1 class="c-productdetail__listtitle">商品の内容</h1>
+            <!-- <h1 class="c-productdetail__listtitle">商品の内容</h1> -->
             <ul class="c-productdetail__list">
                 <li class="c-productlist__items__listt__sentence">
-                    ・商品名:{{ name }}
+                    ・商品名:　{{ name }}
                 </li>
                 <li class="c-productlist__items__listt__sentence">
-                    ・お値段:{{ price }}円
+                    ・お値段:　{{ price }}円
                 </li>
                 <li class="c-productlist__items__listt__sentence">
-                    ・期限:{{ best_by_date }}
+                    ・期限:　{{ best_by_date }}
                 </li>
                 <li class="c-productlist__items__listt__sentence">
-                    ・出品した県名:{{ prefecture }}
+                    ・出品した県名:　{{ prefecture }}
                 </li>
             </ul>
         </div>
