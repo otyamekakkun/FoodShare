@@ -15,6 +15,7 @@
     font-size: size(4l);
     color: white;
     padding: size(m);
+    margin-left:size(m);
 }
 // テキストエリア
 .l-toppageheader {
@@ -45,6 +46,10 @@
     z-index: 100; /* 重なり順を一番上にする */
     cursor: pointer;
     margin-top: 60px;
+@include mq(){
+    right: 60px;
+}
+
 }
 
 /* ハンバーガーメニューのアイコン */

@@ -521,6 +521,7 @@ a {
   font-size: 50px;
   color: white;
   padding: 20px;
+  margin-left: 20px;
 }
 
 .l-toppageheader {
@@ -549,6 +550,11 @@ a {
   z-index: 100; /* 重なり順を一番上にする */
   cursor: pointer;
   margin-top: 60px;
+}
+@media screen and (max-width: 414px) {
+  .c-drawer--open {
+    right: 60px;
+  }
 }
 
 /* ハンバーガーメニューのアイコン */
