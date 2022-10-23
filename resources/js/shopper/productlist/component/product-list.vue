@@ -12,13 +12,12 @@
                             placeholder="都道府県を入力してください"
                             class="c-search__prefecture"
                         />
-                        <p class="c-search__title">:予算内の金額で検索する</p>
+                        <p class="c-search__title">:予算内の金額で検索</p>
                         <input
                             type="text"
                             v-model="budgets"
                             class="c-search__prefecture"
                         />
-                        <p class="c-search__title">円</p>
                     </div>
                     <div class="c-serch2">
                         :有効期限チェック
@@ -30,7 +29,6 @@
                         />
                     </div>
                 </div>
-
                 <div class="l-exhibitproductlist">
                     <div class="c-productlist">
                         <ul
@@ -86,8 +84,6 @@ export default {
             keywords: "", //都道府県
             Days2: "", //入力された日付がデータとして入ります
             budgets: 10000, //デフォルトで10000円と打ち込まれている。
-            //出品した都道府県で絞り込む
-            prefecturecheck: false,
         };
     },
 

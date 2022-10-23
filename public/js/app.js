@@ -5400,10 +5400,8 @@ __webpack_require__.r(__webpack_exports__);
       //都道府県
       Days2: "",
       //入力された日付がデータとして入ります
-      budgets: 10000,
-      //デフォルトで10000円と打ち込まれている。
-      //出品した都道府県で絞り込む
-      prefecturecheck: false
+      budgets: 10000 //デフォルトで10000円と打ち込まれている。
+
     };
   },
   computed: {
@@ -5986,7 +5984,7 @@ var render = function render() {
     }
   }), _vm._v(" "), _c("p", {
     staticClass: "c-search__title"
-  }, [_vm._v(":予算内の金額で検索する")]), _vm._v(" "), _c("input", {
+  }, [_vm._v(":予算内の金額で検索")]), _vm._v(" "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -6006,9 +6004,7 @@ var render = function render() {
         _vm.budgets = $event.target.value;
       }
     }
-  }), _vm._v(" "), _c("p", {
-    staticClass: "c-search__title"
-  }, [_vm._v("円")])]), _vm._v(" "), _c("div", {
+  })]), _vm._v(" "), _c("div", {
     staticClass: "c-serch2"
   }, [_vm._v("\n                    :有効期限チェック\n                    "), _c("input", {
     directives: [{

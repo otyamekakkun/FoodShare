@@ -1029,6 +1029,12 @@ a {
   margin-bottom: 80px;
   padding: 5px;
 }
+@media screen and (max-width:1090px) {
+  .l-productsearch {
+    height: 500px;
+    text-align: center;
+  }
+}
 
 .c-serch {
   display: flex;
@@ -1036,11 +1042,22 @@ a {
   height: 40px;
   margin-top: 45px;
 }
+@media screen and (max-width:1090px) {
+  .c-serch {
+    display: block;
+  }
+}
 
 .c-search__title {
   margin-right: 5px;
   margin-left: 20px;
   margin-top: 5px;
+}
+@media screen and (max-width:1090px) {
+  .c-search__title {
+    margin-bottom: 20px;
+    font-size: 25px;
+  }
 }
 
 .c-search__prefecture:hover {
@@ -1048,9 +1065,18 @@ a {
 }
 
 .c-serch2 {
-  width: 80%;
-  margin-top: 40px;
   text-align: center;
+  display: flex;
+  margin-top: 60px;
+  margin-left: 558px;
+}
+@media screen and (max-width:1090px) {
+  .c-serch2 {
+    display: block;
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .c-search__calender:hover {

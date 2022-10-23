@@ -10,8 +10,12 @@
     border-radius: size(sss);
     margin-top: 80px;
     margin-bottom: 80px;
-
     padding: size(sss);
+
+    @include mqxxl() {
+        height: 500px;
+        text-align: center;
+    }
 }
 .c-serch {
     // background: red;
@@ -20,6 +24,9 @@
     justify-content: center;
     height: 40px;
     margin-top: size(3l);
+    @include mqxxl() {
+        display: block;
+    }
 }
 
 .c-search__title {
@@ -27,6 +34,10 @@
     margin-right: size(sss);
     margin-left: size(m);
     margin-top: size(sss);
+    @include mqxxl() {
+        margin-bottom: 20px;
+        font-size: size(l);
+    }
 }
 
 .c-search__prefecture {
@@ -35,9 +46,16 @@
     }
 }
 .c-serch2 {
-    width: 80%;
-    margin-top: 40px;
     text-align: center;
+    display: flex;
+    margin-top: 60px;
+    margin-left: 558px;
+    @include mqxxl() {
+        display: block;
+        margin-top: 200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 .c-search__calender {
     &:hover {
