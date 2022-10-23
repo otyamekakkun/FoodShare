@@ -4,10 +4,13 @@
     @include('header.staff.staff_header')
 </header>
 <body>
-    <h1 class="c-title">
+    <div class="c-mypagemenu">
+
+    <h1 class="c-mypagemenu__title">
         {{$admins->name}}様
 購入された商品一覧
     </h1>
+    </div>
 
 <div id="app">
     <bought-componennt></bought-componennt>

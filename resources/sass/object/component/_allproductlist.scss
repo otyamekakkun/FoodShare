@@ -25,7 +25,6 @@
     background: rgb(220, 168, 70);
     color: white;
     width: 30%;
-
     font-size: size(m);
     padding-left: size(l);
     margin-left: size(ss);
@@ -36,12 +35,13 @@
 }
 
 .c-productlist__items {
-    width: 44%;
+    //c-productlist-itemsのところ
+    width: 35%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: size(xxl);
     border-radius: size(m);
-    border: solid #174113;
+    border: solid size(ssss) #174113;
     //background: white;
     background: rgba(255, 255, 255, 0.9);
 
@@ -53,8 +53,6 @@
     }
 
     @include mq() {
-        //414px対応
-        // background: red;
         width: 80%;
     }
 }
@@ -121,23 +119,23 @@
     display: block;
     font-size: size(l);
     text-align: center;
-    background: #f6f5f4;
+    background: rgba(224, 169, 73, 0.1);
+    //border: solid orange;
 
     margin-top: size(sss);
     margin-bottom: 60px;
-
-    //background: red;
-    // background: #a8c079;
+    padding-top: size(l);
+    padding-bottom: size(sssss);
 }
 
 //==============================
 //ボタン処理
 //==============================
 .c-productlist__items__bottom {
-    background: #a8c079;
+    //background: #a8c079;
     margin-top: size(m);
     padding-top: size(m);
-    //font-size: size(l);
+    border: solid orange;
 }
 .c-productlist__items__bottom__area {
     background: #174113;
@@ -145,7 +143,6 @@
     margin-right: size(s);
     margin-bottom: size(m);
     text-align: center;
-
     height: 50px;
     width: 50%;
     border: none;
@@ -166,7 +163,6 @@
     margin-top: auto;
     margin-bottom: auto;
     text-align: center;
-
     height: 50px;
     width: 30%;
     border: none;
