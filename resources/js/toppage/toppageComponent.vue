@@ -1,10 +1,11 @@
 
 <template>
-    <div id="app6">
-        <button v-on:click="show = !show">お客様として始める</button>
+    <div >
+        <div class="l-top__area__form">
+        <button v-on:click="show = !show" class="l-top__area__form__button">お客様として始める</button>
+    </div>
         <transition name="fade">
             <div v-if="show">
-                <div class="l-top__area">
                     <div class="l-top__area__form__custom">
                         <h1>お客買い物を始める</h1>
                         <div class="l-top__area__form__custom__button">
@@ -17,16 +18,15 @@
                                 >
                             </button>
                         </div>
-                    </div>
                 </div>
             </div>
         </transition name="fade">
-
             <!-- コンビニ -->
-            <button v-on:click="show1 = !show1">コンビニとして始める</button>
+            <div class="l-top__area__form2">
+            <button v-on:click="show1 = !show1"  class="l-top__area__form__button">コンビニとして始める</button>
+            </div>
             <transition name="fade">
             <div v-if="show1">
-                <div class="l-top__area">
                     <div class="l-top__area__form__custom">
                         <h1>コンビニスタッフとして</h1>
             <div class="l-top__area__form__custom__button">
@@ -40,12 +40,10 @@
                     お客様がご利用される場合は上のお客様ログイン,またはお客様ユーザー登録からお入りください
                 </p>
                 </div>
+                </div>
             </div>
+        </transition>
         </div>
-    </div>
-</transition>
-
-</div>                
 
 
     </div>

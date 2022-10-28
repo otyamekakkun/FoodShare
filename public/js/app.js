@@ -6544,23 +6544,20 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", {
-    attrs: {
-      id: "app6"
-    }
+  return _c("div", [_c("div", {
+    staticClass: "l-top__area__form"
   }, [_c("button", {
+    staticClass: "l-top__area__form__button",
     on: {
       click: function click($event) {
         _vm.show = !_vm.show;
       }
     }
-  }, [_vm._v("お客様として始める")]), _vm._v(" "), _c("transition", {
+  }, [_vm._v("お客様として始める")])]), _vm._v(" "), _c("transition", {
     attrs: {
       name: "fade"
     }
   }, [_vm.show ? _c("div", [_c("div", {
-    staticClass: "l-top__area"
-  }, [_c("div", {
     staticClass: "l-top__area__form__custom"
   }, [_c("h1", [_vm._v("お客買い物を始める")]), _vm._v(" "), _c("div", {
     staticClass: "l-top__area__form__custom__button"
@@ -6577,19 +6574,20 @@ var render = function render() {
     attrs: {
       href: "./register"
     }
-  }, [_vm._v("お客様ユーザー登録")])])])])])]) : _vm._e()]), _vm._v(" "), _c("button", {
+  }, [_vm._v("お客様ユーザー登録")])])])])]) : _vm._e()]), _vm._v(" "), _c("div", {
+    staticClass: "l-top__area__form2"
+  }, [_c("button", {
+    staticClass: "l-top__area__form__button",
     on: {
       click: function click($event) {
         _vm.show1 = !_vm.show1;
       }
     }
-  }, [_vm._v("コンビニとして始める")]), _vm._v(" "), _c("transition", {
+  }, [_vm._v("コンビニとして始める")])]), _vm._v(" "), _c("transition", {
     attrs: {
       name: "fade"
     }
   }, [_vm.show1 ? _c("div", [_c("div", {
-    staticClass: "l-top__area"
-  }, [_c("div", {
     staticClass: "l-top__area__form__custom"
   }, [_c("h1", [_vm._v("コンビニスタッフとして")]), _vm._v(" "), _c("div", {
     staticClass: "l-top__area__form__custom__button"
@@ -6605,7 +6603,7 @@ var render = function render() {
     attrs: {
       href: "./register/admin"
     }
-  }, [_vm._v("コンビニユーザー登録")])]), _vm._v(" "), _c("p", [_vm._v("\n                    お客様がご利用される場合は上のお客様ログイン,またはお客様ユーザー登録からお入りください\n                ")])])])])]) : _vm._e()])], 1);
+  }, [_vm._v("コンビニユーザー登録")])]), _vm._v(" "), _c("p", [_vm._v("\n                お客様がご利用される場合は上のお客様ログイン,またはお客様ユーザー登録からお入りください\n            ")])])])]) : _vm._e()])], 1);
 };
 
 var staticRenderFns = [];
