@@ -7,7 +7,6 @@
         <transition name="fade">
             <div v-if="show">
                     <div class="l-top__area__form__custom">
-                        <h1>お客買い物を始める</h1>
                         <div class="l-top__area__form__custom__button">
                             <button class="c-top__button">
                                 <a href="login">お客様ログイン</a>
@@ -23,12 +22,11 @@
         </transition name="fade">
             <!-- コンビニ -->
             <div class="l-top__area__form2">
-            <button v-on:click="show1 = !show1"  class="l-top__area__form__button">コンビニとして始める</button>
+            <button v-on:click="show1 = !show1"  class="l-top__area__form__button">管理者として始める</button>
             </div>
             <transition name="fade">
             <div v-if="show1">
                     <div class="l-top__area__form__custom">
-                        <h1>コンビニスタッフとして</h1>
             <div class="l-top__area__form__custom__button">
                 <button class="c-top__button">
                     <a href="./login/admin">コンビニログイン</a>
@@ -57,30 +55,3 @@ export default {
 </script>
 
 
-<style>
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .5s;
-}
-
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */
-{
-  opacity: 0;
-}
-</style>
-
-
-            <!-- 
-<div class="l-top__area">
-    <div class="l-top__area__form__custom">
-        <h1>買い物を始める</h1>
-        <div class="l-top__area__form__custom__button">
-            <button class="c-top__button">
-                <a href="login">お客様ログイン</a>
-            </button>
-            <button class="c-top__button">
-                <a class="nav-link" href="./register">お客様ユーザー登録</a>
-            </button>
-        </div>
-    </div>
-
- -->

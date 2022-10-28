@@ -10,11 +10,11 @@
     position: absolute;
     background: rgba(255, 255, 255, 0.6);
     width: 80%;
-    height: 500px;
+    height: 450px;
     transform: translatez(+50%);
     left: 50%;
     transform: translateX(-50%);
-    top: 300px;
+    top: 250px;
     text-align: center;
     border-radius: size(ssss);
 }
@@ -27,15 +27,6 @@
     font-size: 120px;
     height: 200px;
     margin-top: 60px;
-
-    // 画面サイズが変わっても中央揃えになるようにセッティングする
-    /*
-    top: 350px;
-
-    transform: translatez(+50%);
-    left: 50%;
-    transform: translateX(-50%);
-    */
 }
 .l-top__title__text2 {
     // position: absolute;
@@ -79,37 +70,58 @@
 //ボタンエリア
 //=========================
 .l-top__area__form {
-    background: rgba(255, 255, 255, 0.8);
-
+    background: rgba(255, 255, 255, 0.7);
     display: flex;
+    border-radius: size(sssss);
     justify-content: center;
     height: 200px;
     margin-bottom: 100px;
     width: 50%;
     position: absolute;
-    top: 900px;
+    top: 840px;
     transform: translatez(+50%);
     left: 50%;
     transform: translateX(-50%);
 }
 .l-top__area__form__button {
-    background: red;
-    margin-left: size(l);
-    margin-right: size(l);
-    margin-top: 20px;
+    //background: red;
+    color: white;
+    background: #174113;
+    font-size: 20px;
+    width: 30%;
+    text-align: center;
+    margin-left: size(xl);
+    margin-right: size(xl);
+    margin-top: 35px;
     margin-bottom: auto;
     height: 50px;
+    border-radius: size(s);
+    transition: 0.8s;
+    &:hover {
+        background: orange;
+    }
 }
 
 .l-top__area__form2 {
-    // background: rgba(255, 255, 255, 0.8);
     display: flex;
     justify-content: center;
     height: 200px;
     width: 50%;
     position: absolute;
-    top: 1000px;
+    top: 920px;
     transform: translatez(+50%);
     left: 50%;
     transform: translateX(-50%);
+}
+//==================
+//アニメーション管理するもの
+//==================
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 1.2s;
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
 }
