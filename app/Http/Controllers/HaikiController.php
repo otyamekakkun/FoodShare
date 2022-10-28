@@ -35,10 +35,10 @@ class HaikiController extends Controller
 public function shopper_profile_edit(Request $request)
 {
 $request->validate([
-    'name'=>'required',
-    'email'=>'required',
-    'password'=>'required|min:6|',
-    'password_confirmation'=>'required|min:6|same:password'
+    'name'=>['required','max:255'],
+    'email'=>['required','string', 'email:strict,dns,spoof', 'max:255', 'unique:users'],
+    'password'=>['required','min:6','max:255'],
+    'password_confirmation'=>['required','same:password'],
 ]);
 $id = Auth::id();
 $user = User::find($id);
@@ -97,10 +97,10 @@ $product = products::find($id);
     public function staff_profile_edit(Request $request)
 {
 $request->validate([
-'name'=>'required',
-    'email'=>'required',
-    'password'=>'required|min:6',
-    'password_confirmation'=>'required|min:6|same:password',
+'name'=>['required','max:255'],
+    'email'=>['required','max:255'],
+    'password'=>['required','min:6','max:255'],
+    'password_confirmation'=>['required','min:6','same:password'],
     'convinience_name'=>'required',
     'convinience_branch'=>'required',
     'adress'=>'required',
@@ -135,8 +135,9 @@ public function create_exhibitproduct(Request $request){
     $request->validate([
         'product_name'=>'required',
         'img_path' => 'required|file|image|mimes:png,jpeg',
-        'price'=>'required',
+        'price'=>'required',//全角で入力した瞬間enterを押された瞬間消える
         'best_by_date'=>'required'
+
     ]);
 
     //laravelで表示されるための処理。
@@ -187,6 +188,10 @@ public function destroy($id){
 
 public function update_exhibitproduct(Request $request,$id){
     $request->validate([
+        'product_name'=>'required',
+        'img_path' => 'required|file|image|mimes:png,jpeg',
+        'price'=>'required',//全角で入力した瞬間enterを押された瞬間消える
+        'best_by_date'=>'required'
     ]);
 $img = $request->file('img_path');
 $path = $img->store('img','public');//1
@@ -299,6 +304,5 @@ public function buyjson(){
     $product = products::where("admin_id",$id)->orderBy('updated_at','desc')->get();
 return response()->json($product);
 }
-
 }
 //=========================================================json形式で渡すのここまで。

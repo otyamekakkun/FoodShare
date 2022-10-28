@@ -12,10 +12,6 @@
         >
             <div class="c-staffform__area__uploadimgarea">
                 <label for="upload_image">
-                    <p>
-                        このエリアにドラッグ&ドロップまたは画像を選択してください<br />
-                        (*下のエリアに画像が表示されます)
-                    </p>
                     <input
                         id="upload_image"
                         type="file"
@@ -24,6 +20,7 @@
                         style="display: none"
                         accept="image/*"
                     />
+                    <p>このエリアにドラッグ&ドロップをしてください<br /></p>
                 </label>
             </div>
             <!-- ここからプレビュー機能の部分 -->

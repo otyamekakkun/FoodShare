@@ -7,13 +7,13 @@
         <div id="app">
             <div class="c-mypagemenu">
                 <h1  class="c-mypagemenu__title">
-                    商品を編集する
+                    商品編集
                 </h1>
             </div>
         
     <div class="c-form1">
 
-        <h1 class="c-form__title">出品されたい商品の情報について記述してください</h1>
+        <h1 class="c-form__title">商品の情報について記述してください</h1>
 
 
 <form method="POST" action="{{ route('exhibit.update',$products->id)}}" enctype="multipart/form-data">

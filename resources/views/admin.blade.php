@@ -9,6 +9,7 @@
 <div class="c-mypagemenu">
 <h1 class="c-mypagemenu__title"> {{$admin->name}}様専用メニュー
 </h1>
+
 </div>
 
 <div id="app">

@@ -7,13 +7,13 @@
 テスト巡回1 ok
  -->
 <template>
-    <div class="l">
-        <P>賞味期限を入れてください</P>
+    <div class="c-form__title">
+        <P>賞味期限を選択してください:</P>
         <input
             type="date"
             :min="new Date().toISOString().split('T')[0]"
             name="best_by_date"
-            class="c-staffform__area__textcarender"
+            class="c-search__calender"
         />
     </div>
 </template>
