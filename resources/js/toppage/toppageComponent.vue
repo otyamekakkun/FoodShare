@@ -5,6 +5,7 @@
             <div v-show="visible">
                  -->
         <!-- <img src="img/top.jpg" class="l-topimg2" /> -->
+        <!--
         <div class="l-top__area__form__custom">
             <h1>買い物を始める</h1>
             <div class="l-top__area__form__custom__button">
@@ -32,6 +33,7 @@
                 </div>
             </div>
         </div>
+          -->
     </div>
 </template>
 <!-- 

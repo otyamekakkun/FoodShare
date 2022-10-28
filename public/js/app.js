@@ -6522,50 +6522,10 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _vm._m(0);
+  return _c("div");
 };
 
-var staticRenderFns = [function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("div", [_c("div", {
-    staticClass: "l-top__area__form__custom"
-  }, [_c("h1", [_vm._v("買い物を始める")]), _vm._v(" "), _c("div", {
-    staticClass: "l-top__area__form__custom__button"
-  }, [_c("button", {
-    staticClass: "c-top__button"
-  }, [_c("a", {
-    attrs: {
-      href: "login"
-    }
-  }, [_vm._v("お客様ログイン")])]), _vm._v(" "), _c("button", {
-    staticClass: "c-top__button"
-  }, [_c("a", {
-    staticClass: "nav-link",
-    attrs: {
-      href: "./register"
-    }
-  }, [_vm._v("お客様ユーザー登録")])])])]), _vm._v(" "), _c("div", {
-    staticClass: "l-top__area"
-  }, [_c("div", {
-    staticClass: "l-top__area__form__custom"
-  }, [_c("h1", [_vm._v("コンビニスタッフとして")]), _vm._v(" "), _c("div", {
-    staticClass: "l-top__area__form__custom__button"
-  }, [_c("button", {
-    staticClass: "c-top__button"
-  }, [_c("a", {
-    attrs: {
-      href: "./login/admin"
-    }
-  }, [_vm._v("ログインする")])]), _vm._v(" "), _c("button", {
-    staticClass: "c-top__button"
-  }, [_c("a", {
-    attrs: {
-      href: "./register/admin"
-    }
-  }, [_vm._v("ユーザー登録する")])]), _vm._v(" "), _c("p", [_vm._v("\n                    お客様がご利用される場合は上のお客様ログイン,またはお客様ユーザー登録からお入りください。\n                ")])])])])]);
-}];
+var staticRenderFns = [];
 render._withStripped = true;
 
 

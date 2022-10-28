@@ -17,9 +17,7 @@
             <li class="nav_item"><a href="{{route('admin-home')}}">マイページに戻る</a></li>
             <form action="{{ route('logout') }}" method="post">
               @csrf
-              <button class="l-header__nav__button">
-              <input class="" type="submit" value="ログアウト">
-          </button>
+              <input class="l-header__nav__button" type="submit" value="ログアウト">
             </form>
 
           </ul>

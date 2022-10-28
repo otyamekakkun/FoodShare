@@ -22,9 +22,7 @@
           </ul>
           <form action="{{ route('logout') }}" method="post">
             @csrf
-            <button class="">
-            <input class="" type="submit" value="ログアウト">
-        </button>
+            <input class="l-header__nav__button" type="submit" value="ログアウト">
           </form>
         </nav>
     

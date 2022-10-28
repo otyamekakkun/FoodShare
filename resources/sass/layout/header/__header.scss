@@ -129,6 +129,17 @@
         text-decoration: underline;
     }
 }
+
+/*ヘッダー部分のログアウトボタン*/
+.l-header__nav__button {
+    border-radius: size(sss);
+    transition: all 0.3s;
+    &:hover {
+        background: orange;
+        font-size: size(xl);
+    }
+}
+
 /* アイコンがクリックされたらメニューを表示 */
 #drawer_input:checked ~ .nav_content {
     bottom: 0; /* メニューを画面に入れる */
