@@ -66,7 +66,7 @@ return redirect('haiki/shopper_mypage');//..............画面表示するもの
 $product = products::find($id);         
         return view('haiki_shopper.shopper_productdetail_display',['products'=>$product]);
     } 
-    public function shopper_productdetail_bought (Request $request, $id){
+    public function shopper_productdetail_bought ($id){
         $user = Auth::id();
         $product = products::find($id);//商品専用のid
         $product->user_id = $user;//現在ログインしているコンビニユーザー情報のidをこの中に入れる
@@ -75,7 +75,7 @@ $product = products::find($id);
         $product->save();
         return redirect('haiki/shopper_mypage');
     }
-    public function shopper_productdetail_cancel (Request $request, $id){
+    public function shopper_productdetail_cancel ($id){
         $user = Auth::id();
         $product = products::find($id);//商品専用のid
         $product->user_id = $user;//現在ログインしているコンビニユーザー情報のidをこの中に入れる
@@ -133,10 +133,10 @@ return redirect('admin')->with('flash_message', __('Registered.'));
 public function create_exhibitproduct(Request $request){
     //入力するときにバリデーションチェックを設ける
     $request->validate([
-       // 'product_name'=>'required',
-        //'img_path' => 'required|file|image|mimes:png,jpeg',
-        //'price'=>'required',
-        //'best_by_date'=>'required'
+        'product_name'=>'required',
+        'img_path' => 'required|file|image|mimes:png,jpeg',
+        'price'=>'required',
+        'best_by_date'=>'required'
     ]);
 
     //laravelで表示されるための処理。
@@ -164,7 +164,7 @@ return redirect('admin')->with('flash_message', __('Registered.'));//3
 //7コンビニ 購入された商品一覧画面                                 //
 //==============================================================
 
-    public function staff_buyproduct_display(Request $request){
+    public function staff_buyproduct_display(){
         $id = Auth::guard('admin')->id();
         $admin = DB::table('admins')->find($id);
         return view('haiki_staff.staff_buyproduct_display',['admins'=>$admin]);
@@ -247,8 +247,6 @@ public function staff_exhibitproduct_json(){
     return response()->json($product);
 
 }
-
-
 //==========================================================ここまで
 
 //=======================================================================
@@ -268,14 +266,14 @@ public function admin(){
 //json形式でファイルを保存するためのコントローラ        //
 //================================================
 //これがjson形式で値を渡す方法
-public function index1(Request $request){
+public function index1(){
     // $drill = products::all();
 $drill = DB::table('products')->get();
     return response()->json($drill);
     //index1の内容は基本的にファイルの中に入っているもの全てを取得する
 }
 
-public function index2(Request $request){
+public function index2(){
     $drill = products::all();
     return response()->json($drill);
 }
