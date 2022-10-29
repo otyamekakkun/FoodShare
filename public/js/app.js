@@ -6553,7 +6553,7 @@ var render = function render() {
         _vm.show = !_vm.show;
       }
     }
-  }, [_vm._v("お客様として始める")])]), _vm._v(" "), _c("transition", {
+  }, [_vm._v("\n            お客様として始める\n        ")])]), _vm._v(" "), _c("transition", {
     attrs: {
       name: "fade"
     }
@@ -6583,7 +6583,7 @@ var render = function render() {
         _vm.show1 = !_vm.show1;
       }
     }
-  }, [_vm._v("管理者として始める")])]), _vm._v(" "), _c("transition", {
+  }, [_vm._v("\n            管理者として始める\n        ")])]), _vm._v(" "), _c("transition", {
     attrs: {
       name: "fade"
     }
@@ -6605,7 +6605,7 @@ var render = function render() {
     }
   }, [_vm._v("コンビニユーザー登録")])]), _vm._v(" "), _c("p", {
     staticClass: "c-warning"
-  }, [_vm._v("\n                お客様がご利用される場合は上のお客様として始めるから、お客様ログイン,またはお客様ユーザー登録からお入りください\n            ")])])])]) : _vm._e()])], 1);
+  }, [_vm._v("\n                        お客様がご利用される場合は上のお客様として始めるから、お客様ログイン,またはお客様ユーザー登録からお入りください\n                    ")])])])]) : _vm._e()])], 1);
 };
 
 var staticRenderFns = [];
