@@ -43,7 +43,6 @@
                                 @enderror
                             </div>
                         </div>
-                        <h1>こんにちは</h1>
 
                         <div class="row mb-3">
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirm Password') }}</label>
