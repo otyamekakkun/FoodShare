@@ -6588,7 +6588,7 @@ var render = function render() {
       name: "fade"
     }
   }, [_vm.show1 ? _c("div", [_c("div", {
-    staticClass: "l-top__area__form__custom"
+    staticClass: "l-top__area__form__custom2"
   }, [_c("div", {
     staticClass: "l-top__area__form__custom__button"
   }, [_c("button", {
@@ -6603,7 +6603,9 @@ var render = function render() {
     attrs: {
       href: "./register/admin"
     }
-  }, [_vm._v("コンビニユーザー登録")])]), _vm._v(" "), _c("p", [_vm._v("\n                お客様がご利用される場合は上のお客様ログイン,またはお客様ユーザー登録からお入りください\n            ")])])])]) : _vm._e()])], 1);
+  }, [_vm._v("コンビニユーザー登録")])]), _vm._v(" "), _c("p", {
+    staticClass: "c-warning"
+  }, [_vm._v("\n                お客様がご利用される場合は上のお客様として始めるから、お客様ログイン,またはお客様ユーザー登録からお入りください\n            ")])])])]) : _vm._e()])], 1);
 };
 
 var staticRenderFns = [];

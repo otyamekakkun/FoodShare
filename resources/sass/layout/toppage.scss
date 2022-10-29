@@ -1,6 +1,6 @@
 .l-topimg {
     width: 100%;
-    height: 1000px;
+    height: 1700px;
     opacity: 0.85;
     position: relative;
     inset: 0;
@@ -14,13 +14,11 @@
     transform: translatez(+50%);
     left: 50%;
     transform: translateX(-50%);
-    top: 250px;
+    top: 210px;
     text-align: center;
     border-radius: size(ssss);
 }
-
 .l-top__title__text {
-    // position: absolute;
     color: white;
     -webkit-text-stroke: size(sss) orange;
     font-family: "Permanent Marker", cursive;
@@ -29,12 +27,12 @@
     margin-top: 60px;
 }
 .l-top__title__text2 {
-    // position: absolute;
     color: white;
     -webkit-text-stroke: size(sss) orange;
     font-family: "Permanent Marker", cursive;
     font-size: 80px;
 }
+
 .l-top__area {
     background: rgba(255, 255, 255, 0.6);
     border-radius: size(xl);
@@ -47,6 +45,9 @@
     padding-bottom: 20px;
 }
 
+//=================================
+//ボタンを押された時に表示される機能(お客様）
+//=================================
 .l-top__area__form__custom {
     border: solid size(sssss) #174113;
     border-radius: size(4l);
@@ -54,7 +55,36 @@
     height: 250px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
+    //margin-top: -5px;
+    //padding-top: 5px;
+    position: absolute;
+    top: 1100px;
+    transform: translatez(+50%);
+    left: 50%;
+    transform: translateX(-50%);
+
+    margin-bottom: 50px;
+    width: 80%;
+}
+
+//=================================
+//ボタンを押された時に表示される機能(コンビニ）
+//=================================
+.l-top__area__form__custom2 {
+    border: solid size(sssss) #174113;
+    border-radius: size(4l);
+    background: rgba(255, 255, 255, 0.6);
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    //margin-top: -5px;
+    //padding-top: 5px;
+    position: absolute;
+    top: 1400px;
+    transform: translatez(+50%);
+    left: 50%;
+    transform: translateX(-50%);
+
     margin-bottom: 50px;
     width: 80%;
 }
@@ -78,7 +108,7 @@
     margin-bottom: 100px;
     width: 50%;
     position: absolute;
-    top: 840px;
+    top: 810px;
     transform: translatez(+50%);
     left: 50%;
     transform: translateX(-50%);
@@ -108,7 +138,7 @@
     height: 200px;
     width: 50%;
     position: absolute;
-    top: 920px;
+    top: 890px;
     transform: translatez(+50%);
     left: 50%;
     transform: translateX(-50%);

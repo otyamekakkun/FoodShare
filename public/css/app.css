@@ -445,7 +445,7 @@ a {
 
 .l-topimg {
   width: 100%;
-  height: 1000px;
+  height: 1700px;
   opacity: 0.85;
   position: relative;
   inset: 0;
@@ -460,7 +460,7 @@ a {
   transform: translatez(50%);
   left: 50%;
   transform: translateX(-50%);
-  top: 250px;
+  top: 210px;
   text-align: center;
   border-radius: 3px;
 }
@@ -500,7 +500,27 @@ a {
   height: 250px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 50px;
+  position: absolute;
+  top: 1100px;
+  transform: translatez(50%);
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 50px;
+  width: 80%;
+}
+
+.l-top__area__form__custom2 {
+  border: solid 2px #174113;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.6);
+  height: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  top: 1400px;
+  transform: translatez(50%);
+  left: 50%;
+  transform: translateX(-50%);
   margin-bottom: 50px;
   width: 80%;
 }
@@ -520,7 +540,7 @@ a {
   margin-bottom: 100px;
   width: 50%;
   position: absolute;
-  top: 840px;
+  top: 810px;
   transform: translatez(50%);
   left: 50%;
   transform: translateX(-50%);
@@ -550,7 +570,7 @@ a {
   height: 200px;
   width: 50%;
   position: absolute;
-  top: 920px;
+  top: 890px;
   transform: translatez(50%);
   left: 50%;
   transform: translateX(-50%);
@@ -1740,8 +1760,8 @@ a {
   margin-left: 25px;
   margin-right: 25px;
   text-align: center;
-  margin-top: 80px;
-  margin-bottom: auto;
+  margin-top: 85px;
+  margin-bottom: 20px;
   height: 60px;
   width: 30%;
   border: none;
@@ -1814,6 +1834,11 @@ a {
     margin-top: 80px;
     margin-bottom: 50px;
   }
+}
+
+.c-warning {
+  font-size: 18px;
+  color: red;
 }
 
 /*
