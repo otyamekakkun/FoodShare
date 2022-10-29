@@ -825,6 +825,13 @@ a {
   background: #f6f5f4;
 }
 
+.c-loginarea {
+  margin-top: 200px;
+  margin-bottom: 60px;
+  width: 80%;
+  margin-left: 306px;
+}
+
 .c-form__adresstitle {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -863,6 +870,92 @@ a {
 }
 .c-formstaff__adress__text:hover {
   background: #f6f5f4;
+}
+
+.c-form3 {
+  display: block;
+  background: #f6f5f4;
+  background: rgba(255, 255, 255, 0.6);
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  border: solid #174113;
+  border-radius: 10px;
+  width: 80%;
+  height: 400px;
+}
+@media screen and (max-width:980px) {
+  .c-form3 {
+    height: 3500px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .c-form3 {
+    height: 6350px;
+  }
+}
+@media screen and (max-width: 414px) {
+  .c-form3 {
+    height: 5500px;
+  }
+}
+
+.c-remind__button {
+  background: #174113;
+  color: white;
+  margin-top: 80px;
+  margin-left: 410px;
+  width: 40%;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  transition: all 1.2s;
+}
+.c-remind__button:hover {
+  background: orange;
+}
+
+.c-login__button {
+  background: #174113;
+  height: 60px;
+  width: 20%;
+  margin-left: 50px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  transition: all 1.2s;
+}
+.c-login__button:hover {
+  background: orange;
+}
+
+.c-register__button {
+  background: #174114;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  margin-top: 15px;
+  margin-left: 850px;
+  height: 65px;
+  padding: 15px;
+  transition: all 1.2s;
+}
+.c-register__button:hover {
+  background: orange;
+}
+
+.c-remind__text {
+  transition: all 0.4s;
+  display: block;
+  width: 50%;
+  margin-left: 450px;
+  margin-top: 50px;
+}
+.c-remind__text:hover {
+  color: red;
+  font-size: 25px;
 }
 
 .l-register__common {
@@ -907,22 +1000,6 @@ a {
   font-size: 25px;
   border: none;
   border-radius: 5px;
-}
-
-.l-register__common__button {
-  background: #174114;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 20px;
-  margin-top: 15px;
-  margin-left: 500px;
-  height: 65px;
-  padding: 15px;
-  transition: all 1.2s;
-}
-.l-register__common__button:hover {
-  background: orange;
 }
 
 .l-register__common__form__message {
@@ -1188,11 +1265,6 @@ a {
   border-radius: 10px;
   font-size: 25px;
   padding: 25px;
-}
-
-.c-loginarea {
-  margin-top: 60px;
-  margin-bottom: 60px;
 }
 
 .c-productlist__sentence {
@@ -1770,19 +1842,6 @@ a {
   transition: all 1.2s;
 }
 .c-top__button:hover {
-  background: orange;
-}
-
-.c-login__button {
-  background: #174113;
-  height: 60px;
-  width: 20%;
-  border: none;
-  border-radius: 10px;
-  color: white;
-  transition: all 1.2s;
-}
-.c-login__button:hover {
   background: orange;
 }
 

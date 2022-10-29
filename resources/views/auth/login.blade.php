@@ -72,12 +72,12 @@
                             </div>
 
                                 @if (Route::has(isset($authgroup) ? $authgroup.'.password.request' : 'password.request'))
-                                <button class="">
+                                {{-- <button class="c-register__button"> --}}
                                     {{-- c-login__button --}}
-                                <a href="{{ route(isset($authgroup) ? $authgroup.'.password.request' : 'password.request') }}">
+                                <a class="c-remind__text" href="{{ route(isset($authgroup) ? $authgroup.'.password.request' : 'password.request') }}">
                                     {{ __('Forgot Your Password?') }}
                                 </a>
-                            </button>
+                            {{-- </button> --}}
                             @endif
                                 {{-- パスワードリマインダーここまで --}}
                             </div>

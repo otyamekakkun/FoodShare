@@ -89,6 +89,18 @@
     }
 }
 
+//==============================
+//ログイン画面
+//==============================
+
+.c-loginarea {
+    margin-top: 200px;
+    margin-bottom: 60px;
+    width: 80%;
+    margin-left: 306px;
+    //  background: red;
+}
+
 //=========================================
 //住所記入欄
 //=========================================
@@ -131,5 +143,94 @@
     margin-top: size(l);
     &:hover {
         background: #f6f5f4;
+    }
+}
+
+//==============================================
+//パスワードリマインダー画面
+//==============================================
+.c-form3 {
+    display: block;
+    background: #f6f5f4;
+    background: rgba(255, 255, 255, 0.6);
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    border: solid #174113;
+    border-radius: size(ss);
+    width: 80%;
+    height: 400px;
+    @include mqxl() {
+        height: 3500px;
+    }
+    @include mql() {
+        //720px以下
+        height: 6350px;
+    }
+    @include mq() {
+        //414px対応
+        height: 5500px;
+    }
+}
+//=============================
+//submitボタンシリーズ
+//=============================
+.c-remind__button {
+    background: #174113;
+    color: white;
+    margin-top: 80px;
+    margin-left: 410px;
+    width: 40%;
+    height: 50px;
+    border: none;
+    border-radius: size(ss);
+    transition: all 1.2s;
+    &:hover {
+        background: orange;
+    }
+}
+
+.c-login__button {
+    background: #174113;
+    height: 60px;
+    width: 20%;
+    margin-left: 50px;
+    border: none;
+    border-radius: size(ss);
+    color: white;
+    transition: all 1.2s;
+    &:hover {
+        background: orange;
+    }
+}
+
+//ユーザー登録するときの送信ボタン
+.c-register__button {
+    background: #174114;
+    color: white;
+    border: none;
+    border-radius: size(sss);
+    font-size: size(m);
+    margin-top: size(s);
+    margin-left: 850px;
+    height: 65px;
+    padding: size(s);
+    transition: all 1.2s;
+    &:hover {
+        background: orange;
+    }
+}
+
+.c-remind__text {
+    transition: all 0.4s;
+    display: block;
+    width: 50%;
+    margin-left: 450px;
+    margin-top: size(4l);
+
+    &:hover {
+        color: red;
+        font-size: size(l);
     }
 }

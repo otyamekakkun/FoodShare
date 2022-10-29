@@ -168,11 +168,10 @@
                             @endisset
 </div>
 {{-- ボタンはここでやる --}}
-                            <button type="submit" class="l-register__common__button">
+                            <button type="submit" class="c-register__button">
                                 ユーザー登録して始める
                             </button>
                         </div>
-
                         </form>
                     </div>
                             </div>
