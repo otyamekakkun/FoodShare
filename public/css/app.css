@@ -464,6 +464,12 @@ a {
   text-align: center;
   border-radius: 3px;
 }
+@media screen and (max-width: 720px) {
+  .l-top__titlearea {
+    width: 80%;
+    height: 300px;
+  }
+}
 @media screen and (max-width: 414px) {
   .l-top__titlearea {
     height: 300px;
@@ -476,6 +482,12 @@ a {
   font-family: "Permanent Marker", cursive;
   font-size: 120px;
   margin-top: 60px;
+}
+@media screen and (max-width: 720px) {
+  .l-top__title__text {
+    font-size: 80px;
+    margin-top: 70px;
+  }
 }
 @media screen and (max-width: 414px) {
   .l-top__title__text {
@@ -490,7 +502,7 @@ a {
   font-family: "Permanent Marker", cursive;
   font-size: 80px;
 }
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 720px) {
   .l-top__title__text2 {
     display: none;
   }
@@ -510,10 +522,15 @@ a {
   left: 50%;
   transform: translateX(-50%);
 }
+@media screen and (max-width: 720px) {
+  .l-top__area__form {
+    width: 90%;
+    top: 600px;
+  }
+}
 @media screen and (max-width: 414px) {
   .l-top__area__form {
     width: 80%;
-    top: 600px;
   }
 }
 
@@ -528,10 +545,15 @@ a {
   left: 50%;
   transform: translateX(-50%);
 }
+@media screen and (max-width: 720px) {
+  .l-top__area__form2 {
+    width: 90%;
+    top: 690px;
+  }
+}
 @media screen and (max-width: 414px) {
   .l-top__area__form2 {
     width: 80%;
-    top: 690px;
   }
 }
 
@@ -549,6 +571,12 @@ a {
   transform: translateX(-50%);
   margin-bottom: 50px;
   width: 80%;
+}
+@media screen and (max-width: 720px) {
+  .l-top__area__form__custom {
+    top: 900px;
+    height: 200px;
+  }
 }
 @media screen and (max-width: 414px) {
   .l-top__area__form__custom {
@@ -571,6 +599,12 @@ a {
   transform: translateX(-50%);
   margin-bottom: 50px;
   width: 80%;
+}
+@media screen and (max-width: 720px) {
+  .l-top__area__form__custom2 {
+    top: 1200px;
+    height: 300px;
+  }
 }
 @media screen and (max-width: 414px) {
   .l-top__area__form__custom2 {
@@ -784,22 +818,6 @@ a {
   width: 80%;
   height: 1000px;
 }
-@media screen and (max-width:980px) {
-  .c-form1 {
-    height: 3500px;
-  }
-}
-@media screen and (max-width: 720px) {
-  .c-form1 {
-    height: 6350px;
-  }
-}
-@media screen and (max-width: 414px) {
-  .c-form1 {
-    height: 5500px;
-  }
-}
-
 .c-form2 {
   display: block;
   background: #f6f5f4;
@@ -825,7 +843,7 @@ a {
 }
 @media screen and (max-width: 414px) {
   .c-form2 {
-    height: 5500px;
+    height: 1000px;
   }
 }
 
@@ -841,31 +859,33 @@ a {
 }
 
 .c-form__title {
-  font-size: 25px;
+  font-size: 40px;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 35px;
+  margin-top: 100px;
 }
 
 .c-form__area__message {
   display: block;
-  margin-top: 15px;
+  margin-top: 50px;
   margin-bottom: 2px;
+  font-size: 25px;
 }
 
 .c-form__area__text {
   background: white;
+  margin-bottom: 25px;
   font-size: 25px;
   height: 60px;
-  width: 80%;
+  width: 76%;
 }
 .c-form__area__text:hover {
   background: #f6f5f4;
 }
 
 .c-loginarea {
-  margin-top: 200px;
+  margin-top: 100px;
   margin-bottom: 60px;
   width: 80%;
   margin-left: 306px;

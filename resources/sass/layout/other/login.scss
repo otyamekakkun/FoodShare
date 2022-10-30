@@ -15,15 +15,12 @@
     width: 80%;
     height: 1000px;
     @include mqxl() {
-        height: 3500px;
     }
     @include mql() {
         //720px以下
-        height: 6350px;
     }
     @include mq() {
         //414px対応
-        height: 5500px;
     }
 }
 
@@ -48,7 +45,7 @@
     }
     @include mq() {
         //414px対応
-        height: 5500px;
+        height: 1000px;
     }
 }
 
@@ -66,24 +63,27 @@
 }
 
 .c-form__title {
-    font-size: size(l);
+    font-size: size(2l);
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    margin-top: size(xxl);
+    margin-top: 100px;
 }
 
 .c-form__area__message {
     display: block;
-    margin-top: size(s);
+    margin-top: size(4l);
     margin-bottom: size(sssss);
+    font-size: size(l);
 }
 
 .c-form__area__text {
     background: white;
+    margin-bottom: size(l);
+
     font-size: size(l);
     height: 60px;
-    width: 80%;
+    width: 76%;
     &:hover {
         background: #f6f5f4;
     }
@@ -94,7 +94,7 @@
 //==============================
 
 .c-loginarea {
-    margin-top: 200px;
+    margin-top: 100px;
     margin-bottom: 60px;
     width: 80%;
     margin-left: 306px;
