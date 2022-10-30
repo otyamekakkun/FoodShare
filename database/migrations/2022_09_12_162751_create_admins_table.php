@@ -15,23 +15,26 @@ class CreateAdminsTable extends Migration
      /**
       * コンビニスタッフのテーブル
       * 1 スタッフのid
-      * 2 スタッフのパスワード
+      * 2 スタッフの名前
       * 3 スタッフのemailアドレス
-      * 4 コンビニの種類の名前（ローソンとか、セブンイレブンみたいな）
-      * 5 支店名 (主に地名が入る 渋谷とか新宿とかなど)
-      * 6 timestamp
+      * 4 スタッフのパスワード
+      * 5 コンビニの種類の名前（ローソンとか、セブンイレブンみたいな）
+      * 6 支店名 (主に地名が入る 渋谷とか新宿とかなど)
       */
     public function up()
     {
         Schema::create('admins', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->string('password');
-         //   $table->boolean('is_super')->default(false);
+            $table->increments('id'); //1
+            $table->string('name'); // 2 
+            $table->string('email')->unique();//3
+            $table->string('password');//4   
+             $table->string('convinience_name'); //5
+            $table->string('convinience_branch');//6
+            $table->text('prefecture');//7
+            $table->text('adress');//8
             $table->rememberToken();
             $table->timestamps();
-            $table->softDeletes();        
+            $table->softDeletes();
         });
     }
 

@@ -24,12 +24,9 @@ class CreateProductsTable extends Migration
             $table->date('best_by_date')->nullable();//賞味期限を記述するためのもの
             $table->string('prefecture');//都道府県名を記述するところ
             $table->boolean('bought')->default(false)->nullable();//購入されたかどうかをチェックする
-          //  $table->timestamps('bought_date');
            $table->timestamps();
-
         });
     }
-
     /**
      * Reverse the migrations.
      *
