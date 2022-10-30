@@ -1,5 +1,11 @@
+<!-- 備考
+1.お客様として始めるというボタンが押された際にお客様ログイン、お客様ユーザー登録というエリアが開かれる
+2.管理者として始めるというボタンが押された際にコンビニログイン、コンビニユーザー登録というエリアが開かれる  
+-->
+
 <template>
     <div>
+        <!-- 備考１ここから -->
         <div class="l-top__area__form">
             <button v-on:click="show = !show" class="l-top__area__form__button">
                 お客様として始める
@@ -21,7 +27,8 @@
                 </div>
             </div>
         </transition>
-        <!-- コンビニ -->
+        <!-- 備考１ここまで -->
+        <!-- 備考２ここから-->
         <div class="l-top__area__form2">
             <button
                 v-on:click="show1 = !show1"
@@ -47,6 +54,7 @@
                 </div>
             </div>
         </transition>
+        <!-- 備考２ここまで-->
     </div>
 </template>
 <script>

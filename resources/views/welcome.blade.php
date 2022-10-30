@@ -18,9 +18,6 @@
 <div id="app">
     <toppage-component></toppage-component>
 </div>
-
-
-
 </body>
 </html>
     @endsection

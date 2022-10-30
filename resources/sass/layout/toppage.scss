@@ -17,88 +17,31 @@
     top: 210px;
     text-align: center;
     border-radius: size(ssss);
+    @include mq() {
+        height: 300px;
+    }
 }
 .l-top__title__text {
     color: white;
     -webkit-text-stroke: size(sss) orange;
     font-family: "Permanent Marker", cursive;
     font-size: 120px;
-    height: 200px;
     margin-top: 60px;
+    @include mq() {
+        font-size: 80px;
+        margin-top: 30px;
+    }
 }
 .l-top__title__text2 {
     color: white;
     -webkit-text-stroke: size(sss) orange;
     font-family: "Permanent Marker", cursive;
     font-size: 80px;
+    @include mq() {
+        display: none;
+    }
 }
 
-.l-top__area {
-    background: rgba(255, 255, 255, 0.6);
-    border-radius: size(xl);
-    width: 80%;
-    height: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 100px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-//=================================
-//ボタンを押された時に表示される機能(お客様）
-//=================================
-.l-top__area__form__custom {
-    border: solid size(sssss) #174113;
-    border-radius: size(4l);
-    background: rgba(255, 255, 255, 0.6);
-    height: 250px;
-    margin-left: auto;
-    margin-right: auto;
-    //margin-top: -5px;
-    //padding-top: 5px;
-    position: absolute;
-    top: 1100px;
-    transform: translatez(+50%);
-    left: 50%;
-    transform: translateX(-50%);
-
-    margin-bottom: 50px;
-    width: 80%;
-}
-
-//=================================
-//ボタンを押された時に表示される機能(コンビニ）
-//=================================
-.l-top__area__form__custom2 {
-    border: solid size(sssss) #174113;
-    border-radius: size(4l);
-    background: rgba(255, 255, 255, 0.6);
-    height: 250px;
-    margin-left: auto;
-    margin-right: auto;
-    //margin-top: -5px;
-    //padding-top: 5px;
-    position: absolute;
-    top: 1400px;
-    transform: translatez(+50%);
-    left: 50%;
-    transform: translateX(-50%);
-
-    margin-bottom: 50px;
-    width: 80%;
-}
-
-.l-top__area__form__custom__button {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    //margin-top: 100px;
-}
-
-//===========================
-//ボタンエリア
-//=========================
 .l-top__area__form {
     background: rgba(255, 255, 255, 0.7);
     display: flex;
@@ -112,7 +55,89 @@
     transform: translatez(+50%);
     left: 50%;
     transform: translateX(-50%);
+    @include mq() {
+        width: 80%;
+        top: 600px;
+    }
 }
+.l-top__area__form2 {
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    width: 50%;
+    position: absolute;
+    top: 890px;
+    transform: translatez(+50%);
+    left: 50%;
+    transform: translateX(-50%);
+    @include mq() {
+        width: 80%;
+        top: 690px;
+    }
+}
+
+//=================================
+//ボタンを押された時に表示される機能(お客様）
+//=================================
+.l-top__area__form__custom {
+    border: solid size(sssss) #174113;
+    border-radius: size(4l);
+    background: rgba(255, 255, 255, 0.6);
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    top: 1100px;
+    transform: translatez(+50%);
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 50px;
+    width: 80%;
+    @include mq() {
+        top: 900px;
+        height: 200px;
+    }
+}
+
+//=================================
+//ボタンを押された時に表示される機能(コンビニ）
+//=================================
+.l-top__area__form__custom2 {
+    border: solid size(sssss) #174113;
+    border-radius: size(4l);
+    background: rgba(255, 255, 255, 0.6);
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    top: 1400px;
+    transform: translatez(+50%);
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 50px;
+    width: 80%;
+    @include mq() {
+        top: 1200px;
+
+        height: 300px;
+    }
+}
+
+.l-top__area__form__custom__button {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    //margin-top: 100px;
+    @include mq() {
+        margin-top: -10px;
+        font-size: size(ss);
+        width: 100%;
+    }
+}
+
+//======================================================================
+//ボタンエリア (コンポーネントcに変換すること) お客様として始める管理者として始める
+//======================================================================
 .l-top__area__form__button {
     //background: red;
     color: white;
@@ -130,22 +155,14 @@
     &:hover {
         background: orange;
     }
+    @include mq() {
+        width: 60%;
+    }
 }
 
-.l-top__area__form2 {
-    display: flex;
-    justify-content: center;
-    height: 200px;
-    width: 50%;
-    position: absolute;
-    top: 890px;
-    transform: translatez(+50%);
-    left: 50%;
-    transform: translateX(-50%);
-}
-//==================
-//アニメーション管理するもの
-//==================
+//==================================
+//アニメーション管理するもの(modifyにする
+//==================================
 .fade-enter-active,
 .fade-leave-active {
     transition: opacity 1.2s;

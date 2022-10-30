@@ -118,6 +118,13 @@
     &:hover {
         background: orange;
     }
+    @include mq() {
+        margin-left: size(s);
+        margin-right: size(s);
+        font-size: 10px;
+
+        width: 35%;
+    }
 }
 
 //=======================================
