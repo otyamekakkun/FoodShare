@@ -2,9 +2,7 @@
 //ボタンエリア
 //=====================================
 
-//==========================================================
-//(ユーザーのプロフィール編集ボタン)(shopper_profile_display.php)
-//==========================================================
+//1 (ユーザーのプロフィール編集ボタン)(shopper_profile_display.php)
 
 .c-formshopperprofile__sub {
     background: #174113;
@@ -17,12 +15,6 @@
     right: 25%;
     margin: 50px 50px;
     transition: all 1.2s;
-    /*
-    @include mql() {
-        width: 30%;
-        margin: auto;
-    }
-    */
     @include mqxl() {
         width: 15%;
         margin: auto;
@@ -44,9 +36,8 @@
     cursor: pointer;
     background: #b2d142;
 }
-//====================================
-//shopperの商品詳細のボタン
-//================================
+//..........................................................
+//2shopperの商品詳細のボタン
 .c-shopper__action {
     // background: #b2d142;
     margin: auto;
@@ -97,6 +88,7 @@
         background: orange;
     }
 }
+//..........................................................
 
 //===============================
 //トップ画面のボタン
@@ -124,6 +116,162 @@
         width: 35%;
     }
 }
+//..........................................................ボタンエリアここまで
+
+//============================================
+//フォームエリア共通しているエリア
+//============================================
+
+//=========================================
+//staff_exhibitproductlist (ページ）
+//これに基づいてstaff_buyproductlistも使用する
+//コンポーネントcに直す
+//=========================================
+.l-exhibitproductlist {
+    display: block;
+    background: rgba(255, 255, 255, 0.6);
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-bottom: 160px;
+    border: solid #174113;
+    border-radius: size(ss);
+    width: 70%;
+    padding-left: 50px;
+    padding-right: 50px;
+    //height: 400px;
+    @include mqxl() {
+    }
+    @include mql() {
+        width: 60%;
+    }
+
+    @include mq() {
+        //414px対応
+        width: 60%;
+    }
+}
+
+//============================================================================
+// コンビニ側商品を出品する画面と編集する画面 staff_exhibitproduct and updateproduct
+//=========================================================================
+
+.c-form4 {
+    display: block;
+    background: #f6f5f4;
+    background: rgba(255, 255, 255, 0.6);
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    border: solid #174113;
+    border-radius: size(ss);
+    width: 80%;
+    height: 1400px;
+    @include mqxl() {
+    }
+    @include mql() {
+        //720px以下
+    }
+    @include mq() {
+        //414px対応
+        height: 900px;
+    }
+}
+
+.c-staffform__area {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: size(xxl);
+    height: 900px;
+    border-radius: size(sss);
+}
+
+.c-staffform__area__textname {
+    //display: inline;
+    background: white;
+    font-size: size(xl);
+    text-align: left;
+    margin: size(sss);
+    margin-bottom: size(l);
+}
+
+.c-staffform__area__textprice {
+    background: white;
+    width: 20%;
+    font-size: size(l);
+    margin-left: 180px;
+    margin-bottom: size(l);
+}
+
+.c-staffform__area__textcarender {
+    background: white;
+    width: 20%;
+    height: size(xxl);
+    margin-right: auto;
+    margin-bottom: size(l);
+}
+
+.c-staffform__area__uploadimgarea {
+    width: 60%;
+    background: white;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: size(l);
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: size(l);
+
+    &:hover {
+        //background: red;
+        border: dotted orange;
+        border-radius: size(l);
+    }
+}
+
+.c-staffform__area__textcalender {
+    background: white;
+}
+
+.c-staffform__area__textimgarea {
+    //写真を挿入したときに描かれる場所
+    font-size: size(l);
+    margin-top: size(l);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: size(l);
+    background: white;
+    width: 80%;
+    height: 250px;
+    padding-top: size(l);
+    padding-bottom: size(l);
+    padding-left: size(l);
+    padding-right: size(l);
+    border: dotted #174113;
+
+    //padding: size(xxl);
+    border-radius: size(ss);
+}
+
+.c-staffform__area__submitbutton {
+    display: block;
+    background: #174113;
+    margin-top: 80px;
+    margin-left: auto;
+    height: 60px;
+    width: 30%;
+    border: none;
+    border-radius: size(ss);
+    color: white;
+    transition: all 1.2s;
+    &:hover {
+        background: orange;
+    }
+}
+//===============================================ここらでしっかりと切り分けて直すこと
 
 //=======================================
 //フォームテキストエリア title文字          //
@@ -206,4 +354,19 @@
         margin-right: size(s);
         margin-bottom: -40px;
     }
+}
+
+//====================================================
+//共通化するエリアのコンポーネント部分 staffmypageのリスト
+//===================================================
+.c-staffmypagelistarea {
+    background: rgba(255, 255, 255, 0.6);
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%;
+    border-radius: size(ss);
+    font-size: size(l);
+    padding: size(l);
 }

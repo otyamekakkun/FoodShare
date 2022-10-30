@@ -4,7 +4,7 @@
             商品を出品する
         </h1>
     </div>
-    <div class="c-form1">
+    <div class="c-form4">
         <h1 class="c-form__title">出品されたい商品の情報について記述してください</h1>
     <form method="POST" action="{{ route('create.exhibit') }}" enctype="multipart/form-data">
         @csrf

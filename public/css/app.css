@@ -816,7 +816,7 @@ a {
   border: solid #174113;
   border-radius: 10px;
   width: 80%;
-  height: 1600px;
+  height: 1050px;
 }
 @media screen and (max-width: 414px) {
   .c-form1 {
@@ -1074,117 +1074,6 @@ a {
   margin-bottom: -28px;
 }
 
-.c-staffform__area {
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  margin-top: 35px;
-  height: 900px;
-  border-radius: 5px;
-}
-
-.c-staffform__area__textname {
-  background: white;
-  font-size: 30px;
-  text-align: left;
-  margin: 5px;
-  margin-bottom: 25px;
-}
-
-.c-staffform__area__textprice {
-  background: white;
-  width: 20%;
-  font-size: 25px;
-  margin-left: 180px;
-  margin-bottom: 25px;
-}
-
-.c-staffform__area__textcarender {
-  background: white;
-  width: 20%;
-  height: 35px;
-  margin-right: auto;
-  margin-bottom: 25px;
-}
-
-.c-staffform__area__uploadimgarea {
-  width: 60%;
-  background: white;
-  height: 100px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 25px;
-  cursor: pointer;
-  transition: 0.3s;
-  border-radius: 25px;
-}
-.c-staffform__area__uploadimgarea:hover {
-  border: dotted orange;
-  border-radius: 25px;
-}
-
-.c-staffform__area__textcalender {
-  background: white;
-}
-
-.c-staffform__area__textimgarea {
-  font-size: 25px;
-  margin-top: 25px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 25px;
-  background: white;
-  width: 80%;
-  height: 250px;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  padding-left: 25px;
-  padding-right: 25px;
-  border: dotted #174113;
-  border-radius: 10px;
-}
-
-.c-staffform__area__submitbutton {
-  display: block;
-  background: #174113;
-  margin-top: 80px;
-  margin-left: auto;
-  height: 60px;
-  width: 30%;
-  border: none;
-  border-radius: 10px;
-  color: white;
-  transition: all 1.2s;
-}
-.c-staffform__area__submitbutton:hover {
-  background: orange;
-}
-
-.l-exhibitproductlist {
-  display: block;
-  background: rgba(255, 255, 255, 0.6);
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 20px;
-  margin-bottom: 40px;
-  border: solid #174113;
-  border-radius: 10px;
-  width: 70%;
-  padding-left: 50px;
-  padding-right: 50px;
-}
-@media screen and (max-width: 720px) {
-  .l-exhibitproductlist {
-    width: 60%;
-  }
-}
-@media screen and (max-width: 414px) {
-  .l-exhibitproductlist {
-    width: 60%;
-  }
-}
-
 .l-productdetail {
   background: rgba(255, 255, 255, 0.8);
   margin-right: auto;
@@ -1312,24 +1201,14 @@ a {
 
 .c-search__calender:hover {
   background: #f6f5f4;
-} /*
+}
+
+/*
 * 1 今後も使い回しそうなbuttonデザインを作るファイル 
 * 2 今後も使い回しそうなアラートを作るファイル
 * 3 今後も使い回しそうなgridファイル
 * 4 今後も使い回しそうなmedia (消去する可能性高い)
 */
-.c-staffmypagelistarea {
-  background: rgba(255, 255, 255, 0.6);
-  margin-top: 100px;
-  margin-bottom: 100px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 65%;
-  border-radius: 10px;
-  font-size: 25px;
-  padding: 25px;
-}
-
 .c-productlist__sentence {
   display: flex;
   justify-content: center;
@@ -1809,12 +1688,6 @@ a {
   right: 25%;
   margin: 50px 50px;
   transition: all 1.2s;
-  /*
-  @include mql() {
-      width: 30%;
-      margin: auto;
-  }
-  */
 }
 @media screen and (max-width:980px) {
   .c-formshopperprofile__sub {
@@ -1916,6 +1789,136 @@ a {
   }
 }
 
+.l-exhibitproductlist {
+  display: block;
+  background: rgba(255, 255, 255, 0.6);
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px;
+  margin-bottom: 160px;
+  border: solid #174113;
+  border-radius: 10px;
+  width: 70%;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+@media screen and (max-width: 720px) {
+  .l-exhibitproductlist {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 414px) {
+  .l-exhibitproductlist {
+    width: 60%;
+  }
+}
+
+.c-form4 {
+  display: block;
+  background: #f6f5f4;
+  background: rgba(255, 255, 255, 0.6);
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  border: solid #174113;
+  border-radius: 10px;
+  width: 80%;
+  height: 1400px;
+}
+@media screen and (max-width: 414px) {
+  .c-form4 {
+    height: 900px;
+  }
+}
+
+.c-staffform__area {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 35px;
+  height: 900px;
+  border-radius: 5px;
+}
+
+.c-staffform__area__textname {
+  background: white;
+  font-size: 30px;
+  text-align: left;
+  margin: 5px;
+  margin-bottom: 25px;
+}
+
+.c-staffform__area__textprice {
+  background: white;
+  width: 20%;
+  font-size: 25px;
+  margin-left: 180px;
+  margin-bottom: 25px;
+}
+
+.c-staffform__area__textcarender {
+  background: white;
+  width: 20%;
+  height: 35px;
+  margin-right: auto;
+  margin-bottom: 25px;
+}
+
+.c-staffform__area__uploadimgarea {
+  width: 60%;
+  background: white;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 25px;
+}
+.c-staffform__area__uploadimgarea:hover {
+  border: dotted orange;
+  border-radius: 25px;
+}
+
+.c-staffform__area__textcalender {
+  background: white;
+}
+
+.c-staffform__area__textimgarea {
+  font-size: 25px;
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+  background: white;
+  width: 80%;
+  height: 250px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border: dotted #174113;
+  border-radius: 10px;
+}
+
+.c-staffform__area__submitbutton {
+  display: block;
+  background: #174113;
+  margin-top: 80px;
+  margin-left: auto;
+  height: 60px;
+  width: 30%;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  transition: all 1.2s;
+}
+.c-staffform__area__submitbutton:hover {
+  background: orange;
+}
+
 .c-title {
   text-align: center;
   font-size: 25px;
@@ -1985,6 +1988,18 @@ a {
     margin-right: 15px;
     margin-bottom: -40px;
   }
+}
+
+.c-staffmypagelistarea {
+  background: rgba(255, 255, 255, 0.6);
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 65%;
+  border-radius: 10px;
+  font-size: 25px;
+  padding: 25px;
 }
 
 /*

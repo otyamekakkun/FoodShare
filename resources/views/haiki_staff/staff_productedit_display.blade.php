@@ -11,7 +11,7 @@
                 </h1>
             </div>
         
-    <div class="c-form1">
+    <div class="c-form4">
 
         <h1 class="c-form__title">商品の情報について記述してください</h1>
 
