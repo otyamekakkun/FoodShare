@@ -13,7 +13,7 @@
     border: solid #174113;
     border-radius: size(ss);
     width: 80%;
-    height: 1000px;
+    height: 1600px;
     @include mqxl() {
     }
     @include mql() {
@@ -21,6 +21,7 @@
     }
     @include mq() {
         //414px対応
+        height: 900px;
     }
 }
 
@@ -60,6 +61,14 @@
     //  border-radius: size(s);
     font-size: size(m);
     text-align: center;
+    @include mqxl() {
+    }
+    @include mql() {
+        //720px以下
+    }
+    @include mq() {
+        //414px対応
+    }
 }
 
 .c-form__title {
@@ -99,6 +108,19 @@
     width: 80%;
     margin-left: 306px;
     //  background: red;
+    @include mqxl() {
+    }
+    @include mql() {
+        //720px以下
+    }
+    @include mq() {
+        //414px対応
+        width: 80%;
+        font-size: 10x;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: size(m);
+    }
 }
 
 //=========================================
@@ -162,15 +184,12 @@
     width: 80%;
     height: 400px;
     @include mqxl() {
-        height: 3500px;
     }
     @include mql() {
         //720px以下
-        height: 6350px;
     }
     @include mq() {
         //414px対応
-        height: 5500px;
     }
 }
 //=============================
@@ -202,6 +221,18 @@
     transition: all 1.2s;
     &:hover {
         background: orange;
+    }
+    @include mqxl() {
+    }
+    @include mql() {
+        //720px以下
+    }
+    @include mq() {
+        //414px対応
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: size(2l);
     }
 }
 
