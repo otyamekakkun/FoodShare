@@ -2,6 +2,46 @@
 //ボタンエリア
 //=====================================
 
+//0 toppage画面のボタン
+.c-top__button {
+    background: #174113;
+    margin-left: size(l);
+    margin-right: size(l);
+    text-align: center;
+    margin-top: 85px;
+    margin-bottom: 20px;
+    height: 60px;
+    width: 30%;
+    border: none;
+    border-radius: size(ss);
+    color: white;
+    transition: all 1.2s;
+    &:hover {
+        background: orange;
+    }
+    @include mq() {
+        margin-left: size(s);
+        margin-right: size(s);
+        font-size: 10px;
+        width: 35%;
+    }
+}
+
+//1ログイン画面
+//2ユーザー登録画面
+//3パスワードリマインダー画面
+//4shopper_mypage
+//5shopper_profile
+//6shopper_productlist
+//7shopper_porductdetail
+//8staff_mypage
+//9staff_profile
+//10staff_productlist
+//11staff_buyproductlist
+//12staff_createproduct
+//13staff_updateproduct
+//14staff_productdetail
+
 //1 (ユーザーのプロフィール編集ボタン)(shopper_profile_display.php)
 
 .c-formshopperprofile__sub {
@@ -90,32 +130,6 @@
 }
 //..........................................................
 
-//===============================
-//トップ画面のボタン
-//===============================
-.c-top__button {
-    background: #174113;
-    margin-left: size(l);
-    margin-right: size(l);
-    text-align: center;
-    margin-top: 85px;
-    margin-bottom: 20px;
-    height: 60px;
-    width: 30%;
-    border: none;
-    border-radius: size(ss);
-    color: white;
-    transition: all 1.2s;
-    &:hover {
-        background: orange;
-    }
-    @include mq() {
-        margin-left: size(s);
-        margin-right: size(s);
-        font-size: 10px;
-        width: 35%;
-    }
-}
 //..........................................................ボタンエリアここまで
 
 //============================================
@@ -370,3 +384,18 @@
     font-size: size(l);
     padding: size(l);
 }
+
+//1ログイン画面
+//2ユーザー登録画面
+//3パスワードリマインダー画面
+//4shopper_mypage
+//5shopper_profile
+//6shopper_productlist
+//7shopper_porductdetail
+//8staff_mypage
+//9staff_profile
+//10staff_productlist
+//11staff_buyproductlist
+//12staff_createproduct
+//13staff_updateproduct
+//14staff_productdetail
