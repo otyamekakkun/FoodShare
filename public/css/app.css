@@ -1965,6 +1965,13 @@ a {
   color: red;
 }
 
+.c-warning2 {
+  font-size: 25px;
+  color: red;
+  margin-top: 50px;
+  text-align: center;
+}
+
 /*
 * まだ記載なし
 */

@@ -1,18 +1,5 @@
-{{--  
-ログイン画面使用
-1.お客のログイン画面
-パスワードとemailが入力されてバリデーションがうまくいけば、userのmypageに遷移することができる
-2.新規お客様ユーザー登録ペーじ
-メールアドレスとパスワードとパスワードリマインドを施せば画面が遷移する
-遷移先の画面はmypage
-ログインしている状態ではなければ自動的にページがはねられる設計にする
-3.管理者用ログインページ
-
-//管理者画面とユーザー登録画面
---}}
 
 @extends('layouts.app3')
-
 @section('content')
 @include('rest.other.otherheader')
 
@@ -20,8 +7,10 @@
 
                     @isset($authgroup)
                     <div class="c-form1">
+                        <div class="c-warning2">
                     <p>コンビニスタッフ専用ログインページ</p>
                     <p>利用者は普通のログインページで記述してください</p>
+                </div>
                     <form method="POST" action="{{ url("login/$authgroup") }}">
                     @else
                     {{-- 管理者ログインページここまで --}}
