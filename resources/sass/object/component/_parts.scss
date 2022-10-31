@@ -25,22 +25,6 @@
         width: 35%;
     }
 }
-
-//1ログイン画面
-//2ユーザー登録画面
-//3パスワードリマインダー画面
-//4shopper_mypage
-//5shopper_profile
-//6shopper_productlist
-//7shopper_porductdetail
-//8staff_mypage
-//9staff_profile
-//10staff_productlist
-//11staff_buyproductlist
-//12staff_createproduct
-//13staff_updateproduct
-//14staff_productdetail
-
 //1 (ユーザーのプロフィール編集ボタン)(shopper_profile_display.php)
 .c-formshopperprofile__sub {
     background: #174113;
@@ -145,6 +129,8 @@
 //=============================
 //ボタンの中のsubmitボタンシリーズ
 //=============================
+
+//パスワードリマインダーの画面のボタン
 .c-remind__button {
     background: #174113;
     color: white;
@@ -160,7 +146,7 @@
         background: orange;
     }
 }
-
+//ログインボタンの画面
 .c-login__button {
     background: #174113;
     height: 60px;
@@ -187,7 +173,7 @@
     }
 }
 
-//ユーザー登録するときの送信ボタン
+//ユーザー登録するときの送信ボタンコンビニ側
 .c-register__button {
     background: #174114;
     color: white;
@@ -205,7 +191,8 @@
         background: orange;
     }
 }
-
+//...............................................ここまで
+//ユーザー登録するときの送信ボタンshopper側
 .c-register__shopperbutton {
     background: #174114;
     color: white;
@@ -223,14 +210,15 @@
         background: orange;
     }
 }
+//...............................................ここまで
 
+//パスワードリマインダーのリンクに飛ぶ画面
 .c-remind__text {
     transition: all 0.4s;
     display: block;
     width: 50%;
     margin-left: 450px;
     margin-top: size(4l);
-
     &:hover {
         color: red;
         font-size: size(l);
@@ -387,6 +375,7 @@
 //画面のタイトル文字
 //===========================================================
 
+//商品を出品する画面＋商品を編集する画面
 .c-staffform__area__side {
     //  background: red;
     width: 100%;
@@ -438,7 +427,6 @@
     margin-bottom: size(l);
     font-size: size(m);
     padding: size(s);
-
     cursor: pointer;
     transition: 0.3s;
     border-radius: size(m);
@@ -479,17 +467,8 @@
 //=======================================
 //フォームテキストエリア title文字          //
 //=======================================
-
 //ログイン画面 ユーザー登録画面 プロフィール編集画面について
-
 //見出しの部分のレイアウト。（コンビニ側が出品した)
-.c-title {
-    //これまでに出品された商品一覧,これまでに購入された
-    text-align: center;
-    font-size: size(l);
-    margin: 10px;
-}
-
 .c-mypagemenu__title {
     // background: red;
     text-align: center;
@@ -573,18 +552,3 @@
     font-size: size(l);
     padding: size(l);
 }
-
-//1ログイン画面
-//2ユーザー登録画面
-//3パスワードリマインダー画面
-//4shopper_mypage
-//5shopper_profile
-//6shopper_productlist
-//7shopper_porductdetail
-//8staff_mypage
-//9staff_profile
-//10staff_productlist
-//11staff_buyproductlist
-//12staff_createproduct
-//13staff_updateproduct
-//14staff_productdetail
