@@ -1,7 +1,6 @@
 /*
 ここのファイルで全てのsassファイルを読み込もんでpublic/css/app.cssに書き直す
 */
-
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Nunito");
 
@@ -29,8 +28,6 @@
 * 3 _sidebarファイルを作る
 */
 @import "layout/_footer"; //....................1
-@import "layout/_sidebar"; //....................3
-
 @import "layout/toppage"; //....................3
 @import "layout/header/__header";
 //==============================================================

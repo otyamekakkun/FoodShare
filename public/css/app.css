@@ -96,14 +96,6 @@
 }
 
 /*
-使用（あくまで例題なのでここで終わる。）
-body {
-    //font-size: map-get($sizes, sss);
-    //map-get関数でキーを指定することができる
-    size(sss);
-}
-*/
-/*
 * googlefontシリーズ
 * googlefont割り当て。
 * 1.haiki shareのヘッダー部分の文字に用いる。(scssで記述する際、 font-family: "Permanent Marker", cursive;
@@ -434,13 +426,6 @@ a {
   font-size: 20px;
   font-family: "Noto Serif TC", serif;
   margin: auto;
-}
-
-.l-staffmypage__side {
-  width: 25%;
-  height: 500px;
-  margin: 30px;
-  background: white;
 }
 
 .l-topimg {

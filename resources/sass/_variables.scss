@@ -61,14 +61,6 @@ $colors: (
 @function color($colorName) {
     @return map-get($colors, $colorName);
 }
-/*
-使用（あくまで例題なのでここで終わる。）
-body {
-    //font-size: map-get($sizes, sss);
-    //map-get関数でキーを指定することができる
-    size(sss);
-}
-*/
 
 /*
 * googlefontシリーズ
@@ -87,8 +79,6 @@ $breakpoints: (
     "l": "screen and (max-width: 720px)",
     "xl": "screen and (max-width:980px)",
     "xxl": "screen and (max-width:1090px)",
-
-    //写真の大きさを揃える
 ) !default;
 
 @mixin mq($breakpoint: sm) {
@@ -101,8 +91,6 @@ $breakpoints: (
         @content;
     }
 }
-
-
 
 @mixin mql($breakpoint: l) {
     @media #{map-get($breakpoints, $breakpoint)} {
@@ -120,4 +108,3 @@ $breakpoints: (
         @content;
     }
 }
-

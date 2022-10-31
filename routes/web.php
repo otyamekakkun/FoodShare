@@ -5,7 +5,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HaikiController; //laravel8なので左のことを記述してルートの書き方を楽にする
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
-use App\Http\Controllers\MailableController;
 
 Route::get('/', function () {
     return view('welcome');
