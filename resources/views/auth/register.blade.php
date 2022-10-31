@@ -13,12 +13,12 @@
  @else
  {{-- ここからユーザー登録ページ併用 --}}
                     <form method="POST" action="{{ route('register') }}">
-                        <div class="c-form1">
+                        <div class="c-form2">
 
                     @endisset
                         @csrf
                             <div class="c-form__area">
-                            <h1 class="c-formarea__title">（個人情報エリア）</h1>
+                            <h1 class="c-form__title">（個人情報エリア）</h1>
                             <br/>{{--簡易的につけとく --}}
                             {{--ユーザー登録ボタンここまで  --}}
                             <span for="name" class="c-form__area__message">名前:

@@ -1,6 +1,10 @@
 //==============================================
 //ログインページloginページのレイアウト部分
 //基本的にここにformの情報をまとめることをする
+
+//c-form1はログイン画面とshopperのプロフィール編集画面に用いる
+//c-form2はユーザー登録画面とstaffプロフィール編集画面
+
 //==============================================
 .c-form1 {
     display: block;
@@ -36,7 +40,7 @@
     border: solid #174113;
     border-radius: size(ss);
     width: 80%;
-    height: 1800px;
+    height: 2400px;
     @include mqxl() {
         height: 3500px;
     }
@@ -243,11 +247,12 @@
     border: none;
     border-radius: size(sss);
     font-size: size(m);
-    margin-top: size(s);
-    margin-left: 850px;
+    margin-top: 80px;
+    margin-left: 700px;
     height: 65px;
     padding: size(s);
     transition: all 1.2s;
+    width: 30%;
     &:hover {
         background: orange;
     }
