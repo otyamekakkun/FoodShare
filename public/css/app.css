@@ -1053,19 +1053,29 @@ a {
   background: #f6f5f4;
 }
 
+/*
 .c-form3 {
-  display: block;
-  background: #f6f5f4;
-  background: rgba(255, 255, 255, 0.6);
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 60px;
-  margin-bottom: 60px;
-  border: solid #174113;
-  border-radius: 10px;
-  width: 80%;
-  height: 460px;
+    display: block;
+    background: #f6f5f4;
+    background: rgba(255, 255, 255, 0.6);
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    border: solid #174113;
+    border-radius: size(ss);
+    width: 80%;
+    height: 460px;
+    @include mqxl() {
+    }
+    @include mql() {
+        //720px以下
+    }
+    @include mq() {
+        //414px対応
+    }
 }
+*/
 .c-remind__button {
   background: #174113;
   color: white;
@@ -1839,6 +1849,19 @@ a {
   }
 }
 
+.c-form3 {
+  display: block;
+  background: #f6f5f4;
+  background: rgba(255, 255, 255, 0.6);
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  border: solid #174113;
+  border-radius: 10px;
+  width: 80%;
+  height: 460px;
+}
 .c-form4 {
   display: block;
   background: #f6f5f4;
@@ -1951,41 +1974,6 @@ a {
   border-radius: 10px;
 }
 
-/*
-.c-staffform__area__submitbutton {
-    display: block;
-    background: #174113;
-    margin-top: 80px;
-    margin-left: 800px;
-    height: 60px;
-    width: 20%;
-    border: none;
-    border-radius: size(ss);
-    color: white;
-    transition: all 1.2s;
-    &:hover {
-        background: orange;
-    }
-}
-
-.c-staffform__area__deletebutton {
-    display: block;
-    background: #174113;
-    margin-top: 50px;
-    //  margin-left: auto;
-    text-align: center;
-    margin-left: 1000px;
-    height: 60px;
-    width: 16%;
-    border: none;
-    border-radius: size(ss);
-    color: white;
-    transition: all 1.2s;
-    &:hover {
-        background: red;
-    }
-}
-*/
 .c-title {
   text-align: center;
   font-size: 25px;
@@ -2069,12 +2057,6 @@ a {
   padding: 25px;
 }
 
-/*
-* まだ記載なし
-*/
-/*
-* かなりの可能性で書き換える可能性があるので9/1４時点ではここまでにしとく
-*/
 .u-space {
   padding: 10px;
 }

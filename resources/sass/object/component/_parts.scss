@@ -1,7 +1,6 @@
 //=====================================
 //ボタンエリア
 //=====================================
-
 //0 toppage画面のボタン
 .c-top__button {
     background: #174113;
@@ -151,7 +150,6 @@
     display: block;
     background: #174113;
     margin-top: 50px;
-    //  margin-left: auto;
     text-align: center;
     margin-left: 1000px;
     height: 60px;
@@ -165,6 +163,7 @@
     }
 }
 //商品を編集する画面ここまで
+
 //..........................................................ボタンエリアここまで
 
 //=====================================================
@@ -223,7 +222,7 @@
         height: 900px;
     }
 }
-
+//ユーザー登録画面
 .c-form2 {
     display: block;
     background: #f6f5f4;
@@ -234,7 +233,6 @@
     margin-bottom: 60px;
     padding-left: size(l);
     padding-right: size(l);
-
     border: solid #174113;
     border-radius: size(ss);
     width: 80%;
@@ -249,6 +247,28 @@
     @include mq() {
         //414px対応
         height: 1000px;
+    }
+}
+//パスワードリマインダー画面
+.c-form3 {
+    display: block;
+    background: #f6f5f4;
+    background: rgba(255, 255, 255, 0.6);
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    border: solid #174113;
+    border-radius: size(ss);
+    width: 80%;
+    height: 460px;
+    @include mqxl() {
+    }
+    @include mql() {
+        //720px以下
+    }
+    @include mq() {
+        //414px対応
     }
 }
 
@@ -287,6 +307,11 @@
 }
 
 //..................................................フォームエリア大枠を構成するところここまで
+
+//===========================================================
+//画面のタイトル文字
+//===========================================================
+
 .c-staffform__area__side {
     //  background: red;
     width: 100%;
@@ -302,7 +327,6 @@
 }
 
 .c-staffform__area__textname {
-    //display: inline;
     height: 40px;
     background: white;
     font-size: size(m);
@@ -314,10 +338,8 @@
 .c-staffform__area__textprice {
     background: white;
     height: 40px;
-
     width: 20%;
     font-size: size(l);
-    //margin-left: 180px;
     margin-bottom: size(l);
 }
 
@@ -377,42 +399,6 @@
     //padding: size(xxl);
     border-radius: size(ss);
 }
-
-/*
-.c-staffform__area__submitbutton {
-    display: block;
-    background: #174113;
-    margin-top: 80px;
-    margin-left: 800px;
-    height: 60px;
-    width: 20%;
-    border: none;
-    border-radius: size(ss);
-    color: white;
-    transition: all 1.2s;
-    &:hover {
-        background: orange;
-    }
-}
-
-.c-staffform__area__deletebutton {
-    display: block;
-    background: #174113;
-    margin-top: 50px;
-    //  margin-left: auto;
-    text-align: center;
-    margin-left: 1000px;
-    height: 60px;
-    width: 16%;
-    border: none;
-    border-radius: size(ss);
-    color: white;
-    transition: all 1.2s;
-    &:hover {
-        background: red;
-    }
-}
-*/
 //===============================================ここらでしっかりと切り分けて直すこと
 
 //=======================================
