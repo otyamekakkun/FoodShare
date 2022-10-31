@@ -1090,6 +1090,22 @@ a {
   border-radius: 5px;
 }
 
+.l-register__common__button {
+  background: #174114;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  margin-top: 15px;
+  margin-left: 500px;
+  height: 65px;
+  padding: 15px;
+  transition: all 1.2s;
+}
+.l-register__common__button:hover {
+  background: orange;
+}
+
 .l-register__common__form__message {
   display: block;
   width: 40%;
@@ -1163,7 +1179,7 @@ a {
 
 .l-productsearch {
   background: rgba(255, 255, 255, 0.7);
-  height: 300px;
+  height: 400px;
   width: 70%;
   margin-left: auto;
   margin-right: auto;
@@ -1865,9 +1881,22 @@ a {
   border-radius: 5px;
 }
 
+.c-staffform__area__side {
+  width: 120%;
+  margin-left: -50px;
+  display: flex;
+}
+
+.c-staffform__title {
+  font-size: 25px;
+  display: block;
+  width: 20%;
+}
+
 .c-staffform__area__textname {
+  height: 40px;
   background: white;
-  font-size: 30px;
+  font-size: 20px;
   text-align: left;
   margin: 5px;
   margin-bottom: 25px;
@@ -1875,9 +1904,9 @@ a {
 
 .c-staffform__area__textprice {
   background: white;
+  height: 40px;
   width: 20%;
   font-size: 25px;
-  margin-left: 180px;
   margin-bottom: 25px;
 }
 
@@ -1895,6 +1924,7 @@ a {
   height: 100px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 50px;
   margin-bottom: 25px;
   cursor: pointer;
   transition: 0.3s;

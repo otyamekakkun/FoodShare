@@ -9,7 +9,8 @@
     <form method="POST" action="{{ route('create.exhibit') }}" enctype="multipart/form-data">
         @csrf
         <div class="c-staffform__area">
-            <span class="c-form__title">商品名:
+            <div class="c-staffform__area__side">
+            <span class="c-staffform__title">商品名:
                 @error('product_name')
                 <span class="" role="alert">
                     <strong>{{ $message }}</strong>
@@ -19,7 +20,7 @@
             </span>
                 <input  type="text" class= "c-staffform__area__textname" name="product_name" value="" placeholder="商品名">
     <br/>
-            <span class="c-form__title">金額を入れる:
+            <span class="c-staffform__title ">金額:
             <span>
                 @error('product_name')
                 <span class="" role="alert">
@@ -29,10 +30,12 @@
                 <br/>
     </span>    
 </span><br>
-                <input id="" type="number" class="c-staffform__area__textprice" name="price" value="">円
+                <input  type="number" class="c-staffform__area__textprice" name="price" value="" placeholder="金額を入力">
+
+            </div>
     {{-- 賞味期限の入力はjsを使用。デフォルトだと現在日時より前の日付も記入できるから --}}
+
      <calender-component></calender-component>
-    
      @error('img_path')
      <strong>{{ $message }}</strong>
     @enderror

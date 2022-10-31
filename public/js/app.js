@@ -6210,15 +6210,17 @@ var render = function render() {
       _c = _vm._self._c;
 
   return _c("div", {
-    staticClass: "c-form__title"
-  }, [_c("P", [_vm._v("賞味期限を選択してください:")]), _vm._v(" "), _c("input", {
+    staticClass: "c-staffform__area__side"
+  }, [_c("span", {
+    staticClass: "c-staffform__title"
+  }, [_vm._v("賞味期限:")]), _vm._v(" "), _c("input", {
     staticClass: "c-search__calender",
     attrs: {
       type: "date",
       min: new Date().toISOString().split("T")[0],
       name: "best_by_date"
     }
-  })], 1);
+  })]);
 };
 
 var staticRenderFns = [];
@@ -6316,7 +6318,7 @@ var staticRenderFns = [function () {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("p", [_vm._v("このエリアにドラッグ&ドロップをしてください"), _c("br")]);
+  return _c("p", {}, [_vm._v("\n                    このエリアにドラッグ&ドロップまたはクリックして写真を挿入してください.下のエリアに写真が挿入されます。"), _c("br")]);
 }];
 render._withStripped = true;
 

@@ -48,6 +48,21 @@
     border-radius: size(sss);
 }
 
+.l-register__common__button {
+    background: #174114;
+    color: white;
+    border: none;
+    border-radius: size(sss);
+    font-size: size(m);
+    margin-top: size(s);
+    margin-left: 500px;
+    height: 65px;
+    padding: size(s);
+    transition: all 1.2s;
+    &:hover {
+        background: orange;
+    }
+}
 .l-register__common__form__message {
     display: block;
     //background: red;
@@ -55,3 +70,5 @@
     margin-top: size(l);
     margin-bottom: -28px;
 }
+
+

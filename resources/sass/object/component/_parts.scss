@@ -203,10 +203,23 @@
     border-radius: size(sss);
 }
 
+.c-staffform__area__side {
+    //  background: red;
+    width: 120%;
+    margin-left: -50px;
+    display: flex;
+}
+.c-staffform__title {
+    font-size: size(l);
+    display: block;
+    width: 20%;
+}
+
 .c-staffform__area__textname {
     //display: inline;
+    height: 40px;
     background: white;
-    font-size: size(xl);
+    font-size: size(m);
     text-align: left;
     margin: size(sss);
     margin-bottom: size(l);
@@ -214,9 +227,11 @@
 
 .c-staffform__area__textprice {
     background: white;
+    height: 40px;
+
     width: 20%;
     font-size: size(l);
-    margin-left: 180px;
+    //margin-left: 180px;
     margin-bottom: size(l);
 }
 
@@ -234,6 +249,7 @@
     height: 100px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: size(4l);
     margin-bottom: size(l);
     cursor: pointer;
     transition: 0.3s;
