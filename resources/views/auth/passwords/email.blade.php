@@ -5,18 +5,14 @@
     <div class="c-form__area">
 
 
-                <div class="card-header">{{ isset($authgroup) ? ucwords($authgroup) : ""}} 
-                </div>
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
                         </div>
 
                     @endif
-
                     @isset($authgroup)
-
-                    コンビニ用パスワードリマインダー
+                <p class="c-title">  コンビニ用パスワードリマインダー</p>  
                     <form method="POST" action="{{ route("$authgroup.password.email") }}">
                     @else
                     <form method="POST" action="{{ route('password.email') }}">

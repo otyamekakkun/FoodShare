@@ -859,7 +859,7 @@ a {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 80px;
+  margin-top: 60px;
   margin-bottom: 80px;
   height: 640px;
   font-size: 20px;
@@ -958,7 +958,7 @@ a {
   border: solid #174113;
   border-radius: 10px;
   width: 80%;
-  height: 400px;
+  height: 460px;
 }
 .c-remind__button {
   background: #174113;
