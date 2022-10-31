@@ -194,25 +194,28 @@
 }
 
 .c-staffform__area {
-    width: 60%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    margin-top: size(xxl);
-    height: 900px;
+    margin-top: size(4l);
+    height: 1000px;
+    border: solid #174113;
     border-radius: size(sss);
 }
 
 .c-staffform__area__side {
     //  background: red;
-    width: 120%;
-    margin-left: -50px;
+    width: 100%;
+    margin-left: 18%;
+    margin-top: 8%;
     display: flex;
+    margin-bottom: -6%;
 }
 .c-staffform__title {
     font-size: size(l);
     display: block;
-    width: 20%;
+    width: 12%;
 }
 
 .c-staffform__area__textname {
@@ -245,20 +248,26 @@
 
 .c-staffform__area__uploadimgarea {
     width: 60%;
-    background: white;
+    background: #174113;
+    color: white;
+    text-align: center;
     height: 100px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: size(4l);
+    margin-top: 12%;
     margin-bottom: size(l);
+    font-size: size(m);
+    padding: size(s);
+
     cursor: pointer;
     transition: 0.3s;
-    border-radius: size(l);
+    border-radius: size(m);
 
     &:hover {
-        //background: red;
+        background: orange;
         border: dotted orange;
         border-radius: size(l);
+        //  color: orange;
     }
 }
 
@@ -269,12 +278,12 @@
 .c-staffform__area__textimgarea {
     //写真を挿入したときに描かれる場所
     font-size: size(l);
-    margin-top: size(l);
+    margin-top: 6%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: size(l);
     background: white;
-    width: 80%;
+    width: 60%;
     height: 250px;
     padding-top: size(l);
     padding-bottom: size(l);
@@ -290,9 +299,10 @@
     display: block;
     background: #174113;
     margin-top: 80px;
-    margin-left: auto;
+    //  margin-left: auto;
+    margin-left: 800px;
     height: 60px;
-    width: 30%;
+    width: 20%;
     border: none;
     border-radius: size(ss);
     color: white;
