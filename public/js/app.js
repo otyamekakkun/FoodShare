@@ -6050,7 +6050,7 @@ var render = function render() {
       }
     }
   })])]), _vm._v(" "), _c("div", {
-    staticClass: "l-exhibitproductlist"
+    staticClass: "c-exhibitproductlist"
   }, [_c("div", {
     staticClass: "c-productlist"
   }, _vm._l(_vm.filteredProducts, function (product) {
@@ -6139,7 +6139,7 @@ var render = function render() {
       id: "app"
     }
   }, [_c("main", [_c("div", {
-    staticClass: "l-exhibitproductlist"
+    staticClass: "c-exhibitproductlist"
   }, [_c("h1", {
     staticClass: "c-mypagemenu__title"
   }, [_vm._v("これまでに購入された商品")]), _vm._v(" "), _vm._l(_vm.getItems, function (item) {

@@ -29,7 +29,7 @@
                         />
                     </div>
                 </div>
-                <div class="l-exhibitproductlist">
+                <div class="c-exhibitproductlist">
                     <div class="c-productlist">
                         <ul
                             v-if="product.best_by_date >= Days2"

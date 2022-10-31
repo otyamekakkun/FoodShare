@@ -109,6 +109,7 @@
         margin-right: 10px;
     }
 }
+//...........................................................
 
 .c-staff__action__button {
     background: #174113;
@@ -129,18 +130,46 @@
     }
 }
 //..........................................................
-
+//商品を編集する画面出品する画面のボタン
+.c-staffform__area__submitbutton {
+    display: block;
+    background: #174113;
+    margin-top: 80px;
+    margin-left: 800px;
+    height: 60px;
+    width: 20%;
+    border: none;
+    border-radius: size(ss);
+    color: white;
+    transition: all 1.2s;
+    &:hover {
+        background: orange;
+    }
+}
+//商品を編集するボタンの商品削除ボタン
+.c-staffform__area__deletebutton {
+    display: block;
+    background: #174113;
+    margin-top: 50px;
+    //  margin-left: auto;
+    text-align: center;
+    margin-left: 1000px;
+    height: 60px;
+    width: 16%;
+    border: none;
+    border-radius: size(ss);
+    color: white;
+    transition: all 1.2s;
+    &:hover {
+        background: red;
+    }
+}
+//商品を編集する画面ここまで
 //..........................................................ボタンエリアここまで
 
-//============================================
-//フォームエリア共通しているエリア
-//============================================
-
-//=========================================
-//staff_exhibitproductlist (ページ）
-//これに基づいてstaff_buyproductlistも使用する
-//コンポーネントcに直す
-//=========================================
+//=====================================================
+//staff_exhibitproductlist とstaff_buyproductlist
+//===================================================
 .c-exhibitproductlist {
     display: block;
     background: rgba(255, 255, 255, 0.6);
@@ -170,6 +199,59 @@
 // コンビニ側商品を出品する画面と編集する画面 staff_exhibitproduct and updateproduct
 //=========================================================================
 //c-form4は商品を編集する画面＋ユーザー登録のshopper側の画面
+
+//お客様ログイン画面。
+.c-form1 {
+    display: block;
+    background: #f6f5f4;
+    background: rgba(255, 255, 255, 0.6);
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    border: solid #174113;
+    border-radius: size(ss);
+    width: 80%;
+    height: 1050px;
+    @include mqxl() {
+    }
+    @include mql() {
+        //720px以下
+    }
+    @include mq() {
+        //414px対応
+        height: 900px;
+    }
+}
+
+.c-form2 {
+    display: block;
+    background: #f6f5f4;
+    background: rgba(255, 255, 255, 0.6);
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding-left: size(l);
+    padding-right: size(l);
+
+    border: solid #174113;
+    border-radius: size(ss);
+    width: 80%;
+    height: 2500px;
+    @include mqxl() {
+        height: 3500px;
+    }
+    @include mql() {
+        //720px以下
+        height: 6350px;
+    }
+    @include mq() {
+        //414px対応
+        height: 1000px;
+    }
+}
+
 .c-form4 {
     display: block;
     background: #f6f5f4;
@@ -192,7 +274,7 @@
         height: 900px;
     }
 }
-
+//商品を出品する画面と商品を編集する画面
 .c-staffform__area {
     width: 80%;
     margin-left: auto;
@@ -204,6 +286,7 @@
     border-radius: size(sss);
 }
 
+//..................................................フォームエリア大枠を構成するところここまで
 .c-staffform__area__side {
     //  background: red;
     width: 100%;
@@ -295,6 +378,7 @@
     border-radius: size(ss);
 }
 
+/*
 .c-staffform__area__submitbutton {
     display: block;
     background: #174113;
@@ -328,7 +412,7 @@
         background: red;
     }
 }
-
+*/
 //===============================================ここらでしっかりと切り分けて直すこと
 
 //=======================================
@@ -360,7 +444,7 @@
 }
 
 //======================================
-//マイページのロゴみたいなもの
+//マイページのロゴタイトル
 //======================================
 .c-mypagemenu {
     background: rgba(255, 255, 255, 0.6);
@@ -387,8 +471,8 @@
     }
 }
 //====================================
-//
-
+//警告文
+//====================================
 .c-warning {
     font-size: 18px;
     color: red;

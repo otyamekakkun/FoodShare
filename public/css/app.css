@@ -909,56 +909,58 @@ a {
 * 3 今後も使い回しそうなgridファイル
 * 4 今後も使い回しそうなmedia (消去する可能性高い)
 */
+/*
 .c-form1 {
-  display: block;
-  background: #f6f5f4;
-  background: rgba(255, 255, 255, 0.6);
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 60px;
-  margin-bottom: 60px;
-  border: solid #174113;
-  border-radius: 10px;
-  width: 80%;
-  height: 1050px;
-}
-@media screen and (max-width: 414px) {
-  .c-form1 {
-    height: 900px;
-  }
+    display: block;
+    background: #f6f5f4;
+    background: rgba(255, 255, 255, 0.6);
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    border: solid #174113;
+    border-radius: size(ss);
+    width: 80%;
+    height: 1050px;
+    @include mqxl() {
+    }
+    @include mql() {
+        //720px以下
+    }
+    @include mq() {
+        //414px対応
+        height: 900px;
+    }
 }
 
 .c-form2 {
-  display: block;
-  background: #f6f5f4;
-  background: rgba(255, 255, 255, 0.6);
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 60px;
-  margin-bottom: 60px;
-  padding-left: 25px;
-  padding-right: 25px;
-  border: solid #174113;
-  border-radius: 10px;
-  width: 80%;
-  height: 2500px;
-}
-@media screen and (max-width:980px) {
-  .c-form2 {
-    height: 3500px;
-  }
-}
-@media screen and (max-width: 720px) {
-  .c-form2 {
-    height: 6350px;
-  }
-}
-@media screen and (max-width: 414px) {
-  .c-form2 {
-    height: 1000px;
-  }
-}
+    display: block;
+    background: #f6f5f4;
+    background: rgba(255, 255, 255, 0.6);
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding-left: size(l);
+    padding-right: size(l);
 
+    border: solid #174113;
+    border-radius: size(ss);
+    width: 80%;
+    height: 2500px;
+    @include mqxl() {
+        height: 3500px;
+    }
+    @include mql() {
+        //720px以下
+        height: 6350px;
+    }
+    @include mq() {
+        //414px対応
+        height: 1000px;
+    }
+}
+*/
 .c-form__area {
   width: 80%;
   margin-left: auto;
@@ -1730,6 +1732,39 @@ a {
   background: orange;
 }
 
+.c-staffform__area__submitbutton {
+  display: block;
+  background: #174113;
+  margin-top: 80px;
+  margin-left: 800px;
+  height: 60px;
+  width: 20%;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  transition: all 1.2s;
+}
+.c-staffform__area__submitbutton:hover {
+  background: orange;
+}
+
+.c-staffform__area__deletebutton {
+  display: block;
+  background: #174113;
+  margin-top: 50px;
+  text-align: center;
+  margin-left: 1000px;
+  height: 60px;
+  width: 16%;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  transition: all 1.2s;
+}
+.c-staffform__area__deletebutton:hover {
+  background: red;
+}
+
 .c-exhibitproductlist {
   display: block;
   background: rgba(255, 255, 255, 0.6);
@@ -1751,6 +1786,56 @@ a {
 @media screen and (max-width: 414px) {
   .c-exhibitproductlist {
     width: 60%;
+  }
+}
+
+.c-form1 {
+  display: block;
+  background: #f6f5f4;
+  background: rgba(255, 255, 255, 0.6);
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  border: solid #174113;
+  border-radius: 10px;
+  width: 80%;
+  height: 1050px;
+}
+@media screen and (max-width: 414px) {
+  .c-form1 {
+    height: 900px;
+  }
+}
+
+.c-form2 {
+  display: block;
+  background: #f6f5f4;
+  background: rgba(255, 255, 255, 0.6);
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border: solid #174113;
+  border-radius: 10px;
+  width: 80%;
+  height: 2500px;
+}
+@media screen and (max-width:980px) {
+  .c-form2 {
+    height: 3500px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .c-form2 {
+    height: 6350px;
+  }
+}
+@media screen and (max-width: 414px) {
+  .c-form2 {
+    height: 1000px;
   }
 }
 
@@ -1866,39 +1951,41 @@ a {
   border-radius: 10px;
 }
 
+/*
 .c-staffform__area__submitbutton {
-  display: block;
-  background: #174113;
-  margin-top: 80px;
-  margin-left: 800px;
-  height: 60px;
-  width: 20%;
-  border: none;
-  border-radius: 10px;
-  color: white;
-  transition: all 1.2s;
-}
-.c-staffform__area__submitbutton:hover {
-  background: orange;
+    display: block;
+    background: #174113;
+    margin-top: 80px;
+    margin-left: 800px;
+    height: 60px;
+    width: 20%;
+    border: none;
+    border-radius: size(ss);
+    color: white;
+    transition: all 1.2s;
+    &:hover {
+        background: orange;
+    }
 }
 
 .c-staffform__area__deletebutton {
-  display: block;
-  background: #174113;
-  margin-top: 50px;
-  text-align: center;
-  margin-left: 1000px;
-  height: 60px;
-  width: 16%;
-  border: none;
-  border-radius: 10px;
-  color: white;
-  transition: all 1.2s;
+    display: block;
+    background: #174113;
+    margin-top: 50px;
+    //  margin-left: auto;
+    text-align: center;
+    margin-left: 1000px;
+    height: 60px;
+    width: 16%;
+    border: none;
+    border-radius: size(ss);
+    color: white;
+    transition: all 1.2s;
+    &:hover {
+        background: red;
+    }
 }
-.c-staffform__area__deletebutton:hover {
-  background: red;
-}
-
+*/
 .c-title {
   text-align: center;
   font-size: 25px;
