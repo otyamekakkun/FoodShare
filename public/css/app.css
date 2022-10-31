@@ -1863,7 +1863,7 @@ a {
   border: solid #174113;
   border-radius: 10px;
   width: 80%;
-  height: 1400px;
+  height: 1450px;
 }
 @media screen and (max-width: 414px) {
   .c-form4 {
@@ -1877,7 +1877,7 @@ a {
   margin-right: auto;
   text-align: center;
   margin-top: 50px;
-  height: 1000px;
+  height: 1050px;
   border: solid #174113;
   border-radius: 5px;
 }
@@ -1955,7 +1955,7 @@ a {
   margin-bottom: 25px;
   background: white;
   width: 60%;
-  height: 250px;
+  height: 320px;
   padding-top: 25px;
   padding-bottom: 25px;
   padding-left: 25px;
@@ -1978,6 +1978,23 @@ a {
 }
 .c-staffform__area__submitbutton:hover {
   background: orange;
+}
+
+.c-staffform__area__deletebutton {
+  display: block;
+  background: #174113;
+  margin-top: 50px;
+  text-align: center;
+  margin-left: 1000px;
+  height: 60px;
+  width: 16%;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  transition: all 1.2s;
+}
+.c-staffform__area__deletebutton:hover {
+  background: red;
 }
 
 .c-title {

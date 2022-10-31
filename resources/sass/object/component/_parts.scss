@@ -181,7 +181,7 @@
     border: solid #174113;
     border-radius: size(ss);
     width: 80%;
-    height: 1400px;
+    height: 1450px;
     @include mqxl() {
     }
     @include mql() {
@@ -199,7 +199,7 @@
     margin-right: auto;
     text-align: center;
     margin-top: size(4l);
-    height: 1000px;
+    height: 1050px;
     border: solid #174113;
     border-radius: size(sss);
 }
@@ -284,7 +284,7 @@
     margin-bottom: size(l);
     background: white;
     width: 60%;
-    height: 250px;
+    height: 320px;
     padding-top: size(l);
     padding-bottom: size(l);
     padding-left: size(l);
@@ -299,7 +299,6 @@
     display: block;
     background: #174113;
     margin-top: 80px;
-    //  margin-left: auto;
     margin-left: 800px;
     height: 60px;
     width: 20%;
@@ -311,6 +310,25 @@
         background: orange;
     }
 }
+
+.c-staffform__area__deletebutton {
+    display: block;
+    background: #174113;
+    margin-top: 50px;
+    //  margin-left: auto;
+    text-align: center;
+    margin-left: 1000px;
+    height: 60px;
+    width: 16%;
+    border: none;
+    border-radius: size(ss);
+    color: white;
+    transition: all 1.2s;
+    &:hover {
+        background: red;
+    }
+}
+
 //===============================================ここらでしっかりと切り分けて直すこと
 
 //=======================================

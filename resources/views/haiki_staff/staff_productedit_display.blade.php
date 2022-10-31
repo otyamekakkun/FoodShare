@@ -15,17 +15,19 @@
 <form method="POST" action="{{ route('exhibit.update',$products->id)}}" enctype="multipart/form-data">
     @csrf
     <div class="c-staffform__area">
-        <label class="c-form__title">商品名:
+        <div class="c-staffform__area__side">
+
+        <span class="c-staffform__title">商品名:
             @error('product_name')
             <span class="" role="alert">
                 <strong>{{ $message }}</strong>
             </span>
             @enderror
             <br/>
-        </label>
+        </span>
             <input  type="text" class= "c-staffform__area__textname" name="product_name" value="{{$products->product_name}}" placeholder="商品名">
 <br/>
-        <label class="">金額を入れる:
+        <span class="c-staffform__title">金額を入れる:
         <span>
             @error('product_name')
             <span class="" role="alert">
@@ -34,8 +36,9 @@
             @enderror
             <br/>
 </span>    
-        </label><br>
+</span><br>
             <input id="" type="number" class="c-staffform__area__textprice" name="price" value="{{$products->price}}">円
+    </div>
 {{-- 賞味期限の入力はjsを使用。デフォルトだと現在日時より前の日付も記入できるから --}}
  <calender-component></calender-component>
 
@@ -47,16 +50,14 @@
 <button type="submit" class="c-staffform__area__submitbutton">
     商品を編集する
 </button>
-</div>
 </form>
 </div>
 
 <form action="{{ route('drills.delete',$products->id ) }}" method="post" class="d-inline">
     @csrf
-    <button class="btn btn-danger" onclick='return confirm("削除しますか？");'>{{ __('Go Delete')  }}</button>
+    <button class="c-staffform__area__deletebutton" onclick='return confirm("削除しますか？");'>この商品を削除する</button>
 </form>
-
-<button><a href={{route('admin-home')}}>編集の内容を破棄して戻る</a></button>
+</div>
 <footer-component></footer-component>
 </div> 
 {{-- 上のdivはコンポーネントを囲むdiv --}}
