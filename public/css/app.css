@@ -1054,18 +1054,34 @@ a {
 }
 
 /*
-.c-form3 {
-    display: block;
-    background: #f6f5f4;
-    background: rgba(255, 255, 255, 0.6);
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 60px;
-    margin-bottom: 60px;
-    border: solid #174113;
+.c-remind__button {
+    background: #174113;
+    color: white;
+    margin-top: 40px;
+    margin-left: 410px;
+    text-align: center;
+    width: 34%;
+    height: 50px;
+    border: none;
     border-radius: size(ss);
-    width: 80%;
-    height: 460px;
+    transition: all 1.2s;
+    &:hover {
+        background: orange;
+    }
+}
+
+.c-login__button {
+    background: #174113;
+    height: 60px;
+    width: 20%;
+    margin-left: 50px;
+    border: none;
+    border-radius: size(ss);
+    color: white;
+    transition: all 1.2s;
+    &:hover {
+        background: orange;
+    }
     @include mqxl() {
     }
     @include mql() {
@@ -1073,95 +1089,63 @@ a {
     }
     @include mq() {
         //414px対応
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: size(2l);
     }
 }
-*/
-.c-remind__button {
-  background: #174113;
-  color: white;
-  margin-top: 40px;
-  margin-left: 410px;
-  text-align: center;
-  width: 34%;
-  height: 50px;
-  border: none;
-  border-radius: 10px;
-  transition: all 1.2s;
-}
-.c-remind__button:hover {
-  background: orange;
-}
 
-.c-login__button {
-  background: #174113;
-  height: 60px;
-  width: 20%;
-  margin-left: 50px;
-  border: none;
-  border-radius: 10px;
-  color: white;
-  transition: all 1.2s;
-}
-.c-login__button:hover {
-  background: orange;
-}
-@media screen and (max-width: 414px) {
-  .c-login__button {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 40px;
-  }
-}
-
+//ユーザー登録するときの送信ボタン
 .c-register__button {
-  background: #174114;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 20px;
-  margin-top: 200px;
-  margin-left: 700px;
-  text-align: center;
-  height: 65px;
-  padding: 15px;
-  transition: all 1.2s;
-  width: 30%;
-}
-.c-register__button:hover {
-  background: orange;
+    background: #174114;
+    color: white;
+    border: none;
+    border-radius: size(sss);
+    font-size: size(m);
+    margin-top: 200px;
+    margin-left: 700px;
+    text-align: center;
+    height: 65px;
+    padding: size(s);
+    transition: all 1.2s;
+    width: 30%;
+    &:hover {
+        background: orange;
+    }
 }
 
 .c-register__shopperbutton {
-  background: #174114;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 20px;
-  margin-top: 300px;
-  margin-left: 57%;
-  text-align: center;
-  height: 65px;
-  padding: 15px;
-  transition: all 1.2s;
-  width: 24%;
-}
-.c-register__shopperbutton:hover {
-  background: orange;
+    background: #174114;
+    color: white;
+    border: none;
+    border-radius: size(sss);
+    font-size: size(m);
+    margin-top: 300px;
+    margin-left: 57%;
+    text-align: center;
+    height: 65px;
+    padding: size(s);
+    transition: all 1.2s;
+    width: 24%;
+    &:hover {
+        background: orange;
+    }
 }
 
 .c-remind__text {
-  transition: all 0.4s;
-  display: block;
-  width: 50%;
-  margin-left: 450px;
-  margin-top: 50px;
-}
-.c-remind__text:hover {
-  color: red;
-  font-size: 25px;
-}
+    transition: all 0.4s;
+    display: block;
+    width: 50%;
+    margin-left: 450px;
+    margin-top: size(4l);
 
+    &:hover {
+        color: red;
+        font-size: size(l);
+    }
+}
+*/
 .c-paginate {
   display: flex;
   justify-content: center;
@@ -1724,24 +1708,6 @@ a {
   }
 }
 
-.c-staff__action__button {
-  background: #174113;
-  margin-left: 16px;
-  margin-right: 16px;
-  text-align: center;
-  margin-top: auto;
-  margin-bottom: auto;
-  height: 60px;
-  width: 30%;
-  border: none;
-  border-radius: 10px;
-  color: white;
-  transition: all 1.2s;
-}
-.c-staff__action__button:hover {
-  background: orange;
-}
-
 .c-staffform__area__submitbutton {
   display: block;
   background: #174113;
@@ -1773,6 +1739,92 @@ a {
 }
 .c-staffform__area__deletebutton:hover {
   background: red;
+}
+
+.c-remind__button {
+  background: #174113;
+  color: white;
+  margin-top: 40px;
+  margin-left: 410px;
+  text-align: center;
+  width: 34%;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  transition: all 1.2s;
+}
+.c-remind__button:hover {
+  background: orange;
+}
+
+.c-login__button {
+  background: #174113;
+  height: 60px;
+  width: 20%;
+  margin-left: 50px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  transition: all 1.2s;
+}
+.c-login__button:hover {
+  background: orange;
+}
+@media screen and (max-width: 414px) {
+  .c-login__button {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+  }
+}
+
+.c-register__button {
+  background: #174114;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  margin-top: 200px;
+  margin-left: 700px;
+  text-align: center;
+  height: 65px;
+  padding: 15px;
+  transition: all 1.2s;
+  width: 30%;
+}
+.c-register__button:hover {
+  background: orange;
+}
+
+.c-register__shopperbutton {
+  background: #174114;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  margin-top: 300px;
+  margin-left: 57%;
+  text-align: center;
+  height: 65px;
+  padding: 15px;
+  transition: all 1.2s;
+  width: 24%;
+}
+.c-register__shopperbutton:hover {
+  background: orange;
+}
+
+.c-remind__text {
+  transition: all 0.4s;
+  display: block;
+  width: 50%;
+  margin-left: 450px;
+  margin-top: 50px;
+}
+.c-remind__text:hover {
+  color: red;
+  font-size: 25px;
 }
 
 .c-exhibitproductlist {

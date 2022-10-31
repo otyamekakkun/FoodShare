@@ -42,7 +42,6 @@
 //14staff_productdetail
 
 //1 (ユーザーのプロフィール編集ボタン)(shopper_profile_display.php)
-
 .c-formshopperprofile__sub {
     background: #174113;
     border: none;
@@ -78,7 +77,6 @@
 //..........................................................
 //2shopperの商品詳細のボタン
 .c-shopper__action {
-    // background: #b2d142;
     margin: auto;
     width: 100%;
 }
@@ -109,25 +107,6 @@
     }
 }
 //...........................................................
-
-.c-staff__action__button {
-    background: #174113;
-    margin-left: 16px;
-    margin-right: 16px;
-
-    text-align: center;
-    margin-top: auto;
-    margin-bottom: auto;
-    height: 60px;
-    width: 30%;
-    border: none;
-    border-radius: size(ss);
-    color: white;
-    transition: all 1.2s;
-    &:hover {
-        background: orange;
-    }
-}
 //..........................................................
 //商品を編集する画面出品する画面のボタン
 .c-staffform__area__submitbutton {
@@ -162,6 +141,102 @@
         background: red;
     }
 }
+
+//=============================
+//ボタンの中のsubmitボタンシリーズ
+//=============================
+.c-remind__button {
+    background: #174113;
+    color: white;
+    margin-top: 40px;
+    margin-left: 410px;
+    text-align: center;
+    width: 34%;
+    height: 50px;
+    border: none;
+    border-radius: size(ss);
+    transition: all 1.2s;
+    &:hover {
+        background: orange;
+    }
+}
+
+.c-login__button {
+    background: #174113;
+    height: 60px;
+    width: 20%;
+    margin-left: 50px;
+    border: none;
+    border-radius: size(ss);
+    color: white;
+    transition: all 1.2s;
+    &:hover {
+        background: orange;
+    }
+    @include mqxl() {
+    }
+    @include mql() {
+        //720px以下
+    }
+    @include mq() {
+        //414px対応
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: size(2l);
+    }
+}
+
+//ユーザー登録するときの送信ボタン
+.c-register__button {
+    background: #174114;
+    color: white;
+    border: none;
+    border-radius: size(sss);
+    font-size: size(m);
+    margin-top: 200px;
+    margin-left: 700px;
+    text-align: center;
+    height: 65px;
+    padding: size(s);
+    transition: all 1.2s;
+    width: 30%;
+    &:hover {
+        background: orange;
+    }
+}
+
+.c-register__shopperbutton {
+    background: #174114;
+    color: white;
+    border: none;
+    border-radius: size(sss);
+    font-size: size(m);
+    margin-top: 300px;
+    margin-left: 57%;
+    text-align: center;
+    height: 65px;
+    padding: size(s);
+    transition: all 1.2s;
+    width: 24%;
+    &:hover {
+        background: orange;
+    }
+}
+
+.c-remind__text {
+    transition: all 0.4s;
+    display: block;
+    width: 50%;
+    margin-left: 450px;
+    margin-top: size(4l);
+
+    &:hover {
+        color: red;
+        font-size: size(l);
+    }
+}
+
 //商品を編集する画面ここまで
 
 //..........................................................ボタンエリアここまで

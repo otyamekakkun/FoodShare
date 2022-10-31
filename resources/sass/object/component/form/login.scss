@@ -178,32 +178,10 @@
 //==============================================
 //パスワードリマインダー画面
 //==============================================
-/*
-.c-form3 {
-    display: block;
-    background: #f6f5f4;
-    background: rgba(255, 255, 255, 0.6);
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 60px;
-    margin-bottom: 60px;
-    border: solid #174113;
-    border-radius: size(ss);
-    width: 80%;
-    height: 460px;
-    @include mqxl() {
-    }
-    @include mql() {
-        //720px以下
-    }
-    @include mq() {
-        //414px対応
-    }
-}
-*/
 //=============================
 //submitボタンシリーズ
 //=============================
+/*
 .c-remind__button {
     background: #174113;
     color: white;
@@ -295,3 +273,4 @@
         font-size: size(l);
     }
 }
+*/
