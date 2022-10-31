@@ -37,10 +37,13 @@
     margin-left: auto;
     margin-top: 60px;
     margin-bottom: 60px;
+    padding-left: size(l);
+    padding-right: size(l);
+
     border: solid #174113;
     border-radius: size(ss);
     width: 80%;
-    height: 2400px;
+    height: 2500px;
     @include mqxl() {
         height: 3500px;
     }
@@ -247,12 +250,31 @@
     border: none;
     border-radius: size(sss);
     font-size: size(m);
-    margin-top: 80px;
+    margin-top: 200px;
     margin-left: 700px;
+    text-align: center;
     height: 65px;
     padding: size(s);
     transition: all 1.2s;
     width: 30%;
+    &:hover {
+        background: orange;
+    }
+}
+
+.c-register__shopperbutton {
+    background: #174114;
+    color: white;
+    border: none;
+    border-radius: size(sss);
+    font-size: size(m);
+    margin-top: 300px;
+    margin-left: 57%;
+    text-align: center;
+    height: 65px;
+    padding: size(s);
+    transition: all 1.2s;
+    width: 24%;
     &:hover {
         background: orange;
     }

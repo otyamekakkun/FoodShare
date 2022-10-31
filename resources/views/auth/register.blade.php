@@ -3,17 +3,17 @@
 @section('content')
 @include('rest.other.otherheader')
                     @isset($authgroup)
-                    <div class="c-form2">
-
+                    <div class="c-form2"> {{--コンビニユーザー登録画面のフォームページにして良い--}}
                     <form method="POST" action="{{ url("register/$authgroup") }}">
                         {{-- <div class="c-form2"> --}}
-
+                            <div class="c-warning2">
 <h1>コンビニスタッフユーザー登録</h1>
 <p>お客様(コンビニスタッフ関係ではない)方は,トップページのお客様ユーザー登録というボタンからお入りになって登録をしてください</p>
+</div>
  @else
  {{-- ここからユーザー登録ページ併用 --}}
                     <form method="POST" action="{{ route('register') }}">
-                        <div class="c-form2">
+                        <div class="c-form4"> {{--コンビニユーザー登録画面のフォームページにして良い--}}
 
                     @endisset
                         @csrf
@@ -166,11 +166,17 @@
 
 <textarea placeholder="都道府県以外の住所記述" name="adress" class="c-formstaff__adress__text " ></textarea>
                             @endisset
+                            <button type="submit" class="c-register__button">
+                                ユーザー登録
+                            </button>
+
 </div>
 {{-- ボタンはここでやる --}}
+{{--  
                             <button type="submit" class="c-register__button">
-                                ユーザー登録して始める
+                                ユーザー登録
                             </button>
+                            --}}
                         </div>
                         </form>
                     </div>

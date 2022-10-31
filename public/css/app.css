@@ -832,10 +832,12 @@ a {
   margin-left: auto;
   margin-top: 60px;
   margin-bottom: 60px;
+  padding-left: 25px;
+  padding-right: 25px;
   border: solid #174113;
   border-radius: 10px;
   width: 80%;
-  height: 2400px;
+  height: 2500px;
 }
 @media screen and (max-width:980px) {
   .c-form2 {
@@ -1001,14 +1003,33 @@ a {
   border: none;
   border-radius: 5px;
   font-size: 20px;
-  margin-top: 80px;
+  margin-top: 200px;
   margin-left: 700px;
+  text-align: center;
   height: 65px;
   padding: 15px;
   transition: all 1.2s;
   width: 30%;
 }
 .c-register__button:hover {
+  background: orange;
+}
+
+.c-register__shopperbutton {
+  background: #174114;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  margin-top: 300px;
+  margin-left: 57%;
+  text-align: center;
+  height: 65px;
+  padding: 15px;
+  transition: all 1.2s;
+  width: 24%;
+}
+.c-register__shopperbutton:hover {
   background: orange;
 }
 
