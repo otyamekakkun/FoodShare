@@ -6141,7 +6141,7 @@ var render = function render() {
   }, [_c("main", [_c("div", {
     staticClass: "l-exhibitproductlist"
   }, [_c("h1", {
-    staticClass: "l-shoppermypage__title"
+    staticClass: "c-mypagemenu__title"
   }, [_vm._v("これまでに購入された商品")]), _vm._v(" "), _vm._l(_vm.getItems, function (item) {
     return _c("ul", [item.bought >= 1 ? _c("div", [_c("div", {
       staticClass: "c-productlist__items"
