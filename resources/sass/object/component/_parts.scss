@@ -227,35 +227,18 @@
 
 //商品を編集する画面ここまで
 
-//..........................................................ボタンエリアここまで
-
-//=====================================================
-//staff_exhibitproductlist とstaff_buyproductlist
-//===================================================
-.c-exhibitproductlist {
-    display: block;
-    background: rgba(255, 255, 255, 0.6);
+//===============================
+//shopper購入するボタンのメニュー欄
+//===============================
+.c-productdetail__shoppermenu {
     margin-right: auto;
     margin-left: auto;
-    margin-top: 20px;
-    margin-bottom: 160px;
-    border: solid #174113;
-    border-radius: size(ss);
-    width: 70%;
-    padding-left: 50px;
-    padding-right: 50px;
-    //height: 400px;
-    @include mqxl() {
-    }
-    @include mql() {
-        width: 60%;
-    }
-
-    @include mq() {
-        //414px対応
-        width: 60%;
-    }
+    justify-content: center;
+    width: 100%;
+    display: flex;
 }
+
+//..........................................................ボタンエリアここまで
 
 //============================================================================
 // コンビニ側商品を出品する画面と編集する画面 staff_exhibitproduct and updateproduct
@@ -371,23 +354,20 @@
 
 //..................................................フォームエリア大枠を構成するところここまで
 
+//フォームエリア入力タイトル
+
+//フォームエリア入力
+
 //===========================================================
 //画面のタイトル文字
 //===========================================================
-
-//商品を出品する画面＋商品を編集する画面
+//商品を出品する画面＋商品を編集する画面のレスポンシブデザインするためのもの
 .c-staffform__area__side {
-    //  background: red;
     width: 100%;
     margin-left: 18%;
     margin-top: 8%;
     display: flex;
     margin-bottom: -6%;
-}
-.c-staffform__title {
-    font-size: size(l);
-    display: block;
-    width: 12%;
 }
 
 .c-staffform__area__textname {
@@ -396,22 +376,6 @@
     font-size: size(m);
     text-align: left;
     margin: size(sss);
-    margin-bottom: size(l);
-}
-
-.c-staffform__area__textprice {
-    background: white;
-    height: 40px;
-    width: 20%;
-    font-size: size(l);
-    margin-bottom: size(l);
-}
-
-.c-staffform__area__textcarender {
-    background: white;
-    width: 20%;
-    height: size(xxl);
-    margin-right: auto;
     margin-bottom: size(l);
 }
 
@@ -430,17 +394,12 @@
     cursor: pointer;
     transition: 0.3s;
     border-radius: size(m);
-
     &:hover {
         background: orange;
         border: dotted orange;
         border-radius: size(l);
         //  color: orange;
     }
-}
-
-.c-staffform__area__textcalender {
-    background: white;
 }
 
 .c-staffform__area__textimgarea {
@@ -458,11 +417,10 @@
     padding-left: size(l);
     padding-right: size(l);
     border: dotted #174113;
-
-    //padding: size(xxl);
     border-radius: size(ss);
 }
-//===============================================ここらでしっかりと切り分けて直すこと
+
+//商品を出品する画面+編集する画面ここで終了する
 
 //=======================================
 //フォームテキストエリア title文字          //
@@ -470,7 +428,6 @@
 //ログイン画面 ユーザー登録画面 プロフィール編集画面について
 //見出しの部分のレイアウト。（コンビニ側が出品した)
 .c-mypagemenu__title {
-    // background: red;
     text-align: center;
     margin: 40px;
     font-size: size(l);
@@ -528,7 +485,6 @@
 
     @include mql() {
     }
-
     @include mq() {
         font-size: size(s);
         margin-top: size(4l);
@@ -538,17 +494,80 @@
     }
 }
 
-//====================================================
-//共通化するエリアのコンポーネント部分 staffmypageのリスト
-//===================================================
-.c-staffmypagelistarea {
-    background: rgba(255, 255, 255, 0.6);
-    margin-top: 100px;
-    margin-bottom: 100px;
+.c-errormessage {
+    color: rgb(234, 14, 14);
+}
+
+//==============================================
+//フォームエリア
+//==============================================
+.c-form__area {
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
-    width: 65%;
-    border-radius: size(ss);
-    font-size: size(l);
-    padding: size(l);
+    margin-top: 60px;
+    margin-bottom: 80px;
+    height: 640px;
+    font-size: size(m);
+    text-align: center;
+    @include mqxl() {
+    }
+    @include mql() {
+        //720px以下
+    }
+    @include mq() {
+        //414px対応
+    }
 }
+//フォームのタイトル
+.c-form__title {
+    font-size: size(2l);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+
+.c-staffform__title {
+    font-size: size(l);
+    display: block;
+    width: 12%;
+}
+//........................................
+
+//フォームに入力するメッセージ
+.c-form__area__message {
+    display: block;
+    margin-top: size(4l);
+    margin-bottom: size(sssss);
+    font-size: size(l);
+}
+
+.c-form__area__text {
+    background: white;
+    margin-bottom: size(l);
+    font-size: size(l);
+    height: 60px;
+    width: 76%;
+    &:hover {
+        background: #f6f5f4;
+    }
+}
+
+.c-staffform__area__textprice {
+    background: white;
+    height: 40px;
+    width: 20%;
+    font-size: size(l);
+    margin-bottom: size(l);
+}
+
+.c-staffform__area__textcarender {
+    background: white;
+    width: 20%;
+    height: size(xxl);
+    margin-right: auto;
+    margin-bottom: size(l);
+}
+
+//................................................

@@ -1,6 +1,6 @@
 //============================================================
 //_productlist 出品した商品リスト、購入された商品リストを記述するもの
-//これに基づいてbuyproductlistも使用す
+//これに基づいてbuyproductlistも使用する
 //フォーム画面以外のものにする例えば商品一覧リストとかなど
 //=============================================================
 .c-productlist {
@@ -38,7 +38,6 @@
 }
 
 .c-productlist__items {
-    //c-productlist-itemsのところ
     width: 60%;
     margin-left: auto;
     margin-right: auto;
@@ -46,9 +45,7 @@
     margin-bottom: 100px;
     border-radius: size(m);
     border: solid size(ssss) #174113;
-    //background: white;
     background: rgba(255, 255, 255, 0.9);
-
     @include mqxxl() {
         width: 80%;
     }
@@ -70,7 +67,6 @@
         margin-top: size(xxl);
         font-size: size(s);
     }
-
     &__title {
         color: red;
         position: relative;
@@ -81,12 +77,10 @@
         opacity: 0.8;
         font-size: size(xxl);
         top: -120px;
-        // left: 200px;
         margin-left: auto;
         margin-right: auto;
         width: 100%;
         font-family: "Permanent Marker", cursive;
-
         @include mqxl() {
             width: 100%;
             font-size: size(s);
@@ -134,10 +128,9 @@
 }
 
 //==============================
-//ボタン処理
+//商品リストのボタン側のデザイン
 //==============================
 .c-productlist__items__bottom {
-    //background: #a8c079;
     margin-top: size(m);
     padding-top: size(m);
     border: solid orange;
@@ -201,10 +194,8 @@
 //shopperの方の詳細画面で用いる予定。
 .c-productdetaillist {
     font-size: 20px;
-    // text-align: center;
     margin-top: auto;
     margin-bottom: auto;
-    //ここでレスポンシブ対応が必要。
     margin-left: 20px;
 
     @include mqxxl() {
@@ -229,13 +220,9 @@
     }
 }
 .c-productdetailimg {
-    //全画面は50%の状態にする
     width: 50%;
     height: 500px;
     margin: 40px;
-
-    //1090pxから小さくする
-
     @include mqxxl() {
         height: 400px;
         width: 40%;
@@ -253,7 +240,6 @@
         text-align: center;
     }
     @include mq() {
-        //写真を上にして他の要素を下にする
         height: 200px;
         width: 90%;
         margin-right: auto;
@@ -353,7 +339,6 @@
 
     @include mql() {
         font-size: size(s);
-        //  padding:size(sss);
         margin-bottom: size(xxl);
     }
 
@@ -366,17 +351,45 @@
         margin-bottom: size(l);
     }
 }
-//===============================
-//shopper購入するボタンのメニュー欄
-//===============================
-.c-productdetail__shoppermenu {
-    margin-right: auto;
+//===================================================
+//共通化するエリアのコンポーネント部分 staffmypageのリスト
+//===================================================
+.c-staffmypagelistarea {
+    background: rgba(255, 255, 255, 0.6);
+    margin-top: 100px;
+    margin-bottom: 100px;
     margin-left: auto;
-    justify-content: center;
-    width: 100%;
-    display: flex;
+    margin-right: auto;
+    width: 65%;
+    border-radius: size(ss);
+    font-size: size(l);
+    padding: size(l);
 }
 
-.c-errormessage {
-    color: rgb(234, 14, 14);
+//=====================================================
+//staff_exhibitproductlist とstaff_buyproductlist(全体）
+//=====================================================
+.c-exhibitproductlist {
+    display: block;
+    background: rgba(255, 255, 255, 0.6);
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-bottom: 160px;
+    border: solid #174113;
+    border-radius: size(ss);
+    width: 70%;
+    padding-left: 50px;
+    padding-right: 50px;
+    //height: 400px;
+    @include mqxl() {
+    }
+    @include mql() {
+        width: 60%;
+    }
+
+    @include mq() {
+        //414px対応
+        width: 60%;
+    }
 }

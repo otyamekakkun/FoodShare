@@ -910,93 +910,55 @@ a {
 * 4 今後も使い回しそうなmedia (消去する可能性高い)
 */
 /*
-.c-form1 {
-    display: block;
-    background: #f6f5f4;
-    background: rgba(255, 255, 255, 0.6);
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 60px;
-    margin-bottom: 60px;
-    border: solid #174113;
-    border-radius: size(ss);
-    width: 80%;
-    height: 1050px;
-    @include mqxl() {
-    }
-    @include mql() {
-        //720px以下
-    }
-    @include mq() {
-        //414px対応
-        height: 900px;
-    }
-}
-
-.c-form2 {
-    display: block;
-    background: #f6f5f4;
-    background: rgba(255, 255, 255, 0.6);
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 60px;
-    margin-bottom: 60px;
-    padding-left: size(l);
-    padding-right: size(l);
-
-    border: solid #174113;
-    border-radius: size(ss);
-    width: 80%;
-    height: 2500px;
-    @include mqxl() {
-        height: 3500px;
-    }
-    @include mql() {
-        //720px以下
-        height: 6350px;
-    }
-    @include mq() {
-        //414px対応
-        height: 1000px;
-    }
-}
-*/
+//==============================================
+//フォームエリア
+//==============================================
 .c-form__area {
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 60px;
-  margin-bottom: 80px;
-  height: 640px;
-  font-size: 20px;
-  text-align: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    margin-bottom: 80px;
+    height: 640px;
+    font-size: size(m);
+    text-align: center;
+    @include mqxl() {
+    }
+    @include mql() {
+        //720px以下
+    }
+    @include mq() {
+        //414px対応
+    }
 }
+
 .c-form__title {
-  font-size: 40px;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 100px;
+    font-size: size(2l);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
 }
 
 .c-form__area__message {
-  display: block;
-  margin-top: 50px;
-  margin-bottom: 2px;
-  font-size: 25px;
+    display: block;
+    margin-top: size(4l);
+    margin-bottom: size(sssss);
+    font-size: size(l);
 }
 
 .c-form__area__text {
-  background: white;
-  margin-bottom: 25px;
-  font-size: 25px;
-  height: 60px;
-  width: 76%;
-}
-.c-form__area__text:hover {
-  background: #f6f5f4;
-}
+    background: white;
+    margin-bottom: size(l);
 
+    font-size: size(l);
+    height: 60px;
+    width: 76%;
+    &:hover {
+        background: #f6f5f4;
+    }
+}
+*/
 .c-loginarea {
   margin-top: 100px;
   margin-bottom: 60px;
@@ -1053,99 +1015,6 @@ a {
   background: #f6f5f4;
 }
 
-/*
-.c-remind__button {
-    background: #174113;
-    color: white;
-    margin-top: 40px;
-    margin-left: 410px;
-    text-align: center;
-    width: 34%;
-    height: 50px;
-    border: none;
-    border-radius: size(ss);
-    transition: all 1.2s;
-    &:hover {
-        background: orange;
-    }
-}
-
-.c-login__button {
-    background: #174113;
-    height: 60px;
-    width: 20%;
-    margin-left: 50px;
-    border: none;
-    border-radius: size(ss);
-    color: white;
-    transition: all 1.2s;
-    &:hover {
-        background: orange;
-    }
-    @include mqxl() {
-    }
-    @include mql() {
-        //720px以下
-    }
-    @include mq() {
-        //414px対応
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: size(2l);
-    }
-}
-
-//ユーザー登録するときの送信ボタン
-.c-register__button {
-    background: #174114;
-    color: white;
-    border: none;
-    border-radius: size(sss);
-    font-size: size(m);
-    margin-top: 200px;
-    margin-left: 700px;
-    text-align: center;
-    height: 65px;
-    padding: size(s);
-    transition: all 1.2s;
-    width: 30%;
-    &:hover {
-        background: orange;
-    }
-}
-
-.c-register__shopperbutton {
-    background: #174114;
-    color: white;
-    border: none;
-    border-radius: size(sss);
-    font-size: size(m);
-    margin-top: 300px;
-    margin-left: 57%;
-    text-align: center;
-    height: 65px;
-    padding: size(s);
-    transition: all 1.2s;
-    width: 24%;
-    &:hover {
-        background: orange;
-    }
-}
-
-.c-remind__text {
-    transition: all 0.4s;
-    display: block;
-    width: 50%;
-    margin-left: 450px;
-    margin-top: size(4l);
-
-    &:hover {
-        color: red;
-        font-size: size(l);
-    }
-}
-*/
 .c-paginate {
   display: flex;
   justify-content: center;
@@ -1602,16 +1471,40 @@ a {
   }
 }
 
-.c-productdetail__shoppermenu {
-  margin-right: auto;
+.c-staffmypagelistarea {
+  background: rgba(255, 255, 255, 0.6);
+  margin-top: 100px;
+  margin-bottom: 100px;
   margin-left: auto;
-  justify-content: center;
-  width: 100%;
-  display: flex;
+  margin-right: auto;
+  width: 65%;
+  border-radius: 10px;
+  font-size: 25px;
+  padding: 25px;
 }
 
-.c-errormessage {
-  color: rgb(234, 14, 14);
+.c-exhibitproductlist {
+  display: block;
+  background: rgba(255, 255, 255, 0.6);
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px;
+  margin-bottom: 160px;
+  border: solid #174113;
+  border-radius: 10px;
+  width: 70%;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+@media screen and (max-width: 720px) {
+  .c-exhibitproductlist {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 414px) {
+  .c-exhibitproductlist {
+    width: 60%;
+  }
 }
 
 .c-top__button {
@@ -1827,28 +1720,12 @@ a {
   font-size: 25px;
 }
 
-.c-exhibitproductlist {
-  display: block;
-  background: rgba(255, 255, 255, 0.6);
+.c-productdetail__shoppermenu {
   margin-right: auto;
   margin-left: auto;
-  margin-top: 20px;
-  margin-bottom: 160px;
-  border: solid #174113;
-  border-radius: 10px;
-  width: 70%;
-  padding-left: 50px;
-  padding-right: 50px;
-}
-@media screen and (max-width: 720px) {
-  .c-exhibitproductlist {
-    width: 60%;
-  }
-}
-@media screen and (max-width: 414px) {
-  .c-exhibitproductlist {
-    width: 60%;
-  }
+  justify-content: center;
+  width: 100%;
+  display: flex;
 }
 
 .c-form1 {
@@ -1952,34 +1829,12 @@ a {
   margin-bottom: -6%;
 }
 
-.c-staffform__title {
-  font-size: 25px;
-  display: block;
-  width: 12%;
-}
-
 .c-staffform__area__textname {
   height: 40px;
   background: white;
   font-size: 20px;
   text-align: left;
   margin: 5px;
-  margin-bottom: 25px;
-}
-
-.c-staffform__area__textprice {
-  background: white;
-  height: 40px;
-  width: 20%;
-  font-size: 25px;
-  margin-bottom: 25px;
-}
-
-.c-staffform__area__textcarender {
-  background: white;
-  width: 20%;
-  height: 35px;
-  margin-right: auto;
   margin-bottom: 25px;
 }
 
@@ -2003,10 +1858,6 @@ a {
   background: orange;
   border: dotted orange;
   border-radius: 25px;
-}
-
-.c-staffform__area__textcalender {
-  background: white;
 }
 
 .c-staffform__area__textimgarea {
@@ -2091,16 +1942,66 @@ a {
   }
 }
 
-.c-staffmypagelistarea {
-  background: rgba(255, 255, 255, 0.6);
-  margin-top: 100px;
-  margin-bottom: 100px;
+.c-errormessage {
+  color: rgb(234, 14, 14);
+}
+
+.c-form__area {
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
-  width: 65%;
-  border-radius: 10px;
+  margin-top: 60px;
+  margin-bottom: 80px;
+  height: 640px;
+  font-size: 20px;
+  text-align: center;
+}
+.c-form__title {
+  font-size: 40px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+
+.c-staffform__title {
   font-size: 25px;
-  padding: 25px;
+  display: block;
+  width: 12%;
+}
+
+.c-form__area__message {
+  display: block;
+  margin-top: 50px;
+  margin-bottom: 2px;
+  font-size: 25px;
+}
+
+.c-form__area__text {
+  background: white;
+  margin-bottom: 25px;
+  font-size: 25px;
+  height: 60px;
+  width: 76%;
+}
+.c-form__area__text:hover {
+  background: #f6f5f4;
+}
+
+.c-staffform__area__textprice {
+  background: white;
+  height: 40px;
+  width: 20%;
+  font-size: 25px;
+  margin-bottom: 25px;
+}
+
+.c-staffform__area__textcarender {
+  background: white;
+  width: 20%;
+  height: 35px;
+  margin-right: auto;
+  margin-bottom: 25px;
 }
 
 .u-space {
