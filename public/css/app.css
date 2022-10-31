@@ -774,6 +774,141 @@ a {
   bottom: 0; /* メニューを画面に入れる */
 }
 
+.l-productdetail {
+  background: rgba(255, 255, 255, 0.8);
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  border: solid 2px;
+  border-radius: 20px;
+  width: 80%;
+  height: 1100px;
+}
+@media screen and (max-width:1090px) {
+  .l-productdetail {
+    height: 1000px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .l-productdetail {
+    height: 800x;
+    margin-top: 90px;
+    margin-bottom: 90px;
+  }
+}
+@media screen and (max-width: 414px) {
+  .l-productdetail {
+    height: 712px;
+    margin-top: 90px;
+    margin-bottom: 90px;
+  }
+}
+
+.l-productdetail__shopper {
+  background: rgba(255, 255, 255, 0.9);
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  border: solid 2px;
+  border-radius: 20px;
+  width: 80%;
+  height: 1250px;
+}
+@media screen and (max-width:1090px) {
+  .l-productdetail__shopper {
+    height: 1200px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .l-productdetail__shopper {
+    height: 1000px;
+    margin-top: 90px;
+    margin-bottom: 90px;
+  }
+}
+
+.l-productdetail__area {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+  text-align: center;
+  height: 860px;
+}
+
+.l-productsearch {
+  background: rgba(255, 255, 255, 0.7);
+  height: 400px;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  padding: 5px;
+}
+@media screen and (max-width:1090px) {
+  .l-productsearch {
+    height: 500px;
+    text-align: center;
+  }
+}
+
+.c-serch {
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  margin-top: 45px;
+}
+@media screen and (max-width:1090px) {
+  .c-serch {
+    display: block;
+  }
+}
+
+.c-search__title {
+  margin-right: 5px;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+@media screen and (max-width:1090px) {
+  .c-search__title {
+    margin-bottom: 20px;
+    font-size: 25px;
+  }
+}
+
+.c-search__prefecture:hover {
+  background: #f6f5f4;
+}
+
+.c-serch2 {
+  text-align: center;
+  display: flex;
+  margin-top: 60px;
+  margin-left: 558px;
+}
+@media screen and (max-width:1090px) {
+  .c-serch2 {
+    display: block;
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.c-search__calender:hover {
+  background: #f6f5f4;
+}
+
+/*
+* 1 今後も使い回しそうなbuttonデザインを作るファイル 
+* 2 今後も使い回しそうなアラートを作るファイル
+* 3 今後も使い回しそうなgridファイル
+* 4 今後も使い回しそうなmedia (消去する可能性高い)
+*/
 .c-form1 {
   display: block;
   background: #f6f5f4;
@@ -1015,141 +1150,6 @@ a {
   font-size: 25px;
 }
 
-.l-productdetail {
-  background: rgba(255, 255, 255, 0.8);
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 100px;
-  margin-bottom: 100px;
-  border: solid 2px;
-  border-radius: 20px;
-  width: 80%;
-  height: 1100px;
-}
-@media screen and (max-width:1090px) {
-  .l-productdetail {
-    height: 1000px;
-  }
-}
-@media screen and (max-width: 560px) {
-  .l-productdetail {
-    height: 800x;
-    margin-top: 90px;
-    margin-bottom: 90px;
-  }
-}
-@media screen and (max-width: 414px) {
-  .l-productdetail {
-    height: 712px;
-    margin-top: 90px;
-    margin-bottom: 90px;
-  }
-}
-
-.l-productdetail__shopper {
-  background: rgba(255, 255, 255, 0.9);
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 100px;
-  margin-bottom: 100px;
-  border: solid 2px;
-  border-radius: 20px;
-  width: 80%;
-  height: 1250px;
-}
-@media screen and (max-width:1090px) {
-  .l-productdetail__shopper {
-    height: 1200px;
-  }
-}
-@media screen and (max-width: 560px) {
-  .l-productdetail__shopper {
-    height: 1000px;
-    margin-top: 90px;
-    margin-bottom: 90px;
-  }
-}
-
-.l-productdetail__area {
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 25px;
-  text-align: center;
-  height: 860px;
-}
-
-.l-productsearch {
-  background: rgba(255, 255, 255, 0.7);
-  height: 400px;
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 5px;
-  margin-top: 80px;
-  margin-bottom: 80px;
-  padding: 5px;
-}
-@media screen and (max-width:1090px) {
-  .l-productsearch {
-    height: 500px;
-    text-align: center;
-  }
-}
-
-.c-serch {
-  display: flex;
-  justify-content: center;
-  height: 40px;
-  margin-top: 45px;
-}
-@media screen and (max-width:1090px) {
-  .c-serch {
-    display: block;
-  }
-}
-
-.c-search__title {
-  margin-right: 5px;
-  margin-left: 20px;
-  margin-top: 5px;
-}
-@media screen and (max-width:1090px) {
-  .c-search__title {
-    margin-bottom: 20px;
-    font-size: 25px;
-  }
-}
-
-.c-search__prefecture:hover {
-  background: #f6f5f4;
-}
-
-.c-serch2 {
-  text-align: center;
-  display: flex;
-  margin-top: 60px;
-  margin-left: 558px;
-}
-@media screen and (max-width:1090px) {
-  .c-serch2 {
-    display: block;
-    margin-top: 200px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-.c-search__calender:hover {
-  background: #f6f5f4;
-}
-
-/*
-* 1 今後も使い回しそうなbuttonデザインを作るファイル 
-* 2 今後も使い回しそうなアラートを作るファイル
-* 3 今後も使い回しそうなgridファイル
-* 4 今後も使い回しそうなmedia (消去する可能性高い)
-*/
 .c-paginate {
   display: flex;
   justify-content: center;

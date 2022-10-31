@@ -1,0 +1,294 @@
+//==============================================
+//ログインページloginページのレイアウト部分
+//基本的にここにformの情報をまとめることをする
+//c-form1はログイン画面とshopperのプロフィール編集画面に用いる
+//c-form2はユーザー登録画面とstaffプロフィール編集画面
+
+//==============================================
+.c-form1 {
+    display: block;
+    background: #f6f5f4;
+    background: rgba(255, 255, 255, 0.6);
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    border: solid #174113;
+    border-radius: size(ss);
+    width: 80%;
+    height: 1050px;
+    @include mqxl() {
+    }
+    @include mql() {
+        //720px以下
+    }
+    @include mq() {
+        //414px対応
+        height: 900px;
+    }
+}
+
+.c-form2 {
+    display: block;
+    background: #f6f5f4;
+    background: rgba(255, 255, 255, 0.6);
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding-left: size(l);
+    padding-right: size(l);
+
+    border: solid #174113;
+    border-radius: size(ss);
+    width: 80%;
+    height: 2500px;
+    @include mqxl() {
+        height: 3500px;
+    }
+    @include mql() {
+        //720px以下
+        height: 6350px;
+    }
+    @include mq() {
+        //414px対応
+        height: 1000px;
+    }
+}
+
+.c-form__area {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    margin-bottom: 80px;
+    height: 640px;
+    //  border: dotted #174113;
+    //  border-radius: size(s);
+    font-size: size(m);
+    text-align: center;
+    @include mqxl() {
+    }
+    @include mql() {
+        //720px以下
+    }
+    @include mq() {
+        //414px対応
+    }
+}
+
+.c-form__title {
+    font-size: size(2l);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+
+.c-form__area__message {
+    display: block;
+    margin-top: size(4l);
+    margin-bottom: size(sssss);
+    font-size: size(l);
+}
+
+.c-form__area__text {
+    background: white;
+    margin-bottom: size(l);
+
+    font-size: size(l);
+    height: 60px;
+    width: 76%;
+    &:hover {
+        background: #f6f5f4;
+    }
+}
+
+//==============================
+//ログイン画面
+//==============================
+
+.c-loginarea {
+    margin-top: 100px;
+    margin-bottom: 60px;
+    width: 80%;
+    margin-left: 306px;
+    //  background: red;
+    @include mqxl() {
+    }
+    @include mql() {
+        //720px以下
+    }
+    @include mq() {
+        //414px対応
+        width: 80%;
+        font-size: 10x;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: size(m);
+    }
+}
+
+//=========================================
+//住所記入欄
+//=========================================
+
+.c-form__adresstitle {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: size(xl);
+}
+
+.c-formstaff__adressarea {
+    //  background: red;
+    height: 500px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    border: solid #174113;
+    border-radius: size(l);
+}
+.c-formstaff__prefecture {
+    //  display: block;
+    margin-left: 20px;
+}
+.c-formstaff__prefecture__text {
+    //  display: block;
+    background: white;
+    border-radius: 2px;
+    cursor: pointer;
+    &:hover {
+        background: #f6f5f4;
+    }
+}
+
+.c-formstaff__adress__text {
+    background: white;
+    height: 200px;
+    width: 60%;
+    border-radius: size(ssss);
+    margin-top: size(l);
+    &:hover {
+        background: #f6f5f4;
+    }
+}
+
+//==============================================
+//パスワードリマインダー画面
+//==============================================
+.c-form3 {
+    display: block;
+    background: #f6f5f4;
+    background: rgba(255, 255, 255, 0.6);
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    border: solid #174113;
+    border-radius: size(ss);
+    width: 80%;
+    height: 460px;
+    @include mqxl() {
+    }
+    @include mql() {
+        //720px以下
+    }
+    @include mq() {
+        //414px対応
+    }
+}
+//=============================
+//submitボタンシリーズ
+//=============================
+.c-remind__button {
+    background: #174113;
+    color: white;
+    margin-top: 40px;
+    margin-left: 410px;
+    text-align: center;
+    width: 34%;
+    height: 50px;
+    border: none;
+    border-radius: size(ss);
+    transition: all 1.2s;
+    &:hover {
+        background: orange;
+    }
+}
+
+.c-login__button {
+    background: #174113;
+    height: 60px;
+    width: 20%;
+    margin-left: 50px;
+    border: none;
+    border-radius: size(ss);
+    color: white;
+    transition: all 1.2s;
+    &:hover {
+        background: orange;
+    }
+    @include mqxl() {
+    }
+    @include mql() {
+        //720px以下
+    }
+    @include mq() {
+        //414px対応
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: size(2l);
+    }
+}
+
+//ユーザー登録するときの送信ボタン
+.c-register__button {
+    background: #174114;
+    color: white;
+    border: none;
+    border-radius: size(sss);
+    font-size: size(m);
+    margin-top: 200px;
+    margin-left: 700px;
+    text-align: center;
+    height: 65px;
+    padding: size(s);
+    transition: all 1.2s;
+    width: 30%;
+    &:hover {
+        background: orange;
+    }
+}
+
+.c-register__shopperbutton {
+    background: #174114;
+    color: white;
+    border: none;
+    border-radius: size(sss);
+    font-size: size(m);
+    margin-top: 300px;
+    margin-left: 57%;
+    text-align: center;
+    height: 65px;
+    padding: size(s);
+    transition: all 1.2s;
+    width: 24%;
+    &:hover {
+        background: orange;
+    }
+}
+
+.c-remind__text {
+    transition: all 0.4s;
+    display: block;
+    width: 50%;
+    margin-left: 450px;
+    margin-top: size(4l);
+
+    &:hover {
+        color: red;
+        font-size: size(l);
+    }
+}
