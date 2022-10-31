@@ -5860,7 +5860,7 @@ var render = function render() {
       id: "app"
     }
   }, [_c("main", [_c("div", {
-    staticClass: "l-exhibitproductlist"
+    staticClass: "c-exhibitproductlist"
   }, [_c("div", {
     staticClass: "c-productlist"
   }, [_vm._l(_vm.getItems, function (item) {
@@ -6346,7 +6346,7 @@ var render = function render() {
       id: "app"
     }
   }, [_c("main", [_c("div", {
-    staticClass: "l-exhibitproductlist"
+    staticClass: "c-exhibitproductlist"
   }, [_c("div", {
     staticClass: "c-productlist"
   }, [_vm._l(_vm.getItems, function (item) {

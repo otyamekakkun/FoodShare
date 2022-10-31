@@ -1730,7 +1730,7 @@ a {
   background: orange;
 }
 
-.l-exhibitproductlist {
+.c-exhibitproductlist {
   display: block;
   background: rgba(255, 255, 255, 0.6);
   margin-right: auto;
@@ -1744,12 +1744,12 @@ a {
   padding-right: 50px;
 }
 @media screen and (max-width: 720px) {
-  .l-exhibitproductlist {
+  .c-exhibitproductlist {
     width: 60%;
   }
 }
 @media screen and (max-width: 414px) {
-  .l-exhibitproductlist {
+  .c-exhibitproductlist {
     width: 60%;
   }
 }
