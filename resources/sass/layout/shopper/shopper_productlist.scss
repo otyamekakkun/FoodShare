@@ -11,54 +11,8 @@
     margin-top: 80px;
     margin-bottom: 80px;
     padding: size(sss);
-
     @include mqxxl() {
         height: 500px;
         text-align: center;
-    }
-}
-.c-serch {
-    // background: red;
-
-    display: flex;
-    justify-content: center;
-    height: 40px;
-    margin-top: size(3l);
-    @include mqxxl() {
-        display: block;
-    }
-}
-
-.c-search__title {
-    //background: green;
-    margin-right: size(sss);
-    margin-left: size(m);
-    margin-top: size(sss);
-    @include mqxxl() {
-        margin-bottom: 20px;
-        font-size: size(l);
-    }
-}
-
-.c-search__prefecture {
-    &:hover {
-        background: #f6f5f4;
-    }
-}
-.c-serch2 {
-    text-align: center;
-    display: flex;
-    margin-top: 60px;
-    margin-left: 558px;
-    @include mqxxl() {
-        display: block;
-        margin-top: 200px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-.c-search__calender {
-    &:hover {
-        background: #f6f5f4;
     }
 }

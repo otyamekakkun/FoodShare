@@ -3,7 +3,6 @@
 */
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Nunito");
-
 // Variables
 @import "variables";
 
@@ -24,8 +23,8 @@
 // ========================================================
 /*
 * 1 footerを作るsassのファイルを読み込む 
-* 2 headerを作るsassのファイルを読み込む
-* 3 _sidebarファイルを作る
+* 2 toppageを作るsassのファイルを読み込む
+* 3 headerを作るsassのファイルを読み込む
 */
 @import "layout/_footer"; //....................1
 @import "layout/toppage"; //....................3
@@ -54,7 +53,6 @@
 * 3 今後も使い回しそうなgridファイル
 * 4 今後も使い回しそうなmedia (消去する可能性高い)
 */
-@import "object/component/form/login"; //....................3
 @import "object/component/_paginate"; //....................3
 @import "object/component/_allproductlist"; //....................3
 @import "object/component/_parts"; //....................3

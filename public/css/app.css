@@ -394,8 +394,8 @@ a {
 
 /*
 * 1 footerを作るsassのファイルを読み込む 
-* 2 headerを作るsassのファイルを読み込む
-* 3 _sidebarファイルを作る
+* 2 toppageを作るsassのファイルを読み込む
+* 3 headerを作るsassのファイルを読み込む
 */
 .l-footer {
   background: #d69e10;
@@ -856,165 +856,12 @@ a {
   }
 }
 
-.c-serch {
-  display: flex;
-  justify-content: center;
-  height: 40px;
-  margin-top: 45px;
-}
-@media screen and (max-width:1090px) {
-  .c-serch {
-    display: block;
-  }
-}
-
-.c-search__title {
-  margin-right: 5px;
-  margin-left: 20px;
-  margin-top: 5px;
-}
-@media screen and (max-width:1090px) {
-  .c-search__title {
-    margin-bottom: 20px;
-    font-size: 25px;
-  }
-}
-
-.c-search__prefecture:hover {
-  background: #f6f5f4;
-}
-
-.c-serch2 {
-  text-align: center;
-  display: flex;
-  margin-top: 60px;
-  margin-left: 558px;
-}
-@media screen and (max-width:1090px) {
-  .c-serch2 {
-    display: block;
-    margin-top: 200px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-.c-search__calender:hover {
-  background: #f6f5f4;
-}
-
 /*
 * 1 今後も使い回しそうなbuttonデザインを作るファイル 
 * 2 今後も使い回しそうなアラートを作るファイル
 * 3 今後も使い回しそうなgridファイル
 * 4 今後も使い回しそうなmedia (消去する可能性高い)
 */
-/*
-//==============================================
-//フォームエリア
-//==============================================
-.c-form__area {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 60px;
-    margin-bottom: 80px;
-    height: 640px;
-    font-size: size(m);
-    text-align: center;
-    @include mqxl() {
-    }
-    @include mql() {
-        //720px以下
-    }
-    @include mq() {
-        //414px対応
-    }
-}
-
-.c-form__title {
-    font-size: size(2l);
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 100px;
-}
-
-.c-form__area__message {
-    display: block;
-    margin-top: size(4l);
-    margin-bottom: size(sssss);
-    font-size: size(l);
-}
-
-.c-form__area__text {
-    background: white;
-    margin-bottom: size(l);
-
-    font-size: size(l);
-    height: 60px;
-    width: 76%;
-    &:hover {
-        background: #f6f5f4;
-    }
-}
-*/
-.c-loginarea {
-  margin-top: 100px;
-  margin-bottom: 60px;
-  width: 80%;
-  margin-left: 306px;
-}
-@media screen and (max-width: 414px) {
-  .c-loginarea {
-    width: 80%;
-    font-size: 10x;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-  }
-}
-
-.c-form__adresstitle {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-size: 30px;
-}
-
-.c-formstaff__adressarea {
-  height: 500px;
-  margin-top: 100px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
-  border: solid #174113;
-  border-radius: 25px;
-}
-
-.c-formstaff__prefecture {
-  margin-left: 20px;
-}
-
-.c-formstaff__prefecture__text {
-  background: white;
-  border-radius: 2px;
-  cursor: pointer;
-}
-.c-formstaff__prefecture__text:hover {
-  background: #f6f5f4;
-}
-
-.c-formstaff__adress__text {
-  background: white;
-  height: 200px;
-  width: 60%;
-  border-radius: 3px;
-  margin-top: 25px;
-}
-.c-formstaff__adress__text:hover {
-  background: #f6f5f4;
-}
-
 .c-paginate {
   display: flex;
   justify-content: center;
@@ -1507,6 +1354,53 @@ a {
   }
 }
 
+.c-serch {
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  margin-top: 45px;
+}
+@media screen and (max-width:1090px) {
+  .c-serch {
+    display: block;
+  }
+}
+
+.c-search__title {
+  margin-right: 5px;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+@media screen and (max-width:1090px) {
+  .c-search__title {
+    margin-bottom: 20px;
+    font-size: 25px;
+  }
+}
+
+.c-search__prefecture:hover {
+  background: #f6f5f4;
+}
+
+.c-serch2 {
+  text-align: center;
+  display: flex;
+  margin-top: 60px;
+  margin-left: 558px;
+}
+@media screen and (max-width:1090px) {
+  .c-serch2 {
+    display: block;
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.c-search__calender:hover {
+  background: #f6f5f4;
+}
+
 .c-top__button {
   background: #174113;
   margin-left: 25px;
@@ -1921,6 +1815,22 @@ a {
   }
 }
 
+.c-loginarea {
+  margin-top: 100px;
+  margin-bottom: 60px;
+  width: 80%;
+  margin-left: 306px;
+}
+@media screen and (max-width: 414px) {
+  .c-loginarea {
+    width: 80%;
+    font-size: 10x;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+  }
+}
+
 .c-warning {
   font-size: 18px;
   color: red;
@@ -2002,6 +1912,46 @@ a {
   height: 35px;
   margin-right: auto;
   margin-bottom: 25px;
+}
+
+.c-form__adresstitle {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.c-formstaff__adressarea {
+  height: 500px;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  border: solid #174113;
+  border-radius: 25px;
+}
+
+.c-formstaff__prefecture {
+  margin-left: 20px;
+}
+
+.c-formstaff__prefecture__text {
+  background: white;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.c-formstaff__prefecture__text:hover {
+  background: #f6f5f4;
+}
+
+.c-formstaff__adress__text {
+  background: white;
+  height: 200px;
+  width: 60%;
+  border-radius: 3px;
+  margin-top: 25px;
+}
+.c-formstaff__adress__text:hover {
+  background: #f6f5f4;
 }
 
 .u-space {
