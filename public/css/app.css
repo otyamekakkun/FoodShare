@@ -1448,6 +1448,12 @@ a {
     margin: auto;
   }
 }
+@media screen and (max-width: 560px) {
+  .c-formshopperprofile__sub {
+    width: 30%;
+    margin: auto;
+  }
+}
 @media screen and (max-width: 414px) {
   .c-formshopperprofile__sub {
     width: 30%;
@@ -1554,6 +1560,14 @@ a {
 .c-login__button:hover {
   background: orange;
 }
+@media screen and (max-width: 560px) {
+  .c-login__button {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+  }
+}
 @media screen and (max-width: 414px) {
   .c-login__button {
     width: 100%;
@@ -1570,15 +1584,42 @@ a {
   border-radius: 5px;
   font-size: 20px;
   margin-top: 200px;
-  margin-left: 700px;
+  margin-left: 80%;
   text-align: center;
   height: 65px;
   padding: 15px;
   transition: all 1.2s;
-  width: 30%;
+  width: 34%;
 }
 .c-register__button:hover {
   background: orange;
+}
+@media screen and (max-width:980px) {
+  .c-register__button {
+    width: 50%;
+    margin-left: 70%;
+  }
+}
+@media screen and (max-width: 720px) {
+  .c-register__button {
+    width: 60%;
+    margin-left: 50%;
+  }
+}
+@media screen and (max-width: 560px) {
+  .c-register__button {
+    width: 73%;
+    font-size: 20px;
+    margin-top: 120px;
+    margin-left: 50%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 414px) {
+  .c-register__button {
+    width: 60%;
+    margin-top: 100px;
+  }
 }
 
 .c-register__shopperbutton {
@@ -1660,12 +1701,17 @@ a {
 }
 @media screen and (max-width: 720px) {
   .c-form2 {
-    height: 6350px;
+    height: 2700px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .c-form2 {
+    height: 2500px;
   }
 }
 @media screen and (max-width: 414px) {
   .c-form2 {
-    height: 1000px;
+    height: 2500px;
   }
 }
 
@@ -1839,13 +1885,24 @@ a {
   margin-top: 50px;
   text-align: center;
 }
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 560px) {
   .c-warning2 {
     font-size: 15px;
     margin-top: 50px;
     margin-left: 15px;
     margin-right: 15px;
     margin-bottom: -40px;
+  }
+}
+@media screen and (max-width: 414px) {
+  .c-warning2 {
+    /*
+    font-size: size(s);
+    margin-top: size(4l);
+    margin-left: size(s);
+    margin-right: size(s);
+    margin-bottom: -40px;
+    */
   }
 }
 
@@ -1863,6 +1920,7 @@ a {
   font-size: 20px;
   text-align: center;
 }
+
 .c-form__title {
   font-size: 40px;
   text-align: center;
@@ -1870,7 +1928,11 @@ a {
   margin-right: auto;
   margin-top: 100px;
 }
-
+@media screen and (max-width: 560px) {
+  .c-form__title {
+    font-size: 25px;
+  }
+}
 .c-staffform__title {
   font-size: 25px;
   display: block;
@@ -1883,7 +1945,11 @@ a {
   margin-bottom: 2px;
   font-size: 25px;
 }
-
+@media screen and (max-width: 560px) {
+  .c-form__area__message {
+    font-size: 20px;
+  }
+}
 .c-form__area__text {
   background: white;
   margin-bottom: 25px;
@@ -1893,6 +1959,22 @@ a {
 }
 .c-form__area__text:hover {
   background: #f6f5f4;
+}
+@media screen and (max-width: 560px) {
+  .c-form__area__text {
+    font-size: 20px;
+    margin-bottom: 10px;
+    width: 96%;
+    height: 50px;
+  }
+}
+@media screen and (max-width: 414px) {
+  .c-form__area__text {
+    font-size: 20px;
+    margin-bottom: 10px;
+    width: 96%;
+    height: 50px;
+  }
 }
 
 .c-staffform__area__textprice {
@@ -1916,6 +1998,24 @@ a {
   margin-bottom: 20px;
   font-size: 30px;
 }
+@media screen and (max-width: 560px) {
+  .c-form__adresstitle {
+    width: 100%;
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+}
+@media screen and (max-width: 414px) {
+  .c-form__adresstitle {
+    /*
+    width: 100%;
+    font-size: size(m);
+    margin-top: size(xl);
+    margin-bottom: size(s);
+    */
+  }
+}
 
 .c-formstaff__adressarea {
   height: 500px;
@@ -1925,6 +2025,16 @@ a {
   width: 80%;
   border: solid #174113;
   border-radius: 25px;
+}
+@media screen and (max-width: 414px) {
+  .c-formstaff__adressarea {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 414px) {
+  .c-formstaff__adressarea {
+    width: 100%;
+  }
 }
 
 .c-formstaff__prefecture {
@@ -1939,6 +2049,18 @@ a {
 .c-formstaff__prefecture__text:hover {
   background: #f6f5f4;
 }
+@media screen and (max-width: 560px) {
+  .c-formstaff__prefecture__text {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 414px) {
+  .c-formstaff__prefecture__text {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
 
 .c-formstaff__adress__text {
   background: white;
@@ -1949,6 +2071,22 @@ a {
 }
 .c-formstaff__adress__text:hover {
   background: #f6f5f4;
+}
+@media screen and (max-width: 560px) {
+  .c-formstaff__adress__text {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 84%;
+  }
+}
+@media screen and (max-width: 414px) {
+  .c-formstaff__adress__text {
+    /*
+    margin-top: size(m);
+    margin-bottom: size(m);
+    width: 84%;
+    */
+  }
 }
 
 .u-space {

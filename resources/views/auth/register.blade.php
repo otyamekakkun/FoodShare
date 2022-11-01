@@ -76,7 +76,7 @@
 </span><br/>
 
 
-<input type="text" placeholder="勤めているコンビニの会社を記述してください" name="convinience_name" class="c-form__area__text">
+<input type="text" placeholder="コンビニの会社名" name="convinience_name" class="c-form__area__text">
 <br/>
 
 <span  class="c-form__area__message">支店名記入欄:
@@ -171,12 +171,6 @@
                             </button>
 
 </div>
-{{-- ボタンはここでやる --}}
-{{--  
-                            <button type="submit" class="c-register__button">
-                                ユーザー登録
-                            </button>
-                            --}}
                         </div>
                         </form>
                     </div>
