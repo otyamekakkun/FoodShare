@@ -18,11 +18,23 @@
     &:hover {
         background: orange;
     }
+    @include mqxl() {
+    }
+
+    @include mql() {
+        margin-left: size(ss);
+        margin-right: size(ss);
+        font-size: 16px;
+        width: 42%;
+    }
+    @include mqm() {
+        margin-left: size(ss);
+        margin-right: size(ss);
+        font-size: 12px;
+        width: 40%;
+    }
+
     @include mq() {
-        margin-left: size(s);
-        margin-right: size(s);
-        font-size: 10px;
-        width: 35%;
     }
 }
 //1 (ユーザーのプロフィール編集ボタン)(shopper_profile_display.php)
