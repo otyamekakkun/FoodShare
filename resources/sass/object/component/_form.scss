@@ -320,7 +320,7 @@
     width: 80%;
     height: 2500px;
     @include mqxl() {
-        height: 3500px;
+        height: 2700px;
     }
     @include mql() {
         //720px以下
@@ -547,6 +547,7 @@
     }
 
     @include mql() {
+        font-size: size(m);
     }
 
     @include mqm() {
@@ -596,10 +597,11 @@
     }
     @include mql() {
         //720px以下
+        font-size: size(l);
     }
     @include mqm() {
         //560px以下
-        font-size: size(l);
+        //font-size: size(l);
     }
 
     @include mq() {
@@ -627,7 +629,7 @@
         //720px以下
     }
     @include mqm() {
-        //720px以下
+        //560px以下
         font-size: size(m);
     }
 
@@ -650,12 +652,12 @@
     }
     @include mql() {
         //720px以下
+        width: 96%;
     }
     @include mqm() {
         //560px対応
         font-size: size(m);
         margin-bottom: size(ss);
-        width: 96%;
         height: size(4l);
     }
 
@@ -663,7 +665,6 @@
         //414px対応
         font-size: size(m);
         margin-bottom: size(ss);
-        width: 96%;
         height: size(4l);
     }
 }
@@ -694,16 +695,24 @@
     font-size: size(xl);
 
     @include mqxl() {
+        width: 100%;
+        font-size: size(l);
+        margin-top: size(xl);
+        margin-bottom: size(s);
     }
     @include mql() {
         //720px以下
+        width: 100%;
+        font-size: size(l);
+        margin-top: size(xl);
+        margin-bottom: size(s);
     }
     @include mqm() {
         //414px対応
         width: 100%;
         font-size: size(m);
-        margin-top: size(xl);
-        margin-bottom: size(s);
+        //  margin-top: size(xl);
+        //  margin-bottom: size(s);
     }
 
     @include mq() {
@@ -729,15 +738,16 @@
     }
     @include mql() {
         //720px以下
+        width: 100%;
     }
     @include mq() {
         //560px以下対応
-        width: 100%;
+        //width: 100%;
     }
 
     @include mq() {
         //414px対応
-        width: 100%;
+        //     width: 100%;
     }
 }
 .c-formstaff__prefecture {
@@ -751,9 +761,13 @@
         background: #f6f5f4;
     }
     @include mqxl() {
+        margin-top: size(s);
+        margin-bottom: size(s);
     }
     @include mql() {
         //720px以下
+        // margin-top: size(s);
+        //   margin-bottom: size(s);
     }
     @include mqm() {
         //560px以下
@@ -778,9 +792,11 @@
         background: #f6f5f4;
     }
     @include mqxl() {
+        width: 70%;
     }
     @include mql() {
         //720px以下
+        width: 80%;
     }
     @include mqm() {
         //560px以下

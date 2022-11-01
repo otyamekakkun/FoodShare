@@ -1696,7 +1696,7 @@ a {
 }
 @media screen and (max-width:980px) {
   .c-form2 {
-    height: 3500px;
+    height: 2700px;
   }
 }
 @media screen and (max-width: 720px) {
@@ -1885,6 +1885,11 @@ a {
   margin-top: 50px;
   text-align: center;
 }
+@media screen and (max-width: 720px) {
+  .c-warning2 {
+    font-size: 20px;
+  }
+}
 @media screen and (max-width: 560px) {
   .c-warning2 {
     font-size: 15px;
@@ -1928,7 +1933,7 @@ a {
   margin-right: auto;
   margin-top: 100px;
 }
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 720px) {
   .c-form__title {
     font-size: 25px;
   }
@@ -1960,11 +1965,15 @@ a {
 .c-form__area__text:hover {
   background: #f6f5f4;
 }
+@media screen and (max-width: 720px) {
+  .c-form__area__text {
+    width: 96%;
+  }
+}
 @media screen and (max-width: 560px) {
   .c-form__area__text {
     font-size: 20px;
     margin-bottom: 10px;
-    width: 96%;
     height: 50px;
   }
 }
@@ -1972,7 +1981,6 @@ a {
   .c-form__area__text {
     font-size: 20px;
     margin-bottom: 10px;
-    width: 96%;
     height: 50px;
   }
 }
@@ -1998,12 +2006,26 @@ a {
   margin-bottom: 20px;
   font-size: 30px;
 }
+@media screen and (max-width:980px) {
+  .c-form__adresstitle {
+    width: 100%;
+    font-size: 25px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .c-form__adresstitle {
+    width: 100%;
+    font-size: 25px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+}
 @media screen and (max-width: 560px) {
   .c-form__adresstitle {
     width: 100%;
     font-size: 20px;
-    margin-top: 30px;
-    margin-bottom: 15px;
   }
 }
 @media screen and (max-width: 414px) {
@@ -2026,17 +2048,11 @@ a {
   border: solid #174113;
   border-radius: 25px;
 }
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 720px) {
   .c-formstaff__adressarea {
     width: 100%;
   }
 }
-@media screen and (max-width: 414px) {
-  .c-formstaff__adressarea {
-    width: 100%;
-  }
-}
-
 .c-formstaff__prefecture {
   margin-left: 20px;
 }
@@ -2048,6 +2064,12 @@ a {
 }
 .c-formstaff__prefecture__text:hover {
   background: #f6f5f4;
+}
+@media screen and (max-width:980px) {
+  .c-formstaff__prefecture__text {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
 }
 @media screen and (max-width: 560px) {
   .c-formstaff__prefecture__text {
@@ -2071,6 +2093,16 @@ a {
 }
 .c-formstaff__adress__text:hover {
   background: #f6f5f4;
+}
+@media screen and (max-width:980px) {
+  .c-formstaff__adress__text {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 720px) {
+  .c-formstaff__adress__text {
+    width: 80%;
+  }
 }
 @media screen and (max-width: 560px) {
   .c-formstaff__adress__text {
