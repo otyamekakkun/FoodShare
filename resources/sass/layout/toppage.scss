@@ -21,50 +21,87 @@
 
     @include mq() {
         height: 300px;
+        padding-left: size(s);
+        padding-right: size(s);
     }
 }
+
 .l-top__title__text {
+    display: inline;
     color: white;
     -webkit-text-stroke: size(sss) orange;
     font-family: "Permanent Marker", cursive;
-    font-size: 120px;
-    margin-top: 60px;
+    font-size: 100px;
+    margin-top: auto;
+    //margin-top: 60px;
+    line-height: 190px;
+
     @include mqxxl() {
         font-size: 80px;
-        margin-top: 70px;
+        line-height: 240px;
     }
 
     @include mqxl() {
-        font-size: 80px;
-        margin-top: 70px;
+        line-height: 220px;
+        -webkit-text-stroke: size(ssss) orange;
+        font-size: 60px;
     }
 
     @include mql() {
-        font-size: 80px;
-        margin-top: 70px;
+        line-height: 180px;
+        -webkit-text-stroke: size(sssss) orange;
+        font-size: size(4l);
     }
 
     @include mqm() {
-        font-size: 80px;
-        margin-top: 70px;
+        line-height: 180px;
+        -webkit-text-stroke: size(sssss) orange;
+        font-size: size(xxl);
     }
 
     @include mq() {
-        font-size: 50px;
-        text-align: center;
-        margin: auto;
+        line-height: 180px;
+        -webkit-text-stroke: size(sssss) orange;
+        font-size: size(xxl);
     }
 }
+
 .l-top__title__text2 {
     color: white;
     -webkit-text-stroke: size(sss) orange;
     font-family: "Permanent Marker", cursive;
     font-size: 80px;
+    // line-height: 40px;
+    @include mqxxl() {
+        -webkit-text-stroke: size(ssss) orange;
+        font-size: size(4l);
+        line-height: 20px;
+    }
+
+    @include mqxl() {
+        -webkit-text-stroke: size(ssss) orange;
+        font-size: size(4l);
+        line-height: 20px;
+    }
+
     @include mql() {
-        display: none;
+        -webkit-text-stroke: size(sssss) orange;
+        font-size: size(2l);
+        line-height: 0px;
+    }
+
+    @include mqm() {
+        -webkit-text-stroke: size(sssss) orange;
+        font-size: size(xl);
+        line-height: 0px;
+    }
+
+    @include mq() {
+        -webkit-text-stroke: size(sssss) orange;
+        font-size: size(xl);
+        line-height: 0px;
     }
 }
-
 .l-top__area__form {
     background: rgba(255, 255, 255, 0.7);
     display: flex;

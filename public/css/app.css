@@ -436,45 +436,52 @@ a {
 @media screen and (max-width: 414px) {
   .l-top__titlearea {
     height: 300px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
 .l-top__title__text {
+  display: inline;
   color: white;
   -webkit-text-stroke: 5px orange;
   font-family: "Permanent Marker", cursive;
-  font-size: 120px;
-  margin-top: 60px;
+  font-size: 100px;
+  margin-top: auto;
+  line-height: 190px;
 }
 @media screen and (max-width:1090px) {
   .l-top__title__text {
     font-size: 80px;
-    margin-top: 70px;
+    line-height: 240px;
   }
 }
 @media screen and (max-width:980px) {
   .l-top__title__text {
-    font-size: 80px;
-    margin-top: 70px;
+    line-height: 220px;
+    -webkit-text-stroke: 3px orange;
+    font-size: 60px;
   }
 }
 @media screen and (max-width: 720px) {
   .l-top__title__text {
-    font-size: 80px;
-    margin-top: 70px;
+    line-height: 180px;
+    -webkit-text-stroke: 2px orange;
+    font-size: 50px;
   }
 }
 @media screen and (max-width: 560px) {
   .l-top__title__text {
-    font-size: 80px;
-    margin-top: 70px;
+    line-height: 180px;
+    -webkit-text-stroke: 2px orange;
+    font-size: 35px;
   }
 }
 @media screen and (max-width: 414px) {
   .l-top__title__text {
-    font-size: 50px;
-    text-align: center;
-    margin: auto;
+    line-height: 180px;
+    -webkit-text-stroke: 2px orange;
+    font-size: 35px;
   }
 }
 
@@ -484,9 +491,39 @@ a {
   font-family: "Permanent Marker", cursive;
   font-size: 80px;
 }
+@media screen and (max-width:1090px) {
+  .l-top__title__text2 {
+    -webkit-text-stroke: 3px orange;
+    font-size: 50px;
+    line-height: 20px;
+  }
+}
+@media screen and (max-width:980px) {
+  .l-top__title__text2 {
+    -webkit-text-stroke: 3px orange;
+    font-size: 50px;
+    line-height: 20px;
+  }
+}
 @media screen and (max-width: 720px) {
   .l-top__title__text2 {
-    display: none;
+    -webkit-text-stroke: 2px orange;
+    font-size: 40px;
+    line-height: 0px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .l-top__title__text2 {
+    -webkit-text-stroke: 2px orange;
+    font-size: 30px;
+    line-height: 0px;
+  }
+}
+@media screen and (max-width: 414px) {
+  .l-top__title__text2 {
+    -webkit-text-stroke: 2px orange;
+    font-size: 30px;
+    line-height: 0px;
   }
 }
 
