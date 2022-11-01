@@ -4,7 +4,7 @@
 
 <body>
 <header>
-    @include('rest.other.otherheader')
+    @include('header.other.otherheader')
 </header>
 
 <aside>

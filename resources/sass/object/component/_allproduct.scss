@@ -96,7 +96,6 @@
         @include mq() {
             //414px対応
             top: -50px;
-
             width: 100%;
             font-size: size(s);
         }

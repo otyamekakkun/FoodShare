@@ -1,6 +1,7 @@
 //=============================================
 //商品の詳細画面の画面モック shopper_productdetail staff_productdetail
 //=============================================
+//画面設計のエリア
 .l-productdetail {
     background: rgba(255, 255, 255, 0.8);
     margin-right: auto;
@@ -47,9 +48,7 @@
         margin-bottom: 90px;
     }
 }
-
 .l-productdetail__area {
-    //background: red;
     width: 80%;
     margin-left: auto;
     margin-right: auto;

@@ -3,9 +3,6 @@
 @import url(https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200&display=swap);
 @charset "UTF-8";
 /*
-ここのファイルで全てのsassファイルを読み込もんでpublic/css/app.cssに書き直す
-*/
-/*
 *_varables.scssのファイル
 *主に変数や関数を置くところのファイルにする
 */
