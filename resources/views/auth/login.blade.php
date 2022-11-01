@@ -1,7 +1,7 @@
 
 @extends('layouts.app3')
 @section('content')
-@include('rest.other.otherheader')
+@include('header.other.otherheader')
 
 {{-- 管理者ログインページここから --}}
 

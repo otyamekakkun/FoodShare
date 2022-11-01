@@ -1,7 +1,7 @@
 @extends('layouts.app3')
 
 @section('content')
-@include('rest.other.otherheader')
+@include('header.other.otherheader')
                     @isset($authgroup)
                     <div class="c-form2"> {{--コンビニユーザー登録画面のフォームページにして良い--}}
                     <form method="POST" action="{{ url("register/$authgroup") }}">
