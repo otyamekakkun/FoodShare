@@ -184,7 +184,6 @@
         margin-top: size(2l);
     }
 }
-
 //ユーザー登録するときの送信ボタンコンビニ側
 .c-register__button {
     background: #174114;
@@ -227,6 +226,48 @@
         margin-top: 100px;
     }
 }
+
+.c-register__custombutton {
+    background: #174114;
+    color: white;
+    border: none;
+    border-radius: size(sss);
+    font-size: size(m);
+    margin-top: 200px;
+    margin-left: 70%;
+    text-align: center;
+    height: 65px;
+    padding: size(s);
+    transition: all 1.2s;
+    width: 34%;
+    &:hover {
+        background: orange;
+    }
+    @include mqxl() {
+        //980px以下
+        //  width: 50%;
+        //  margin-left: 70%;
+    }
+    @include mql() {
+        //720px以下
+        width: 50%;
+        margin-left: 50%;
+    }
+    @include mqm() {
+        //560px対応
+        width: 60%;
+        font-size: size(m);
+        margin-top: 120px;
+        margin-left: 40%;
+    }
+
+    @include mq() {
+        //414px対応
+        width: 60%;
+        margin-top: 100px;
+    }
+}
+
 //...............................................ここまで
 //ユーザー登録するときの送信ボタンshopper側
 .c-register__shopperbutton {
@@ -378,7 +419,7 @@
     }
     @include mq() {
         //414px対応
-        height: 900px;
+        height: 1400px;
     }
 }
 //商品を出品する画面と商品を編集する画面
