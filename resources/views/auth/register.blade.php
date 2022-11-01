@@ -15,8 +15,7 @@
                     <form method="POST" action="{{ route('register') }}">
                         <div class="c-form4"> {{--コンビニユーザー登録画面のフォームページにして良い--}}
 
-                    @endisset
-                        @csrf
+                            @csrf
                             <div class="c-form__area">
                             <h1 class="c-form__title">（個人情報エリア）</h1>
                             <br/>{{--簡易的につけとく --}}
@@ -49,7 +48,7 @@
                                 </span>
                             @enderror
 </label><br/>
-                                <input id="password" type="password" class="c-form__area__text" @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="パスワード">
+                                <input id="password" type="password" class="c-form__area__text"  name="password" required autocomplete="new-password" placeholder="パスワード">
                                 <br/>
 {{-- パスワードここまで --}}
                             <label for="password-confirm" class="c-form__area__message ">パスワード再入力:</label><br/>
@@ -57,9 +56,65 @@
                                 <input id="password-confirm" type="password" class="c-form__area__text" name="password_confirmation" required autocomplete="new-password" placeholder="パスワード再入力">
                                 {{-- ここまで併用のdiv --}}
                             
+{{-- ここまで追加 --}}
+                            <button type="submit" class="c-registercustom__button">
+                                お客ユーザー登録
+                            </button>
+                        </form>
 
-                        @isset($authgroup)
-                        <form method="POST" action="{{ url("register/$authgroup") }}">
+                    @endisset
+                    @isset($authgroup)
+                    <form method="POST" action="{{ url("register/$authgroup") }}">
+
+
+
+
+
+
+                            <div class="c-form__area">
+                            <h1 class="c-form__title">（個人情報エリア）</h1>
+                            <br/>{{--簡易的につけとく --}}
+                            {{--ユーザー登録ボタンここまで  --}}
+                            <span for="name" class="c-form__area__message">名前:
+                                @error('name')
+                                    <span  role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </span>
+                                <br/>
+                                <input id="name" type="text" class="c-form__area__text" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus  placeholder="名前">
+                                <br/>
+{{-- 名前入力スペースここまで --}}
+                            <span for="email" class="c-form__area__message ">Email:
+                                @error('email')
+                                <span class="" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                            </span><br/>
+                                <input id="email" type="email"class="c-form__area__text" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Email">
+                                <br/>
+{{-- emailここまで --}}
+                            <label for="password"class="c-form__area__message">パスワード:                                
+                                @error('password')
+                                <span class="" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+</label><br/>
+                                <input id="password" type="password" class="c-form__area__text"  name="password" required autocomplete="new-password" placeholder="パスワード">
+                                <br/>
+{{-- パスワードここまで --}}
+                            <label for="password-confirm" class="c-form__area__message ">パスワード再入力:</label><br/>
+
+                                <input id="password-confirm" type="password" class="c-form__area__text" name="password_confirmation" required autocomplete="new-password" placeholder="パスワード再入力">
+                                {{-- ここまで併用のdiv --}}
+                            
+                            </form>
+    
+                        {{-- @isset($authgroup) --}}
+                        {{-- <form method="POST" action="{{ url("register/$authgroup") }}"> --}}
 
                             {{-- ここまで共通のユーザー登録ページ --}}
                             {{-- ここから管理者用のユーザー登録ページ --}}
@@ -165,10 +220,11 @@
 
 
 <textarea placeholder="都道府県以外の住所記述" name="adress" class="c-formstaff__adress__text " ></textarea>
-                            @endisset
-                            <button type="submit" class="c-register__button">
-                                ユーザー登録
-                            </button>
+<button type="submit" class="c-register__button">
+    ユーザー登録
+</button>
+
+@endisset
 
 </div>
                         </div>
