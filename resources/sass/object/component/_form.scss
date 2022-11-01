@@ -632,6 +632,7 @@
     }
     @include mq() {
         //414px対応
+        height: 120px;
         font-size: size(s);
     }
 }

@@ -2064,6 +2064,7 @@ a {
 }
 @media screen and (max-width: 414px) {
   .c-staffform__area__textimgarea {
+    height: 120px;
     font-size: 15px;
   }
 }

@@ -11,7 +11,7 @@
                 </h1>
             </div>
     <div class="c-form4">
-        <h1 class="c-form__title">商品の情報について記述してください</h1>
+        <h1 class="c-mypagemenu__title">商品の情報について記述してください</h1>
 <form method="POST" action="{{ route('exhibit.update',$products->id)}}" enctype="multipart/form-data">
     @csrf
     <div class="c-staffform__area">
