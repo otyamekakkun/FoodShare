@@ -30,9 +30,15 @@
                 <img
                     v-show="preview"
                     v-bind:src="preview"
-                    style="width: 400px"
+                    class="c-staffform__area__textimgarea__img"
                 />
-                <p v-show="preview">{{ name }}</p>
+                <!--  style="width:400px" -->
+                <p
+                    v-show="preview"
+                    class="c-staffform__area__textimgarea__name"
+                >
+                    {{ name }}
+                </p>
             </div>
             <!-- ここまでプレビュー機能の部分 -->
         </div>

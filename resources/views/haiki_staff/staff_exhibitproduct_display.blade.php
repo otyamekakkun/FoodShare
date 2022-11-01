@@ -38,7 +38,7 @@
                 <br/>
     </span>    
 </span><br>
-                <input  type="number" class="c-staffform__area__textprice" name="price" value="" placeholder="金額を入力">
+                <input type="number" class="c-staffform__area__textprice" name="price" value="" placeholder="金額を入力">
 
             </div>
     {{-- 賞味期限の入力はjsを使用。デフォルトだと現在日時より前の日付も記入できるから --}}

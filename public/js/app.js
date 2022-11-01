@@ -6298,9 +6298,7 @@ var render = function render() {
       value: _vm.preview,
       expression: "preview"
     }],
-    staticStyle: {
-      width: "400px"
-    },
+    staticClass: "c-staffform__area__textimgarea__img",
     attrs: {
       src: _vm.preview
     }
@@ -6310,8 +6308,9 @@ var render = function render() {
       rawName: "v-show",
       value: _vm.preview,
       expression: "preview"
-    }]
-  }, [_vm._v(_vm._s(_vm.name))])])])]);
+    }],
+    staticClass: "c-staffform__area__textimgarea__name"
+  }, [_vm._v("\n                " + _vm._s(_vm.name) + "\n            ")])])])]);
 };
 
 var staticRenderFns = [function () {

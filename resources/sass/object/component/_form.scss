@@ -123,6 +123,25 @@
     &:hover {
         background: orange;
     }
+    @include mqxl() {
+        width: 15%;
+        margin: auto;
+        //レスポンシブ対策960px以下にボタンを対応
+    }
+
+    @include mql() {
+        width: 20%;
+        margin: auto;
+    }
+    @include mqm() {
+        width: 30%;
+        margin: auto;
+    }
+
+    @include mq() {
+        width: 50%;
+        margin: auto;
+    }
 }
 //商品を編集するボタンの商品削除ボタン
 .c-staffform__area__deletebutton {
@@ -535,6 +554,18 @@
     margin-top: 8%;
     display: flex;
     margin-bottom: -6%;
+    @include mqxl() {
+    }
+    @include mql() {
+        //720px以下
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @include mq() {
+        //414px対応
+        display: block;
+    }
 }
 
 .c-staffform__area__textname {
@@ -567,6 +598,15 @@
         border-radius: size(l);
         //  color: orange;
     }
+    @include mqxl() {
+    }
+    @include mql() {
+        //720px以下
+    }
+    @include mq() {
+        //414px対応
+        height: 300px;
+    }
 }
 
 .c-staffform__area__textimgarea {
@@ -585,8 +625,40 @@
     padding-right: size(l);
     border: dotted #174113;
     border-radius: size(ss);
+    @include mqxl() {
+    }
+    @include mql() {
+        //720px以下
+    }
+    @include mq() {
+        //414px対応
+        font-size: size(s);
+    }
+}
+.c-staffform__area__textimgarea__img {
+    width: 60%;
+    @include mqxl() {
+    }
+    @include mql() {
+        //720px以下
+    }
+    @include mq() {
+        //414px対応
+        font-size: size(s);
+    }
 }
 
+.c-staffform__area__textimgarea__name {
+    @include mqxl() {
+    }
+    @include mql() {
+        //720px以下
+    }
+    @include mq() {
+        //414px対応
+        font-size: size(s);
+    }
+}
 //商品を出品する画面+編集する画面ここで終了する
 
 //=======================================
@@ -731,11 +803,12 @@
     @include mqm() {
         //560px以下
         //font-size: size(l);
+        font-size: size(m);
     }
 
     @include mq() {
         //414px対応
-        // font-size: size(l);
+        font-size: size(m);
     }
 }
 
@@ -743,6 +816,24 @@
     font-size: size(l);
     display: block;
     width: 12%;
+    @include mqxl() {
+    }
+    @include mql() {
+        //720px以下
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    @include mqm() {
+        //560px以下
+        //font-size: size(l);
+    }
+
+    @include mq() {
+        //414px対応
+        width: 100%;
+    }
 }
 //........................................
 
@@ -804,6 +895,22 @@
     width: 20%;
     font-size: size(l);
     margin-bottom: size(l);
+    @include mqxl() {
+    }
+    @include mql() {
+        //720px以下
+        width: 50%;
+    }
+    @include mqm() {
+        //560px対応
+        font-size: size(m);
+        margin-bottom: size(ss);
+        height: size(4l);
+    }
+
+    @include mq() {
+        //414px対応
+    }
 }
 
 .c-staffform__area__textcarender {
@@ -935,11 +1042,5 @@
     }
 
     @include mq() {
-        //414px対応
-        /*
-        margin-top: size(m);
-        margin-bottom: size(m);
-        width: 84%;
-        */
     }
 }
