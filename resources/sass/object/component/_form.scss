@@ -138,16 +138,38 @@
 .c-remind__button {
     background: #174113;
     color: white;
-    margin-top: 40px;
+    margin-top: 60px;
     margin-left: 410px;
     text-align: center;
-    width: 34%;
+    width: 45%;
     height: 50px;
     border: none;
     border-radius: size(ss);
     transition: all 1.2s;
     &:hover {
         background: orange;
+    }
+    @include mqxxl() {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        //   margin-top: size(2l);
+    }
+    @include mqxxl() {
+        width: 60%;
+        //   margin-top: size(2l);
+    }
+
+    @include mql() {
+        //720px以下
+        font-size: size(s);
+    }
+    @include mqm() {
+        //560px以下対応
+        width: 80%;
+    }
+
+    @include mq() {
     }
 }
 //ログインボタンの画面
@@ -444,6 +466,7 @@
     }
     @include mql() {
         //720px以下
+        height: 500px;
     }
     @include mq() {
         //414px対応
