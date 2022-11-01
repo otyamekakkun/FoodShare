@@ -120,27 +120,37 @@
     border-radius: size(ss);
     color: white;
     transition: all 1.2s;
+    margin-left: auto;
+    margin-right: auto;
+
     &:hover {
         background: orange;
     }
+    @include mqxxl() {
+        width: 30%;
+        margin-left: auto;
+        margin-right: auto;
+
+        //レスポンシブ対策960px以下にボタンを対応
+    }
+
     @include mqxl() {
-        width: 15%;
-        margin: auto;
+        width: 30%;
+        margin-left: auto;
+        margin-right: auto;
+
         //レスポンシブ対策960px以下にボタンを対応
     }
 
     @include mql() {
-        width: 20%;
-        margin: auto;
+        width: 40%;
     }
     @include mqm() {
-        width: 30%;
-        margin: auto;
+        width: 46%;
     }
 
     @include mq() {
         width: 50%;
-        margin: auto;
     }
 }
 //商品を編集するボタンの商品削除ボタン
@@ -158,6 +168,32 @@
     transition: all 1.2s;
     &:hover {
         background: red;
+    }
+    @include mqxxl() {
+        width: 30%;
+        margin-left: auto;
+        margin-right: auto;
+
+        //レスポンシブ対策960px以下にボタンを対応
+    }
+
+    @include mqxl() {
+        width: 30%;
+        margin-left: auto;
+        margin-right: auto;
+
+        //レスポンシブ対策960px以下にボタンを対応
+    }
+
+    @include mql() {
+        width: 40%;
+    }
+    @include mqm() {
+        width: 46%;
+    }
+
+    @include mq() {
+        width: 50%;
     }
 }
 
@@ -517,6 +553,7 @@
     width: 80%;
     height: 1450px;
     @include mqxl() {
+        height: 1400px;
     }
     @include mql() {
         //720px以下
@@ -536,6 +573,15 @@
     height: 1050px;
     border: solid #174113;
     border-radius: size(sss);
+    @include mqxl() {
+        height: 1100px;
+    }
+    @include mql() {
+        //720px以下
+    }
+    @include mq() {
+        //414px対応
+    }
 }
 
 //..................................................フォームエリア大枠を構成するところここまで
@@ -550,33 +596,19 @@
 //商品を出品する画面＋商品を編集する画面のレスポンシブデザインするためのもの
 .c-staffform__area__side {
     width: 100%;
-    margin-left: 18%;
+    margin-left: 8%;
+    margin-right: 8%;
     margin-top: 8%;
     display: flex;
     margin-bottom: -6%;
+
     @include mqxl() {
-    }
-    @include mql() {
-        //720px以下
+        //960px以下から縦画面にする
         display: block;
         margin-left: auto;
         margin-right: auto;
     }
-    @include mq() {
-        //414px対応
-        display: block;
-    }
 }
-
-.c-staffform__area__textname {
-    height: 40px;
-    background: white;
-    font-size: size(m);
-    text-align: left;
-    margin: size(sss);
-    margin-bottom: size(l);
-}
-
 .c-staffform__area__uploadimgarea {
     width: 60%;
     background: #174113;
@@ -598,11 +630,18 @@
         border-radius: size(l);
         //  color: orange;
     }
-    @include mqxl() {
+    @include mqxxl() {
+        height: 180px;
     }
     @include mql() {
         //720px以下
+        height: 210px;
     }
+    @include mqm() {
+        //414px対応
+        height: 280px;
+    }
+
     @include mq() {
         //414px対応
         height: 300px;
@@ -626,10 +665,16 @@
     border: dotted #174113;
     border-radius: size(ss);
     @include mqxl() {
+        height: 180px;
     }
     @include mql() {
         //720px以下
+        height: 120px;
     }
+    @include mqm() {
+        height: 110px;
+    }
+
     @include mq() {
         //414px対応
         height: 120px;
@@ -643,6 +688,9 @@
     @include mql() {
         //720px以下
     }
+    @include mqm() {
+    }
+
     @include mq() {
         //414px対応
         font-size: size(s);
@@ -655,6 +703,9 @@
     @include mql() {
         //720px以下
     }
+    @include mqm() {
+    }
+
     @include mq() {
         //414px対応
         font-size: size(s);
@@ -790,11 +841,11 @@
 }
 //フォームのタイトル
 .c-form__title {
-    font-size: size(2l);
+    font-size: size(l);
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 100px;
+    margin-top: 60px;
     @include mqxl() {
     }
     @include mql() {
@@ -818,13 +869,13 @@
     display: block;
     width: 12%;
     @include mqxl() {
-    }
-    @include mql() {
-        //720px以下
         width: 100%;
         margin-left: auto;
         margin-right: auto;
         text-align: center;
+    }
+    @include mql() {
+        //720px以下
     }
     @include mqm() {
         //560px以下
@@ -833,7 +884,6 @@
 
     @include mq() {
         //414px対応
-        width: 100%;
     }
 }
 //........................................
@@ -889,6 +939,29 @@
         height: size(4l);
     }
 }
+.c-staffform__area__textname {
+    height: 40px;
+    background: white;
+    font-size: size(m);
+    text-align: left;
+    margin: size(sss);
+    margin-bottom: size(l);
+    @include mqxxl() {
+    }
+
+    @include mqxl() {
+        //960px以下から縦画面にする
+        width: 40%;
+    }
+    @include mql() {
+        //720px以下
+        width: 50%;
+    }
+    @include mqm() {
+        //414px対応
+        width: 60%;
+    }
+}
 
 .c-staffform__area__textprice {
     background: white;
@@ -897,6 +970,7 @@
     font-size: size(l);
     margin-bottom: size(l);
     @include mqxl() {
+        width: 40%;
     }
     @include mql() {
         //720px以下

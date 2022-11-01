@@ -1475,7 +1475,7 @@ a {
   text-align: center;
   display: flex;
   margin-top: 60px;
-  margin-left: 558px;
+  margin-left: 60%;
 }
 @media screen and (max-width:1090px) {
   .c-serch2 {
@@ -1483,6 +1483,7 @@ a {
     margin-top: 200px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 25px;
   }
 }
 
@@ -1608,32 +1609,39 @@ a {
   border-radius: 10px;
   color: white;
   transition: all 1.2s;
+  margin-left: auto;
+  margin-right: auto;
 }
 .c-staffform__area__submitbutton:hover {
   background: orange;
 }
+@media screen and (max-width:1090px) {
+  .c-staffform__area__submitbutton {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 @media screen and (max-width:980px) {
   .c-staffform__area__submitbutton {
-    width: 15%;
-    margin: auto;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @media screen and (max-width: 720px) {
   .c-staffform__area__submitbutton {
-    width: 20%;
-    margin: auto;
+    width: 40%;
   }
 }
 @media screen and (max-width: 560px) {
   .c-staffform__area__submitbutton {
-    width: 30%;
-    margin: auto;
+    width: 46%;
   }
 }
 @media screen and (max-width: 414px) {
   .c-staffform__area__submitbutton {
     width: 50%;
-    margin: auto;
   }
 }
 
@@ -1652,6 +1660,35 @@ a {
 }
 .c-staffform__area__deletebutton:hover {
   background: red;
+}
+@media screen and (max-width:1090px) {
+  .c-staffform__area__deletebutton {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (max-width:980px) {
+  .c-staffform__area__deletebutton {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (max-width: 720px) {
+  .c-staffform__area__deletebutton {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 560px) {
+  .c-staffform__area__deletebutton {
+    width: 46%;
+  }
+}
+@media screen and (max-width: 414px) {
+  .c-staffform__area__deletebutton {
+    width: 50%;
+  }
 }
 
 .c-remind__button {
@@ -1973,6 +2010,11 @@ a {
   width: 80%;
   height: 1450px;
 }
+@media screen and (max-width:980px) {
+  .c-form4 {
+    height: 1400px;
+  }
+}
 @media screen and (max-width: 414px) {
   .c-form4 {
     height: 1400px;
@@ -1989,34 +2031,25 @@ a {
   border: solid #174113;
   border-radius: 5px;
 }
-
+@media screen and (max-width:980px) {
+  .c-staffform__area {
+    height: 1100px;
+  }
+}
 .c-staffform__area__side {
   width: 100%;
-  margin-left: 18%;
+  margin-left: 8%;
+  margin-right: 8%;
   margin-top: 8%;
   display: flex;
   margin-bottom: -6%;
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width:980px) {
   .c-staffform__area__side {
     display: block;
     margin-left: auto;
     margin-right: auto;
   }
-}
-@media screen and (max-width: 414px) {
-  .c-staffform__area__side {
-    display: block;
-  }
-}
-
-.c-staffform__area__textname {
-  height: 40px;
-  background: white;
-  font-size: 20px;
-  text-align: left;
-  margin: 5px;
-  margin-bottom: 25px;
 }
 
 .c-staffform__area__uploadimgarea {
@@ -2040,6 +2073,21 @@ a {
   border: dotted orange;
   border-radius: 25px;
 }
+@media screen and (max-width:1090px) {
+  .c-staffform__area__uploadimgarea {
+    height: 180px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .c-staffform__area__uploadimgarea {
+    height: 210px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .c-staffform__area__uploadimgarea {
+    height: 280px;
+  }
+}
 @media screen and (max-width: 414px) {
   .c-staffform__area__uploadimgarea {
     height: 300px;
@@ -2061,6 +2109,21 @@ a {
   padding-right: 25px;
   border: dotted #174113;
   border-radius: 10px;
+}
+@media screen and (max-width:980px) {
+  .c-staffform__area__textimgarea {
+    height: 180px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .c-staffform__area__textimgarea {
+    height: 120px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .c-staffform__area__textimgarea {
+    height: 110px;
+  }
 }
 @media screen and (max-width: 414px) {
   .c-staffform__area__textimgarea {
@@ -2199,11 +2262,11 @@ a {
 }
 
 .c-form__title {
-  font-size: 40px;
+  font-size: 25px;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 100px;
+  margin-top: 60px;
 }
 @media screen and (max-width: 720px) {
   .c-form__title {
@@ -2226,7 +2289,7 @@ a {
   display: block;
   width: 12%;
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width:980px) {
   .c-staffform__title {
     width: 100%;
     margin-left: auto;
@@ -2234,12 +2297,6 @@ a {
     text-align: center;
   }
 }
-@media screen and (max-width: 414px) {
-  .c-staffform__title {
-    width: 100%;
-  }
-}
-
 .c-form__area__message {
   display: block;
   margin-top: 50px;
@@ -2281,12 +2338,41 @@ a {
   }
 }
 
+.c-staffform__area__textname {
+  height: 40px;
+  background: white;
+  font-size: 20px;
+  text-align: left;
+  margin: 5px;
+  margin-bottom: 25px;
+}
+@media screen and (max-width:980px) {
+  .c-staffform__area__textname {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 720px) {
+  .c-staffform__area__textname {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 560px) {
+  .c-staffform__area__textname {
+    width: 60%;
+  }
+}
+
 .c-staffform__area__textprice {
   background: white;
   height: 40px;
   width: 20%;
   font-size: 25px;
   margin-bottom: 25px;
+}
+@media screen and (max-width:980px) {
+  .c-staffform__area__textprice {
+    width: 40%;
+  }
 }
 @media screen and (max-width: 720px) {
   .c-staffform__area__textprice {
