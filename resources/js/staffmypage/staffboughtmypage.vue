@@ -2,7 +2,7 @@
     <div id="app">
         <main>
             <div class="c-staffmypagelistarea">
-                <h1 class="c-title">これまでに購入された商品</h1>
+                <h1 class="c-mypagemenu__title">これまでに購入された商品</h1>
                 <div v-for="item in getItems">
                     <div v-if="item.bought >= 1">
                         <ul class="c-productlist__items">

@@ -1081,16 +1081,12 @@ a {
 }
 @media screen and (max-width: 720px) {
   .c-productlist__items__img__title {
-    width: 100%;
-    font-size: 15px;
     top: -80px;
   }
 }
 @media screen and (max-width: 414px) {
   .c-productlist__items__img__title {
     top: -50px;
-    width: 100%;
-    font-size: 15px;
   }
 }
 
@@ -1123,6 +1119,18 @@ a {
   margin-top: 20px;
   padding-top: 20px;
   border: solid orange;
+}
+@media screen and (max-width:980px) {
+  .c-productlist__items__bottom {
+    width: 100%;
+    font-size: 15px;
+    top: -80px;
+  }
+}
+@media screen and (max-width: 414px) {
+  .c-productlist__items__bottom {
+    top: -50px;
+  }
 }
 
 .c-productlist__items__bottom__area {

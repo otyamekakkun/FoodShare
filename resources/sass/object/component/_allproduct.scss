@@ -88,16 +88,12 @@
         }
         @include mql() {
             //720px以下対応
-            width: 100%;
-            font-size: size(s);
             top: -80px;
         }
 
         @include mq() {
             //414px対応
             top: -50px;
-            width: 100%;
-            font-size: size(s);
         }
     }
 }
@@ -133,6 +129,16 @@
     margin-top: size(m);
     padding-top: size(m);
     border: solid orange;
+
+    @include mqxl() {
+        width: 100%;
+        font-size: size(s);
+        top: -80px;
+    }
+    @include mq() {
+        //414px対応
+        top: -50px;
+    }
 }
 .c-productlist__items__bottom__area {
     background: #174113;
