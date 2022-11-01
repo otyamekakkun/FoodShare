@@ -165,7 +165,7 @@ l-formstaffprofileあったら削除
 {{-- 住所変更ここまで --}}
 </div>
 
-            <input type="submit" class="c-register__button" value="変更する">
+            <input type="submit" class="c-register__custombutton" value="変更する">
 
             </div>
             </div>
