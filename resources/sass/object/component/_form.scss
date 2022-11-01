@@ -154,7 +154,7 @@
 .c-login__button {
     background: #174113;
     height: 60px;
-    width: 20%;
+    width: 24%;
     margin-left: 50px;
     border: none;
     border-radius: size(ss);
@@ -164,24 +164,34 @@
         background: orange;
     }
     @include mqxl() {
+        width: 40%;
+        // margin-left: auto;
+        //margin-right: auto;
+        margin-top: size(2l);
     }
     @include mql() {
         //720px以下
+        //   margin-left: auto;
+        //    margin-right: auto;
     }
     @include mqm() {
         //560px以下対応
+        /*
         width: 100%;
         margin-left: auto;
         margin-right: auto;
         margin-top: size(2l);
+        */
     }
 
     @include mq() {
         //414px対応
+        /*
         width: 100%;
         margin-left: auto;
         margin-right: auto;
         margin-top: size(2l);
+        */
     }
 }
 //ユーザー登録するときの送信ボタンコンビニ側
@@ -245,8 +255,6 @@
     }
     @include mqxl() {
         //980px以下
-        //  width: 50%;
-        //  margin-left: 70%;
     }
     @include mql() {
         //720px以下
@@ -294,11 +302,53 @@
     transition: all 0.4s;
     display: block;
     width: 50%;
-    margin-left: 450px;
-    margin-top: size(4l);
+    //  margin-left: 450px;
+    // margin-top: size(4l);
+    // width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: size(2l);
+    font-size: size(s);
+    text-align: center;
+
     &:hover {
         color: red;
-        font-size: size(l);
+        font-size: size(m);
+    }
+
+    @include mqxxl() {
+        /*
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: size(2l);
+        font-size: size(s);
+        text-align: center;
+        */
+    }
+    @include mql() {
+        //720px以下
+        //   margin-left: auto;
+        //    margin-right: auto;
+    }
+    @include mqm() {
+        //560px以下対応
+        /*
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: size(2l);
+        */
+    }
+
+    @include mq() {
+        //414px対応
+        /*
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: size(2l);
+        */
     }
 }
 
@@ -554,20 +604,23 @@
 //ログイン 自動でログインする ログインするボタンを閉めるところ
 //=======================================================================
 .c-loginarea {
+    /*
     margin-top: 100px;
     margin-bottom: 60px;
     width: 80%;
     margin-left: 306px;
+    */
+    width: 80%;
+    font-size: 10x;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: size(4l);
     @include mqxl() {
     }
     @include mql() {
+        font-size: 16px;
     }
     @include mq() {
-        width: 80%;
-        font-size: 10x;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: size(m);
     }
 }
 
