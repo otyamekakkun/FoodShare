@@ -5785,7 +5785,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      show: false,
+      show: true,
       show1: false
     };
   }
@@ -6555,11 +6555,11 @@ var render = function render() {
         _vm.show = !_vm.show;
       }
     }
-  }, [_vm._v("\n            お客様として始める\n        ")])]), _vm._v(" "), _c("transition", {
+  }, [_vm.show ? _c("div", [_vm._v("お客様として始める")]) : _vm._e(), _vm._v(" "), !_vm.show ? _c("div", [_vm._v("コンビニ関係者として")]) : _vm._e()])]), _vm._v(" "), _vm.show ? _c("div", [_c("transition", {
     attrs: {
       name: "fade"
     }
-  }, [_vm.show ? _c("div", [_c("div", {
+  }, [_c("div", {
     staticClass: "l-top__area__form__custom"
   }, [_c("div", {
     staticClass: "l-top__area__form__custom__button"
@@ -6576,21 +6576,14 @@ var render = function render() {
     attrs: {
       href: "./register"
     }
-  }, [_vm._v("お客様ユーザー登録")])])])])]) : _vm._e()]), _vm._v(" "), _c("div", {
-    staticClass: "l-top__area__form2"
-  }, [_c("button", {
-    staticClass: "l-top__area__form__button",
-    on: {
-      click: function click($event) {
-        _vm.show1 = !_vm.show1;
-      }
-    }
-  }, [_vm._v("\n            管理者として始める\n        ")])]), _vm._v(" "), _c("transition", {
+  }, [_vm._v("お客様ユーザー登録")])]), _vm._v(" "), _c("p", {
+    staticClass: "c-warning"
+  }, [_vm._v("\n                        コンビニ関係者としてご利用される場合は上のお客様として始めるボタンをもう一度クリックした上で,下記のコンビニログイン,またはコンビニユーザー登録を押して,お入りください\n                    ")])])])])], 1) : _vm._e(), _vm._v(" "), !_vm.show ? _c("div", [_c("transition", {
     attrs: {
       name: "fade"
     }
-  }, [_vm.show1 ? _c("div", [_c("div", {
-    staticClass: "l-top__area__form__custom2"
+  }, [_c("div", {
+    staticClass: "l-top__area__form__custom"
   }, [_c("div", {
     staticClass: "l-top__area__form__custom__button"
   }, [_c("button", {
@@ -6607,7 +6600,7 @@ var render = function render() {
     }
   }, [_vm._v("コンビニユーザー登録")])]), _vm._v(" "), _c("p", {
     staticClass: "c-warning"
-  }, [_vm._v("\n                        お客様がご利用される場合は上のお客様として始めるから、お客様ログイン,またはお客様ユーザー登録からお入りください\n                    ")])])])]) : _vm._e()])], 1);
+  }, [_vm._v("\n                        お客様としてご利用される場合は上のコンビニ関係者として始めるボタンをもう一度クリックした上で,下記のお客様ログイン,またはお客様ユーザー登録を押して,お入りください\n                    ")])])])])], 1) : _vm._e()]);
 };
 
 var staticRenderFns = [];
