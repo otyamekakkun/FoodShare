@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 use App\Models\Admin;
 use App\Models\products;
@@ -259,12 +258,6 @@ public function index1(){
 $drill = DB::table('products')->get();
     return response()->json($drill);
 }    //index1の内容は基本的にファイルの中に入っているもの全てを取得する
-//.................................................................
-
-public function index2(){
-    $drill = products::all();
-    return response()->json($drill);
-} //index2は消すかもしれない
 //.................................................................
 public function productjson(){
     $id = Auth::guard('admin')->id();
