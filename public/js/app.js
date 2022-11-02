@@ -5783,6 +5783,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ["show", "show1"],
   data: function data() {
     return {
       show: true,
@@ -6554,7 +6555,7 @@ var render = function render() {
         _vm.show = !_vm.show;
       }
     }
-  }, [_vm.show ? _c("div", [_vm._v("お客様として始める")]) : _vm._e(), _vm._v(" "), !_vm.show ? _c("div", [_vm._v("コンビニ関係者として")]) : _vm._e()])]), _vm._v(" "), _vm.show ? _c("div", [_c("transition", {
+  }, [_vm.show ? _c("div", [_vm._v("お客様として始める")]) : _vm._e(), _vm._v(" "), !_vm.show ? _c("div", [_vm._v("関係者として始める")]) : _vm._e()])]), _vm._v(" "), _vm.show ? _c("div", [_c("transition", {
     attrs: {
       name: "fade"
     }
@@ -6599,7 +6600,7 @@ var render = function render() {
     }
   }, [_vm._v("コンビニユーザー登録")])]), _vm._v(" "), _c("p", {
     staticClass: "c-warning"
-  }, [_vm._v("\n                        お客様としてご利用される場合は上のコンビニ関係者として始めるボタンをもう一度クリックした上で,下記のお客様ログイン,またはお客様ユーザー登録を押して,お入りください\n                    ")])])])])], 1) : _vm._e()]);
+  }, [_vm._v("\n                        お客様としてご利用される場合は上の関係者として始めるボタンをもう一度クリックした上で,下記のお客様ログイン,またはお客様ユーザー登録を押して,お入りください\n                    ")])])])])], 1) : _vm._e()]);
 };
 
 var staticRenderFns = [];
