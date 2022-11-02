@@ -41,18 +41,6 @@
                             v-for="product in filteredProducts"
                             class="c-productlist__items"
                         >
-                            <!-- <div v-if="product.bought <= 0"> -->
-                            <!-- 購入済みの商品は無くす
-                            <div v-if="product.bought >= 1">
-                                <img
-                                    v-bind:src="product.img_path"
-                                    class="c-productlist__items__img"
-                                />
-                                <p class="c-productlist__items__img__title">
-                                    購入済み！
-                                </p>
-                            </div>
- -->
                             <img
                                 v-bind:src="product.img_path"
                                 class="c-productlist__items__img2"
