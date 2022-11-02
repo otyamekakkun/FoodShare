@@ -37,51 +37,6 @@
         </main>
     </div>
 </template>
-<!--  
-<script>
-//import axios from "axios";
-import VueJsPaginate from "vuejs-paginate";
-export default {
-    components: {
-        "vuejs-paginate": VueJsPaginate,
-    },
-    props: ["products"],
-
-    data: function () {
-        {
-            return {
-                currentPage: 1,
-                perPage: 3,
-            };
-        }
-    },
-    computed: {
-        getItems: function () {
-            let start = (this.currentPage - 1) * this.perPage;
-            let end = this.currentPage * this.perPage;
-            return this.products.reverse().slice(start, end);
-        },
-        getPaginateCount: function () {
-            return Math.ceil(this.products.length / this.perPage);
-        },
-    },
-    methods: {
-        count: function () {
-            console.log($route.path);
-        },
-        paginateClickCallback: function (pageNum) {
-            this.currentPage = Number(pageNum);
-        },
-    },
-    /*
-    mounted() {
-        const url = "/haiki/index4";
-        axios.get(url).then((response) => (this.products = response.data));
-    },
-	*/
-};
-</script>
--->
 <script>
 export default {
     props: ["products", "getItems"],
