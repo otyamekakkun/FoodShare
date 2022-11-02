@@ -189,7 +189,7 @@
 </span>
 <br/>
 <textarea placeholder="都道府県以外の住所記述" name="adress" class="c-formstaff__adress__text " ></textarea>
-<button type="submit" class="c-register__button">
+<button type="submit" class="c-register__custombutton">
     ユーザー登録
 </button>
 </form>
