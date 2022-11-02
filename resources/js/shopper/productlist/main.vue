@@ -8,19 +8,15 @@
 <script>
 import ProductList from "./component/product-list.vue";
 import axios from "axios";
-
 export default {
     components: {
         ProductList,
     },
-
     data: function () {
         return {
             products: {}, //axiosから取得してきたデータを格納する
         };
     },
-
-    methods: {},
     //データベースから情報を取得します
     mounted() {
         const url = "/haiki/index1";

@@ -57,13 +57,22 @@
         </main>
     </div>
 </template>
+
+<template>
+    <div>
+        <shoppermypage-view></shoppermypage-view>
+    </div>
+</template>
+
 <script>
 import axios from "axios";
 import VueJsPaginate from "vuejs-paginate";
+import shoppermypagecomponentVue from "./component/shoppermypagecomponent.vue";
 
 export default {
     components: {
         "vuejs-paginate": VueJsPaginate,
+        "shoppermypage-view": shoppermypagecomponentVue,
     },
 
     data: function () {
