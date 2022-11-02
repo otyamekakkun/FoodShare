@@ -2,7 +2,6 @@
 <template>
     <div id="app">
         <main>
-            <!-- ここから共通しているのでc-に書き換える。 -->
             <div class="c-exhibitproductlist">
                 <h1 class="c-mypagemenu__title">これまでに購入された商品</h1>
                 <ul v-for="item in getItems">

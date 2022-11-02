@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Storage;
 class HaikiController extends Controller
 {
 //===================================================================
- //shoepper_mypage1                                                 //
+ //shoepper_mypage1   お客様のマイページを表示するもの                   //
  //==================================================================
     public function shopper_mypage_display(){
         $id = Auth::id();
@@ -23,7 +23,7 @@ class HaikiController extends Controller
 //===========================================================1終了
 
 //===================================================================
-//shopper_profile_display 2                                        //
+//shopper_profile_display 2   お客様のプロフィールを編集する画面         //
 //===================================================================
     public function shopper_profile_display(){
         $id = Auth::id();
@@ -46,26 +46,27 @@ $user->name=$request->name;
 $user->email=$request->email;
 $user->password= Hash::make($request->password);//パスワードをハッシュ化させる必要があるのでそれを記述する
 $user->save();
-return redirect('haiki/shopper_mypage');//..............画面表示するもの
-//===========================================================================2終了
+return redirect('haiki/shopper_mypage');//..............お客様の情報を更新するもの
 }
+//===========================================================================2終了
 
 //===================================================================
-//4 お客様商品一覧                                                    //
+//3 お客様商品一覧                                                    //
 //===================================================================
     public function shopper_productlist_display(){
         $product = DB::table('products')->get();
         return view('haiki_shopper.shopper_productlist_display',['products'=>$product]);
     } //.............................................................画面表示するもの
+//===========================================================================3終了
 
 //==============================================================
-//5お客用商品詳細ページ                                          //
+//4お客用商品詳細ページ                                          //
 //==============================================================
     public function shopper_productdetail_display($id){
-//laravelの処理で記述することができるようにする
-$product = products::find($id);         
+        $product = products::find($id);         
         return view('haiki_shopper.shopper_productdetail_display',['products'=>$product]);
-    } 
+    }
+     //商品詳細ページを写すための画面
     public function shopper_productdetail_bought ($id){
         $user = Auth::id();
         $product = products::find($id);//商品専用のid
@@ -75,6 +76,7 @@ $product = products::find($id);
         $product->save();
         return redirect('haiki/shopper_mypage');
     }
+     //商品が購入された時に更新するための処理
     public function shopper_productdetail_cancel ($id){
         $user = Auth::id();
         $product = products::find($id);//商品専用のid
@@ -83,17 +85,19 @@ $product = products::find($id);
         $product->bought =0;
         $product->save();
         return redirect('haiki/shopper_mypage');
-    }
-//=================================================ここまで
+    } 
+    //購入がキャンセルされた時に更新するための処理
+//=================================================4ここまで
 
 //=============================================================
-//staffのprofileのdisplay(コンビニ情報を登録し直す)               //
+//5staffのprofileのdisplay(コンビニ情報を登録し直す)               //
 //=============================================================
     public function staff_profile_display(){
         $id = Auth::guard('admin')->id();
         $admin = DB::table('admins')->find($id);
-        return view('haiki_staff.staff_profile_display',['admin'=>$admin]);//...................画面表示するもの
-    } 
+        return view('haiki_staff.staff_profile_display',['admin'=>$admin]);
+    } //...................画面表示するもの
+
     public function staff_profile_edit(Request $request)
 {
 $request->validate([
@@ -106,7 +110,6 @@ $request->validate([
     'adress'=>'required',
     'prefecture'=>'required'
 ]);
-
 $id = Auth::guard('admin')->id();
 $admin = Admin::find($id);
 $admin->name = $request->name;
@@ -117,8 +120,8 @@ $admin->prefecture=$request->prefecture;
 $admin->adress=$request->adress;
 $admin->save();
 return redirect('admin')->with('flash_message', __('Registered.'));
-}
-//=============================================================ここまで
+}//staffのプロフィールをデータベースに更新し直す処理
+//=============================================================5ここまで
 
 //==============================================================
 //6コンビニ 商品出品画面                                          //
@@ -128,21 +131,14 @@ return redirect('admin')->with('flash_message', __('Registered.'));
         $admin = Admin::find($id);
         return view('haiki_staff.staff_exhibitproduct_display',['admins'=>$admin]);
     } 
-
-
+    //商品出品する画面を表示するための処理
 public function create_exhibitproduct(Request $request){
-    //入力するときにバリデーションチェックを設ける
     $request->validate([
         'product_name'=>'required',
         'img_path' => 'required|file|image|mimes:png,jpeg',
         'price'=>'required',//全角で入力した瞬間enterを押された瞬間消える
         'best_by_date'=>'required'
-
     ]);
-
-    //laravelで表示されるための処理。
-//2つ保存されればゴール
-//vueで表示するための処理
 $image = $request->file("img_path");
 $path = Storage::disk("public")->putFile('profile', $image); 
 $imagePath = "/storage/" . $path;
@@ -155,11 +151,11 @@ $product->img_path=$imagePath;
 $product->price = $request->price;
 $product->best_by_date = $request->best_by_date;
 $product->prefecture=$request->prefecture;
-$product->save();//2
-return redirect('admin')->with('flash_message', __('Registered.'));//3
-}
+$product->save();
+return redirect('admin')->with('flash_message', __('Registered.'));
+} //商品の情報をデータベースに登録し直す処理
 
-//=========================================================ここまで
+//=========================================================6ここまで
 
 //==============================================================
 //7コンビニ 購入された商品一覧画面                                 //
