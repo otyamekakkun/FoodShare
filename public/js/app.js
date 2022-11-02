@@ -6036,7 +6036,7 @@ var render = function render() {
     }
   })]), _vm._v(" "), _c("div", {
     staticClass: "c-serch2"
-  }, [_vm._v("\n                    :有効期限チェック\n                    "), _c("input", {
+  }, [_vm._v("\n                       :有効期限チェック\n                       "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -6062,22 +6062,15 @@ var render = function render() {
   }, [_c("div", {
     staticClass: "c-productlist"
   }, _vm._l(_vm.filteredProducts, function (product) {
-    return product.best_by_date >= _vm.Days2 ? _c("ul", {
+    return product.best_by_date >= _vm.Days2 && product.bought <= 0 ? _c("ul", {
       key: product.id,
       staticClass: "c-productlist__items"
-    }, [product.bought >= 1 ? _c("div", [_c("img", {
-      staticClass: "c-productlist__items__img",
-      attrs: {
-        src: product.img_path
-      }
-    }), _vm._v(" "), _c("p", {
-      staticClass: "c-productlist__items__img__title"
-    }, [_vm._v("\n                                購入済み！\n                            ")])]) : _vm._e(), _vm._v(" "), product.bought <= 0 ? _c("div", [_c("img", {
+    }, [_c("img", {
       staticClass: "c-productlist__items__img2",
       attrs: {
         src: product.img_path
       }
-    })]) : _vm._e(), _vm._v(" "), _c("div", {
+    }), _vm._v(" "), _c("div", {
       staticClass: "c-productlist__items__list"
     }, [_c("li", [_vm._v("商品No." + _vm._s(product.id))]), _vm._v(" "), _c("li", [_vm._v("商品名:" + _vm._s(product.product_name))]), _vm._v(" "), _c("li", [_vm._v("お値段:" + _vm._s(product.price) + "円.")]), _vm._v(" "), _c("div", {
       staticClass: "c-productlist__items__bottom"

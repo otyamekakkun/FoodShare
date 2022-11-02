@@ -29,14 +29,20 @@
                         />
                     </div>
                 </div>
+                <!-- ここまではok -->
                 <div class="c-exhibitproductlist">
                     <div class="c-productlist">
                         <ul
-                            v-if="product.best_by_date >= Days2"
+                            v-if="
+                                product.best_by_date >= Days2 &&
+                                product.bought <= 0
+                            "
                             :key="product.id"
                             v-for="product in filteredProducts"
                             class="c-productlist__items"
                         >
+                            <!-- <div v-if="product.bought <= 0"> -->
+                            <!-- 購入済みの商品は無くす
                             <div v-if="product.bought >= 1">
                                 <img
                                     v-bind:src="product.img_path"
@@ -46,14 +52,11 @@
                                     購入済み！
                                 </p>
                             </div>
-
-                            <div v-if="product.bought <= 0">
-                                <img
-                                    v-bind:src="product.img_path"
-                                    class="c-productlist__items__img2"
-                                />
-                            </div>
-
+ -->
+                            <img
+                                v-bind:src="product.img_path"
+                                class="c-productlist__items__img2"
+                            />
                             <div class="c-productlist__items__list">
                                 <li>商品No.{{ product.id }}</li>
                                 <li>商品名:{{ product.product_name }}</li>
@@ -69,6 +72,7 @@
                                     </button>
                                 </div>
                             </div>
+                            <!-- </div> -->
                         </ul>
                     </div>
                 </div>
