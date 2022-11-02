@@ -158,30 +158,28 @@ return redirect('admin')->with('flash_message', __('Registered.'));
 //=========================================================6ここまで
 
 //==============================================================
-//7コンビニ 購入された商品一覧画面                                 //
+//7コンビニ購入された商品一覧画面                                 //
 //==============================================================
 
     public function staff_buyproduct_display(){
         $id = Auth::guard('admin')->id();
         $admin = DB::table('admins')->find($id);
         return view('haiki_staff.staff_buyproduct_display',['admins'=>$admin]);
-    } //.............................................購入
+    } //.............................................購入された商品を表す画面
+//=========================================================7ここまで
 
 //=====================================================
-//コンビニ用の商品編集画面を表したもの
+//8コンビニ用の商品編集画面
 //=====================================================
-
 public function staff_productedit_display($id){
     $product = products::find($id);
     return view('haiki_staff.staff_productedit_display',['products'=>$product]);
- } //...................................................
+ } //...................................................商品編集する画面
 
 public function destroy($id){
     products::find($id)->delete();
     return redirect('admin');
-} //..................................................削除するためのコード
-
-
+} //..................................................商品を削除するためのコード
 public function update_exhibitproduct(Request $request,$id){
     $request->validate([
         'product_name'=>'required',
@@ -202,26 +200,20 @@ $product->best_by_date = $request->best_by_date;
 $product->save();
 return redirect('admin')->with('flash_message', __('Registered.'));
 }//............................................商品の編集した画面をアップロードするもの
-//======================================================================商品編集画面ここまで
-
-//=====================
-//削除フラグ
-//=====================
 public function destory($id){
     products::find($id)->delete();
     return redirect('admin');
 }
 //======================================================削除フラグ
+//======================================================================8商品編集画面ここまで
 
-//=========================================
-//コンビニ側商品の詳細画面に行けるようにしたもの
+//===========================================
+//9コンビニ側商品の詳細画面
 //=========================================
     public function staff_productdetail_display($id){
         $product = products::find($id);
-        
     return view('haiki_staff.staff_productdetail_display',['products'=>$product]);
     } //.............................................................9画面を表示するもの
-
 
 //json形式
 //今ログインしているものを取得してくるjson形式
@@ -229,31 +221,27 @@ public function staffproductdetailjson($id){
     $product = products::find($id);
 return response()->json($product);
 }
+ //.............................................................9ここまで
 
 //========================================================================    
-//コンビニスタッフが商品を出品したものをリスト化するもの
+//10コンビニスタッフが商品を出品したものをリスト化するもの
 //========================================================================    
     public function staff_exhibitproduct_list_display(){
-
         $id = Auth::guard('admin')->id();
         $admin = DB::table('admins')->find($id);
         return view('haiki_staff.staff_exhibitproduct_list_display',['admin'=>$admin]);//...................画面表示するもの
-
-
-    } //...................................ここに問題がありそう。
+    }
 //json形式で渡す
 public function staff_exhibitproduct_json(){
     $id = Auth::guard('admin')->id();
     $product = products::where("admin_id",$id);
     return response()->json($product);
-
 }
-//==========================================================ここまで
+//==========================================================10ここまで
 
 //=======================================================================
 //管理者ログイン用のマイページ                                              //
 //=======================================================================
-
 public function admin(){
 //ログインしているコンビニ名と名前を出力する
     $id = Auth::guard('admin')->id();
@@ -268,37 +256,35 @@ public function admin(){
 //================================================
 //これがjson形式で値を渡す方法
 public function index1(){
-    // $drill = products::all();
 $drill = DB::table('products')->get();
     return response()->json($drill);
-    //index1の内容は基本的にファイルの中に入っているもの全てを取得する
-}
+}    //index1の内容は基本的にファイルの中に入っているもの全てを取得する
+//.................................................................
 
 public function index2(){
     $drill = products::all();
     return response()->json($drill);
-}
-
-//管理者としてログインした時に、管理者専用の情報を取得するjson形式のデータベース
+} //index2は消すかもしれない
+//.................................................................
 public function productjson(){
     $id = Auth::guard('admin')->id();
     $product = products::where("admin_id",$id)->get();
 return response()->json($product);
-}
+}//管理者としてログインした時に、管理者専用の情報を取得するjson形式のデータベース
+//.................................................................
 
-
-//shopper自分が購入した商品を写し出すjson形式生成
-//ログインしているidを取得して、productsテーブルからuser_idと照合したカラムを取り出す。
 public function userjson(){
     $id = Auth::id();
     $user = products::where('user_id',$id)->get();
-
 return response()->json($user);
 }
+//shopper自分が購入した商品を写し出すjson形式生成
+//ログインしているidを取得して、productsテーブルからuser_idと照合したカラムを取り出す。
+//.................................................................
 public function buyjson(){
     $id = Auth::guard('admin')->id();
     $product = products::where("admin_id",$id)->orderBy('updated_at','desc')->get();
 return response()->json($product);
-}
+}//購入された商品情報を最新順に渡す。
 }
 //=========================================================json形式で渡すのここまで。
