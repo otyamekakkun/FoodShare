@@ -16,9 +16,6 @@
     @include mq() {
         display: block;
     }
-    @include mql() {
-        display: block;
-    }
 }
 .c-productlist__items__title {
     background: rgb(220, 168, 70);
@@ -84,10 +81,6 @@
         @include mqxl() {
             width: 100%;
             font-size: size(s);
-            top: -80px;
-        }
-        @include mql() {
-            //720px以下対応
             top: -80px;
         }
 
@@ -203,20 +196,7 @@
     margin-bottom: auto;
     margin-left: 20px;
 
-    @include mqxxl() {
-    }
-    @include mqxl() {
-    }
     @include mql() {
-        width: 100%;
-        margin-right: auto;
-        margin-left: auto;
-        text-align: center;
-        font-size: 20px;
-    }
-    @include mq() {
-        //写真を上にして他の要素を下にする
-        //height: 200px;
         width: 100%;
         margin-right: auto;
         margin-left: auto;
@@ -233,18 +213,10 @@
         width: 40%;
     }
     @include mqxl() {
-        height: 400px;
         width: 50%;
     }
     //600px付近でセッティング必要かも
     @include mql() {
-        height: 200px;
-        width: 90%;
-        margin-right: auto;
-        margin-left: auto;
-        text-align: center;
-    }
-    @include mq() {
         height: 200px;
         width: 90%;
         margin-right: auto;
@@ -275,23 +247,12 @@
 
     @include mqxxl() {
         width: 70%;
-    }
-
-    @include mqxxl() {
-        margin-top: size(xxl);
-    }
-    @include mqxl() {
         margin-top: size(xxl);
     }
     @include mql() {
-        margin-top: size(xxl);
         margin-left: auto;
         margin-right: auto;
         width: 100%;
-    }
-    @include mqm() {
-    }
-    @include mq() {
     }
 }
 .c-productdetail__title {
@@ -319,15 +280,6 @@
     @include mqxxl() {
         margin-top: size(xxl);
     }
-    @include mqxl() {
-        margin-top: size(xxl);
-    }
-    @include mql() {
-        margin-top: size(xxl);
-    }
-    @include mqm() {
-        margin-top: size(xxl);
-    }
     @include mq() {
         margin-top: size(xxl);
         margin-left: auto;
@@ -347,18 +299,7 @@
     @include mqxxl() {
         margin-top: size(xxl);
     }
-    @include mqxl() {
-        margin-top: size(xxl);
-    }
-    @include mql() {
-        margin-top: size(xxl);
-    }
-    @include mqm() {
-        margin-top: size(xxl);
-    }
     @include mq() {
-        margin-top: size(xxl);
-
         width: 100%;
     }
 }
@@ -389,7 +330,6 @@
 
     @include mqm() {
         font-size: size(ss);
-        margin-bottom: size(xxl);
     }
     @include mq() {
         padding: size(sss);
@@ -427,14 +367,7 @@
     padding-left: 50px;
     padding-right: 50px;
     //height: 400px;
-    @include mqxl() {
-    }
     @include mql() {
-        width: 60%;
-    }
-
-    @include mq() {
-        //414px対応
         width: 60%;
     }
 }

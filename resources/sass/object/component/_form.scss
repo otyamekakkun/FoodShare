@@ -18,8 +18,6 @@
     &:hover {
         background: orange;
     }
-    @include mqxl() {
-    }
 
     @include mql() {
         margin-left: size(ss);
@@ -28,13 +26,8 @@
         width: 42%;
     }
     @include mqm() {
-        margin-left: size(ss);
-        margin-right: size(ss);
         font-size: 12px;
         width: 40%;
-    }
-
-    @include mq() {
     }
 }
 //1 (ユーザーのプロフィール編集ボタン)(shopper_profile_display.php)
@@ -57,16 +50,12 @@
 
     @include mql() {
         width: 20%;
-        margin: auto;
     }
     @include mqm() {
         width: 30%;
-        margin: auto;
     }
-
     @include mq() {
         width: 30%;
-        margin: auto;
     }
 }
 
@@ -98,7 +87,6 @@
         background: orange;
     }
     @include mqxl() {
-        //display:block;
         width: 80%;
         margin-top: -5px;
         margin-bottom: size(3l);
@@ -127,14 +115,6 @@
         background: orange;
     }
     @include mqxxl() {
-        width: 30%;
-        margin-left: auto;
-        margin-right: auto;
-
-        //レスポンシブ対策960px以下にボタンを対応
-    }
-
-    @include mqxl() {
         width: 30%;
         margin-left: auto;
         margin-right: auto;
@@ -177,14 +157,6 @@
         //レスポンシブ対策960px以下にボタンを対応
     }
 
-    @include mqxl() {
-        width: 30%;
-        margin-left: auto;
-        margin-right: auto;
-
-        //レスポンシブ対策960px以下にボタンを対応
-    }
-
     @include mql() {
         width: 40%;
     }
@@ -220,11 +192,9 @@
         width: 50%;
         margin-left: auto;
         margin-right: auto;
-        //   margin-top: size(2l);
     }
     @include mqxxl() {
         width: 60%;
-        //   margin-top: size(2l);
     }
 
     @include mql() {
@@ -234,9 +204,6 @@
     @include mqm() {
         //560px以下対応
         width: 80%;
-    }
-
-    @include mq() {
     }
 }
 //ログインボタンの画面
@@ -254,33 +221,7 @@
     }
     @include mqxl() {
         width: 40%;
-        // margin-left: auto;
-        //margin-right: auto;
         margin-top: size(2l);
-    }
-    @include mql() {
-        //720px以下
-        //   margin-left: auto;
-        //    margin-right: auto;
-    }
-    @include mqm() {
-        //560px以下対応
-        /*
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: size(2l);
-        */
-    }
-
-    @include mq() {
-        //414px対応
-        /*
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: size(2l);
-        */
     }
 }
 //ユーザー登録するときの送信ボタンコンビニ側
@@ -342,9 +283,6 @@
     &:hover {
         background: orange;
     }
-    @include mqxl() {
-        //980px以下
-    }
     @include mql() {
         //720px以下
         width: 50%;
@@ -364,7 +302,6 @@
         margin-top: 100px;
     }
 }
-
 //...............................................ここまで
 //ユーザー登録するときの送信ボタンshopper側
 .c-register__shopperbutton {
@@ -404,41 +341,6 @@
         color: red;
         font-size: size(m);
     }
-
-    @include mqxxl() {
-        /*
-        width: 50%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: size(2l);
-        font-size: size(s);
-        text-align: center;
-        */
-    }
-    @include mql() {
-        //720px以下
-        //   margin-left: auto;
-        //    margin-right: auto;
-    }
-    @include mqm() {
-        //560px以下対応
-        /*
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: size(2l);
-        */
-    }
-
-    @include mq() {
-        //414px対応
-        /*
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: size(2l);
-        */
-    }
 }
 
 //商品を編集する画面ここまで
@@ -474,11 +376,6 @@
     border-radius: size(ss);
     width: 80%;
     height: 1050px;
-    @include mqxl() {
-    }
-    @include mql() {
-        //720px以下
-    }
     @include mq() {
         //414px対応
         height: 900px;
@@ -502,17 +399,8 @@
     @include mqxl() {
         height: 2700px;
     }
-    @include mql() {
-        //720px以下
-        height: 2700px;
-    }
     @include mqm() {
         //560px以下対応
-        height: 2500px;
-    }
-
-    @include mq() {
-        //414px対応
         height: 2500px;
     }
 }
@@ -529,14 +417,9 @@
     border-radius: size(ss);
     width: 80%;
     height: 460px;
-    @include mqxl() {
-    }
     @include mql() {
         //720px以下
         height: 500px;
-    }
-    @include mq() {
-        //414px対応
     }
 }
 
@@ -554,9 +437,6 @@
     height: 1450px;
     @include mqxl() {
         height: 1400px;
-    }
-    @include mql() {
-        //720px以下
     }
     @include mq() {
         //414px対応
@@ -576,20 +456,9 @@
     @include mqxl() {
         height: 1100px;
     }
-    @include mql() {
-        //720px以下
-    }
-    @include mq() {
-        //414px対応
-    }
 }
 
 //..................................................フォームエリア大枠を構成するところここまで
-
-//フォームエリア入力タイトル
-
-//フォームエリア入力
-
 //===========================================================
 //画面のタイトル文字
 //===========================================================
@@ -683,14 +552,6 @@
 }
 .c-staffform__area__textimgarea__img {
     width: 60%;
-    @include mqxl() {
-    }
-    @include mql() {
-        //720px以下
-    }
-    @include mqm() {
-    }
-
     @include mq() {
         //414px対応
         font-size: size(s);
@@ -698,14 +559,6 @@
 }
 
 .c-staffform__area__textimgarea__name {
-    @include mqxl() {
-    }
-    @include mql() {
-        //720px以下
-    }
-    @include mqm() {
-    }
-
     @include mq() {
         //414px対応
         font-size: size(s);
@@ -744,7 +597,6 @@
     margin-top: 100px;
     border: solid size(sssss);
     border-radius: size(sss);
-
     @include mqm() {
         width: 80%;
         height: 100px;
@@ -752,8 +604,6 @@
         margin-bottom: -50px;
     }
     @include mqm() {
-        width: 80%;
-        height: 100px;
         margin-top: 80px;
         margin-bottom: 50px;
     }
@@ -763,23 +613,13 @@
 //ログイン 自動でログインする ログインするボタンを閉めるところ
 //=======================================================================
 .c-loginarea {
-    /*
-    margin-top: 100px;
-    margin-bottom: 60px;
-    width: 80%;
-    margin-left: 306px;
-    */
     width: 80%;
     font-size: 10x;
     margin-left: auto;
     margin-right: auto;
     margin-top: size(4l);
-    @include mqxl() {
-    }
     @include mql() {
         font-size: 16px;
-    }
-    @include mq() {
     }
 }
 
@@ -796,9 +636,6 @@
     color: red;
     margin-top: size(4l);
     text-align: center;
-    @include mqxl() {
-    }
-
     @include mql() {
         font-size: size(m);
     }
@@ -809,16 +646,6 @@
         margin-left: size(s);
         margin-right: size(s);
         margin-bottom: -40px;
-    }
-
-    @include mq() {
-        /*
-        font-size: size(s);
-        margin-top: size(4l);
-        margin-left: size(s);
-        margin-right: size(s);
-        margin-bottom: -40px;
-        */
     }
 }
 
@@ -846,15 +673,10 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 60px;
-    @include mqxl() {
-    }
     @include mql() {
-        //720px以下
         font-size: size(l);
     }
     @include mqm() {
-        //560px以下
-        //font-size: size(l);
         font-size: size(m);
     }
 
@@ -874,17 +696,6 @@
         margin-right: auto;
         text-align: center;
     }
-    @include mql() {
-        //720px以下
-    }
-    @include mqm() {
-        //560px以下
-        //font-size: size(l);
-    }
-
-    @include mq() {
-        //414px対応
-    }
 }
 //........................................
 
@@ -894,19 +705,9 @@
     margin-top: size(4l);
     margin-bottom: size(sssss);
     font-size: size(l);
-    @include mqxl() {
-    }
-    @include mql() {
-        //720px以下
-    }
     @include mqm() {
         //560px以下
         font-size: size(m);
-    }
-
-    @include mq() {
-        //414px対応
-        //  font-size: size(m);
     }
 }
 
@@ -919,21 +720,12 @@
     &:hover {
         background: #f6f5f4;
     }
-    @include mqxl() {
-    }
     @include mql() {
         //720px以下
         width: 96%;
     }
     @include mqm() {
         //560px対応
-        font-size: size(m);
-        margin-bottom: size(ss);
-        height: size(4l);
-    }
-
-    @include mq() {
-        //414px対応
         font-size: size(m);
         margin-bottom: size(ss);
         height: size(4l);
@@ -946,9 +738,6 @@
     text-align: left;
     margin: size(sss);
     margin-bottom: size(l);
-    @include mqxxl() {
-    }
-
     @include mqxl() {
         //960px以下から縦画面にする
         width: 40%;
@@ -982,10 +771,6 @@
         margin-bottom: size(ss);
         height: size(4l);
     }
-
-    @include mq() {
-        //414px対応
-    }
 }
 
 .c-staffform__area__textcarender {
@@ -1011,29 +796,9 @@
         margin-top: size(xl);
         margin-bottom: size(s);
     }
-    @include mql() {
-        //720px以下
-        width: 100%;
-        font-size: size(l);
-        margin-top: size(xl);
-        margin-bottom: size(s);
-    }
     @include mqm() {
         //414px対応
-        width: 100%;
         font-size: size(m);
-        //  margin-top: size(xl);
-        //  margin-bottom: size(s);
-    }
-
-    @include mq() {
-        //414px対応
-        /*
-        width: 100%;
-        font-size: size(m);
-        margin-top: size(xl);
-        margin-bottom: size(s);
-        */
     }
 }
 
@@ -1051,15 +816,6 @@
         //720px以下
         width: 100%;
     }
-    @include mq() {
-        //560px以下対応
-        //width: 100%;
-    }
-
-    @include mq() {
-        //414px対応
-        //     width: 100%;
-    }
 }
 .c-formstaff__prefecture {
     margin-left: 20px;
@@ -1075,19 +831,8 @@
         margin-top: size(s);
         margin-bottom: size(s);
     }
-    @include mql() {
-        //720px以下
-        // margin-top: size(s);
-        //   margin-bottom: size(s);
-    }
     @include mqm() {
         //560px以下
-        margin-top: size(m);
-        margin-bottom: size(m);
-    }
-
-    @include mq() {
-        //414px対応
         margin-top: size(m);
         margin-bottom: size(m);
     }
@@ -1114,8 +859,5 @@
         margin-top: size(m);
         margin-bottom: size(m);
         width: 84%;
-    }
-
-    @include mq() {
     }
 }

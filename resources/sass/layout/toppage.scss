@@ -49,19 +49,10 @@
 
     @include mql() {
         line-height: 180px;
-        -webkit-text-stroke: size(sssss) orange;
         font-size: size(4l);
     }
 
     @include mqm() {
-        line-height: 180px;
-        -webkit-text-stroke: size(sssss) orange;
-        font-size: size(xxl);
-    }
-
-    @include mq() {
-        line-height: 180px;
-        -webkit-text-stroke: size(sssss) orange;
         font-size: size(xxl);
     }
 }
@@ -78,28 +69,17 @@
         line-height: 20px;
     }
 
-    @include mqxl() {
-        -webkit-text-stroke: size(ssss) orange;
-        font-size: size(4l);
-        line-height: 20px;
-    }
-
     @include mql() {
-        -webkit-text-stroke: size(sssss) orange;
         font-size: size(2l);
         line-height: 0px;
     }
 
     @include mqm() {
-        -webkit-text-stroke: size(sssss) orange;
         font-size: size(xl);
-        line-height: 0px;
     }
 
     @include mq() {
         -webkit-text-stroke: size(sssss) orange;
-        font-size: size(xl);
-        line-height: 0px;
     }
 }
 .l-top__area__form {
@@ -165,10 +145,6 @@
     @include mqm() {
         height: 400px;
     }
-
-    @include mq() {
-        height: 400px;
-    }
 }
 
 //=================================
@@ -219,13 +195,7 @@
         //560px対応
         width: 65%;
     }
-
-    @include mq() {
-        //414px対応
-        width: 65%;
-    }
 }
-
 //==================================
 //アニメーション管理するもの(modifyにする
 //==================================
