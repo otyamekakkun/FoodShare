@@ -57,7 +57,7 @@
     <br/>
             <input class="c-form__area__text" type="password" name="password_confirmation" required autocomplete="new-password">
             <br/>
-        <input type="submit" class="c-register__button" value="変更する">
+        <input type="submit" class="c-register__custombutton" value="変更する">
         </div>
     </div>
         </form>
