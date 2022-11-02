@@ -18,25 +18,17 @@ Vue.component(
 );
 
 //===================================================================
-// カレンダーvueのコンポーネント(現在時刻よりも前の時刻は入力できないようにする)
+// 商品を出品するために使われるvueのコンポーネント
 //===================================================================
-Vue.component("calender-component", require("./staff/calender.vue").default);
-
+Vue.component("calender-component", require("./function/calender.vue").default);
+Vue.component("drag-component", require("./function/dragdrop.vue").default);
 //===================================================================
 //お客様専用の商品一覧のコンポーネント
 //===================================================================
-
 Vue.component(
     "productlist-component",
     require("./shopper/productlist/main.vue").default
 );
-
-//===================================================================
-// カレンダーvueのコンポーネント
-//===================================================================
-
-Vue.component("drag-component", require("./staff/dragdrop.vue").default);
-
 //================================================
 //商品一覧リストのコンポーネント
 //================================================

@@ -5400,6 +5400,58 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/function/dragdrop.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/function/dragdrop.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      preview: "",
+      name: "",
+      styleA: true,
+      styleB: false
+    };
+  },
+  methods: {
+    uploadFile: function uploadFile(event) {
+      var _this = this;
+
+      this.styleA = true;
+      this.styleB = false;
+      var files = event.target.files ? event.target.files : event.dataTransfer.files;
+      var file = files[0];
+      var reader = new FileReader();
+
+      reader.onload = function (event) {
+        _this.preview = event.target.result;
+      };
+
+      reader.readAsDataURL(file);
+      this.name = files[0].name;
+      document.getElementById("upload_image").files = files;
+    },
+    changeStyle: function changeStyle(event, flag) {
+      if (flag == "ok") {
+        this.styleA = false;
+        this.styleB = true;
+      } else {
+        this.styleA = true;
+        this.styleB = false;
+      }
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/shopper/productlist/component/product-list.vue?vue&type=script&lang=js&":
 /*!**************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/shopper/productlist/component/product-list.vue?vue&type=script&lang=js& ***!
@@ -5565,58 +5617,6 @@ __webpack_require__.r(__webpack_exports__);
     axios__WEBPACK_IMPORTED_MODULE_0___default().get(url).then(function (response) {
       return _this.products = response.data;
     });
-  }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/staff/dragdrop.vue?vue&type=script&lang=js&":
-/*!**********************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/staff/dragdrop.vue?vue&type=script&lang=js& ***!
-  \**********************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  data: function data() {
-    return {
-      preview: "",
-      name: "",
-      styleA: true,
-      styleB: false
-    };
-  },
-  methods: {
-    uploadFile: function uploadFile(event) {
-      var _this = this;
-
-      this.styleA = true;
-      this.styleB = false;
-      var files = event.target.files ? event.target.files : event.dataTransfer.files;
-      var file = files[0];
-      var reader = new FileReader();
-
-      reader.onload = function (event) {
-        _this.preview = event.target.result;
-      };
-
-      reader.readAsDataURL(file);
-      this.name = files[0].name;
-      document.getElementById("upload_image").files = files;
-    },
-    changeStyle: function changeStyle(event, flag) {
-      if (flag == "ok") {
-        this.styleA = false;
-        this.styleB = true;
-      } else {
-        this.styleA = true;
-        this.styleB = false;
-      }
-    }
   }
 });
 
@@ -6084,6 +6084,137 @@ render._withStripped = true;
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/function/calender.vue?vue&type=template&id=15790dfa&":
+/*!************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/function/calender.vue?vue&type=template&id=15790dfa& ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function render() {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("div", {
+    staticClass: "c-staffform__area__side"
+  }, [_c("span", {
+    staticClass: "c-staffform__title"
+  }, [_vm._v("賞味期限:")]), _vm._v(" "), _c("input", {
+    staticClass: "c-search__calender",
+    attrs: {
+      type: "date",
+      min: new Date().toISOString().split("T")[0],
+      name: "best_by_date"
+    }
+  })]);
+};
+
+var staticRenderFns = [];
+render._withStripped = true;
+
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/function/dragdrop.vue?vue&type=template&id=7045c2ec&":
+/*!************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/function/dragdrop.vue?vue&type=template&id=7045c2ec& ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function render() {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("div", [_c("div", {
+    staticClass: "form-group commonStyle",
+    class: {
+      styleA: _vm.styleA,
+      styleB: _vm.styleB
+    },
+    attrs: {
+      id: "upload"
+    },
+    on: {
+      dragover: function dragover($event) {
+        $event.preventDefault();
+        return _vm.changeStyle($event, "ok");
+      },
+      dragleave: function dragleave($event) {
+        $event.preventDefault();
+        return _vm.changeStyle($event, "no");
+      },
+      drop: function drop($event) {
+        $event.preventDefault();
+        return _vm.uploadFile($event);
+      }
+    }
+  }, [_c("div", {
+    staticClass: "c-staffform__area__uploadimgarea"
+  }, [_c("label", {
+    attrs: {
+      for: "upload_image"
+    }
+  }, [_c("input", {
+    staticStyle: {
+      display: "none"
+    },
+    attrs: {
+      id: "upload_image",
+      type: "file",
+      name: "img_path",
+      accept: "image/*"
+    },
+    on: {
+      change: function change($event) {
+        return _vm.uploadFile($event);
+      }
+    }
+  }), _vm._v(" "), _vm._m(0)])]), _vm._v(" "), _c("div", {
+    staticClass: "c-staffform__area__textimgarea"
+  }, [_c("img", {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: _vm.preview,
+      expression: "preview"
+    }],
+    staticClass: "c-staffform__area__textimgarea__img",
+    attrs: {
+      src: _vm.preview
+    }
+  }), _vm._v(" "), _c("p", {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: _vm.preview,
+      expression: "preview"
+    }],
+    staticClass: "c-staffform__area__textimgarea__name"
+  }, [_vm._v("\n                " + _vm._s(_vm.name) + "\n            ")])])])]);
+};
+
+var staticRenderFns = [function () {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("p", {}, [_vm._v("\n                    このエリアにドラッグ&ドロップまたはクリックして写真を挿入してください.下のエリアに写真が挿入されます。"), _c("br")]);
+}];
+render._withStripped = true;
+
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/shopper/productlist/component/product-list.vue?vue&type=template&id=4ffe6314&":
 /*!*************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/shopper/productlist/component/product-list.vue?vue&type=template&id=4ffe6314& ***!
@@ -6336,137 +6467,6 @@ var render = function render() {
 };
 
 var staticRenderFns = [];
-render._withStripped = true;
-
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/staff/calender.vue?vue&type=template&id=66955f87&":
-/*!*********************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/staff/calender.vue?vue&type=template&id=66955f87& ***!
-  \*********************************************************************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* binding */ render),
-/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
-/* harmony export */ });
-var render = function render() {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("div", {
-    staticClass: "c-staffform__area__side"
-  }, [_c("span", {
-    staticClass: "c-staffform__title"
-  }, [_vm._v("賞味期限:")]), _vm._v(" "), _c("input", {
-    staticClass: "c-search__calender",
-    attrs: {
-      type: "date",
-      min: new Date().toISOString().split("T")[0],
-      name: "best_by_date"
-    }
-  })]);
-};
-
-var staticRenderFns = [];
-render._withStripped = true;
-
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/staff/dragdrop.vue?vue&type=template&id=3cd0ad20&":
-/*!*********************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/staff/dragdrop.vue?vue&type=template&id=3cd0ad20& ***!
-  \*********************************************************************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* binding */ render),
-/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
-/* harmony export */ });
-var render = function render() {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("div", [_c("div", {
-    staticClass: "form-group commonStyle",
-    class: {
-      styleA: _vm.styleA,
-      styleB: _vm.styleB
-    },
-    attrs: {
-      id: "upload"
-    },
-    on: {
-      dragover: function dragover($event) {
-        $event.preventDefault();
-        return _vm.changeStyle($event, "ok");
-      },
-      dragleave: function dragleave($event) {
-        $event.preventDefault();
-        return _vm.changeStyle($event, "no");
-      },
-      drop: function drop($event) {
-        $event.preventDefault();
-        return _vm.uploadFile($event);
-      }
-    }
-  }, [_c("div", {
-    staticClass: "c-staffform__area__uploadimgarea"
-  }, [_c("label", {
-    attrs: {
-      for: "upload_image"
-    }
-  }, [_c("input", {
-    staticStyle: {
-      display: "none"
-    },
-    attrs: {
-      id: "upload_image",
-      type: "file",
-      name: "img_path",
-      accept: "image/*"
-    },
-    on: {
-      change: function change($event) {
-        return _vm.uploadFile($event);
-      }
-    }
-  }), _vm._v(" "), _vm._m(0)])]), _vm._v(" "), _c("div", {
-    staticClass: "c-staffform__area__textimgarea"
-  }, [_c("img", {
-    directives: [{
-      name: "show",
-      rawName: "v-show",
-      value: _vm.preview,
-      expression: "preview"
-    }],
-    staticClass: "c-staffform__area__textimgarea__img",
-    attrs: {
-      src: _vm.preview
-    }
-  }), _vm._v(" "), _c("p", {
-    directives: [{
-      name: "show",
-      rawName: "v-show",
-      value: _vm.preview,
-      expression: "preview"
-    }],
-    staticClass: "c-staffform__area__textimgarea__name"
-  }, [_vm._v("\n                " + _vm._s(_vm.name) + "\n            ")])])])]);
-};
-
-var staticRenderFns = [function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("p", {}, [_vm._v("\n                    このエリアにドラッグ&ドロップまたはクリックして写真を挿入してください.下のエリアに写真が挿入されます。"), _c("br")]);
-}];
 render._withStripped = true;
 
 
@@ -6863,18 +6863,15 @@ Vue.component("toppage-component", (__webpack_require__(/*! ./toppage/toppageCom
 //===========================================
 
 Vue.component("footer-component", (__webpack_require__(/*! ./footercomponents/FooterComponent.vue */ "./resources/js/footercomponents/FooterComponent.vue")["default"])); //===================================================================
-// カレンダーvueのコンポーネント(現在時刻よりも前の時刻は入力できないようにする)
+// 商品を出品するために使われるvueのコンポーネント
 //===================================================================
 
-Vue.component("calender-component", (__webpack_require__(/*! ./staff/calender.vue */ "./resources/js/staff/calender.vue")["default"])); //===================================================================
+Vue.component("calender-component", (__webpack_require__(/*! ./function/calender.vue */ "./resources/js/function/calender.vue")["default"]));
+Vue.component("drag-component", (__webpack_require__(/*! ./function/dragdrop.vue */ "./resources/js/function/dragdrop.vue")["default"])); //===================================================================
 //お客様専用の商品一覧のコンポーネント
 //===================================================================
 
-Vue.component("productlist-component", (__webpack_require__(/*! ./shopper/productlist/main.vue */ "./resources/js/shopper/productlist/main.vue")["default"])); //===================================================================
-// カレンダーvueのコンポーネント
-//===================================================================
-
-Vue.component("drag-component", (__webpack_require__(/*! ./staff/dragdrop.vue */ "./resources/js/staff/dragdrop.vue")["default"])); //================================================
+Vue.component("productlist-component", (__webpack_require__(/*! ./shopper/productlist/main.vue */ "./resources/js/shopper/productlist/main.vue")["default"])); //================================================
 //商品一覧リストのコンポーネント
 //================================================
 
@@ -29748,6 +29745,82 @@ component.options.__file = "resources/js/footercomponents/FooterComponent.vue"
 
 /***/ }),
 
+/***/ "./resources/js/function/calender.vue":
+/*!********************************************!*\
+  !*** ./resources/js/function/calender.vue ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _calender_vue_vue_type_template_id_15790dfa___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./calender.vue?vue&type=template&id=15790dfa& */ "./resources/js/function/calender.vue?vue&type=template&id=15790dfa&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+var script = {}
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
+  script,
+  _calender_vue_vue_type_template_id_15790dfa___WEBPACK_IMPORTED_MODULE_0__.render,
+  _calender_vue_vue_type_template_id_15790dfa___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/function/calender.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/function/dragdrop.vue":
+/*!********************************************!*\
+  !*** ./resources/js/function/dragdrop.vue ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _dragdrop_vue_vue_type_template_id_7045c2ec___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dragdrop.vue?vue&type=template&id=7045c2ec& */ "./resources/js/function/dragdrop.vue?vue&type=template&id=7045c2ec&");
+/* harmony import */ var _dragdrop_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./dragdrop.vue?vue&type=script&lang=js& */ "./resources/js/function/dragdrop.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _dragdrop_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _dragdrop_vue_vue_type_template_id_7045c2ec___WEBPACK_IMPORTED_MODULE_0__.render,
+  _dragdrop_vue_vue_type_template_id_7045c2ec___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/function/dragdrop.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/shopper/productlist/component/product-list.vue":
 /*!*********************************************************************!*\
   !*** ./resources/js/shopper/productlist/component/product-list.vue ***!
@@ -29900,82 +29973,6 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
 /* hot reload */
 if (false) { var api; }
 component.options.__file = "resources/js/shoppermypage/shoppermypage.vue"
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/staff/calender.vue":
-/*!*****************************************!*\
-  !*** ./resources/js/staff/calender.vue ***!
-  \*****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _calender_vue_vue_type_template_id_66955f87___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./calender.vue?vue&type=template&id=66955f87& */ "./resources/js/staff/calender.vue?vue&type=template&id=66955f87&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-var script = {}
-
-
-/* normalize component */
-;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
-  script,
-  _calender_vue_vue_type_template_id_66955f87___WEBPACK_IMPORTED_MODULE_0__.render,
-  _calender_vue_vue_type_template_id_66955f87___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/staff/calender.vue"
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/staff/dragdrop.vue":
-/*!*****************************************!*\
-  !*** ./resources/js/staff/dragdrop.vue ***!
-  \*****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _dragdrop_vue_vue_type_template_id_3cd0ad20___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dragdrop.vue?vue&type=template&id=3cd0ad20& */ "./resources/js/staff/dragdrop.vue?vue&type=template&id=3cd0ad20&");
-/* harmony import */ var _dragdrop_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./dragdrop.vue?vue&type=script&lang=js& */ "./resources/js/staff/dragdrop.vue?vue&type=script&lang=js&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _dragdrop_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _dragdrop_vue_vue_type_template_id_3cd0ad20___WEBPACK_IMPORTED_MODULE_0__.render,
-  _dragdrop_vue_vue_type_template_id_3cd0ad20___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/staff/dragdrop.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
@@ -30301,6 +30298,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/function/dragdrop.vue?vue&type=script&lang=js&":
+/*!*********************************************************************!*\
+  !*** ./resources/js/function/dragdrop.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_dragdrop_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./dragdrop.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/function/dragdrop.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_dragdrop_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/shopper/productlist/component/product-list.vue?vue&type=script&lang=js&":
 /*!**********************************************************************************************!*\
   !*** ./resources/js/shopper/productlist/component/product-list.vue?vue&type=script&lang=js& ***!
@@ -30362,22 +30375,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_shoppermypage_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./shoppermypage.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/shoppermypage/shoppermypage.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_shoppermypage_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/staff/dragdrop.vue?vue&type=script&lang=js&":
-/*!******************************************************************!*\
-  !*** ./resources/js/staff/dragdrop.vue?vue&type=script&lang=js& ***!
-  \******************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_dragdrop_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./dragdrop.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/staff/dragdrop.vue?vue&type=script&lang=js&");
- /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_dragdrop_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
@@ -30561,6 +30558,40 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/function/calender.vue?vue&type=template&id=15790dfa&":
+/*!***************************************************************************!*\
+  !*** ./resources/js/function/calender.vue?vue&type=template&id=15790dfa& ***!
+  \***************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_calender_vue_vue_type_template_id_15790dfa___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_calender_vue_vue_type_template_id_15790dfa___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_calender_vue_vue_type_template_id_15790dfa___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./calender.vue?vue&type=template&id=15790dfa& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/function/calender.vue?vue&type=template&id=15790dfa&");
+
+
+/***/ }),
+
+/***/ "./resources/js/function/dragdrop.vue?vue&type=template&id=7045c2ec&":
+/*!***************************************************************************!*\
+  !*** ./resources/js/function/dragdrop.vue?vue&type=template&id=7045c2ec& ***!
+  \***************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_dragdrop_vue_vue_type_template_id_7045c2ec___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_dragdrop_vue_vue_type_template_id_7045c2ec___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_dragdrop_vue_vue_type_template_id_7045c2ec___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./dragdrop.vue?vue&type=template&id=7045c2ec& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/function/dragdrop.vue?vue&type=template&id=7045c2ec&");
+
+
+/***/ }),
+
 /***/ "./resources/js/shopper/productlist/component/product-list.vue?vue&type=template&id=4ffe6314&":
 /*!****************************************************************************************************!*\
   !*** ./resources/js/shopper/productlist/component/product-list.vue?vue&type=template&id=4ffe6314& ***!
@@ -30625,40 +30656,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_shoppermypage_vue_vue_type_template_id_191c89e7___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_shoppermypage_vue_vue_type_template_id_191c89e7___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./shoppermypage.vue?vue&type=template&id=191c89e7& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/shoppermypage/shoppermypage.vue?vue&type=template&id=191c89e7&");
-
-
-/***/ }),
-
-/***/ "./resources/js/staff/calender.vue?vue&type=template&id=66955f87&":
-/*!************************************************************************!*\
-  !*** ./resources/js/staff/calender.vue?vue&type=template&id=66955f87& ***!
-  \************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_calender_vue_vue_type_template_id_66955f87___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_calender_vue_vue_type_template_id_66955f87___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
-/* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_calender_vue_vue_type_template_id_66955f87___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./calender.vue?vue&type=template&id=66955f87& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/staff/calender.vue?vue&type=template&id=66955f87&");
-
-
-/***/ }),
-
-/***/ "./resources/js/staff/dragdrop.vue?vue&type=template&id=3cd0ad20&":
-/*!************************************************************************!*\
-  !*** ./resources/js/staff/dragdrop.vue?vue&type=template&id=3cd0ad20& ***!
-  \************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_dragdrop_vue_vue_type_template_id_3cd0ad20___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_dragdrop_vue_vue_type_template_id_3cd0ad20___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
-/* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_dragdrop_vue_vue_type_template_id_3cd0ad20___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./dragdrop.vue?vue&type=template&id=3cd0ad20& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/staff/dragdrop.vue?vue&type=template&id=3cd0ad20&");
 
 
 /***/ }),
