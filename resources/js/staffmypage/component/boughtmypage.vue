@@ -34,7 +34,6 @@
         </main>
     </div>
 </template>
-
 <script>
 export default {
     props: ["products", "getItems"],

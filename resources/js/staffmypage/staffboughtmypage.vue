@@ -11,7 +11,6 @@
 import axios from "axios";
 import mypagebought from "./component/boughtmypage.vue";
 export default {
-    //props: ["pro"],
     components: {
         mypagebought: mypagebought,
     },
