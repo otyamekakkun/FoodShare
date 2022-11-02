@@ -906,36 +906,20 @@ a {
     margin-right: auto;
   }
 }
-@media screen and (max-width: 720px) {
-  .c-paginate {
-    display: flex;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-@media screen and (max-width: 414px) {
-  .c-paginate {
-    display: flex;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
 
 .page-item {
   display: inline;
   text-align: center;
   width: 100%;
-  padding: 20px;
-  margin: 20px;
+  margin: 15px;
+  padding: 15px;
   font-size: 20px;
   border: solid 2px;
   border-radius: 5px;
   background: rgb(238, 238, 238);
   transition: all 0.5s;
 }
-@media screen and (max-width:980px) {
+@media screen and (max-width:1090px) {
   .page-item {
     margin-left: auto;
     margin-right: auto;
@@ -945,8 +929,6 @@ a {
 }
 @media screen and (max-width: 720px) {
   .page-item {
-    margin-left: auto;
-    margin-right: auto;
     font-size: 10px;
     text-align: center;
     padding: 5px;
@@ -955,11 +937,8 @@ a {
 }
 @media screen and (max-width: 414px) {
   .page-item {
-    text-align: center;
     font-size: 15px;
     padding: 3px;
-    margin: 5px;
-    margin: auto;
     background: #f6f5f4;
     border: solid black;
     margin: 2px;

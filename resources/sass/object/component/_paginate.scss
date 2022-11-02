@@ -5,27 +5,9 @@
 .c-paginate {
     display: flex;
     justify-content: center;
-    // background: red;
     width: 100%;
     margin: 100px;
-    // font-size: size(l);
-
     @include mqxl() {
-        display: flex;
-        justify-content: center;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    @include mql() {
-        //720px以下
-        display: flex;
-        justify-content: center;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    @include mq() {
         display: flex;
         justify-content: center;
         margin-left: auto;
@@ -37,17 +19,15 @@
     display: inline;
     text-align: center;
     width: 100%;
-
-    padding: size(m);
-    margin: size(m);
+    margin: size(s);
+    padding: size(s);
     font-size: size(m);
     border: solid size(sssss);
     border-radius: size(sss);
-    //font-family: "Permanent Marker", cursive;
     background: rgb(238, 238, 238);
     transition: all 0.5s;
 
-    @include mqxl() {
+    @include mqxxl() {
         margin-left: auto;
         margin-right: auto;
         padding: size(s);
@@ -55,8 +35,6 @@
     }
 
     @include mql() {
-        margin-left: auto;
-        margin-right: auto;
         font-size: size(ss);
         text-align: center;
         padding: size(sss);
@@ -64,11 +42,8 @@
     }
 
     @include mq() {
-        text-align: center;
         font-size: size(s);
         padding: size(ssss);
-        margin: size(sss);
-        margin: auto;
         background: #f6f5f4;
         border: solid black;
         margin: size(sssss);
@@ -77,11 +52,8 @@
         background: orange;
     }
 }
-
 .page-link {
-    //color: black;
     display: inline;
     font-size: size(l);
-    //line-height: center;
     text-align: center;
 }

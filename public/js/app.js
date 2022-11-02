@@ -5950,23 +5950,19 @@ var render = function render() {
     attrs: {
       id: "app"
     }
-  }, [_c("main", [_c("div", {
-    staticClass: "c-exhibitproductlist"
-  }, [_c("div", {
-    staticClass: "c-productlist"
-  }, _vm._l(_vm.getItems, function (item) {
+  }, [_c("main", _vm._l(_vm.getItems, function (item) {
     return _c("ul", {
       staticClass: "c-productlist__items"
     }, [_c("li", {
       staticClass: "c-productlist__items__title"
-    }, [_vm._v("\n                        商品No." + _vm._s(item.id) + "\n                    ")]), _vm._v(" "), item.bought >= 1 ? _c("div", [_c("img", {
+    }, [_vm._v("\n                商品No." + _vm._s(item.id) + "\n            ")]), _vm._v(" "), item.bought >= 1 ? _c("div", [_c("img", {
       staticClass: "c-productlist__items__img",
       attrs: {
         src: item.img_path
       }
     }), _vm._v(" "), _c("p", {
       staticClass: "c-productlist__items__img__title"
-    }, [_vm._v("\n                            購入済み！\n                        ")])]) : _vm._e(), _vm._v(" "), item.bought <= 0 ? _c("div", [_c("img", {
+    }, [_vm._v("購入済み！")])]) : _vm._e(), _vm._v(" "), item.bought <= 0 ? _c("div", [_c("img", {
       staticClass: "c-productlist__items__img2",
       attrs: {
         src: item.img_path
@@ -5988,7 +5984,7 @@ var render = function render() {
         href: "".concat(item.id, "}/staff_productedit")
       }
     }, [_vm._v("商品を編集")])])]) : _vm._e()])])]);
-  }), 0)])])]);
+  }), 0)]);
 };
 
 var staticRenderFns = [];
@@ -6439,6 +6435,8 @@ var render = function render() {
 
   return _c("div", [_c("div", {
     staticClass: "c-exhibitproductlist"
+  }, [_c("div", {
+    staticClass: "c-productlist"
   }, [_c("shoppermypage-view", {
     attrs: {
       products: this.products,
@@ -6463,7 +6461,7 @@ var render = function render() {
       "first-button-text": "<<",
       "last-button-text": ">>"
     }
-  })], 1)], 1)]);
+  })], 1)], 1)])]);
 };
 
 var staticRenderFns = [];
