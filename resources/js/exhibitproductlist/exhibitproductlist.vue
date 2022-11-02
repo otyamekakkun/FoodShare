@@ -81,7 +81,6 @@
 //vue-js-paginateはvue側で簡単にページネーションを実装するためのライブラリ。
 import axios from "axios";
 import VueJsPaginate from "vuejs-paginate";
-
 export default {
     components: {
         "vuejs-paginate": VueJsPaginate,

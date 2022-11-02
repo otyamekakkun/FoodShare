@@ -1,3 +1,4 @@
+<!-- staffmypageの購入された商品を写す処理。 -->
 <template>
     <div id="app">
         <main>
@@ -19,7 +20,6 @@
                                 購入済み！
                             </p>
                             <div class="c-productlist__items__list">
-                                <!-- <li>商品No.{{ item.id }}</li> -->
                                 <li>商品名:{{ item.product_name }}</li>
                                 <li>お値段:{{ item.price }}円.</li>
                                 <div class="c-productlist__items__bottom">
@@ -58,12 +58,10 @@
         </main>
     </div>
 </template>
-
 <script>
 import axios from "axios";
 import VueJsPaginate from "vuejs-paginate";
 
-//ここでエラーが発生していたコンポーネント自体読み取れていないということなのでここは読み取れている。
 export default {
     components: {
         "vuejs-paginate": VueJsPaginate,
@@ -71,9 +69,7 @@ export default {
 
     data: function () {
         {
-            //データは言わば変数みたいなもの色々なところで使い回せる
             return {
-                //ここでの処理はチェックボタンが押されているかどうかの言わばスイッチみたいに役割を持たせる。
                 products: [], //からのデータを用意する。
                 currentPage: 1,
                 perPage: 10,
@@ -90,7 +86,6 @@ export default {
             return Math.ceil(this.products.length / this.perPage);
         },
     },
-
     methods: {
         count: function () {
             console.log($route.path);
@@ -99,7 +94,6 @@ export default {
             this.currentPage = Number(pageNum);
         },
     },
-
     mounted() {
         const url = "/haiki/index4";
         axios.get(url).then((response) => (this.products = response.data));

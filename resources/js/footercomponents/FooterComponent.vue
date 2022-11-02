@@ -1,11 +1,4 @@
-<!-- 
-    //========================
-    // footer-component
-    // ======================
-    footerをレイアウトしてくれるコンポーネント。
-    ページをスクロールし終わった時に表示してくれるように作成。
- -->
-
+<!-- footerを作成するコンポーネント -->
 <template>
     <footer class="l-footer">
         <p class="l-footer__text">© 2022 taguchi kakuto</p>
