@@ -1,7 +1,6 @@
 <template>
     <div>
         <!-- ここからフォームの部分 -->
-        <!-- <form action="******" method="post" enctype="multipart/form-data"> -->
         <div
             id="upload"
             class="form-group commonStyle"
