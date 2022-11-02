@@ -62,8 +62,11 @@ return redirect('haiki/shopper_mypage');//..............お客様の情報を更
 //4お客用商品詳細ページ                                          //
 //==============================================================
     public function shopper_productdetail_display($id){
-        $product = products::find($id);         
-        return view('haiki_shopper.shopper_productdetail_display',['products'=>$product]);
+        $product = products::find($id);   
+        //購入をキャンセルされる際は自分が買ったときは購入をやめるというボタンを表示して、相手が購入したときは
+    //表示されないようにボタン表示をする必要がある。
+        $user = Auth::id();      
+        return view('haiki_shopper.shopper_productdetail_display',['products'=>$product],['users'=>$user]);
     }
      //商品詳細ページを写すための画面
     public function shopper_productdetail_bought ($id){

@@ -25,6 +25,11 @@
     </form>
 @endif
 
+{{-- 
+{{$products}}
+ログイン済みが買った商品です
+ --}}
+
 @if($products->bought>=1)
     <form class="c-productdetail__shoppermenu"  action="{{route('bought.cancel',$products->id)}}" enctype="multipart/form-data" method="post">
         <div class="c-shopper__action">    

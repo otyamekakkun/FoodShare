@@ -1,12 +1,10 @@
 <template>
     <div id="app">
         <main>
-            <!-- <div class="c-exhibitproductlist"> -->
             <h1 class="c-mypagemenu__title">これまでに購入された商品</h1>
             <ul v-for="item in getItems">
                 <div v-if="item.bought >= 1">
                     <div class="c-productlist__items">
-                        <!-- 購入されたら商品にlabelを付け足す機能 -->
                         <li class="c-productlist__items__title">
                             商品No.{{ item.id }}
                         </li>
