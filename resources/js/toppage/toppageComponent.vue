@@ -50,7 +50,6 @@ jsの機能として,(コンビニ関係者用のログイン画面ユーザー�
 </template>
 <script>
 export default {
-    props: ["show", "show1"],
     data: function () {
         return { show: true, show1: false };
     },
