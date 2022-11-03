@@ -1,3 +1,8 @@
+<!-- 商品の絞り込み
+今回は都道府県、予算、有効期限チェックの3つを設けることによって商品の絞り込みを
+行うことに実装しました。
+-->
+
 <template>
     <div>
         <div>
@@ -29,7 +34,6 @@
                         />
                     </div>
                 </div>
-                <!-- ここまではok -->
                 <div class="c-exhibitproductlist">
                     <div class="c-productlist">
                         <ul
@@ -60,7 +64,6 @@
                                     </button>
                                 </div>
                             </div>
-                            <!-- </div> -->
                         </ul>
                     </div>
                 </div>

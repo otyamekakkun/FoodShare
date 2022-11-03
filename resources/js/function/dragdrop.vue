@@ -1,3 +1,5 @@
+<!-- 商品出品または編集する際に写真をドラッグアンドドラッグまたは写真を
+クリックすることによって写真を入力することにしました -->
 <template>
     <div>
         <!-- ここからフォームの部分 -->
@@ -31,7 +33,6 @@
                     v-bind:src="preview"
                     class="c-staffform__area__textimgarea__img"
                 />
-                <!--  style="width:400px" -->
                 <p
                     v-show="preview"
                     class="c-staffform__area__textimgarea__name"

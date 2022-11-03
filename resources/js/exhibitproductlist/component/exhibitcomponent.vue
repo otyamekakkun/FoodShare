@@ -23,7 +23,6 @@
                 </div>
 
                 <div class="c-productlist__items__list">
-                    <!-- <li>商品No.{{ item.id }}</li> -->
                     <li>商品名:{{ item.product_name }}</li>
                     <li>お値段:{{ item.price }}円.</li>
                     <div class="c-productlist__items__bottom">

@@ -7,7 +7,7 @@ jsの機能として,(コンビニ関係者用のログイン画面ユーザー�
         <div class="l-top__area__form">
             <button v-on:click="show = !show" class="l-top__area__form__button">
                 <div v-if="show">お客様として始める</div>
-                <div v-if="!show">関係者として始める</div>
+                <div v-else="!show">関係者として始める</div>
             </button>
         </div>
         <div v-if="show">
@@ -29,7 +29,7 @@ jsの機能として,(コンビニ関係者用のログイン画面ユーザー�
                 </div>
             </transition>
         </div>
-        <div v-if="!show">
+        <div v-else="!show">
             <transition name="fade">
                 <div class="l-top__area__form__custom">
                     <div class="l-top__area__form__custom__button">
