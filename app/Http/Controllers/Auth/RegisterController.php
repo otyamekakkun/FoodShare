@@ -135,10 +135,4 @@ class RegisterController extends Controller
         //もしかしてこの辺にユーザー登録がうまくいっていいない軌跡がある？
     }
 
-
-
-
-
-
-
 }

@@ -372,7 +372,7 @@ html,
 body {
   width: 100%;
   background: #fff7cc;
-  background-image: url("../img/top.jpg");
+  background-image: url("https://s3.ap-northeast-1.amazonaws.com/webukatu-haikikaku.com/awss3/imagebackground/top.jpg");
   background-color: rgba(255, 255, 255, 0.4);
   background-blend-mode: lighten;
   color: #707070;
@@ -412,7 +412,7 @@ a {
 .l-topimg {
   width: 100%;
   opacity: 0.9;
-  background-image: url("../img/top.jpg");
+  background-image: url("https://s3.ap-northeast-1.amazonaws.com/webukatu-haikikaku.com/awss3/imagebackground/top.jpg");
   background-blend-mode: lighten;
   padding-top: 100px;
   padding-bottom: 100px;
