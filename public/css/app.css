@@ -924,7 +924,7 @@ a {
 }
 
 .c-productlist {
-  display: flex;
+  display: block;
   flex-wrap: wrap;
   width: 100%;
   margin-left: auto;

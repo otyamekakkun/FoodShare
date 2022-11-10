@@ -6,7 +6,6 @@
                 <li class="c-productlist__items__title">
                     商品No.{{ item.id }}
                 </li>
-
                 <div v-if="item.bought >= 1">
                     <img
                         v-bind:src="item.img_path"
@@ -14,14 +13,12 @@
                     />
                     <p class="c-productlist__items__img__title">購入済み！</p>
                 </div>
-
                 <div v-if="item.bought <= 0">
                     <img
                         v-bind:src="item.img_path"
                         class="c-productlist__items__img2"
                     />
                 </div>
-
                 <div class="c-productlist__items__list">
                     <li>商品名:{{ item.product_name }}</li>
                     <li>お値段:{{ item.price }}円.</li>

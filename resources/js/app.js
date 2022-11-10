@@ -32,6 +32,7 @@ Vue.component(
 //================================================
 //商品一覧リストのコンポーネント
 //================================================
+
 Vue.component(
     "exhibitlist-componennt",
     require("./exhibitproductlist/exhibitproductlist.vue").default
@@ -58,6 +59,7 @@ Vue.component(
 //================================================
 //staff_mypageのコンポーネント(基本的に購入された商品一覧5件を表示するコード)
 //================================================
+
 Vue.component(
     "bought-componennt",
     require("./staffboughtlist/bought-list.vue").default
@@ -76,6 +78,7 @@ Vue.component(
 //==================================================================
 //shopperproductdetailのコンポーネント（ご利用者の商品詳細画面)
 //================================================================
+
 Vue.component(
     "shoppermypage-component",
     require("./shoppermypage/shoppermypage.vue").default

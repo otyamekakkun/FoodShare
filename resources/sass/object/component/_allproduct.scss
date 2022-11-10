@@ -4,7 +4,7 @@
 //フォーム画面以外のものにする例えば商品一覧リストとかなど
 //=============================================================
 .c-productlist {
-    display: flex;
+    display: block;
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
