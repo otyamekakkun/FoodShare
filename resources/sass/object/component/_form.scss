@@ -100,7 +100,7 @@
 .c-staffform__area__submitbutton {
     display: block;
     background: #174113;
-    margin-top: 80px;
+    margin-top: 180px;
     margin-left: 800px;
     height: 60px;
     width: 20%;
@@ -121,6 +121,9 @@
 
         //レスポンシブ対策960px以下にボタンを対応
     }
+    @include mqxl() {
+        margin-top: 100px;
+    }
 
     @include mql() {
         width: 40%;
@@ -139,9 +142,12 @@
     background: #174113;
     margin-top: 50px;
     text-align: center;
-    margin-left: 1000px;
+    //margin-left: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+
     height: 60px;
-    width: 16%;
+    width: 20%;
     border: none;
     border-radius: size(ss);
     color: white;
@@ -159,13 +165,15 @@
 
     @include mql() {
         width: 40%;
+        margin-top: 20px;
     }
     @include mqm() {
-        width: 46%;
+        width: 50%;
     }
 
     @include mq() {
-        width: 50%;
+        width: 60%;
+        margin-top: 20px;
     }
 }
 
@@ -443,6 +451,28 @@
         height: 1400px;
     }
 }
+
+.c-form5 {
+    display: block;
+    background: #f6f5f4;
+    background: rgba(255, 255, 255, 0.6);
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    border: solid #174113;
+    border-radius: size(ss);
+    width: 80%;
+    height: 1650px;
+    @include mqxl() {
+        height: 1400px;
+    }
+    @include mq() {
+        //414px対応
+        //  height: 1400px;
+    }
+}
+
 //商品を出品する画面と商品を編集する画面
 .c-staffform__area {
     width: 80%;
@@ -450,9 +480,9 @@
     margin-right: auto;
     text-align: center;
     margin-top: size(4l);
-    height: 1050px;
-    border: solid #174113;
-    border-radius: size(sss);
+    height: 1200px;
+    //  border: solid #174113;
+    //border-radius: size(sss);
     @include mqxl() {
         height: 1100px;
     }
@@ -468,9 +498,10 @@
     margin-left: 8%;
     margin-right: 8%;
     margin-top: 8%;
-    display: flex;
-    margin-bottom: -6%;
-
+    display: block;
+    margin-bottom: -8%;
+    margin-left: auto;
+    margin-right: auto;
     @include mqxl() {
         //960px以下から縦画面にする
         display: block;
@@ -631,28 +662,24 @@
     color: red;
 }
 
-.c-warning2 {
-    font-size: size(l);
-    color: red;
-    margin-top: size(4l);
-    text-align: center;
-    @include mql() {
-        font-size: size(m);
-    }
-
-    @include mqm() {
-        font-size: size(s);
-        margin-top: size(4l);
-        margin-left: size(s);
-        margin-right: size(s);
-        margin-bottom: -40px;
-    }
-}
-
 .c-errormessage {
     color: rgb(234, 14, 14);
 }
-
+.c-errormessagedate {
+    display: block;
+    color: rgb(234, 14, 14);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    margin-bottom: -100px;
+    width: 20%;
+    @include mqxl() {
+        width: 50%;
+        font-size: size(m);
+        margin-top: 100px;
+        margin-bottom: -20px;
+    }
+}
 //==============================================
 //フォームエリア
 //==============================================
@@ -689,7 +716,10 @@
 .c-staffform__title {
     font-size: size(l);
     display: block;
-    width: 12%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
     @include mqxl() {
         width: 100%;
         margin-left: auto;

@@ -11,7 +11,6 @@
             @csrf
             <div class="c-form2">
                 <div class="c-form__area">
-
             <h3 class="c-form__title">コンビニ情報編集</h3>
                 <span class="c-form__area__message">名前:
                     @error('name')
@@ -40,7 +39,7 @@
 
 <span class="c-form__area__message">パスワード:
     @error('password')
-    <span class="" role="alert">
+    <span class="c-errormessage" role="alert">
         <strong>{{$message}}</strong>
     </span>
     @enderror
@@ -50,7 +49,6 @@
             <input class="c-form__area__text" action="post" type="password" name="password" placeholder="パスワード編集">
             <br/>
 {{-- パスワード入力ここまで --}}
-
 <span class="c-form__area__message">パスワード再入力:
     @error('password_confirmation')
     <span class="c-errormessage" role="alert">
@@ -80,7 +78,6 @@
     @enderror    
 </span>
 <br/>
-
             <input class="c-form__area__text" action="post" type="text" name="convinience_branch" placeholder="支店名" value="{{$admin->convinience_branch}}">
             <br/>
             {{-- 支店名ここまで --}}

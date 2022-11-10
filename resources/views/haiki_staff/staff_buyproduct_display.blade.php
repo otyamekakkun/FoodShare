@@ -7,7 +7,6 @@
 </header>
 <body>
     <div class="c-mypagemenu">
-
     <h1 class="c-mypagemenu__title">
 購入された商品一覧
     </h1>

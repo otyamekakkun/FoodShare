@@ -12,7 +12,7 @@
                     商品編集
                 </h1>
             </div>
-    <div class="c-form4">
+    <div class="c-form5">
         <h1 class="c-mypagemenu__title">商品の情報について記述してください</h1>
 <form method="POST" action="{{ route('exhibit.update',$products->id)}}" enctype="multipart/form-data">
     @csrf
@@ -21,7 +21,7 @@
 
         <span class="c-staffform__title">商品名:
             @error('product_name')
-            <span class="" role="alert">
+            <span class="c-errormessage" role="alert">
                 <strong>{{ $message }}</strong>
             </span>
             @enderror
@@ -32,33 +32,43 @@
         <span class="c-staffform__title">金額を入れる:
         <span>
             @error('product_name')
-            <span class="" role="alert">
+            <span class="c-errormessage" role="alert">
                 <strong>{{ $message }}</strong>
             </span>
             @enderror
             <br/>
 </span>    
 </span><br>
-            <input id="" type="number" class="c-staffform__area__textprice" name="price" value="{{$products->price}}">円
-    </div>
+            <input type="number" class="c-staffform__area__textprice" name="price" value="{{$products->price}}">
+    {{-- </div> --}}
 {{-- 賞味期限の入力はjsを使用。デフォルトだと現在日時より前の日付も記入できるから --}}
  <calender-component></calender-component>
-
- @error('img_path')
+ <span class="c-errormessage" role="alert">
+ @error('best_by_date')
  <strong>{{ $message }}</strong>
 @enderror
+ </span>
+ 
         <drag-component></drag-component>
+        <span class="c-errormessage" role="alert">
+            @error('img_path')
+            <strong>{{ $message }}</strong>
+           @enderror
+            </span>
+    </div>
+
         {{-- 登録した都道府県が自動的にデータベースに入るように設定する --}}
 <button type="submit" class="c-staffform__area__submitbutton">
     商品を編集する
 </button>
 </form>
-</div>
+{{-- </div> --}}
 
-<form action="{{ route('drills.delete',$products->id ) }}" method="post" class="d-inline">
+<form action="{{ route('drills.delete',$products->id ) }}" method="post" class="">
     @csrf
     <button class="c-staffform__area__deletebutton" onclick='return confirm("削除しますか？");'>この商品を削除する</button>
 </form>
+        </div>
 </div>
 <footer-component></footer-component>
 </div> 

@@ -415,6 +415,9 @@
     }
 }
 .c-search__calender {
+    background: white;
+    margin: size(l);
+    font-size: size(m);
     &:hover {
         background: #f6f5f4;
     }

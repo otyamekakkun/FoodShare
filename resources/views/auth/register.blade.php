@@ -88,8 +88,9 @@
                         <br/>
                                 <input id="password" type="password" class="c-form__area__text"  name="password" required autocomplete="new-password" placeholder="パスワード">
                                 <br/>
-                            <label for="password-confirm" class="c-form__area__message ">パスワード再入力:</label><br/>
-
+                            <label for="password-confirm" class="c-form__area__message ">パスワード再入力:
+                            </label>
+                            <br/>
                                 <input id="password-confirm" type="password" class="c-form__area__text" name="password_confirmation" required autocomplete="new-password" placeholder="パスワード再入力">
                             </form>
     @csrf
@@ -105,7 +106,7 @@
 <input type="text" placeholder="コンビニの会社名" name="convinience_name" class="c-form__area__text">
 <br/>
 
-<span  class="c-form__area__message">支店名記入欄:
+<span class="c-form__area__message">支店名記入欄:
     @error('convinience_branch')
     <span class="c-errormessage" role="alert">
         <strong>{{ $message }}</strong>
