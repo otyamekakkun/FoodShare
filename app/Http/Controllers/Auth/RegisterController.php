@@ -120,4 +120,9 @@ class RegisterController extends Controller
             'adress'=>$data["adress"]
         ]);
     }
+    //この関数は必須
+    protected function registeredAdmin(Request $request, $user)
+    {
+    }
+
 }
