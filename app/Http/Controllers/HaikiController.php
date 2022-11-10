@@ -9,6 +9,9 @@ use Illuminate\Foundation\Auth\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
+//メール機能
+use App\Mail\Test;
+use Illuminate\Support\Facades\Mail;
 class HaikiController extends Controller
 {
 //===================================================================
@@ -36,7 +39,7 @@ public function shopper_profile_edit(Request $request)
 $request->validate([
     'name'=>['required','max:255'],
     'email'=>['required','string', 'email:strict,dns,spoof', 'max:255', 'unique:users'],
-    'password'=>['required','min:6','max:255'],
+    'password'=>['required','min:8','max:255'],
     'password_confirmation'=>['required','same:password'],
 ]);
 $id = Auth::id();
@@ -63,8 +66,6 @@ return redirect('haiki/shopper_mypage');//..............お客様の情報を更
 //==============================================================
     public function shopper_productdetail_display($id){
         $product = products::find($id);   
-        //購入をキャンセルされる際は自分が買ったときは購入をやめるというボタンを表示して、相手が購入したときは
-    //表示されないようにボタン表示をする必要がある。
         $user = Auth::id();      
         return view('haiki_shopper.shopper_productdetail_display',['products'=>$product],['users'=>$user]);
     }
@@ -76,9 +77,18 @@ return redirect('haiki/shopper_mypage');//..............お客様の情報を更
         $product->user_id=$user;
         $product->bought =1;
         $product->save();
+        //メールの処理ここから。ローカル環境ではコメント化する。
+        /*
+        $users = Auth::user()->email;
+        $admin=products::find($id)->email;
+        $emails = [$users,$admin];
+                    foreach ($emails as $email){
+        Mail::to($email)->send(new Test());
+                    }
+        メールの処理はここまで
+        */
         return redirect('haiki/shopper_mypage');
-    }
-     //商品が購入された時に更新するための処理
+    } //商品が購入された時に更新するための処理ここまで
     public function shopper_productdetail_cancel ($id){
         $user = Auth::id();
         $product = products::find($id);//商品専用のid
@@ -105,8 +115,8 @@ return redirect('haiki/shopper_mypage');//..............お客様の情報を更
 $request->validate([
 'name'=>['required','max:255'],
     'email'=>['required','max:255'],
-    'password'=>['required','min:6','max:255'],
-    'password_confirmation'=>['required','min:6','same:password'],
+    'password'=>['required','min:8','max:255'],
+    'password_confirmation'=>['required','min:8','same:password'],
     'convinience_name'=>'required',
     'convinience_branch'=>'required',
     'adress'=>'required',
