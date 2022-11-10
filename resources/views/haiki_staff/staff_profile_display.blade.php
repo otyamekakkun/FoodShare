@@ -91,7 +91,6 @@
                 @enderror    
             </span>
 <select name="prefecture" class="c-formstaff__prefecture__text" value="{{$admin->prefecture}}">
-    {{-- <option selected>都道府県</option> --}}
     <option value="北海道">北海道</option>
     <option value="青森県">青森県</option>
     <option value="岩手県">岩手県</option>
@@ -155,15 +154,12 @@
 </textarea>
 {{-- 住所変更ここまで --}}
 </div>
-
             <input type="submit" class="c-register__custombutton" value="変更する">
-
             </div>
             </div>
         </form>
         </div>
         </section>
-
 <div id="app">
 <footer-component>
 </footer-component>

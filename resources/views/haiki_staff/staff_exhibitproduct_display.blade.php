@@ -50,15 +50,6 @@
         <strong>{{$message}}</strong>
         @enderror
         </span>
-
-{{-- カレンダーのエラーメッセージ --}}
-{{--  
-<span class="c-errormessage">
-     @error('img_path')
-     <strong>{{ $message }}</strong>
-    @enderror
-</span>
---}}
 </div>
 
             <drag-component></drag-component>
@@ -67,9 +58,6 @@
                 <strong>{{ $message }}</strong>
                @enderror
            </span>
-
-           
-            {{-- 登録した都道府県が自動的にデータベースに入るように設定する --}}
     <input type="text" name="prefecture" value="{{$admins->prefecture}}" class="u-hidden">
     {{-- 都道府県エリアここまで --}}
     <button type="submit" class="c-staffform__area__submitbutton">
