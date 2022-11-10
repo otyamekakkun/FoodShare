@@ -1,5 +1,7 @@
 @extends('layouts.app2')
 @section('content')
+@section('title', "商品出品画面")
+
 <body>
     {{-- ヘッダー部分 --}}
     <header>

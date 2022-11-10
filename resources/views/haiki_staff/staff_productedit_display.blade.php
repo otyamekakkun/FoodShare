@@ -1,5 +1,7 @@
 @extends('layouts.app2')
 @section('content')
+@section('title', "商品編集画面")
+
 <body>
     <header>
         @include('header.staff.staff_header')

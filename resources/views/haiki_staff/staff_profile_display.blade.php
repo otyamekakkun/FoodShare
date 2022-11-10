@@ -1,17 +1,11 @@
 
 @extends('layouts.app2')
 @section('content')
-
+@section('title', "コンビニプロフィール編集")
 <body>
     <header>
         @include('header.staff.staff_header')
     </header>
-
-{{-- 
-l-formstaffprofileあったら削除
- --}}
-
-    
     <section>
         <form  action="{{route('haiki_staffrprofile_edit',$admin->id)}}" method="POST">
             @csrf
@@ -21,7 +15,7 @@ l-formstaffprofileあったら削除
             <h3 class="c-form__title">コンビニ情報編集</h3>
                 <span class="c-form__area__message">名前:
                     @error('name')
-                    <span class="" role="alert">
+                    <span class="c-errormessage" role="alert">
                         <strong>{{$message}}</strong>
                     </span>
                     @enderror
@@ -32,7 +26,7 @@ l-formstaffprofileあったら削除
 
 <span class="c-form__area__message">メールアドレス編集:
                 @error('email')
-                <span class="" role="alert">
+                <span class="c-errormessage" role="alert">
                     <strong>{{$message}}</strong>
                 </span>
                 @enderror
@@ -70,7 +64,7 @@ l-formstaffprofileあったら削除
         {{-- パスワード再入力ここまで --}}
 <span class="c-form__area__message">コンビニ名:
     @error('convinience_name')
-    <span class="" role="alert">
+    <span class="c-errormessage" role="alert">
         <strong>{{$message}}</strong>
     </span>
     @enderror     
@@ -80,7 +74,7 @@ l-formstaffprofileあったら削除
             <br/>
 <span class="c-form__area__message">支店名:
     @error('convinience_branch')
-    <span class="" role="alert">
+    <span class="c-errormessage" role="alert">
         <strong>{{$message}}</strong>
     </span>
     @enderror    
@@ -94,7 +88,7 @@ l-formstaffprofileあったら削除
 <h1 class="c-form__adresstitle">住所記入欄</h1>
             <span class="c-formstaff__prefecture">都道府県選択:
                 @error('prefecture')
-                <span class="" role="alert">
+                <span class="c-errormessage" role="alert">
                     <strong>{{$message}}</strong>
                 </span>
                 @enderror    
@@ -154,7 +148,7 @@ l-formstaffprofileあったら削除
 {{-- 都道府県ここまで --}}
 <span class="c-formstaff__adress">都道府県以外の住所:
     @error('adress')
-    <span class="" role="alert">
+    <span class="c-errormessage" role="alert">
         <strong>{{$message}}</strong>
     </span>
     @enderror    
