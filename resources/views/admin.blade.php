@@ -1,7 +1,6 @@
 @extends('layouts.app2')
 @section('content')
-
-
+@section('title', "コンビニ管理マイページ")
 <body>
     <header>
         @include('header.staff.staffmypage_header')
