@@ -19,7 +19,7 @@
                             <br/>
                             <span for="name" class="c-form__area__message">名前:
                                 @error('name')
-                                    <span  role="alert">
+                                    <span  role="alert" class="c-errormessage">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
@@ -29,7 +29,7 @@
                                 <br/>
                             <span for="email" class="c-form__area__message ">Email:
                                 @error('email')
-                                <span class="" role="alert">
+                                <span class="c-errormessage" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
@@ -38,7 +38,7 @@
                                 <br/>
                             <label for="password"class="c-form__area__message">パスワード:                                
                                 @error('password')
-                                <span class="" role="alert">
+                                <span class="c-errormessage" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
@@ -53,7 +53,7 @@
                             </button>
                         </form>
                     @endisset
-{{-- ここまでがお客様のログインエリア --}}
+{{-- ここまでがお客様のユーザー登録エリア --}}
                     @isset($authgroup)
                     <form method="POST" action="{{ url("register/$authgroup") }}">
                             <div class="c-form__area">
@@ -61,7 +61,7 @@
                             <br/>
                             <span for="name" class="c-form__area__message">名前:
                                 @error('name')
-                                    <span  role="alert">
+                                    <span class="c-errormessage"  role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
@@ -71,7 +71,7 @@
                                 <br/>
                             <span for="email" class="c-form__area__message ">Email:
                                 @error('email')
-                                <span class="" role="alert">
+                                <span class="c-errormessage" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
@@ -80,7 +80,7 @@
                                 <br/>
                             <label for="password"class="c-form__area__message">パスワード:                                
                                 @error('password')
-                                <span class="" role="alert">
+                                <span class="c-errormessage" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
@@ -95,7 +95,7 @@
     @csrf
 <span  class="c-form__area__message ">勤めているコンビニ会社:
     @error('convinience_name')
-    <span class="" role="alert">
+    <span class="c-errormessage" role="alert">
         <strong>{{ $message }}</strong>
     </span>
 @enderror
@@ -107,7 +107,7 @@
 
 <span  class="c-form__area__message">支店名記入欄:
     @error('convinience_branch')
-    <span class="" role="alert">
+    <span class="c-errormessage" role="alert">
         <strong>{{ $message }}</strong>
     </span>
 @enderror
@@ -120,7 +120,7 @@
     <h1 class="c-form__adresstitle">住所記入欄</h1>
     <span class="c-formstaff__prefecture">都道府県選択:
         @error('prefecture')
-        <span class="" role="alert">
+        <span class="c-errormessage" role="alert">
             <strong>{{$message}}</strong>
         </span>
         @enderror    
@@ -128,7 +128,6 @@
 
 
 <select name="prefecture" class="c-formstaff__prefecture__text ">
-<option selected>都道府県</option>
 <option value="北海道">北海道</option>
 <option value="青森県">青森県</option>
 <option value="岩手県">岩手県</option>
@@ -182,7 +181,7 @@
 {{-- 都道府県ここまで --}}
 <span class="c-formstaff__adress">都道府県以外の住所:
     @error('adress')
-    <span class="" role="alert">
+    <span class="c-errormessage" role="alert">
         <strong>{{$message}}</strong>
     </span>
     @enderror    
