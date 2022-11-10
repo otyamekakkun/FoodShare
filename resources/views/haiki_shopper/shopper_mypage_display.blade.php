@@ -1,6 +1,8 @@
 
 @extends('layouts.app2') 
  @section('content') 
+ @section('title', "お客様マイページ")
+
 <header>
 @include('header.shopper.shoppermypage_header') 
 </header>

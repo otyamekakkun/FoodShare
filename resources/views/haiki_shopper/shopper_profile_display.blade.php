@@ -1,5 +1,7 @@
  @extends('layouts.app2')
  @section('content')
+ @section('title', "プロフィール編集画面")
+
 <body>
     <header>
         @include('header.shopper.shopper_header') 

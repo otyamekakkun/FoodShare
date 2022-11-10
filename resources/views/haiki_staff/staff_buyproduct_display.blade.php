@@ -1,5 +1,7 @@
 @extends('layouts.app2')
 @section('content')
+@section('title', "購入された商品一覧")
+
 <header>
     @include('header.staff.staff_header')
 </header>

@@ -1,6 +1,8 @@
 
 @extends('layouts.app2')
 @section('content')
+@section('title', "商品詳細画面")
+
 <body>
     <header>
         @include('header.shopper.shopper_header') 
