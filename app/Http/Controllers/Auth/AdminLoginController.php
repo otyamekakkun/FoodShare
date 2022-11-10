@@ -1,17 +1,12 @@
 <?php
-
 namespace App\Http\Controllers\Auth;
-
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-// ここから追加
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
-// ここまで追加
 
 class AdminLoginController extends Controller
 {
-    // ここから追加
     public function __construct()
     {
         $this->middleware('guest:admin')->except('logout');

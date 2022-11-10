@@ -1,12 +1,9 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
-
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
-//実験で追加
-
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -45,11 +42,6 @@ class LoginController extends Controller
 
 /*staffのmypageにredirectさせたい
 */
-
-
-
-
-
     /**
      * 管理者ログイン用
      */
@@ -62,7 +54,7 @@ class LoginController extends Controller
     {
         $this->validate($request, [
             'email'   => 'required|email',
-            'password' => 'required|min:6'
+            'password' => 'required|min:8'
         ]);
 
         // If the class is using the ThrottlesLogins trait, we can automatically throttle
@@ -71,24 +63,18 @@ class LoginController extends Controller
         if (method_exists($this, 'hasTooManyLoginAttempts') &&
             $this->hasTooManyLoginAttempts($request)) {
             $this->fireLockoutEvent($request);
-
             return $this->sendLockoutResponse($request);
         }
 
         if (Auth::guard('admin')->attempt(['email' => $request->email, 'password' => $request->password],
          $request->get('remember'))) {
             //ここのredirect先をコンビニスタッフのマイページに飛ばせるようにする
-            //上記のコードだと1度エラーが発生してしまう状態になっていたので下記に書き直した
-            //return redirect('/admin')->intended('/admin');
             return redirect('/admin');
         }
-
         // If the login attempt was unsuccessful we will increment the number of attempts
         // to login and redirect the user back to the login form. Of course, when this
         // user surpasses their maximum number of attempts they will get locked out.
         $this->incrementLoginAttempts($request);
-
         return back()->withInput($request->only('email', 'remember'));
     }
-
 }

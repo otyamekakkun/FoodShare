@@ -1,14 +1,12 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
-
 use App\Models\User;
 use App\Models\Admin;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
-
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Auth\Events\Registered;
 use App\Providers\RouteServiceProvider;
@@ -58,7 +56,7 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:6', 'confirmed'],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }
 
@@ -87,13 +85,12 @@ class RegisterController extends Controller
             //ユーザー登録するときのバリデーションチェック
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:admins'],
-            'password' => ['required', 'string', 'min:6', 'confirmed'],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
             'convinience_name'=>['required'],
             'convinience_branch'=>['required'],
             'adress'=>['required']
         ]);
     }
-
     public function showAdminRegisterForm()
     {
         return view('auth.register', ['authgroup' => 'admin']);
@@ -102,20 +99,15 @@ class RegisterController extends Controller
     public function registerAdmin(Request $request)
     {
         $this->adminValidator($request->all())->validate();
-
         event(new Registered($user = $this->createAdmin($request->all())));
-
         Auth::guard('admin')->login($user);
-
         if ($response = $this->registeredAdmin($request, $user)) {
             return $response;
         }
-
         return $request->wantsJson()
                     ? new JsonResponse([], 201)
                     : redirect(route('admin-home'));
     }
-
     protected function createAdmin(array $data)
     {
         return Admin::create([
@@ -126,13 +118,6 @@ class RegisterController extends Controller
             'convinience_branch'=>$data["convinience_branch"],
             'prefecture'=>$data["prefecture"],//ログイン時ユーザー登録する画面で処理がうまく行かなかったらここをみる
             'adress'=>$data["adress"]
-
         ]);
     }
-
-    protected function registeredAdmin(Request $request, $user)
-    {
-        //もしかしてこの辺にユーザー登録がうまくいっていいない軌跡がある？
-    }
-
 }
