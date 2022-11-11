@@ -79,11 +79,13 @@ return redirect('haiki/shopper_mypage');//..............お客様の情報を更
         $product->save();
         //メールの処理ここから。ローカル環境ではコメント化する。
         /*
+         //商品名で何を購入されたのかをメール内で記述する
+  $text = $product->product_name;
         $users = Auth::user()->email;
         $admin=products::find($id)->email;
         $emails = [$users,$admin];
                     foreach ($emails as $email){
-        Mail::to($email)->send(new Test());
+        Mail::to($email)->send(new Test($text));
                     }
         メールの処理はここまで
         */

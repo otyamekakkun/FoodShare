@@ -1,13 +1,12 @@
 <?php
-
+// メール機能の実装。買われる商品名は毎回違うので動的に表現した。
 namespace App\Mail;
-
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
-
-class ContactReply extends Mailable
+use App\Http\Controllers\HaikiController;
+class Test extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -16,11 +15,17 @@ class ContactReply extends Mailable
      *
      * @return void
      */
-    public function __construct()
-    {
-        //
-    }
 
+
+public $productmessage;
+
+
+
+    public function __construct($productmessage)
+    {
+            //
+            $this->productmessage = $productmessage;
+    }
     /**
      * Build the message.
      *
@@ -28,7 +33,7 @@ class ContactReply extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.text')
-        ->subject('メール課題');
+            return $this->subject('haikishare商品のお買いあげのお知らせ')
+                    ->view('mails.test');
     }
 }
