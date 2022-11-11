@@ -662,23 +662,26 @@
     color: red;
 }
 
+.c-warning2 {
+    font-size: size(l);
+    color: red;
+    margin-top: size(4l);
+    text-align: center;
+    @include mql() {
+        font-size: size(m);
+    }
+
+    @include mqm() {
+        font-size: size(s);
+        margin-top: size(4l);
+        margin-left: size(s);
+        margin-right: size(s);
+        margin-bottom: -40px;
+    }
+}
+
 .c-errormessage {
     color: rgb(234, 14, 14);
-}
-.c-errormessagedate {
-    display: block;
-    color: rgb(234, 14, 14);
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 80px;
-    margin-bottom: -100px;
-    width: 20%;
-    @include mqxl() {
-        width: 50%;
-        font-size: size(m);
-        margin-top: 100px;
-        margin-bottom: -20px;
-    }
 }
 //==============================================
 //フォームエリア
