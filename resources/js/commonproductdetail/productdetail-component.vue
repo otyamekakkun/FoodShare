@@ -1,3 +1,7 @@
+<!-- 
+    商品詳細画面 laravel側でデータを取得してpropsでデータをもらいそれをもとに商品詳細を掲載したもの
+ -->
+
 <template>
     <div>
         <h1 class="c-productdetail__info">商品No.{{ id }} {{ name }}</h1>

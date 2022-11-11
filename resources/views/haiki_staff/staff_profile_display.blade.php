@@ -1,4 +1,6 @@
-
+{{-- 
+    コンビニについてのプロフィールが編集できるようにした画面
+    --}}
 @extends('layouts.app2')
 @section('content')
 @section('title', "コンビニプロフィール編集")

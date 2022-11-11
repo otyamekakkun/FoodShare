@@ -1,3 +1,6 @@
+{{-- 
+    商品詳細画面
+    --}}
 @extends('layouts.app2')
 @section('content')
 @section('title', "商品詳細画面")
