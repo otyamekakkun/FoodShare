@@ -1,3 +1,8 @@
+<!--         
+ページネーションの仕組みを利用して最新５件だけ表示されるシステムを構築した。
+出品した商品最新5件なのでreverse()メソッドで呼び出す配列の順序を逆にした。
+ -->
+
 <template>
     <div>
         <mypageproduct
@@ -26,10 +31,6 @@ export default {
         }
     },
     computed: {
-        /*
-ページネーションの仕組みを利用して最新５件だけ表示されるシステムを構築した。
-出品した商品最新5件なのでreverse()メソッドで呼び出す配列の順序を逆にした。
-*/
         getItems: function () {
             let start = (this.currentPage - 1) * this.perPage;
             let end = this.currentPage * this.perPage;

@@ -2,9 +2,7 @@
 @extends('layouts.app3')
 @section('content')
 @include('header.other.otherheader')
-
 {{-- 管理者ログインページここから --}}
-
                     @isset($authgroup)
                     <div class="c-form1">
                         <div class="c-warning2">
@@ -20,7 +18,6 @@
                     <form method="POST" action="{{ route('login') }}">
                     @endisset
                         @csrf
-{{-- <div class="l-login__formarea"> --}}
     <div class="c-form__area">
                             <span for="email" class="c-form__area__message">email:
 <span>
@@ -61,8 +58,6 @@
                             </div>
 
                                 @if (Route::has(isset($authgroup) ? $authgroup.'.password.request' : 'password.request'))
-                                {{-- <button class="c-register__button"> --}}
-                                    {{-- c-login__button --}}
                                 <a class="c-remind__text" href="{{ route(isset($authgroup) ? $authgroup.'.password.request' : 'password.request') }}">
                                     {{ __('Forgot Your Password?') }}
                                 </a>
@@ -74,8 +69,6 @@
                     </div>
                     </form>
                     <div id=app>
-                        {{-- incompletefooter-componentはfooterをレウアウトしてくれるもの。ただしページ量が少ないときにfooter
-                            エリアが最下部にならないように定義したもの --}}
                     <footer-component></footer-component>
                     </div>
                     @endsection

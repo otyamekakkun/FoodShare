@@ -1,3 +1,16 @@
+<!-- 
+exhibitproductlist 
+商品を出品したらそのコンビニ専用で商品がリスト化されるものを作成。
+1ページに10商品毎記載されてそれ以上になるとページネーションが発動される。
+
+(コンポーネント設計をするとエラーが出る件について)
+このコードをコンポーネントした時、webpack.mix.jsの方でコンパイルしたときではエラーは表示されず無事に表示されるが
+同様のコードでwebpack+babelの方でコンパイルした時エラーが出るという現象になってしまいました
+コンポーネントしていない状態ではエラーは表示されないです。
+エラーの原因追求ができず、今回webpack+babelの方で開発環境をしないといけないので、コンポーネントされていないコードを
+添付することにしました。
+ -->
+
 <template>
     <div id="app">
         <main>
@@ -27,7 +40,6 @@
                         </div>
 
                         <div class="c-productlist__items__list">
-                            <!-- <li>商品No.{{ item.id }}</li> -->
                             <li>商品名:{{ item.product_name }}</li>
                             <li>お値段:{{ item.price }}円.</li>
                             <div class="c-productlist__items__bottom">

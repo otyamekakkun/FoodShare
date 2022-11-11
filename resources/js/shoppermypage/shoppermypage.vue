@@ -1,4 +1,3 @@
-<!-- ここまでが今までの処理 -->
 <template>
     <div>
         <div class="c-exhibitproductlist">
@@ -44,7 +43,7 @@ export default {
             return {
                 products: [], //からのデータを用意する。
                 currentPage: 1,
-                perPage: 2,
+                perPage: 5,
             };
         }
     },
