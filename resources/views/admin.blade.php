@@ -1,3 +1,5 @@
+{{-- コンビニ管理者のマイページを表示する。 --}}
+
 @extends('layouts.app2')
 @section('content')
 @section('title', "コンビニ管理マイページ")

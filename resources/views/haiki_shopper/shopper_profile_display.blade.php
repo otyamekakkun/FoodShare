@@ -1,3 +1,4 @@
+ {{-- お客様のプロフィール編集画面を表示したもの --}}
  @extends('layouts.app2')
  @section('content')
  @section('title', "プロフィール編集画面")
@@ -6,10 +7,8 @@
     <header>
         @include('header.shopper.shopper_header') 
         </header>
-
     <main>
         <form method="POST" enctype="multipart/form-data" action="{{route('haiki_shopperprofile_edit',$user->id)}}">      
-          
           <div class="c-form4">
             <div class="c-form__area">
             @csrf
