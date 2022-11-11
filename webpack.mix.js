@@ -1,5 +1,5 @@
 /*
-
+webpack+babelで開発環境するのでコメントアウトしとく
 const mix = require("laravel-mix");
  |--------------------------------------------------------------------------
  | Mix Asset Management
