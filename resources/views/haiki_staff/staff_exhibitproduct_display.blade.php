@@ -21,8 +21,13 @@
             商品を出品する
         </h1>
     </div>
-    <div class="c-form5">
+    {{-- <div class="c-staffform__area"> --}}
+
+    {{-- <div class="c-form5"> --}}
         <h1 class="c-mypagemenu__title">出品されたい商品の情報について記述してください</h1>
+        <div class="c-staffform__area">
+            {{-- <div class="c-staffform__area__side"> --}}
+
     <form method="POST" action="{{ route('create.exhibit') }}" enctype="multipart/form-data">
         @csrf
 {{-- 写真エリアを一番上に持っていく --}}
@@ -32,8 +37,10 @@
             <strong>{{ $message }}</strong>
            @enderror
        </span>
-
+{{-- 
         <div class="c-staffform__area">
+                             --}}
+
             <div class="c-staffform__area__side">
             <span class="c-staffform__title">商品名:
                 @error('product_name')
@@ -87,11 +94,15 @@
     <button type="submit" class="c-staffform__area__submitbutton">
         商品を出品する
     </button>
-    </div>
+    {{-- </div> --}}
     </form>
+</div>
+
+    <footer-component></footer-component>
     </div>
 
-<footer-component></footer-component>
+{{-- <footer-component></footer-component> --}}
 </div>
+
 </body>
 @endsection

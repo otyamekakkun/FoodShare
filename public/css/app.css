@@ -1839,7 +1839,7 @@ a {
   border: solid #174113;
   border-radius: 10px;
   width: 80%;
-  height: 1650px;
+  height: 1050px;
 }
 @media screen and (max-width:980px) {
   .c-form5 {
@@ -1852,19 +1852,18 @@ a {
   margin-right: auto;
   text-align: center;
   margin-top: 50px;
-  height: 1200px;
+  height: 1000px;
+  background: rgba(255, 255, 255, 0.6);
 }
 @media screen and (max-width:980px) {
   .c-staffform__area {
-    height: 1100px;
+    height: 600px;
   }
 }
 
 .c-staffform__area__side {
   width: 100%;
-  margin-left: 8%;
-  margin-right: 8%;
-  margin-top: 8%;
+  margin-top: 10%;
   display: flex;
   margin-bottom: -8%;
 }

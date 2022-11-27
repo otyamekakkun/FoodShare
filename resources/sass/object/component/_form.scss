@@ -462,7 +462,7 @@
     border: solid #174113;
     border-radius: size(ss);
     width: 80%;
-    height: 1650px;
+    height: 1050px;
     @include mqxl() {
         height: 1400px;
     }
@@ -479,11 +479,12 @@
     margin-right: auto;
     text-align: center;
     margin-top: size(4l);
-    height: 1200px;
+    height: 1000px;
+    background: rgba(255, 255, 255, 0.6);
     //  border: solid #174113;
     //border-radius: size(sss);
     @include mqxl() {
-        height: 1100px;
+        height: 600px;
     }
 }
 
@@ -494,9 +495,9 @@
 //商品を出品する画面＋商品を編集する画面のレスポンシブデザインするためのもの
 .c-staffform__area__side {
     width: 100%;
-    margin-left: 8%;
-    margin-right: 8%;
-    margin-top: 8%;
+    // margin-left: 8%;
+    // margin-right: 8%;
+    margin-top: 10%;
     display: flex;
     margin-bottom: -8%;
     //  margin-left: auto;

@@ -75,11 +75,13 @@
     @csrf
     <button class="c-staffform__area__deletebutton" onclick='return confirm("削除しますか？");'>この商品を削除する</button>
 </form>
-        </div>
 </div>
-<footer-component></footer-component>
+</div>
+
+
 </div> 
 {{-- 上のdivはコンポーネントを囲むdiv --}}
+<footer-component></footer-component>
 
 </div>
 </body>
