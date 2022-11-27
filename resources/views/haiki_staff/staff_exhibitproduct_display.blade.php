@@ -5,7 +5,6 @@
 @section('content')
 @section('title', "商品出品画面")
 <body>
-    {{-- ヘッダー部分 --}}
     <header>
         @include('header.staff.staff_header')
     </header>
@@ -36,7 +35,7 @@
                 <input  type="text" class= "c-staffform__area__textname" name="product_name" value="" placeholder="商品名">
             </div>
             <div class="c-staffform__area__side">
-            <span class="c-staffform__title ">金額:
+            <span class="c-staffform__title">金額:
             <span>
                 @error('product_name')
                 <span class="c-errormessage" role="alert">
