@@ -24,8 +24,9 @@
     {{-- <div class="c-staffform__area"> --}}
 
     {{-- <div class="c-form5"> --}}
-        <h1 class="c-mypagemenu__title">出品されたい商品の情報について記述してください</h1>
         <div class="c-staffform__area">
+            <h1 class="c-mypagemenu__title">出品されたい商品の情報について記述してください</h1>
+
             {{-- <div class="c-staffform__area__side"> --}}
 
     <form method="POST" action="{{ route('create.exhibit') }}" enctype="multipart/form-data">
@@ -63,7 +64,7 @@
                 <br/>
     </span>    
 </span><br>
-                <input type="number" class="c-staffform__area__textname" name="price" value="" placeholder="金額を入力">
+                <input type="number" class="c-staffform__area__textname" name="price" value="" placeholder="半角で金額を入力">
             </div>
     {{-- 賞味期限の入力はjsを使用。デフォルトだと現在日時より前の日付も記入できるから --}}
     <div >

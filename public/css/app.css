@@ -1848,16 +1848,18 @@ a {
 }
 .c-staffform__area {
   width: 80%;
+  padding-top: 20px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 25px;
   text-align: center;
-  margin-top: 50px;
-  height: 1000px;
+  margin-top: 40px;
+  height: 1200px;
   background: rgba(255, 255, 255, 0.6);
 }
 @media screen and (max-width:980px) {
   .c-staffform__area {
-    height: 600px;
+    height: 1200px;
   }
 }
 
@@ -1874,7 +1876,6 @@ a {
 }
 
 .c-staff__imgarea {
-  background: red;
   display: flex;
   width: 80%;
   margin-left: auto;
@@ -1887,9 +1888,8 @@ a {
   color: white;
   text-align: center;
   height: 40px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 236%;
+  margin-right: 15px;
+  margin-top: 220%;
   margin-bottom: 25px;
   font-size: 20px;
   padding: 15px;
@@ -1899,8 +1899,6 @@ a {
 }
 .c-staffform__area__uploadimgarea:hover {
   background: orange;
-  border: dotted orange;
-  border-radius: 25px;
 }
 .c-staffform__area__textimgarea {
   font-size: 25px;
@@ -1917,21 +1915,6 @@ a {
   padding-right: 25px;
   border: dotted #174113;
   border-radius: 10px;
-}
-@media screen and (max-width:980px) {
-  .c-staffform__area__textimgarea {
-    height: 180px;
-  }
-}
-@media screen and (max-width: 720px) {
-  .c-staffform__area__textimgarea {
-    height: 120px;
-  }
-}
-@media screen and (max-width: 560px) {
-  .c-staffform__area__textimgarea {
-    height: 110px;
-  }
 }
 @media screen and (max-width: 414px) {
   .c-staffform__area__textimgarea {
@@ -2081,7 +2064,7 @@ a {
 }
 @media screen and (max-width:980px) {
   .c-staffform__title {
-    width: 100%;
+    width: 60%;
   }
 }
 
@@ -2124,47 +2107,10 @@ a {
   height: 40px;
   background: white;
   font-size: 20px;
-  text-align: left;
-  margin: 5px;
+  margin-right: 50px;
   margin-bottom: 25px;
-  width: 100%;
+  width: 80%;
 }
-@media screen and (max-width:980px) {
-  .c-staffform__area__textname {
-    width: 100%;
-  }
-}
-/*
-.c-staffform__area__textprice {
-    background: white;
-    height: 40px;
-    width: 20%;
-    font-size: size(l);
-    margin-bottom: size(l);
-    @include mqxl() {
-        width: 40%;
-    }
-    @include mql() {
-        //720px以下
-        width: 50%;
-    }
-    @include mqm() {
-        //560px対応
-        font-size: size(m);
-        margin-bottom: size(ss);
-        height: size(4l);
-    }
-}
-*/
-/*
-.c-staffform__area__textcarender {
-    background: white;
-    width: 20%;
-    height: size(xxl);
-    margin-right: auto;
-    margin-bottom: size(l);
-}
-*/
 .c-form__adresstitle {
   margin-top: 20px;
   margin-bottom: 20px;
