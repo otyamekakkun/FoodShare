@@ -27,12 +27,15 @@
                 </label>
                 <!-- ここからプレビュー機能の部分 -->
                 <div class="c-staffform__area__textimgarea">
-                    <p>またはここにドラッグ＆ドロップをしてください</p>
                     <img
                         v-show="preview"
                         v-bind:src="preview"
                         class="c-staffform__area__textimgarea__img"
                     />
+                    <p v-show="!preview">
+                        またはここにドラッグ＆ドロップをしてください
+                    </p>
+
                     <p
                         v-show="preview"
                         class="c-staffform__area__textimgarea__name"

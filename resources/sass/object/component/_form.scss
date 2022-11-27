@@ -574,14 +574,11 @@
 
     @include mq() {
         //414px対応
-        height: 120px;
-        font-size: size(s);
     }
 }
 .c-staffform__area__textimgarea__img {
     width: 60%;
     @include mq() {
-        //414px対応
         font-size: size(s);
     }
 }

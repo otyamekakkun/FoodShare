@@ -6077,7 +6077,7 @@ var render = function render() {
     staticClass: "c-staffform__area__uploadimgarea"
   }, [_vm._v("写真を選択")])]), _vm._v(" "), _c("div", {
     staticClass: "c-staffform__area__textimgarea"
-  }, [_c("p", [_vm._v("またはここにドラッグ＆ドロップをしてください")]), _vm._v(" "), _c("img", {
+  }, [_c("img", {
     directives: [{
       name: "show",
       rawName: "v-show",
@@ -6089,6 +6089,13 @@ var render = function render() {
       src: _vm.preview
     }
   }), _vm._v(" "), _c("p", {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: !_vm.preview,
+      expression: "!preview"
+    }]
+  }, [_vm._v("\n                    またはここにドラッグ＆ドロップをしてください\n                ")]), _vm._v(" "), _c("p", {
     directives: [{
       name: "show",
       rawName: "v-show",
