@@ -6535,7 +6535,7 @@ var render = function render() {
     staticClass: "c-staffmypagelistarea"
   }, [_c("h1", {
     staticClass: "c-mypagemenu__title"
-  }, [_vm._v("これまでに出品された商品")]), _vm._v(" "), _vm._l(_vm.getItems, function (item) {
+  }, [_vm._v("これまでに出品された商品")]), _vm._v(" "), _vm._m(0), _vm._v(" "), _vm._l(_vm.getItems, function (item) {
     return _c("ul", {
       staticClass: "c-productlist__items"
     }, [item.bought >= 1 ? _c("div", [_c("img", {
@@ -6570,7 +6570,16 @@ var render = function render() {
   })], 2)])]);
 };
 
-var staticRenderFns = [];
+var staticRenderFns = [function () {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("table", {
+    attrs: {
+      border: "1"
+    }
+  }, [_c("tbody", [_c("tr", [_c("th", [_vm._v("商品画像")]), _vm._v(" "), _c("th", [_vm._v("商品名")]), _vm._v(" "), _c("th", [_vm._v("お値段")]), _vm._v(" "), _c("th", [_vm._v("オプション")])]), _vm._v(" "), _c("tr", [_c("th", [_vm._v("ほのす美ころりんん")]), _vm._v(" "), _c("th", [_vm._v("おむすび100個")]), _vm._v(" "), _c("th", [_vm._v("500円")]), _vm._v(" "), _c("th", [_vm._v("オプション")])])])]);
+}];
 render._withStripped = true;
 
 

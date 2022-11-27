@@ -3,6 +3,24 @@
         <main>
             <div class="c-staffmypagelistarea">
                 <h1 class="c-mypagemenu__title">これまでに出品された商品</h1>
+
+                <table border="1">
+                    <tbody>
+                        <tr>
+                            <th>商品画像</th>
+                            <th>商品名</th>
+                            <th>お値段</th>
+                            <th>オプション</th>
+                        </tr>
+                        <tr>
+                            <th>ほのす美ころりんん</th>
+                            <th>おむすび100個</th>
+                            <th>500円</th>
+                            <th>オプション</th>
+                        </tr>
+                    </tbody>
+                </table>
+
                 <ul class="c-productlist__items" v-for="item in getItems">
                     <div v-if="item.bought >= 1">
                         <img
