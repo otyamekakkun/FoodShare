@@ -23,13 +23,12 @@
                         style="display: none"
                         accept="image/*"
                     />
-                    <p class="">
-                        このエリアにドラッグ&ドロップまたはクリックして写真を挿入してください.下のエリアに写真が挿入されます。<br />
-                    </p>
+                    <p>写真を選択する</p>
                 </label>
             </div>
             <!-- ここからプレビュー機能の部分 -->
             <div class="c-staffform__area__textimgarea">
+                <p>またはここにドラッグ＆ドロップをしてください</p>
                 <img
                     v-show="preview"
                     v-bind:src="preview"

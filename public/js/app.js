@@ -6071,9 +6071,9 @@ var render = function render() {
         return _vm.uploadFile($event);
       }
     }
-  }), _vm._v(" "), _vm._m(0)])]), _vm._v(" "), _c("div", {
+  }), _vm._v(" "), _c("p", [_vm._v("写真を選択する")])])]), _vm._v(" "), _c("div", {
     staticClass: "c-staffform__area__textimgarea"
-  }, [_c("img", {
+  }, [_c("p", [_vm._v("またはここにドラッグ＆ドロップをしてください")]), _vm._v(" "), _c("img", {
     directives: [{
       name: "show",
       rawName: "v-show",
@@ -6095,12 +6095,7 @@ var render = function render() {
   }, [_vm._v("\n                " + _vm._s(_vm.name) + "\n            ")])])])]);
 };
 
-var staticRenderFns = [function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("p", {}, [_vm._v("\n                    このエリアにドラッグ&ドロップまたはクリックして写真を挿入してください.下のエリアに写真が挿入されます。"), _c("br")]);
-}];
+var staticRenderFns = [];
 render._withStripped = true;
 
 
