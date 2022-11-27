@@ -13,35 +13,35 @@
             @dragleave.prevent="changeStyle($event, 'no')"
             @drop.prevent="uploadFile($event)"
         >
-            <!-- <div class="c-staffform__area__uploadimgarea"> -->
-            <label for="upload_image">
-                <input
-                    id="upload_image"
-                    type="file"
-                    name="img_path"
-                    @change="uploadFile($event)"
-                    style="display: none"
-                    accept="image/*"
-                />
-                <p class="c-staffform__area__uploadimgarea">写真を選択する</p>
-            </label>
-            <!-- </div> -->
-            <!-- ここからプレビュー機能の部分 -->
-            <div class="c-staffform__area__textimgarea">
-                <p>またはここにドラッグ＆ドロップをしてください</p>
-                <img
-                    v-show="preview"
-                    v-bind:src="preview"
-                    class="c-staffform__area__textimgarea__img"
-                />
-                <p
-                    v-show="preview"
-                    class="c-staffform__area__textimgarea__name"
-                >
-                    {{ name }}
-                </p>
+            <div class="c-staff__imgarea">
+                <label for="upload_image">
+                    <input
+                        id="upload_image"
+                        type="file"
+                        name="img_path"
+                        @change="uploadFile($event)"
+                        style="display: none"
+                        accept="image/*"
+                    />
+                    <p class="c-staffform__area__uploadimgarea">写真を選択</p>
+                </label>
+                <!-- ここからプレビュー機能の部分 -->
+                <div class="c-staffform__area__textimgarea">
+                    <p>またはここにドラッグ＆ドロップをしてください</p>
+                    <img
+                        v-show="preview"
+                        v-bind:src="preview"
+                        class="c-staffform__area__textimgarea__img"
+                    />
+                    <p
+                        v-show="preview"
+                        class="c-staffform__area__textimgarea__name"
+                    >
+                        {{ name }}
+                    </p>
+                </div>
+                <!-- ここまでプレビュー機能の部分 -->
             </div>
-            <!-- ここまでプレビュー機能の部分 -->
         </div>
     </div>
 </template>
@@ -78,5 +78,3 @@ export default {
     },
 };
 </script>
-<!-- ここからスタイル記述 -->
-<!-- スタイルはあくまでdefaultモードにする -->

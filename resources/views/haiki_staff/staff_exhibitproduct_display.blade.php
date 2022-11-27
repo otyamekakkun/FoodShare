@@ -41,10 +41,11 @@
                     <strong>{{ $message }}</strong>
                 </span>
                 @enderror
-                {{-- <br/> --}}
             </span>
                 <input  type="text" class= "c-staffform__area__textname" name="product_name" value="" placeholder="商品名">
-    {{-- <br/> --}}
+            </div>
+            <div class="c-staffform__area__side">
+
             <span class="c-staffform__title ">金額:
             <span>
                 @error('product_name')
@@ -52,11 +53,14 @@
                     <strong>{{ $message }}</strong>
                 </span>
                 @enderror
-                {{-- <br/> --}}
+                <br/>
     </span>    
 </span><br>
                 <input type="number" class="c-staffform__area__textprice" name="price" value="" placeholder="金額を入力">
+            </div>
     {{-- 賞味期限の入力はjsを使用。デフォルトだと現在日時より前の日付も記入できるから --}}
+    <div class="c-staffform__area__side">
+
      <calender-component></calender-component>
      <br/>
      <span class="c-errormessage">

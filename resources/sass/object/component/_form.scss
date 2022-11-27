@@ -497,26 +497,36 @@
     margin-left: 8%;
     margin-right: 8%;
     margin-top: 8%;
-    display: block;
+    display: flex;
     margin-bottom: -8%;
-    margin-left: auto;
-    margin-right: auto;
+    //  margin-left: auto;
+    // margin-right: auto;
     @include mqxl() {
         //960px以下から縦画面にする
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+        display: flex;
+        //  margin-left: auto;
+        //    margin-right: auto;
     }
 }
+
+//商品編集画面　出品画面の写真を挿入するレイアウト
+.c-staff__imgarea {
+    background: red;
+    display: flex;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .c-staffform__area__uploadimgarea {
-    width: 20%;
+    width: 100%;
     background: #174113;
     color: white;
     text-align: center;
     height: 40px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 12%;
+    margin-top: 236%;
     margin-bottom: size(l);
     font-size: size(m);
     padding: size(s);
@@ -530,20 +540,16 @@
         //  color: orange;
     }
     @include mqxxl() {
-        height: 180px;
     }
     @include mql() {
         //720px以下
-        height: 210px;
     }
     @include mqm() {
         //414px対応
-        height: 280px;
     }
 
     @include mq() {
         //414px対応
-        height: 300px;
     }
 }
 
@@ -719,13 +725,13 @@
     font-size: size(l);
     display: block;
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    // margin-left: auto;
+    // margin-right: auto;
 
     @include mqxl() {
         width: 100%;
-        margin-left: auto;
-        margin-right: auto;
+        //   margin-left: auto;
+        //  margin-right: auto;
         text-align: center;
     }
 }
