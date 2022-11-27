@@ -5993,10 +5993,12 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", [_c("span", {
+  return _c("div", {
+    staticClass: "c-staffform__area__side"
+  }, [_c("span", {
     staticClass: "c-staffform__title"
   }, [_vm._v("賞味期限:")]), _vm._v(" "), _c("input", {
-    staticClass: "c-search__calender",
+    staticClass: "c-staffform__area__textname",
     attrs: {
       type: "date",
       min: new Date().toISOString().split("T")[0],

@@ -724,15 +724,12 @@
 .c-staffform__title {
     font-size: size(l);
     display: block;
-    width: 100%;
-    // margin-left: auto;
-    // margin-right: auto;
+    width: 20%;
+    //background: red;
 
     @include mqxl() {
         width: 100%;
-        //   margin-left: auto;
-        //  margin-right: auto;
-        text-align: center;
+        // text-align: center;
     }
 }
 //........................................
@@ -776,20 +773,20 @@
     text-align: left;
     margin: size(sss);
     margin-bottom: size(l);
+    width: 100%;
     @include mqxl() {
         //960px以下から縦画面にする
-        width: 40%;
+        width: 100%;
     }
     @include mql() {
         //720px以下
-        width: 50%;
     }
     @include mqm() {
         //414px対応
-        width: 60%;
     }
 }
 
+/*
 .c-staffform__area__textprice {
     background: white;
     height: 40px;
@@ -810,7 +807,8 @@
         height: size(4l);
     }
 }
-
+*/
+/*
 .c-staffform__area__textcarender {
     background: white;
     width: 20%;
@@ -818,7 +816,7 @@
     margin-right: auto;
     margin-bottom: size(l);
 }
-
+*/
 //................................................
 //=========================================
 //住所記入欄

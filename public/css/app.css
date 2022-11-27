@@ -2078,12 +2078,11 @@ a {
 .c-staffform__title {
   font-size: 25px;
   display: block;
-  width: 100%;
+  width: 20%;
 }
 @media screen and (max-width:980px) {
   .c-staffform__title {
     width: 100%;
-    text-align: center;
   }
 }
 
@@ -2129,56 +2128,44 @@ a {
   text-align: left;
   margin: 5px;
   margin-bottom: 25px;
+  width: 100%;
 }
 @media screen and (max-width:980px) {
   .c-staffform__area__textname {
-    width: 40%;
+    width: 100%;
   }
 }
-@media screen and (max-width: 720px) {
-  .c-staffform__area__textname {
-    width: 50%;
-  }
-}
-@media screen and (max-width: 560px) {
-  .c-staffform__area__textname {
-    width: 60%;
-  }
-}
-
+/*
 .c-staffform__area__textprice {
-  background: white;
-  height: 40px;
-  width: 20%;
-  font-size: 25px;
-  margin-bottom: 25px;
+    background: white;
+    height: 40px;
+    width: 20%;
+    font-size: size(l);
+    margin-bottom: size(l);
+    @include mqxl() {
+        width: 40%;
+    }
+    @include mql() {
+        //720px以下
+        width: 50%;
+    }
+    @include mqm() {
+        //560px対応
+        font-size: size(m);
+        margin-bottom: size(ss);
+        height: size(4l);
+    }
 }
-@media screen and (max-width:980px) {
-  .c-staffform__area__textprice {
-    width: 40%;
-  }
-}
-@media screen and (max-width: 720px) {
-  .c-staffform__area__textprice {
-    width: 50%;
-  }
-}
-@media screen and (max-width: 560px) {
-  .c-staffform__area__textprice {
-    font-size: 20px;
-    margin-bottom: 10px;
-    height: 50px;
-  }
-}
-
+*/
+/*
 .c-staffform__area__textcarender {
-  background: white;
-  width: 20%;
-  height: 35px;
-  margin-right: auto;
-  margin-bottom: 25px;
+    background: white;
+    width: 20%;
+    height: size(xxl);
+    margin-right: auto;
+    margin-bottom: size(l);
 }
-
+*/
 .c-form__adresstitle {
   margin-top: 20px;
   margin-bottom: 20px;
