@@ -25,7 +25,6 @@ class Products extends Migration
            $table->boolean('bought')->default(false)->nullable();//購入されたかどうかをチェックする
            $table->string('email');//emailを入力するところ
           $table->timestamps();
-
         });
 
     }

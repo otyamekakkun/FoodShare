@@ -165,6 +165,7 @@ $product->img_path=$imagePath;
 $product->price = $request->price;
 $product->best_by_date = $request->best_by_date;
 $product->prefecture=$request->prefecture;
+$product->email=$request->email;
 $product->save();
 return redirect('admin')->with('flash_message', __('Registered.'));
 } //商品の情報をデータベースに登録し直す処理
