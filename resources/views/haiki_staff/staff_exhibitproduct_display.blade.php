@@ -10,7 +10,6 @@
 @extends('layouts.app2')
 @section('content')
 @section('title', "商品出品画面")
-
 <body>
     {{-- ヘッダー部分 --}}
     <header>
@@ -26,6 +25,14 @@
         <h1 class="c-mypagemenu__title">出品されたい商品の情報について記述してください</h1>
     <form method="POST" action="{{ route('create.exhibit') }}" enctype="multipart/form-data">
         @csrf
+{{-- 写真エリアを一番上に持っていく --}}
+        <drag-component></drag-component>
+        <span class="c-errormessage">
+            @error('img_path')
+            <strong>{{ $message }}</strong>
+           @enderror
+       </span>
+
         <div class="c-staffform__area">
             <div class="c-staffform__area__side">
             <span class="c-staffform__title">商品名:
@@ -34,10 +41,10 @@
                     <strong>{{ $message }}</strong>
                 </span>
                 @enderror
-                <br/>
+                {{-- <br/> --}}
             </span>
                 <input  type="text" class= "c-staffform__area__textname" name="product_name" value="" placeholder="商品名">
-    <br/>
+    {{-- <br/> --}}
             <span class="c-staffform__title ">金額:
             <span>
                 @error('product_name')
@@ -45,7 +52,7 @@
                     <strong>{{ $message }}</strong>
                 </span>
                 @enderror
-                <br/>
+                {{-- <br/> --}}
     </span>    
 </span><br>
                 <input type="number" class="c-staffform__area__textprice" name="price" value="" placeholder="金額を入力">
@@ -58,12 +65,15 @@
         @enderror
         </span>
 </div>
+{{-- 
             <drag-component></drag-component>
             <span class="c-errormessage">
                 @error('img_path')
                 <strong>{{ $message }}</strong>
                @enderror
            </span>
+            --}}
+           {{-- ここは特に修正しない --}}
            {{-- お客様が商品検索するのと商品を購入する際に、判別できるように、出品したコンビニの都道府県と
             emailが自動的にデータベースに更新されるようにする。 --}}
     <input type="text" name="prefecture" value="{{$admins->prefecture}}" class="u-hidden">
