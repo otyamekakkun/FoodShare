@@ -13,19 +13,19 @@
             @dragleave.prevent="changeStyle($event, 'no')"
             @drop.prevent="uploadFile($event)"
         >
-            <div class="c-staffform__area__uploadimgarea">
-                <label for="upload_image">
-                    <input
-                        id="upload_image"
-                        type="file"
-                        name="img_path"
-                        @change="uploadFile($event)"
-                        style="display: none"
-                        accept="image/*"
-                    />
-                    <p>写真を選択する</p>
-                </label>
-            </div>
+            <!-- <div class="c-staffform__area__uploadimgarea"> -->
+            <label for="upload_image">
+                <input
+                    id="upload_image"
+                    type="file"
+                    name="img_path"
+                    @change="uploadFile($event)"
+                    style="display: none"
+                    accept="image/*"
+                />
+                <p class="c-staffform__area__uploadimgarea">写真を選択する</p>
+            </label>
+            <!-- </div> -->
             <!-- ここからプレビュー機能の部分 -->
             <div class="c-staffform__area__textimgarea">
                 <p>またはここにドラッグ＆ドロップをしてください</p>

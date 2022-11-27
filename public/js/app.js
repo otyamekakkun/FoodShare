@@ -6050,8 +6050,6 @@ var render = function render() {
         return _vm.uploadFile($event);
       }
     }
-  }, [_c("div", {
-    staticClass: "c-staffform__area__uploadimgarea"
   }, [_c("label", {
     attrs: {
       for: "upload_image"
@@ -6071,7 +6069,9 @@ var render = function render() {
         return _vm.uploadFile($event);
       }
     }
-  }), _vm._v(" "), _c("p", [_vm._v("写真を選択する")])])]), _vm._v(" "), _c("div", {
+  }), _vm._v(" "), _c("p", {
+    staticClass: "c-staffform__area__uploadimgarea"
+  }, [_vm._v("写真を選択する")])]), _vm._v(" "), _c("div", {
     staticClass: "c-staffform__area__textimgarea"
   }, [_c("p", [_vm._v("またはここにドラッグ＆ドロップをしてください")]), _vm._v(" "), _c("img", {
     directives: [{
