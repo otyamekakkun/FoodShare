@@ -603,7 +603,7 @@
 .c-mypagemenu__title {
     text-align: center;
     margin: 40px;
-    font-size: size(l);
+    font-size: size(4l);
     @include mql() {
         font-size: size(m);
     }

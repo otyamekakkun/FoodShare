@@ -6531,34 +6531,40 @@ var render = function render() {
     attrs: {
       id: "app"
     }
-  }, [_c("main", [_c("div", {
+  }, [_c("main", [_vm._m(0), _vm._v(" "), _c("div", {
     staticClass: "c-staffmypagelistarea"
-  }, [_c("h1", {
-    staticClass: "c-mypagemenu__title"
-  }, [_vm._v("これまでに出品された商品")]), _vm._v(" "), _vm._l(_vm.getItems, function (item) {
-    return _c("ul", {
-      staticClass: "c-productlist__items"
+  }, _vm._l(_vm.getItems, function (item) {
+    return _c("ul", [_c("div", {
+      staticClass: "c-staffmypagelistarea__list"
     }, [item.bought >= 1 ? _c("div", [_c("img", {
       attrs: {
         src: item.img_path
       }
     }), _vm._v(" "), _c("p", {}, [_vm._v("購入済み！")])]) : _vm._e(), _vm._v(" "), item.bought <= 0 ? _c("div", [_c("img", {
+      staticClass: "c-staffmypagelistarea__list__img",
       attrs: {
         src: item.img_path
       }
-    })]) : _vm._e(), _vm._v(" "), _c("div", {}, [_c("li", [_vm._v("商品名." + _vm._s(item.product_name))]), _vm._v(" "), _c("li", [_vm._v("お値段." + _vm._s(item.price) + "円.")]), _vm._v(" "), _c("div", {}, [_c("button", {}, [_c("a", {
+    })]) : _vm._e(), _vm._v(" "), _c("div", {}, [_c("li", [_vm._v(_vm._s(item.product_name))]), _vm._v(" "), _c("li", [_vm._v(_vm._s(item.price) + "円.")]), _vm._v(" "), _c("div", {}, [_c("a", {
       attrs: {
         href: "haiki/".concat(item.id, "}/staff_productdetail")
       }
-    }, [_vm._v("詳細にいく")])]), _vm._v(" "), item.bought <= 0 ? _c("div", [_c("button", {}, [_c("a", {
+    }, [_vm._v("詳細を見る")]), _vm._v(" "), item.bought <= 0 ? _c("div", [_c("a", {
       attrs: {
         href: "haiki/".concat(item.id, "}/staff_productedit")
       }
-    }, [_vm._v("商品を編集する")])])]) : _vm._e()])])]);
-  })], 2)])]);
+    }, [_vm._v("編集する")])]) : _vm._e()])])])]);
+  }), 0)])]);
 };
 
-var staticRenderFns = [];
+var staticRenderFns = [function () {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("div", {
+    staticClass: "c-staffmypagelistarea__title1"
+  }, [_c("h1", {}, [_vm._v("これまでに出品された商品")])]);
+}];
 render._withStripped = true;
 
 
