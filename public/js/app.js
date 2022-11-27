@@ -6535,34 +6535,22 @@ var render = function render() {
     staticClass: "c-staffmypagelistarea"
   }, [_c("h1", {
     staticClass: "c-mypagemenu__title"
-  }, [_vm._v("これまでに出品された商品")]), _vm._v(" "), _vm._m(0), _vm._v(" "), _vm._l(_vm.getItems, function (item) {
+  }, [_vm._v("これまでに出品された商品")]), _vm._v(" "), _vm._l(_vm.getItems, function (item) {
     return _c("ul", {
       staticClass: "c-productlist__items"
     }, [item.bought >= 1 ? _c("div", [_c("img", {
-      staticClass: "c-productlist__items__img",
       attrs: {
         src: item.img_path
       }
-    }), _vm._v(" "), _c("p", {
-      staticClass: "c-productlist__items__img__title"
-    }, [_vm._v("\n                        購入済み！\n                    ")])]) : _vm._e(), _vm._v(" "), item.bought <= 0 ? _c("div", [_c("img", {
-      staticClass: "c-productlist__items__img2",
+    }), _vm._v(" "), _c("p", {}, [_vm._v("購入済み！")])]) : _vm._e(), _vm._v(" "), item.bought <= 0 ? _c("div", [_c("img", {
       attrs: {
         src: item.img_path
       }
-    })]) : _vm._e(), _vm._v(" "), _c("div", {
-      staticClass: "c-productlist__items__list"
-    }, [_c("li", [_vm._v("商品名." + _vm._s(item.product_name))]), _vm._v(" "), _c("li", [_vm._v("お値段." + _vm._s(item.price) + "円.")]), _vm._v(" "), _c("div", {
-      staticClass: "c-productlist__items__bottom"
-    }, [_c("button", {
-      staticClass: "c-productlist__items__bottom__area"
-    }, [_c("a", {
+    })]) : _vm._e(), _vm._v(" "), _c("div", {}, [_c("li", [_vm._v("商品名." + _vm._s(item.product_name))]), _vm._v(" "), _c("li", [_vm._v("お値段." + _vm._s(item.price) + "円.")]), _vm._v(" "), _c("div", {}, [_c("button", {}, [_c("a", {
       attrs: {
         href: "haiki/".concat(item.id, "}/staff_productdetail")
       }
-    }, [_vm._v("詳細にいく")])]), _vm._v(" "), item.bought <= 0 ? _c("div", [_c("button", {
-      staticClass: "c-productlist__items__bottom__area"
-    }, [_c("a", {
+    }, [_vm._v("詳細にいく")])]), _vm._v(" "), item.bought <= 0 ? _c("div", [_c("button", {}, [_c("a", {
       attrs: {
         href: "haiki/".concat(item.id, "}/staff_productedit")
       }
@@ -6570,16 +6558,7 @@ var render = function render() {
   })], 2)])]);
 };
 
-var staticRenderFns = [function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("table", {
-    attrs: {
-      border: "1"
-    }
-  }, [_c("tbody", [_c("tr", [_c("th", [_vm._v("商品画像")]), _vm._v(" "), _c("th", [_vm._v("商品名")]), _vm._v(" "), _c("th", [_vm._v("お値段")]), _vm._v(" "), _c("th", [_vm._v("オプション")])]), _vm._v(" "), _c("tr", [_c("th", [_vm._v("ほのす美ころりんん")]), _vm._v(" "), _c("th", [_vm._v("おむすび100個")]), _vm._v(" "), _c("th", [_vm._v("500円")]), _vm._v(" "), _c("th", [_vm._v("オプション")])])])]);
-}];
+var staticRenderFns = [];
 render._withStripped = true;
 
 
