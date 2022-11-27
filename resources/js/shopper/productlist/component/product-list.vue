@@ -3,7 +3,6 @@
 今回は都道府県、予算、有効期限チェックの3つを設けることによって商品の絞り込みを
 行うことに実装しました。
 -->
-
 <template>
     <div>
         <div>
@@ -82,12 +81,9 @@ export default {
             budgets: 10000, //デフォルトで10000円と打ち込まれている。
         };
     },
-
     computed: {
-        //このコードの関数を使う
         filteredProducts: function () {
             const products = [];
-            //ここから都道府県を入力したら絞り込めるコードを記述
             for (var i in this.products) {
                 var product = this.products[i];
                 if (product.prefecture.indexOf(this.keywords) !== -1) {

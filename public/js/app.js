@@ -5457,9 +5457,8 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   computed: {
-    //このコードの関数を使う
     filteredProducts: function filteredProducts() {
-      var products = []; //ここから都道府県を入力したら絞り込めるコードを記述
+      var products = [];
 
       for (var i in this.products) {
         var product = this.products[i];
