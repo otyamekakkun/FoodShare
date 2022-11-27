@@ -553,7 +553,8 @@ a {
   border: solid 2px #174113;
   border-radius: 50px;
   background: rgba(255, 255, 255, 0.6);
-  height: 250px;
+  height: 740px;
+  margin-top: 100px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 50px;
@@ -561,27 +562,26 @@ a {
   padding-right: 20px;
   padding-bottom: 20px;
   width: 80%;
-}
-@media screen and (max-width:980px) {
-  .l-top__area__form__custom {
-    height: 300px;
+  /*
+  @include mqxl() {
+      height: 300px;
   }
-}
-@media screen and (max-width: 720px) {
-  .l-top__area__form__custom {
-    height: 350px;
+
+  @include mql() {
+      height: 350px;
   }
-}
-@media screen and (max-width: 560px) {
-  .l-top__area__form__custom {
-    height: 400px;
+
+  @include mqm() {
+      height: 400px;
   }
+  */
 }
 
 .l-top__area__form__custom__button {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  height: 600px;
 }
 @media screen and (max-width: 414px) {
   .l-top__area__form__custom__button {
@@ -1377,11 +1377,11 @@ a {
   margin-top: 85px;
   margin-bottom: 20px;
   height: 60px;
-  width: 30%;
+  width: 40%;
   border: none;
   border-radius: 10px;
   color: white;
-  transition: all 1.2s;
+  transition: all 0.3s;
 }
 .c-top__button:hover {
   background: orange;
@@ -1390,14 +1390,13 @@ a {
   .c-top__button {
     margin-left: 10px;
     margin-right: 10px;
-    font-size: 16px;
-    width: 42%;
+    width: 80%;
   }
 }
 @media screen and (max-width: 560px) {
   .c-top__button {
-    font-size: 12px;
-    width: 40%;
+    width: 80%;
+    font-size: 15px;
   }
 }
 

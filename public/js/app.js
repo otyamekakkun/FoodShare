@@ -6646,11 +6646,14 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", [_c("transition", {
-    attrs: {
-      name: "fade"
-    }
-  }, [_c("div", {
+  return _vm._m(0);
+};
+
+var staticRenderFns = [function () {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("div", [_c("div", {
     staticClass: "l-top__area__form__custom"
   }, [_c("div", {
     staticClass: "l-top__area__form__custom__button"
@@ -6660,36 +6663,26 @@ var render = function render() {
     }
   }, [_c("button", {
     staticClass: "c-top__button"
-  }, [_vm._v("お客様ログイン")])]), _vm._v(" "), _c("a", {
+  }, [_vm._v("お客様ログイン")])]), _vm._v(" "), _c("br"), _vm._v(" "), _c("a", {
     attrs: {
       href: "./register"
     }
   }, [_c("button", {
     staticClass: "c-top__button"
-  }, [_vm._v("\n                        お客様ユーザー登録\n                    ")])])])])]), _vm._v(" "), _c("transition", {
-    attrs: {
-      name: "fade"
-    }
-  }, [_c("div", {
-    staticClass: "l-top__area__form__custom"
-  }, [_c("div", {
-    staticClass: "l-top__area__form__custom__button"
-  }, [_c("a", {
+  }, [_vm._v("お客様ユーザー登録")])]), _vm._v(" "), _c("br"), _vm._v(" "), _c("a", {
     attrs: {
       href: "./login/admin"
     }
   }, [_c("button", {
     staticClass: "c-top__button"
-  }, [_vm._v("コンビニログイン")])]), _vm._v(" "), _c("a", {
+  }, [_vm._v("コンビニログイン")])]), _vm._v(" "), _c("br"), _vm._v(" "), _c("a", {
     attrs: {
       href: "./register/admin"
     }
   }, [_c("button", {
     staticClass: "c-top__button"
-  }, [_vm._v("\n                        コンビニユーザー登録\n                    ")])])])])])], 1);
-};
-
-var staticRenderFns = [];
+  }, [_vm._v("コンビニユーザー登録")])]), _vm._v(" "), _c("br")])])]);
+}];
 render._withStripped = true;
 
 

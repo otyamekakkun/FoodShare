@@ -127,15 +127,16 @@
     border: solid size(sssss) #174113;
     border-radius: size(4l);
     background: rgba(255, 255, 255, 0.6);
-    height: 250px;
+    height: 740px;
+    margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 50px;
     padding-left: size(m);
     padding-right: size(m);
     padding-bottom: size(m);
-
     width: 80%;
+    /*
     @include mqxl() {
         height: 300px;
     }
@@ -147,6 +148,7 @@
     @include mqm() {
         height: 400px;
     }
+    */
 }
 
 //=================================
@@ -157,6 +159,7 @@
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    height: 600px;
     @include mq() {
         margin-top: -10px;
         font-size: size(ss);
