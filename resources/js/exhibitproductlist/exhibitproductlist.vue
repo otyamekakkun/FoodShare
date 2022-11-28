@@ -41,7 +41,9 @@ c-productlist__items__bottom__area
                                 v-bind:src="item.img_path"
                                 class="c-staffmypagelistarea__list__img"
                             />
-                            <p class="">購入済み！</p>
+                            <p class="c-staffmypagelistarea__list__bought">
+                                購入済み！
+                            </p>
                         </div>
 
                         <div v-if="item.bought <= 0">
@@ -53,10 +55,10 @@ c-productlist__items__bottom__area
 
                         <div class="c-staffmypagelistarea__text">
                             <li class="c-staffmypagelistarea__list__name">
-                                商品名:{{ item.product_name }}
+                                {{ item.product_name }}
                             </li>
                             <li class="c-staffmypagelistarea__list__price">
-                                お値段:{{ item.price }}円.
+                                {{ item.price }}円.
                             </li>
                             <!-- <div class="c-productlist__items__bottom"> -->
                             <!-- <button class="c-productlist__items__bottom__area"> -->
