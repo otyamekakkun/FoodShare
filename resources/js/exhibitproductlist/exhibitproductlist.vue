@@ -29,6 +29,10 @@ c-productlist__items__bottom
 c-productlist__items__bottom__area
 のsassは消去する
  -->
+            <!-- 
+編集で削除されたらきちんと商品が編集される
+
+  -->
             <div class="c-staffmypagelistarea">
                 <div
                     class="c-staffmypagelistarea__area"

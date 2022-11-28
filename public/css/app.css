@@ -1430,6 +1430,13 @@ a {
   color: white;
 }
 
+/*
+.c-staffmypagelistarea__list__bought {
+    background: red;
+    border: solid red;
+    color: white;
+}
+*/
 .c-top__button {
   background: #174113;
   margin-left: 25px;
