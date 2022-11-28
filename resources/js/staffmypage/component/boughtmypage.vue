@@ -16,7 +16,6 @@
                     v-if="item.bought >= 1"
                 >
                     <div>
-                        <!-- <div v-if="item.bought >= 1"> -->
                         <div class="c-staffmypagelistarea__list">
                             <img
                                 v-bind:src="item.img_path"
@@ -39,8 +38,6 @@
                                 >
                             </div>
                         </div>
-                        <!-- </div> -->
-                        <!-- <div v-if="item.bought <= 0" class="u-hidden"></div> -->
                     </div>
                 </div>
             </div>

@@ -19,43 +19,43 @@ bought-list
             </div>
 
             <div class="c-staffmypagelistarea">
-                <div class="c-staffmypagelistarea__area">
-                    <div v-for="item in getItems">
-                        <div v-if="item.bought >= 1">
-                            <div class="c-staffmypagelistarea__list">
-                                <!-- 購入されたら商品にlabelを付け足す機能 -->
+                <!-- <div class="c-staffmypagelistarea__area"> -->
+                <div
+                    v-for="item in getItems"
+                    class="c-staffmypagelistarea__area"
+                    v-if="item.bought >= 1"
+                >
+                    <!-- <div v-if="item.bought >= 1"> -->
+                    <div class="c-staffmypagelistarea__list">
+                        <!-- 購入されたら商品にlabelを付け足す機能 -->
 
-                                <img
-                                    v-bind:src="item.img_path"
-                                    class="c-staffmypagelistarea__list__img"
-                                />
-                                <p class="c-staffmypagelistarea__list__bought">
-                                    購入済み！
-                                </p>
+                        <img
+                            v-bind:src="item.img_path"
+                            class="c-staffmypagelistarea__list__img"
+                        />
+                        <p class="c-staffmypagelistarea__list__bought">
+                            購入済み！
+                        </p>
 
-                                <div class="c-staffmypagelistarea__text">
-                                    <!-- <li>商品No.{{ item.id }}</li> -->
-                                    <li
-                                        class="c-staffmypagelistarea__list__name"
-                                    >
-                                        {{ item.product_name }}
-                                    </li>
-                                    <li
-                                        class="c-staffmypagelistarea__list__price"
-                                    >
-                                        お値段:{{ item.price }}円.
-                                    </li>
-                                    <a
-                                        v-bind:href="`${item.id}}/staff_productdetail`"
-                                        class="c-staffmypagelistarea__list__a"
-                                        >詳細見る↗︎</a
-                                    >
-                                </div>
-                            </div>
+                        <div class="c-staffmypagelistarea__text">
+                            <!-- <li>商品No.{{ item.id }}</li> -->
+                            <li class="c-staffmypagelistarea__list__name">
+                                {{ item.product_name }}
+                            </li>
+                            <li class="c-staffmypagelistarea__list__price">
+                                お値段:{{ item.price }}円.
+                            </li>
+                            <a
+                                v-bind:href="`${item.id}}/staff_productdetail`"
+                                class="c-staffmypagelistarea__list__a"
+                                >詳細見る↗︎</a
+                            >
                         </div>
-                        <div v-if="item.bought <= 0" class="u-hidden"></div>
                     </div>
+                    <!-- </div> -->
+                    <!-- <div v-if="item.bought <= 0" class="u-hidden"></div> -->
                 </div>
+                <!-- </div> -->
 
                 <div class="c-paginate">
                     <vuejs-paginate
