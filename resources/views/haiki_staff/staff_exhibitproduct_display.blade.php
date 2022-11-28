@@ -9,13 +9,13 @@
         @include('header.staff.staff_header')
     </header>
 <div id="app">
-    <div class="c-mypagemenu">
-        <h1  class="c-mypagemenu__title">
+    {{-- <div class="c-mypagemenu"> --}}
+        <h1  class="c-detail__title">
             商品を出品する
         </h1>
-    </div>
+    {{-- </div> --}}
         <div class="c-staffform__area">
-            <h1 class="c-mypagemenu__title">出品されたい商品の情報について記述してください</h1>
+            <h1 class="">出品されたい商品の情報について記述してください</h1>
     <form method="POST" action="{{ route('create.exhibit') }}" enctype="multipart/form-data">
         @csrf
         <drag-component></drag-component>

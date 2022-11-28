@@ -5,15 +5,15 @@
 @section('content')
 @section('title', "コンビニプロフィール編集")
 <body>
+    <div id="app">
     <header>
         @include('header.staff.staff_header')
     </header>
-    <section>
+
+    <h3 class="c-detail__title">コンビニ情報編集</h3>
         <form  action="{{route('haiki_staffrprofile_edit',$admin->id)}}" method="POST">
             @csrf
-            <div class="c-form2">
                 <div class="c-form__area">
-            <h3 class="c-form__title">コンビニ情報編集</h3>
                 <span class="c-form__area__message">名前:
                     @error('name')
                     <span class="c-errormessage" role="alert">
@@ -35,17 +35,12 @@
             <br/>
             <input class="c-form__area__text" action="post" type="text" name="email" placeholder="メールアドレス編集" value="{{$admin->email}}">
             <br/>
-{{-- メールアドレス編集のエラーメッセージ処理終了 --}}
-
-{{--  --}}
-
 <span class="c-form__area__message">パスワード:
     @error('password')
     <span class="c-errormessage" role="alert">
         <strong>{{$message}}</strong>
     </span>
     @enderror
-    
 </span>
 <br/>
             <input class="c-form__area__text" action="post" type="password" name="password" placeholder="パスワード編集">
@@ -82,17 +77,14 @@
 <br/>
             <input class="c-form__area__text" action="post" type="text" name="convinience_branch" placeholder="支店名" value="{{$admin->convinience_branch}}">
             <br/>
-            {{-- 支店名ここまで --}}
-<div class="c-formstaff__adressarea">
-<h1 class="c-form__adresstitle">住所記入欄</h1>
-            <span class="c-formstaff__prefecture">都道府県選択:
+            <span class="c-form__area__message">住所都道府県選択:
                 @error('prefecture')
                 <span class="c-errormessage" role="alert">
                     <strong>{{$message}}</strong>
                 </span>
                 @enderror    
             </span>
-<select name="prefecture" class="c-formstaff__prefecture__text" value="{{$admin->prefecture}}">
+<select name="prefecture" class="c-form__area__text" value="{{$admin->prefecture}}">
     <option value="北海道">北海道</option>
     <option value="青森県">青森県</option>
     <option value="岩手県">岩手県</option>
@@ -144,7 +136,7 @@
     </select>
 <br/>
 {{-- 都道府県ここまで --}}
-<span class="c-formstaff__adress">都道府県以外の住所:
+<span class="c-form__area__message">都道府県以外の住所:
     @error('adress')
     <span class="c-errormessage" role="alert">
         <strong>{{$message}}</strong>
@@ -152,19 +144,28 @@
     @enderror    
 </span>
 <br/>
-<textarea name="adress"  value="{{$admin->adress}}" class="c-formstaff__adress__text"></textarea>
-</textarea>
+<input name="adress" class="c-form__area__text" type="text" value="{{$admin->adress}}" >
 {{-- 住所変更ここまで --}}
-</div>
+{{-- </div> --}}
             <input type="submit" class="c-register__custombutton" value="変更する">
             </div>
-            </div>
+            {{-- </div> --}}
         </form>
-        </div>
-        </section>
-<div id="app">
+        {{-- </div> --}}
+{{-- <div id="app"> --}}
+</div>
 <footer-component>
 </footer-component>
 </div>
 </body>
 @endsection
+
+
+{{-- 
+    いらないデータ
+    c-formstaff__prefecture
+    c-formstaff__prefecture__text
+    c-formstaff__adress
+    c-form2
+    --}}
+

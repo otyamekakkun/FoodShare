@@ -730,8 +730,11 @@
 //フォームに入力するメッセージ
 .c-form__area__message {
     display: block;
-    margin-top: size(4l);
-    margin-bottom: size(sssss);
+    // background: red;
+    text-align: left;
+    color: black;
+    margin-top: size(l);
+    //margin-bottom: size(sssss);
     font-size: size(l);
     @include mqm() {
         //560px以下

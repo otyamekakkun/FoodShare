@@ -1984,8 +1984,9 @@ a {
 
 .c-form__area__message {
   display: block;
-  margin-top: 50px;
-  margin-bottom: 2px;
+  text-align: left;
+  color: black;
+  margin-top: 25px;
   font-size: 25px;
 }
 @media screen and (max-width: 560px) {
