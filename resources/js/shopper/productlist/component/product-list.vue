@@ -34,37 +34,34 @@
                         />
                     </div>
                 </div>
-                <div class="c-exhibitproductlist">
-                    <div class="c-productlist">
-                        <ul
-                            v-if="
-                                product.best_by_date >= Days2 &&
-                                product.bought <= 0
-                            "
-                            :key="product.id"
-                            v-for="product in filteredProducts"
-                            class="c-productlist__items"
-                        >
+                <div class="c-staffmypagelistarea">
+                    <div
+                        v-if="
+                            product.best_by_date >= Days2 && product.bought <= 0
+                        "
+                        :key="product.id"
+                        v-for="product in filteredProducts"
+                        class="c-staffmypagelistarea__area"
+                    >
+                        <div class="c-staffmypagelistarea__list">
                             <img
                                 v-bind:src="product.img_path"
-                                class="c-productlist__items__img2"
+                                class="c-staffmypagelistarea__list__img"
                             />
-                            <div class="c-productlist__items__list">
-                                <li>商品No.{{ product.id }}</li>
-                                <li>商品名:{{ product.product_name }}</li>
-                                <li>お値段:{{ product.price }}円.</li>
-                                <div class="c-productlist__items__bottom">
-                                    <button
-                                        class="c-productlist__items__bottom__area"
-                                    >
-                                        <a
-                                            v-bind:href="`${product.id}}/shopper_productdetail`"
-                                            >詳細にいく</a
-                                        >
-                                    </button>
-                                </div>
+                            <div class="c-staffmypagelistarea__text">
+                                <li class="c-staffmypagelistarea__list__name">
+                                    {{ product.product_name }}
+                                </li>
+                                <li class="c-staffmypagelistarea__list__price">
+                                    {{ product.price }}円.
+                                </li>
+                                <a
+                                    v-bind:href="`${product.id}}/shopper_productdetail`"
+                                    class="c-staffmypagelistarea__list__a"
+                                    >詳細を見る↗︎</a
+                                >
                             </div>
-                        </ul>
+                        </div>
                     </div>
                 </div>
             </div>

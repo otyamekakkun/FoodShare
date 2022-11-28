@@ -5,7 +5,6 @@
 <!-- 
 いらないものは基本的に共通していると思う。
   -->
-
 <template>
     <div id="app">
         <div class="c-staffmypagelistarea">

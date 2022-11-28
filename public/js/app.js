@@ -6208,30 +6208,31 @@ var render = function render() {
       }
     }
   })])]), _vm._v(" "), _c("div", {
-    staticClass: "c-exhibitproductlist"
-  }, [_c("div", {
-    staticClass: "c-productlist"
+    staticClass: "c-staffmypagelistarea"
   }, _vm._l(_vm.filteredProducts, function (product) {
-    return product.best_by_date >= _vm.Days2 && product.bought <= 0 ? _c("ul", {
+    return product.best_by_date >= _vm.Days2 && product.bought <= 0 ? _c("div", {
       key: product.id,
-      staticClass: "c-productlist__items"
+      staticClass: "c-staffmypagelistarea__area"
+    }, [_c("div", {
+      staticClass: "c-staffmypagelistarea__list"
     }, [_c("img", {
-      staticClass: "c-productlist__items__img2",
+      staticClass: "c-staffmypagelistarea__list__img",
       attrs: {
         src: product.img_path
       }
     }), _vm._v(" "), _c("div", {
-      staticClass: "c-productlist__items__list"
-    }, [_c("li", [_vm._v("商品No." + _vm._s(product.id))]), _vm._v(" "), _c("li", [_vm._v("商品名:" + _vm._s(product.product_name))]), _vm._v(" "), _c("li", [_vm._v("お値段:" + _vm._s(product.price) + "円.")]), _vm._v(" "), _c("div", {
-      staticClass: "c-productlist__items__bottom"
-    }, [_c("button", {
-      staticClass: "c-productlist__items__bottom__area"
-    }, [_c("a", {
+      staticClass: "c-staffmypagelistarea__text"
+    }, [_c("li", {
+      staticClass: "c-staffmypagelistarea__list__name"
+    }, [_vm._v("\n                                " + _vm._s(product.product_name) + "\n                            ")]), _vm._v(" "), _c("li", {
+      staticClass: "c-staffmypagelistarea__list__price"
+    }, [_vm._v("\n                                " + _vm._s(product.price) + "円.\n                            ")]), _vm._v(" "), _c("a", {
+      staticClass: "c-staffmypagelistarea__list__a",
       attrs: {
         href: "".concat(product.id, "}/shopper_productdetail")
       }
-    }, [_vm._v("詳細にいく")])])])])]) : _vm._e();
-  }), 0)])])])]);
+    }, [_vm._v("詳細を見る↗︎")])])])]) : _vm._e();
+  }), 0)])])]);
 };
 
 var staticRenderFns = [];
