@@ -3,37 +3,42 @@
 今回は都道府県、予算、有効期限チェックの3つを設けることによって商品の絞り込みを
 行うことに実装しました。
 -->
+<!-- 
+l-productsearch
+c-serch
+c-search__title
+c-serch2
+c-search__prefecture
+c-search__calender
+
+ -->
 <template>
     <div>
         <div>
             <div>
-                <div class="l-productsearch">
-                    <h1 class="c-form__title">商品を検索する</h1>
-                    <div class="c-serch">
-                        <p class="c-search__title">:都道府県で探す</p>
-                        <input
-                            type="text"
-                            v-model="keywords"
-                            placeholder="都道府県を入力してください"
-                            class="c-search__prefecture"
-                        />
-                        <p class="c-search__title">:予算内の金額で検索</p>
-                        <input
-                            type="text"
-                            v-model="budgets"
-                            class="c-search__prefecture"
-                        />
-                    </div>
-                    <div class="c-serch2">
-                        :有効期限チェック
-                        <input
-                            type="date"
-                            :min="new Date().toISOString().split('T')[0]"
-                            class="c-search__calender"
-                            v-model="Days2"
-                        />
-                    </div>
+                <!-- <div class="l-productsearch"> -->
+                <h1 class="">商品を検索する</h1>
+                <!-- <div class="c-serch"> -->
+                <p class="">:都道府県で探す</p>
+                <input
+                    type="text"
+                    v-model="keywords"
+                    placeholder="都道府県を入力してください"
+                    class=""
+                />
+                <p class="">:予算内の金額で検索</p>
+                <input type="text" v-model="budgets" class="" />
+                <!-- </div> -->
+                <div class="">
+                    :有効期限チェック
+                    <input
+                        type="date"
+                        :min="new Date().toISOString().split('T')[0]"
+                        class=""
+                        v-model="Days2"
+                    />
                 </div>
+                <!-- </div> -->
                 <div class="c-staffmypagelistarea">
                     <div
                         v-if="

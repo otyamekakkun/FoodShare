@@ -6165,22 +6165,13 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", [_c("div", [_c("div", [_c("div", {
-    staticClass: "l-productsearch"
-  }, [_c("h1", {
-    staticClass: "c-form__title"
-  }, [_vm._v("商品を検索する")]), _vm._v(" "), _c("div", {
-    staticClass: "c-serch"
-  }, [_c("p", {
-    staticClass: "c-search__title"
-  }, [_vm._v(":都道府県で探す")]), _vm._v(" "), _c("input", {
+  return _c("div", [_c("div", [_c("div", [_c("h1", {}, [_vm._v("商品を検索する")]), _vm._v(" "), _c("p", {}, [_vm._v(":都道府県で探す")]), _vm._v(" "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
       value: _vm.keywords,
       expression: "keywords"
     }],
-    staticClass: "c-search__prefecture",
     attrs: {
       type: "text",
       placeholder: "都道府県を入力してください"
@@ -6194,16 +6185,13 @@ var render = function render() {
         _vm.keywords = $event.target.value;
       }
     }
-  }), _vm._v(" "), _c("p", {
-    staticClass: "c-search__title"
-  }, [_vm._v(":予算内の金額で検索")]), _vm._v(" "), _c("input", {
+  }), _vm._v(" "), _c("p", {}, [_vm._v(":予算内の金額で検索")]), _vm._v(" "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
       value: _vm.budgets,
       expression: "budgets"
     }],
-    staticClass: "c-search__prefecture",
     attrs: {
       type: "text"
     },
@@ -6216,16 +6204,13 @@ var render = function render() {
         _vm.budgets = $event.target.value;
       }
     }
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "c-serch2"
-  }, [_vm._v("\n                    :有効期限チェック\n                    "), _c("input", {
+  }), _vm._v(" "), _c("div", {}, [_vm._v("\n                :有効期限チェック\n                "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
       value: _vm.Days2,
       expression: "Days2"
     }],
-    staticClass: "c-search__calender",
     attrs: {
       type: "date",
       min: new Date().toISOString().split("T")[0]
@@ -6239,7 +6224,7 @@ var render = function render() {
         _vm.Days2 = $event.target.value;
       }
     }
-  })])]), _vm._v(" "), _c("div", {
+  })]), _vm._v(" "), _c("div", {
     staticClass: "c-staffmypagelistarea"
   }, _vm._l(_vm.filteredProducts, function (product) {
     return product.best_by_date >= _vm.Days2 && product.bought <= 0 ? _c("div", {

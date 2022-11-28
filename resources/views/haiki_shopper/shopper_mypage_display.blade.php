@@ -10,8 +10,8 @@ shoppermypageコンポーネントでお客様が購入された商品を取得�
 @include('header.shopper.shoppermypage_header') 
 </header>
 <body>
-            <h1  class="c-mypagemenu__title">
-                mypage
+            <h1  class="c-detail__title">
+                MyPage
             </h1>
             <div id="app">
 

@@ -2,20 +2,20 @@
 @section('content')
 @include('header.other.otherheader')
 @isset($authgroup)
-<div class="c-form2"> 
+{{-- <div class="c-form2">  --}}
     {{--コンビニユーザー登録画面のフォームページにして良い--}}
 <form method="POST" action="{{ url("register/$authgroup") }}">
-<div class="c-warning2">
-<h1>コンビニスタッフユーザー登録</h1>
+{{-- <div class="c-warning2"> --}}
+<h1 class="c-detail__title">スタッフユーザー登録</h1>
 <p>お客様(コンビニスタッフ関係ではない)方は,トップページのお客様ユーザー登録というボタンからお入りになって登録をしてください</p>
-</div>
+{{-- </div> --}}
  @else
  {{-- ここからユーザー登録お客様のレイアウト --}}
 <form method="POST" action="{{ route('register') }}">
 @csrf
-<div class="c-form4"> 
+{{-- <div class="c-form4">  --}}
+    <h1 class="c-detail__title">ユーザー登録</h1>
 <div class="c-form__area">
-     <h1 class="c-form__title">（個人情報エリア）</h1>
                             <br/>
                             <span for="name" class="c-form__area__message">名前:
                                 @error('name')
@@ -101,8 +101,6 @@
     </span>
 @enderror
 </span><br/>
-
-
 <input type="text" placeholder="コンビニの会社名" name="convinience_name" class="c-form__area__text">
 <br/>
 
@@ -116,19 +114,17 @@
 <input type="text" placeholder="支店名記入欄" name="convinience_branch" class="c-form__area__text">
 <br/>
 
-<div class="c-formstaff__adressarea">
+{{-- <div class="c-formstaff__adressarea"> --}}
 
-    <h1 class="c-form__adresstitle">住所記入欄</h1>
-    <span class="c-formstaff__prefecture">都道府県選択:
+    {{-- <h1 class="c-form__adresstitle">住所記入欄</h1> --}}
+    <span class="c-form__area__message">住所(47都道府県を選択):
         @error('prefecture')
         <span class="c-errormessage" role="alert">
             <strong>{{$message}}</strong>
         </span>
         @enderror    
     </span>
-
-
-<select name="prefecture" class="c-formstaff__prefecture__text ">
+<select name="prefecture" class="c-form__area__text ">
 <option value="北海道">北海道</option>
 <option value="青森県">青森県</option>
 <option value="岩手県">岩手県</option>
@@ -180,7 +176,7 @@
 </select>
 <br/>
 {{-- 都道府県ここまで --}}
-<span class="c-formstaff__adress">都道府県以外の住所:
+<span class="c-form__area__message">それ以外の住所を記述:
     @error('adress')
     <span class="c-errormessage" role="alert">
         <strong>{{$message}}</strong>
@@ -188,7 +184,8 @@
     @enderror    
 </span>
 <br/>
-<textarea placeholder="都道府県以外の住所記述" name="adress" class="c-formstaff__adress__text " ></textarea>
+<input placeholder="都道府県以外の住所を記述" name="adress" class="c-form__area__text">
+{{-- <textarea placeholder="都道府県以外の住所記述" name="adress" class="c-formstaff__adress__text " ></textarea> --}}
 <button type="submit" class="c-register__custombutton">
     ユーザー登録
 </button>

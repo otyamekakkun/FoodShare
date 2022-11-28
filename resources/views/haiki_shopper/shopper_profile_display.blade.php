@@ -9,12 +9,12 @@
         </header>
     <main>
         <form method="POST" enctype="multipart/form-data" action="{{route('haiki_shopperprofile_edit',$user->id)}}">      
-          <div class="c-form4">
+          {{-- <div class="c-form4"> --}}
+            <h3 class="c-detail__title">
+                プロフィール編集</h3>
+
             <div class="c-form__area">
             @csrf
-            <h3 class="c-form__title">{{$user->name}}様
-                プロフィール編集</h3>
-                
                 <span class="c-form__area__message">名前:               
                     @error('name')
                     <span class="c-errormessage" role="alert">
@@ -60,7 +60,7 @@
             <br/>
         <input type="submit" class="c-register__custombutton" value="変更する">
         </div>
-    </div>
+    {{-- </div> --}}
         </form>
     </div>
         </div>
