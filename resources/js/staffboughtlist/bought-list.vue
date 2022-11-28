@@ -18,79 +18,62 @@ bought-list
                 <h1 class="">これまでに購入された商品(詳細)</h1>
             </div>
 
-            <div class="c-exhibitproductlist">
-                <div class="c-productlist">
-                    <ul
-                        class="c-productlist__items"
-                        v-for="item in getItems"
-                        v-if="item.bought >= 1"
-                    >
-                        <!-- 購入されたら商品にlabelを付け足す機能 -->
-                        <li class="c-productlist__items__title">
-                            商品No.{{ item.id }}
-                        </li>
-
+            <div class="c-staffmypagelistarea">
+                <div class="c-staffmypagelistarea__area">
+                    <div v-for="item in getItems">
                         <div v-if="item.bought >= 1">
-                            <img
-                                v-bind:src="item.img_path"
-                                class="c-productlist__items__img"
-                            />
-                            <p class="c-productlist__items__img__title">
-                                購入済み！
-                            </p>
-                        </div>
-                        <div v-if="item.bought <= 0">
-                            <img
-                                v-bind:src="item.img_path"
-                                class="c-productlist__items__img2"
-                            />
-                        </div>
+                            <div class="c-staffmypagelistarea__list">
+                                <!-- 購入されたら商品にlabelを付け足す機能 -->
 
-                        <div class="c-productlist__items__list">
-                            <!-- <li>商品No.{{ item.id }}</li> -->
-                            <li>商品名:{{ item.product_name }}</li>
-                            <li>お値段:{{ item.price }}円.</li>
-                            <div class="c-productlist__items__bottom">
-                                <button
-                                    class="c-productlist__items__bottom__area"
-                                >
+                                <img
+                                    v-bind:src="item.img_path"
+                                    class="c-staffmypagelistarea__list__img"
+                                />
+                                <p class="c-staffmypagelistarea__list__bought">
+                                    購入済み！
+                                </p>
+
+                                <div class="c-staffmypagelistarea__text">
+                                    <!-- <li>商品No.{{ item.id }}</li> -->
+                                    <li
+                                        class="c-staffmypagelistarea__list__name"
+                                    >
+                                        {{ item.product_name }}
+                                    </li>
+                                    <li
+                                        class="c-staffmypagelistarea__list__price"
+                                    >
+                                        お値段:{{ item.price }}円.
+                                    </li>
                                     <a
                                         v-bind:href="`${item.id}}/staff_productdetail`"
-                                        >詳細にいく</a
+                                        class="c-staffmypagelistarea__list__a"
+                                        >詳細見る↗︎</a
                                     >
-                                </button>
-                                <div v-if="item.bought <= 0">
-                                    <button
-                                        class="c-productlist__items__bottom__area"
-                                    >
-                                        <a
-                                            v-bind:href="`${item.id}}/staff_productedit`"
-                                            >商品を編集</a
-                                        >
-                                    </button>
                                 </div>
                             </div>
                         </div>
-                    </ul>
-
-                    <div class="c-paginate">
-                        <vuejs-paginate
-                            :page-count="getPaginateCount"
-                            :prev-text="'<'"
-                            :next-text="'>'"
-                            :click-handler="paginateClickCallback"
-                            :container-class="'pagination justify-content-center'"
-                            :page-class="'page-item'"
-                            :page-link-class="'page-link'"
-                            :prev-class="'page-item'"
-                            :prev-link-class="'page-link'"
-                            :next-class="'page-item'"
-                            :next-link-class="'page-link'"
-                            :first-last-button="true"
-                            :first-button-text="'<<'"
-                            :last-button-text="'>>'"
-                        ></vuejs-paginate>
+                        <div v-if="item.bought <= 0" class="u-hidden"></div>
                     </div>
+                </div>
+
+                <div class="c-paginate">
+                    <vuejs-paginate
+                        :page-count="getPaginateCount"
+                        :prev-text="'<'"
+                        :next-text="'>'"
+                        :click-handler="paginateClickCallback"
+                        :container-class="'pagination justify-content-center'"
+                        :page-class="'page-item'"
+                        :page-link-class="'page-link'"
+                        :prev-class="'page-item'"
+                        :prev-link-class="'page-link'"
+                        :next-class="'page-item'"
+                        :next-link-class="'page-link'"
+                        :first-last-button="true"
+                        :first-button-text="'<<'"
+                        :last-button-text="'>>'"
+                    ></vuejs-paginate>
                 </div>
             </div>
         </main>
