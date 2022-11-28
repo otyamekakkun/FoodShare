@@ -6477,11 +6477,9 @@ var render = function render() {
     attrs: {
       id: "app"
     }
-  }, [_c("main", [_c("div", {
+  }, [_c("main", [_vm._m(0), _vm._v(" "), _c("div", {
     staticClass: "c-staffmypagelistarea"
-  }, [_c("h1", {
-    staticClass: "c-mypagemenu__title"
-  }, [_vm._v("これまでに購入された商品")]), _vm._v(" "), _vm._l(_vm.getItems, function (item) {
+  }, _vm._l(_vm.getItems, function (item) {
     return _c("div", [item.bought >= 1 ? _c("div", [_c("ul", {
       staticClass: "c-productlist__items"
     }, [_c("img", {
@@ -6502,10 +6500,17 @@ var render = function render() {
         href: "haiki/".concat(item.id, "}/staff_productdetail")
       }
     }, [_vm._v("詳細にいく")])])])])])]) : _vm._e()]);
-  })], 2)])]);
+  }), 0)])]);
 };
 
-var staticRenderFns = [];
+var staticRenderFns = [function () {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("div", {
+    staticClass: "c-staffmypagelistarea__title1"
+  }, [_c("h1", {}, [_vm._v("\n                これまでに購入された商品\n                (*表示されていない場合はまだ購入されていません)\n            ")])]);
+}];
 render._withStripped = true;
 
 
@@ -6534,7 +6539,9 @@ var render = function render() {
   }, [_c("main", [_vm._m(0), _vm._v(" "), _c("div", {
     staticClass: "c-staffmypagelistarea"
   }, _vm._l(_vm.getItems, function (item) {
-    return _c("ul", [_c("div", {
+    return _c("div", {
+      staticClass: "c-staffmypagelistarea__area"
+    }, [_c("div", {
       staticClass: "c-staffmypagelistarea__list"
     }, [item.bought >= 1 ? _c("div", [_c("img", {
       attrs: {
@@ -6545,15 +6552,23 @@ var render = function render() {
       attrs: {
         src: item.img_path
       }
-    })]) : _vm._e(), _vm._v(" "), _c("div", {}, [_c("li", [_vm._v(_vm._s(item.product_name))]), _vm._v(" "), _c("li", [_vm._v(_vm._s(item.price) + "円.")]), _vm._v(" "), _c("div", {}, [_c("a", {
+    })]) : _vm._e(), _vm._v(" "), _c("div", {
+      staticClass: "c-staffmypagelistarea__text"
+    }, [_c("li", {
+      staticClass: "c-staffmypagelistarea__list__name"
+    }, [_vm._v("\n                            " + _vm._s(item.product_name) + "\n                        ")]), _vm._v(" "), _c("li", {
+      staticClass: "c-staffmypagelistarea__list__price"
+    }, [_vm._v("\n                            " + _vm._s(item.price) + "円.\n                        ")]), _vm._v(" "), _c("a", {
+      staticClass: "c-staffmypagelistarea__list__a",
       attrs: {
         href: "haiki/".concat(item.id, "}/staff_productdetail")
       }
     }, [_vm._v("詳細を見る")]), _vm._v(" "), item.bought <= 0 ? _c("div", [_c("a", {
+      staticClass: "c-staffmypagelistarea__list__a",
       attrs: {
         href: "haiki/".concat(item.id, "}/staff_productedit")
       }
-    }, [_vm._v("編集する")])]) : _vm._e()])])])]);
+    }, [_vm._v("編集する")])]) : _vm._e()])])]);
   }), 0)])]);
 };
 

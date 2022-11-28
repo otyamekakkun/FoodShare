@@ -604,6 +604,9 @@
     text-align: center;
     margin: 40px;
     font-size: size(4l);
+    font-family: "Permanent Marker", cursive;
+
+    color: white;
     @include mql() {
         font-size: size(m);
     }

@@ -340,21 +340,26 @@
 //===================================================
 .c-staffmypagelistarea {
     background: white;
-    margin-bottom: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    //  height: 600px;
+    // margin-bottom: 100px;
+    // margin-left: auto;
+    // margin-right: auto;
+    //  width: 100%;
+    // height: 460px;
     //  border-radius: size(ss);
+
     font-size: size(l);
     padding: size(l);
     display: flex;
+    flex-wrap: wrap;
+    text-align: center;
 }
 
 .c-staffmypagelistarea__list {
-    // display: flex;
-    margin-left: 4%;
-    margin-right: 4%;
+    //display: flex;
+    flex-wrap: 800px;
+
+    margin: auto;
+    width: 80%;
 }
 
 //=====================================================
@@ -433,6 +438,21 @@
 //=================================
 //ここから新要素 (コンビニのマイページについて)
 //=================================
+
+.c-staffmypagelistarea__area {
+    background: red;
+    border: solid #174113;
+    //display: flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap; /* IE10        */
+    flex-wrap: wrap;
+}
+
+.c-staffmypagelistarea__text {
+    text-align: center;
+}
+
 .c-staffmypagelistarea__title1 {
     background: #174113;
     width: 100%;
@@ -441,5 +461,37 @@
     font-size: size(l);
 }
 .c-staffmypagelistarea__list__img {
-    margin-left: size(4l);
+    margin-left: auto;
+    margin-right: size(4l);
+    text-align: center;
+    // margin: auto;
+    width: 200px;
+    height: 200px;
+}
+.c-staffmypagelistarea__list__name {
+    font-size: size(l);
+    text-align: center;
+
+    //margin-left: auto;
+    //  margin-right: auto;
+}
+.c-staffmypagelistarea__list__price {
+    color: red;
+    text-align: center;
+
+    //   margin-left: size(4l);
+    //  margin-right: size(4l);
+}
+.c-staffmypagelistarea__list__a {
+    // margin-left: size(4l);
+    // margin-right: size(4l);
+    text-align: center;
+    font-size: size(l);
+    border-bottom: solid;
+    border-color: green;
+    border-width: 5px; /*5ピクセルの太さにする*/
+
+    &:hover {
+        color: orange;
+    }
 }
