@@ -5877,44 +5877,40 @@ var render = function render() {
     attrs: {
       id: "app"
     }
-  }, [_c("main", [_c("div", {
-    staticClass: "c-exhibitproductlist"
-  }, [_c("div", {
-    staticClass: "c-productlist"
+  }, [_c("main", [_vm._m(0), _vm._v(" "), _c("div", {
+    staticClass: "c-staffmypagelistarea"
   }, [_vm._l(_vm.getItems, function (item) {
-    return _c("ul", {
-      staticClass: "c-productlist__items"
-    }, [_c("li", {
-      staticClass: "c-productlist__items__title"
-    }, [_vm._v("\n                        商品No." + _vm._s(item.id) + "\n                    ")]), _vm._v(" "), item.bought >= 1 ? _c("div", [_c("img", {
-      staticClass: "c-productlist__items__img",
+    return _c("div", {
+      staticClass: "c-staffmypagelistarea__area"
+    }, [_c("div", {
+      staticClass: "c-staffmypagelistarea__list"
+    }, [item.bought >= 1 ? _c("div", [_c("img", {
+      staticClass: "c-staffmypagelistarea__list__img",
       attrs: {
         src: item.img_path
       }
-    }), _vm._v(" "), _c("p", {
-      staticClass: "c-productlist__items__img__title"
-    }, [_vm._v("\n                            購入済み！\n                        ")])]) : _vm._e(), _vm._v(" "), item.bought <= 0 ? _c("div", [_c("img", {
-      staticClass: "c-productlist__items__img2",
+    }), _vm._v(" "), _c("p", {}, [_vm._v("購入済み！")])]) : _vm._e(), _vm._v(" "), item.bought <= 0 ? _c("div", [_c("img", {
+      staticClass: "c-staffmypagelistarea__list__img",
       attrs: {
         src: item.img_path
       }
     })]) : _vm._e(), _vm._v(" "), _c("div", {
-      staticClass: "c-productlist__items__list"
-    }, [_c("li", [_vm._v("商品名:" + _vm._s(item.product_name))]), _vm._v(" "), _c("li", [_vm._v("お値段:" + _vm._s(item.price) + "円.")]), _vm._v(" "), _c("div", {
-      staticClass: "c-productlist__items__bottom"
-    }, [_c("button", {
-      staticClass: "c-productlist__items__bottom__area"
-    }, [_c("a", {
+      staticClass: "c-staffmypagelistarea__text"
+    }, [_c("li", {
+      staticClass: "c-staffmypagelistarea__list__name"
+    }, [_vm._v("\n                                商品名:" + _vm._s(item.product_name) + "\n                            ")]), _vm._v(" "), _c("li", {
+      staticClass: "c-staffmypagelistarea__list__price"
+    }, [_vm._v("\n                                お値段:" + _vm._s(item.price) + "円.\n                            ")]), _vm._v(" "), _c("a", {
+      staticClass: "c-staffmypagelistarea__list__a",
       attrs: {
         href: "".concat(item.id, "}/staff_productdetail")
       }
-    }, [_vm._v("詳細を見る")])]), _vm._v(" "), item.bought <= 0 ? _c("div", [_c("button", {
-      staticClass: "c-productlist__items__bottom__area"
-    }, [_c("a", {
+    }, [_vm._v("詳細を見る↗︎")]), _vm._v(" "), item.bought <= 0 ? _c("div", [_c("a", {
+      staticClass: "c-staffmypagelistarea__list__a",
       attrs: {
         href: "".concat(item.id, "}/staff_productedit")
       }
-    }, [_vm._v("商品を編集")])])]) : _vm._e()])])]);
+    }, [_vm._v("商品を編集↗︎")])]) : _vm._e()])])]);
   }), _vm._v(" "), _c("div", {
     staticClass: "c-paginate"
   }, [_c("vuejs-paginate", {
@@ -5934,10 +5930,17 @@ var render = function render() {
       "first-button-text": "<<",
       "last-button-text": ">>"
     }
-  })], 1)], 2)])])]);
+  })], 1)], 2)])]);
 };
 
-var staticRenderFns = [];
+var staticRenderFns = [function () {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("div", {
+    staticClass: "c-staffmypagelistarea__title1"
+  }, [_c("h1", {}, [_vm._v("これまでに出品された商品(詳細)")])]);
+}];
 render._withStripped = true;
 
 
@@ -6544,6 +6547,7 @@ var render = function render() {
     }, [_c("div", {
       staticClass: "c-staffmypagelistarea__list"
     }, [item.bought >= 1 ? _c("div", [_c("img", {
+      staticClass: "c-staffmypagelistarea__list__img",
       attrs: {
         src: item.img_path
       }

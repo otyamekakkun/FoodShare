@@ -11,7 +11,10 @@
                 >
                     <div class="c-staffmypagelistarea__list">
                         <div v-if="item.bought >= 1">
-                            <img v-bind:src="item.img_path" class="" />
+                            <img
+                                v-bind:src="item.img_path"
+                                class="c-staffmypagelistarea__list__img"
+                            />
                             <p class="">購入済み！</p>
                         </div>
                         <div v-if="item.bought <= 0">
