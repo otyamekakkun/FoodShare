@@ -6406,7 +6406,7 @@ var render = function render() {
     attrs: {
       id: "app"
     }
-  }, [_c("main", [_c("div", {
+  }, [_c("main", [_vm._m(0), _vm._v(" "), _c("div", {
     staticClass: "c-exhibitproductlist"
   }, [_c("div", {
     staticClass: "c-productlist"
@@ -6466,7 +6466,14 @@ var render = function render() {
   })], 1)], 2)])])]);
 };
 
-var staticRenderFns = [];
+var staticRenderFns = [function () {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("div", {
+    staticClass: "c-staffmypagelistarea__title1"
+  }, [_c("h1", {}, [_vm._v("これまでに購入された商品(詳細)")])]);
+}];
 render._withStripped = true;
 
 

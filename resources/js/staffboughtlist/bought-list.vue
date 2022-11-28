@@ -14,6 +14,10 @@ bought-list
 <template>
     <div id="app">
         <main>
+            <div class="c-staffmypagelistarea__title1">
+                <h1 class="">これまでに購入された商品(詳細)</h1>
+            </div>
+
             <div class="c-exhibitproductlist">
                 <div class="c-productlist">
                     <ul
