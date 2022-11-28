@@ -10,18 +10,16 @@ c-productlist__items__listt__sentence
  -->
 
 <template>
-    <div>
+    <div class="c-detail">
         <!-- <h1 class="c-productdetail__info">商品No.{{ id }} {{ name }}</h1> -->
         <div class="">
-            <img v-bind:src="img" class="" />
+            <img v-bind:src="img" class="c-detail__img" />
         </div>
-        <div class="">
-            <div class="">
-                <li class="">・商品名:　{{ name }}</li>
-                <li class="">・お値段:　{{ price }}円</li>
-                <li class="">・期限:　{{ best_by_date }}</li>
-                <li class="">・出品した県名:　{{ prefecture }}</li>
-            </div>
+        <div class="c-detail__sentence">
+            <li class="">商品名:　{{ name }}</li>
+            <li class="">お値段:　{{ price }}円</li>
+            <li class="">期限:　{{ best_by_date }}</li>
+            <li class="">出品した県名:　{{ prefecture }}</li>
         </div>
     </div>
 </template>

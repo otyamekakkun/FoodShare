@@ -17,3 +17,17 @@
         margin: auto;
     }
 }
+.l-footer2 {
+    background: color("footer");
+    bottom: 0;
+    width: 100%;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    &__text {
+        color: white;
+        font-size: size(m);
+        font-family: "Noto Serif TC", serif;
+        margin: auto;
+    }
+}

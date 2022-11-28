@@ -17,6 +17,11 @@ Vue.component(
     require("./footercomponents/FooterComponent.vue").default
 );
 
+Vue.component(
+    "footerdetail-component",
+    require("./footercomponents/footerdetail.vue").default
+);
+
 //===================================================================
 // 商品を出品するために使われるvueのコンポーネント
 //===================================================================

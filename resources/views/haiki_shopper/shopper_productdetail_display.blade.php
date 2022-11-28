@@ -21,7 +21,7 @@
 c-shopper__action
 c-shopper__action__button
     --}}
-@extends('layouts.app2')
+@extends('layouts.app4')
 @section('content')
 @section('title', "商品詳細画面")
 <body>

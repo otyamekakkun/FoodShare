@@ -4,22 +4,22 @@
 //画面設計のエリア
 .l-productdetail {
     background: rgba(255, 255, 255, 0.8);
-    margin-right: auto;
-    margin-left: auto;
+    // margin-right: auto;
+    // margin-left: auto;
     // margin-top: 100px;
     // margin-bottom: 100px;
-    border: solid size(sssss);
-    border-radius: size(m);
-    width: 80%;
+    //border: solid size(sssss);
+    // border-radius: size(m);
+    width: 100%;
     height: 1100px;
     //このエリアはproductdetailと同じ
     @include mqxxl() {
-        height: 1000px;
+        //    height: 1000px;
     }
     @include mqm() {
-        height: 800x;
-        margin-top: 90px;
-        margin-bottom: 90px;
+        //  height: 800x;
+        //  margin-top: 90px;
+        // margin-bottom: 90px;
     }
 }
 
@@ -35,15 +35,15 @@
     width: 100%;
     height: 1250px;
     @include mqxxl() {
-        height: 1200px;
+        //      height: 1200px;
     }
     @include mqm() {
-        height: 1000px;
+        //height: 1000px;
         // margin-top: 90px;
         //  margin-bottom: 90px;
     }
 }
-
+/*
 .l-productdetail__area {
     //  width: 80%;
     // margin-left: auto;
@@ -52,4 +52,27 @@
     text-align: center;
     height: 860px;
     //  background: red;
+}
+*/
+.c-detail {
+    display: flex;
+    width: 80%;
+    //text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    // margin-top: 200px;
+    background: white;
+    height: 600px;
+}
+
+.c-detail__img {
+    width: 100%;
+
+    // width: 40%;
+    height: 600px;
+    //margin-top: 200px;
+}
+.c-detail__sentence {
+    font-size: size(4l);
+    margin-left: 2%;
 }
