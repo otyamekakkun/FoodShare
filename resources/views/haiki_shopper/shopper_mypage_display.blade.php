@@ -10,13 +10,11 @@ shoppermypageコンポーネントでお客様が購入された商品を取得�
 @include('header.shopper.shoppermypage_header') 
 </header>
 <body>
-    <div id=app>
-        <div class="c-mypagemenu">
             <h1  class="c-mypagemenu__title">
-                {{$my_user->name}}様 専用マイページ
+                mypage
             </h1>
+            <div id="app">
 
-                </div>
 <shoppermypage-component></shoppermypage-component>
 <footer-component></footer-component>
 </div>

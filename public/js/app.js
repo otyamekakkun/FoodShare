@@ -6287,32 +6287,31 @@ var render = function render() {
     attrs: {
       id: "app"
     }
-  }, [_c("main", [_c("h1", {
-    staticClass: "c-mypagemenu__title"
-  }, [_vm._v("これまでに購入された商品")]), _vm._v(" "), _vm._l(_vm.getItems, function (item) {
-    return _c("ul", [item.bought >= 1 ? _c("div", [_c("div", {
-      staticClass: "c-productlist__items"
-    }, [_c("li", {
-      staticClass: "c-productlist__items__title"
-    }, [_vm._v("\n                        商品No." + _vm._s(item.id) + "\n                    ")]), _vm._v(" "), _c("img", {
-      staticClass: "c-productlist__items__img",
+  }, [_c("div", {
+    staticClass: "c-staffmypagelistarea"
+  }, _vm._l(_vm.getItems, function (item) {
+    return _c("div", {
+      staticClass: "c-staffmypagelistarea__area"
+    }, [_c("div", {
+      staticClass: "c-staffmypagelistarea__list"
+    }, [item.bought >= 1 ? _c("div", [_c("img", {
+      staticClass: "c-staffmypagelistarea__list__img",
       attrs: {
         src: item.img_path
       }
-    }), _vm._v(" "), _c("p", {
-      staticClass: "c-productlist__items__img__title"
-    }, [_vm._v("\n                        購入済み！\n                    ")]), _vm._v(" "), _c("div", {
-      staticClass: "c-productlist__items__list"
-    }, [_c("li", [_vm._v("商品名:" + _vm._s(item.product_name))]), _vm._v(" "), _c("li", [_vm._v("お値段:" + _vm._s(item.price) + "円.")]), _vm._v(" "), _c("div", {
-      staticClass: "c-productlist__items__bottom"
-    }, [_c("button", {
-      staticClass: "c-productlist__items__bottom__area"
-    }, [_c("a", {
+    }), _vm._v(" "), _c("p", {}, [_vm._v("購入済み！")]), _vm._v(" "), _c("div", {
+      staticClass: "c-staffmypagelistarea__text"
+    }, [_c("li", {
+      staticClass: "c-staffmypagelistarea__list__name"
+    }, [_vm._v("\n                            商品名:" + _vm._s(item.product_name) + "\n                        ")]), _vm._v(" "), _c("li", {
+      staticClass: "c-staffmypagelistarea__list__price"
+    }, [_vm._v("\n                            お値段:" + _vm._s(item.price) + "円.\n                        ")]), _vm._v(" "), _c("a", {
+      staticClass: "c-staffmypagelistarea__list__a",
       attrs: {
         href: "".concat(item.id, "/shopper_productdetail")
       }
-    }, [_vm._v("詳細にいく")])])])])])]) : _vm._e()]);
-  })], 2)]);
+    }, [_vm._v("詳細見る↗︎")])])]) : _vm._e()])]);
+  }), 0)]);
 };
 
 var staticRenderFns = [];
@@ -6337,16 +6336,18 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", [_c("div", {
-    staticClass: "c-exhibitproductlist"
-  }, [_c("div", {
-    staticClass: "c-productlist"
-  }, [_c("shoppermypage-view", {
+  return _c("div", {
+    attrs: {
+      id: "app"
+    }
+  }, [_c("main", [_vm._m(0), _vm._v(" "), _c("shoppermypage-view", {
     attrs: {
       products: this.products,
       getItems: this.getItems
     }
   }), _vm._v(" "), _c("div", {
+    staticClass: "c-staffmypagelistarea"
+  }, [_c("div", {
     staticClass: "c-paginate"
   }, [_c("vuejs-paginate", {
     attrs: {
@@ -6365,10 +6366,17 @@ var render = function render() {
       "first-button-text": "<<",
       "last-button-text": ">>"
     }
-  })], 1)], 1)])]);
+  })], 1)])], 1)]);
 };
 
-var staticRenderFns = [];
+var staticRenderFns = [function () {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("div", {
+    staticClass: "c-staffmypagelistarea__title1"
+  }, [_c("h1", {}, [_vm._v("これまでに購入された商品(一覧)")])]);
+}];
 render._withStripped = true;
 
 

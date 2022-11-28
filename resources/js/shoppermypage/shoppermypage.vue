@@ -1,11 +1,30 @@
 <template>
-    <div>
-        <div class="c-exhibitproductlist">
-            <div class="c-productlist">
-                <shoppermypage-view
-                    :products="this.products"
-                    :getItems="this.getItems"
-                ></shoppermypage-view>
+    <!-- <div> -->
+    <!-- <div class="c-exhibitproductlist"> -->
+
+    <!-- 
+
+            <div class="c-staffmypagelistarea__title1">
+                <h1 class="">これまでに購入された商品(一覧)</h1>
+            </div>
+
+
+
+
+         -->
+    <div id="app">
+        <main>
+            <div class="c-staffmypagelistarea__title1">
+                <h1 class="">これまでに購入された商品(一覧)</h1>
+            </div>
+
+            <!-- <div class="c-staffmypagelistarea"> -->
+            <!-- <div class="c-staffmypagelistareaarea"> -->
+            <shoppermypage-view
+                :products="this.products"
+                :getItems="this.getItems"
+            ></shoppermypage-view>
+            <div class="c-staffmypagelistarea">
                 <div class="c-paginate">
                     <vuejs-paginate
                         :page-count="getPaginateCount"
@@ -25,8 +44,13 @@
                     ></vuejs-paginate>
                 </div>
             </div>
-        </div>
+            <!-- </div> -->
+            <!-- </div> -->
+        </main>
     </div>
+    <!-- </div> -->
+    <!-- </div> -->
+    <!-- </div> -->
 </template>
 <script>
 import axios from "axios";
