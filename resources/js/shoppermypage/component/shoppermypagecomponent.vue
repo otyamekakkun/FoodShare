@@ -17,15 +17,17 @@
                             v-bind:src="item.img_path"
                             class="c-staffmypagelistarea__list__img"
                         />
-                        <p class="">購入済み！</p>
+                        <p class="c-staffmypagelistarea__list__bought">
+                            Sold Out
+                        </p>
                         <!-- </div> -->
 
                         <div class="c-staffmypagelistarea__text">
                             <li class="c-staffmypagelistarea__list__name">
-                                商品名:{{ item.product_name }}
+                                {{ item.product_name }}
                             </li>
                             <li class="c-staffmypagelistarea__list__price">
-                                お値段:{{ item.price }}円.
+                                {{ item.price }}円.
                             </li>
                             <a
                                 v-bind:href="`${item.id}/shopper_productdetail`"

@@ -6299,13 +6299,15 @@ var render = function render() {
       attrs: {
         src: item.img_path
       }
-    }), _vm._v(" "), _c("p", {}, [_vm._v("購入済み！")]), _vm._v(" "), _c("div", {
+    }), _vm._v(" "), _c("p", {
+      staticClass: "c-staffmypagelistarea__list__bought"
+    }, [_vm._v("\n                        Sold Out\n                    ")]), _vm._v(" "), _c("div", {
       staticClass: "c-staffmypagelistarea__text"
     }, [_c("li", {
       staticClass: "c-staffmypagelistarea__list__name"
-    }, [_vm._v("\n                            商品名:" + _vm._s(item.product_name) + "\n                        ")]), _vm._v(" "), _c("li", {
+    }, [_vm._v("\n                            " + _vm._s(item.product_name) + "\n                        ")]), _vm._v(" "), _c("li", {
       staticClass: "c-staffmypagelistarea__list__price"
-    }, [_vm._v("\n                            お値段:" + _vm._s(item.price) + "円.\n                        ")]), _vm._v(" "), _c("a", {
+    }, [_vm._v("\n                            " + _vm._s(item.price) + "円.\n                        ")]), _vm._v(" "), _c("a", {
       staticClass: "c-staffmypagelistarea__list__a",
       attrs: {
         href: "".concat(item.id, "/shopper_productdetail")
