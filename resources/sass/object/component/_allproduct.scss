@@ -339,7 +339,10 @@
 //共通化するエリアのコンポーネント部分 staffmypageのリスト
 //===================================================
 .c-staffmypagelistarea {
-    background: white;
+    // background: white;
+    // background: color("background");
+    // background-image: url("https://s3.ap-northeast-1.amazonaws.com/webukatu-haikikaku.com/awss3/imagebackground/top.jpg");
+    background-color: rgba(255, 255, 255, 0.6);
     font-size: size(l);
     padding: size(l);
     display: flex;
@@ -434,8 +437,12 @@
 
 .c-staffmypagelistarea__area {
     border: solid #174113;
+    background: white;
     flex-wrap: wrap;
     margin: 2%;
+    padding: 2%;
+    //width: 20%;
+    text-align: center;
 }
 
 .c-staffmypagelistarea__text {
@@ -476,11 +483,14 @@
     // margin-right: size(4l);
     text-align: center;
     font-size: size(l);
+    color: black;
     border-bottom: solid;
-    border-color: green;
-    border-width: 5px; /*5ピクセルの太さにする*/
+    border-color: black;
+    border-width: 1px; /*5ピクセルの太さにする*/
 
     &:hover {
         color: orange;
+        border-color: #174113;
+        border-width: 1px;
     }
 }

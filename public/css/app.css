@@ -1285,7 +1285,7 @@ a {
 }
 
 .c-staffmypagelistarea {
-  background: white;
+  background-color: rgba(255, 255, 255, 0.6);
   font-size: 25px;
   padding: 25px;
   display: flex;
@@ -1373,8 +1373,11 @@ a {
 
 .c-staffmypagelistarea__area {
   border: solid #174113;
+  background: white;
   flex-wrap: wrap;
   margin: 2%;
+  padding: 2%;
+  text-align: center;
 }
 
 .c-staffmypagelistarea__text {
@@ -1410,12 +1413,15 @@ a {
 .c-staffmypagelistarea__list__a {
   text-align: center;
   font-size: 25px;
+  color: black;
   border-bottom: solid;
-  border-color: green;
-  border-width: 5px; /*5ピクセルの太さにする*/
+  border-color: black;
+  border-width: 1px; /*5ピクセルの太さにする*/
 }
 .c-staffmypagelistarea__list__a:hover {
   color: orange;
+  border-color: #174113;
+  border-width: 1px;
 }
 
 .c-top__button {

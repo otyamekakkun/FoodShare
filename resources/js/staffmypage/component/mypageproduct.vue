@@ -36,15 +36,16 @@
                             <a
                                 class="c-staffmypagelistarea__list__a"
                                 v-bind:href="`haiki/${item.id}}/staff_productdetail`"
-                                >詳細を見る</a
+                                >詳細を見る↗︎</a
                             >
+                            <i class="fa-regular fa-arrow-pointer"></i>
                             <!-- </button> -->
                             <div v-if="item.bought <= 0">
                                 <!-- <button class=""> -->
                                 <a
                                     class="c-staffmypagelistarea__list__a"
                                     v-bind:href="`haiki/${item.id}}/staff_productedit`"
-                                    >編集する</a
+                                    >編集する↗︎</a
                                 >
                                 <!-- </button> -->
                                 <!-- </div> -->

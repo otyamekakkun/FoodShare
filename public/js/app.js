@@ -6563,12 +6563,14 @@ var render = function render() {
       attrs: {
         href: "haiki/".concat(item.id, "}/staff_productdetail")
       }
-    }, [_vm._v("詳細を見る")]), _vm._v(" "), item.bought <= 0 ? _c("div", [_c("a", {
+    }, [_vm._v("詳細を見る↗︎")]), _vm._v(" "), _c("i", {
+      staticClass: "fa-regular fa-arrow-pointer"
+    }), _vm._v(" "), item.bought <= 0 ? _c("div", [_c("a", {
       staticClass: "c-staffmypagelistarea__list__a",
       attrs: {
         href: "haiki/".concat(item.id, "}/staff_productedit")
       }
-    }, [_vm._v("編集する")])]) : _vm._e()])])]);
+    }, [_vm._v("編集する↗︎")])]) : _vm._e()])])]);
   }), 0)])]);
 };
 
