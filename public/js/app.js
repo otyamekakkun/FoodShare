@@ -6290,29 +6290,29 @@ var render = function render() {
   }, [_c("div", {
     staticClass: "c-staffmypagelistarea"
   }, _vm._l(_vm.getItems, function (item) {
-    return _c("div", {
+    return _c("div", [_c("div", {
       staticClass: "c-staffmypagelistarea__area"
-    }, [_c("div", {
+    }, [item.bought >= 1 ? _c("div", [_c("div", {
       staticClass: "c-staffmypagelistarea__list"
-    }, [item.bought >= 1 ? _c("div", [_c("img", {
+    }, [_c("img", {
       staticClass: "c-staffmypagelistarea__list__img",
       attrs: {
         src: item.img_path
       }
     }), _vm._v(" "), _c("p", {
       staticClass: "c-staffmypagelistarea__list__bought"
-    }, [_vm._v("\n                        Sold Out\n                    ")]), _vm._v(" "), _c("div", {
+    }, [_vm._v("\n                            Sold Out\n                        ")]), _vm._v(" "), _c("div", {
       staticClass: "c-staffmypagelistarea__text"
     }, [_c("li", {
       staticClass: "c-staffmypagelistarea__list__name"
-    }, [_vm._v("\n                            " + _vm._s(item.product_name) + "\n                        ")]), _vm._v(" "), _c("li", {
+    }, [_vm._v("\n                                " + _vm._s(item.product_name) + "\n                            ")]), _vm._v(" "), _c("li", {
       staticClass: "c-staffmypagelistarea__list__price"
-    }, [_vm._v("\n                            " + _vm._s(item.price) + "円.\n                        ")]), _vm._v(" "), _c("a", {
+    }, [_vm._v("\n                                " + _vm._s(item.price) + "円.\n                            ")]), _vm._v(" "), _c("a", {
       staticClass: "c-staffmypagelistarea__list__a",
       attrs: {
         href: "".concat(item.id, "/shopper_productdetail")
       }
-    }, [_vm._v("詳細見る↗︎")])])]) : _vm._e()])]);
+    }, [_vm._v("詳細見る↗︎")])])])]) : _vm._e()])]);
   }), 0)]);
 };
 

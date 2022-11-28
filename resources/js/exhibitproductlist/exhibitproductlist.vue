@@ -36,11 +36,6 @@ c-productlist__items__bottom__area
                 >
                     <!-- <ul class="c-productlist__items" v-for="item in getItems"> -->
                     <div class="c-staffmypagelistarea__list">
-                        <!-- 
-                        <li class="c-productlist__items__title">
-                            商品No.{{ item.id }}
-                        </li>
- -->
                         <div v-if="item.bought >= 1">
                             <img
                                 v-bind:src="item.img_path"
