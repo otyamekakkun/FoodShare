@@ -15,24 +15,10 @@ exhibitproductlist
     <div id="app">
         <main>
             <div class="c-staffmypagelistarea__title1">
-                <h1 class="">これまでに出品された商品(詳細)</h1>
+                <h1 class="c-staffmypagelistarea__title1__text">
+                    出品された商品(詳細リスト)
+                </h1>
             </div>
-            <!-- 
-c-exhibitproductlist
-c-porductlist 
-c-productlist__items
-c-productlist__items__title
-c-productlist__items__img
-c-productlist__items__img__title
-c-productlist__items__list
-c-productlist__items__bottom
-c-productlist__items__bottom__area
-のsassは消去する
- -->
-            <!-- 
-編集で削除されたらきちんと商品が編集される
-
-  -->
             <div class="c-staffmypagelistarea">
                 <div
                     class="c-staffmypagelistarea__area"

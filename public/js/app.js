@@ -5836,7 +5836,15 @@ var render = function render() {
     }
   })]), _vm._v(" "), _c("div", {
     staticClass: "c-detail__sentence"
-  }, [_c("li", {}, [_vm._v("商品名:　" + _vm._s(_vm.name))]), _vm._v(" "), _c("li", {}, [_vm._v("お値段:　" + _vm._s(_vm.price) + "円")]), _vm._v(" "), _c("li", {}, [_vm._v("期限:　" + _vm._s(_vm.best_by_date))]), _vm._v(" "), _c("li", {}, [_vm._v("出品した県名:　" + _vm._s(_vm.prefecture))])])]);
+  }, [_c("li", {
+    staticClass: "c-detail__sentence__text"
+  }, [_vm._v("商品名:　" + _vm._s(_vm.name))]), _vm._v(" "), _c("li", {
+    staticClass: "c-detail__sentence__text"
+  }, [_vm._v("お値段:　" + _vm._s(_vm.price) + "円")]), _vm._v(" "), _c("li", {
+    staticClass: "c-detail__sentence__text"
+  }, [_vm._v("期限:　" + _vm._s(_vm.best_by_date))]), _vm._v(" "), _c("li", {
+    staticClass: "c-detail__sentence__text"
+  }, [_vm._v("\n            出品した県名:　" + _vm._s(_vm.prefecture) + "\n        ")])])]);
 };
 
 var staticRenderFns = [];
@@ -5879,7 +5887,7 @@ var render = function render() {
       }
     }), _vm._v(" "), _c("p", {
       staticClass: "c-staffmypagelistarea__list__bought"
-    }, [_vm._v("\n                                購入済み！\n                            ")])]) : _vm._e(), _vm._v(" "), item.bought <= 0 ? _c("div", [_c("img", {
+    }, [_vm._v("\n                            購入済み！\n                        ")])]) : _vm._e(), _vm._v(" "), item.bought <= 0 ? _c("div", [_c("img", {
       staticClass: "c-staffmypagelistarea__list__img",
       attrs: {
         src: item.img_path
@@ -5888,9 +5896,9 @@ var render = function render() {
       staticClass: "c-staffmypagelistarea__text"
     }, [_c("li", {
       staticClass: "c-staffmypagelistarea__list__name"
-    }, [_vm._v("\n                                " + _vm._s(item.product_name) + "\n                            ")]), _vm._v(" "), _c("li", {
+    }, [_vm._v("\n                            " + _vm._s(item.product_name) + "\n                        ")]), _vm._v(" "), _c("li", {
       staticClass: "c-staffmypagelistarea__list__price"
-    }, [_vm._v("\n                                " + _vm._s(item.price) + "円.\n                            ")]), _vm._v(" "), _c("a", {
+    }, [_vm._v("\n                            " + _vm._s(item.price) + "円.\n                        ")]), _vm._v(" "), _c("a", {
       staticClass: "c-staffmypagelistarea__list__a",
       attrs: {
         href: "".concat(item.id, "}/staff_productdetail")
@@ -5929,7 +5937,9 @@ var staticRenderFns = [function () {
 
   return _c("div", {
     staticClass: "c-staffmypagelistarea__title1"
-  }, [_c("h1", {}, [_vm._v("これまでに出品された商品(詳細)")])]);
+  }, [_c("h1", {
+    staticClass: "c-staffmypagelistarea__title1__text"
+  }, [_vm._v("\n                出品された商品(詳細リスト)\n            ")])]);
 }];
 render._withStripped = true;
 
@@ -6547,7 +6557,9 @@ var staticRenderFns = [function () {
 
   return _c("div", {
     staticClass: "c-staffmypagelistarea__title1"
-  }, [_c("h1", {}, [_vm._v("\n                これまでに購入された商品\n                (*表示されていない場合はまだ購入されていません)\n            ")])]);
+  }, [_c("h1", {
+    staticClass: "c-staffmypagelistarea__title1__text"
+  }, [_vm._v("\n                これまでに購入された商品\n            ")])]);
 }];
 render._withStripped = true;
 
@@ -6621,7 +6633,9 @@ var staticRenderFns = [function () {
 
   return _c("div", {
     staticClass: "c-staffmypagelistarea__title1"
-  }, [_c("h1", {}, [_vm._v("これまでに出品された商品")])]);
+  }, [_c("h1", {
+    staticClass: "c-staffmypagelistarea__title1__text"
+  }, [_vm._v("\n                これまでに出品された商品\n            ")])]);
 }];
 render._withStripped = true;
 

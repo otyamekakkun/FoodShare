@@ -2,9 +2,8 @@
     <div id="app">
         <main>
             <div class="c-staffmypagelistarea__title1">
-                <h1 class="">
+                <h1 class="c-staffmypagelistarea__title1__text">
                     これまでに購入された商品
-                    (*表示されていない場合はまだ購入されていません)
                 </h1>
             </div>
             <!-- <h1 class="c-mypagemenu__title">これまでに購入された商品</h1> -->

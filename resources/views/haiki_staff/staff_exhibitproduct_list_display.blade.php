@@ -11,9 +11,9 @@
         @include('header.staff.staff_header')
     </header>
     {{-- マイページみたいなものを導入 --}}
-    <h1 class="c-mypagemenu__title">
+    <h1 class="c-detail__title">
     {{-- {{$admin->name}}様が出品された商品一覧 --}}
-    List of exhibited products
+    これまで出品された商品リスト
 </h1>
     
 <div id="app">

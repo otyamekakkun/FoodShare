@@ -2,7 +2,9 @@
     <div id="app">
         <main>
             <div class="c-staffmypagelistarea__title1">
-                <h1 class="">これまでに出品された商品</h1>
+                <h1 class="c-staffmypagelistarea__title1__text">
+                    これまでに出品された商品
+                </h1>
             </div>
             <div class="c-staffmypagelistarea">
                 <div

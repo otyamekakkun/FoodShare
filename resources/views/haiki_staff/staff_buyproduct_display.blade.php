@@ -9,8 +9,8 @@
     @include('header.staff.staff_header')
 </header>
 <body>
-    <h1 class="c-mypagemenu__title">
-bought list
+    <h1 class="c-detail__title">
+Bought List
     </h1>
 
 <div id="app">
