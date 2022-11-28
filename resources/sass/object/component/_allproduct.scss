@@ -338,6 +338,11 @@
 //===================================================
 //共通化するエリアのコンポーネント部分 staffmypageのリスト
 //===================================================
+//購入された用のflex
+.c-flex {
+    display: flex;
+}
+
 .c-staffmypagelistarea {
     // background: white;
     // background: color("background");
