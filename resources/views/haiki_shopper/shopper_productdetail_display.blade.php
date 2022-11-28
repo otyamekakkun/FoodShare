@@ -16,49 +16,52 @@
    (productdetail-component)
    商品の画像、名前、賞味期限、金額、出品都道府県、購入フラグをvueのproductdetail-componentに渡して商品の詳細を表示したもの。
    コンビニ側の商品詳細と併用している。
-    --}}
 
+   c-productdetail__shoppermenu
+c-shopper__action
+c-shopper__action__button
+    --}}
 @extends('layouts.app2')
 @section('content')
 @section('title', "商品詳細画面")
-
 <body>
     <header>
         @include('header.shopper.shopper_header') 
         </header>
 <div id="app">
     <main>
-        <div class="l-productdetail__shopper">
-            <div class="l-productdetail__area">
+         <div class="l-productdetail"> 
         <productdetail-component :id="'{{$products->id}}'" :img="'{{$products->img_path}}'" :name="'{{$products->product_name}}'" :price="'{{$products->price}}'"
-            :best_by_date="'{{$products->best_by_date}}'" :prefecture="'{{$products->prefecture}}'" :bought="'{{$products->bought}}'"></productdetail-component>
+            :best_by_date="'{{$products->best_by_date}}'" :prefecture="'{{$products->prefecture}}'" :bought="'{{$products->bought}}'">
+        </productdetail-component>
 @if($products->bought<=0)
-    <form class="c-productdetail__shoppermenu" action="{{ route('bought.update',$products->id)}}" enctype="multipart/form-data" method="post">
-        <div class="c-shopper__action">    
-            <button class="c-shopper__action__button">
+    <form class="" action="{{ route('bought.update',$products->id)}}" enctype="multipart/form-data" method="post">
+        <div class="">    
+            <button class="">
                 <i class="fab fa-twitter fa-fw"></i>この商品をシェアする</button> </a>        
             <a  href="https://twitter.com/intent/tweet?text=haiki share 商品名{{$products->product_name}}について自由に書いて広めよう!!" target="_blank_" rel="nofollow">
         @csrf
-        <button class="c-shopper__action__button">商品を買う！</button>
+        <button class="">商品を買う！</button>
         </div>
     </form>
 @endif
 
 @if($products->bought>=1)
-    <form class="c-productdetail__shoppermenu"  action="{{route('bought.cancel',$products->id)}}" enctype="multipart/form-data" method="post">
-        <div class="c-shopper__action">    
-        <button class="c-shopper__action__button">
-            <a  href="https://twitter.com/intent/tweet?text=haiki share 商品名{{$products->product_name}}について自由に書いて広めよう!!" target="_blank_" rel="nofollow"><i class="fab fa-twitter fa-fw"></i> この商品をシェアする</a></button> 
-        @csrf
-        <button class="c-shopper__action__button">購入をやめる</button>
+<button class="">
+    <a  href="https://twitter.com/intent/tweet?text=haiki share 商品名{{$products->product_name}}について自由に書いて広めよう!!" target="_blank_" rel="nofollow">
+        <i class="fab fa-twitter fa-fw"></i> この商品をシェアする</a>
+    </button> 
+    <form class=""  action="{{route('bought.cancel',$products->id)}}" enctype="multipart/form-data" method="post">
+        @csrf 
+            <button class="">購入をやめる</button>
     </div>  
     </form>
 @endif
-</div>
 </main>
 </div>
 <footer-component></footer-component>
 </div>
+
 </body>
 @endsection
 

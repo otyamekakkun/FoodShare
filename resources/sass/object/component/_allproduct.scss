@@ -301,20 +301,12 @@
 .c-staffmypagelistarea__list__name {
     font-size: size(l);
     text-align: center;
-
-    //margin-left: auto;
-    //  margin-right: auto;
 }
 .c-staffmypagelistarea__list__price {
     color: red;
     text-align: center;
-
-    //   margin-left: size(4l);
-    //  margin-right: size(4l);
 }
 .c-staffmypagelistarea__list__a {
-    // margin-left: size(4l);
-    // margin-right: size(4l);
     text-align: center;
     font-size: size(l);
     color: black;
@@ -332,13 +324,10 @@
     background: red;
     border: solid red;
     color: white;
-    //  position: absolute;
-    // top: 50%;
 }
-/*
-.c-staffmypagelistarea__list__bought {
+
+// 商品詳細画面ここから作り直す
+.l-productdetail {
+    width: 100%;
     background: red;
-    border: solid red;
-    color: white;
 }
-*/

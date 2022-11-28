@@ -1,28 +1,27 @@
 <!-- 
     商品詳細画面 laravel側でデータを取得してpropsでデータをもらいそれをもとに商品詳細を掲載したもの
+いらない
+c-productdetail__info
+c-productdetail__imgarea
+c-productdetail__img
+c-productdetail__listarea
+c-productdetail__list
+c-productlist__items__listt__sentence
  -->
 
 <template>
     <div>
-        <h1 class="c-productdetail__info">商品No.{{ id }} {{ name }}</h1>
-        <div class="c-productdetail__imgarea">
-            <img v-bind:src="img" class="c-productdetail__img" />
+        <!-- <h1 class="c-productdetail__info">商品No.{{ id }} {{ name }}</h1> -->
+        <div class="">
+            <img v-bind:src="img" class="" />
         </div>
-        <div class="c-productdetail__listarea">
-            <ul class="c-productdetail__list">
-                <li class="c-productlist__items__listt__sentence">
-                    ・商品名:　{{ name }}
-                </li>
-                <li class="c-productlist__items__listt__sentence">
-                    ・お値段:　{{ price }}円
-                </li>
-                <li class="c-productlist__items__listt__sentence">
-                    ・期限:　{{ best_by_date }}
-                </li>
-                <li class="c-productlist__items__listt__sentence">
-                    ・出品した県名:　{{ prefecture }}
-                </li>
-            </ul>
+        <div class="">
+            <div class="">
+                <li class="">・商品名:　{{ name }}</li>
+                <li class="">・お値段:　{{ price }}円</li>
+                <li class="">・期限:　{{ best_by_date }}</li>
+                <li class="">・出品した県名:　{{ prefecture }}</li>
+            </div>
         </div>
     </div>
 </template>
