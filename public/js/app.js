@@ -6291,10 +6291,10 @@ var render = function render() {
     }
   }, [_c("div", {
     staticClass: "c-staffmypagelistarea"
+  }, [_c("div", {
+    staticClass: "c-staffmypagelistarea__area"
   }, _vm._l(_vm.getItems, function (item) {
-    return _c("div", [_c("div", {
-      staticClass: "c-staffmypagelistarea__area"
-    }, [item.bought >= 1 ? _c("div", [_c("div", {
+    return _c("div", [item.bought >= 1 ? _c("div", [_c("div", {
       staticClass: "c-staffmypagelistarea__list"
     }, [_c("img", {
       staticClass: "c-staffmypagelistarea__list__img",
@@ -6314,8 +6314,10 @@ var render = function render() {
       attrs: {
         href: "".concat(item.id, "/shopper_productdetail")
       }
-    }, [_vm._v("詳細見る↗︎")])])])]) : _vm._e()])]);
-  }), 0)]);
+    }, [_vm._v("詳細見る↗︎")])])])]) : _vm._e(), _vm._v(" "), item.bought <= 0 ? _c("div", {
+      staticClass: "u-hidden"
+    }) : _vm._e()]);
+  }), 0)])]);
 };
 
 var staticRenderFns = [];
@@ -6567,7 +6569,7 @@ var render = function render() {
       }
     }), _vm._v(" "), _c("p", {
       staticClass: "c-staffmypagelistarea__list__bought"
-    }, [_vm._v("\n                            購入済み！\n                        ")])]) : _vm._e(), _vm._v(" "), item.bought <= 0 ? _c("div", [_c("img", {
+    }, [_vm._v("\n                            Sold Out\n                        ")])]) : _vm._e(), _vm._v(" "), item.bought <= 0 ? _c("div", [_c("img", {
       staticClass: "c-staffmypagelistarea__list__img",
       attrs: {
         src: item.img_path

@@ -9,8 +9,8 @@
 <template>
     <div id="app">
         <div class="c-staffmypagelistarea">
-            <div v-for="item in getItems">
-                <div class="c-staffmypagelistarea__area">
+            <div class="c-staffmypagelistarea__area">
+                <div v-for="item in getItems">
                     <div v-if="item.bought >= 1">
                         <div class="c-staffmypagelistarea__list">
                             <!-- <div class="c-productlist__items"> -->
@@ -38,6 +38,7 @@
                             </div>
                         </div>
                     </div>
+                    <div v-if="item.bought <= 0" class="u-hidden"></div>
                 </div>
             </div>
         </div>
