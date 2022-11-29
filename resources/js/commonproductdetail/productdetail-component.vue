@@ -1,14 +1,3 @@
-<!-- 
-    商品詳細画面 laravel側でデータを取得してpropsでデータをもらいそれをもとに商品詳細を掲載したもの
-いらない
-c-productdetail__info
-c-productdetail__imgarea
-c-productdetail__img
-c-productdetail__listarea
-c-productdetail__list
-c-productlist__items__listt__sentence
- -->
-
 <template>
     <div class="c-detail">
         <div class="">

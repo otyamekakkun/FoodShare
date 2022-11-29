@@ -134,26 +134,20 @@
 //商品を編集するボタンの商品削除ボタン
 .c-staffform__area__deletebutton {
     display: block;
-    background: #174113;
-    margin-top: 50px;
+    background: red;
+    margin-top: 40px;
     text-align: center;
-    //margin-left: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-
-    height: 60px;
+    margin-left: 64%;
+    height: 40px;
     width: 20%;
     border: none;
     border-radius: size(ss);
     color: white;
     transition: all 1.2s;
-    &:hover {
-        background: red;
-    }
     @include mqxxl() {
         width: 30%;
-        margin-left: auto;
-        margin-right: auto;
+        //margin-left: auto;
+        //   margin-right: auto;
 
         //レスポンシブ対策960px以下にボタンを対応
     }
@@ -375,7 +369,7 @@
     margin-bottom: size(l);
     text-align: center;
     margin-top: size(2l);
-    height: 1200px;
+    height: 1240px;
     background: rgba(255, 255, 255, 0.6);
     //  border: solid #174113;
     //border-radius: size(sss);

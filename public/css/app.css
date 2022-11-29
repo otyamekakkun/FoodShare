@@ -1427,26 +1427,20 @@ a {
 
 .c-staffform__area__deletebutton {
   display: block;
-  background: #174113;
-  margin-top: 50px;
+  background: red;
+  margin-top: 40px;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  height: 60px;
+  margin-left: 64%;
+  height: 40px;
   width: 20%;
   border: none;
   border-radius: 10px;
   color: white;
   transition: all 1.2s;
 }
-.c-staffform__area__deletebutton:hover {
-  background: red;
-}
 @media screen and (max-width:1090px) {
   .c-staffform__area__deletebutton {
     width: 30%;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 @media screen and (max-width: 720px) {
@@ -1656,7 +1650,7 @@ a {
   margin-bottom: 25px;
   text-align: center;
   margin-top: 40px;
-  height: 1200px;
+  height: 1240px;
   background: rgba(255, 255, 255, 0.6);
 }
 @media screen and (max-width:980px) {

@@ -18,7 +18,8 @@
         <h1 class="c-staffform__areatitle">編集したい内容を記述してください</h1>
 <form method="POST" action="{{ route('exhibit.update',$products->id)}}" enctype="multipart/form-data">
     @csrf
-    <drag-component></drag-component>
+    {{-- <drag-component></drag-component> --}}
+    <dragdropedit-component :img="'{{$products->img_path}}'"></dragdropedit-component>
     <span class="c-errormessage">
         @error('img_path')
         <strong>{{ $message }}</strong>
@@ -49,7 +50,8 @@
 </div>
 {{-- 賞味期限の入力はjsを使用。デフォルトだと現在日時より前の日付も記入できるから --}}
 {{-- </div> --}}
- <calender-component></calender-component>
+ {{-- <calender-component></calender-component> --}}
+ <calenderedit-component :best_by_date="'{{$products->best_by_date}}'"></calenderedit-component>
  {{--  
  <span class="c-errormessage" role="alert">
  @error('best_by_date')

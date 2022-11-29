@@ -27,6 +27,14 @@ Vue.component(
 //===================================================================
 Vue.component("calender-component", require("./function/calender.vue").default);
 Vue.component("drag-component", require("./function/dragdrop.vue").default);
+Vue.component(
+    "dragdropedit-component",
+    require("./function/dragdropedit.vue").default
+);
+Vue.component(
+    "calenderedit-component",
+    require("./function/calenderedit.vue").default
+);
 //===================================================================
 //お客様専用の商品一覧のコンポーネント
 //===================================================================
