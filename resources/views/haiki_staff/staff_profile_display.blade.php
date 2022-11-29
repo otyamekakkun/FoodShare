@@ -5,7 +5,6 @@
 @section('content')
 @section('title', "コンビニプロフィール編集")
 <body>
-    <div id="app">
     <header>
         @include('header.staff.staff_header')
     </header>
@@ -13,7 +12,8 @@
     <h3 class="c-detail__title">コンビニ情報編集</h3>
         <form  action="{{route('haiki_staffrprofile_edit',$admin->id)}}" method="POST">
             @csrf
-                <div class="c-form__area">
+            <div class="c-form__area">
+
                 <span class="c-form__area__message">名前:
                     @error('name')
                     <span class="c-errormessage" role="alert">
@@ -56,7 +56,9 @@
 <br/>
         <input class="c-form__area__text" type="password" class="c-form__area__text" name="password_confirmation" required autocomplete="new-password">
 <br/>
+
         {{-- パスワード再入力ここまで --}}
+
 <span class="c-form__area__message">コンビニ名:
     @error('convinience_name')
     <span class="c-errormessage" role="alert">
@@ -66,7 +68,10 @@
 </span>
 <br/>
             <input class="c-form__area__text" action="post" type="text" name="convinience_name" placeholder="コンビニ名" value="{{$admin->convinience_name}}">
+        {{-- </div> --}}
+
             <br/>
+
 <span class="c-form__area__message">支店名:
     @error('convinience_branch')
     <span class="c-errormessage" role="alert">
@@ -75,8 +80,10 @@
     @enderror    
 </span>
 <br/>
+
             <input class="c-form__area__text" action="post" type="text" name="convinience_branch" placeholder="支店名" value="{{$admin->convinience_branch}}">
             <br/>
+
             <span class="c-form__area__message">住所都道府県選択:
                 @error('prefecture')
                 <span class="c-errormessage" role="alert">
@@ -144,28 +151,15 @@
     @enderror    
 </span>
 <br/>
+
 <input name="adress" class="c-form__area__text" type="text" value="{{$admin->adress}}" >
-{{-- 住所変更ここまで --}}
-{{-- </div> --}}
-            <input type="submit" class="c-register__custombutton" value="変更する">
-            </div>
-            {{-- </div> --}}
-        </form>
-        {{-- </div> --}}
-{{-- <div id="app"> --}}
 </div>
+
+            <input type="submit" class="c-register__custombutton" value="変更する">
+        </form>
+<div id="app">
 <footer-component>
 </footer-component>
 </div>
 </body>
 @endsection
-
-
-{{-- 
-    いらないデータ
-    c-formstaff__prefecture
-    c-formstaff__prefecture__text
-    c-formstaff__adress
-    c-form2
-    --}}
-
