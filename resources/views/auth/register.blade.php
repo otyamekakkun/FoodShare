@@ -2,19 +2,15 @@
 @section('content')
 @include('header.other.otherheader')
 @isset($authgroup)
-{{-- <div class="c-form2">  --}}
     {{--コンビニユーザー登録画面のフォームページにして良い--}}
 <form method="POST" action="{{ url("register/$authgroup") }}">
-{{-- <div class="c-warning2"> --}}
 <h1 class="c-detail__title">スタッフユーザー登録</h1>
 <p>お客様(コンビニスタッフ関係ではない)方は,トップページのお客様ユーザー登録というボタンからお入りになって登録をしてください</p>
-{{-- </div> --}}
  @else
  {{-- ここからユーザー登録お客様のレイアウト --}}
+ <h1 class="c-detail__title">ユーザー登録</h1>
 <form method="POST" action="{{ route('register') }}">
 @csrf
-{{-- <div class="c-form4">  --}}
-    <h1 class="c-detail__title">ユーザー登録</h1>
 <div class="c-form__area">
                             <br/>
                             <span for="name" class="c-form__area__message">名前:
@@ -51,9 +47,17 @@
                             <button type="submit" class="c-register__custombutton">
                                 ユーザー登録
                             </button>
+</div>
                         </form>
+
                     @endisset
 {{-- ここまでがお客様のユーザー登録エリア --}}
+
+
+
+
+
+
                     @isset($authgroup)
                     <form method="POST" action="{{ url("register/$authgroup") }}">
                             <div class="c-form__area">
@@ -114,9 +118,6 @@
 <input type="text" placeholder="支店名記入欄" name="convinience_branch" class="c-form__area__text">
 <br/>
 
-{{-- <div class="c-formstaff__adressarea"> --}}
-
-    {{-- <h1 class="c-form__adresstitle">住所記入欄</h1> --}}
     <span class="c-form__area__message">住所(47都道府県を選択):
         @error('prefecture')
         <span class="c-errormessage" role="alert">
@@ -191,9 +192,9 @@
 </button>
 </form>
 @endisset
-</div>
-</div>
-</div>
+{{-- </div> --}}
+{{-- </div> --}}
+{{-- </div> --}}
 <div id=app>
 <footer-component></footer-component>
 </div>

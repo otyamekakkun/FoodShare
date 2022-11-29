@@ -4,16 +4,10 @@
 @include('header.other.otherheader')
 {{-- 管理者ログインページここから --}}
 @isset($authgroup)
-{{-- <div class="c-form1"> --}}
-{{-- <div class="c-warning2"> --}}
                     <h1 class="c-detail__title">コンビニスタッフ専用ログインページ</h1>
                     <p>利用者は普通のログインページで記述してください</p>
-                {{-- </div> --}}
                     <form method="POST" action="{{ url("login/$authgroup") }}">
                     @else
-                    {{-- 管理者ログインページここまで --}}
-                    {{-- ここから最後までユーザー登録者用と管理者用併用のログインページ --}}
-                    {{-- <div class="c-form1"> --}}
                         <h1 class="c-detail__title">ログイン</h1>
                     <form method="POST" action="{{ route('login') }}">
                     @endisset
