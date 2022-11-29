@@ -9,19 +9,15 @@
   --}}
 <body>
     <div class="l-top">
-    <div class="l-topimg">
-    </div>
+    <div class="l-topimg"></div>
 <div class="l-top__titlearea">
-<h1 class="l-top__title__tex">haiki share</h1>
+<h1 class="l-top__title__text">haiki share</h1>
 <h3 class="l-top__title__tex">convenience store</h3>
-</div>
 {{-- ボタンエリアを作る --}}
 <div id="app">
     <toppage-component></toppage-component>
 </div>
 </div>
-</div>
-
 </body>
 
 </html>

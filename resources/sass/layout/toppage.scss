@@ -12,34 +12,34 @@
     height: 1000px;
 }
 .l-top__titlearea {
-    background: rgba(255, 255, 255, 0.6);
-    width: 80%;
+    // background: rgba(255, 255, 255, 0.6);
+    width: 50%;
     height: 350px;
-    margin-left: auto;
-    margin-right: auto;
+    // margin-left: auto;
+    //margin-right: auto;
     text-align: center;
-    border-radius: size(ssss);
+    //  border-radius: size(ssss);
     @include mql() {
-        width: 80%;
+        // width: 80%;
         height: 300px;
     }
 
     @include mq() {
         height: 300px;
-        padding-left: size(s);
-        padding-right: size(s);
+        //   padding-left: size(s);
+        //   padding-right: size(s);
     }
 }
 
 .l-top__title__text {
-    display: inline;
+    // display: inline;
     color: white;
     -webkit-text-stroke: size(sss) orange;
     font-family: "Permanent Marker", cursive;
-    font-size: 100px;
-    margin-top: auto;
+    // font-size: 100px;
+    //margin-top: auto;
     //margin-top: 60px;
-    line-height: 190px;
+    //line-height: 190px;
 
     @include mqxxl() {
         font-size: 80px;

@@ -6918,11 +6918,7 @@ var staticRenderFns = [function () {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", [_c("div", {
-    staticClass: "l-top__area__form__custom"
-  }, [_c("div", {
-    staticClass: "l-top__area__form__custom__button"
-  }, [_c("a", {
+  return _c("div", [_c("a", {
     attrs: {
       href: "login"
     }
@@ -6946,7 +6942,7 @@ var staticRenderFns = [function () {
     }
   }, [_c("button", {
     staticClass: "c-top__button"
-  }, [_vm._v("コンビニユーザー登録")])]), _vm._v(" "), _c("br")])])]);
+  }, [_vm._v("コンビニユーザー登録")])]), _vm._v(" "), _c("br")]);
 }];
 render._withStripped = true;
 
