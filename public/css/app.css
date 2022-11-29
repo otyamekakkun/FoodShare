@@ -1584,12 +1584,11 @@ a {
   border-radius: 5px;
   font-size: 20px;
   margin-top: 200px;
-  margin-left: 70%;
+  margin-left: 56.8%;
   text-align: center;
   height: 65px;
-  padding: 15px;
-  transition: all 1.2s;
-  width: 34%;
+  transition: all 0.4s;
+  width: 24%;
 }
 .c-register__custombutton:hover {
   background: orange;

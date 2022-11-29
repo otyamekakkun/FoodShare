@@ -3,15 +3,18 @@
 @include('header.other.otherheader')
 @isset($authgroup)
     {{--コンビニユーザー登録画面のフォームページにして良い--}}
-<form method="POST" action="{{ url("register/$authgroup") }}">
-<h1 class="c-detail__title">スタッフユーザー登録</h1>
-<p>お客様(コンビニスタッフ関係ではない)方は,トップページのお客様ユーザー登録というボタンからお入りになって登録をしてください</p>
+    <h1 class="c-detail__title">スタッフユーザー登録</h1>
+    <p>お客様(コンビニスタッフ関係ではない)方は,トップページのお客様ユーザー登録というボタンからお入りになって登録をしてください</p>
+    {{-- <div class="c-form__area"> --}}
+
+<form method="POST" action="{{ url("register/$authgroup") }}" class="c-form__area">
+
  @else
  {{-- ここからユーザー登録お客様のレイアウト --}}
  <h1 class="c-detail__title">ユーザー登録</h1>
-<form method="POST" action="{{ route('register') }}">
+ <div class="c-form__area">
+<form method="POST" action="{{ route('register') }}" >
 @csrf
-<div class="c-form__area">
                             <br/>
                             <span for="name" class="c-form__area__message">名前:
                                 @error('name')
@@ -43,24 +46,21 @@
                                 <input id="password" type="password" class="c-form__area__text"  name="password" required autocomplete="new-password" placeholder="パスワード">
                                 <br/>
                             <label for="password-confirm" class="c-form__area__message ">パスワード再入力:</label><br/>
-                                <input id="password-confirm" type="password" class="c-form__area__text" name="password_confirmation" required autocomplete="new-password" placeholder="パスワード再入力">                            
+                                <input id="password-confirm" type="password" class="c-form__area__text" name="password_confirmation" required autocomplete="new-password" placeholder="パスワード再入力">        
+                    </div>                    
                             <button type="submit" class="c-register__custombutton">
                                 ユーザー登録
                             </button>
-</div>
                         </form>
+                    </div>
 
                     @endisset
 {{-- ここまでがお客様のユーザー登録エリア --}}
-
-
-
-
-
-
                     @isset($authgroup)
-                    <form method="POST" action="{{ url("register/$authgroup") }}">
-                            <div class="c-form__area">
+{{-- <div class="c-form__area"> --}}
+                    {{-- <form  method="POST" action="{{ url("register/$authgroup") }}"> --}}
+                        @csrf
+                            {{-- <div class="c-form__area"> --}}
                             <h1 class="c-form__title">（個人情報エリア）</h1>
                             <br/>
                             <span for="name" class="c-form__area__message">名前:
@@ -95,16 +95,15 @@
                             <label for="password-confirm" class="c-form__area__message ">パスワード再入力:
                             </label>
                             <br/>
-                                <input id="password-confirm" type="password" class="c-form__area__text" name="password_confirmation" required autocomplete="new-password" placeholder="パスワード再入力">
-                            </form>
-    @csrf
+ <input id="password-confirm" type="password" class="c-form__area__text" name="password_confirmation" required autocomplete="new-password" placeholder="パスワード再入力">
 <span  class="c-form__area__message ">勤めているコンビニ会社:
     @error('convinience_name')
     <span class="c-errormessage" role="alert">
         <strong>{{ $message }}</strong>
     </span>
 @enderror
-</span><br/>
+</span>
+<br/>
 <input type="text" placeholder="コンビニの会社名" name="convinience_name" class="c-form__area__text">
 <br/>
 
@@ -185,17 +184,20 @@
     @enderror    
 </span>
 <br/>
+
 <input placeholder="都道府県以外の住所を記述" name="adress" class="c-form__area__text">
+
 {{-- <textarea placeholder="都道府県以外の住所記述" name="adress" class="c-formstaff__adress__text " ></textarea> --}}
+{{-- </div> --}}
 <button type="submit" class="c-register__custombutton">
     ユーザー登録
 </button>
+
 </form>
+{{-- </div> --}}
 @endisset
-{{-- </div> --}}
-{{-- </div> --}}
-{{-- </div> --}}
-<div id=app>
-<footer-component></footer-component>
-</div>
+<div id="app">
+    <footer-component></footer-component>
+    </div>
+    
 @endsection

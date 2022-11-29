@@ -13,7 +13,7 @@
                     @endisset
                         @csrf
     <div class="c-form__area">
-                            <span for="email" class="c-form__area__message">email:
+<span for="email" class="c-form__area__message">email:
 <span>
     @error('email')
     <span class="c-errormessage" role="alert">
@@ -43,19 +43,17 @@
 {{-- パスワードリマインダーここから --}}
 <br/>
 <div class="c-loginarea">
-                                    <input class="" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+<input class="" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                                         {{ __('Remember Me') }}
                                 <button type="submit" class="c-login__button">
                                     {{ __('Login') }}
                                 </button>
                                 <br/>
                             </div>
-
                                 @if (Route::has(isset($authgroup) ? $authgroup.'.password.request' : 'password.request'))
                                 <a class="c-remind__text" href="{{ route(isset($authgroup) ? $authgroup.'.password.request' : 'password.request') }}">
                                     {{ __('Forgot Your Password?') }}
                                 </a>
-                            {{-- </button> --}}
                             @endif
                                 {{-- パスワードリマインダーここまで --}}
                             </div>
