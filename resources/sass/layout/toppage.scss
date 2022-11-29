@@ -3,207 +3,58 @@
 }
 
 .l-topimg {
-    width: 50%;
-    //opacity: 0.9;
-    // background-image: url("https://s3.ap-northeast-1.amazonaws.com/webukatu-haikikaku.com/awss3/toppage.jpg");
-
-    // background-blend-mode: lighten;
-    //padding-top: 100px;
-    // padding-bottom: 100px;
-    // height: 1000px;
+    // width: 50%;
+    height: 900px;
+    background: white;
+    position: hiden;
+}
+.l-topimg__area {
+    //width: 50%;
+    width: 100%;
 }
 .l-top__titlearea {
-    // background: rgba(255, 255, 255, 0.6);
-    width: 50%;
-    // height: 350px;
-    // margin-left: auto;
-    //margin-right: auto;
+    margin-top: 10%;
+    margin-left: 24%;
+    // padding: 20px;
+    // margin-right: auto;
     text-align: center;
+    font-size: size(xl);
     //  border-radius: size(ssss);
     @include mql() {
         // width: 80%;
-        height: 300px;
+        // height: 300px;
     }
 
     @include mq() {
-        height: 300px;
+        //     height: 300px;
         //   padding-left: size(s);
         //   padding-right: size(s);
     }
 }
-
-.l-top__title__text {
-    // display: inline;
-    color: white;
-    -webkit-text-stroke: size(sss) orange;
-    font-family: "Permanent Marker", cursive;
-    // font-size: 100px;
-    //margin-top: auto;
-    //margin-top: 60px;
-    //line-height: 190px;
-
-    @include mqxxl() {
-        font-size: 80px;
-        line-height: 240px;
-    }
-
-    @include mqxl() {
-        line-height: 220px;
-        -webkit-text-stroke: size(ssss) orange;
-        font-size: 60px;
-    }
-
-    @include mql() {
-        line-height: 180px;
-        font-size: size(4l);
-    }
-
-    @include mqm() {
-        font-size: size(xxl);
-    }
-}
-
-.l-top__title__text2 {
-    color: white;
-    -webkit-text-stroke: size(sss) orange;
-    font-family: "Permanent Marker", cursive;
-    font-size: 80px;
-    // line-height: 40px;
-    @include mqxxl() {
-        -webkit-text-stroke: size(ssss) orange;
-        font-size: size(4l);
-        line-height: 20px;
-    }
-
-    @include mql() {
-        font-size: size(2l);
-        line-height: 0px;
-    }
-
-    @include mqm() {
-        font-size: size(xl);
-    }
-
-    @include mq() {
-        -webkit-text-stroke: size(sssss) orange;
-    }
-}
-.l-top__area__form {
-    background: rgba(255, 255, 255, 0.7);
-    display: flex;
-    border-radius: size(sssss);
-    justify-content: center;
-    height: 200px;
-    margin-bottom: 100px;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 100px;
-    @include mql() {
-        width: 90%;
-        top: 600px;
-    }
-
-    @include mq() {
-        width: 80%;
-    }
-}
-.l-top__area__form2 {
-    display: flex;
-    justify-content: center;
-    height: 200px;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    @include mql() {
-        width: 90%;
-        top: 690px;
-    }
-    @include mq() {
-        width: 80%;
-    }
-}
-
-//=================================
-//ボタンを押された時に表示される機能(お客様）
-//=================================
-.l-top__area__form__custom {
-    border: solid size(sssss) #174113;
-    border-radius: size(4l);
-    background: rgba(255, 255, 255, 0.6);
-    height: 740px;
-    margin-top: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 50px;
-    padding-left: size(m);
-    padding-right: size(m);
-    padding-bottom: size(m);
-    width: 80%;
-    /*
-    @include mqxl() {
-        height: 300px;
-    }
-
-    @include mql() {
-        height: 350px;
-    }
-
-    @include mqm() {
-        height: 400px;
-    }
-    */
-}
-
-//=================================
-//ボタンを押された時に表示される機能(コンビニ）
-//=================================
-
-.l-top__area__form__custom__button {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    height: 600px;
-    @include mq() {
-        margin-top: -10px;
-        font-size: size(ss);
-        width: 100%;
-    }
-}
-
-//======================================================================
-//ボタンエリア (コンポーネントcに変換すること) お客様として始める管理者として始める
-//======================================================================
-.l-top__area__form__button {
-    //background: red;
-    color: white;
-    background: #174113;
-    font-size: 20px;
-    width: 40%;
-    text-align: center;
-    margin-left: size(xl);
-    margin-right: size(xl);
-    margin-top: auto;
-    margin-bottom: auto;
-    height: 50px;
-    border-radius: size(s);
-    transition: 0.8s;
+.l-top__titlearea__text {
+    // line-height: size(l);
+    display: block;
+    // background: red;
+    // line-height: ;
+    // margin-top: 100px;
+    // padding-top: 20px;
+    transition: all;
     &:hover {
-        background: orange;
-    }
-    @include mqxl() {
-        //980px以下
-        width: 75%;
-    }
-    @include mql() {
-        //720px以下
-        width: 60%;
-    }
-    @include mqm() {
-        //560px対応
-        width: 65%;
+        transition: 0.3s;
+
+        color: orange;
+        font-size: size(xl);
+        border-bottom: solid orange;
     }
 }
+.c-topfooter {
+    display: block;
+    //background: red;
+    margin-top: auto;
+    line-height: 300px;
+    text-align: center;
+}
+
 //==================================
 //アニメーション管理するもの(modifyにする
 //==================================

@@ -7,49 +7,45 @@
 {{-- l-top__title__text --}}
 <body>
 
- {{-- <div class="l-top"> --}}
+ <div class="l-top" id="app">
     <div class="l-topimg">
-    <img src="https://s3.ap-northeast-1.amazonaws.com/webukatu-haikikaku.com/awss3/toppage.jpg">
-    <a href="login">
-        お客様ログイン
+    <img src="https://s3.ap-northeast-1.amazonaws.com/webukatu-haikikaku.com/awss3/toppage.jpg" class="l-topimg__area">
+   <p class="c-topfooter"> © 2022 taguchi kakuto</p>
+   
+</div>
+    <div class="l-top__titlearea">
+    <a href="login" class="l-top__titlearea__text">
+        Custom Login
     </a>
     <br />
-    <a href="./register">
-        お客様ユーザー登録
+    <a href="./register" class="l-top__titlearea__text">
+        Custom Register
     </a>
     <br />
-    <a href="./login/admin">
-        コンビニログイン
+    <a href="./login/admin" class="l-top__titlearea__text">
+        Admin Login
     </a>
     <br />
-    <a href="./register/admin">
-        コンビニユーザー登録
+    <a href="./register/admin" class="l-top__titlearea__text">
+        Admin Register
     </a>
-    <br />
-
-
-{{-- <h1 class="">haiki share</h1> --}}
-{{-- <h3 class="">convenience store</h3> 
-    <a href="login">
-        お客様ログイン
-    </a>
-    <br />
-    <a href="./register">
-        お客様ユーザー登録
-    </a>
-    <br />
-    <a href="./login/admin">
-        コンビニログイン
-    </a>
-    <br />
-    <a href="./register/admin">
-        コンビニユーザー登録
-    </a>
-    <br />
---}}
-
+    <br/>
     </div>
     </div>
+    {{-- 
+<footer>
+    © 2022 taguchi kakuto
+</footer>
+ --}}
+ {{-- 
+<style>
+    footer{
+        background: white;
+        width: 52%;
+        height:250px;
+    }
+</style>
+ --}}
 </body>
 
 </html>
