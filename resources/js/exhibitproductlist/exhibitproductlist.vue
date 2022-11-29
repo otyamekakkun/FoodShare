@@ -48,10 +48,8 @@ exhibitproductlist
                                 {{ item.product_name }}
                             </li>
                             <li class="c-staffmypagelistarea__list__price">
-                                {{ item.price }}円.
+                                {{ item.price }}円
                             </li>
-                            <!-- <div class="c-productlist__items__bottom"> -->
-                            <!-- <button class="c-productlist__items__bottom__area"> -->
                             <a
                                 v-bind:href="`${item.id}}/staff_productdetail`"
                                 class="c-staffmypagelistarea__list__a"
@@ -59,21 +57,13 @@ exhibitproductlist
                             >
                             <!-- </button> -->
                             <div v-if="item.bought <= 0">
-                                <!-- 
-                                <button
-                                    class="c-productlist__items__bottom__area"
-                                >
-                                 -->
                                 <a
                                     v-bind:href="`${item.id}}/staff_productedit`"
                                     class="c-staffmypagelistarea__list__a"
                                     >商品を編集↗︎</a
                                 >
-                                <!-- </button> -->
                             </div>
-                            <!-- </div> -->
                         </div>
-                        <!-- </ul> -->
                     </div>
                 </div>
 
@@ -113,7 +103,7 @@ export default {
             return {
                 products: "", //からのデータを用意する。
                 currentPage: 1,
-                perPage: 10,
+                perPage: 8,
             };
         }
     },

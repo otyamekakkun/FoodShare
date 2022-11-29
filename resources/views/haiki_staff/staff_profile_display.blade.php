@@ -154,7 +154,6 @@
 
 <input name="adress" class="c-form__area__text" type="text" value="{{$admin->adress}}" >
 </div>
-
             <input type="submit" class="c-register__custombutton" value="変更する">
         </form>
 <div id="app">

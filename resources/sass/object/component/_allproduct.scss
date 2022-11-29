@@ -191,6 +191,8 @@
 .c-staffmypagelistarea__list {
     //display: flex;
     flex-wrap: 800px;
+    background: #f6f5f4;
+    padding-bottom: 3%;
 
     margin: auto;
     width: 80%;
@@ -285,6 +287,8 @@
 
 .c-staffmypagelistarea__text {
     text-align: center;
+    //  width: 100%;
+    //  background: cyan;
 }
 
 .c-staffmypagelistarea__title1 {

@@ -26,7 +26,7 @@
                                 {{ item.product_name }}
                             </li>
                             <li class="c-staffmypagelistarea__list__price">
-                                {{ item.price }}円.
+                                {{ item.price }}円
                             </li>
                             <a
                                 v-bind:href="`${item.id}/shopper_productdetail`"

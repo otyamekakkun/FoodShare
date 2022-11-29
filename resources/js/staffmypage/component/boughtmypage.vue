@@ -28,7 +28,7 @@
                                     {{ item.product_name }}
                                 </li>
                                 <li class="c-staffmypagelistarea__list__price">
-                                    {{ item.price }}円.
+                                    {{ item.price }}円
                                 </li>
                                 <a
                                     v-bind:href="`haiki/${item.id}}/staff_productdetail`"

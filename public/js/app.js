@@ -5348,7 +5348,7 @@ __webpack_require__.r(__webpack_exports__);
         products: "",
         //からのデータを用意する。
         currentPage: 1,
-        perPage: 10
+        perPage: 8
       };
     }
   },
@@ -5898,7 +5898,7 @@ var render = function render() {
       staticClass: "c-staffmypagelistarea__list__name"
     }, [_vm._v("\n                            " + _vm._s(item.product_name) + "\n                        ")]), _vm._v(" "), _c("li", {
       staticClass: "c-staffmypagelistarea__list__price"
-    }, [_vm._v("\n                            " + _vm._s(item.price) + "円.\n                        ")]), _vm._v(" "), _c("a", {
+    }, [_vm._v("\n                            " + _vm._s(item.price) + "円\n                        ")]), _vm._v(" "), _c("a", {
       staticClass: "c-staffmypagelistarea__list__a",
       attrs: {
         href: "".concat(item.id, "}/staff_productdetail")
@@ -6327,7 +6327,7 @@ var render = function render() {
       staticClass: "c-staffmypagelistarea__list__name"
     }, [_vm._v("\n                            " + _vm._s(item.product_name) + "\n                        ")]), _vm._v(" "), _c("li", {
       staticClass: "c-staffmypagelistarea__list__price"
-    }, [_vm._v("\n                            " + _vm._s(item.price) + "円.\n                        ")]), _vm._v(" "), _c("a", {
+    }, [_vm._v("\n                            " + _vm._s(item.price) + "円\n                        ")]), _vm._v(" "), _c("a", {
       staticClass: "c-staffmypagelistarea__list__a",
       attrs: {
         href: "".concat(item.id, "/shopper_productdetail")
@@ -6446,7 +6446,7 @@ var render = function render() {
       staticClass: "c-staffmypagelistarea__list__name"
     }, [_vm._v("\n                            " + _vm._s(item.product_name) + "\n                        ")]), _vm._v(" "), _c("li", {
       staticClass: "c-staffmypagelistarea__list__price"
-    }, [_vm._v("\n                            お値段:" + _vm._s(item.price) + "円.\n                        ")]), _vm._v(" "), _c("a", {
+    }, [_vm._v("\n                            お値段:" + _vm._s(item.price) + "円\n                        ")]), _vm._v(" "), _c("a", {
       staticClass: "c-staffmypagelistarea__list__a",
       attrs: {
         href: "".concat(item.id, "}/staff_productdetail")
@@ -6527,7 +6527,7 @@ var render = function render() {
       staticClass: "c-staffmypagelistarea__list__name"
     }, [_vm._v("\n                                " + _vm._s(item.product_name) + "\n                            ")]), _vm._v(" "), _c("li", {
       staticClass: "c-staffmypagelistarea__list__price"
-    }, [_vm._v("\n                                " + _vm._s(item.price) + "円.\n                            ")]), _vm._v(" "), _c("a", {
+    }, [_vm._v("\n                                " + _vm._s(item.price) + "円\n                            ")]), _vm._v(" "), _c("a", {
       staticClass: "c-staffmypagelistarea__list__a",
       attrs: {
         href: "haiki/".concat(item.id, "}/staff_productdetail")

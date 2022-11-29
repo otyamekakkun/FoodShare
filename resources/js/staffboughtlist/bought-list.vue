@@ -43,7 +43,7 @@ bought-list
                                 {{ item.product_name }}
                             </li>
                             <li class="c-staffmypagelistarea__list__price">
-                                お値段:{{ item.price }}円.
+                                お値段:{{ item.price }}円
                             </li>
                             <a
                                 v-bind:href="`${item.id}}/staff_productdetail`"

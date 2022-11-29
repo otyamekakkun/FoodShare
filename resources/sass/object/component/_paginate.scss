@@ -22,7 +22,6 @@
     margin: size(s);
     padding: size(s);
     font-size: size(m);
-    // border: solid size(sssss);
     border-radius: size(sss);
     background: #174113;
     transition: all 0.5s;
@@ -48,7 +47,7 @@
         margin: size(sssss);
     }
     &:hover {
-        // background: orange;
+        background: orange;
     }
 }
 .page-link {

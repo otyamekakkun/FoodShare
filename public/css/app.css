@@ -928,6 +928,10 @@ a {
     margin: 2px;
   }
 }
+.page-item:hover {
+  background: orange;
+}
+
 .page-link {
   display: inline;
   font-size: 25px;
@@ -1140,6 +1144,8 @@ a {
 
 .c-staffmypagelistarea__list {
   flex-wrap: 800px;
+  background: #f6f5f4;
+  padding-bottom: 3%;
   margin: auto;
   width: 80%;
 }
