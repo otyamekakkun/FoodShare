@@ -2,14 +2,6 @@ require("./bootstrap");
 window.Vue = require("vue").default;
 
 //===========================================
-// topページのコンポーネント
-//===========================================
-Vue.component(
-    "toppage-component",
-    require("./toppage/toppageComponent.vue").default
-);
-
-//===========================================
 // フッターのコンポーネント
 //===========================================
 Vue.component(

@@ -13,9 +13,24 @@
 <div class="l-top__titlearea">
 <h1 class="l-top__title__text">haiki share</h1>
 <h3 class="l-top__title__tex">convenience store</h3>
-{{-- ボタンエリアを作る --}}
-<div id="app">
-    <toppage-component></toppage-component>
+    <div>
+        <a href="login">
+            お客様ログイン
+        </a>
+        <br />
+        <a href="./register">
+            お客様ユーザー登録
+        </a>
+        <br />
+        <a href="./login/admin">
+            コンビニログイン
+        </a>
+        <br />
+        <a href="./register/admin">
+            コンビニユーザー登録
+        </a>
+        <br />
+
 </div>
 </div>
 </body>
