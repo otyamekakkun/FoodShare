@@ -6311,8 +6311,7 @@ var render = function render() {
       id: "upload_image",
       type: "file",
       name: "img_path",
-      accept: "image/*",
-      src: _vm.img
+      accept: "image/*"
     },
     on: {
       change: function change($event) {

@@ -22,7 +22,6 @@
                         @change="uploadFile($event)"
                         style="display: none"
                         accept="image/*"
-                        v-bind:src="img"
                     />
                     <p class="c-staffform__area__uploadimgarea">写真を選択</p>
                 </label>
