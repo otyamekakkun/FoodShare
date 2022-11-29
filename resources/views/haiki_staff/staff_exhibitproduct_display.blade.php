@@ -15,7 +15,7 @@
         </h1>
     {{-- </div> --}}
         <div class="c-staffform__area">
-            <h1 class="">出品されたい商品の情報について記述してください</h1>
+            <h1 class="c-staffform__areatitle">出品されたい商品の情報について記述してください</h1>
     <form method="POST" action="{{ route('create.exhibit') }}" enctype="multipart/form-data">
         @csrf
         <drag-component></drag-component>

@@ -899,9 +899,8 @@ a {
   margin: 15px;
   padding: 15px;
   font-size: 20px;
-  border: solid 2px;
   border-radius: 5px;
-  background: rgb(238, 238, 238);
+  background: #174113;
   transition: all 0.5s;
 }
 @media screen and (max-width:1090px) {
@@ -929,14 +928,11 @@ a {
     margin: 2px;
   }
 }
-.page-item:hover {
-  background: orange;
-}
-
 .page-link {
   display: inline;
   font-size: 25px;
   text-align: center;
+  color: white;
 }
 
 .c-productlist__sentence {
@@ -1391,15 +1387,13 @@ a {
   display: block;
   background: #174113;
   margin-top: 180px;
-  margin-left: 800px;
+  margin-left: 64%;
   height: 60px;
   width: 20%;
   border: none;
   border-radius: 10px;
   color: white;
   transition: all 1.2s;
-  margin-left: auto;
-  margin-right: auto;
 }
 .c-staffform__area__submitbutton:hover {
   background: orange;
@@ -1407,13 +1401,6 @@ a {
 @media screen and (max-width:1090px) {
   .c-staffform__area__submitbutton {
     width: 30%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-@media screen and (max-width:980px) {
-  .c-staffform__area__submitbutton {
-    margin-top: 100px;
   }
 }
 @media screen and (max-width: 720px) {
@@ -1672,6 +1659,13 @@ a {
   }
 }
 
+.c-staffform__areatitle {
+  display: block;
+  margin-top: 20px;
+  font-size: 25px;
+  border-bottom: #174113 solid;
+}
+
 .c-staffform__area__side {
   width: 100%;
   margin-top: 10%;
@@ -1911,12 +1905,10 @@ a {
 }
 
 .c-staffform__area__textname {
-  height: 40px;
+  height: 50px;
   background: white;
-  font-size: 20px;
-  margin-right: 50px;
   margin-bottom: 25px;
-  width: 80%;
+  width: 60%;
 }
 .c-form__adresstitle {
   margin-top: 20px;

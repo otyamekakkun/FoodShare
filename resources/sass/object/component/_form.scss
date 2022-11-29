@@ -100,28 +100,24 @@
     display: block;
     background: #174113;
     margin-top: 180px;
-    margin-left: 800px;
+    margin-left: 64%;
     height: 60px;
     width: 20%;
     border: none;
     border-radius: size(ss);
     color: white;
     transition: all 1.2s;
-    margin-left: auto;
-    margin-right: auto;
 
     &:hover {
         background: orange;
     }
     @include mqxxl() {
         width: 30%;
-        margin-left: auto;
-        margin-right: auto;
 
         //レスポンシブ対策960px以下にボタンを対応
     }
     @include mqxl() {
-        margin-top: 100px;
+        //  margin-top: 100px;
     }
 
     @include mql() {
@@ -369,9 +365,7 @@
 // コンビニ側商品を出品する画面と編集する画面 staff_exhibitproduct and updateproduct
 //=========================================================================
 //c-form4は商品を編集する画面＋ユーザー登録のshopper側の画面
-
 //お客様ログイン画面。
-
 //商品を出品する画面と商品を編集する画面
 .c-staffform__area {
     width: 80%;
@@ -389,7 +383,12 @@
         height: 1200px;
     }
 }
-
+.c-staffform__areatitle {
+    display: block;
+    margin-top: size(m);
+    font-size: size(l);
+    border-bottom: #174113 solid;
+}
 //..................................................フォームエリア大枠を構成するところここまで
 //===========================================================
 //画面のタイトル文字
@@ -663,17 +662,14 @@
     }
 }
 .c-staffform__area__textname {
-    height: 40px;
+    height: 50px;
     background: white;
-    font-size: size(m);
-    //  text-align: center;
-    // margin: size(sss);
-    margin-right: size(4l);
+    // font-size: size(l);
+    //  margin-right: 8%;
+    // margin-right: size(4l);
     margin-bottom: size(l);
-    width: 80%;
+    width: 60%;
     @include mqxl() {
-        //960px以下から縦画面にする
-        //width: 100%;
     }
     @include mql() {
         //720px以下

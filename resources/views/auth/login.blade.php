@@ -25,7 +25,6 @@
                             <br/>
                                 <input id="" type="email" class="c-form__area__text" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="emailを入力してください">
                                 <br/>
-                                {{-- email入力欄ここまで --}}
                             {{-- パスワード入力欄ここから --}}
 <span for="password" class="c-form__area__message">パスワード:
 <span>
