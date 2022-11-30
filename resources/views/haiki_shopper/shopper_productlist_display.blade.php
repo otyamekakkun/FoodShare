@@ -9,8 +9,7 @@
         @include('header.shopper.shopper_header') 
         </header>
         <h3 class="c-detail__title">
-            商品一覧</h3>
-
+            Product List</h3>
         <div id="app">
 <productlist-component><productlist-component>
  <footer-component></footer-component>

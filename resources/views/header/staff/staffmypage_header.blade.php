@@ -1,6 +1,6 @@
         <div class="l-header">
       <!-- ヘッダーロゴ -->
-      <h1 class="l-header__title">staff専用</h1>
+      <h1 class="l-header__title">HaikiShare Staff</h1>
 
       <!-- ハンバーガーメニュー部分 -->
       {{-- <div class="nav"> いらないかも--}}

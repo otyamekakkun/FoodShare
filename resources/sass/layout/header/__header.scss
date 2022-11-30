@@ -4,15 +4,15 @@
 .l-header {
     display: flex;
     align-items: justify-content;
-    background: #174113;
+    background: white;
     width: 100%;
     text-align: center;
 }
 
 .l-header__title {
-    font-family: "Permanent Marker", cursive;
+    //font-family: "Permanent Marker", cursive;
     font-size: size(4l);
-    color: white;
+    // color: white;
     padding: size(m);
     margin-left: size(m);
     @include mq() {
@@ -73,7 +73,8 @@
     height: 5px;
     width: 30px;
     border-radius: 3px;
-    background: white;
+    background: black;
+    //color: black;
     transition: 0.5s;
     position: absolute;
 }
@@ -140,11 +141,15 @@
 
 /*ヘッダー部分のログアウトボタン*/
 .l-header__nav__button {
-    border-radius: size(sss);
+    //border-radius: size(sss);
+    border: none;
+    color: black;
     transition: all 0.3s;
     &:hover {
-        background: orange;
-        font-size: size(xl);
+        // background: orange;
+        font-size: size(xxl);
+        border-bottom: solid 3px;
+        color: orange;
     }
 }
 
