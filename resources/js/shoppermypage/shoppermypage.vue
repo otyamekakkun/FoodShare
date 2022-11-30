@@ -15,11 +15,8 @@
     <div id="app">
         <main>
             <div class="c-staffmypagelistarea__title1">
-                <h1 class="">これまでに購入された商品(一覧)</h1>
+                <h1>これまでに購入された商品(一覧)</h1>
             </div>
-
-            <!-- <div class="c-staffmypagelistarea"> -->
-            <!-- <div class="c-staffmypagelistareaarea"> -->
             <shoppermypage-view
                 :products="this.products"
                 :getItems="this.getItems"

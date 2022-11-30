@@ -14,7 +14,6 @@ shoppermypageコンポーネントでお客様が購入された商品を取得�
                 MyPage
             </h1>
             <div id="app">
-
 <shoppermypage-component></shoppermypage-component>
 <footer-component></footer-component>
 </div>
