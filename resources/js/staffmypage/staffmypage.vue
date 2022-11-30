@@ -1,6 +1,5 @@
-<!--         
-ページネーションの仕組みを利用して最新５件だけ表示されるシステムを構築した。
-出品した商品最新5件なのでreverse()メソッドで呼び出す配列の順序を逆にした。
+<!--   
+    出品した商品のマイページ
  -->
 
 <template>
@@ -15,11 +14,9 @@
 <script>
 import axios from "axios";
 import mypageproduct from "./component/mypageproduct.vue";
-
 export default {
-    //  props: ["pro", "getitems"],
     components: {
-        mypageproduct: mypageproduct,
+        mypageproduct,
     },
     data: function () {
         {
@@ -46,9 +43,9 @@ export default {
         },
     },
 
-    mounted() {
-        const url = "/haiki/index3";
-        axios.get(url).then((response) => (this.products = response.data));
+    async mounted() {
+        const response = await axios.get("/haiki/index3");
+        this.products = response.data;
     },
 };
 </script>

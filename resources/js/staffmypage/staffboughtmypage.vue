@@ -1,7 +1,5 @@
 <!-- 
-ページネーションの仕組みを利用して最新５件だけ表示されるシステムを構築しました。
-商品編集したらupdate_atの時刻が変わってしまい、購入された最新5件が変わってしまう可能性がありそうが、そもそも購入された時点で
-商品を編集できないようにプログラムされているので、update_atで比較して最新５件を表示することを実装しました。
+    コンビニスタッフマイページの購入された商品一覧を写すもの
  -->
 
 <template>
@@ -18,7 +16,7 @@ import axios from "axios";
 import mypagebought from "./component/boughtmypage.vue";
 export default {
     components: {
-        mypagebought: mypagebought,
+        mypagebought,
     },
     data: function () {
         {
@@ -45,9 +43,9 @@ export default {
         },
     },
 
-    mounted() {
-        const url = "/haiki/index5";
-        axios.get(url).then((response) => (this.products = response.data));
+    async mounted() {
+        const response = await axios.get("/haiki/index5");
+        this.products = response.data;
     },
 };
 </script>

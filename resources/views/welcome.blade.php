@@ -4,9 +4,7 @@
 <header>
     @include('header.other.otherheader')
 </header>
-{{-- l-top__title__text --}}
 <body>
-
  <div class="l-top" id="app">
     <div class="l-topimg">
     <img src="https://s3.ap-northeast-1.amazonaws.com/webukatu-haikikaku.com/awss3/toppage.jpg" class="l-topimg__area">
@@ -32,20 +30,6 @@
     <br/>
     </div>
     </div>
-    {{-- 
-<footer>
-    © 2022 taguchi kakuto
-</footer>
- --}}
- {{-- 
-<style>
-    footer{
-        background: white;
-        width: 52%;
-        height:250px;
-    }
-</style>
- --}}
 </body>
 
 </html>
