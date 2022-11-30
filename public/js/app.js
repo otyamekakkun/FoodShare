@@ -6373,7 +6373,11 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", [_c("div", [_c("div", [_c("h1", {}, [_vm._v("商品を検索する")]), _vm._v(" "), _c("p", {}, [_vm._v(":都道府県で探す")]), _vm._v(" "), _c("input", {
+  return _c("div", [_c("div", [_c("div", [_vm._m(0), _vm._v(" "), _c("div", {
+    staticClass: "c-searcharea"
+  }, [_c("div", {
+    staticClass: "c-search"
+  }, [_c("p", {}, [_vm._v("都道府県を選択:")]), _vm._v(" "), _c("select", {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -6381,19 +6385,210 @@ var render = function render() {
       expression: "keywords"
     }],
     attrs: {
-      type: "text",
-      placeholder: "都道府県を入力してください"
-    },
-    domProps: {
-      value: _vm.keywords
+      name: "prefecture"
     },
     on: {
-      input: function input($event) {
-        if ($event.target.composing) return;
-        _vm.keywords = $event.target.value;
+      change: function change($event) {
+        var $$selectedVal = Array.prototype.filter.call($event.target.options, function (o) {
+          return o.selected;
+        }).map(function (o) {
+          var val = "_value" in o ? o._value : o.value;
+          return val;
+        });
+        _vm.keywords = $event.target.multiple ? $$selectedVal : $$selectedVal[0];
       }
     }
-  }), _vm._v(" "), _c("p", {}, [_vm._v(":予算内の金額で検索")]), _vm._v(" "), _c("input", {
+  }, [_c("option", {
+    attrs: {
+      value: "北海道"
+    }
+  }, [_vm._v("北海道")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "青森県"
+    }
+  }, [_vm._v("青森県")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "岩手県"
+    }
+  }, [_vm._v("岩手県")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "宮城県"
+    }
+  }, [_vm._v("宮城県")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "秋田県"
+    }
+  }, [_vm._v("秋田県")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "山形県"
+    }
+  }, [_vm._v("山形県")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "福島県"
+    }
+  }, [_vm._v("福島県")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "茨城県"
+    }
+  }, [_vm._v("茨城県")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "栃木県"
+    }
+  }, [_vm._v("栃木県")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "群馬県"
+    }
+  }, [_vm._v("群馬県")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "埼玉県"
+    }
+  }, [_vm._v("埼玉県")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "千葉県"
+    }
+  }, [_vm._v("千葉県")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "東京都"
+    }
+  }, [_vm._v("東京都")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "神奈川県"
+    }
+  }, [_vm._v("神奈川県")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "新潟県"
+    }
+  }, [_vm._v("新潟県")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "富山県"
+    }
+  }, [_vm._v("富山県")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "石川県"
+    }
+  }, [_vm._v("石川県")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "福井県"
+    }
+  }, [_vm._v("福井県")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "山梨県"
+    }
+  }, [_vm._v("山梨県")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "長野県"
+    }
+  }, [_vm._v("長野県")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "岐阜県"
+    }
+  }, [_vm._v("岐阜県")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "静岡県"
+    }
+  }, [_vm._v("静岡県")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "愛知県"
+    }
+  }, [_vm._v("愛知県")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "三重県"
+    }
+  }, [_vm._v("三重県")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "滋賀県"
+    }
+  }, [_vm._v("滋賀県")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "京都府"
+    }
+  }, [_vm._v("京都府")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "大阪府"
+    }
+  }, [_vm._v("大阪府")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "兵庫県"
+    }
+  }, [_vm._v("兵庫県")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "奈良県"
+    }
+  }, [_vm._v("奈良県")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "和歌山県"
+    }
+  }, [_vm._v("和歌山県")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "鳥取県"
+    }
+  }, [_vm._v("鳥取県")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "島根県"
+    }
+  }, [_vm._v("島根県")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "岡山県"
+    }
+  }, [_vm._v("岡山県")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "広島県"
+    }
+  }, [_vm._v("広島県")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "山口県"
+    }
+  }, [_vm._v("山口県")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "徳島県"
+    }
+  }, [_vm._v("徳島県")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "香川県"
+    }
+  }, [_vm._v("香川県")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "愛媛県"
+    }
+  }, [_vm._v("愛媛県")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "高知県"
+    }
+  }, [_vm._v("高知県")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "福岡県"
+    }
+  }, [_vm._v("福岡県")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "佐賀県"
+    }
+  }, [_vm._v("佐賀県")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "長崎県"
+    }
+  }, [_vm._v("長崎県")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "熊本県"
+    }
+  }, [_vm._v("熊本県")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "大分県"
+    }
+  }, [_vm._v("大分県")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "宮崎県"
+    }
+  }, [_vm._v("宮崎県")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "鹿児島県"
+    }
+  }, [_vm._v("鹿児島県")]), _vm._v(" "), _c("option", {
+    attrs: {
+      value: "沖縄県"
+    }
+  }, [_vm._v("沖縄県")])])]), _vm._v(" "), _c("div", {
+    staticClass: "c-search"
+  }, [_c("p", {}, [_vm._v("金額を入力:")]), _vm._v(" "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -6412,7 +6607,9 @@ var render = function render() {
         _vm.budgets = $event.target.value;
       }
     }
-  }), _vm._v(" "), _c("div", {}, [_vm._v("\n                :有効期限チェック\n                "), _c("input", {
+  }), _vm._v("円以下の商品を表示\n                    ")]), _vm._v(" "), _c("div", {
+    staticClass: "c-search"
+  }, [_vm._v("\n                        有効期限チェック:\n                        "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -6432,7 +6629,7 @@ var render = function render() {
         _vm.Days2 = $event.target.value;
       }
     }
-  })]), _vm._v(" "), _c("div", {
+  })])]), _vm._v(" "), _c("div", {
     staticClass: "c-staffmypagelistarea"
   }, _vm._l(_vm.filteredProducts, function (product) {
     return product.best_by_date >= _vm.Days2 && product.bought <= 0 ? _c("div", {
@@ -6449,9 +6646,9 @@ var render = function render() {
       staticClass: "c-staffmypagelistarea__text"
     }, [_c("li", {
       staticClass: "c-staffmypagelistarea__list__name"
-    }, [_vm._v("\n                                " + _vm._s(product.product_name) + "\n                            ")]), _vm._v(" "), _c("li", {
+    }, [_vm._v("\n                                    " + _vm._s(product.product_name) + "\n                                ")]), _vm._v(" "), _c("li", {
       staticClass: "c-staffmypagelistarea__list__price"
-    }, [_vm._v("\n                                " + _vm._s(product.price) + "円.\n                            ")]), _vm._v(" "), _c("a", {
+    }, [_vm._v("\n                                    " + _vm._s(product.price) + "円.\n                                ")]), _vm._v(" "), _c("a", {
       staticClass: "c-staffmypagelistarea__list__a",
       attrs: {
         href: "".concat(product.id, "}/shopper_productdetail")
@@ -6460,7 +6657,14 @@ var render = function render() {
   }), 0)])])]);
 };
 
-var staticRenderFns = [];
+var staticRenderFns = [function () {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("div", {
+    staticClass: "c-staffmypagelistarea__title1"
+  }, [_c("h1", [_vm._v("商品の条件を絞り込む")])]);
+}];
 render._withStripped = true;
 
 
