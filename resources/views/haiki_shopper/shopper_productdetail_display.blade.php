@@ -16,10 +16,6 @@
    (productdetail-component)
    商品の画像、名前、賞味期限、金額、出品都道府県、購入フラグをvueのproductdetail-componentに渡して商品の詳細を表示したもの。
    コンビニ側の商品詳細と併用している。
-
-   c-productdetail__shoppermenu
-c-shopper__action
-c-shopper__action__button
     --}}
 @extends('layouts.app4')
 @section('content')
@@ -36,13 +32,11 @@ c-shopper__action__button
         </productdetail-component>
 @if($products->bought<=0)
     <form class="" action="{{ route('bought.update',$products->id)}}" enctype="multipart/form-data" method="post">
-        <div class="">    
             <button class="">
                 <i class="fab fa-twitter fa-fw"></i>この商品をシェアする</button> </a>        
             <a  href="https://twitter.com/intent/tweet?text=haiki share 商品名{{$products->product_name}}について自由に書いて広めよう!!" target="_blank_" rel="nofollow">
         @csrf
         <button class="">商品を買う！</button>
-        </div>
     </form>
 @endif
 
