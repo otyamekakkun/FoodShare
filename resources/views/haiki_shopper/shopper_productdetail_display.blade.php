@@ -21,9 +21,11 @@
 @section('content')
 @section('title', "商品詳細画面")
 <body>
-    <header>
-        @include('header.shopper.shopper_header') 
-        </header>
+
+        <header>
+            @include('header.shopper.shoppermypage_header') 
+            </header>
+            
 <div id="app">
     <main>
          <div> 

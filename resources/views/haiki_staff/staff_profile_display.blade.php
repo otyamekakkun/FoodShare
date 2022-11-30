@@ -6,7 +6,7 @@
 @section('title', "コンビニプロフィール編集")
 <body>
     <header>
-        @include('header.staff.staff_header')
+        @include('header.staff.staffmypage_header')
     </header>
 
     <h3 class="c-detail__title">コンビニ情報編集</h3>

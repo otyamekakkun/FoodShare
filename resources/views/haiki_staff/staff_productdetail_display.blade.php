@@ -6,8 +6,9 @@
 @section('title', "商品詳細画面")
 <body>
     <header>
-        @include('header.staff.staff_header')
+        @include('header.staff.staffmypage_header')
     </header>
+
     <div id="app">
         <h1 class="c-detail__title">商品詳細</h1>
 

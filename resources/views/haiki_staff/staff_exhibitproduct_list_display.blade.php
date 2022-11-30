@@ -8,8 +8,9 @@
 
 <body>
     <header>
-        @include('header.staff.staff_header')
+        @include('header.staff.staffmypage_header')
     </header>
+
     {{-- マイページみたいなものを導入 --}}
     <h1 class="c-detail__title">
     {{-- {{$admin->name}}様が出品された商品一覧 --}}

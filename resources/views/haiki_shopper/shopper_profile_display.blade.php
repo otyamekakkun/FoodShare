@@ -5,8 +5,9 @@
 
 <body>
     <header>
-        @include('header.shopper.shopper_header') 
+        @include('header.shopper.shoppermypage_header') 
         </header>
+        
     <main>
         <form method="POST" enctype="multipart/form-data" action="{{route('haiki_shopperprofile_edit',$user->id)}}">      
           {{-- <div class="c-form4"> --}}

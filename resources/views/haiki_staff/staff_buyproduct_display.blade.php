@@ -6,8 +6,9 @@
 @section('content')
 @section('title', "購入された商品一覧")
 <header>
-    @include('header.staff.staff_header')
+    @include('header.staff.staffmypage_header')
 </header>
+
 <body>
     <h1 class="c-detail__title">
 Bought List

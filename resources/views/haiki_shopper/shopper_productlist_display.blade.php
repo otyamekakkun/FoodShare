@@ -6,8 +6,9 @@
  
  <body>
     <header>
-        @include('header.shopper.shopper_header') 
+        @include('header.shopper.shoppermypage_header') 
         </header>
+        
         <h3 class="c-detail__title">
             Product List</h3>
         <div id="app">

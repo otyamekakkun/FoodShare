@@ -5,6 +5,8 @@
     display: flex;
     justify-content: center;
     width: 100%;
+    margin-top: 150px;
+    margin-bottom: 50px;
     @include mqxl() {
         display: flex;
         justify-content: center;
