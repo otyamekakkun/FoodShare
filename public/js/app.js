@@ -5314,7 +5314,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ["id", "img", "name", "price", "best_by_date", "prefecture", "bought"]
+  props: ["id", "img", "name", "price", "best_by_date", "prefecture", "bought", "convinience_name", "updated_at"]
 });
 
 /***/ }),
@@ -5898,23 +5898,25 @@ var render = function render() {
       _c = _vm._self._c;
 
   return _c("div", {
-    staticClass: "c-detail"
-  }, [_c("div", {}, [_c("img", {
-    staticClass: "c-detail__img",
+    staticClass: "c-productdetail"
+  }, [_c("div", [_c("img", {
+    staticClass: "c-productdetailimg",
     attrs: {
       src: _vm.img
     }
   })]), _vm._v(" "), _c("div", {
-    staticClass: "c-detail__sentence"
+    staticClass: "c-productdetail__area"
   }, [_c("li", {
-    staticClass: "c-detail__sentence__text"
+    staticClass: "c-productdetail__area__text"
   }, [_vm._v("商品名:　" + _vm._s(_vm.name))]), _vm._v(" "), _c("li", {
-    staticClass: "c-detail__sentence__text"
+    staticClass: "c-productdetail__area__text"
   }, [_vm._v("お値段:　" + _vm._s(_vm.price) + "円")]), _vm._v(" "), _c("li", {
-    staticClass: "c-detail__sentence__text"
-  }, [_vm._v("期限:　" + _vm._s(_vm.best_by_date))]), _vm._v(" "), _c("li", {
-    staticClass: "c-detail__sentence__text"
-  }, [_vm._v("\n            出品した県名:　" + _vm._s(_vm.prefecture) + "\n        ")])])]);
+    staticClass: "c-productdetail__area__text"
+  }, [_vm._v("\n            期限:　" + _vm._s(_vm.best_by_date) + "\n        ")]), _vm._v(" "), _c("li", {
+    staticClass: "c-productdetail__area__text"
+  }, [_vm._v("\n            出品した県名:　" + _vm._s(_vm.prefecture) + "\n        ")]), _vm._v(" "), _c("p", {
+    staticClass: "c-productdetail__area__sentence"
+  }, [_vm._v("\n            この商品は" + _vm._s(_vm.prefecture) + "(店名)" + _vm._s(_vm.convinience_name) + "が" + _vm._s(_vm.updated_at) + "に出品された商品です\n        ")])])]);
 };
 
 var staticRenderFns = [];

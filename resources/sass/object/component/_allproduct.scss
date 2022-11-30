@@ -85,114 +85,6 @@
 //======================================
 //商品詳細画面をまとめるもの コンポーネント部分
 //======================================
-.c-productdetail__info {
-    margin-top: 50px;
-    font-size: size(xxl);
-    text-align: center;
-    @include mqm() {
-        font-size: size(m);
-    }
-}
-
-.c-productdetail__imgarea {
-    border: dotted 3px #174113;
-    border-radius: 10px;
-    margin-top: size(xxl);
-    margin-left: auto;
-    margin-right: auto;
-    width: 60%;
-
-    @include mqxxl() {
-        width: 70%;
-        margin-top: size(xxl);
-    }
-    @include mql() {
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%;
-    }
-}
-.c-productdetail__title {
-    text-align: center;
-    width: 50%;
-    border: solid #174113;
-    background: orange;
-    color: white;
-    border-radius: size(s);
-    margin-left: size(xl);
-    margin-top: size(xl);
-    margin-bottom: size(xl);
-    font-size: size(m);
-    @include mqxxl() {
-        display: none;
-    }
-}
-.c-productdetail__img {
-    width: 70%;
-    height: 250px;
-    margin-top: size(xl);
-    margin-bottom: size(xl);
-    margin-left: size(xxl);
-    margin-right: size(xxl);
-    @include mqxxl() {
-        margin-top: size(xxl);
-    }
-    @include mq() {
-        margin-top: size(xxl);
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%;
-    }
-}
-
-.c-productdetail__listarea {
-    border: dotted 3px;
-    border-radius: 10px;
-    margin-top: 70px;
-    margin-bottom: 70px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 88%;
-    @include mqxxl() {
-        margin-top: size(xxl);
-    }
-    @include mq() {
-        width: 100%;
-    }
-}
-
-.c-productdetail__list {
-    text-align: left;
-    width: 65%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: size(2l);
-    font-size: size(xl);
-    height: 330px;
-}
-.c-productlist__items__listt__sentence {
-    margin-bottom: size(m);
-    border-bottom: double;
-    border-color: black;
-    @include mqxxl() {
-        font-size: size(m);
-        padding: size(sss);
-        margin-bottom: size(l);
-    }
-
-    @include mql() {
-        font-size: size(s);
-        margin-bottom: size(xxl);
-    }
-
-    @include mqm() {
-        font-size: size(ss);
-    }
-    @include mq() {
-        padding: size(sss);
-        margin-bottom: size(l);
-    }
-}
 //===================================================
 //共通化するエリアのコンポーネント部分 staffmypageのリスト
 //===================================================
@@ -318,3 +210,75 @@
 }
 
 // 商品詳細画面ここから作り直す
+.c-productdetail {
+    display: flex;
+    margin-top: 100px;
+    height: 500px;
+}
+.c-productdetailimg {
+    width: 600px;
+    height: 400px;
+}
+.c-productdetail__area {
+    color: black;
+    margin-top: 100px;
+    list-style: none;
+    width: 50%;
+    // background: white;
+    font-size: size(l);
+}
+.c-productdetail__area__text {
+    border-bottom: solid black;
+}
+.c-productdetail__area__sentence {
+    //  border-bottom: solid black;
+    margin-top: size(2l);
+}
+
+.c-productdetail__twitter {
+    // background: cyan;
+    //写真の中央揃えみたいな感じにできれば良い
+    margin-left: 300px;
+    font-size: size(m);
+    &:hover {
+        color: orange;
+        border-bottom: solid orange;
+    }
+}
+.c-productdetail__button {
+    // background: red;
+    display: block;
+    background: #4b4b4b;
+    text-align: center;
+    margin-top: 100px;
+    margin-left: 64%;
+    height: 60px;
+    width: 20%;
+    border: none;
+    border-radius: size(sssss);
+    color: white;
+    transition: all 1.2s;
+
+    &:hover {
+        background: orange;
+    }
+    @include mqxxl() {
+        width: 30%;
+
+        //レスポンシブ対策960px以下にボタンを対応
+    }
+    @include mqxl() {
+        //  margin-top: 100px;
+    }
+
+    @include mql() {
+        width: 40%;
+    }
+    @include mqm() {
+        width: 46%;
+    }
+
+    @include mq() {
+        width: 50%;
+    }
+}
