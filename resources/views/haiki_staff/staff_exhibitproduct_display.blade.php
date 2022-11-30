@@ -53,6 +53,7 @@
 </div>
     <input type="text" name="prefecture" value="{{$admins->prefecture}}" class="u-hidden">
     <input type="text" name="email" value="{{$admins->email}}" class="u-hidden">
+    <input type="text" name="convinience_name" value="{{$admins->convinience_name}}" class="u-hidden">
     <button type="submit" class="c-staffform__area__submitbutton">
         商品を出品する
     </button>

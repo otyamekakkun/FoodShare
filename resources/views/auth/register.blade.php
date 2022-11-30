@@ -4,11 +4,8 @@
 @isset($authgroup)
     {{--コンビニユーザー登録画面のフォームページにして良い--}}
     <h1 class="c-detail__title">スタッフユーザー登録</h1>
-    <p>お客様(コンビニスタッフ関係ではない)方は,トップページのお客様ユーザー登録というボタンからお入りになって登録をしてください</p>
-    {{-- <div class="c-form__area"> --}}
-
+    <p class="c-warning">お客様(コンビニスタッフ関係ではない)方は,トップページのお客様ユーザー登録というボタンからお入りになって登録をしてください</p>
 <form method="POST" action="{{ url("register/$authgroup") }}" class="c-form__area">
-
  @else
  {{-- ここからユーザー登録お客様のレイアウト --}}
  <h1 class="c-detail__title">ユーザー登録</h1>
@@ -53,12 +50,9 @@
                             </button>
                         </form>
                     </div>
-
                     @endisset
 {{-- ここまでがお客様のユーザー登録エリア --}}
                     @isset($authgroup)
-{{-- <div class="c-form__area"> --}}
-                    {{-- <form  method="POST" action="{{ url("register/$authgroup") }}"> --}}
                         @csrf
                             {{-- <div class="c-form__area"> --}}
                             <h1 class="c-form__title">（個人情報エリア）</h1>
@@ -186,9 +180,6 @@
 <br/>
 
 <input placeholder="都道府県以外の住所を記述" name="adress" class="c-form__area__text">
-
-{{-- <textarea placeholder="都道府県以外の住所記述" name="adress" class="c-formstaff__adress__text " ></textarea> --}}
-{{-- </div> --}}
 <button type="submit" class="c-register__custombutton">
     ユーザー登録
 </button>
@@ -199,5 +190,4 @@
 <div id="app">
     <footer-component></footer-component>
     </div>
-    
 @endsection

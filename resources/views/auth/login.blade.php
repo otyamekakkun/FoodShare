@@ -5,7 +5,7 @@
 {{-- 管理者ログインページここから --}}
 @isset($authgroup)
                     <h1 class="c-detail__title">コンビニスタッフ専用ログインページ</h1>
-                    <p>利用者は普通のログインページで記述してください</p>
+                    <p class="c-warning">利用者は普通のログインページで記述してください</p>
                     <form method="POST" action="{{ url("login/$authgroup") }}">
                     @else
                         <h1 class="c-detail__title">ログイン</h1>

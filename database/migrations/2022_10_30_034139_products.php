@@ -24,6 +24,7 @@ class Products extends Migration
             $table->string('prefecture');//都道府県名を記述するところ
            $table->boolean('bought')->default(false)->nullable();//購入されたかどうかをチェックする
            $table->string('email');//emailを入力するところ
+           $table->string('convinience_name');
           $table->timestamps();
         });
 

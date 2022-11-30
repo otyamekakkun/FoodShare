@@ -12,5 +12,5 @@ productsテーブルの情報を更新するためのもの
 */
     use HasFactory;
     protected $table ='products';
-    protected $fillable =  ['product_name','admin_id','user_id','img_path','price', 'best_by_date','bought','delete'];
+    protected $fillable =  ['product_name','admin_id','user_id','img_path','price', 'best_by_date','bought','convinience_name'];
 }

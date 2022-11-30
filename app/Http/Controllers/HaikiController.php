@@ -166,6 +166,7 @@ $product->price = $request->price;
 $product->best_by_date = $request->best_by_date;
 $product->prefecture=$request->prefecture;
 $product->email=$request->email;
+$product->convinience_name=$request->convinience_name;
 $product->save();
 return redirect('admin')->with('flash_message', __('Registered.'));
 } //商品の情報をデータベースに登録し直す処理
@@ -175,14 +176,12 @@ return redirect('admin')->with('flash_message', __('Registered.'));
 //==============================================================
 //7コンビニ購入された商品一覧画面                                 //
 //==============================================================
-
     public function staff_buyproduct_display(){
         $id = Auth::guard('admin')->id();
         $admin = DB::table('admins')->find($id);
         return view('haiki_staff.staff_buyproduct_display',['admins'=>$admin]);
     } //.............................................購入された商品を表す画面
 //=========================================================7ここまで
-
 //=====================================================
 //8コンビニ用の商品編集画面
 //=====================================================
