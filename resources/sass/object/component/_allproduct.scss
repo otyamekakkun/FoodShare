@@ -72,8 +72,6 @@
 .c-search {
     //background: red;
     display: flex;
-    // width: 90%;
-    // margin: auto;
     color: black;
     margin-bottom: size(m);
     font-size: size(l);
@@ -97,7 +95,6 @@
     background-color: rgba(255, 255, 255, 0.6);
     border-top: solid 1px black;
     border-bottom: solid 1px black;
-
     margin-bottom: 4%;
     font-size: size(l);
     padding: size(l);
@@ -107,13 +104,11 @@
 }
 
 .c-staffmypagelistarea__list {
-    //display: flex;
-    flex-wrap: 800px;
-    background: #f6f5f4;
+    flex-wrap: 100%;
     padding-bottom: 3%;
-
-    margin: auto;
-    width: 80%;
+    //margin-left: 10px;
+    // margin-right: 10px;
+    width: 100%;
 }
 
 //=====================================================
@@ -145,16 +140,16 @@
 //=================================
 
 .c-staffmypagelistarea__area {
-    border: solid #174113;
+    // border: solid #174113;
     background: white;
-    flex-wrap: wrap;
     margin: 2%;
-    padding: 2%;
+    //padding: 2%;
     text-align: center;
 }
-
 .c-staffmypagelistarea__text {
     text-align: center;
+    background: white;
+    padding-bottom: 6%;
 }
 
 .c-staffmypagelistarea__title1 {
@@ -174,11 +169,12 @@
 }
 
 .c-staffmypagelistarea__list__img {
-    margin-left: auto;
-    margin-right: size(4l);
+    // margin-left: auto;
+    //  margin-right: size(4l);
+    // margin-top: size(s);
     text-align: center;
     // margin: auto;
-    width: 200px;
+    width: 250px;
     height: 200px;
 }
 .c-staffmypagelistarea__list__name {

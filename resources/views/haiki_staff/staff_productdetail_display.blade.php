@@ -13,10 +13,13 @@
 
         <div class="l-productdetail">
 <productdetail-component :id="'{{$products->id}}'" :img="'{{$products->img_path}}'" :name="'{{$products->product_name}}'" :price="'{{$products->price}}'"
-    :best_by_date="'{{$products->best_by_date}}'" :prefecture="'{{$products->prefecture}}'" :bought="'{{$products->bought}}'"></productdetail-component>
+    :best_by_date="'{{$products->best_by_date}}'" :prefecture="'{{$products->prefecture}}'" :bought="'{{$products->bought}}'"
+    :convinience_name="'{{$products->convinience_name}}'"
+            :updated_at="'{{$products->updated_at}}'"></productdetail-component>
             </div>
 
- <footerdetail-component></footerdetail-component>
+ {{-- <footerdetail-component></footerdetail-component> --}}
+ <footer-component></footer-component>
 </div>
 
 </body>

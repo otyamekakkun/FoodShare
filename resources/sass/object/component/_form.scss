@@ -31,7 +31,7 @@
 }
 //1 (ユーザーのプロフィール編集ボタン)(shopper_profile_display.php)
 .c-formshopperprofile__sub {
-    background: #174113;
+    background: #4b4b4b;
     border: none;
     color: white;
     width: 12%;
@@ -70,7 +70,7 @@
 }
 
 .c-shopper__action__button {
-    background: #174113;
+    background: #4b4b4b;
     margin-left: 30px;
     margin-right: 30px;
     text-align: center;
@@ -78,7 +78,7 @@
     height: 50px;
     width: 40%;
     border: none;
-    border-radius: size(ss);
+    border-radius: size(sssss);
     color: white;
     margin-bottom: size(xxl);
     transition: all 1.2s;
@@ -98,13 +98,13 @@
 //商品を編集する画面出品する画面のボタン
 .c-staffform__area__submitbutton {
     display: block;
-    background: #174113;
+    background: #4b4b4b;
     margin-top: 180px;
     margin-left: 64%;
     height: 60px;
     width: 20%;
     border: none;
-    border-radius: size(ss);
+    border-radius: size(sssss);
     color: white;
     transition: all 1.2s;
 
@@ -134,16 +134,19 @@
 //商品を編集するボタンの商品削除ボタン
 .c-staffform__area__deletebutton {
     display: block;
-    background: red;
+    background: #4b4b4b;
     margin-top: 40px;
     text-align: center;
     margin-left: 64%;
     height: 40px;
     width: 20%;
     border: none;
-    border-radius: size(ss);
+    border-radius: size(sssss);
     color: white;
     transition: all 1.2s;
+    &:hover {
+        background: red;
+    }
     @include mqxxl() {
         width: 30%;
         //margin-left: auto;
