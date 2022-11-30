@@ -2,7 +2,6 @@
 //それ以外のfooter
 //============================================
 .l-footer {
-    background: color("footer");
     background: white;
     bottom: 0;
     width: 100%;
@@ -17,10 +16,10 @@
     }
 }
 .l-footer2 {
-    background: color("footer");
-    bottom: 0;
+    background: white;
     width: 100%;
-    height: 110px;
+    margin-top: 140px;
+    height: 280px;
     display: flex;
     align-items: center;
     &__text {

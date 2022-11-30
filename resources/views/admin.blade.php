@@ -16,7 +16,8 @@
 {{-- コンポーネント部分 --}}
 <staffmypage-componennt></staffmypage-componennt>
 <staffmypagebought-componennt></staffmypagebought-componennt>
-<footer-component></footer-component>
+{{-- <footer-component></footer-component> --}}
+<footerdetail-component></footerdetail-component>
 </div>
 </body>
 @endsection

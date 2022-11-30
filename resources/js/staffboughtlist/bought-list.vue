@@ -52,11 +52,7 @@ bought-list
                             >
                         </div>
                     </div>
-                    <!-- </div> -->
-                    <!-- <div v-if="item.bought <= 0" class="u-hidden"></div> -->
                 </div>
-                <!-- </div> -->
-
                 <div class="c-paginate">
                     <vuejs-paginate
                         :page-count="getPaginateCount"

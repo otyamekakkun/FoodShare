@@ -1,34 +1,6 @@
 //=====================================
 //ボタンエリア
 //=====================================
-//0 toppage画面のボタン
-.c-top__button {
-    background: #174113;
-    margin-left: size(l);
-    margin-right: size(l);
-    text-align: center;
-    margin-top: 85px;
-    margin-bottom: 20px;
-    height: 60px;
-    width: 40%;
-    border: none;
-    border-radius: size(ss);
-    color: white;
-    transition: all 0.3s;
-    &:hover {
-        background: orange;
-    }
-
-    @include mql() {
-        margin-left: size(ss);
-        margin-right: size(ss);
-        width: 80%;
-    }
-    @include mqm() {
-        width: 80%;
-        font-size: size(s);
-    }
-}
 //1 (ユーザーのプロフィール編集ボタン)(shopper_profile_display.php)
 .c-formshopperprofile__sub {
     background: #4b4b4b;
@@ -58,10 +30,6 @@
     }
 }
 
-.c-formshopperprofile__sub:hover {
-    cursor: pointer;
-    background: #b2d142;
-}
 //..........................................................
 //2shopperの商品詳細のボタン
 .c-shopper__action {
@@ -183,7 +151,7 @@
     width: 45%;
     height: 50px;
     border: none;
-    border-radius: size(ss);
+    border-radius: size(sssss);
     transition: all 1.2s;
     &:hover {
         background: orange;
@@ -213,7 +181,7 @@
     width: 24%;
     margin-left: 50px;
     border: none;
-    border-radius: size(ss);
+    border-radius: size(sssss);
     color: white;
     transition: all 1.2s;
     &:hover {
@@ -229,7 +197,7 @@
     background: #4b4b4b;
     color: white;
     border: none;
-    border-radius: size(sss);
+    border-radius: size(sssss);
     font-size: size(m);
     margin-top: 200px;
     margin-left: 80%;
@@ -271,7 +239,7 @@
     background: #4b4b4b;
     color: white;
     border: none;
-    border-radius: size(sss);
+    border-radius: size(sssss);
     font-size: size(m);
     margin-top: 200px;
     margin-left: 56.8%;
@@ -308,7 +276,7 @@
     background: #4b4b4b;
     color: white;
     border: none;
-    border-radius: size(sss);
+    border-radius: size(sssss);
     font-size: size(m);
     margin-top: 300px;
     margin-left: 57%;
@@ -328,9 +296,6 @@
     transition: all 0.4s;
     display: block;
     width: 50%;
-    //  margin-left: 450px;
-    // margin-top: size(4l);
-    // width: 50%;
     margin-left: auto;
     margin-right: auto;
     margin-top: size(2l);
@@ -412,7 +377,7 @@
 
 .c-staffform__area__uploadimgarea {
     width: 100%;
-    background: #174113;
+    background: #4b4b4b;
     color: white;
     text-align: center;
     height: 40px;
@@ -423,7 +388,7 @@
     padding: size(s);
     cursor: pointer;
     transition: 0.3s;
-    border-radius: size(m);
+    border-radius: size(sssss);
     &:hover {
         background: orange;
     }
@@ -455,21 +420,14 @@
     padding-bottom: size(l);
     padding-left: size(l);
     padding-right: size(l);
-    border: dotted #174113;
-    border-radius: size(ss);
+    border-radius: size(sssss);
     @include mqxl() {
-        // height: 180px;
     }
     @include mql() {
-        //720px以下
-        //height: 120px;
     }
     @include mqm() {
-        // height: 110px;
     }
-
     @include mq() {
-        //414px対応
     }
 }
 .c-staffform__area__textimgarea__img {
@@ -661,9 +619,6 @@
 .c-staffform__area__textname {
     height: 50px;
     background: white;
-    // font-size: size(l);
-    //  margin-right: 8%;
-    // margin-right: size(4l);
     margin-bottom: size(l);
     width: 60%;
     @include mqxl() {
@@ -683,7 +638,6 @@
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: size(xl);
-
     @include mqxl() {
         width: 100%;
         font-size: size(l);
