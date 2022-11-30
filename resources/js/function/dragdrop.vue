@@ -1,6 +1,5 @@
 <template>
     <div>
-        <!-- ここからフォームの部分 -->
         <div
             id="upload"
             class="form-group commonStyle"
@@ -21,7 +20,6 @@
                     />
                     <p class="c-staffform__area__uploadimgarea">写真を選択</p>
                 </label>
-                <!-- ここからプレビュー機能の部分 -->
                 <div class="c-staffform__area__textimgarea">
                     <img
                         v-show="preview"
@@ -39,7 +37,6 @@
                         {{ name }}
                     </p>
                 </div>
-                <!-- ここまでプレビュー機能の部分 -->
             </div>
         </div>
     </div>

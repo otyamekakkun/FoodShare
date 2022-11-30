@@ -1,10 +1,8 @@
 <!-- 
- 商品出品または編集する際に写真をドラッグアンドドラッグまたは写真を
-クリックすることによって写真を入力するコード 
+    ドラッグコンポーネント
 -->
 <template>
     <div>
-        <!-- ここからフォームの部分 -->
         <div
             id="upload"
             class="form-group commonStyle"
@@ -25,15 +23,12 @@
                     />
                     <p class="c-staffform__area__uploadimgarea">写真を選択</p>
                 </label>
-                <!-- ここからプレビュー機能の部分 -->
                 <div class="c-staffform__area__textimgarea">
                     <img
                         v-bind:src="preview"
                         v-show="preview"
                         class="c-staffform__area__textimgarea__img"
                     />
-                    <!--                        
- -->
                     <p v-show="!preview">
                         またはここにドラッグ＆ドロップをしてください
                     </p>
@@ -45,7 +40,6 @@
                         {{ name }}
                     </p>
                 </div>
-                <!-- ここまでプレビュー機能の部分 -->
             </div>
         </div>
     </div>

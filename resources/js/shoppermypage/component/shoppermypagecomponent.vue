@@ -1,9 +1,5 @@
 <!-- 
 お客様のマイページ画面で商品が購入された時に表示されるように記述したコード
-ページネーション機能をつけており、１ページ毎に5件に表示する
- -->
-<!-- 
-いらないものは基本的に共通していると思う。
   -->
 <template>
     <div id="app">
@@ -13,7 +9,6 @@
                 class="c-staffmypagelistarea__area"
                 v-if="item.bought >= 1"
             >
-                <!-- <div class="c-staffmypagelistarea__list"> -->
                 <img
                     v-bind:src="item.img_path"
                     class="c-staffmypagelistarea__list__img"
@@ -31,12 +26,10 @@
                         class="c-staffmypagelistarea__list__a"
                         >詳細見る↗︎</a
                     >
-                    <!-- </div> -->
                 </div>
                 <div v-if="item.bought <= 0" class="u-hidden"></div>
             </div>
         </div>
-        <!-- </div> -->
     </div>
 </template>
 <script>

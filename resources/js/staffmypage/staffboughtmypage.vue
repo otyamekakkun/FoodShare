@@ -21,7 +21,7 @@ export default {
     data: function () {
         {
             return {
-                products: [], //からのデータを用意する。
+                products: [],
                 currentPage: 1,
                 perPage: 5,
             };

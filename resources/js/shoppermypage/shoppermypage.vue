@@ -4,10 +4,10 @@
             <div class="c-staffmypagelistarea__title1">
                 <h1>これまでに購入された商品(一覧)</h1>
             </div>
-            <shoppermypage-view
+            <shoppermypagecomponentVue
                 :products="this.products"
                 :getItems="this.getItems"
-            ></shoppermypage-view>
+            ></shoppermypagecomponentVue>
             <div class="c-paginate">
                 <vuejs-paginate
                     :page-count="getPaginateCount"
@@ -36,13 +36,13 @@ import shoppermypagecomponentVue from "./component/shoppermypagecomponent.vue";
 export default {
     components: {
         "vuejs-paginate": VueJsPaginate,
-        "shoppermypage-view": shoppermypagecomponentVue,
+        shoppermypagecomponentVue,
     },
 
     data: function () {
         {
             return {
-                products: [], //からのデータを用意する。
+                products: [],
                 currentPage: 1,
                 perPage: 5,
             };
@@ -66,9 +66,9 @@ export default {
             this.currentPage = Number(pageNum);
         },
     },
-    mounted() {
-        const url = "/haiki/index4";
-        axios.get(url).then((response) => (this.products = response.data));
+    async mounted() {
+        const response = await axios.get("/haiki/index4");
+        this.products = response.data;
     },
 };
 </script>

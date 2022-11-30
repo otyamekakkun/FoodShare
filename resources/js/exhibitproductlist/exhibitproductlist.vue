@@ -1,16 +1,6 @@
 <!-- 
-exhibitproductlist 
-商品を出品したらそのコンビニ専用で商品がリスト化されるものを作成。
-1ページに10商品毎記載されてそれ以上になるとページネーションが発動される。
-
-(コンポーネント設計をするとエラーが出る件について)
-このコードをコンポーネントした時、webpack.mix.jsの方でコンパイルしたときではエラーは表示されず無事に表示されるが
-同様のコードでwebpack+babelの方でコンパイルした時エラーが出るという現象になってしまいました
-コンポーネントしていない状態ではエラーは表示されないです。
-エラーの原因追求ができず、今回webpack+babelの方で開発環境をしないといけないので、コンポーネントされていないコードを
-添付することにしました。
+    スタッフ側商品詳細画面
  -->
-
 <template>
     <div id="app">
         <main>
@@ -24,7 +14,6 @@ exhibitproductlist
                     class="c-staffmypagelistarea__area"
                     v-for="item in getItems"
                 >
-                    <!-- <ul class="c-productlist__items" v-for="item in getItems"> -->
                     <div class="c-staffmypagelistarea__list">
                         <div v-if="item.bought >= 1">
                             <img
@@ -55,7 +44,6 @@ exhibitproductlist
                                 class="c-staffmypagelistarea__list__a"
                                 >詳細を見る↗︎</a
                             >
-                            <!-- </button> -->
                             <div v-if="item.bought <= 0">
                                 <a
                                     v-bind:href="`${item.id}}/staff_productedit`"
@@ -90,8 +78,6 @@ exhibitproductlist
     </div>
 </template>
 <script>
-//axiosはデータベースの情報を取得する
-//vue-js-paginateはvue側で簡単にページネーションを実装するためのライブラリ。
 import axios from "axios";
 import VueJsPaginate from "vuejs-paginate";
 export default {
@@ -101,14 +87,13 @@ export default {
     data: function () {
         {
             return {
-                products: "", //からのデータを用意する。
+                products: "",
                 currentPage: 1,
                 perPage: 8,
             };
         }
     },
     computed: {
-        //getItemsはページネーションの算出を行う。１ページ毎に10カラム取得できるようにする
         getItems: function () {
             let start = (this.currentPage - 1) * this.perPage;
             let end = this.currentPage * this.perPage;
@@ -123,9 +108,9 @@ export default {
             this.currentPage = Number(pageNum);
         },
     },
-    mounted() {
-        const url = "/haiki/index3";
-        axios.get(url).then((response) => (this.products = response.data));
+    async mounted() {
+        const response = await axios.get("/haiki/index3");
+        this.products = response.data;
     },
 };
 </script>

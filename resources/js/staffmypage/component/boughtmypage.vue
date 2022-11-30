@@ -6,8 +6,6 @@
                     これまでに購入された商品
                 </h1>
             </div>
-            <!-- <h1 class="c-mypagemenu__title">これまでに購入された商品</h1> -->
-            <!-- 購入されたら表示される仕組みになる -->
             <div class="c-staffmypagelistarea">
                 <div
                     v-for="item in getItems"

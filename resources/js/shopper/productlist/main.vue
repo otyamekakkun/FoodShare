@@ -14,13 +14,12 @@ export default {
     },
     data: function () {
         return {
-            products: {}, //axiosから取得してきたデータを格納する
+            products: {},
         };
     },
-    //データベースから情報を取得します
-    mounted() {
-        const url = "/haiki/index1";
-        axios.get(url).then((response) => (this.products = response.data));
+    async mounted() {
+        const response = await axios.get("/haiki/index1");
+        this.products = response.data;
     },
 };
 </script>
