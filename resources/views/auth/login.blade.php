@@ -1,13 +1,11 @@
-
 @extends('layouts.app3')
 @section('content')
 @include('header.other.otherheader')
-{{-- 管理者ログインページここから --}}
 @isset($authgroup)
-                    <h1 class="c-detail__title">コンビニスタッフ専用ログインページ</h1>
-                    <p class="c-warning">利用者は普通のログインページで記述してください</p>
-                    <form method="POST" action="{{ url("login/$authgroup") }}">
-                    @else
+<h1 class="c-detail__title">コンビニスタッフ専用ログインページ</h1>
+<p class="c-warning">利用者は普通のログインページで記述してください</p>
+<form method="POST" action="{{ url("login/$authgroup") }}">
+@else
                         <h1 class="c-detail__title">ログイン</h1>
                     <form method="POST" action="{{ route('login') }}">
                     @endisset
@@ -25,7 +23,6 @@
                             <br/>
                                 <input id="" type="email" class="c-form__area__text" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="emailを入力してください">
                                 <br/>
-                            {{-- パスワード入力欄ここから --}}
 <span for="password" class="c-form__area__message">パスワード:
 <span>
     @error('password')
@@ -38,8 +35,6 @@
 <br/>
 
                                 <input id="password" type="password" class="c-form__area__text" name="password" required autocomplete="current-password" placeholder="パスワード入力">
-                                {{-- パスワード入力欄ここまで --}}
-{{-- パスワードリマインダーここから --}}
 <br/>
 <div class="c-loginarea">
 <input class="" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
@@ -54,7 +49,6 @@
                                     {{ __('Forgot Your Password?') }}
                                 </a>
                             @endif
-                                {{-- パスワードリマインダーここまで --}}
                             </div>
                         </div>
                     </div>

@@ -2,7 +2,7 @@
 @section('content')
 @include('header.other.otherheader')
 @isset($authgroup)
-    {{--コンビニユーザー登録画面のフォームページにして良い--}}
+{{--コンビニユーザー登録画面のフォームページにして良い--}}
     <h1 class="c-detail__title">スタッフユーザー登録</h1>
     <p class="c-warning">お客様(コンビニスタッフ関係ではない)方は,トップページのお客様ユーザー登録というボタンからお入りになって登録をしてください</p>
 <form method="POST" action="{{ url("register/$authgroup") }}" class="c-form__area">
@@ -12,9 +12,9 @@
  <div class="c-form__area">
 <form method="POST" action="{{ route('register') }}" >
 @csrf
-                            <br/>
-                            <span for="name" class="c-form__area__message">名前:
-                                @error('name')
+ <br/>
+<span for="name" class="c-form__area__message">名前:
+@error('name')
                                     <span  role="alert" class="c-errormessage">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -60,7 +60,7 @@
                             <span for="name" class="c-form__area__message">名前:
                                 @error('name')
                                     <span class="c-errormessage"  role="alert">
-                                        <strong>{{ $message }}</strong>
+                                  <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
                             </span>
@@ -88,7 +88,7 @@
                                 <br/>
                             <label for="password-confirm" class="c-form__area__message ">パスワード再入力:
                             </label>
-                            <br/>
+                             <br/>
  <input id="password-confirm" type="password" class="c-form__area__text" name="password_confirmation" required autocomplete="new-password" placeholder="パスワード再入力">
 <span  class="c-form__area__message ">勤めているコンビニ会社:
     @error('convinience_name')
@@ -178,12 +178,10 @@
     @enderror    
 </span>
 <br/>
-
 <input placeholder="都道府県以外の住所を記述" name="adress" class="c-form__area__text">
 <button type="submit" class="c-register__custombutton">
     ユーザー登録
 </button>
-
 </form>
 {{-- </div> --}}
 @endisset

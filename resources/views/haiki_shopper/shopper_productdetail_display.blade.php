@@ -21,7 +21,6 @@
 @section('content')
 @section('title', "商品詳細画面")
 <body>
-
         <header>
             @include('header.shopper.shoppermypage_header') 
             </header>

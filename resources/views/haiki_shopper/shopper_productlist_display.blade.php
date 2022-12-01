@@ -2,13 +2,10 @@
  @extends('layouts.app2')
  @section('content')
  @section('title', "商品一覧画面")
-
- 
  <body>
     <header>
         @include('header.shopper.shoppermypage_header') 
-        </header>
-        
+    </header>
         <h3 class="c-detail__title">
             Product List</h3>
         <div id="app">

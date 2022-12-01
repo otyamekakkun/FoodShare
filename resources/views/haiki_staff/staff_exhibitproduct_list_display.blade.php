@@ -2,26 +2,16 @@
     コンビニ側が出品した商品を一覧にする画面。
     --}}
 
-@extends('layouts.app2')
-@section('content')
-@section('title', "出品一覧画面")
+@extends('layouts.app2') @section('content') @section('title', "出品一覧画面")
 
 <body>
-    <header>
-        @include('header.staff.staffmypage_header')
-    </header>
-
+    <header>@include('header.staff.staffmypage_header')</header>
     {{-- マイページみたいなものを導入 --}}
-    <h1 class="c-detail__title">
-    {{-- {{$admin->name}}様が出品された商品一覧 --}}
-    これまで出品された商品リスト
-</h1>
-    
-<div id="app">
-    {{-- コンポーネントexhibitproductlist.vueとfooter-componenntを導出する --}}
-<exhibitlist-componennt></exhibitlist-componennt>
-<footer-component></footer-component>
-</div>
+    <h1 class="c-detail__title">これまで出品された商品リスト</h1>
+    <div id="app">
+        <exhibitlist-componennt></exhibitlist-componennt>
+        <footer-component></footer-component>
+    </div>
 </body>
 @endsection
 

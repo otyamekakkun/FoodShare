@@ -2,18 +2,14 @@
  @extends('layouts.app2')
  @section('content')
  @section('title', "プロフィール編集画面")
-
 <body>
     <header>
         @include('header.shopper.shoppermypage_header') 
         </header>
-        
     <main>
         <form method="POST" enctype="multipart/form-data" action="{{route('haiki_shopperprofile_edit',$user->id)}}">      
-          {{-- <div class="c-form4"> --}}
             <h3 class="c-detail__title">
                 プロフィール編集</h3>
-
             <div class="c-form__area">
             @csrf
                 <span class="c-form__area__message">名前:               
@@ -61,7 +57,6 @@
             <br/>
         <input type="submit" class="c-register__custombutton" value="変更する">
         </div>
-    {{-- </div> --}}
         </form>
     </div>
         </div>
@@ -69,7 +64,6 @@
 </body>
 <div id=app>
         <footer-component><footer-component>
-
 </div>
 
 @endsection

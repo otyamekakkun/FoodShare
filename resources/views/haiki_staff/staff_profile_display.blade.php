@@ -1,19 +1,15 @@
 {{-- 
     コンビニについてのプロフィールが編集できるようにした画面
     --}}
-@extends('layouts.app2')
-@section('content')
-@section('title', "コンビニプロフィール編集")
+@extends('layouts.app2') @section('content') @section('title', "コンビニプロフィール編集")
 <body>
     <header>
         @include('header.staff.staffmypage_header')
     </header>
-
     <h3 class="c-detail__title">コンビニ情報編集</h3>
         <form  action="{{route('haiki_staffrprofile_edit',$admin->id)}}" method="POST">
             @csrf
             <div class="c-form__area">
-
                 <span class="c-form__area__message">名前:
                     @error('name')
                     <span class="c-errormessage" role="alert">
@@ -24,9 +20,8 @@
                 <br/>
                 <input class="c-form__area__text" action="post" type="text" name="name" placeholder="名前を編集" value="{{$admin->name}}">
 <br/>
-
 <span class="c-form__area__message">メールアドレス編集:
-                @error('email')
+              @error('email')
                 <span class="c-errormessage" role="alert">
                     <strong>{{$message}}</strong>
                 </span>
@@ -43,8 +38,8 @@
     @enderror
 </span>
 <br/>
-            <input class="c-form__area__text" action="post" type="password" name="password" placeholder="パスワード編集">
-            <br/>
+<input class="c-form__area__text" action="post" type="password" name="password" placeholder="パスワード編集">
+<br/>
 {{-- パスワード入力ここまで --}}
 <span class="c-form__area__message">パスワード再入力:
     @error('password_confirmation')

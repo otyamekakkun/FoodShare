@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HaikiController;
-use App\Http\Controllers\AdminProfileController;
+use App\Http\Controllers\staff\AdminProfileController;
 use App\Http\Controllers\JsonsController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;

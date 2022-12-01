@@ -1,5 +1,5 @@
 <!-- 
-    編集するカレンダーにも値を入れる
+    商品編集画面用のカレンダーコンポーネント
  -->
 <template>
     <div class="c-staffform__area__side">

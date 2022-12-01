@@ -196,12 +196,6 @@ public function destory($id){
     return view('haiki_staff.staff_productdetail_display',['products'=>$product]);
     } //.............................................................9画面を表示するもの
 
-//json形式
-//今ログインしているものを取得してくるjson形式
-public function staffproductdetailjson($id){
-    $product = products::find($id);
-return response()->json($product);
-}
  //.............................................................9ここまで
 
 //========================================================================    
@@ -212,12 +206,6 @@ return response()->json($product);
         $admin = DB::table('admins')->find($id);
         return view('haiki_staff.staff_exhibitproduct_list_display',['admin'=>$admin]);//...................画面表示するもの
     }
-//json形式で渡す
-public function staff_exhibitproduct_json(){
-    $id = Auth::guard('admin')->id();
-    $product = products::where("admin_id",$id);
-    return response()->json($product);
-}
 //==========================================================10ここまで
 
 //=======================================================================
@@ -229,5 +217,4 @@ public function admin(){
     $admin = DB::table('admins')->find($id);
     return view('admin',['admin'=>$admin]);//...................画面表示するもの
 }
-
 }

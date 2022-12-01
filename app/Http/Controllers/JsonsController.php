@@ -38,5 +38,17 @@ public function index1(){
         $product = products::where("admin_id",$id)->orderBy('updated_at','desc')->get();
     return response()->json($product);
     }//購入された商品情報を最新順に渡す。
+
+public function staff_exhibitproduct_json(){
+    $id = Auth::guard('admin')->id();
+    $product = products::where("admin_id",$id);
+    return response()->json($product);
+}
+
+public function staffproductdetailjson($id){
+    $product = products::find($id);
+    return response()->json($product);
+    }
+    
     
 }
