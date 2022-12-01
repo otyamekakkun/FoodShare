@@ -118,12 +118,11 @@
 
 .c-staffmypagelistarea__area {
     background: white;
-    margin: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
-    @include mqxl {
-        margin-left: auto;
-        margin-right: auto;
-    }
 }
 .c-staffmypagelistarea__text {
     text-align: center;
@@ -237,13 +236,6 @@
     display: flex;
     margin-top: 100px;
     height: 500px;
-    @include mqxxl() {
-    }
-    @include mqxl() {
-    }
-
-    @include mql() {
-    }
     @include mqm() {
         width: 46%;
     }

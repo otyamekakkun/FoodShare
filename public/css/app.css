@@ -966,14 +966,11 @@ a {
 
 .c-staffmypagelistarea__area {
   background: white;
-  margin: 2%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
-}
-@media screen and (max-width:980px) {
-  .c-staffmypagelistarea__area {
-    margin-left: auto;
-    margin-right: auto;
-  }
 }
 
 .c-staffmypagelistarea__text {
