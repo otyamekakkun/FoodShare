@@ -24,8 +24,21 @@
     font-size: size(4l);
     padding: size(m);
     margin-left: size(m);
+
+    @include mqxxl() {
+    }
+    @include mqxl() {
+    }
+    @include mql() {
+    }
+    @include mqm() {
+    }
+
     @include mq() {
         font-size: size(2l);
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 

@@ -7,11 +7,10 @@
 <body>
  <div class="l-top" id="app">
     <div class="l-topimg">
-    <img src="https://s3.ap-northeast-1.amazonaws.com/webukatu-haikikaku.com/awss3/toppage.jpg" class="l-topimg__area">
-   <p class="c-topfooter"> © 2022 taguchi kakuto</p>
-   
-</div>
-    <div class="l-top__titlearea">
+    　<img src="https://s3.ap-northeast-1.amazonaws.com/webukatu-haikikaku.com/awss3/toppage.jpg" class="l-topimg__area">
+   　　<p class="c-topfooter"> © 2022 taguchi kakuto</p>
+　　</div>
+<div class="l-top__titlearea">
     <a href="login" class="l-top__titlearea__text">
         Custom Login
     </a>
@@ -31,7 +30,6 @@
     </div>
     </div>
 </body>
-
 </html>
     @endsection
 
