@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HaikiController;
 use App\Http\Controllers\staff\AdminProfileController;
+use App\Http\Controllers\staff\AdminProductlistController;
 use App\Http\Controllers\JsonsController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
@@ -54,7 +55,7 @@ Route::post('create_exhibitproduct',[HaikiController::class,'create_exhibitprodu
 //===================================
 //購入された商品一覧6                 
 //===================================
-Route::get('/haiki/staff_buyproduct',[HaikiController::class, 'staff_buyproduct_display'])->middleware('auth:admin')->name('haiki_shopper.staff_buyproduct_display');
+Route::get('/haiki/staff_buyproduct',[AdminProductlistController::class, 'staff_buyproduct_display'])->middleware('auth:admin')->name('haiki_shopper.staff_buyproduct_display');
 
 //==============================================================
 //7商品編集画面                                                 //
@@ -72,11 +73,8 @@ Route::post('/haiki/{id}/staff_productdetai',[HaikiController::class,'shopper_pr
 //===============================================
 //出品した商品の一覧                              //
 //===============================================
-Route::get('/haiki/staff_exhibitproductlist',[HaikiController::class, 'staff_exhibitproduct_list_display'])->middleware('auth:admin')->name('haiki_shopper.staff_exhibitproduct_list_display'); //10
-Route::get('/login/admin', [LoginController::class, 'showAdminLoginForm']);
-Route::get('/register/admin', [RegisterController::class, 'showAdminRegisterForm']);
-Route::post('/login/admin', [LoginController::class, 'adminLogin']);
-Route::post('/register/admin', [RegisterController::class, 'registerAdmin'])->name('admin-register');
+Route::get('/haiki/staff_exhibitproductlist',[AdminProductlistController::class, 'staff_exhibitproduct_list_display'])->middleware('auth:admin')->name('haiki_shopper.staff_exhibitproduct_list_display'); //10
+
 
 //=================================================
 //staffのマイページでもデータベースが表示できるような処理を施す
