@@ -6,6 +6,7 @@ use App\Http\Controllers\HaikiController;
 use App\Http\Controllers\staff\AdminProfileController;
 use App\Http\Controllers\staff\AdminProductlistController;
 use App\Http\Controllers\staff\AdminProductController;
+use App\Http\Controllers\staff\AdminDetailController;
 use App\Http\Controllers\JsonsController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
@@ -66,7 +67,7 @@ Route::post('/haikii/{id}/staff_productedit', [AdminProductController::class, 'd
 //==========================================================
 //商品詳細画面
 //=======================================================
-Route::get('/haiki/{id}/staff_productdetail',[HaikiController::class, 'staff_productdetail_display'])->middleware('auth:admin')->name('haiki_shopper.staff_productdetail_display');
+Route::get('/haiki/{id}/staff_productdetail',[AdminDetailController::class, 'staff_productdetail_display'])->middleware('auth:admin')->name('haiki_shopper.staff_productdetail_display');
 Route::post('/haiki/{id}/staff_productdetail',[HaikiController::class,'shopper_productdetail_bought'])->name('bought.update');
 Route::post('/haiki/{id}/staff_productdetai',[HaikiController::class,'shopper_productdetail_cancel'])->name('bought.cancel');
 
