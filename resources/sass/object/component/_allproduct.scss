@@ -7,7 +7,6 @@
     font-size: 20px;
     margin: 20px;
 }
-
 .c-under {
     border-bottom: double;
     border-color: black;
@@ -237,10 +236,6 @@
     @include mqm() {
         font-size: size(m);
     }
-
-    @include mq() {
-        font-size: size(m);
-    }
 }
 .c-staffmypagelistarea__list__bought {
     background: black;
@@ -253,37 +248,34 @@
     display: flex;
     margin-top: 100px;
     height: 500px;
-    @include mql() {
+    @include mqxl() {
         display: block;
-    }
-
-    @include mqm() {
-    }
-
-    @include mq() {
     }
 }
 
 .c-prductdetail__imgarea {
-    @include mql() {
+    @include mqxl() {
         width: 80%;
         margin-left: auto;
         margin-right: auto;
         margin-top: -5%;
-    }
-    @include mq() {
     }
 }
 
 .c-productdetailimg {
     width: 600px;
     height: 400px;
+    margin-left: 20%;
 
     @include mqxxl {
         width: 500px;
     }
     @include mqxl {
-        width: 400px;
+        display: block;
+
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
     }
     @include mql {
         display: block;
@@ -295,18 +287,24 @@
 .c-productdetail__area {
     background: rgba(255, 255, 255, 0.4);
     color: black;
-    margin-top: 100px;
     list-style: none;
-    width: 50%;
-    padding: 5%;
+    width: 30%;
+    height: 400px;
     font-size: size(l);
-    @include mql {
+    margin-left: 10%;
+    padding: 2%;
+    @include mqxl() {
+        margin-top: 100px;
+        padding: 5%;
         display: block;
-        width: 400px;
+        width: 600px;
         margin-left: auto;
         margin-right: auto;
-        background: rgba(255, 255, 255, 0.4);
         height: 400px;
+    }
+    @include mql() {
+        display: block;
+        width: 400px;
     }
 }
 .c-productdetail__area__text {
@@ -317,15 +315,15 @@
 }
 
 .c-productdetail__twitter {
-    display: block;
-    margin-left: 13%;
+    display: inline;
+    margin-left: 18%;
     text-align: left;
-    font-size: size(m);
+    font-size: size(l);
     &:hover {
         color: orange;
         border-bottom: solid orange;
     }
-    @include mql {
+    @include mqxl {
         display: block;
         text-align: center;
         margin-top: -50px;
@@ -351,18 +349,11 @@
     @include mqxxl() {
         width: 30%;
     }
-    @include mqxl() {
-    }
 
-    @include mql() {
+    @include mqxl() {
         width: 40%;
         margin-top: 600px;
         margin-left: auto;
         margin-right: auto;
-    }
-    @include mqm() {
-    }
-
-    @include mq() {
     }
 }

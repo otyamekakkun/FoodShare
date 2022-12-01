@@ -1110,11 +1110,6 @@ a {
     font-size: 20px;
   }
 }
-@media screen and (max-width: 414px) {
-  .c-staffmypagelistarea__list__a {
-    font-size: 20px;
-  }
-}
 
 .c-staffmypagelistarea__list__bought {
   background: black;
@@ -1127,12 +1122,13 @@ a {
   margin-top: 100px;
   height: 500px;
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width:980px) {
   .c-productdetail {
     display: block;
   }
 }
-@media screen and (max-width: 720px) {
+
+@media screen and (max-width:980px) {
   .c-prductdetail__imgarea {
     width: 80%;
     margin-left: auto;
@@ -1140,9 +1136,11 @@ a {
     margin-top: -5%;
   }
 }
+
 .c-productdetailimg {
   width: 600px;
   height: 400px;
+  margin-left: 20%;
 }
 @media screen and (max-width:1090px) {
   .c-productdetailimg {
@@ -1151,7 +1149,10 @@ a {
 }
 @media screen and (max-width:980px) {
   .c-productdetailimg {
-    width: 400px;
+    display: block;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @media screen and (max-width: 720px) {
@@ -1166,20 +1167,28 @@ a {
 .c-productdetail__area {
   background: rgba(255, 255, 255, 0.4);
   color: black;
-  margin-top: 100px;
   list-style: none;
-  width: 50%;
-  padding: 5%;
+  width: 30%;
+  height: 400px;
   font-size: 25px;
+  margin-left: 10%;
+  padding: 2%;
+}
+@media screen and (max-width:980px) {
+  .c-productdetail__area {
+    margin-top: 100px;
+    padding: 5%;
+    display: block;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 400px;
+  }
 }
 @media screen and (max-width: 720px) {
   .c-productdetail__area {
     display: block;
     width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    background: rgba(255, 255, 255, 0.4);
-    height: 400px;
   }
 }
 
@@ -1192,16 +1201,16 @@ a {
 }
 
 .c-productdetail__twitter {
-  display: block;
-  margin-left: 13%;
+  display: inline;
+  margin-left: 18%;
   text-align: left;
-  font-size: 20px;
+  font-size: 25px;
 }
 .c-productdetail__twitter:hover {
   color: orange;
   border-bottom: solid orange;
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width:980px) {
   .c-productdetail__twitter {
     display: block;
     text-align: center;
@@ -1232,7 +1241,7 @@ a {
     width: 30%;
   }
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width:980px) {
   .c-productdetail__button {
     width: 40%;
     margin-top: 600px;
@@ -1240,6 +1249,7 @@ a {
     margin-right: auto;
   }
 }
+
 .c-formshopperprofile__sub {
   background: #4b4b4b;
   border: none;
