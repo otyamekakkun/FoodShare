@@ -142,6 +142,11 @@
     color: white;
     font-size: size(l);
     color: black;
+    @include mql() {
+        width: 100%;
+        text-align: center;
+        font-size: size(m);
+    }
 }
 
 .c-staffmypagelistarea__title1__text {
@@ -153,14 +158,23 @@
     text-align: center;
     width: 250px;
     height: 200px;
+    @include mq() {
+        width: 165px;
+    }
 }
 .c-staffmypagelistarea__list__name {
     font-size: size(l);
     text-align: center;
+    @include mq() {
+        font-size: size(m);
+    }
 }
 .c-staffmypagelistarea__list__price {
     color: red;
     text-align: center;
+    @include mq() {
+        font-size: size(m);
+    }
 }
 .c-staffmypagelistarea__list__a {
     text-align: center;
@@ -174,6 +188,9 @@
         color: orange;
         border-color: #174113;
         border-width: 1px;
+    }
+    @include mq() {
+        font-size: size(m);
     }
 }
 .c-staffmypagelistarea__list__bought {

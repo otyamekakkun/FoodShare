@@ -152,7 +152,7 @@
 </select>
 </select>
 <br/>
-<span class="c-form__area__message">それ以外の住所を記述:
+<span class="c-form__area__message">それ以外の住所:
     @error('adress')
     <span class="c-errormessage" role="alert">
         <strong>{{$message}}</strong>

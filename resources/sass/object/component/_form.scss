@@ -238,8 +238,6 @@
     @include mqxl {
         width: 40%;
         margin-left: 38%;
-        //  margin-right: 20%;
-        //margin-right: auto;
     }
 
     @include mql() {
@@ -279,7 +277,6 @@
     }
 }
 //...............................................ここまで
-
 //パスワードリマインダーのリンクに飛ぶ画面
 .c-remind__text {
     transition: all 0.4s;
@@ -311,9 +308,6 @@
 //============================================================================
 // コンビニ側商品を出品する画面と編集する画面 staff_exhibitproduct and updateproduct
 //=========================================================================
-//c-form4は商品を編集する画面＋ユーザー登録のshopper側の画面
-//お客様ログイン画面。
-//商品を出品する画面と商品を編集する画面
 .c-staffform__area {
     width: 80%;
     padding-top: 20px;
@@ -392,7 +386,6 @@
 }
 
 .c-staffform__area__textimgarea {
-    //写真を挿入したときに描かれる場所
     font-size: size(l);
     margin-top: 6%;
     margin-left: auto;
@@ -417,7 +410,6 @@
 }
 .c-staffform__area__textimgarea__img {
     width: 60%;
-    //textimgareaよりheightの高さを低くすることにより画面内に治る。
     height: 260px;
     margin-top: size(s);
     margin-bottom: size(s);
@@ -428,55 +420,25 @@
 
 .c-staffform__area__textimgarea__name {
     @include mq() {
-        //414px対応
         font-size: size(s);
     }
 }
-//商品を出品する画面+編集する画面ここで終了する
 
 //=======================================
 //フォームテキストエリア title文字          //
 //=======================================
 //ログイン画面 ユーザー登録画面 プロフィール編集画面について
-//見出しの部分のレイアウト。（コンビニ側が出品した)
 .c-mypagemenu__title {
     text-align: center;
     margin: 40px;
     font-size: size(4l);
     font-family: "Permanent Marker", cursive;
-
     color: white;
     @include mql() {
         font-size: size(m);
     }
-
     @include mqm() {
         font-size: size(s);
-    }
-}
-
-//======================================
-//マイページのロゴタイトル
-//======================================
-.c-mypagemenu {
-    background: rgba(255, 255, 255, 0.6);
-    height: 124px;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 100px;
-    margin-top: 100px;
-    border: solid size(sssss);
-    border-radius: size(sss);
-    @include mqm() {
-        width: 80%;
-        height: 100px;
-        margin-top: 60px;
-        margin-bottom: -50px;
-    }
-    @include mqm() {
-        margin-top: 80px;
-        margin-bottom: 50px;
     }
 }
 
@@ -520,6 +482,9 @@
         margin-bottom: -40px;
     }
 }
+//=======================================
+//エラーメッセージ
+//=======================================
 .c-errormessage {
     color: rgb(234, 14, 14);
     @include mqxl() {
@@ -538,11 +503,13 @@
     margin-right: auto;
     margin-top: 60px;
     margin-bottom: 80px;
-    //  height: 640px;
     font-size: size(m);
     text-align: center;
+    @include mql() {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
 }
-//フォームのタイトル
 .c-form__title {
     font-size: size(l);
     text-align: center;
@@ -555,13 +522,10 @@
     @include mqm() {
         font-size: size(m);
     }
-
     @include mq() {
-        //414px対応
         font-size: size(m);
     }
 }
-
 .c-staffform__title {
     font-size: size(l);
     display: block;
@@ -570,23 +534,17 @@
         width: 60%;
     }
 }
-//........................................
-
 //フォームに入力するメッセージ
 .c-form__area__message {
     display: block;
-    // background: red;
     text-align: left;
     color: black;
     margin-top: size(l);
-    //margin-bottom: size(sssss);
     font-size: size(l);
     @include mqm() {
-        //560px以下
         font-size: size(m);
     }
 }
-
 .c-form__area__text {
     background: white;
     margin-bottom: size(l);
@@ -597,11 +555,9 @@
         background: #f6f5f4;
     }
     @include mql() {
-        //720px以下
         width: 96%;
     }
     @include mqm() {
-        //560px対応
         font-size: size(m);
         margin-bottom: size(ss);
         height: size(4l);
@@ -615,9 +571,7 @@
     @include mqxl() {
     }
     @include mql() {
-        //720px以下
     }
     @include mqm() {
-        //414px対応
     }
 }
