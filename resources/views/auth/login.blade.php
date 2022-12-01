@@ -2,7 +2,7 @@
 @section('content')
 @include('header.other.otherheader')
 @isset($authgroup)
-<h1 class="c-detail__title">コンビニスタッフ専用ログインページ</h1>
+<h1 class="c-detail__title">スタッフログイン</h1>
 <p class="c-warning">利用者は普通のログインページで記述してください</p>
 <form method="POST" action="{{ url("login/$authgroup") }}">
 @else
