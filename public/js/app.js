@@ -6028,7 +6028,9 @@ var render = function render() {
 
   return _c("div", {
     staticClass: "c-productdetail"
-  }, [_c("div", [_c("img", {
+  }, [_c("div", {
+    staticClass: "c-prductdetail__imgarea"
+  }, [_c("img", {
     staticClass: "c-productdetailimg",
     attrs: {
       src: _vm.img
@@ -6037,13 +6039,13 @@ var render = function render() {
     staticClass: "c-productdetail__area"
   }, [_c("li", {
     staticClass: "c-productdetail__area__text"
-  }, [_vm._v("商品名:　" + _vm._s(_vm.name))]), _vm._v(" "), _c("li", {
+  }, [_vm._v("商品名: " + _vm._s(_vm.name))]), _vm._v(" "), _c("li", {
     staticClass: "c-productdetail__area__text"
-  }, [_vm._v("お値段:　" + _vm._s(_vm.price) + "円")]), _vm._v(" "), _c("li", {
+  }, [_vm._v("お値段: " + _vm._s(_vm.price) + "円")]), _vm._v(" "), _c("li", {
     staticClass: "c-productdetail__area__text"
-  }, [_vm._v("\n            期限:　" + _vm._s(_vm.best_by_date) + "\n        ")]), _vm._v(" "), _c("li", {
+  }, [_vm._v("\n            期限: " + _vm._s(_vm.best_by_date) + "\n        ")]), _vm._v(" "), _c("li", {
     staticClass: "c-productdetail__area__text"
-  }, [_vm._v("\n            出品した県名:　" + _vm._s(_vm.prefecture) + "\n        ")]), _vm._v(" "), _c("p", {
+  }, [_vm._v("\n            出品した県名: " + _vm._s(_vm.prefecture) + "\n        ")]), _vm._v(" "), _c("p", {
     staticClass: "c-productdetail__area__sentence"
   }, [_vm._v("\n            この商品は" + _vm._s(_vm.prefecture) + "(店名)" + _vm._s(_vm.convinience_name) + "が" + _vm._s(_vm.updated_at) + "に出品された商品です\n        ")])])]);
 };

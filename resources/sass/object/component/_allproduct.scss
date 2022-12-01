@@ -253,24 +253,61 @@
     display: flex;
     margin-top: 100px;
     height: 500px;
+    @include mql() {
+        display: block;
+    }
+
     @include mqm() {
-        width: 46%;
     }
 
     @include mq() {
-        width: 50%;
     }
 }
+
+.c-prductdetail__imgarea {
+    @include mql() {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -5%;
+    }
+    @include mq() {
+    }
+}
+
 .c-productdetailimg {
     width: 600px;
     height: 400px;
+
+    @include mqxxl {
+        width: 500px;
+    }
+    @include mqxl {
+        width: 400px;
+    }
+    @include mql {
+        display: block;
+        width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 .c-productdetail__area {
+    background: rgba(255, 255, 255, 0.4);
     color: black;
     margin-top: 100px;
     list-style: none;
     width: 50%;
+    padding: 5%;
     font-size: size(l);
+    @include mql {
+        display: block;
+        width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        background: rgba(255, 255, 255, 0.4);
+        height: 400px;
+    }
 }
 .c-productdetail__area__text {
     border-bottom: solid black;
@@ -280,11 +317,20 @@
 }
 
 .c-productdetail__twitter {
-    margin-left: 300px;
+    display: block;
+    margin-left: 13%;
+    text-align: left;
     font-size: size(m);
     &:hover {
         color: orange;
         border-bottom: solid orange;
+    }
+    @include mql {
+        display: block;
+        text-align: center;
+        margin-top: -50px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 .c-productdetail__button {
@@ -310,12 +356,13 @@
 
     @include mql() {
         width: 40%;
+        margin-top: 600px;
+        margin-left: auto;
+        margin-right: auto;
     }
     @include mqm() {
-        width: 46%;
     }
 
     @include mq() {
-        width: 50%;
     }
 }

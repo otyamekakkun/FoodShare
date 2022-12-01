@@ -24,7 +24,8 @@
         <header>
             @include('header.shopper.shoppermypage_header') 
             </header>
-            
+            <h1 class="c-detail__title">商品詳細</h1>
+
 <div id="app">
     <main>
          <div> 
@@ -47,7 +48,6 @@
 @endif
 
 @if($products->bought>=1)
-{{-- <button class=""> --}}
     <a  href="https://twitter.com/intent/tweet?text=haiki share 商品名{{$products->product_name}}について自由に書いて広めよう!!" target="_blank_" rel="nofollow"
         class="c-productdetail__twitter" >
         Twitterでシェアする</a>

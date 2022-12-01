@@ -1127,28 +1127,60 @@ a {
   margin-top: 100px;
   height: 500px;
 }
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 720px) {
   .c-productdetail {
-    width: 46%;
+    display: block;
   }
 }
-@media screen and (max-width: 414px) {
-  .c-productdetail {
-    width: 50%;
+@media screen and (max-width: 720px) {
+  .c-prductdetail__imgarea {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -5%;
   }
 }
-
 .c-productdetailimg {
   width: 600px;
   height: 400px;
 }
+@media screen and (max-width:1090px) {
+  .c-productdetailimg {
+    width: 500px;
+  }
+}
+@media screen and (max-width:980px) {
+  .c-productdetailimg {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .c-productdetailimg {
+    display: block;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
 .c-productdetail__area {
+  background: rgba(255, 255, 255, 0.4);
   color: black;
   margin-top: 100px;
   list-style: none;
   width: 50%;
+  padding: 5%;
   font-size: 25px;
+}
+@media screen and (max-width: 720px) {
+  .c-productdetail__area {
+    display: block;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(255, 255, 255, 0.4);
+    height: 400px;
+  }
 }
 
 .c-productdetail__area__text {
@@ -1160,12 +1192,23 @@ a {
 }
 
 .c-productdetail__twitter {
-  margin-left: 300px;
+  display: block;
+  margin-left: 13%;
+  text-align: left;
   font-size: 20px;
 }
 .c-productdetail__twitter:hover {
   color: orange;
   border-bottom: solid orange;
+}
+@media screen and (max-width: 720px) {
+  .c-productdetail__twitter {
+    display: block;
+    text-align: center;
+    margin-top: -50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .c-productdetail__button {
@@ -1192,19 +1235,11 @@ a {
 @media screen and (max-width: 720px) {
   .c-productdetail__button {
     width: 40%;
+    margin-top: 600px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
-@media screen and (max-width: 560px) {
-  .c-productdetail__button {
-    width: 46%;
-  }
-}
-@media screen and (max-width: 414px) {
-  .c-productdetail__button {
-    width: 50%;
-  }
-}
-
 .c-formshopperprofile__sub {
   background: #4b4b4b;
   border: none;

@@ -1,16 +1,16 @@
 <template>
     <div class="c-productdetail">
-        <div>
+        <div class="c-prductdetail__imgarea">
             <img v-bind:src="img" class="c-productdetailimg" />
         </div>
         <div class="c-productdetail__area">
-            <li class="c-productdetail__area__text">商品名:　{{ name }}</li>
-            <li class="c-productdetail__area__text">お値段:　{{ price }}円</li>
+            <li class="c-productdetail__area__text">商品名: {{ name }}</li>
+            <li class="c-productdetail__area__text">お値段: {{ price }}円</li>
             <li class="c-productdetail__area__text">
-                期限:　{{ best_by_date }}
+                期限: {{ best_by_date }}
             </li>
             <li class="c-productdetail__area__text">
-                出品した県名:　{{ prefecture }}
+                出品した県名: {{ prefecture }}
             </li>
             <p class="c-productdetail__area__sentence">
                 この商品は{{ prefecture }}(店名){{ convinience_name }}が{{
