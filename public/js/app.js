@@ -5535,7 +5535,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ["products"],
-  //main.vueからデータの中身が入っている。
   data: function data() {
     return {
       keywords: "",
@@ -6720,13 +6719,14 @@ var render = function render() {
     }
   }, [_vm._v("沖縄県")])])]), _vm._v(" "), _c("div", {
     staticClass: "c-search"
-  }, [_c("p", {}, [_vm._v("金額を入力:")]), _vm._v(" "), _c("input", {
+  }, [_c("p", [_vm._v("金額を入力:")]), _vm._v(" "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
       value: _vm.budgets,
       expression: "budgets"
     }],
+    staticClass: "c-search__value",
     attrs: {
       type: "text"
     },

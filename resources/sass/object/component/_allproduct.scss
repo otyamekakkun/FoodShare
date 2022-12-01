@@ -16,7 +16,6 @@
 //====================================
 //staff_productdetailのsassのコンポーネント化したもの
 //=====================================
-//shopperの方の詳細画面で用いる予定。
 .c-productdetaillist {
     font-size: 20px;
     margin-top: auto;
@@ -54,23 +53,41 @@
 // お客様用の商品一覧絞り込みリスト
 //=================================
 .c-searcharea {
-    width: 50%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
     border: solid black;
-    margin-top: 1%;
-    margin-bottom: 1%;
+    margin-top: 3%;
+    margin-bottom: 5%;
     padding: 1%;
     background: rgba(255, 255, 255, 0.6);
+    @include mqxl() {
+        width: 82%;
+    }
+    @include mqm() {
+        width: 94%;
+    }
 }
 .c-search {
     display: flex;
     color: black;
+    margin-top: size(m);
     margin-bottom: size(m);
     font-size: size(l);
+    @include mqxl() {
+        font-size: size(m);
+    }
+    @include mql() {
+        font-size: size(s);
+    }
 }
 .c-search__text {
     text-align: center;
+}
+.c-search__value {
+    @include mqm() {
+        width: 25%;
+    }
 }
 //======================================
 //商品詳細画面をまとめるもの コンポーネント部分

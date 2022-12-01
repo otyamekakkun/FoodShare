@@ -318,8 +318,6 @@
     margin-top: size(2l);
     height: 1240px;
     background: rgba(255, 255, 255, 0.6);
-    //  border: solid #174113;
-    //border-radius: size(sss);
     @include mqxl() {
         height: 1200px;
     }

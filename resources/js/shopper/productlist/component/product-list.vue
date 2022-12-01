@@ -1,13 +1,10 @@
 <!--
 商品一覧と商品の絞り込み
-今回は都道府県、予算、有効期限チェックの3つを設けることによって商品の絞り込みを
-行うことに実装しました。
 -->
 <template>
     <div>
         <div>
             <div>
-                <!-- <div class="l-productsearch"> -->
                 <div class="c-staffmypagelistarea__title1">
                     <h1>商品の条件を絞り込む</h1>
                 </div>
@@ -66,10 +63,9 @@
 </select>
                     </div>
                     <div class="c-search">
-                        <p class="">金額を入力:</p>
-                        <input type="text" v-model="budgets" class="" />円以下の商品を表示
+                        <p>金額を入力:</p>
+                        <input type="text" v-model="budgets" class="c-search__value" />円以下の商品を表示
                     </div>
-                    <!-- </div> -->
                     <div class="c-search">
                         有効期限チェック:
                         <input
@@ -80,7 +76,6 @@
                         />
                     </div>
                 </div>
-                <!-- </div> -->
                 <div class="c-staffmypagelistarea">
                     <div
                         v-if="
@@ -117,7 +112,7 @@
 </template>
 <script>
 export default {
-    props: ["products"], //main.vueからデータの中身が入っている。
+    props: ["products"],
     data: function () {
         return {
             keywords: "", //都道府県
