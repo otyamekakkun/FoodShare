@@ -2,12 +2,10 @@
 @section('content')
 @include('header.other.otherheader')
 @isset($authgroup)
-{{--コンビニユーザー登録画面のフォームページにして良い--}}
     <h1 class="c-detail__title">スタッフユーザー登録</h1>
     <p class="c-warning">お客様(コンビニスタッフ関係ではない)方は,トップページのお客様ユーザー登録というボタンからお入りになって登録をしてください</p>
 <form method="POST" action="{{ url("register/$authgroup") }}" class="c-form__area">
  @else
- {{-- ここからユーザー登録お客様のレイアウト --}}
  <h1 class="c-detail__title">ユーザー登録</h1>
  <div class="c-form__area">
 <form method="POST" action="{{ route('register') }}" >
@@ -44,14 +42,13 @@
                                 <br/>
                             <label for="password-confirm" class="c-form__area__message ">パスワード再入力:</label><br/>
                                 <input id="password-confirm" type="password" class="c-form__area__text" name="password_confirmation" required autocomplete="new-password" placeholder="パスワード再入力">        
-                    </div>                    
+                    {{-- </div>                     --}}
                             <button type="submit" class="c-register__custombutton">
                                 ユーザー登録
                             </button>
                         </form>
                     </div>
                     @endisset
-{{-- ここまでがお客様のユーザー登録エリア --}}
                     @isset($authgroup)
                         @csrf
                             {{-- <div class="c-form__area"> --}}
