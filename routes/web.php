@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HaikiController;
+use App\Http\Controllers\AdminProfileController;
 use App\Http\Controllers\JsonsController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
@@ -41,8 +42,8 @@ Route::get('/haiki/{id}/shopper_productdetail',[HaikiController::class, 'shopper
 //=========================================
 //コンビニスタッフプロフィール編集画面を作るもの 4
 //========================================
-Route::get('/haiki/staff_profile',[HaikiController::class, 'staff_profile_display'])->middleware('auth:admin')->name('haiki_shopper.staff_profile_display');    
-Route::post('/haiki/{id}/staff_profile',[HaikiController::class, 'staff_profile_edit'])->middleware('auth:admin')->name('haiki_staffrprofile_edit');
+Route::get('/haiki/staff_profile',[AdminProfileController::class, 'staff_profile_display'])->middleware('auth:admin')->name('haiki_shopper.staff_profile_display');    
+Route::post('/haiki/{id}/staff_profile',[AdminProfileController::class, 'staff_profile_edit'])->middleware('auth:admin')->name('haiki_staffrprofile_edit');
 
 //=================================================
 //商品を出品する画面 5

@@ -103,39 +103,6 @@ return redirect('haiki/shopper_mypage');//..............お客様の情報を更
     //購入がキャンセルされた時に更新するための処理
 //=================================================4ここまで
 
-//=============================================================
-//5staffのprofileのdisplay(コンビニ情報を登録し直す)               //
-//=============================================================
-    public function staff_profile_display(){
-        $id = Auth::guard('admin')->id();
-        $admin = DB::table('admins')->find($id);
-        return view('haiki_staff.staff_profile_display',['admin'=>$admin]);
-    } //...................画面表示するもの
-
-    public function staff_profile_edit(Request $request)
-{
-$request->validate([
-'name'=>['required','max:255'],
-    'email'=>['required','max:255'],
-    'password'=>['required','min:8','max:255'],
-    'password_confirmation'=>['required','min:8','same:password'],
-    'convinience_name'=>'required',
-    'convinience_branch'=>'required',
-    'adress'=>'required',
-    'prefecture'=>'required'
-]);
-$id = Auth::guard('admin')->id();
-$admin = Admin::find($id);
-$admin->name = $request->name;
-$admin->password= Hash::make($request->password);
-$admin->convinience_name = $request->convinience_name;
-$admin->convinience_branch = $request->convinience_branch;
-$admin->prefecture=$request->prefecture;
-$admin->adress=$request->adress;
-$admin->save();
-return redirect('admin')->with('flash_message', __('Registered.'));
-}//staffのプロフィールをデータベースに更新し直す処理
-//=============================================================5ここまで
 
 //==============================================================
 //6コンビニ 商品出品画面                                          //
@@ -263,37 +230,4 @@ public function admin(){
     return view('admin',['admin'=>$admin]);//...................画面表示するもの
 }
 
-//==========================================================================
-
-//================================================
-//json形式でファイルを保存するためのコントローラ       //
-//================================================
-public function index1(){
-$drill = DB::table('products')->get();
-    return response()->json($drill);
-}    
-//index1の内容は基本的にファイルの中に入っているもの全てを取得する
-//.................................................................ここまで
-public function productjson(){
-    $id = Auth::guard('admin')->id();
-    $product = products::where("admin_id",$id)->get();
-return response()->json($product);
 }
-//管理者としてログインした時に、管理者専用の情報を取得するjson形式のデータベース
-//.................................................................ここまで
-
-public function userjson(){
-    $id = Auth::id();
-    $user = products::where('user_id',$id)->get();
-return response()->json($user);
-}
-//shopper自分が購入した商品を写し出すjson形式生成
-//ログインしているidを取得して、productsテーブルからuser_idと照合したカラムを取り出す。
-//.................................................................ここまで
-public function buyjson(){
-    $id = Auth::guard('admin')->id();
-    $product = products::where("admin_id",$id)->orderBy('updated_at','desc')->get();
-return response()->json($product);
-}//購入された商品情報を最新順に渡す。
-}
-//=========================================================json形式で渡すのここまで。
