@@ -1364,6 +1364,12 @@ a {
 .c-register__custombutton:hover {
   background: orange;
 }
+@media screen and (max-width:980px) {
+  .c-register__custombutton {
+    width: 40%;
+    margin-left: 38%;
+  }
+}
 @media screen and (max-width: 720px) {
   .c-register__custombutton {
     width: 50%;
@@ -1606,6 +1612,16 @@ a {
 
 .c-errormessage {
   color: rgb(234, 14, 14);
+}
+@media screen and (max-width:980px) {
+  .c-errormessage {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .c-errormessage {
+    font-size: 10px;
+  }
 }
 
 .c-form__area {
