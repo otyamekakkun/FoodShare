@@ -938,6 +938,7 @@ a {
   flex-wrap: wrap;
   text-align: center;
 }
+
 .c-staffmypagelistarea__list {
   flex-wrap: 100%;
   padding-bottom: 3%;
@@ -967,6 +968,12 @@ a {
   background: white;
   margin: 2%;
   text-align: center;
+}
+@media screen and (max-width:980px) {
+  .c-staffmypagelistarea__area {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .c-staffmypagelistarea__text {
@@ -1016,6 +1023,21 @@ a {
   width: 250px;
   height: 200px;
 }
+@media screen and (max-width:980px) {
+  .c-staffmypagelistarea__list__img {
+    width: 240px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .c-staffmypagelistarea__list__img {
+    width: 170px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .c-staffmypagelistarea__list__img {
+    width: 176px;
+  }
+}
 @media screen and (max-width: 414px) {
   .c-staffmypagelistarea__list__img {
     width: 165px;
@@ -1026,6 +1048,11 @@ a {
   font-size: 25px;
   text-align: center;
 }
+@media screen and (max-width: 560px) {
+  .c-staffmypagelistarea__list__name {
+    font-size: 20px;
+  }
+}
 @media screen and (max-width: 414px) {
   .c-staffmypagelistarea__list__name {
     font-size: 20px;
@@ -1035,6 +1062,11 @@ a {
 .c-staffmypagelistarea__list__price {
   color: red;
   text-align: center;
+}
+@media screen and (max-width: 560px) {
+  .c-staffmypagelistarea__list__price {
+    font-size: 20px;
+  }
 }
 @media screen and (max-width: 414px) {
   .c-staffmypagelistarea__list__price {
@@ -1054,6 +1086,11 @@ a {
   color: orange;
   border-color: #174113;
   border-width: 1px;
+}
+@media screen and (max-width: 560px) {
+  .c-staffmypagelistarea__list__a {
+    font-size: 20px;
+  }
 }
 @media screen and (max-width: 414px) {
   .c-staffmypagelistarea__list__a {
