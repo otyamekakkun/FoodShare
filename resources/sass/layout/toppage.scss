@@ -5,11 +5,6 @@
     @include mqxl() {
     }
     @include mql() {
-    }
-    @include mqm() {
-    }
-
-    @include mq() {
         display: block;
     }
 }
@@ -20,13 +15,7 @@
     }
     @include mqxl() {
     }
-
     @include mql() {
-    }
-    @include mqm() {
-    }
-
-    @include mq() {
         height: 0px;
         display: block;
     }
@@ -40,26 +29,19 @@
     text-align: center;
     font-size: size(xl);
     @include mql() {
-        // width: 80%;
-        // height: 300px;
-    }
-
-    @include mq() {
-        //height: 300px;
-        //   padding-left: size(s);
-        //   padding-right: size(s);
-        margin-top: 380px;
+        margin-top: 540px;
         margin-left: auto;
         margin-right: auto;
     }
+    @include mqm() {
+        margin-top: 420px;
+    }
+    @include mq() {
+        margin-top: 380px;
+    }
 }
 .l-top__titlearea__text {
-    // line-height: size(l);
     display: block;
-    // background: red;
-    // line-height: ;
-    // margin-top: 100px;
-    // padding-top: 20px;
     transition: all;
     &:hover {
         transition: 0.3s;
@@ -79,14 +61,7 @@
     @include mqxl() {
     }
     @include mql() {
-    }
-    @include mqm() {
-    }
-
-    @include mq() {
         display: none;
-        height: 300px;
-        margin-top: 500px;
     }
 }
 
