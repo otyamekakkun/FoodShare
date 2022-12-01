@@ -1,21 +1,13 @@
 .l-top {
     display: flex;
-    @include mqxxl() {
-    }
     @include mqxl() {
-    }
-    @include mql() {
         display: block;
     }
 }
 .l-topimg {
     height: 900px;
     background: white;
-    @include mqxxl() {
-    }
     @include mqxl() {
-    }
-    @include mql() {
         height: 0px;
         display: block;
     }
@@ -24,14 +16,14 @@
     width: 100%;
 }
 .l-top__titlearea {
+    width: 50%;
     margin-top: 10%;
-    margin-left: 24%;
     text-align: center;
-    font-size: size(xl);
     @include mql() {
         margin-top: 540px;
         margin-left: auto;
         margin-right: auto;
+        width: 100%;
     }
     @include mqm() {
         margin-top: 420px;
@@ -41,13 +33,31 @@
     }
 }
 .l-top__titlearea__text {
-    display: block;
+    display: inline;
     transition: all;
+    font-size: size(xl);
+    line-height: 100px;
+    margin-left: 24%;
     &:hover {
         transition: 0.3s;
         color: orange;
         font-size: size(xl);
         border-bottom: solid orange;
+    }
+    @include mqxxl() {
+        margin-left: 16%;
+        font-size: size(l);
+    }
+    @include mqxl() {
+        color: white;
+        font-size: size(xl);
+    }
+    @include mql {
+        font-size: size(l);
+        color: black;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 .c-topfooter {
@@ -59,6 +69,7 @@
     @include mqxxl() {
     }
     @include mqxl() {
+        height: 380px;
     }
     @include mql() {
         display: none;

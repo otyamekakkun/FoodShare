@@ -22,11 +22,6 @@
     font-size: size(4l);
     padding: size(m);
     margin-left: size(m);
-
-    @include mqxxl() {
-    }
-    @include mqxl() {
-    }
     @include mql() {
         font-size: size(2l);
         text-align: center;
