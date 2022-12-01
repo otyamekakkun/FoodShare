@@ -576,9 +576,6 @@ a {
   text-align: center;
 }
 
-/* CSSコード */
-/* ここから下がハンバーガーメニューに関するCSS */
-/* チェックボックスを非表示にする */
 .c-drawer__hidden {
   display: none;
 }
