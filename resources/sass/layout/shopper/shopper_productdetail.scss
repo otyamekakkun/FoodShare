@@ -16,7 +16,7 @@
         text-align: center;
     }
     @include mqm() {
-        font-size: size(l);
+        font-size: size(s);
     }
 }
 

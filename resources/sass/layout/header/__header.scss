@@ -32,10 +32,9 @@
     padding: size(m);
     margin-left: size(m);
     @include mql() {
+        padding: 0px;
         font-size: size(2l);
         text-align: center;
-        margin-left: auto;
-        margin-right: auto;
     }
 }
 
@@ -64,7 +63,6 @@
     cursor: pointer;
     margin-top: 60px;
     @include mq() {
-        right: 80px;
     }
 }
 
@@ -78,7 +76,6 @@
     width: 30px;
     border-radius: 3px;
     background: black;
-    //color: black;
     transition: 0.5s;
     position: absolute;
 }
@@ -92,7 +89,6 @@
 .c-drawer--open span:after {
     top: 10px;
 }
-
 /* アイコンがクリックされたら真ん中の線を透明にする */
 #drawer_input:checked ~ .c-drawer--open span {
     background: rgba(255, 255, 255, 0);
@@ -140,6 +136,13 @@
         color: orange;
         font-size: size(xxl);
         text-decoration: underline;
+    }
+    @include mqm() {
+        &:hover {
+            color: orange;
+            font-size: size(xl);
+            text-decoration: underline;
+        }
     }
 }
 

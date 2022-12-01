@@ -22,7 +22,6 @@
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 20px;
-
     @include mql() {
         width: 100%;
         margin-right: auto;
@@ -42,7 +41,6 @@
     @include mqxl() {
         width: 50%;
     }
-    //600px付近でセッティング必要かも
     @include mql() {
         height: 200px;
         width: 90%;
@@ -65,9 +63,7 @@
     padding: 1%;
     background: rgba(255, 255, 255, 0.6);
 }
-
 .c-search {
-    //background: red;
     display: flex;
     color: black;
     margin-bottom: size(m);
@@ -76,11 +72,9 @@
 .c-search__text {
     text-align: center;
 }
-
 //======================================
 //商品詳細画面をまとめるもの コンポーネント部分
 //======================================
-//購入された用のflex
 .c-flex {
     display: flex;
 }
@@ -95,6 +89,9 @@
     display: flex;
     flex-wrap: wrap;
     text-align: center;
+    @include mql() {
+        //   padding: 0px;
+    }
 }
 
 .c-staffmypagelistarea__list {
@@ -118,7 +115,6 @@
     width: 70%;
     padding-left: 50px;
     padding-right: 50px;
-    //height: 400px;
     @include mql() {
         width: 60%;
     }
@@ -142,13 +138,24 @@
     color: white;
     font-size: size(l);
     color: black;
+    @include mqxl() {
+        width: 52%;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     @include mql() {
-        width: 100%;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
         text-align: center;
         font-size: size(m);
     }
+    @include mqm() {
+        font-size: size(s);
+    }
 }
-
 .c-staffmypagelistarea__title1__text {
     display: inline;
     border-bottom: 1px solid black;
