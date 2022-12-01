@@ -6,10 +6,9 @@
 <p class="c-warning">利用者は普通のログインページで記述してください</p>
 <form method="POST" action="{{ url("login/$authgroup") }}">
 @else
-                        <h1 class="c-detail__title">ログイン</h1>
-                    <form method="POST" action="{{ route('login') }}">
-                    @endisset
-                        @csrf
+<h1 class="c-detail__title">ログイン</h1>
+<form method="POST" action="{{ route('login') }}">
+@endisset @csrf
     <div class="c-form__area">
 <span for="email" class="c-form__area__message">email:
 <span>
@@ -20,9 +19,9 @@
 @enderror
 </span>
 </span>
-                            <br/>
-                                <input id="" type="email" class="c-form__area__text" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="emailを入力してください">
-                                <br/>
+<br/>
+<input id="" type="email" class="c-form__area__text" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="emailを入力してください">
+<br/>
 <span for="password" class="c-form__area__message">パスワード:
 <span>
     @error('password')
@@ -33,27 +32,26 @@
     </span>    
 </span> 
 <br/>
-
-                                <input id="password" type="password" class="c-form__area__text" name="password" required autocomplete="current-password" placeholder="パスワード入力">
+<input id="password" type="password" class="c-form__area__text" name="password" required autocomplete="current-password" placeholder="パスワード入力">
 <br/>
 <div class="c-loginarea">
 <input class="" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-                                        {{ __('Remember Me') }}
-                                <button type="submit" class="c-login__button">
-                                    {{ __('Login') }}
-                                </button>
-                                <br/>
-                            </div>
-                                @if (Route::has(isset($authgroup) ? $authgroup.'.password.request' : 'password.request'))
-                                <a class="c-remind__text" href="{{ route(isset($authgroup) ? $authgroup.'.password.request' : 'password.request') }}">
-                                    {{ __('Forgot Your Password?') }}
-                                </a>
-                            @endif
-                            </div>
-                        </div>
-                    </div>
-                    </form>
-                    <div id=app>
-                    <footer-component></footer-component>
-                    </div>
-                    @endsection
+{{ __('Remember Me') }}
+    <button type="submit" class="c-login__button">
+        {{ __('Login') }}
+    </button>
+    <br/>
+ </div>
+ @if (Route::has(isset($authgroup) ? $authgroup.'.password.request' : 'password.request'))
+<a class="c-remind__text" href="{{ route(isset($authgroup) ? $authgroup.'.password.request' : 'password.request') }}">
+{{ __('Forgot Your Password?') }}
+</a>
+@endif
+     </div>
+  </div>
+</div>
+</form>
+<div id=app>
+<footer-component></footer-component>
+</div>
+@endsection
