@@ -1,7 +1,6 @@
 //====================================================
 //出品した商品一覧のリスト化のもの
 //====================================================
-
 .c-productlist__sentence {
     display: flex;
     justify-content: center;
@@ -56,9 +55,7 @@
 //=================================
 // お客様用の商品一覧絞り込みリスト
 //=================================
-
 .c-searcharea {
-    //  background: red;
     width: 50%;
     margin-left: auto;
     margin-right: auto;
@@ -106,8 +103,6 @@
 .c-staffmypagelistarea__list {
     flex-wrap: 100%;
     padding-bottom: 3%;
-    //margin-left: 10px;
-    // margin-right: 10px;
     width: 100%;
 }
 
@@ -132,18 +127,9 @@
     }
 }
 
-//===========================================
-//shopper-mypageの検索一覧
-//===========================================
-//=================================
-//ここから新要素 (コンビニのマイページについて)
-//=================================
-
 .c-staffmypagelistarea__area {
-    // border: solid #174113;
     background: white;
     margin: 2%;
-    //padding: 2%;
     text-align: center;
 }
 .c-staffmypagelistarea__text {
@@ -163,17 +149,11 @@
 
 .c-staffmypagelistarea__title1__text {
     display: inline;
-    //line-height: center;
-    //text-align: center;
     border-bottom: 1px solid black;
 }
 
 .c-staffmypagelistarea__list__img {
-    // margin-left: auto;
-    //  margin-right: size(4l);
-    // margin-top: size(s);
     text-align: center;
-    // margin: auto;
     width: 250px;
     height: 200px;
 }
@@ -210,6 +190,20 @@
     display: flex;
     margin-top: 100px;
     height: 500px;
+    @include mqxxl() {
+    }
+    @include mqxl() {
+    }
+
+    @include mql() {
+    }
+    @include mqm() {
+        width: 46%;
+    }
+
+    @include mq() {
+        width: 50%;
+    }
 }
 .c-productdetailimg {
     width: 600px;
@@ -220,20 +214,16 @@
     margin-top: 100px;
     list-style: none;
     width: 50%;
-    // background: white;
     font-size: size(l);
 }
 .c-productdetail__area__text {
     border-bottom: solid black;
 }
 .c-productdetail__area__sentence {
-    //  border-bottom: solid black;
     margin-top: size(2l);
 }
 
 .c-productdetail__twitter {
-    // background: cyan;
-    //写真の中央揃えみたいな感じにできれば良い
     margin-left: 300px;
     font-size: size(m);
     &:hover {
@@ -242,7 +232,6 @@
     }
 }
 .c-productdetail__button {
-    // background: red;
     display: block;
     background: #4b4b4b;
     text-align: center;
@@ -260,11 +249,8 @@
     }
     @include mqxxl() {
         width: 30%;
-
-        //レスポンシブ対策960px以下にボタンを対応
     }
     @include mqxl() {
-        //  margin-top: 100px;
     }
 
     @include mql() {

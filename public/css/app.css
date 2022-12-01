@@ -707,6 +707,22 @@ a {
   padding-top: 40px;
   margin-bottom: 40px;
 }
+@media screen and (max-width:980px) {
+  .c-detail__title {
+    font-size: 35px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .c-detail__title {
+    font-size: 30px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 560px) {
+  .c-detail__title {
+    font-size: 25px;
+  }
+}
 
 .c-detail {
   display: flex;
@@ -1008,6 +1024,16 @@ a {
   margin-top: 100px;
   height: 500px;
 }
+@media screen and (max-width: 560px) {
+  .c-productdetail {
+    width: 46%;
+  }
+}
+@media screen and (max-width: 414px) {
+  .c-productdetail {
+    width: 50%;
+  }
+}
 
 .c-productdetailimg {
   width: 600px;
@@ -1272,6 +1298,13 @@ a {
   .c-login__button {
     width: 40%;
     margin-top: 40px;
+  }
+}
+@media screen and (max-width: 414px) {
+  .c-login__button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
   }
 }
 
@@ -1665,25 +1698,6 @@ a {
   margin-bottom: 25px;
   width: 60%;
 }
-.c-form__adresstitle {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-size: 30px;
-}
-@media screen and (max-width:980px) {
-  .c-form__adresstitle {
-    width: 100%;
-    font-size: 25px;
-    margin-top: 30px;
-    margin-bottom: 15px;
-  }
-}
-@media screen and (max-width: 560px) {
-  .c-form__adresstitle {
-    font-size: 20px;
-  }
-}
-
 .u-space {
   padding: 10px;
 }

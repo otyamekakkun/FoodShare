@@ -16,7 +16,6 @@
     @include mqxl() {
         width: 15%;
         margin: auto;
-        //レスポンシブ対策960px以下にボタンを対応
     }
 
     @include mql() {
@@ -61,7 +60,6 @@
         margin-right: 10px;
     }
 }
-//...........................................................
 //..........................................................
 //商品を編集する画面出品する画面のボタン
 .c-staffform__area__submitbutton {
@@ -81,13 +79,7 @@
     }
     @include mqxxl() {
         width: 30%;
-
-        //レスポンシブ対策960px以下にボタンを対応
     }
-    @include mqxl() {
-        //  margin-top: 100px;
-    }
-
     @include mql() {
         width: 40%;
     }
@@ -117,10 +109,6 @@
     }
     @include mqxxl() {
         width: 30%;
-        //margin-left: auto;
-        //   margin-right: auto;
-
-        //レスポンシブ対策960px以下にボタンを対応
     }
 
     @include mql() {
@@ -140,7 +128,6 @@
 //=============================
 //ボタンの中のsubmitボタンシリーズ
 //=============================
-
 //パスワードリマインダーの画面のボタン
 .c-remind__button {
     background: #4b4b4b;
@@ -166,11 +153,9 @@
     }
 
     @include mql() {
-        //720px以下
         font-size: size(s);
     }
     @include mqm() {
-        //560px以下対応
         width: 80%;
     }
 }
@@ -191,6 +176,11 @@
         width: 40%;
         margin-top: size(2l);
     }
+    @include mq() {
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
 }
 //ユーザー登録するときの送信ボタンコンビニ側
 .c-register__button {
@@ -210,17 +200,14 @@
         background: orange;
     }
     @include mqxl() {
-        //980px以下
         width: 50%;
         margin-left: 70%;
     }
     @include mql() {
-        //720px以下
         width: 60%;
         margin-left: 50%;
     }
     @include mqm() {
-        //560px対応
         width: 73%;
         font-size: size(m);
         margin-top: 120px;
@@ -229,12 +216,10 @@
     }
 
     @include mq() {
-        //414px対応
         width: 60%;
         margin-top: 100px;
     }
 }
-
 .c-register__custombutton {
     background: #4b4b4b;
     color: white;
@@ -245,19 +230,16 @@
     margin-left: 56.8%;
     text-align: center;
     height: 65px;
-    //  padding: size(s);
     transition: all 0.4s;
     width: 24%;
     &:hover {
         background: orange;
     }
     @include mql() {
-        //720px以下
         width: 50%;
         margin-left: 50%;
     }
     @include mqm() {
-        //560px対応
         width: 60%;
         font-size: size(m);
         margin-top: 120px;
@@ -301,14 +283,11 @@
     margin-top: size(2l);
     font-size: size(s);
     text-align: center;
-
     &:hover {
         color: red;
         font-size: size(m);
     }
 }
-
-//商品を編集する画面ここまで
 
 //===============================
 //shopper購入するボタンのメニュー欄
@@ -320,7 +299,6 @@
     width: 100%;
     display: flex;
 }
-
 //..........................................................ボタンエリアここまで
 
 //============================================================================
@@ -628,24 +606,5 @@
     }
     @include mqm() {
         //414px対応
-    }
-}
-//................................................
-//=========================================
-//住所記入欄
-//=========================================
-.c-form__adresstitle {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: size(xl);
-    @include mqxl() {
-        width: 100%;
-        font-size: size(l);
-        margin-top: size(xl);
-        margin-bottom: size(s);
-    }
-    @include mqm() {
-        //414px対応
-        font-size: size(m);
     }
 }
