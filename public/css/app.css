@@ -491,6 +491,9 @@ a {
     margin-left: 16%;
     font-size: 25px;
   }
+  .l-top__titlearea__text:hover {
+    font-size: 25px;
+  }
 }
 @media screen and (max-width:980px) {
   .l-top__titlearea__text {

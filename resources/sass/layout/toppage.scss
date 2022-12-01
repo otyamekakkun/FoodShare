@@ -48,6 +48,9 @@
     @include mqxxl() {
         margin-left: 16%;
         font-size: size(l);
+        &:hover {
+            font-size: size(l);
+        }
     }
     @include mqxl() {
         color: white;
