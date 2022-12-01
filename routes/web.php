@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HaikiController; //laravel8なので左のことを記述してルートの書き方を楽にする
+use App\Http\Controllers\HaikiController;
+use App\Http\Controllers\JsonsController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 
@@ -81,23 +82,19 @@ Route::post('/register/admin', [RegisterController::class, 'registerAdmin'])->na
 //=================================================
 Route::get('/admin', [App\Http\Controllers\HaikiController::class, 'admin'])->middleware('auth:admin')->name('admin-home');
 
-//====================================================
+//=========================================
 //json形式で記述するもの
 //==========================================
-//json形式でデータベースを取得したときに格納しとく場所
-//ここ後にセキュリティ対策をしないと大変なことになりそう（パスワードダダ漏れになるし。）
-//例えばこのurlをグチャグチャにする。
-Route::get('/haiki/index1',[HaikiController::class, 'index1'])->name('drills.index1');
-//管理者としてログインした時に、管理者専用の情報を取得するjson形式のデータベース
-Route::get('/haiki/index3',[HaikiController::class, 'productjson'])->name('product.json');
-Route::get('/haiki/index4',[HaikiController::class, 'userjson'])->name('user.json');
-// buy
-Route::get('/haiki/index5',[HaikiController::class, 'buyjson'])->name('buy.json');
-//json形式で渡すものはしっかりと対策する必要がある。
-//staff_exhibitproductをjson形式で渡す
-Route::get('/haiki/jsonstaff_exhibit',[HaikiController::class, 'staff_exhibitproduct_json'])->name('product.json');
-//ok
-Route::get('/haiki/{id}/jsonstaffproductdetail',[HaikiController::class, 'staffproductdetailjson'])->name('products.json');
+Route::get('/haiki/index1',[JsonsController::class, 'index1'])->name('drills.index1');
+Route::get('/haiki/index3',[JsonsController::class, 'productjson'])->name('product.json');
+Route::get('/haiki/index4',[JsonsController::class, 'userjson'])->name('user.json');
+Route::get('/haiki/index5',[JsonsController::class, 'buyjson'])->name('buy.json');
+Route::get('/haiki/jsonstaff_exhibit',[JsonsController::class, 'staff_exhibitproduct_json'])->name('product.json');
+Route::get('/haiki/{id}/jsonstaffproductdetail',[JsonsController::class, 'staffproductdetailjson'])->name('products.json');
+
+//=======================================
+//パスワードリマインダー
+//======================================
 Route::get('password/admin/reset', [App\Http\Controllers\Auth\AdminForgotPasswordController::class, 'showLinkRequestForm'])->name('admin.password.request');
 Route::post('password/admin/email', [App\Http\Controllers\Auth\AdminForgotPasswordController::class, 'sendResetLinkEmail'])->name('admin.password.email');
 Route::get('password/admin/reset/{token}', [App\Http\Controllers\Auth\AdminResetPasswordController::class, 'showResetForm'])->name('admin.password.reset');
