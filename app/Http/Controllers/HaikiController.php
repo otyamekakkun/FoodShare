@@ -103,43 +103,6 @@ return redirect('haiki/shopper_mypage');//..............お客様の情報を更
     //購入がキャンセルされた時に更新するための処理
 //=================================================4ここまで
 
-
-//==============================================================
-//6コンビニ 商品出品画面                                          //
-//==============================================================
-    public function staff_exhibitproduct_display(){
-        $id = Auth::guard('admin')->id();
-        $admin = Admin::find($id);
-        return view('haiki_staff.staff_exhibitproduct_display',['admins'=>$admin]);
-    } 
-    //商品出品する画面を表示するための処理
-public function create_exhibitproduct(Request $request){
-    $request->validate([
-        'product_name'=>'required',
-        'img_path' => 'required|file|image|mimes:png,jpeg',
-        'price'=>'required',//全角で入力した瞬間enterを押された瞬間消える
-        'best_by_date'=>'required'
-    ]);
-$image = $request->file("img_path");
-$path = Storage::disk("public")->putFile('profile', $image); 
-$imagePath = "/storage/" . $path;
-$id = Auth::guard('admin')->id();
-$product = new products;
-$product->product_name = $request->product_name;
-$product->admin_id = $id;//現在ログインしているコンビニユーザー情報のidをこの中に入れる
-$product->img_path=$imagePath;
-$product->img_path=$imagePath;
-$product->price = $request->price;
-$product->best_by_date = $request->best_by_date;
-$product->prefecture=$request->prefecture;
-$product->email=$request->email;
-$product->convinience_name=$request->convinience_name;
-$product->save();
-return redirect('admin')->with('flash_message', __('Registered.'));
-} //商品の情報をデータベースに登録し直す処理
-
-//=========================================================6ここまで
-
 //=========================================================7ここまで
 //=====================================================
 //8コンビニ用の商品編集画面
