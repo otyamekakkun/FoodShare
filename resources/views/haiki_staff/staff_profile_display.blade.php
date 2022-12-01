@@ -6,8 +6,8 @@
     <header>
         @include('header.staff.staffmypage_header')
     </header>
-    <h3 class="c-detail__title">コンビニ情報編集</h3>
-        <form  action="{{route('haiki_staffrprofile_edit',$admin->id)}}" method="POST">
+<h3 class="c-detail__title">コンビニ情報編集</h3>
+    <form  action="{{route('haiki_staffrprofile_edit',$admin->id)}}" method="POST">
             @csrf
             <div class="c-form__area">
                 <span class="c-form__area__message">名前:
@@ -18,7 +18,7 @@
                     @enderror
                 </span>
                 <br/>
-                <input class="c-form__area__text" action="post" type="text" name="name" placeholder="名前を編集" value="{{$admin->name}}">
+    <input class="c-form__area__text" action="post" type="text" name="name" placeholder="名前を編集" value="{{$admin->name}}">
 <br/>
 <span class="c-form__area__message">メールアドレス編集:
               @error('email')
@@ -40,7 +40,6 @@
 <br/>
 <input class="c-form__area__text" action="post" type="password" name="password" placeholder="パスワード編集">
 <br/>
-{{-- パスワード入力ここまで --}}
 <span class="c-form__area__message">パスワード再入力:
     @error('password_confirmation')
     <span class="c-errormessage" role="alert">
@@ -51,9 +50,6 @@
 <br/>
         <input class="c-form__area__text" type="password" class="c-form__area__text" name="password_confirmation" required autocomplete="new-password">
 <br/>
-
-        {{-- パスワード再入力ここまで --}}
-
 <span class="c-form__area__message">コンビニ名:
     @error('convinience_name')
     <span class="c-errormessage" role="alert">
@@ -62,11 +58,8 @@
     @enderror     
 </span>
 <br/>
-            <input class="c-form__area__text" action="post" type="text" name="convinience_name" placeholder="コンビニ名" value="{{$admin->convinience_name}}">
-        {{-- </div> --}}
-
-            <br/>
-
+<input class="c-form__area__text" action="post" type="text" name="convinience_name" placeholder="コンビニ名" value="{{$admin->convinience_name}}">
+<br/>
 <span class="c-form__area__message">支店名:
     @error('convinience_branch')
     <span class="c-errormessage" role="alert">
@@ -75,17 +68,15 @@
     @enderror    
 </span>
 <br/>
-
-            <input class="c-form__area__text" action="post" type="text" name="convinience_branch" placeholder="支店名" value="{{$admin->convinience_branch}}">
-            <br/>
-
-            <span class="c-form__area__message">住所都道府県選択:
-                @error('prefecture')
-                <span class="c-errormessage" role="alert">
-                    <strong>{{$message}}</strong>
-                </span>
-                @enderror    
+<input class="c-form__area__text" action="post" type="text" name="convinience_branch" placeholder="支店名" value="{{$admin->convinience_branch}}">
+<br/>
+    <span class="c-form__area__message">住所都道府県選択:
+        @error('prefecture')
+            <span class="c-errormessage" role="alert">
+                <strong>{{$message}}</strong>
             </span>
+        @enderror    
+    </span>
 <select name="prefecture" class="c-form__area__text" value="{{$admin->prefecture}}">
     <option value="北海道">北海道</option>
     <option value="青森県">青森県</option>
@@ -137,7 +128,6 @@
     </select>
     </select>
 <br/>
-{{-- 都道府県ここまで --}}
 <span class="c-form__area__message">都道府県以外の住所:
     @error('adress')
     <span class="c-errormessage" role="alert">
@@ -146,11 +136,10 @@
     @enderror    
 </span>
 <br/>
-
 <input name="adress" class="c-form__area__text" type="text" value="{{$admin->adress}}" >
-</div>
             <input type="submit" class="c-register__custombutton" value="変更する">
-        </form>
+</div>
+</form>
 <div id="app">
 <footer-component>
 </footer-component>
