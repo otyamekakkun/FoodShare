@@ -9,95 +9,82 @@
  <h1 class="c-detail__title">ユーザー登録</h1>
  <div class="c-form__area">
 <form method="POST" action="{{ route('register') }}" >
-@csrf
- <br/>
+@csrf <br/>
 <span for="name" class="c-form__area__message">名前:
 @error('name')
-                                    <span  role="alert" class="c-errormessage">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </span>
-                                <br/>
-                                <input id="name" type="text" class="c-form__area__text" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus  placeholder="名前">
-                                <br/>
-                            <span for="email" class="c-form__area__message ">Email:
-                                @error('email')
-                                <span class="c-errormessage" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                            </span><br/>
-                                <input id="email" type="email"class="c-form__area__text" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Email">
-                                <br/>
-                            <label for="password"class="c-form__area__message">パスワード:                                
-                                @error('password')
-                                <span class="c-errormessage" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </label>
-                        <br/>
-                                <input id="password" type="password" class="c-form__area__text"  name="password" required autocomplete="new-password" placeholder="パスワード">
-                                <br/>
-                            <label for="password-confirm" class="c-form__area__message ">パスワード再入力:</label><br/>
-                                <input id="password-confirm" type="password" class="c-form__area__text" name="password_confirmation" required autocomplete="new-password" placeholder="パスワード再入力">        
-                    {{-- </div>                     --}}
-                            <button type="submit" class="c-register__custombutton">
-                                ユーザー登録
-                            </button>
-                        </form>
-                    </div>
-                    @endisset
-                    @isset($authgroup)
-                        @csrf
-                            {{-- <div class="c-form__area"> --}}
-                            <h1 class="c-form__title">（個人情報エリア）</h1>
-                            <br/>
-                            <span for="name" class="c-form__area__message">名前:
-                                @error('name')
-                                    <span class="c-errormessage"  role="alert">
-                                  <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </span>
-                                <br/>
-                                <input id="name" type="text" class="c-form__area__text" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus  placeholder="名前">
-                                <br/>
-                            <span for="email" class="c-form__area__message ">Email:
-                                @error('email')
-                                <span class="c-errormessage" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                            </span><br/>
-                                <input id="email" type="email"class="c-form__area__text" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Email">
-                                <br/>
-                            <label for="password"class="c-form__area__message">パスワード:                                
-                                @error('password')
-                                <span class="c-errormessage" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </label>
-                        <br/>
-                                <input id="password" type="password" class="c-form__area__text"  name="password" required autocomplete="new-password" placeholder="パスワード">
-                                <br/>
-                            <label for="password-confirm" class="c-form__area__message ">パスワード再入力:
-                            </label>
-                             <br/>
+<span  role="alert" class="c-errormessage">
+　<strong>{{ $message }}</strong>
+</span>
+@enderror
+</span> <br/>
+<input id="name" type="text" class="c-form__area__text" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus  placeholder="名前"><br/>
+<span for="email" class="c-form__area__message ">Email:
+    @error('email')
+       <span class="c-errormessage" role="alert">
+            <strong>{{ $message }}</strong>
+        </span>
+        @enderror
+      </span> <br/>
+<input id="email" type="email"class="c-form__area__text" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Email"> <br/>
+    <label for="password"class="c-form__area__message">パスワード:                                
+        @error('password')
+            <span class="c-errormessage" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+        @enderror
+    </label> <br/>
+<input id="password" type="password" class="c-form__area__text"  name="password" required autocomplete="new-password" placeholder="パスワード"> <br/>
+<label for="password-confirm" class="c-form__area__message ">パスワード再入力:</label><br/>
+    <input id="password-confirm" type="password" class="c-form__area__text" name="password_confirmation" required autocomplete="new-password" placeholder="パスワード再入力">        
+        <button type="submit" class="c-register__custombutton">
+            ユーザー登録
+        </button>
+   </form>
+</div>
+@endisset @isset($authgroup) @csrf
+<h1 class="c-form__title">（個人情報エリア）</h1><br/>
+    <span for="name" class="c-form__area__message">名前:
+        @error('name')
+            <span class="c-errormessage"  role="alert">
+            <strong>{{ $message }}</strong>
+            </span>
+        @enderror
+    </span> <br/>
+<input id="name" type="text" class="c-form__area__text" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus  placeholder="名前">
+<br/>
+    <span for="email" class="c-form__area__message ">Email:
+        @error('email')
+            <span class="c-errormessage" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+        @enderror
+    </span>
+<br/>
+<input id="email" type="email"class="c-form__area__text" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Email">
+<br/>
+    <label for="password"class="c-form__area__message">パスワード:                                
+        @error('password')
+    <span class="c-errormessage" role="alert">
+        <strong>{{ $message }}</strong>
+    </span>
+        @enderror
+    </label>
+<br/>
+<input id="password" type="password" class="c-form__area__text"  name="password" required autocomplete="new-password" placeholder="パスワード">
+<br/>
+    <label for="password-confirm" class="c-form__area__message ">パスワード再入力:</label>
+<br/>
  <input id="password-confirm" type="password" class="c-form__area__text" name="password_confirmation" required autocomplete="new-password" placeholder="パスワード再入力">
-<span  class="c-form__area__message ">勤めているコンビニ会社:
+<span class="c-form__area__message ">勤めているコンビニ会社:
     @error('convinience_name')
     <span class="c-errormessage" role="alert">
         <strong>{{ $message }}</strong>
     </span>
-@enderror
+    @enderror
 </span>
 <br/>
 <input type="text" placeholder="コンビニの会社名" name="convinience_name" class="c-form__area__text">
 <br/>
-
 <span class="c-form__area__message">支店名記入欄:
     @error('convinience_branch')
     <span class="c-errormessage" role="alert">
@@ -107,7 +94,6 @@
 </span><br/>
 <input type="text" placeholder="支店名記入欄" name="convinience_branch" class="c-form__area__text">
 <br/>
-
     <span class="c-form__area__message">住所(47都道府県を選択):
         @error('prefecture')
         <span class="c-errormessage" role="alert">
@@ -166,7 +152,6 @@
 </select>
 </select>
 <br/>
-{{-- 都道府県ここまで --}}
 <span class="c-form__area__message">それ以外の住所を記述:
     @error('adress')
     <span class="c-errormessage" role="alert">
@@ -180,7 +165,6 @@
     ユーザー登録
 </button>
 </form>
-{{-- </div> --}}
 @endisset
 <div id="app">
     <footer-component></footer-component>
