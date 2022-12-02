@@ -52,14 +52,17 @@
         </span>    
             </div>
     <div >
-
+        <div class="c-staffform__area__side">
+            <span class="c-staffform__title">賞味期限:     
+                <span class="c-errormessage">
+                @error('best_by_date')
+                <strong>{{ $message }}</strong>
+               @enderror
+           </span>
+        </span>
      <calender-component>
      </calender-component>
-     <span class="c-errormessage">
-        @error('best_by_date')
-        <strong>{{ $message }}</strong>
-       @enderror
-   </span>
+    </div>
 </div>
     <input type="text" name="prefecture" value="{{$admins->prefecture}}" class="u-hidden">
     <input type="text" name="email" value="{{$admins->email}}" class="u-hidden">

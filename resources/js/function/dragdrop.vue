@@ -29,13 +29,6 @@
                     <p v-show="!preview">
                         またはここにドラッグ＆ドロップをしてください
                     </p>
-
-                    <p
-                        v-show="preview"
-                        class="c-staffform__area__textimgarea__name"
-                    >
-                        {{ name }}
-                    </p>
                 </div>
             </div>
         </div>

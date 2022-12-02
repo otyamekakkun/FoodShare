@@ -6233,11 +6233,7 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", {
-    staticClass: "c-staffform__area__side"
-  }, [_c("span", {
-    staticClass: "c-staffform__title"
-  }, [_vm._v("賞味期限:")]), _vm._v(" "), _c("input", {
+  return _c("div", [_c("input", {
     staticClass: "c-staffform__area__textname",
     attrs: {
       type: "date",
@@ -6374,15 +6370,7 @@ var render = function render() {
       value: !_vm.preview,
       expression: "!preview"
     }]
-  }, [_vm._v("\n                    またはここにドラッグ＆ドロップをしてください\n                ")]), _vm._v(" "), _c("p", {
-    directives: [{
-      name: "show",
-      rawName: "v-show",
-      value: _vm.preview,
-      expression: "preview"
-    }],
-    staticClass: "c-staffform__area__textimgarea__name"
-  }, [_vm._v("\n                    " + _vm._s(_vm.name) + "\n                ")])])])])]);
+  }, [_vm._v("\n                    またはここにドラッグ＆ドロップをしてください\n                ")])])])])]);
 };
 
 var staticRenderFns = [];
