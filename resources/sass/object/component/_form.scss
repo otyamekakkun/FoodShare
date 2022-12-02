@@ -331,7 +331,7 @@
     margin-bottom: size(l);
     text-align: center;
     margin-top: size(2l);
-    height: 1240px;
+    height: 1450px;
     background: rgba(255, 255, 255, 0.6);
     @include mqxl() {
         height: 1400px;
@@ -355,12 +355,15 @@
 //===========================================================
 //商品を出品する画面＋商品を編集する画面のレスポンシブデザインするためのもの
 .c-staffform__area__side {
-    width: 100%;
+    width: 80%;
     margin-top: 10%;
     display: flex;
     margin-bottom: -8%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: 8%;
     @include mqxl() {
-        //960px以下から縦画面にする
+        width: 100%;
         display: block;
     }
     @include mq() {
@@ -374,8 +377,10 @@
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: -5%;
     @include mqxl() {
         display: block;
+        margin-bottom: 0px;
     }
 }
 
@@ -396,6 +401,11 @@
     &:hover {
         background: orange;
     }
+
+    @include mqxxl() {
+        width: 80%;
+    }
+
     @include mqxl() {
         margin-top: 10%;
         margin-bottom: 0%;
@@ -431,6 +441,10 @@
     padding-left: size(l);
     padding-right: size(l);
     border-radius: size(sssss);
+    @include mqxxl() {
+        width: 50%;
+    }
+
     @include mqxl() {
         font-size: size(m);
         width: 80%;

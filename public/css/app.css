@@ -1601,7 +1601,7 @@ a {
   margin-bottom: 25px;
   text-align: center;
   margin-top: 40px;
-  height: 1240px;
+  height: 1450px;
   background: rgba(255, 255, 255, 0.6);
 }
 @media screen and (max-width:980px) {
@@ -1628,13 +1628,17 @@ a {
 }
 
 .c-staffform__area__side {
-  width: 100%;
+  width: 80%;
   margin-top: 10%;
   display: flex;
   margin-bottom: -8%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: 8%;
 }
 @media screen and (max-width:980px) {
   .c-staffform__area__side {
+    width: 100%;
     display: block;
   }
 }
@@ -1643,10 +1647,12 @@ a {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: -5%;
 }
 @media screen and (max-width:980px) {
   .c-staff__imgarea {
     display: block;
+    margin-bottom: 0px;
   }
 }
 
@@ -1667,6 +1673,11 @@ a {
 }
 .c-staffform__area__uploadimgarea:hover {
   background: orange;
+}
+@media screen and (max-width:1090px) {
+  .c-staffform__area__uploadimgarea {
+    width: 80%;
+  }
 }
 @media screen and (max-width:980px) {
   .c-staffform__area__uploadimgarea {
@@ -1701,6 +1712,11 @@ a {
   padding-left: 25px;
   padding-right: 25px;
   border-radius: 2px;
+}
+@media screen and (max-width:1090px) {
+  .c-staffform__area__textimgarea {
+    width: 50%;
+  }
 }
 @media screen and (max-width:980px) {
   .c-staffform__area__textimgarea {
