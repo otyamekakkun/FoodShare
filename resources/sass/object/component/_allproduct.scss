@@ -162,8 +162,6 @@
 
     @include mql() {
         width: 60%;
-        margin-left: auto;
-        margin-right: auto;
         text-align: center;
         font-size: size(m);
     }
@@ -209,10 +207,6 @@
     text-align: center;
 
     @include mqm() {
-        font-size: size(m);
-    }
-
-    @include mq() {
         font-size: size(m);
     }
 }

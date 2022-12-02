@@ -59,7 +59,6 @@
         margin-right: 10px;
     }
 }
-//..........................................................
 //商品を編集する画面出品する画面のボタン
 .c-staffform__area__submitbutton {
     display: block;
@@ -117,7 +116,6 @@
         width: 30%;
     }
     @include mqxl() {
-        //   margin-top: 80px;
         margin-left: auto;
         margin-right: size(2l);
     }
@@ -128,7 +126,6 @@
         margin-top: size(4l);
         margin-left: auto;
         margin-right: auto;
-        //  margin-right: size(2l);
     }
     @include mqm() {
         width: 46%;
@@ -267,7 +264,6 @@
     }
 
     @include mq() {
-        //414px対応
         width: 60%;
         margin-top: 100px;
     }
@@ -366,9 +362,6 @@
         width: 100%;
         display: block;
     }
-    @include mq() {
-        //   display: block;
-    }
 }
 
 //商品編集画面出品画面の写真を挿入するレイアウト
@@ -414,10 +407,6 @@
         margin-left: auto;
         margin-right: auto;
     }
-    @include mql() {
-    }
-    @include mqm() {
-    }
 
     @include mq() {
         margin-top: 10%;
@@ -451,10 +440,6 @@
         display: block;
         margin-top: 0%;
         font-size: size(s);
-    }
-    @include mql() {
-    }
-    @include mqm() {
     }
     @include mq() {
         font-size: size(s);
@@ -588,9 +573,6 @@
     @include mqm() {
         font-size: size(m);
     }
-    @include mq() {
-        font-size: size(m);
-    }
 }
 .c-staffform__title {
     font-size: size(l);
@@ -637,10 +619,4 @@
     background: white;
     margin-bottom: size(l);
     width: 60%;
-    @include mqxl() {
-    }
-    @include mql() {
-    }
-    @include mqm() {
-    }
 }

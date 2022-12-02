@@ -1,13 +1,6 @@
 /*
 *_varables.scssのファイル
-*主に変数や関数を置くところのファイルにする
-*/
-
-/*
 *このコードは用いる。
-*$sizesは
-*余白とりの大きさやfontsizeの大きさを指定するときに用いる。
-*@each文と@function関数でmap関数を呼び出す際にmap-getと書く必要性がないように記述する。(他の変数も同様な処理ができるように書き換えた。
 */
 $sizes: (
     sssss: 2px,
@@ -26,21 +19,13 @@ $sizes: (
 
 $colors: (
     "background": #fff7cc,
-    //ok ホームページの外枠の背景色に用いる
     "formbackground": #faf9f5,
-    // ok formgroundの背景色に用いる。
     "header": #174113,
-    //ok headerの背景色に用いる
     "footer": #d69e10,
-    //ok footeの背景色に用いる
     "top-title": #d69c3f,
-    //ok top-titleのhaikishareの文字に使う。
     "sentence": #707070,
-    //textに用いる文書の色
     "othersentence": white,
-    //必要はないと思うがボタン等やheader等などの色は白にしたいのでそれも指定する。
     "changedbotton1": #f29502,
-    //購入をキャンセルする。削除する以外のボタンでボタンに触れたら、この色に変える。
 );
 @each $sizeName, $size in $sizes {
     .space_#{$sizeName} {
@@ -64,10 +49,6 @@ $colors: (
 
 /*
 * googlefontシリーズ
-* googlefont割り当て。
-* 1.haiki shareのヘッダー部分の文字に用いる。(scssで記述する際、 font-family: "Permanent Marker", cursive;
-* と呼び込む。
-* 2.デフォルトの文字。使う時にfont-family:"Noto Serif TC", serif;
 */
 @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"); //.......1
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200&display=swap"); //...2

@@ -1,5 +1,4 @@
 <?php
-
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HaikiController;
@@ -9,7 +8,6 @@ use App\Http\Controllers\staff\AdminProductController;
 use App\Http\Controllers\staff\AdminDetailController;
 use App\Http\Controllers\shopper\ProfileController;
 use App\Http\Controllers\shopper\ProductController;
-
 use App\Http\Controllers\JsonsController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;

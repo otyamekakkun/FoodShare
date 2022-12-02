@@ -7,7 +7,6 @@
     width: 100%;
     margin-top: 150px;
     margin-bottom: 50px;
-    // background: white;
     @include mqxl() {
         display: flex;
         justify-content: center;
@@ -33,18 +32,11 @@
     }
 
     @include mql() {
-        //  font-size: size(ss);
         text-align: center;
         padding: size(sss);
         margin: size(sssss);
     }
 
-    @include mq() {
-        // font-size: size(s);
-        //padding: size(ssss);
-        // border: solid black;
-        margin: size(sssss);
-    }
     &:hover {
         background: orange;
     }

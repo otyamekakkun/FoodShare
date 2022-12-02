@@ -14,13 +14,10 @@ body {
     color: color("sentence");
     line-height: 1.6;
     text-size-adjust: 100%;
-    //↑スマホを横向きにしても文字が大きくならないようにする
     font-family: "Noto Serif TC", serif;
     letter-spacing: 0.25em;
     -webkit-font-smoothing: antialiased;
-    //↑文字の滲みを防ぐ用
 }
 a {
     text-decoration: none;
-    //↑下線部を消す用。
 }
