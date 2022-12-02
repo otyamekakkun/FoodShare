@@ -1336,6 +1336,13 @@ a {
     width: 30%;
   }
 }
+@media screen and (max-width:980px) {
+  .c-staffform__area__submitbutton {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: 40px;
+  }
+}
 @media screen and (max-width: 720px) {
   .c-staffform__area__submitbutton {
     width: 40%;
@@ -1601,7 +1608,12 @@ a {
 }
 @media screen and (max-width:980px) {
   .c-staffform__area {
-    height: 1200px;
+    height: 1400px;
+  }
+}
+@media screen and (max-width: 414px) {
+  .c-staffform__area {
+    height: 1240px;
   }
 }
 
@@ -1625,15 +1637,9 @@ a {
 }
 @media screen and (max-width:980px) {
   .c-staffform__area__side {
-    display: flex;
-  }
-}
-@media screen and (max-width: 414px) {
-  .c-staffform__area__side {
     display: block;
   }
 }
-
 .c-staff__imgarea {
   display: flex;
   width: 80%;
@@ -1664,6 +1670,16 @@ a {
 .c-staffform__area__uploadimgarea:hover {
   background: orange;
 }
+@media screen and (max-width:980px) {
+  .c-staffform__area__uploadimgarea {
+    margin-top: 10%;
+    margin-bottom: 0%;
+    width: 50%;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 @media screen and (max-width: 414px) {
   .c-staffform__area__uploadimgarea {
     margin-top: 10%;
@@ -1688,11 +1704,17 @@ a {
   padding-right: 25px;
   border-radius: 2px;
 }
-@media screen and (max-width: 414px) {
+@media screen and (max-width:980px) {
   .c-staffform__area__textimgarea {
+    font-size: 20px;
     width: 80%;
     display: block;
     margin-top: 0%;
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 414px) {
+  .c-staffform__area__textimgarea {
     font-size: 15px;
   }
 }

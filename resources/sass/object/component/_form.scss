@@ -79,6 +79,11 @@
     @include mqxxl() {
         width: 30%;
     }
+    @include mqxl() {
+        margin-top: size(4l);
+        margin-left: auto;
+        margin-right: size(2l);
+    }
     @include mql() {
         width: 40%;
     }
@@ -321,7 +326,10 @@
     height: 1240px;
     background: rgba(255, 255, 255, 0.6);
     @include mqxl() {
-        height: 1200px;
+        height: 1400px;
+    }
+    @include mq() {
+        height: 1240px;
     }
 }
 .c-staffform__areatitle {
@@ -345,10 +353,10 @@
     margin-bottom: -8%;
     @include mqxl() {
         //960px以下から縦画面にする
-        display: flex;
+        display: block;
     }
     @include mq() {
-        display: block;
+        //   display: block;
     }
 }
 
@@ -380,10 +388,15 @@
     &:hover {
         background: orange;
     }
-    @include mqxxl() {
+    @include mqxl() {
+        margin-top: 10%;
+        margin-bottom: 0%;
+        width: 50%;
+        height: 30px;
+        margin-left: auto;
+        margin-right: auto;
     }
     @include mql() {
-        //720px以下
     }
     @include mqm() {
         //414px対応
@@ -414,16 +427,17 @@
     padding-right: size(l);
     border-radius: size(sssss);
     @include mqxl() {
+        font-size: size(m);
+        width: 80%;
+        display: block;
+        margin-top: 0%;
+        font-size: size(s);
     }
     @include mql() {
     }
     @include mqm() {
     }
     @include mq() {
-        width: 80%;
-        display: block;
-        //  background: red;
-        margin-top: 0%;
         font-size: size(s);
     }
 }

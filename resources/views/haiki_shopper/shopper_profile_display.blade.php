@@ -18,11 +18,9 @@
                         <strong>{{$message}}</strong>
                     </span>
                     @enderror
-    </span>
-    <br/>
+    </span><br/>
                 <input class="c-form__area__text" action="post" type="text" name="name" placeholder="名前を編集" value={{$user->name}}>
                 <br/>
-                {{-- 名前編集ここまで --}}
                 <span class="c-form__area__message">email:
                     @error('email')
                     <span class="c-errormessage" role="alert">
@@ -33,8 +31,6 @@
                 <br/>
             <input class="c-form__area__text" action="post" type="text" name="email" placeholder="メールアドレス編集" value={{$user->email}}>
             <br/>
-    {{-- emailここまで --}}
-    {{-- passwordここから --}}
 <span class="c-form__area__message">パスワード編集:
     @error('password')
     <span class="c-errormessage" role="alert">
@@ -44,7 +40,6 @@
 </span>
 <br/>
     <input class="c-form__area__text" action="post" type="password" name="password"><br/>
-    {{-- パスワード編集ここまで --}}
     <span class="c-form__area__message">パスワード再入力:
         @error('password_confirmation')
         <span class="c-errormessage" role="alert">
