@@ -6,6 +6,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use App\Http\Controllers\HaikiController;
+use App\Http\Controllers\shopper\ProductController;
 class Test extends Mailable
 {
     use Queueable, SerializesModels;

@@ -13,10 +13,10 @@
     
         <!-- メニュー -->
         <nav class="nav_content">
-          <ul class="nav_list">
+          <ul class="nav_list">    
             <li class="nav_item"><a href="{{route('haiki_shopper.shopper_profile_display')}}">プロフィールを編集する</a></li>
             <li class="nav_item"><a href="{{route('haiki_shopper.shopper_productlist_display')}}">商品を閲覧する</a></li>
-
+            <li class="nav_item"><a href="{{route('haiki_shopper.shopper_mypage_display')}}">マイページへ行く</a></li>
             <form action="{{ route('logout') }}" method="post">
               @csrf
               <input class="l-header__nav__button " type="submit" value="ログアウト">

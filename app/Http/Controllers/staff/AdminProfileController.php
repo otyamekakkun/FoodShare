@@ -21,7 +21,7 @@ public function staff_profile_edit(Request $request)
 {
 $request->validate([
 'name'=>['required','max:255'],
-'email'=>['required','max:255'],
+'email'=>['required','string', 'email:strict,dns', 'max:255'],
 'password'=>['required','min:8','max:255'],
 'password_confirmation'=>['required','min:8','same:password'],
 'convinience_name'=>'required',
@@ -39,6 +39,5 @@ $admin->prefecture=$request->prefecture;
 $admin->adress=$request->adress;
 $admin->save();
 return redirect('admin')->with('flash_message', __('Registered.'));
-}//staffのプロフィールをデータベースに更新し直す処理
-
+}
 }

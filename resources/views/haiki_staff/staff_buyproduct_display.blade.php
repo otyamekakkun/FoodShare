@@ -8,7 +8,6 @@
 
 <body>
     <h1 class="c-detail__title">Bought List</h1>
-
     <div id="app">
         <bought-componennt></bought-componennt>
         <footer-component></footer-component>

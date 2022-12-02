@@ -6976,7 +6976,9 @@ var staticRenderFns = [function () {
 
   return _c("div", {
     staticClass: "c-staffmypagelistarea__title1"
-  }, [_c("h1", {}, [_vm._v("購入された商品リスト")])]);
+  }, [_c("h1", {
+    staticClass: "c-staffmypagelistarea__title1__text"
+  }, [_vm._v("\n                購入された商品リスト\n            ")])]);
 }];
 render._withStripped = true;
 

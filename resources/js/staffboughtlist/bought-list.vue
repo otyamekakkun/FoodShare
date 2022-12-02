@@ -5,7 +5,9 @@
     <div id="app">
         <main>
             <div class="c-staffmypagelistarea__title1">
-                <h1 class="">購入された商品リスト</h1>
+                <h1 class="c-staffmypagelistarea__title1__text">
+                    購入された商品リスト
+                </h1>
             </div>
             <div class="c-staffmypagelistarea">
                 <div

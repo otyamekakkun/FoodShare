@@ -12,31 +12,10 @@
 .u-hidden {
     display: none;
 }
-
 //ここまで
 //商品詳細画面のレスポンシブ画面にするときデザインが崩れるのでそれを補正するためのコード
 .u-productdetail {
-    display: block;
-    text-align: center;
     margin-top: 100px;
     margin-left: 64%;
     height: 60px;
-    width: 20%;
-    border: none;
-    border-radius: size(sssss);
-    color: white;
-    transition: all 1.2s;
-    &:hover {
-        // background: orange;
-    }
-    @include mqxxl() {
-        width: 30%;
-    }
-
-    @include mqxl() {
-        width: 40%;
-        margin-top: 600px;
-        margin-left: auto;
-        margin-right: auto;
-    }
 }

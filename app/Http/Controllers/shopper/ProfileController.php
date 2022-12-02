@@ -20,7 +20,7 @@ class ProfileController extends Controller
     public function shopper_profile_edit(Request $request){
     $request->validate([
     'name'=>['required','max:255'],
-    'email'=>['required','string', 'email:strict,dns,spoof', 'max:255', 'unique:users'],
+    'email'=>['required','string', 'email:strict,dns', 'max:255'],
     'password'=>['required','min:8','max:255'],
     'password_confirmation'=>['required','same:password'],
 ]);

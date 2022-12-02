@@ -10,7 +10,9 @@ shoppermypageコンポーネントでお客様が購入された商品を取得�
     <h1 class="c-detail__title">MyPage</h1>
     <div id="app">
         <shoppermypage-component></shoppermypage-component>
+        <div class="u-productdetail"></div>
         <footer-component></footer-component>
+
     </div>
 </body>
 
