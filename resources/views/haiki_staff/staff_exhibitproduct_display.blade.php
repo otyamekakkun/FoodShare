@@ -24,32 +24,33 @@
            @enderror
        </span>
             <div class="c-staffform__area__side">
-            <span class="c-staffform__title">商品名:
-            </span>
-                <input  type="text" class= "c-staffform__area__textname" name="product_name" value="" placeholder="商品名">
-               <br>
+            <span class="c-staffform__title">商品名:                
                 @error('product_name')
                 <span class="c-errormessage" role="alert">
                     <strong>{{ $message }}</strong>
                 </span>
                 @enderror
+
+            </span>
+            <br/>
+                <input  type="text" class= "c-staffform__area__textname" name="product_name" value="" placeholder="商品名">
+               <br/>
             </div>
             <div class="c-staffform__area__side">
             <span class="c-staffform__title">金額:
-</span><br/>
+                 @error('price')
+                <span class="c-errormessage" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+                @enderror
+</span>
+<br/>
                 <input type="number" class="c-staffform__area__textname" name="price" value="" placeholder="半角で金額を入力">
                 <br/>
                 <span>
-                    @error('product_name')
-                    <span class="c-errormessage" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                    @enderror
                     <br/>
         </span>    
-    
             </div>
-    {{-- 賞味期限の入力はjsを使用。デフォルトだと現在日時より前の日付も記入できるから --}}
     <div >
 
      <calender-component>
@@ -59,9 +60,6 @@
         <strong>{{ $message }}</strong>
        @enderror
    </span>
-
-
-
 </div>
     <input type="text" name="prefecture" value="{{$admins->prefecture}}" class="u-hidden">
     <input type="text" name="email" value="{{$admins->email}}" class="u-hidden">

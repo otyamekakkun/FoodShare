@@ -21,8 +21,6 @@
                 :updated_at="'{{$products->updated_at}}'"
             ></productdetail-component>
         </div>
-
-        {{-- <footerdetail-component></footerdetail-component> --}}
         <footer-component></footer-component>
     </div>
 </body>

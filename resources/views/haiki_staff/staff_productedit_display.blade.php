@@ -11,7 +11,7 @@
 
         <div id="app">
                 <h1  class="c-detail__title">
-                    Product Edit
+                    商品を編集する
                 </h1>
     <div class="c-staffform__area">
         <h1 class="c-staffform__areatitle">編集したい内容を記述してください</h1>
