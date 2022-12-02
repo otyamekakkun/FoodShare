@@ -38,8 +38,8 @@ public function shopper_productdetail_bought ($id){
                 foreach ($emails as $email){
     Mail::to($email)->send(new Test($text));
                 }
-    メールの処理はここまで
-    */
+   // メールの処理はここまで
+   */
     return redirect('haiki/shopper_mypage');
 } //商品が購入された時に更新するための処理ここまで
 public function shopper_productdetail_cancel ($id){

@@ -39,10 +39,10 @@
     font-size: size(xl);
     line-height: 100px;
     margin-left: 24%;
+    color: black;
     &:hover {
-        transition: 0.3s;
-        color: orange;
-        font-size: size(xl);
+        transition: 0.1s;
+        font-size: 32px;
         border-bottom: solid orange;
     }
     @include mqxxl() {

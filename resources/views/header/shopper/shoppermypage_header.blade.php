@@ -20,8 +20,6 @@
             <form action="{{ route('logout') }}" method="post">
               @csrf
               <input class="l-header__nav__button " type="submit" value="ログアウト">
-
-              {{-- <button class="l-header__nav__button"> --}}
           </button>
         </form>
           </ul>

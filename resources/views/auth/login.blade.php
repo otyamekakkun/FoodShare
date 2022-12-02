@@ -36,15 +36,15 @@
 <br/>
 <div class="c-loginarea">
 <input class="" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-{{ __('Remember Me') }}
+ログイン時間を保持する
     <button type="submit" class="c-login__button">
-        {{ __('Login') }}
+        ログイン
     </button>
     <br/>
  </div>
  @if (Route::has(isset($authgroup) ? $authgroup.'.password.request' : 'password.request'))
 <a class="c-remind__text" href="{{ route(isset($authgroup) ? $authgroup.'.password.request' : 'password.request') }}">
-{{ __('Forgot Your Password?') }}
+パスワードを忘れた方はこちらへ
 </a>
 @endif
      </div>

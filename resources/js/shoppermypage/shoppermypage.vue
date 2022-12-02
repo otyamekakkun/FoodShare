@@ -2,7 +2,7 @@
     <div id="app">
         <main>
             <div class="c-staffmypagelistarea__title1">
-                <h1>これまでに購入された商品(一覧)</h1>
+                <h1>購入された商品</h1>
             </div>
             <shoppermypagecomponentVue
                 :products="this.products"

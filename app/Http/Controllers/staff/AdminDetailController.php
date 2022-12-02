@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\staff;
 use App\Models\products;
 use Illuminate\Routing\Controller;
-
 class AdminDetailController extends Controller
 {
 //コンビニ側商品詳細画面
