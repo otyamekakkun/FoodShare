@@ -80,22 +80,21 @@
         width: 30%;
     }
     @include mqxl() {
-        margin-top: size(4l);
+        margin-top: 80px;
         margin-left: auto;
         margin-right: size(2l);
     }
     @include mql() {
         width: 40%;
+        margin-right: auto;
     }
     @include mqm() {
+        margin-top: size(4l);
         width: 46%;
     }
 
     @include mq() {
         width: 42%;
-        margin-top: size(4l);
-        margin-left: auto;
-        margin-right: size(2l);
     }
 }
 //商品を編集するボタンの商品削除ボタン
@@ -117,17 +116,26 @@
     @include mqxxl() {
         width: 30%;
     }
+    @include mqxl() {
+        //   margin-top: 80px;
+        margin-left: auto;
+        margin-right: size(2l);
+    }
 
     @include mql() {
         width: 40%;
         margin-top: 20px;
+        margin-top: size(4l);
+        margin-left: auto;
+        margin-right: auto;
+        //  margin-right: size(2l);
     }
     @include mqm() {
-        width: 50%;
+        width: 46%;
     }
 
     @include mq() {
-        width: 60%;
+        width: 42%;
         margin-top: 20px;
     }
 }

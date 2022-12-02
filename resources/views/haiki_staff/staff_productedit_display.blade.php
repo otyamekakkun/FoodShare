@@ -52,13 +52,6 @@
 {{-- </div> --}}
  {{-- <calender-component></calender-component> --}}
  <calenderedit-component :best_by_date="'{{$products->best_by_date}}'"></calenderedit-component>
- {{--  
- <span class="c-errormessage" role="alert">
- @error('best_by_date')
- <strong>{{ $message }}</strong>
-@enderror
- </span>
- --}}
 
         {{-- 登録した都道府県が自動的にデータベースに入るように設定する --}}
 <button type="submit" class="c-staffform__area__submitbutton">
@@ -68,7 +61,7 @@
 </form>
 <form action="{{ route('drills.delete',$products->id ) }}" method="post">
     @csrf
-    <button class="c-staffform__area__deletebutton" onclick='return confirm("削除しますか？");'>この商品を削除する</button>
+    <button class="c-staffform__area__deletebutton" onclick='return confirm("削除しますか？");'>商品を削除する</button>
 </form>
 </div>
 
@@ -78,8 +71,3 @@
 </div>
 </body>
 @endsection
-
-{{-- 
-    c-staffform__area__submitbutton
-    
-    --}}
