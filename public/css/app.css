@@ -760,6 +760,10 @@ a {
   border-bottom: 1px solid black;
 }
 
+.l-staffdetail {
+  background: red;
+}
+
 .l-productsearch {
   background: rgba(255, 255, 255, 0.7);
   height: 400px;
@@ -1951,4 +1955,30 @@ a {
 
 .u-hidden {
   display: none;
+}
+
+.u-productdetail {
+  display: block;
+  text-align: center;
+  margin-top: 100px;
+  margin-left: 64%;
+  height: 60px;
+  width: 20%;
+  border: none;
+  border-radius: 2px;
+  color: white;
+  transition: all 1.2s;
+}
+@media screen and (max-width:1090px) {
+  .u-productdetail {
+    width: 30%;
+  }
+}
+@media screen and (max-width:980px) {
+  .u-productdetail {
+    width: 40%;
+    margin-top: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
