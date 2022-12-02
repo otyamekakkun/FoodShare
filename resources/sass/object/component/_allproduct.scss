@@ -203,10 +203,6 @@
     @include mqm() {
         font-size: size(m);
     }
-
-    @include mq() {
-        font-size: size(m);
-    }
 }
 .c-staffmypagelistarea__list__price {
     color: red;
@@ -226,7 +222,7 @@
     color: black;
     border-bottom: solid;
     border-color: black;
-    border-width: 1px; /*5ピクセルの太さにする*/
+    border-width: 1px;
 
     &:hover {
         color: orange;
@@ -272,16 +268,11 @@
     }
     @include mqxl {
         display: block;
-
-        width: 500px;
         margin-left: auto;
         margin-right: auto;
     }
     @include mql {
-        display: block;
-        width: 400px;
-        margin-left: auto;
-        margin-right: auto;
+        width: 100%;
     }
 }
 .c-productdetail__area {
@@ -303,8 +294,7 @@
         height: 400px;
     }
     @include mql() {
-        display: block;
-        width: 400px;
+        width: 76%;
     }
 }
 .c-productdetail__area__text {

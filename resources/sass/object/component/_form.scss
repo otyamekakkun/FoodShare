@@ -399,16 +399,13 @@
     @include mql() {
     }
     @include mqm() {
-        //414px対応
     }
 
     @include mq() {
-        //414px対応
         margin-top: 10%;
         margin-bottom: 0%;
         width: 50%;
         height: 30px;
-        //text-align: center;
     }
 }
 
@@ -459,7 +456,6 @@
 //=======================================
 //フォームテキストエリア title文字          //
 //=======================================
-//ログイン画面 ユーザー登録画面 プロフィール編集画面について
 .c-mypagemenu__title {
     text-align: center;
     margin: 40px;

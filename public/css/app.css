@@ -1071,11 +1071,6 @@ a {
     font-size: 20px;
   }
 }
-@media screen and (max-width: 414px) {
-  .c-staffmypagelistarea__list__name {
-    font-size: 20px;
-  }
-}
 
 .c-staffmypagelistarea__list__price {
   color: red;
@@ -1098,7 +1093,7 @@ a {
   color: black;
   border-bottom: solid;
   border-color: black;
-  border-width: 1px; /*5ピクセルの太さにする*/
+  border-width: 1px;
 }
 .c-staffmypagelistarea__list__a:hover {
   color: orange;
@@ -1150,17 +1145,13 @@ a {
 @media screen and (max-width:980px) {
   .c-productdetailimg {
     display: block;
-    width: 500px;
     margin-left: auto;
     margin-right: auto;
   }
 }
 @media screen and (max-width: 720px) {
   .c-productdetailimg {
-    display: block;
-    width: 400px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
   }
 }
 
@@ -1187,8 +1178,7 @@ a {
 }
 @media screen and (max-width: 720px) {
   .c-productdetail__area {
-    display: block;
-    width: 400px;
+    width: 76%;
   }
 }
 
