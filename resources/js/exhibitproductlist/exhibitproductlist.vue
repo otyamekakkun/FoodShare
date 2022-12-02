@@ -21,7 +21,7 @@
                                 class="c-staffmypagelistarea__list__img"
                             />
                             <p class="c-staffmypagelistarea__list__bought">
-                                購入済み！
+                                Sold Out
                             </p>
                         </div>
 

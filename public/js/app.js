@@ -6090,7 +6090,7 @@ var render = function render() {
       }
     }), _vm._v(" "), _c("p", {
       staticClass: "c-staffmypagelistarea__list__bought"
-    }, [_vm._v("\n                            購入済み！\n                        ")])]) : _vm._e(), _vm._v(" "), item.bought <= 0 ? _c("div", [_c("img", {
+    }, [_vm._v("\n                            Sold Out\n                        ")])]) : _vm._e(), _vm._v(" "), item.bought <= 0 ? _c("div", [_c("img", {
       staticClass: "c-staffmypagelistarea__list__img",
       attrs: {
         src: item.img_path
@@ -6982,7 +6982,7 @@ var render = function render() {
       }
     }), _vm._v(" "), _c("p", {
       staticClass: "c-staffmypagelistarea__list__bought"
-    }, [_vm._v("\n                        購入済み！\n                    ")]), _vm._v(" "), _c("div", {
+    }, [_vm._v("\n                        Sold Out\n                    ")]), _vm._v(" "), _c("div", {
       staticClass: "c-staffmypagelistarea__text"
     }, [_c("li", {
       staticClass: "c-staffmypagelistarea__list__name"

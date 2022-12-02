@@ -10,16 +10,15 @@
     </header>
 
         <div id="app">
-            {{-- <div class="c-mypagemenu"> --}}
                 <h1  class="c-detail__title">
                     Product Edit
                 </h1>
-            {{-- </div> --}}
     <div class="c-staffform__area">
         <h1 class="c-staffform__areatitle">編集したい内容を記述してください</h1>
+        <p class="c-warning3">恐れ入りますが商品情報を１つでも編集する場合<br/>
+        写真も必ず選び直してください.</p>
 <form method="POST" action="{{ route('exhibit.update',$products->id)}}" enctype="multipart/form-data">
     @csrf
-    {{-- <drag-component></drag-component> --}}
     <dragdropedit-component :img="'{{$products->img_path}}'"></dragdropedit-component>
     <span class="c-errormessage">
         @error('img_path')

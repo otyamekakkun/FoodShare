@@ -1348,7 +1348,10 @@ a {
 }
 @media screen and (max-width: 414px) {
   .c-staffform__area__submitbutton {
-    width: 50%;
+    width: 42%;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: 40px;
   }
 }
 
@@ -1608,6 +1611,11 @@ a {
   font-size: 25px;
   border-bottom: #174113 solid;
 }
+@media screen and (max-width: 720px) {
+  .c-staffform__areatitle {
+    font-size: 15px;
+  }
+}
 
 .c-staffform__area__side {
   width: 100%;
@@ -1620,12 +1628,22 @@ a {
     display: flex;
   }
 }
+@media screen and (max-width: 414px) {
+  .c-staffform__area__side {
+    display: block;
+  }
+}
 
 .c-staff__imgarea {
   display: flex;
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+}
+@media screen and (max-width:980px) {
+  .c-staff__imgarea {
+    display: block;
+  }
 }
 
 .c-staffform__area__uploadimgarea {
@@ -1646,6 +1664,15 @@ a {
 .c-staffform__area__uploadimgarea:hover {
   background: orange;
 }
+@media screen and (max-width: 414px) {
+  .c-staffform__area__uploadimgarea {
+    margin-top: 10%;
+    margin-bottom: 0%;
+    width: 50%;
+    height: 30px;
+  }
+}
+
 .c-staffform__area__textimgarea {
   font-size: 25px;
   margin-top: 6%;
@@ -1661,6 +1688,15 @@ a {
   padding-right: 25px;
   border-radius: 2px;
 }
+@media screen and (max-width: 414px) {
+  .c-staffform__area__textimgarea {
+    width: 80%;
+    display: block;
+    margin-top: 0%;
+    font-size: 15px;
+  }
+}
+
 .c-staffform__area__textimgarea__img {
   width: 60%;
   height: 260px;
@@ -1737,6 +1773,25 @@ a {
   }
 }
 
+.c-warning3 {
+  font-size: 18px;
+  color: red;
+  text-align: center;
+  margin-top: 20px;
+}
+@media screen and (max-width: 720px) {
+  .c-warning3 {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .c-warning3 {
+    text-align: left;
+    font-size: 15px;
+    margin: 5px;
+  }
+}
+
 .c-errormessage {
   color: rgb(234, 14, 14);
 }
@@ -1798,6 +1853,11 @@ a {
 @media screen and (max-width:980px) {
   .c-staffform__title {
     width: 60%;
+  }
+}
+@media screen and (max-width: 414px) {
+  .c-staffform__title {
+    font-size: 20px;
   }
 }
 

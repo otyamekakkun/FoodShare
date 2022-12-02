@@ -29,7 +29,6 @@
     }
 }
 
-//..........................................................
 //2shopperの商品詳細のボタン
 .c-shopper__action {
     margin: auto;
@@ -88,7 +87,10 @@
     }
 
     @include mq() {
-        width: 50%;
+        width: 42%;
+        margin-top: size(4l);
+        margin-left: auto;
+        margin-right: size(2l);
     }
 }
 //商品を編集するボタンの商品削除ボタン
@@ -327,6 +329,9 @@
     margin-top: size(m);
     font-size: size(l);
     border-bottom: #174113 solid;
+    @include mql() {
+        font-size: size(s);
+    }
 }
 //..................................................フォームエリア大枠を構成するところここまで
 //===========================================================
@@ -342,6 +347,9 @@
         //960px以下から縦画面にする
         display: flex;
     }
+    @include mq() {
+        display: block;
+    }
 }
 
 //商品編集画面出品画面の写真を挿入するレイアウト
@@ -350,6 +358,9 @@
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+    @include mqxl() {
+        display: block;
+    }
 }
 
 .c-staffform__area__uploadimgarea {
@@ -380,6 +391,11 @@
 
     @include mq() {
         //414px対応
+        margin-top: 10%;
+        margin-bottom: 0%;
+        width: 50%;
+        height: 30px;
+        //text-align: center;
     }
 }
 
@@ -404,6 +420,11 @@
     @include mqm() {
     }
     @include mq() {
+        width: 80%;
+        display: block;
+        //  background: red;
+        margin-top: 0%;
+        font-size: size(s);
     }
 }
 .c-staffform__area__textimgarea__img {
@@ -421,7 +442,6 @@
         font-size: size(s);
     }
 }
-
 //=======================================
 //フォームテキストエリア title文字          //
 //=======================================
@@ -480,6 +500,22 @@
         margin-bottom: -40px;
     }
 }
+.c-warning3 {
+    font-size: 18px;
+    color: red;
+    text-align: center;
+    margin-top: size(m);
+    @include mql() {
+        font-size: 16px;
+    }
+
+    @include mqm() {
+        text-align: left;
+        font-size: size(s);
+        margin: size(sss);
+    }
+}
+
 //=======================================
 //エラーメッセージ
 //=======================================
@@ -530,6 +566,9 @@
     width: 20%;
     @include mqxl() {
         width: 60%;
+    }
+    @include mq() {
+        font-size: size(m);
     }
 }
 //フォームに入力するメッセージ

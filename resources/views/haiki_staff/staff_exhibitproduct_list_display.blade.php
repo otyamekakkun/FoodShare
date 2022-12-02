@@ -14,5 +14,3 @@
     </div>
 </body>
 @endsection
-
-{{--基本的に displayflexで書ける＋ページネーション機能を導入しているので --}}
