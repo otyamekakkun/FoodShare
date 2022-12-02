@@ -8,6 +8,7 @@ use App\Http\Controllers\staff\AdminProductlistController;
 use App\Http\Controllers\staff\AdminProductController;
 use App\Http\Controllers\staff\AdminDetailController;
 use App\Http\Controllers\shopper\ProfileController;
+use App\Http\Controllers\shopper\ProductController;
 
 use App\Http\Controllers\JsonsController;
 use App\Http\Controllers\Auth\LoginController;
@@ -40,8 +41,8 @@ Route::post('/haiki/{id}/shopper_profile',[ProfileController::class, 'shopper_pr
 //=====================================================================
 //お客様の商品一覧を閲覧するもの 3
 //=====================================================================
-Route::get('/haiki/shopper_productlist',[HaikiController::class, 'shopper_productlist_display'])->name('haiki_shopper.shopper_productlist_display');          
-Route::get('/haiki/{id}/shopper_productdetail',[HaikiController::class, 'shopper_productdetail_display'])->name('haiki_shopper.shopper_productdetail_display');   
+Route::get('/haiki/shopper_productlist',[ProductController::class, 'shopper_productlist_display'])->name('haiki_shopper.shopper_productlist_display');          
+Route::get('/haiki/{id}/shopper_productdetail',[ProductController::class, 'shopper_productdetail_display'])->name('haiki_shopper.shopper_productdetail_display');   
 
 //=========================================
 //コンビニスタッフプロフィール編集画面を作るもの 4
@@ -70,8 +71,8 @@ Route::post('/haikii/{id}/staff_productedit', [AdminProductController::class, 'd
 //商品詳細画面
 //=======================================================
 Route::get('/haiki/{id}/staff_productdetail',[AdminDetailController::class, 'staff_productdetail_display'])->middleware('auth:admin')->name('haiki_shopper.staff_productdetail_display');
-Route::post('/haiki/{id}/staff_productdetail',[HaikiController::class,'shopper_productdetail_bought'])->name('bought.update');
-Route::post('/haiki/{id}/staff_productdetai',[HaikiController::class,'shopper_productdetail_cancel'])->name('bought.cancel');
+Route::post('/haiki/{id}/staff_productdetail',[ProductController::class,'shopper_productdetail_bought'])->name('bought.update');
+Route::post('/haiki/{id}/staff_productdetai',[ProductController::class,'shopper_productdetail_cancel'])->name('bought.cancel');
 
 //===============================================
 //出品した商品の一覧                              //
