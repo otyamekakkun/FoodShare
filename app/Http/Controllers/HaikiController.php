@@ -21,6 +21,7 @@ class HaikiController extends Controller
         return view('haiki_shopper.shopper_mypage_display',['my_user'=>$user]);
     } 
 
+    /*
 //===================================================================
 //shopper_profile_display 2   お客様のプロフィールを編集する画面         //
 //===================================================================
@@ -45,6 +46,7 @@ class HaikiController extends Controller
         $user->save();
         return redirect('haiki/shopper_mypage');
 }
+*/
 //===========================================================================2終了
 
 //===================================================================

@@ -7,6 +7,8 @@ use App\Http\Controllers\staff\AdminProfileController;
 use App\Http\Controllers\staff\AdminProductlistController;
 use App\Http\Controllers\staff\AdminProductController;
 use App\Http\Controllers\staff\AdminDetailController;
+use App\Http\Controllers\shopper\ProfileController;
+
 use App\Http\Controllers\JsonsController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
@@ -32,8 +34,8 @@ Route::get('/haiki/shopper_mypage',[HaikiController::class,'shopper_mypage_displ
 //================================================================
 // shopper_profileのフォーム入力ページ 2
 //================================================================
-Route::get('/haiki/shopper_profile',[HaikiController::class, 'shopper_profile_display'])->name('haiki_shopper.shopper_profile_display'); 
-Route::post('/haiki/{id}/shopper_profile',[HaikiController::class, 'shopper_profile_edit'])->name('haiki_shopperprofile_edit');
+Route::get('/haiki/shopper_profile',[ProfileController::class, 'shopper_profile_display'])->name('haiki_shopper.shopper_profile_display'); 
+Route::post('/haiki/{id}/shopper_profile',[ProfileController::class, 'shopper_profile_edit'])->name('haiki_shopperprofile_edit');
 
 //=====================================================================
 //お客様の商品一覧を閲覧するもの 3
