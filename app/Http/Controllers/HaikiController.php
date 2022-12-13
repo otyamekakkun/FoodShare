@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Auth;
 class HaikiController extends Controller
 {
 //===================================================================
- //shoepper_mypage1   お客様のマイページを表示するもの                   //
+ //shoepper_mypage1   お客様のマイページを表示するコントローラ            //
  //==================================================================
     public function shopper_mypage_display(){
         $id = Auth::id();
@@ -15,7 +15,7 @@ class HaikiController extends Controller
     } 
 
 //=======================================================================
-//管理者ログイン用のマイページ                                              //
+//管理者ログイン用のマイページ コントローラ                                   //
 //=======================================================================
 public function admin(){
     $id = Auth::guard('admin')->id();

@@ -6,6 +6,7 @@ use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 //メール機能
+//ローカル環境ではコメントアウトする
 //use App\Mail\Test;
 //use Illuminate\Support\Facades\Mail;
 class ProductController extends Controller

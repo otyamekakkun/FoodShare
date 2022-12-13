@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 class JsonsController extends Controller
 {
 //================================================
-//json形式でファイルを保存するためのコントローラ       //
+//json形式でファイルを取得するためのコントローラ       //
 //================================================
 public function index1(){
     $drill = DB::table('products')->get();

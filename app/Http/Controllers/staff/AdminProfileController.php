@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Hash;
 
 class AdminProfileController extends Controller
 {
-//staffのprofileのdisplay(コンビニ情報を登録し直す)               //
+//staffのprofileのdisplay(コンビニ情報を登録し直す)コントローラ
 public function staff_profile_display(){
     $id = Auth::guard('admin')->id();
     $admin = DB::table('admins')->find($id);

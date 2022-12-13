@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Storage;
 
 class AdminProductController extends Controller
 {
-//商品を出品する画面
+//商品を出品する画面のコントローラ
 public function staff_exhibitproduct_display(){
     $id = Auth::guard('admin')->id();
     $admin = Admin::find($id);
@@ -20,7 +20,7 @@ public function create_exhibitproduct(Request $request){
 $request->validate([
     'product_name'=>'required',
     'img_path' => 'required|file|image|mimes:png,jpeg',
-    'price'=>'required',//全角で入力した瞬間enterを押された瞬間消える
+    'price'=>'required',
     'best_by_date'=>'required'
 ]);
 $image = $request->file("img_path");
@@ -29,7 +29,7 @@ $imagePath = "/storage/" . $path;
 $id = Auth::guard('admin')->id();
 $product = new products;
 $product->product_name = $request->product_name;
-$product->admin_id = $id;//現在ログインしているコンビニユーザー情報のidをこの中に入れる
+$product->admin_id = $id;
 $product->img_path=$imagePath;
 $product->img_path=$imagePath;
 $product->price = $request->price;

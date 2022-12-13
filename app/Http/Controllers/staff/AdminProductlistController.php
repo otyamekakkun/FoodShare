@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 class AdminProductlistController extends Controller
 {
- //出品された商品一覧と購入された商品一覧
+ //出品された商品一覧と購入された商品一覧のコントローラ
 public function staff_exhibitproduct_list_display(){
     $id = Auth::guard('admin')->id();
     $admin = DB::table('admins')->find($id);

@@ -5,7 +5,7 @@ use App\Models\products;
 use Illuminate\Routing\Controller;
 class AdminDetailController extends Controller
 {
-//コンビニ側商品詳細画面
+//コンビニ側商品詳細画面を写し出す画面コントローラ
 public function staff_productdetail_display($id){
     $product = products::find($id);
 return view('haiki_staff.staff_productdetail_display',['products'=>$product]);
