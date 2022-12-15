@@ -1,5 +1,6 @@
 {{-- 
     商品編集画面
+    商品の情報を編集する画面
     --}}
 @extends('layouts.app2')
 @section('content')
@@ -10,9 +11,7 @@
     </header>
 
         <div id="app">
-                <h1  class="c-detail__title">
-                    商品を編集する
-                </h1>
+                <h1  class="c-detail__title">商品を編集する</h1>
     <div class="c-staffform__area">
         <h1 class="c-staffform__areatitle">編集したい内容を記述してください</h1>
         <p class="c-warning3">恐れ入りますが商品情報を１つでも編集する場合<br/>
@@ -33,7 +32,8 @@
             </span>
             @enderror
         </span>
-            <input type="text" class= "c-staffform__area__textname" name="product_name" value="{{$products->product_name}}" placeholder="商品名">
+            <input type="text" class= "c-staffform__area__textname"
+             name="product_name" value="{{$products->product_name}}" placeholder="商品名">
         </div>
             <div class="c-staffform__area__side">
         <span class="c-staffform__title">金額:
@@ -46,13 +46,10 @@
             <br/>
 </span>    
 </span><br>
-            <input type="number" class="c-staffform__area__textname" name="price" value="{{$products->price}}">
+            <input type="number" class="c-staffform__area__textname" 
+            name="price" value="{{$products->price}}">
 </div>
-{{-- 賞味期限の入力はjsを使用。デフォルトだと現在日時より前の日付も記入できるから --}}
-{{-- </div> --}}
- {{-- <calender-component></calender-component> --}}
  <calenderedit-component :best_by_date="'{{$products->best_by_date}}'"></calenderedit-component>
-
         {{-- 登録した都道府県が自動的にデータベースに入るように設定する --}}
 <button type="submit" class="c-staffform__area__submitbutton">
     商品を編集する

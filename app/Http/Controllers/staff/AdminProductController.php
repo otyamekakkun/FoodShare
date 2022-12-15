@@ -42,7 +42,7 @@ return redirect('admin')->with('flash_message', __('Registered.'));
 } 
 //=========================================================================商品を出品する画面ここまで
 
-//商品を編集する画面
+//商品を編集する画面のコントローラ
 public function staff_productedit_display($id){
     $product = products::find($id);
     return view('haiki_staff.staff_productedit_display',['products'=>$product]);

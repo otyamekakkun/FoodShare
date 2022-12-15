@@ -32,15 +32,3 @@
 </body>
 </html>
     @endsection
-
-
-    
-    
-        
-        
-    
-    
-    
-    
-    
-    

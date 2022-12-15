@@ -1,5 +1,6 @@
 {{-- 
     商品を出品する画面
+    写真と商品の名前、金額、商品の賞味期限が入力するコード
     --}}
 @extends('layouts.app2')
 @section('content')
@@ -30,7 +31,6 @@
                     <strong>{{ $message }}</strong>
                 </span>
                 @enderror
-
             </span>
             <br/>
                 <input  type="text" class= "c-staffform__area__textname" name="product_name" value="" placeholder="商品名">
@@ -51,7 +51,7 @@
                     <br/>
         </span>    
             </div>
-    <div >
+    <div>
         <div class="c-staffform__area__side">
             <span class="c-staffform__title">賞味期限:     
                 <span class="c-errormessage">
@@ -64,6 +64,10 @@
      </calender-component>
     </div>
 </div>
+{{-- 
+    商品詳細画面とお客様が商品を購入された際に出品したコンビニにメールがいくように、商品が登録された瞬間に
+    コンビニ情報も自動的にデータベースに保存されるように設定する。
+    --}}
     <input type="text" name="prefecture" value="{{$admins->prefecture}}" class="u-hidden">
     <input type="text" name="email" value="{{$admins->email}}" class="u-hidden">
     <input type="text" name="convinience_name" value="{{$admins->convinience_name}}" class="u-hidden">

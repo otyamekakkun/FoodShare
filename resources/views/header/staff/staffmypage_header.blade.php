@@ -1,5 +1,5 @@
   <div class="l-header">
-      <h1 class="l-header__title">HaikiShare Staff</h1>
+      <h1 class="l-header__title">FoodsShare Staff</h1>
         <input id="drawer_input" class="c-drawer__hidden" type="checkbox">
         <label for="drawer_input" class="c-drawer--open"><span></span></label>
         <nav class="nav_content">

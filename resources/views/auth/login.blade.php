@@ -1,3 +1,8 @@
+
+{{-- ログイン画面を構成する画面 
+    管理者側とお客様側のログイン画面が併用されるように作成
+    --}}
+
 @extends('layouts.app3')
 @section('content')
 @include('header.other.otherheader')
@@ -20,7 +25,7 @@
 </span>
 </span>
 <br/>
-<input id="" type="email" class="c-form__area__text" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="emailを入力してください">
+<input  type="email" class="c-form__area__text" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="emailを入力してください">
 <br/>
 <span for="password" class="c-form__area__message">パスワード:
 <span>

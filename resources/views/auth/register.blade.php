@@ -1,3 +1,8 @@
+
+{{-- 
+    ユーザー登録画面
+    管理者ユーザー登録とお客様ユーザー登録画面
+    --}}
 @extends('layouts.app3')
 @section('content')
 @include('header.other.otherheader')

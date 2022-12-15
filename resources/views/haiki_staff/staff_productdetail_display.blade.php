@@ -1,5 +1,7 @@
 {{-- 
-    商品詳細画面
+    コンビニ側の商品詳細画面
+    商品の情報についてより明細に映し出すプログラミングコード
+    また商品情報についてはtwitterでもシェアができるようにした。
     --}}
 @extends('layouts.app2') @section('content') @section('title', "商品詳細画面")
 <body>

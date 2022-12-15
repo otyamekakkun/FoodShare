@@ -3,10 +3,7 @@
 "コンビニ管理マイページ")
 <body>
     <header>@include('header.staff.staffmypage_header')</header>
-    <div class="">
         <h1 class="c-detail__title">My PAGE</h1>
-    </div>
-
     <div id="app">
         {{-- コンポーネント部分 --}}
         <staffmypage-componennt></staffmypage-componennt>
