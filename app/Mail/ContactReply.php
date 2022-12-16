@@ -34,7 +34,7 @@ public $productmessage;
      */
     public function build()
     {
-            return $this->subject('food商品のお買いあげのお知らせ')
+            return $this->subject('foodshare 商品のお買いあげのお知らせ')
                     ->view('mails.test');
     }
 }
