@@ -1,6 +1,5 @@
 /*
-今回は開発の指示でwebpack+babelを用いてフロント環境を構築してくださいという指示が提示
-されていましたので、webpack+babelの方にvueの環境構築を行いました。
+webpack+babelの方にvueの環境構築を行いました。
 またsassの環境構築としてgulpを用いて行いました。
 仕上げにpackage.jsonのnpm-scriptでgulpとwebpackを２つ同時並列に読み込む処理を記述して
 vueとsassが同時に使える環境を作りました。
