@@ -1,5 +1,5 @@
 <?php
-// メール機能の実装。買われる商品名は毎回違うので動的に表現した。
+// メール機能の実装。購入される買われる商品は毎回違うので,動的に表現した。
 namespace App\Mail;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;

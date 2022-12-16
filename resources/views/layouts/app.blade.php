@@ -6,7 +6,6 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
@@ -36,10 +35,7 @@
                     <ul class="navbar-nav me-auto">
 
                     </ul>
-{{-- ここではない --}}
-<!-- Right Side Of Navbar -->
 <ul class="navbar-nav ml-auto">
-    <!-- Authentication Links -->
     @if(!Auth::check() && (!isset($authgroup) || !Auth::guard($authgroup)->check()))
         @if (Route::has('login'))
             <li class="nav-item">
@@ -75,15 +71,6 @@
                 {{ Auth::user()->name }}
                 @endisset
             </a>
-
-
-
-
-
-
-
-
-
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
@@ -95,14 +82,12 @@
                 </div>
             </div>
         </nav>
-
         <!-- フラッシュメッセージ -->
         @if (session('flash_message'))
             <div class="alert alert-primary text-center" role="alert">
                 {{ session('flash_message') }}
             </div>
         @endif
-
         <main class="py-4">
             @yield('content')
         </main>

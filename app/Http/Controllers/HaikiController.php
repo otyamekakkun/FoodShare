@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Auth;
 class HaikiController extends Controller
 {
 //===================================================================
- //shoepper_mypage1   お客様のマイページを表示するコントローラ            //
+ //shoepper_mypage1  お客様のマイページを表示するコントローラ            //
  //==================================================================
     public function shopper_mypage_display(){
         $id = Auth::id();

@@ -1,3 +1,7 @@
+<!-- 
+商品詳細画面を形成したもの
+ -->
+
 <template>
     <div class="c-productdetail">
         <div class="c-prductdetail__imgarea">

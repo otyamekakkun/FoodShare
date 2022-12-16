@@ -5,10 +5,11 @@ use App\Models\products;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
-//メール機能
-//ローカル環境ではコメントアウトする
-//use App\Mail\Test;
-//use Illuminate\Support\Facades\Mail;
+/*メール機能実装
+ただしローカル環境ではコメントアウトする
+use App\Mail\Test;
+use Illuminate\Support\Facades\Mail;
+*/
 class ProductController extends Controller
 {
     //商品一覧と商品詳細画面のコントローラ

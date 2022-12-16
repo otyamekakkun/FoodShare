@@ -1,3 +1,7 @@
+{{-- 
+    パスワードを変更する際に写し出される画面
+    --}}
+
 @extends('layouts.app3')
 @section('content')
  <div class="c-form1">
