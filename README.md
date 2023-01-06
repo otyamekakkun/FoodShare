@@ -179,5 +179,13 @@ https://user-images.githubusercontent.com/120696740/210935452-458e2c6a-ee13-46e0
 
 https://user-images.githubusercontent.com/120696740/210935467-af9a995f-5a2b-48b6-a44b-9ef90241313b.png
 
+8商品を購入するとこうなる
 
+https://user-images.githubusercontent.com/120696740/210936603-2ecf6726-7edc-4a96-b26b-516fed3abc63.png
+
+https://user-images.githubusercontent.com/120696740/210936612-a0b6e475-db53-4b51-8fe8-66ce11b0ec34.png
+
+https://user-images.githubusercontent.com/120696740/210936618-4eddf936-f758-4510-b93c-e2184be1faf0.png
+
+https://user-images.githubusercontent.com/120696740/210936620-f69dadfd-abb7-446e-a0e2-276035934d9a.png
 
