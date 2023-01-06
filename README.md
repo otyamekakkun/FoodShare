@@ -154,10 +154,13 @@ https://user-images.githubusercontent.com/120696740/210931980-82b86c00-6927-4405
 4 管理者側商品を出品する際のデモ画面と商品を出品するとリンクに乗る（スクリーンショットの画像が載せられない不具合が発生)
 
 https://user-images.githubusercontent.com/120696740/210933154-1f5c4601-0d96-466a-95bb-b8ed4c4d0b82.png
+
 https://user-images.githubusercontent.com/120696740/210933169-9a1df406-c1fa-4ac4-802e-f7dbaac18d56.png
+
 https://user-images.githubusercontent.com/120696740/210933301-065f1155-ebaf-403b-9b8d-f7ba73d25f5f.png
 
 5アップロードした商品を編集して再び更新する際の処理
 https://user-images.githubusercontent.com/120696740/210933453-1d461e99-0c95-4eed-898e-d8aebd696b0d.png
+
 https://user-images.githubusercontent.com/120696740/210933464-7df3134c-b8b4-49ba-a402-7a316eb793bf.png
 
