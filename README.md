@@ -65,6 +65,8 @@ adminsテーブルの画像()
 
 usersテーブルの画像
 
+productテーブルの画像
+https://user-images.githubusercontent.com/120696740/210926254-8dcc9342-d357-45bb-851a-557dc444cfa8.png
 
 failed_jobs password_resets personal_access_tokens は元々defaultの状態をそのまま引用しているので省略
 注力した機能工夫した点
