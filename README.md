@@ -64,6 +64,7 @@ https://user-images.githubusercontent.com/120696740/210924631-a388c367-b042-4bd7
 adminsテーブルの画像()
 
 usersテーブルの画像
+https://user-images.githubusercontent.com/120696740/210926212-23da6f36-39b1-4a47-b619-c1cee6c62dea.png
 
 productテーブルの画像
 https://user-images.githubusercontent.com/120696740/210926254-8dcc9342-d357-45bb-851a-557dc444cfa8.png
