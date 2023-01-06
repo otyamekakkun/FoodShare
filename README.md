@@ -139,7 +139,9 @@ Email haikisampleshopper111@gmail.com
 今後は開発者目線とユーザー目線の２つの目線を持ってしっかりと開発ができるように心がけていきたいです。
 
 アプリ概要の画像についてです
-１
+１トップページ
+https://user-images.githubusercontent.com/120696740/210931731-923b676a-2cd4-412a-a7a3-0eb9047d4a0a.png
+
 
 
 
