@@ -19,6 +19,9 @@ AWSのSESを使ってメールサーバーを導入したところです。
 
 セキュリティ面に関して
 
+(ロードバランサーを導入してhttps化にしたもの)
+https://user-images.githubusercontent.com/120696740/210911987-8a2d6d3f-f626-4005-a6e0-bc1954ec79c6.png
+
 テストアカウント
 管理者１
 
