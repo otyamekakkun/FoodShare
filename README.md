@@ -40,6 +40,7 @@ OS .macOS(ver 12 Montery)　amazonlinux
 (商品名がオニギリでしたら,twitterでリンクを叩くと自動的に商品名オニギリをシェアしよう！と動的に情報が切り替わるようにしている)
 
 「利用者側の機能」
+
 12　利用者側のマイページにて今まで購入された商品がリストとして表示される（ただし何も購入していない場合は何も表示されない)
 
 13　利用者側は商品一覧にて、管理者側（コンビニ側)で出品された商品を閲覧することができる
@@ -60,22 +61,30 @@ OS .macOS(ver 12 Montery)　amazonlinux
 
 非機能一覧
 1 デザインのレイアウトが崩れないように今回はレスポンシブデザインで対応しています。
+
 2　管理者側の商品リストに関しては可読性がよくなるようにページネーションんを導入しました
+
 3　セッションの有効期限が切れた際に自動的にログアウトされます
 
 
-DBのテーブル設計
+DBのテーブル設計についてです
 テーブル全体の画像
+
 https://user-images.githubusercontent.com/120696740/210924631-a388c367-b042-4bd7-bd95-e9307abdf92d.png
+
 adminsテーブルの画像()
+https://user-images.githubusercontent.com/120696740/210926108-5f8c35cb-0a99-473c-82ae-4c9d23ae53e4.png
 
 usersテーブルの画像
+
 https://user-images.githubusercontent.com/120696740/210926212-23da6f36-39b1-4a47-b619-c1cee6c62dea.png
 
 productテーブルの画像
+
 https://user-images.githubusercontent.com/120696740/210926254-8dcc9342-d357-45bb-851a-557dc444cfa8.png
 
 failed_jobs password_resets personal_access_tokens は元々defaultの状態をそのまま引用しているので省略
+
 注力した機能工夫した点
  一番工夫した点はマルチログインを実装したところと商品が購入された際に出品した管理者側と購入されたお客様側にメールが受信できるように,
 AWSのSESを使ってメールサーバーを導入したところです。
