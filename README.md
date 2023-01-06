@@ -140,10 +140,15 @@ Email haikisampleshopper111@gmail.com
 
 アプリ概要の画像についてです
 １トップページ
+
 https://user-images.githubusercontent.com/120696740/210931731-923b676a-2cd4-412a-a7a3-0eb9047d4a0a.png
+
 2　管理者側mypage (初期状態)
+
 https://user-images.githubusercontent.com/120696740/210931956-cb2a5c8a-61ce-4c89-a8f6-4e46aa29c7c0.png
+
 3 管理側mypage(ハンバーガーメニューをクリックすると)
+
 https://user-images.githubusercontent.com/120696740/210931980-82b86c00-6927-4405-b87f-3e976a594305.png
 
 
