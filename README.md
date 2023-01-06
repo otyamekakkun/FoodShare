@@ -164,3 +164,12 @@ https://user-images.githubusercontent.com/120696740/210933453-1d461e99-0c95-4eed
 
 https://user-images.githubusercontent.com/120696740/210933464-7df3134c-b8b4-49ba-a402-7a316eb793bf.png
 
+6商品詳細画面
+
+https://user-images.githubusercontent.com/120696740/210933621-02e6ef3a-7aea-43c4-86e7-0ab786234e01.png
+
+https://user-images.githubusercontent.com/120696740/210933628-7fdd1c01-9e0b-4f18-86c2-acdab90641f7.png
+
+
+
+
