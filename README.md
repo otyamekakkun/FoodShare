@@ -78,20 +78,21 @@ DBのテーブル設計についてです
 
 https://user-images.githubusercontent.com/120696740/210924631-a388c367-b042-4bd7-bd95-e9307abdf92d.png
 
-adminsテーブルの画像()
+adminsテーブルの画像(管理者側のテーブル)
 https://user-images.githubusercontent.com/120696740/210926108-5f8c35cb-0a99-473c-82ae-4c9d23ae53e4.png
 
-usersテーブルの画像
+usersテーブルの画像(利用者側のテーブル)
 
 https://user-images.githubusercontent.com/120696740/210926212-23da6f36-39b1-4a47-b619-c1cee6c62dea.png
 
-productテーブルの画像
+productテーブルの画像(商品情報についてのテーブル)
 
 https://user-images.githubusercontent.com/120696740/210926254-8dcc9342-d357-45bb-851a-557dc444cfa8.png
 
 failed_jobs password_resets personal_access_tokens は元々defaultの状態をそのまま引用しているので省略
 
 注力した機能工夫した点
+
  一番工夫した点はマルチログインを実装したところと商品が購入された際に出品した管理者側と購入されたお客様側にメールが受信できるように,
 AWSのSESを使ってメールサーバーを導入したところです。
 また、商品を購入した状況、出品した状況、購入された状況は各ユーザー全員が違いますので、それぞれのユーザーの状況に合わせた画面処理を行いました。
@@ -120,7 +121,9 @@ Email  privatesuki4902@gmail.com
 パスワード bbbbbbbb
 
 お客様１
-
+名前 shopper1
+Email haikisampleshopper111@gmail.com
+パスワード　cccccccc
 お客様２
 
 
