@@ -179,7 +179,7 @@ https://user-images.githubusercontent.com/120696740/210935452-458e2c6a-ee13-46e0
 
 https://user-images.githubusercontent.com/120696740/210935467-af9a995f-5a2b-48b6-a44b-9ef90241313b.png
 
-8商品を購入するとこうなる
+8商品を購入した時に購入知らせの通知が来る様子
 
 https://user-images.githubusercontent.com/120696740/210936603-2ecf6726-7edc-4a96-b26b-516fed3abc63.png
 
