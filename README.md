@@ -141,7 +141,8 @@ Email haikisampleshopper111@gmail.com
 商品を編集する際に、value={$product->img-path}を導入した際にうまくpost送信ができずにそのまま入力必須としてしまったところがあります。
 今後は開発者目線とユーザー目線の２つの目線を持ってしっかりと開発ができるように心がけていきたいです。
 
-アプリ概要の画像についてです
+アプリ概要の画像についてです（上から順にストーリーになっております）
+
 １トップページ
 
 https://user-images.githubusercontent.com/120696740/210931731-923b676a-2cd4-412a-a7a3-0eb9047d4a0a.png
