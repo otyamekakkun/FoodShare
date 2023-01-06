@@ -103,6 +103,9 @@ AWSのSESを使ってメールサーバーを導入したところです。
 https://user-images.githubusercontent.com/120696740/210913232-40bcea36-830e-4b40-9243-aa9dd48d79b8.png
 (東京リージョンに移して送信制限を解除した時の画像1日50000件まで)
 
+https://user-images.githubusercontent.com/120696740/210937531-17bba290-3dcc-4785-9f6f-681d9c671959.png
+
+
 
 セキュリティ面に関して
 
