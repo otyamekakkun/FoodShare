@@ -164,6 +164,9 @@ https://user-images.githubusercontent.com/120696740/210933453-1d461e99-0c95-4eed
 
 https://user-images.githubusercontent.com/120696740/210933464-7df3134c-b8b4-49ba-a402-7a316eb793bf.png
 
+削除
+https://user-images.githubusercontent.com/120696740/210935235-92183b43-1430-491f-bb1c-a7dff825e082.png
+
 6商品詳細画面
 
 https://user-images.githubusercontent.com/120696740/210933621-02e6ef3a-7aea-43c4-86e7-0ab786234e01.png
