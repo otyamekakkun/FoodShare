@@ -53,10 +53,13 @@ OS .macOS(ver 12 Montery)
 
 DBのテーブル設計
 テーブル全体の画像
+https://user-images.githubusercontent.com/120696740/210924631-a388c367-b042-4bd7-bd95-e9307abdf92d.png
+adminsテーブルの画像()
+
+usersテーブルの画像
+
+
 failed_jobs password_resets personal_access_tokens は元々defaultの状態をそのまま引用しているので省略
-adminsテーブルの画像(
-
-
 注力した機能工夫した点
  一番工夫した点はマルチログインを実装したところと商品が購入された際に出品した管理者側と購入されたお客様側にメールが受信できるように,
 AWSのSESを使ってメールサーバーを導入したところです。
